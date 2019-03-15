@@ -1,0 +1,87 @@
+<!-- Copyright (c) 2015-2018 Wrapidity Ltd. & Meltwater Group All rights 
+	reserved. -->
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>it.uniroma3.dia</groupId>
+	<artifactId>chi-xpath</artifactId>
+	<version>1.0-SNAPSHOT</version>
+
+	<name>chi-xpath</name>
+	<description>Package characteristic-xpath provides an inference engine for discovering
+	             characteristic xpath expressions associated with news page templates.
+	</description>
+	<properties>
+		<!-- To run tests, use -DskipTests=false. Or, if you want to run test by 
+			default, turn this to true. -->
+		<skipTests>false</skipTests>
+		<!-- We are suppressing non-warning messages from Javadoc by default. -->
+		<org.apache.maven.plugins.maven-javadoc-plugin.quiet>true</org.apache.maven.plugins.maven-javadoc-plugin.quiet>
+		<!-- By default a fail in the Javadoc plugin does not stop the compilation. -->
+		<org.apache.maven.plugins.maven-javadoc-plugin.failOnError>false</org.apache.maven.plugins.maven-javadoc-plugin.failOnError>
+		<!-- By default unit-tests execution is enabled -->
+		<skipTests>false</skipTests>
+
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-simple</artifactId>
+		    <version>1.6.2</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.25</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.11.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.11.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.18</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- to use fixtures from xpath-fragments, test dependencies are not transitive -->
+		<dependency>
+			<groupId>net.sourceforge.nekohtml</groupId>
+			<artifactId>nekohtml</artifactId>
+			<version>1.9.21</version>
+			<scope>test</scope>
+		</dependency>
+		
+
+	</dependencies>
+
+</project>

@@ -1,0 +1,223 @@
+function EXEC_OAS_AD_DEFERRED() {
+    //console.log("EXEC_OAS_AD_DEFERRED");
+    // controllo che non sia stato bloccato qualcosa da adblock o simili
+    if (typeof(OAS_RICH) != "function") return;
+
+    // qui passo tutte le posizioni ed inietto
+    $('.oas_placeholder').each(function() {
+        var buffer = '';
+        // backup di document.write
+        var doc_write_bak = document.write;
+        // sovrascrivo document.write
+        document.write = function(string) {buffer += string;}
+        // ora eseguo la OAS normale
+        OAS_AD($(this).attr('data-pos'));
+        // ripristino document.write
+        document.write = doc_write_bak;
+        // in buffer ho l'html
+        // "<A HREF="http://oas.ilmessaggero.it/5c/www.ilmessaggero.it/2/PRIMOPIANO_CRONACA/127546934/Position1/default/empty.gif/547976594846506e6c733841447a6462?x" target="_top"><IMG SRC="http://imageceu1.247realmedia.com/0/default/empty.gif"  WIDTH=1 HEIGHT=1 ALT="" BORDER=0 BORDER="0"></A>"
+        if (-1 == buffer.indexOf('<IMG SRC="http://imageceu1.247realmedia.com/0/default/empty.gif"  WIDTH=1 HEIGHT=1 ALT="" BORDER=0 BORDER="0">')) {
+            // banner pieno, non ho trovato empty.gif
+            $(this).addClass('notempty');
+        }
+        //$(this).replaceWith(buffer);
+        postscribe('#'+$(this).attr('id'), buffer);
+    });
+
+    // provo ad essere tempestivo e fixare subito eventuali skin
+    window.setTimeout(repairSkin, 500);
+}
+
+
+/* se ho una skin che mette uno sfondo fixed lo devo sistemare (la barra superiore lo nasconde) */
+function repairSkin() {
+    //console.log("load - controllo skin");
+
+    if ($('body').css('background-attachment') == 'fixed' && $('body').not('.skinned')) {
+        // segno subito come fatto
+        $('body').addClass('skinned');
+
+        var skin_offset = 0;//$('#header-wrapper').outerHeight(true);
+        var body_bg_fixed = true;
+
+        // metto sile al body per eventuali eccezioni in grafica in presenza di skin
+
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > skin_offset) {
+                if (!body_bg_fixed) {
+                    //$('body').css('background-position-y', '0');
+                    //$('body').css('background-attachment', 'fixed');
+                    var body = $( 'body' ).get(0);
+                    body.style.setProperty( 'background-position-y', '0', 'important' );
+                    body.style.setProperty( 'background-attachment', 'fixed', 'important' );
+                    body_bg_fixed = true;
+                }
+            } else {
+                if (body_bg_fixed) {
+                    //$('body').css('background-position-y', skin_offset+'px');
+                    //$('body').css('background-attachment', 'initial');
+                    var body = $( 'body' ).get(0);
+                    body.style.setProperty( 'background-position-y', skin_offset+'px', 'important' );
+                    body.style.setProperty( 'background-attachment', 'initial', 'important' );
+                    body_bg_fixed = false;
+                }
+            }
+        });
+        // lancio un trigger per ricalcolare se deve essere fixed ed in che posizione (se la pagina si ricarica gi? scrollata)
+        $(window).scroll();
+    }
+}
+
+// al load controllo la presenza della skin
+$(function() {
+    repairSkin();
+    setTimeout(repairSkin, 1000);
+    setTimeout(repairSkin, 2000);
+    setTimeout(repairSkin, 3000);
+});
+
+// un secondo dopo il load ricalcolo, la skin potrebbe essere lenta
+$(window).load(function () {
+    repairSkin();
+    setTimeout(repairSkin, 1000);
+    setTimeout(repairSkin, 2000);
+    setTimeout(repairSkin, 3000);
+});
+
+// captcha
+function captchaSubmit(data) {
+    var id = $('.form_captcha').attr('id');
+    document.getElementById(id).submit();
+}
+
+// Shorthand for $( document ).ready()
+$(function() {
+    try {
+        $('#socialBarDiv').socialbar({
+            selectors: {
+                logoutButton: '.logout' // classe dei pulsanti di login. Associo l'azione di logout
+            }
+        });
+    }
+    catch(e) {
+
+    }
+
+
+
+    $("#search_submit").click(function(e){
+        if( !$(".animated-search-form").val() ) {
+            e.preventDefault();
+            $( ".animated-search-form" ).focus();
+        }
+    });
+});
+
+
+
+
+
+$(function() {
+    //console.log("ready - preparo menu fissante");
+
+    if ( $( "#header #logo" ).length ) {
+        var elementToBeFixed = $('#header #logo');
+    }else{
+        var elementToBeFixed = $('#header .top-header-wrapper');
+    }
+    if (elementToBeFixed.length <= 0) return;
+    
+    var wrapperTop = $('#header .top-header-wrapper');
+
+    //var header = $('#header .top-header-wrapper');
+    var header_start_position = elementToBeFixed.offset().top;
+
+    var header_fixed = false;
+
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > header_start_position) {
+            // il menu diventa/resta fisso
+            if (!header_fixed) {
+               // $('#navbar-menu').after('<div id="fixed_menu_spacer" style="height: '+$('#navbar-menu').height()+'px"></div>');
+                wrapperTop.addClass('fixed');
+                header_fixed = true;
+            }
+        } else {
+            // il menu diventa/resta al suo posto
+            if (header_fixed) {
+                wrapperTop.removeClass('fixed');
+                header_fixed = false;
+            }
+        }
+    });
+
+    // al load ricalcolo la posizione del menu.
+    // tenere qui dentro per lo scope su header_start_position
+    $(window).load(function() {
+        //console.log("load - ricalcolo posizione menu");
+        // al ready resetto le posizioni di alcuni elementi (la skin li sposta)
+        if (!header_fixed) header_start_position =  elementToBeFixed.offset().top;
+        // lo ricalcolo pure dopo
+        setTimeout(function() {
+            if (!header_fixed) header_start_position =  elementToBeFixed.offset().top;
+        }, 1000);
+    });
+
+});
+
+
+
+$(window).load(function () {
+//riempitivo right home
+    if ( $(".home #right-content").length) {
+        if ($("#main-content").lenght == 0) return;
+        if ($("#right-content").lenght == 0) return;
+        var fine_main = $('#main-content').offset().top + $('#main-content').height();
+        var fine_right = $('#right-content').offset().top + $('#right-content').height();
+        var dislivello = fine_main - fine_right;
+        if (dislivello > 0 && false) {
+            // pareggio l'altezza per sisemare la righina
+            $('#right-content').height($('#right-content').height() + dislivello);
+        }
+        //console.log(dislivello);
+
+        if (dislivello > 100) {
+            // metto roba nella colonna destra
+            $.ajax({
+                url: '/?sez=AJAX&p=right_box_riempitivo&px=' + dislivello,
+                dataType: 'html',
+                success: function (data) {
+                    $(data).appendTo('#right-content');
+                }
+            });
+        }
+    }
+
+    //riempitivo right home_sezione
+/*
+    if ( $(".home_sezione #right-content").length) {
+        if ($("#main-content").lenght == 0) return;
+        if ($("#right-content").lenght == 0) return;
+        var fine_main = $('#main-content').offset().top + $('#main-content').height();
+        var fine_right = $('#right-content').offset().top + $('#right-content').height();
+        var dislivello = fine_main - fine_right;
+        if (dislivello > 0) {
+            // pareggio l'altezza per sisemare la righina
+            $('#right-content').height($('#right-content').height() + dislivello);
+        }
+        //console.log(dislivello);
+
+        if (dislivello > 100) {
+            // metto roba nella colonna destra
+            $.ajax({
+                url: '/?sez=AJAX&p=right_box_riempitivo&px=' + dislivello,
+                dataType: 'html',
+                success: function (data) {
+                    $(data).appendTo('#right-content');
+                }
+            });
+        }
+    }
+*/
+
+});
