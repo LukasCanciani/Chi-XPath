@@ -27,9 +27,9 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import it.uniroma3.chixpath.ChiFinderMain;
 import it.uniroma3.chixpath.fragment.ChiFragmentSpecification;
-import it.uniroma3.chixpath.model.ClasseDiPagine;
+import it.uniroma3.chixpath.model.PageClass;
 import it.uniroma3.chixpath.model.Page;
-import it.uniroma3.chixpath.model.VettoreDiValori;
+import it.uniroma3.chixpath.model.ValuesVector;
 import it.uniroma3.fragment.RuleInference;
 
 import static it.uniroma3.fragment.util.XPathUtils.evaluateXPath;
@@ -55,7 +55,7 @@ public class EvaluateXPathsTest {
 
 		final Set<Page> pages = new HashSet<>();
 		pages.add(page);
-		ClasseDiPagine classe = new ClasseDiPagine();
+		PageClass classe = new PageClass();
 		classe.setPages(pages);
 		classe.setxPaths(rules);
 
@@ -68,10 +68,10 @@ public class EvaluateXPathsTest {
 		NodeList node1 = evaluateXPath(page.getDocument(), "//TD[contains(@class,'schedaprodotto_schedatecnica_testo')]/text()[contains(.,'77')]/self::text()");
 
 		for(String rule : rules) {
-			VettoreDiValori vett1 = new VettoreDiValori(rule, classe,1);
+			ValuesVector vett1 = new ValuesVector(rule, classe,1);
 			for(String rule1 : rules) {
-				VettoreDiValori vett2 = new VettoreDiValori(rule1, classe,1);
-				if(!rule.equals(rule1) && vett1.stessoVettore(vett2)) {
+				ValuesVector vett2 = new ValuesVector(rule1, classe,1);
+				if(!rule.equals(rule1) && vett1.sameVector(vett2)) {
 					System.out.println("L'xpath" +rule+" e l'xPath "+rule1+" estraggono lo stesso nodo");
 				}
 			}

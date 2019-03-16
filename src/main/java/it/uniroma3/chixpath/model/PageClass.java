@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ClasseDiPagine implements Comparable<ClasseDiPagine> {
+public class PageClass implements Comparable<PageClass> {
 	private Set<String> xPaths;
 	
 	private Set<Page> pages= new HashSet<>();
@@ -14,7 +14,7 @@ public class ClasseDiPagine implements Comparable<ClasseDiPagine> {
 	
     private static int progId=0;
 
-	public ClasseDiPagine(){
+	public PageClass(){
 		this.setId(Integer.toString(progId++));
 	}
 
@@ -43,7 +43,7 @@ public class ClasseDiPagine implements Comparable<ClasseDiPagine> {
 	}
 
 	@Override
-	public int compareTo(ClasseDiPagine that) {
+	public int compareTo(PageClass that) {
         return this.getId().compareTo(that.getId());
 	}
 	
@@ -54,20 +54,20 @@ public class ClasseDiPagine implements Comparable<ClasseDiPagine> {
 	    
 	    @Override
 	    public boolean equals(Object o) {
-	        final ClasseDiPagine that = (ClasseDiPagine)o;
+	        final PageClass that = (PageClass)o;
 	        return this.getxPaths().equals(that.getxPaths());
 	    }
 	    
 	    
-	    public void stampa() {
+	    public void print() {
 	    	System.out.print("Classe di pagine "+this.getId()+" ha "+this.getxPaths().size()+" xpaths che matchano con le pagine");
 			for(Page page : this.getPages()) {
 				System.out.print("  ID:"+page.getId()+" ");
 			}	    	
 	    }
 	    
-	    public boolean haPagineUgualiA(Set<ClasseDiPagine> toAdd) {
-	    	boolean contieneId=false;
+	    public boolean hasSamePagesAs(Set<PageClass> toAdd) {
+	    	boolean containsId=false;
 			final Set<String> idsToCheck = new HashSet<>();
 			//creo l'insieme di id da controllare che NON SIANO nel mio insieme di insiemi di pagine
 			for(Page page : this.getPages()) {
@@ -75,7 +75,7 @@ public class ClasseDiPagine implements Comparable<ClasseDiPagine> {
 			}
 
 			//per ogni singolo insieme che fa parte dell'insieme di regole creo un insieme di id
-			for(ClasseDiPagine test : toAdd){
+			for(PageClass test : toAdd){
 				for(Page page : test.getPages()) {
 					Set<String> ids = new HashSet<>();
 						ids.add(page.getId());
@@ -83,16 +83,16 @@ public class ClasseDiPagine implements Comparable<ClasseDiPagine> {
 					//controllo che nessun id del primo set sia nel set da controllare
 					for(String id : idsToCheck ) {
 						if(ids.contains(id)) {
-							contieneId=true;
-							return contieneId;
+							containsId=true;
+							return containsId;
 						}
 					}
 				}
 			}
-			return contieneId;
+			return containsId;
 	    }
 	    
-	    public boolean contieneInsiemeDiXpaths(ArrayList<ClasseDiPagine> classi) {
+	    public boolean containsXpathsSet(ArrayList<PageClass> classi) {
 	    	for(int i=0;i<classi.size();i++) {
 	    		if(this.getxPaths().equals(classi.get(i).getxPaths())) return true;
 	    	}

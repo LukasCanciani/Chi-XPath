@@ -9,45 +9,45 @@ import javax.xml.xpath.XPathExpressionException;
 
 import org.w3c.dom.NodeList;
 
-public class VettoreDiValori implements Comparable<VettoreDiValori>  {
+public class ValuesVector implements Comparable<ValuesVector>  {
 	private String xPath;
-	private ClasseDiPagine classe;
+	private PageClass pClass;
 	private int n_Pag;
-	private NodeList[] nodiEstratti;
-	public VettoreDiValori(String xPath, ClasseDiPagine classe, int n_Pag) throws XPathExpressionException {
+	private NodeList[] extractedNodes;
+	public ValuesVector(String xPath, PageClass pClass, int n_Pag) throws XPathExpressionException {
 		this.xPath=xPath;
-		this.classe=classe;
+		this.pClass=pClass;
 		this.n_Pag=n_Pag;
-		this.nodiEstratti=estraiNodi();
+		this.extractedNodes=extractNodes();
 	}
 
-	public NodeList[] estraiNodi() throws XPathExpressionException {
-		final NodeList[] nodiEstratti = new NodeList[n_Pag]; 
-		for(Page p : this.classe.getPages()) {
+	public NodeList[] extractNodes() throws XPathExpressionException {
+		final NodeList[] extractedNodes = new NodeList[n_Pag]; 
+		for(Page p : this.pClass.getPages()) {
 			NodeList node = evaluateXPath(p.getDocument(), this.xPath);
 			//System.out.println("estratti "+node.getLength()+" nodi dalla pagina "+p.getId());
 			//inserisco i valori estratti dalla regola nelle posizioni dell'array corrispondenti all'id pagina, che è una stringa e va convertito in int
-			nodiEstratti[Integer.parseInt(p.getId())]= node;
-			for(int i=0; i<nodiEstratti.length;i++) {
+			extractedNodes[Integer.parseInt(p.getId())]= node;
+			for(int i=0; i<extractedNodes.length;i++) {
 			}
 		}
-		return nodiEstratti;
+		return extractedNodes;
 	}
 	//controllo stesso vettore. Creo un array di stringhe in cui inserisco "1" -e i nodi estratti su una pagina dalla regola "A"sono uguali a quelli estratti dalla regola "B"; null altrimenti.
-	public boolean stessoVettore(VettoreDiValori vett) {
+	public boolean sameVector(ValuesVector vett) {
 		boolean stesse= false;
 
-		String[] sameVector = new String[this.getNodiEstratti().length];
-		for(int i=0;i<this.getNodiEstratti().length;i++) {
-			NodeList node = this.getNodiEstratti()[i];
-			NodeList node1 = vett.getNodiEstratti()[i];
+		String[] sameVector = new String[this.getExtractedNodes().length];
+		for(int i=0;i<this.getExtractedNodes().length;i++) {
+			NodeList node = this.getExtractedNodes()[i];
+			NodeList node1 = vett.getExtractedNodes()[i];
 			if(node == null && node1==null) {
 				//System.out.println("entrambi null");
 				sameVector[i]="1";
 			}
 
 			else if(node!=null) {
-				if(stessiNodi(node,node1)) {
+				if(sameNodes(node,node1)) {
 					//System.out.println("uguali");
 					sameVector[i]="1";
 				}
@@ -68,7 +68,7 @@ public class VettoreDiValori implements Comparable<VettoreDiValori>  {
 	}
 
 	//controllo elemento per elemento che i nodi siano gli stessi sempre tramite un array di stringhe in cui inserisco 1 se tutti i nodi sono uguali
-	public boolean stessiNodi(NodeList n1, NodeList n2) {
+	public boolean sameNodes(NodeList n1, NodeList n2) {
 		boolean stessi=false;
 		String[] same = new String[n1.getLength()];
 		//per essere uguali devono essere lunghi uguali
@@ -110,20 +110,20 @@ public class VettoreDiValori implements Comparable<VettoreDiValori>  {
 		this.xPath = xPath;
 	}
 
-	public ClasseDiPagine getClasse() {
-		return classe;
+	public PageClass getpClass() {
+		return pClass;
 	}
 
-	public void setClasse(ClasseDiPagine classe) {
-		this.classe = classe;
+	public void setpClass(PageClass pClass) {
+		this.pClass = pClass;
 	}
 
-	public NodeList[] getNodiEstratti() {
-		return nodiEstratti;
+	public NodeList[] getExtractedNodes() {
+		return extractedNodes;
 	}
 
-	public void setNodiEstratti(NodeList[] nodiEstratti) {
-		this.nodiEstratti = nodiEstratti;
+	public void setExtractedNodes(NodeList[] extractedNodes) {
+		this.extractedNodes = extractedNodes;
 	}
 
 
@@ -133,19 +133,19 @@ public class VettoreDiValori implements Comparable<VettoreDiValori>  {
 	}
 
 	@Override
-	public int compareTo(VettoreDiValori that) {
-		return this.getClasse().getId().compareTo(that.getClasse().getId());
+	public int compareTo(ValuesVector that) {
+		return this.getpClass().getId().compareTo(that.getpClass().getId());
 	}
 
 	@Override
 	public int hashCode() {
-		return this.getClasse().getId().hashCode();
+		return this.getpClass().getId().hashCode();
 	}
 
 	@Override
 	public boolean equals(Object o) {
-		final VettoreDiValori that = (VettoreDiValori)o;
-		return this.stessoVettore(that);
+		final ValuesVector that = (ValuesVector)o;
+		return this.sameVector(that);
 	}
 
 }
