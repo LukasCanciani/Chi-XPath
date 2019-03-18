@@ -29,7 +29,7 @@ import org.junit.Test;
 import org.w3c.dom.Document;
 
 import it.uniroma3.chixpath.model.PageClass;
-import it.uniroma3.chixpath.model.ClassContainer;
+import it.uniroma3.chixpath.model.Partition;
 import it.uniroma3.chixpath.model.Page;
 import it.uniroma3.chixpath.model.TemplateSample;
 import it.uniroma3.chixpath.ChiFinder;

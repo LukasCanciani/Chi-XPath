@@ -87,7 +87,58 @@ public class RulesRepository {
 		this.setClass2UniqueXpaths(c2ux);
 	}
 	
-	private static Set<String> deleteEquivalentXpaths(PageClass classe, int MAX_PAGES) throws XPathExpressionException{
+	/*public void createUniqueXPaths(ArrayList<PageClass> classiDiPagine) throws XPathExpressionException {
+		final Map<PageClass, Set<String>> c2ux = new HashMap<>();
+		for(PageClass classe : classiDiPagine) {
+			final Set<String> senzaEquivalenti = OldDeleteEquivalentXpaths(classe,this.max_P);
+			c2ux.put(classe, senzaEquivalenti);
+			//System.out.println("Classe di pagine "+classe.getId()+" matcha con "+senzaEquivalenti.size()+" xpaths");
+		}
+		System.out.println("");
+		this.setClass2UniqueXpaths(c2ux);
+	}*/
+	
+	/*public void createUniqueXPaths(ArrayList<PageClass> classiDiPagine) throws XPathExpressionException {
+		final Map<PageClass, Set<String>> c2ux = new HashMap<>();
+		Set<String> senzaEquivalenti = new HashSet<>();
+		Set<String> senzaEquivalenti2 = new HashSet<>();
+		for(PageClass classe : classiDiPagine) {
+			senzaEquivalenti = deleteEquivalentXpaths(classe,this.max_P);
+			senzaEquivalenti2 = OldDeleteEquivalentXpaths(classe,this.max_P);
+			c2ux.put(classe, senzaEquivalenti);
+			if (senzaEquivalenti.size() == senzaEquivalenti2.size()) {
+				boolean uguali = true;
+				System.out.println("Stessa Lunghezza!!!\n");
+				for (String s1 : senzaEquivalenti) {
+					if (!senzaEquivalenti2.contains(s1)) {
+						System.out.println("Uno diverso\n");
+						uguali = false;
+					}
+				}
+				for (String s2 : senzaEquivalenti2) {
+					if (!senzaEquivalenti.contains(s2)) {
+						System.out.println("Uno diverso\n");
+						uguali = false;
+					}
+				}
+				if (uguali) {
+					System.out.println("Tutti UGUALI!!!!!!!!!!!!!!!!!\n");
+				}
+			}
+			else {
+				System.out.println("LUNGHEZZA DIVERSA!!!!\n");
+				System.out.println("Nuova: "+senzaEquivalenti.size()+" Veccha: "+senzaEquivalenti2.size());
+			}
+			//System.out.println("Classe di pagine "+classe.getId()+" matcha con "+senzaEquivalenti.size()+" xpaths");
+		}
+		
+		System.out.println("");
+		this.setClass2UniqueXpaths(c2ux);
+	}*/
+	
+	
+	
+	private static Set<String> OldDeleteEquivalentXpaths(PageClass classe, int MAX_PAGES) throws XPathExpressionException{
 		final Set<String> alreadyChecked = new HashSet<>();
 		final Set<String> xPathsDaEliminare = new HashSet<>();
 		int index=1;
@@ -117,8 +168,18 @@ public class RulesRepository {
 		for(String rule : classe.getxPaths()) {
 			if(!xPathsDaEliminare.contains(rule)) senzaEquivalenti.add(rule);
 		}
-
 		return senzaEquivalenti;
+	}
+	//VECCHIA 10,39 MIN NUOVA 15s sul test Messaggero
+	private static Set<String> deleteEquivalentXpaths(PageClass pClass, int MAX_PAGES) throws XPathExpressionException{
+		VectorContainer container = new VectorContainer(pClass,MAX_PAGES,pClass.getId());
+		int index=1;
+		for (String rule : pClass.getxPaths()) {
+				System.out.println("controllando xpath "+index+ " di "+pClass.getxPaths().size());
+				container.addUnique(rule);
+				index++;
+		}
+		return container.getxPaths();
 	}
 	
 	public  void selectCharacteristicXPath() {

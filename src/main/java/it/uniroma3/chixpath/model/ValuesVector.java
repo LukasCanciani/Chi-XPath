@@ -25,6 +25,7 @@ public class ValuesVector implements Comparable<ValuesVector>  {
 		final NodeList[] extractedNodes = new NodeList[n_Pag]; 
 		for(Page p : this.pClass.getPages()) {
 			NodeList node = evaluateXPath(p.getDocument(), this.xPath);
+			
 			//System.out.println("estratti "+node.getLength()+" nodi dalla pagina "+p.getId());
 			//inserisco i valori estratti dalla regola nelle posizioni dell'array corrispondenti all'id pagina, che è una stringa e va convertito in int
 			extractedNodes[Integer.parseInt(p.getId())]= node;

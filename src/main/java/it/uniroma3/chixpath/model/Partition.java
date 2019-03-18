@@ -6,13 +6,13 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class ClassContainer implements Comparable<ClassContainer> {
+public class Partition implements Comparable<Partition> {
 
 	private static int progId=0;
 	private Set<PageClass>  pClasses;
 	private String id;
 
-	public ClassContainer() {
+	public Partition() {
 		this.setId(Integer.toString(progId++));
 	}
 
@@ -32,7 +32,7 @@ public class ClassContainer implements Comparable<ClassContainer> {
 		this.pClasses = classes;
 	}
 
-	public boolean samePartition(ClassContainer partition) {
+	public boolean samePartition(Partition partition) {
 		boolean stesse= false;
 		int index=0;
 		if(this.getpClasses().size()==partition.getpClasses().size()) {
@@ -56,7 +56,7 @@ public class ClassContainer implements Comparable<ClassContainer> {
 	}
 
 	@Override
-	public int compareTo(ClassContainer that) {
+	public int compareTo(Partition that) {
 		return this.getId().compareTo(that.getId());
 	}
 
@@ -67,20 +67,20 @@ public class ClassContainer implements Comparable<ClassContainer> {
 
 	@Override
 	public boolean equals(Object o) {
-		final ClassContainer that = (ClassContainer)o;
+		final Partition that = (Partition)o;
 		return this.samePartition(that);
 	}
 
 
 	//ciclo for, se i=indicedaeliminare vai avanti sennò aggiungi al nuovo array list
-	public ArrayList<ClassContainer> deleteDuplicates(ArrayList<ClassContainer> partitions){
-		final ArrayList<ClassContainer> deletePartitions = new ArrayList<>();
+	public ArrayList<Partition> deleteDuplicates(ArrayList<Partition> partitions){
+		final ArrayList<Partition> deletePartitions = new ArrayList<>();
 
-		final Set<ClassContainer> alreadyChecked = new HashSet<>();
+		final Set<Partition> alreadyChecked = new HashSet<>();
 		final Set<String> deleteIds = new HashSet<>();
 
-		for(ClassContainer i : partitions) {
-			for(ClassContainer j :partitions) {
+		for(Partition i : partitions) {
+			for(Partition j :partitions) {
 				if(i.samePartition(j) && !(alreadyChecked.contains(j))) {
 					deleteIds.add(j.getId());
 				}
@@ -88,8 +88,8 @@ public class ClassContainer implements Comparable<ClassContainer> {
 			alreadyChecked.add(i);
 		}
 
-		final ArrayList<ClassContainer> noDuplicate = new ArrayList<>();
-		for(ClassContainer toDelete : partitions) {
+		final ArrayList<Partition> noDuplicate = new ArrayList<>();
+		for(Partition toDelete : partitions) {
 			if(!deleteIds.contains(toDelete.getId())) noDuplicate.add(toDelete);
 		}
 
@@ -128,7 +128,7 @@ public class ClassContainer implements Comparable<ClassContainer> {
 			return false;
 		}*/
 
-	public boolean isRefinementOf(ClassContainer i,int n_pagine) {
+	public boolean isRefinementOf(Partition i,int n_pagine) {
 		boolean isRefinement=true;
 		final Map<Set<Page>,String> p1 = new HashMap<>();
 

@@ -23,14 +23,14 @@ import javax.xml.xpath.XPathExpressionException;
 import it.uniroma3.chixpath.fragment.ChiFragmentSpecification;
 import it.uniroma3.chixpath.model.PageClass;
 import it.uniroma3.chixpath.model.RulesRepository;
-import it.uniroma3.chixpath.model.ClassContainer;
+import it.uniroma3.chixpath.model.Partition;
 import it.uniroma3.chixpath.model.Page;
 import it.uniroma3.chixpath.model.ValuesVector;
 import it.uniroma3.fragment.RuleInference;
 
 public class MakePartitions {
 	public static void main(String args[]) throws XPathExpressionException {
-
+		long startTime = System.currentTimeMillis();
 		final int MAX_PAGES = args.length;
 
 		/* e.g., an example of a input args to this command line program:
@@ -95,22 +95,22 @@ public class MakePartitions {
 		}
 
 		//generazione partizioni
-		final Set<ClassContainer> partizioni = new HashSet<>();
+		final Set<Partition> partizioni = new HashSet<>();
 		for(int i=0;i<classiDiPagine.size();i++) {
 			//creazione di un Set<> di Classi di pagine per innescare il metodo ricorsivo che genera le partizioni
 			final Set<PageClass> classi = new HashSet<>();
 			classi.add(classiDiPagine.get(i));
 			//metodo ricorsivo che a partire da una classe di pagine trova tutte le combinazioni di queste che formano una partizione 
-			partizioni.addAll(trovaTutteLePossibiliPartizioni(classi,classiDiPagine,classiDiPagine.get(i).getPages().size(),MAX_PAGES));
+			partizioni.addAll(allPossiblePartitions(classi,classiDiPagine,classiDiPagine.get(i).getPages().size(),MAX_PAGES));
 		}
 
 		//eliminazione partizioni equivalenti
-		Set<ClassContainer> senzaDuplicati = deleteDuplicates(partizioni);
+		Set<Partition> senzaDuplicati = deleteDuplicates(partizioni);
 
 		//per ogni partizione stampa il suo id, gli id delle classi di pagine al suo interno, e gl id delle pagine di ogni ClasseDiPagine
 		System.out.println("\n");
 		System.out.println("\n");
-		for(ClassContainer i : senzaDuplicati) {
+		for(Partition i : senzaDuplicati) {
 			i.print();
 			System.out.println("\n");
 		}
@@ -124,15 +124,16 @@ public class MakePartitions {
 			}
 
 		}*/
-		for(ClassContainer c1 : senzaDuplicati) {
+		for(Partition c1 : senzaDuplicati) {
 			
-			for(ClassContainer c2 : senzaDuplicati) {
+			for(Partition c2 : senzaDuplicati) {
 				if(c1.isRefinementOf(c2, MAX_PAGES))
 					System.out.println("La partizione "+c1.getId()+ " e' raffinamento di "+c2.getId());
 			}
 
 		}
-		
+		long endTime = System.currentTimeMillis();
+		System.out.println("It took " + (endTime - startTime)/1000 + " seconds");
 		
 	}
 
@@ -140,12 +141,12 @@ public class MakePartitions {
 
 
 	//ciclo for, se i è un indice da eliminare vai avanti sennò aggiungi al nuovo array list
-	private static Set<ClassContainer> deleteDuplicates(Set<ClassContainer> partizioni){
+	private static Set<Partition> deleteDuplicates(Set<Partition> partizioni){
 		final Set<String> alreadyChecked = new HashSet<>();
 		final Set<String> idDaEliminare = new HashSet<>();
 
-		for(ClassContainer i : partizioni) {
-			for(ClassContainer j :partizioni) {
+		for(Partition i : partizioni) {
+			for(Partition j :partizioni) {
 				if(!i.getId().equals(j.getId()) && i.samePartition(j) && !(alreadyChecked.contains(j.getId()))) {
 					idDaEliminare.add(j.getId());
 				}
@@ -153,8 +154,8 @@ public class MakePartitions {
 			alreadyChecked.add(i.getId());
 		}
 
-		final Set<ClassContainer> senzaDuplicati = new HashSet<>();
-		for(ClassContainer toAdd : partizioni) {
+		final Set<Partition> senzaDuplicati = new HashSet<>();
+		for(Partition toAdd : partizioni) {
 			if(!idDaEliminare.contains(toAdd.getId())) senzaDuplicati.add(toAdd);
 		}
 
@@ -170,11 +171,11 @@ public class MakePartitions {
      * @param max - numero di pagine inserite in INPUT
      * @return tutte le possibili partizioni a partire da una singola classe di pagine
      */
-	private static ArrayList<ClassContainer> trovaTutteLePossibiliPartizioni(Set<PageClass> toAdd,ArrayList<PageClass> classiDiPagine, int n,int max){
-		final ArrayList<ClassContainer> partizioni = new ArrayList<>();
+	private static ArrayList<Partition> allPossiblePartitions(Set<PageClass> toAdd,ArrayList<PageClass> classiDiPagine, int n,int max){
+		final ArrayList<Partition> partizioni = new ArrayList<>();
 		//gestisce i casi in cui viene inserita un'unica ClasseDiPagine che contiene tutte le pagine (che è una partizione da sè)
 		if(n==max) {
-			final ClassContainer partizione= new ClassContainer();
+			final Partition partizione= new Partition();
 			partizione.setpClasses(toAdd);
 			partizioni.add(partizione);
 		}
@@ -191,11 +192,11 @@ public class MakePartitions {
 				setClassi.add(classe);
 				//RICORSIONE:se le pagine non creano ancora una partizione
 				if( n_for<max) {
-					partizioni.addAll(trovaTutteLePossibiliPartizioni(setClassi,classiDiPagine,n_for,max));
+					partizioni.addAll(allPossiblePartitions(setClassi,classiDiPagine,n_for,max));
 				}
 				//le pagine FORMANO UNA PARTIZIONE
 				else if(n_for==max) {
-					final ClassContainer partizione= new ClassContainer();
+					final Partition partizione= new Partition();
 					partizione.setpClasses(setClassi);
 					partizioni.add(partizione);
 				}
