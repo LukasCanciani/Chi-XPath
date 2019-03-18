@@ -96,46 +96,46 @@ public class isRaffinamentoTest {
         set5.add(page4);
         
       // ----------------------------------------------------------------------------------------------------------------- 
-        ClasseDiPagine c1 = new ClasseDiPagine();
+        PageClass c1 = new PageClass();
         c1.setPages(set1);
         c1.setxPaths(xPaths1);
         
-        ClasseDiPagine c2 = new ClasseDiPagine();
+        PageClass c2 = new PageClass();
         c2.setPages(set2);
         c2.setxPaths(xPaths2);
         
-        ClasseDiPagine c3 = new ClasseDiPagine();
+        PageClass c3 = new PageClass();
         c3.setPages(set3);
         c3.setxPaths(xPaths3);
         
-        ClasseDiPagine c4 = new ClasseDiPagine();
+        PageClass c4 = new PageClass();
         c4.setPages(set4);
         c4.setxPaths(xPaths4);
         
-        ClasseDiPagine c5 = new ClasseDiPagine();
+        PageClass c5 = new PageClass();
         c5.setPages(set5);
         c5.setxPaths(xPaths5);
         
       // ---------------------------------------------------------------------------------------------------------------------  
             
-        Set<ClasseDiPagine> p1 = new HashSet<>();
+        Set<PageClass> p1 = new HashSet<>();
         p1.add(c1);
         p1.add(c2);
         
-        InsiemeDiClassi i1 = new InsiemeDiClassi();
-        i1.setClassi(p1);
+        ClassContainer i1 = new ClassContainer();
+        i1.setpClasses(p1);
       // -----------------------------------------------------------------------------------------------------------------------------------  
-        Set<ClasseDiPagine> p2 = new HashSet<>();
+        Set<PageClass> p2 = new HashSet<>();
         p2.add(c3);
         p2.add(c4);
         p2.add(c5);
         
-        InsiemeDiClassi i2 = new InsiemeDiClassi();
-        i2.setClassi(p2);
+        ClassContainer i2 = new ClassContainer();
+        i2.setpClasses(p2);
       // --------------------------------------------------------------------------------------------------------------------------------  
        // assertTrue(i1.equals(i2)==true);
         
-        assertTrue(i2.isRaffinamentoDi(i1, 4));
+        assertTrue(i2.isRefinementOf(i1, 4));
         
     } 
 	

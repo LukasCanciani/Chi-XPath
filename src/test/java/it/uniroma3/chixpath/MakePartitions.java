@@ -21,10 +21,11 @@ import java.util.Set;
 import javax.xml.xpath.XPathExpressionException;
 
 import it.uniroma3.chixpath.fragment.ChiFragmentSpecification;
-import it.uniroma3.chixpath.model.ClasseDiPagine;
-import it.uniroma3.chixpath.model.InsiemeDiClassi;
+import it.uniroma3.chixpath.model.PageClass;
+import it.uniroma3.chixpath.model.RulesRepository;
+import it.uniroma3.chixpath.model.ClassContainer;
 import it.uniroma3.chixpath.model.Page;
-import it.uniroma3.chixpath.model.VettoreDiValori;
+import it.uniroma3.chixpath.model.ValuesVector;
 import it.uniroma3.fragment.RuleInference;
 
 public class MakePartitions {
@@ -66,13 +67,14 @@ public class MakePartitions {
 		System.out.println("Caricamento di " + pageUrls.size() + " pagine ");
 		final Set<Page> pages = createPages(pageUrls);
 
-		//chifragment specification senza argomenti usa l'HTML_STANDARD_CASEHANDLER
+		/*//chifragment specification senza argomenti usa l'HTML_STANDARD_CASEHANDLER
 		final RuleInference engine = new RuleInference(new ChiFragmentSpecification());
 
 
-		final Map<Page,Set<String>> pages2xpath= new HashMap<>();
+		final Map<Page,Set<String>> rules.getPages2xpath()= new HashMap<>();
 		final Map<String,Set<String>> ids2xpath = new HashMap<>();
-
+		
+		
 		//generazione regole xpath su tutte le pagine e inserimento nelle mappe
 		for(Page sample : pages) {
 			final Set<String> rules = engine.inferRules(sample.getDocument());
@@ -80,81 +82,86 @@ public class MakePartitions {
 			pages2xpath.put(sample,rules);
 			ids2xpath.put(sample.getId(), rules);
 		}
+		*/
+		final RulesRepository rulesRep = new RulesRepository(pages,MAX_PAGES);
 
-		//insieme di tutti gli xpath diversi
-		final Set<String> differentXpaths = differentXpaths(pages2xpath);
+		/*//insieme di tutti gli xpath diversi
+		final Set<String> differentXpaths = differentXpaths(rulesRep.getPages2xpath());
 
 		//raggruppamento di tutte le paigne che condividono LO STESSO xPath
-		final Map<String, Set<Page>> xPath2Pages=createXpath2Pages(differentXpaths,pages2xpath);  
+		final Map<String, Set<Page>> xPath2Pages=createXpath2Pages(rulesRep.getDifferentXpaths(),rulesRep.getPages2xpath());*/  
 
 		//raggruppamento di TUTTE LE PAGINE che condividono GLI STESSI xPath
-		final ArrayList<ClasseDiPagine> classiDiPagine = groupPagesByXpaths(xPath2Pages);
+		final ArrayList<PageClass> classiDiPagine = groupPagesByXpaths(rulesRep.getxPath2Pages());
 		System.out.println("classiDiPagine ha una size di "+classiDiPagine.size());
 
 		//stampa delle informazioni di ogni Classe di Pagine
 		for(int i=0;i<classiDiPagine.size();i++) {
-			ClasseDiPagine temp = classiDiPagine.get(i);
-			temp.stampa();
+			PageClass temp = classiDiPagine.get(i);
+			temp.print();
 			System.out.print("\n");
 		}
 		System.out.println("");
 
-		//eliminazione xPath equivalenti
-		final Map<ClasseDiPagine, Set<String>> class2UniqueXpaths = new HashMap<>();
-		for(ClasseDiPagine classe : classiDiPagine) {
+	/*	//eliminazione xPath equivalenti
+		final Map<PageClass, Set<String>> class2UniqueXpaths = new HashMap<>();
+		rulesRep.getClass2UniqueXpaths();
+		for(PageClass classe : classiDiPagine) {
 			final Set<String> senzaEquivalenti = deleteEquivalentXpaths(classe,MAX_PAGES);
 			class2UniqueXpaths.put(classe, senzaEquivalenti);
 			//System.out.println("Classe di pagine "+classe.getId()+" matcha con "+senzaEquivalenti.size()+" xpaths");
 		}
-		System.out.println("");
-
+		System.out.println("");*/
+		
+		rulesRep.createUniqueXPaths(classiDiPagine);
+		
 		//selezione dell'Xpath caratteristico per ogni classe di pagine
-		final Map<ClasseDiPagine, String> result = selectCharacteristicXPath(class2UniqueXpaths);
-		for(ClasseDiPagine classe : result.keySet()) {
-			System.out.println("Classe di pagine "+classe.getId()+" ha xPath caratteristico "+result.get(classe));
+		rulesRep.selectCharacteristicXPath();
+		for(PageClass classe : rulesRep.getCharacteristicXpath().keySet()) {
+			System.out.println("Classe di pagine "+classe.getId()+" ha xPath caratteristico "+rulesRep.getCharacteristicXpath().get(classe));
 		}
 
 		//generazione partizioni
-		final ArrayList<InsiemeDiClassi> partizioni = new ArrayList<>();
+		final ArrayList<ClassContainer> partizioni = new ArrayList<>();
 		for(int i=0;i<classiDiPagine.size();i++) {
 			//creazione di un Set<> di Classi di pagine per innescare il metodo ricorsivo che genera le partizioni
-			final Set<ClasseDiPagine> classi = new HashSet<>();
+			final Set<PageClass> classi = new HashSet<>();
 			classi.add(classiDiPagine.get(i));
 			//metodo ricorsivo che a partire da una classe di pagine trova tutte le combinazioni di queste che formano una partizione 
 			partizioni.addAll(trovaTutteLePossibiliPartizioni(classi,classiDiPagine,classiDiPagine.get(i).getPages().size(),MAX_PAGES));
 		}
 
 		//eliminazione partizioni equivalenti
-		ArrayList<InsiemeDiClassi> senzaDuplicati = deleteDuplicates(partizioni);
+		ArrayList<ClassContainer> senzaDuplicati = deleteDuplicates(partizioni);
 
 		//per ogni partizione stampa il suo id, gli id delle classi di pagine al suo interno, e gl id delle pagine di ogni ClasseDiPagine
 		System.out.println("\n");
 		System.out.println("\n");
-		for(InsiemeDiClassi i : senzaDuplicati) {
-			i.stampa();
+		for(ClassContainer i : senzaDuplicati) {
+			i.print();
 			System.out.println("\n");
 		}
 
 		//controllo relazione di raffiamento
 		for(int i=0; i<senzaDuplicati.size();i++) {
-			InsiemeDiClassi ins = senzaDuplicati.get(i);
+			ClassContainer ins = senzaDuplicati.get(i);
 			for(int j=0; j<senzaDuplicati.size();j++) {
-				if(ins.isRaffinamentoDi(senzaDuplicati.get(j), MAX_PAGES))
+				if(ins.isRefinementOf(senzaDuplicati.get(j), MAX_PAGES))
 					System.out.println("La partizione "+ins.getId()+ " e' raffinamento di "+senzaDuplicati.get(j).getId());
 			}
 
 		}
 	}
 
-	private static Map<ClasseDiPagine, String> selectCharacteristicXPath(Map<ClasseDiPagine, Set<String>> class2xpaths) {
-		final Map<ClasseDiPagine, String> result = new HashMap<>();
-		for(ClasseDiPagine classe : class2xpaths.keySet()) {
+	/*private static Map<PageClass, String> selectCharacteristicXPath(Map<PageClass, Set<String>> class2xpaths) {
+		final Map<PageClass, String> result = new HashMap<>();
+		for(PageClass classe : class2xpaths.keySet()) {
 			final Set<String> rules = class2xpaths.get(classe);
 			String bestXPath = null;
 
 			if (!rules.isEmpty()) {
 				final LinkedList<String> ranking = new LinkedList<String>(rules);
-				/* order by XPath expression length */
+				/* order by XPath expression length *//*
 				ranking.sort(Comparator.<String>comparingInt( xpath -> xpath.length() )
 						.thenComparing( xpath -> xpath.toString() )
 						);
@@ -165,9 +172,9 @@ public class MakePartitions {
 			result.put(classe, bestXPath);
 		}
 		return result;
-	}
+	} */
 
-	private static Set<String> deleteEquivalentXpaths(ClasseDiPagine classe, int MAX_PAGES) throws XPathExpressionException{
+	/*private static Set<String> deleteEquivalentXpaths(PageClass classe, int MAX_PAGES) throws XPathExpressionException{
 		final Set<String> alreadyChecked = new HashSet<>();
 		final Set<String> xPathsDaEliminare = new HashSet<>();
 		int index=1;
@@ -175,9 +182,9 @@ public class MakePartitions {
 
 		for(String rule : classe.getxPaths()) {
 			System.out.println("controllando xpath "+index+ " di "+classe.getxPaths().size());
-			VettoreDiValori v1 = new VettoreDiValori(rule,classe,MAX_PAGES);
+			ValuesVector v1 = new ValuesVector(rule,classe,MAX_PAGES);
 			for(String rule1 : classe.getxPaths()) {
-				VettoreDiValori v2 = new VettoreDiValori(rule1,classe,MAX_PAGES);
+				ValuesVector v2 = new ValuesVector(rule1,classe,MAX_PAGES);
 				if(!rule.equals(rule1) ) {
 					if(!(alreadyChecked.contains(rule1))) {
 						if((v1.equals(v2))) {
@@ -199,25 +206,25 @@ public class MakePartitions {
 		}
 
 		return senzaEquivalenti;
-	}
+	}*/
 
 
 	//ciclo for, se i è un indice da eliminare vai avanti sennò aggiungi al nuovo array list
-	private static ArrayList<InsiemeDiClassi> deleteDuplicates(ArrayList<InsiemeDiClassi> partizioni){
+	private static ArrayList<ClassContainer> deleteDuplicates(ArrayList<ClassContainer> partizioni){
 		final Set<String> alreadyChecked = new HashSet<>();
 		final Set<String> idDaEliminare = new HashSet<>();
 
-		for(InsiemeDiClassi i : partizioni) {
-			for(InsiemeDiClassi j :partizioni) {
-				if(!i.getId().equals(j.getId()) && i.stessaPartizione(j) && !(alreadyChecked.contains(j.getId()))) {
+		for(ClassContainer i : partizioni) {
+			for(ClassContainer j :partizioni) {
+				if(!i.getId().equals(j.getId()) && i.samePartition(j) && !(alreadyChecked.contains(j.getId()))) {
 					idDaEliminare.add(j.getId());
 				}
 			}
 			alreadyChecked.add(i.getId());
 		}
 
-		final ArrayList<InsiemeDiClassi> senzaDuplicati = new ArrayList<>();
-		for(InsiemeDiClassi toAdd : partizioni) {
+		final ArrayList<ClassContainer> senzaDuplicati = new ArrayList<>();
+		for(ClassContainer toAdd : partizioni) {
 			if(!idDaEliminare.contains(toAdd.getId())) senzaDuplicati.add(toAdd);
 		}
 
@@ -233,22 +240,22 @@ public class MakePartitions {
      * @param max - numero di pagine inserite in INPUT
      * @return tutte le possibili partizioni a partire da una singola classe di pagine
      */
-	private static ArrayList<InsiemeDiClassi> trovaTutteLePossibiliPartizioni(Set<ClasseDiPagine> toAdd,ArrayList<ClasseDiPagine> classiDiPagine, int n,int max){
-		final ArrayList<InsiemeDiClassi> partizioni = new ArrayList<>();
+	private static ArrayList<ClassContainer> trovaTutteLePossibiliPartizioni(Set<PageClass> toAdd,ArrayList<PageClass> classiDiPagine, int n,int max){
+		final ArrayList<ClassContainer> partizioni = new ArrayList<>();
 		//gestisce i casi in cui viene inserita un'unica ClasseDiPagine che contiene tutte le pagine (che è una partizione da sè)
 		if(n==max) {
-			final InsiemeDiClassi partizione= new InsiemeDiClassi();
-			partizione.setClassi(toAdd);
+			final ClassContainer partizione= new ClassContainer();
+			partizione.setpClasses(toAdd);
 			partizioni.add(partizione);
 		}
 
-		for(ClasseDiPagine classe: classiDiPagine) {
-			Set<ClasseDiPagine> setClassi= new HashSet<>();
+		for(PageClass classe: classiDiPagine) {
+			Set<PageClass> setClassi= new HashSet<>();
 			setClassi.addAll(toAdd);
 			//n_for è il valore che do a n nella chiamata ricorsiva
 			int n_for=n; 
 			//se sono tutte pagine distinte la cui somma è minore del nmax
-			if(((n_for+classe.getPages().size()<=max) && (!classe.haPagineUgualiA(toAdd)))) {
+			if(((n_for+classe.getPages().size()<=max) && (!classe.hasSamePagesAs(toAdd)))) {
 				//aggiorno n sommando le pagine della classe di pagine e aggiungo la classe di pagine all'insieme 
 				n_for+=classe.getPages().size();
 				setClassi.add(classe);
@@ -258,8 +265,8 @@ public class MakePartitions {
 				}
 				//le pagine FORMANO UNA PARTIZIONE
 				else if(n_for==max) {
-					final InsiemeDiClassi partizione= new InsiemeDiClassi();
-					partizione.setClassi(setClassi);
+					final ClassContainer partizione= new ClassContainer();
+					partizione.setpClasses(setClassi);
 					partizioni.add(partizione);
 				}
 			}
@@ -270,11 +277,11 @@ public class MakePartitions {
 
 
 	//metodo che crea la mappa delle pagine che matchano con gli stessi xpath
-	private static ArrayList<ClasseDiPagine> groupPagesByXpaths(Map<String, Set<Page>> xPath2Pages) {
-		final ArrayList<ClasseDiPagine> classiDiPagine = new ArrayList<>();
+	private static ArrayList<PageClass> groupPagesByXpaths(Map<String, Set<Page>> xPath2Pages) {
+		final ArrayList<PageClass> classiDiPagine = new ArrayList<>();
 
 		for(String toCheckl : xPath2Pages.keySet()) {
-			final ClasseDiPagine classeDiPagine = new ClasseDiPagine();
+			final PageClass classeDiPagine = new PageClass();
 			final Set<String> xPaths = new HashSet<>();
 			final Set<Page> pages = new HashSet<>();
 			xPaths.add(toCheckl);
@@ -289,7 +296,7 @@ public class MakePartitions {
 
 			classeDiPagine.setPages(pages);
 			classeDiPagine.setxPaths(xPaths);
-			if(!classeDiPagine.contieneInsiemeDiXpaths(classiDiPagine)) {
+			if(!classeDiPagine.containsXpathsSet(classiDiPagine)) {
 				classiDiPagine.add(classeDiPagine);
 			}
 		}
@@ -327,7 +334,7 @@ public class MakePartitions {
 		return same;
 	}
 
-	private static Map<String, Set<Page>> createXpath2Pages(Set<String> differentXpaths, Map<Page, Set<String>> pages2xpath) {
+	/*private static Map<String, Set<Page>> createXpath2Pages(Set<String> differentXpaths, Map<Page, Set<String>> pages2xpath) {
 		final Map<String, Set<Page>> xPath2Pages= new HashMap<>();
 
 		for(String xpath : differentXpaths) {
@@ -341,9 +348,9 @@ public class MakePartitions {
 		}
 
 		return xPath2Pages;
-	}
-
-	static private Set<String> differentXpaths(Map <Page,Set<String>> pages2xpath) {
+	}*/
+	
+	/*static private Set<String> differentXpaths(Map <Page,Set<String>> pages2xpath) {
 		final Set<String> differentXpaths = new HashSet<>();
 
 		for(Page sample : pages2xpath.keySet()) {
@@ -353,7 +360,7 @@ public class MakePartitions {
 			}
 		}
 		return differentXpaths;
-	}
+	}*/
 
 	static private boolean isAnUrl(String s) {
 		try {

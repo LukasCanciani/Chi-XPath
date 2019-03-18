@@ -6,13 +6,13 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class InsiemeDiClassi implements Comparable<InsiemeDiClassi> {
+public class ClassContainer implements Comparable<ClassContainer> {
 
 	private static int progId=0;
-	private Set<ClasseDiPagine>  classi;
+	private Set<PageClass>  pClasses;
 	private String id;
 
-	public InsiemeDiClassi() {
+	public ClassContainer() {
 		this.setId(Integer.toString(progId++));
 	}
 
@@ -24,21 +24,21 @@ public class InsiemeDiClassi implements Comparable<InsiemeDiClassi> {
 		this.id = id;
 	}
 
-	public Set<ClasseDiPagine> getClassi() {
-		return classi;
+	public Set<PageClass> getpClasses() {
+		return pClasses;
 	}
 
-	public void setClassi(Set<ClasseDiPagine> classi) {
-		this.classi = classi;
+	public void setpClasses(Set<PageClass> classes) {
+		this.pClasses = classes;
 	}
 
-	public boolean stessaPartizione(InsiemeDiClassi partizione) {
+	public boolean samePartition(ClassContainer partition) {
 		boolean stesse= false;
 		int index=0;
-		if(this.getClassi().size()==partizione.getClassi().size()) {
-			String[] samePartitions = new String[this.getClassi().size()];
-			for(ClasseDiPagine classe : this.getClassi()) {
-				for(ClasseDiPagine toCheck : partizione.getClassi()) {
+		if(this.getpClasses().size()==partition.getpClasses().size()) {
+			String[] samePartitions = new String[this.getpClasses().size()];
+			for(PageClass classe : this.getpClasses()) {
+				for(PageClass toCheck : partition.getpClasses()) {
 					if(classe.getId().equals(toCheck.getId()))
 						samePartitions[index]="1";
 				}
@@ -56,7 +56,7 @@ public class InsiemeDiClassi implements Comparable<InsiemeDiClassi> {
 	}
 
 	@Override
-	public int compareTo(InsiemeDiClassi that) {
+	public int compareTo(ClassContainer that) {
 		return this.getId().compareTo(that.getId());
 	}
 
@@ -67,33 +67,33 @@ public class InsiemeDiClassi implements Comparable<InsiemeDiClassi> {
 
 	@Override
 	public boolean equals(Object o) {
-		final InsiemeDiClassi that = (InsiemeDiClassi)o;
-		return this.stessaPartizione(that);
+		final ClassContainer that = (ClassContainer)o;
+		return this.samePartition(that);
 	}
 
 
 	//ciclo for, se i=indicedaeliminare vai avanti sennò aggiungi al nuovo array list
-	public ArrayList<InsiemeDiClassi> deleteDuplicates(ArrayList<InsiemeDiClassi> partizioni){
-		final ArrayList<InsiemeDiClassi> partizioniDaEliminare = new ArrayList<>();
+	public ArrayList<ClassContainer> deleteDuplicates(ArrayList<ClassContainer> partitions){
+		final ArrayList<ClassContainer> deletePartitions = new ArrayList<>();
 
-		final Set<InsiemeDiClassi> alreadyChecked = new HashSet<>();
-		final Set<String> idDaEliminare = new HashSet<>();
+		final Set<ClassContainer> alreadyChecked = new HashSet<>();
+		final Set<String> deleteIds = new HashSet<>();
 
-		for(InsiemeDiClassi i : partizioni) {
-			for(InsiemeDiClassi j :partizioni) {
-				if(i.stessaPartizione(j) && !(alreadyChecked.contains(j))) {
-					idDaEliminare.add(j.getId());
+		for(ClassContainer i : partitions) {
+			for(ClassContainer j :partitions) {
+				if(i.samePartition(j) && !(alreadyChecked.contains(j))) {
+					deleteIds.add(j.getId());
 				}
 			}
 			alreadyChecked.add(i);
 		}
 
-		final ArrayList<InsiemeDiClassi> senzaDuplicati = new ArrayList<>();
-		for(InsiemeDiClassi toDelete : partizioni) {
-			if(!idDaEliminare.contains(toDelete.getId())) senzaDuplicati.add(toDelete);
+		final ArrayList<ClassContainer> noDuplicate = new ArrayList<>();
+		for(ClassContainer toDelete : partitions) {
+			if(!deleteIds.contains(toDelete.getId())) noDuplicate.add(toDelete);
 		}
 
-		return senzaDuplicati;
+		return noDuplicate;
 
 	}
 
@@ -128,26 +128,26 @@ public class InsiemeDiClassi implements Comparable<InsiemeDiClassi> {
 			return false;
 		}*/
 
-	public boolean isRaffinamentoDi(InsiemeDiClassi i,int n_pagine) {
-		boolean isRaffinamento=true;
+	public boolean isRefinementOf(ClassContainer i,int n_pagine) {
+		boolean isRefinement=true;
 		final Map<Set<Page>,String> p1 = new HashMap<>();
 
 		final Map<Set<Page>,String> p2 = new HashMap<>();
 
 		//creo 2 mappe che contengono le pagine divise come sono divise nelle partizioni in input
-		for(ClasseDiPagine classe : this.getClassi()) {
+		for(PageClass classe : this.getpClasses()) {
 			final Set<Page> pages = new HashSet<>();
 			pages.addAll(classe.getPages());
 			p1.put(pages, classe.getId());
 		}
 
-		for(ClasseDiPagine classe2 : i.getClassi()) {
+		for(PageClass classe2 : i.getpClasses()) {
 			final Set<Page> pages2 = new HashSet<>();
 			pages2.addAll(classe2.getPages());
 			p2.put(pages2, classe2.getId());
 		}
 
-		if(!this.stessaPartizione(i)) {
+		if(!this.samePartition(i)) {
 			//itero su tutti i raggruppamenti di pagine della partizione "principale" e per ognuno di questi creo un insieme di IDPAGINA per effettuare i controlli
 			for(Set<Page> pages2 : p2.keySet()) {
 				final Set<String> idsToCheck2 = new HashSet<>();
@@ -169,22 +169,22 @@ public class InsiemeDiClassi implements Comparable<InsiemeDiClassi> {
 						 *  allora NON è un raffinamento.
 						 */
 						if(idsToCheck1.contains(id) && !idsToCheck2.containsAll(idsToCheck1)) {
-							return isRaffinamento=false;
+							return isRefinement=false;
 						}
 					}
 				}
 
 			}
 		}
-		else isRaffinamento=false;
+		else isRefinement=false;
 
-		return isRaffinamento;
+		return isRefinement;
 
 	}
 
-	public void stampa() {
+	public void print() {
 		System.out.println("La partizione "+this.getId()+" e' divisa in: ");
-		for(ClasseDiPagine Pset : this.getClassi()) {
+		for(PageClass Pset : this.getpClasses()) {
 			System.out.println("Classe di pagine "+Pset.getId()+":");
 			for(Page page : Pset.getPages()) {
 				System.out.println("id:"+page.getId()+" ");

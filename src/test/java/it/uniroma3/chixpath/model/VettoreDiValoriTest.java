@@ -53,18 +53,18 @@ public class VettoreDiValoriTest {
         set1.add(page2);
         
         //creazione ClasseDiPagine
-        ClasseDiPagine c1 = new ClasseDiPagine();
+        PageClass c1 = new PageClass();
         c1.setPages(set1);
         c1.setxPaths(xPaths1);
         
         //creazine e test vettori
-		VettoreDiValori vett1 = new VettoreDiValori("/HTML",c1,2);
-		VettoreDiValori vett2 = new VettoreDiValori("/HTML",c1,2);
+		ValuesVector vett1 = new ValuesVector("/HTML",c1,2);
+		ValuesVector vett2 = new ValuesVector("/HTML",c1,2);
 		assertTrue(vett1.equals(vett2));
 		
 		
-		VettoreDiValori vett3 = new VettoreDiValori("//H2",c1,2);
-		VettoreDiValori vett4 = new VettoreDiValori("/HTML",c1,2);
+		ValuesVector vett3 = new ValuesVector("//H2",c1,2);
+		ValuesVector vett4 = new ValuesVector("/HTML",c1,2);
 		assertFalse(vett3.equals(vett4));
 		
 	}
