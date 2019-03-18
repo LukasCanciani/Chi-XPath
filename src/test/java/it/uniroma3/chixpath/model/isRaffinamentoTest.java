@@ -136,6 +136,7 @@ public class isRaffinamentoTest {
        // assertTrue(i1.equals(i2)==true);
         
         assertTrue(i2.isRefinementOf(i1, 4));
+        assertFalse(i1.isRefinementOf(i2, 4));
         
     } 
 	
