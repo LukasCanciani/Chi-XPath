@@ -138,7 +138,7 @@ public class RulesRepository {
 	
 	
 	
-	private static Set<String> OldDeleteEquivalentXpaths(PageClass classe, int MAX_PAGES) throws XPathExpressionException{
+	/*private static Set<String> OldDeleteEquivalentXpaths(PageClass classe, int MAX_PAGES) throws XPathExpressionException{
 		final Set<String> alreadyChecked = new HashSet<>();
 		final Set<String> xPathsDaEliminare = new HashSet<>();
 		int index=1;
@@ -169,7 +169,7 @@ public class RulesRepository {
 			if(!xPathsDaEliminare.contains(rule)) senzaEquivalenti.add(rule);
 		}
 		return senzaEquivalenti;
-	}
+	}*/
 	//VECCHIA 10,39 MIN NUOVA 15s sul test Messaggero
 	private static Set<String> deleteEquivalentXpaths(PageClass pClass, int MAX_PAGES) throws XPathExpressionException{
 		VectorContainer container = new VectorContainer(pClass,MAX_PAGES,pClass.getId());
