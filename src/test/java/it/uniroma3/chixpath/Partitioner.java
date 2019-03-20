@@ -67,35 +67,35 @@ public class Partitioner {
 		
 
 		//raggruppamento di TUTTE LE PAGINE che condividono GLI STESSI xPath
-		final ArrayList<PageClass> classiDiPagine = groupPagesByXpaths(rulesRep.getxPath2Pages());
-		System.out.println("classiDiPagine ha una size di "+classiDiPagine.size());
+		final ArrayList<PageClass> pageClasses = groupPagesByXpaths(rulesRep.getxPath2Pages());
+		System.out.println("classiDiPagine ha una size di "+pageClasses.size());
 
 		//stampa delle informazioni di ogni Classe di Pagine
-		for(int i=0;i<classiDiPagine.size();i++) {
-			PageClass temp = classiDiPagine.get(i);
+		for(int i=0;i<pageClasses.size();i++) {
+			PageClass temp = pageClasses.get(i);
 			temp.print();
 			System.out.print("\n");
 		}
 		System.out.println("");
 
 	
+		rulesRep.createUniqueXPaths(pageClasses);
 		
-		rulesRep.createUniqueXPaths(classiDiPagine);
 		
 		//selezione dell'Xpath caratteristico per ogni classe di pagine
-		rulesRep.selectCharacteristicXPath();
-		for(PageClass classe : rulesRep.getCharacteristicXpath().keySet()) {
-			System.out.println("Classe di pagine "+classe.getId()+" ha xPath caratteristico "+rulesRep.getCharacteristicXpath().get(classe));
+		rulesRep.selectCharacteristicXPath(pageClasses);
+		for(PageClass pageClass : pageClasses) {
+			System.out.println("Classe di pagine "+pageClass.getId()+" ha xPath caratteristico "+pageClass.getCharacteristicXPath());
 		}
 
 		//generazione partizioni
 		final Set<Partition> partizioni = new HashSet<>();
-		for(int i=0;i<classiDiPagine.size();i++) {
+		for(int i=0;i<pageClasses.size();i++) {
 			//creazione di un Set<> di Classi di pagine per innescare il metodo ricorsivo che genera le partizioni
 			final Set<PageClass> classi = new HashSet<>();
-			classi.add(classiDiPagine.get(i));
+			classi.add(pageClasses.get(i));
 			//metodo ricorsivo che a partire da una classe di pagine trova tutte le combinazioni di queste che formano una partizione 
-			partizioni.addAll(allPossiblePartitions(classi,classiDiPagine,classiDiPagine.get(i).getPages().size(),MAX_PAGES));
+			partizioni.addAll(allPossiblePartitions(classi,pageClasses,pageClasses.get(i).getPages().size(),MAX_PAGES));
 		}
 
 		//eliminazione partizioni equivalenti
@@ -206,7 +206,7 @@ public class Partitioner {
 		final ArrayList<PageClass> classiDiPagine = new ArrayList<>();
 
 		for(String toCheckl : xPath2Pages.keySet()) {
-			final PageClass classeDiPagine = new PageClass();
+			final PageClass pageClasses = new PageClass();
 			final Set<String> xPaths = new HashSet<>();
 			final Set<Page> pages = new HashSet<>();
 			xPaths.add(toCheckl);
@@ -219,10 +219,10 @@ public class Partitioner {
 				}
 			}
 
-			classeDiPagine.setPages(pages);
-			classeDiPagine.setxPaths(xPaths);
-			if(!classeDiPagine.containsXpathsSet(classiDiPagine)) {
-				classiDiPagine.add(classeDiPagine);
+			pageClasses.setPages(pages);
+			pageClasses.setxPaths(xPaths);
+			if(!pageClasses.containsXpathsSet(classiDiPagine)) {
+				classiDiPagine.add(pageClasses);
 			}
 		}
 		for(int i=1;i<classiDiPagine.size()+1;i++) {
@@ -309,3 +309,22 @@ public class Partitioner {
 		return out.toString();
 	}
 }
+
+/*
+rulesRep.OLDcreateUniqueXPaths(pageClasses);
+for(PageClass pc: pageClasses) {
+	if (pc.getUniqueXPaths().size() != rulesRep.OLDclass2UniqueXpaths.get(pc).size()) {
+		System.out.println("DIMENSIONI DIFFERENTI SU PAGINEA " + pc.getId());
+	}
+	else {
+		boolean uguali = true;
+		for (String str: pc.getUniqueXPaths()) {
+			if(!rulesRep.OLDclass2UniqueXpaths.get(pc).contains(str)) {
+				uguali = false;
+				System.out.println("Trovato elemento diverso su pagina "+pc.getId());
+			}
+		}
+		if (uguali)
+				System.out.println("TUTTI ELEMENTI UGUALI SU PAGINA "+pc.getId());
+	}
+}*/

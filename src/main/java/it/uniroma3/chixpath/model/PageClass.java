@@ -1,16 +1,19 @@
 package it.uniroma3.chixpath.model;
 
-import java.awt.List;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
 public class PageClass implements Comparable<PageClass> {
-	private Set<String> xPaths;
+	private Set<String> xPaths = new HashSet<>();
 	
 	private Set<Page> pages= new HashSet<>();
 	
 	private String id;
+	
+	private Set<String> uniqueXPaths;
+	
+	private String characteristicXPath;
 	
     private static int progId=0;
 
@@ -98,6 +101,22 @@ public class PageClass implements Comparable<PageClass> {
 	    	}
 	    	return false;
 	    }
+
+		public Set<String> getUniqueXPaths() {
+			return uniqueXPaths;
+		}
+
+		public void setUniqueXPaths(Set<String> uniqueXPaths) {
+			this.uniqueXPaths = uniqueXPaths;
+		}
+
+		public String getCharacteristicXPath() {
+			return characteristicXPath;
+		}
+
+		public void setCharacteristicXPath(String characteristicXPath) {
+			this.characteristicXPath = characteristicXPath;
+		}
 	    
 	
 }

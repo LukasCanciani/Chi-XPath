@@ -1,10 +1,15 @@
 package it.uniroma3.chixpath.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.w3c.dom.Document;
 
 public class Page {
     
     private String id;
+    
+    private Set<String> xpaths= new HashSet<>();
     
     private String url;
     
@@ -45,5 +50,13 @@ public class Page {
     public String toString() {
         return this.getClass().getSimpleName()+" "+this.getUrl();
     }
+
+	public Set<String> getXPaths() {
+		return xpaths;
+	}
+
+	public void setXPaths(Set<String> xpaths) {
+		this.xpaths = xpaths;
+	}
 
 }

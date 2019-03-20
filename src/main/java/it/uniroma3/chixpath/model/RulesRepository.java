@@ -25,34 +25,25 @@ public class RulesRepository {
 
 	private Set<String> differentXpaths  = new HashSet<>();
 	private Map<String, Set<Page>> xPath2Pages  = new HashMap<>();
-	private Map<Page,Set<String>> pages2xpath  = new HashMap<>();
-	//private Map<String,Set<String>> ids2xpath  = new HashMap<>();
 	private Set<Page> pages;
-	private Map<PageClass, Set<String>> class2UniqueXpaths;
-	private Map<PageClass, String> characteristicXpath = new HashMap<>();
 	private int max_P;
 
 	public void rulesGeneration() {
 		//chifragment specification senza argomenti usa l'HTML_STANDARD_CASEHANDLER
 		final RuleInference engine = new RuleInference(new ChiFragmentSpecification());
-		final Map<Page,Set<String>> p2x= new HashMap<>();
-		final Map<String,Set<String>> i2x = new HashMap<>();
 
 		for(Page sample : this.pages) {
 			final Set<String> rules = engine.inferRules(sample.getDocument());
 			System.out.println("Generando xPaths sulla pagina"+sample.getUrl()+" con id: "+sample.getId());
-			p2x.put(sample,rules);
-			i2x.put(sample.getId(), rules);
-			//this.setIds2xpath(i2x);
-			this.setPages2xpath(p2x);
+			sample.setXPaths(rules);
 		}
 	}
 
 	private void generateDifferentXpaths() {
 		final Set<String> diffXpaths = new HashSet<>();
 
-		for(Page sample : this.pages2xpath.keySet()) {
-			Set<String> toCheck = this.pages2xpath.get(sample);
+		for(Page sample : this.pages) {
+			Set<String> toCheck = sample.getXPaths();
 			for(String str : toCheck) {
 				if(!diffXpaths.contains(str))   diffXpaths.add(str);
 			}
@@ -65,18 +56,26 @@ public class RulesRepository {
 
 		for(String xpath : differentXpaths) {
 			final Set<Page> pagesMatching = new HashSet<>();
-			for(Page sample : pages2xpath.keySet()) {
-				if(pages2xpath.get(sample).contains(xpath)) {
+			for(Page sample : this.pages) {
+				if(sample.getXPaths().contains(xpath)) {
 					pagesMatching.add(sample);
 				}
 			}
 			x2p.put(xpath, pagesMatching);
 		}
-
 		this.setxPath2Pages(x2p);
 	}
 
-	public void createUniqueXPaths(ArrayList<PageClass> classiDiPagine) throws XPathExpressionException {
+	public void createUniqueXPaths(ArrayList<PageClass> pageClasses) throws XPathExpressionException {
+		for(PageClass classe : pageClasses) {
+			final Set<String> senzaEquivalenti = deleteEquivalentXpaths(classe,this.max_P);
+			classe.setUniqueXPaths(senzaEquivalenti);
+			//System.out.println("Classe di pagine "+classe.getId()+" matcha con "+senzaEquivalenti.size()+" xpaths");
+		}
+		System.out.println("");
+	}
+	
+	/*public void OLDcreateUniqueXPaths(ArrayList<PageClass> classiDiPagine) throws XPathExpressionException {
 		final Map<PageClass, Set<String>> c2ux = new HashMap<>();
 		for(PageClass classe : classiDiPagine) {
 			final Set<String> senzaEquivalenti = deleteEquivalentXpaths(classe,this.max_P);
@@ -84,8 +83,9 @@ public class RulesRepository {
 			//System.out.println("Classe di pagine "+classe.getId()+" matcha con "+senzaEquivalenti.size()+" xpaths");
 		}
 		System.out.println("");
-		this.setClass2UniqueXpaths(c2ux);
-	}
+		this.OLDclass2UniqueXpaths=c2ux;
+	}*/
+
 	
 	/*public void createUniqueXPaths(ArrayList<PageClass> classiDiPagine) throws XPathExpressionException {
 		final Map<PageClass, Set<String>> c2ux = new HashMap<>();
@@ -182,10 +182,9 @@ public class RulesRepository {
 		return container.getXPaths();
 	}
 	
-	public  void selectCharacteristicXPath() {
-		final Map<PageClass, String> result = new HashMap<>();
-		for(PageClass classe : this.getClass2UniqueXpaths().keySet()) {
-			final Set<String> rules = this.getClass2UniqueXpaths().get(classe);
+	public  void selectCharacteristicXPath(ArrayList<PageClass> pageClasses) {
+		for(PageClass pageClass : pageClasses) {
+			final Set<String> rules = pageClass.getUniqueXPaths();
 			String bestXPath = null;
 
 			if (!rules.isEmpty()) {
@@ -197,10 +196,10 @@ public class RulesRepository {
 				bestXPath = ranking.getFirst();
 			}
 			else
-				System.out.println("Nessun xPath caratteristico trovato per la classe di pagine"+ classe.getId());
-			result.put(classe, bestXPath);
+				System.out.println("Nessun xPath caratteristico trovato per la classe di pagine"+ pageClass.getId());
+			pageClass.setCharacteristicXPath(bestXPath);
 		}
-		this.setCharacteristicXpath(result);
+		
 	}
 	
 	
@@ -215,11 +214,6 @@ public class RulesRepository {
 	public void setxPath2Pages(Map<String, Set<Page>> xPath2Pages) {
 		this.xPath2Pages = xPath2Pages;
 	}
-
-	public void setPages2xpath(Map<Page, Set<String>> pages2xpath) {
-		this.pages2xpath = pages2xpath;
-	}
-	
 			/*public void setIds2xpath(Map<String, Set<String>> ids2xpath) {
 				this.ids2xpath = ids2xpath;
 			}*/
@@ -228,7 +222,7 @@ public class RulesRepository {
 		this.pages = pages;
 	}
 	
-	public Map<PageClass, Set<String>> getClass2UniqueXpaths() {
+	/*public Map<PageClass, Set<String>> getClass2UniqueXpaths() {
 		return class2UniqueXpaths;
 	}
 
@@ -241,5 +235,5 @@ public class RulesRepository {
 	}
 	public void setCharacteristicXpath(Map<PageClass,String> charact) {
 		this.characteristicXpath=charact;
-	}
+	}*/
 }
