@@ -9,7 +9,7 @@ import java.util.Set;
 public class Partition implements Comparable<Partition> {
 
 	private static int progId=0;
-	private Set<PageClass>  pClasses;
+	private Set<PageClass>  pageClasses;
 	private String id;
 
 	public Partition() {
@@ -24,21 +24,21 @@ public class Partition implements Comparable<Partition> {
 		this.id = id;
 	}
 
-	public Set<PageClass> getpClasses() {
-		return pClasses;
+	public Set<PageClass> getPageClasses() {
+		return pageClasses;
 	}
 
-	public void setpClasses(Set<PageClass> classes) {
-		this.pClasses = classes;
+	public void setPageClasses(Set<PageClass> classes) {
+		this.pageClasses = classes;
 	}
 
 	public boolean samePartition(Partition partition) {
 		boolean stesse= false;
 		int index=0;
-		if(this.getpClasses().size()==partition.getpClasses().size()) {
-			String[] samePartitions = new String[this.getpClasses().size()];
-			for(PageClass classe : this.getpClasses()) {
-				for(PageClass toCheck : partition.getpClasses()) {
+		if(this.getPageClasses().size()==partition.getPageClasses().size()) {
+			String[] samePartitions = new String[this.getPageClasses().size()];
+			for(PageClass classe : this.getPageClasses()) {
+				for(PageClass toCheck : partition.getPageClasses()) {
 					if(classe.getId().equals(toCheck.getId()))
 						samePartitions[index]="1";
 				}
@@ -74,7 +74,6 @@ public class Partition implements Comparable<Partition> {
 
 	//ciclo for, se i=indicedaeliminare vai avanti sennò aggiungi al nuovo array list
 	public ArrayList<Partition> deleteDuplicates(ArrayList<Partition> partitions){
-		final ArrayList<Partition> deletePartitions = new ArrayList<>();
 
 		final Set<Partition> alreadyChecked = new HashSet<>();
 		final Set<String> deleteIds = new HashSet<>();
@@ -135,13 +134,13 @@ public class Partition implements Comparable<Partition> {
 		final Map<Set<Page>,String> p2 = new HashMap<>();
 
 		//creo 2 mappe che contengono le pagine divise come sono divise nelle partizioni in input
-		for(PageClass classe : this.getpClasses()) {
+		for(PageClass classe : this.getPageClasses()) {
 			final Set<Page> pages = new HashSet<>();
 			pages.addAll(classe.getPages());
 			p1.put(pages, classe.getId());
 		}
 
-		for(PageClass classe2 : i.getpClasses()) {
+		for(PageClass classe2 : i.getPageClasses()) {
 			final Set<Page> pages2 = new HashSet<>();
 			pages2.addAll(classe2.getPages());
 			p2.put(pages2, classe2.getId());
@@ -182,13 +181,25 @@ public class Partition implements Comparable<Partition> {
 
 	}
 
-	public void print() {
+	/*public void print() {
 		System.out.println("La partizione "+this.getId()+" e' divisa in: ");
-		for(PageClass Pset : this.getpClasses()) {
+		for(PageClass Pset : this.getPageClasses()) {
 			System.out.println("Classe di pagine "+Pset.getId()+":");
 			for(Page page : Pset.getPages()) {
 				System.out.println("id:"+page.getId()+" ");
 			}
 		}
+	}*/
+	
+	@Override
+	public String toString() {
+		String str = "La partizione "+this.getId()+" e' divisa in:\n";
+		for(PageClass Pset : this.getPageClasses()) {
+			str=str.concat("Classe di pagine "+Pset.getId()+":\n");
+			for(Page page : Pset.getPages()) {
+				str=str.concat("id:"+page.getId()+"\n");
+			}
+		}
+		return str;
 	}
 }

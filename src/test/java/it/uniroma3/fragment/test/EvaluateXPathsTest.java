@@ -29,7 +29,7 @@ import it.uniroma3.chixpath.ChiFinderMain;
 import it.uniroma3.chixpath.fragment.ChiFragmentSpecification;
 import it.uniroma3.chixpath.model.PageClass;
 import it.uniroma3.chixpath.model.Page;
-import it.uniroma3.chixpath.model.ValuesVector;
+import it.uniroma3.chixpath.model.Vector;
 import it.uniroma3.fragment.RuleInference;
 
 import static it.uniroma3.fragment.util.XPathUtils.evaluateXPath;
@@ -68,9 +68,9 @@ public class EvaluateXPathsTest {
 		NodeList node1 = evaluateXPath(page.getDocument(), "//TD[contains(@class,'schedaprodotto_schedatecnica_testo')]/text()[contains(.,'77')]/self::text()");
 
 		for(String rule : rules) {
-			ValuesVector vett1 = new ValuesVector(rule, classe,1);
+			Vector vett1 = new Vector(rule, classe,1);
 			for(String rule1 : rules) {
-				ValuesVector vett2 = new ValuesVector(rule1, classe,1);
+				Vector vett2 = new Vector(rule1, classe,1);
 				if(!rule.equals(rule1) && vett1.sameVector(vett2)) {
 					System.out.println("L'xpath" +rule+" e l'xPath "+rule1+" estraggono lo stesso nodo");
 				}

@@ -58,13 +58,13 @@ public class VettoreDiValoriTest {
         c1.setxPaths(xPaths1);
         
         //creazine e test vettori
-		ValuesVector vett1 = new ValuesVector("/HTML",c1,2);
-		ValuesVector vett2 = new ValuesVector("/HTML",c1,2);
+		Vector vett1 = new Vector("/HTML",c1,2);
+		Vector vett2 = new Vector("/HTML",c1,2);
 		assertTrue(vett1.equals(vett2));
 		
 		
-		ValuesVector vett3 = new ValuesVector("//H2",c1,2);
-		ValuesVector vett4 = new ValuesVector("/HTML",c1,2);
+		Vector vett3 = new Vector("//H2",c1,2);
+		Vector vett4 = new Vector("/HTML",c1,2);
 		assertFalse(vett3.equals(vett4));
 		
 	}

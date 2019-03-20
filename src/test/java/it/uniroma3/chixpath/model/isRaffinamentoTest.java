@@ -123,7 +123,7 @@ public class isRaffinamentoTest {
         p1.add(c2);
         
         Partition i1 = new Partition();
-        i1.setpClasses(p1);
+        i1.setPageClasses(p1);
       // -----------------------------------------------------------------------------------------------------------------------------------  
         Set<PageClass> p2 = new HashSet<>();
         p2.add(c3);
@@ -131,7 +131,7 @@ public class isRaffinamentoTest {
         p2.add(c5);
         
         Partition i2 = new Partition();
-        i2.setpClasses(p2);
+        i2.setPageClasses(p2);
       // --------------------------------------------------------------------------------------------------------------------------------  
        // assertTrue(i1.equals(i2)==true);
         

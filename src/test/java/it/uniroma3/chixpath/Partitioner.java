@@ -6,13 +6,10 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.net.MalformedURLException;
-import java.net.URI;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Map;
@@ -20,15 +17,12 @@ import java.util.Set;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import it.uniroma3.chixpath.fragment.ChiFragmentSpecification;
 import it.uniroma3.chixpath.model.PageClass;
 import it.uniroma3.chixpath.model.RulesRepository;
 import it.uniroma3.chixpath.model.Partition;
 import it.uniroma3.chixpath.model.Page;
-import it.uniroma3.chixpath.model.ValuesVector;
-import it.uniroma3.fragment.RuleInference;
 
-public class MakePartitions {
+public class Partitioner {
 	public static void main(String args[]) throws XPathExpressionException {
 		long startTime = System.currentTimeMillis();
 		final int MAX_PAGES = args.length;
@@ -62,7 +56,7 @@ public class MakePartitions {
 			}
 		}      
 
-		final String siteUrl = URI.create(pageUrls.getFirst()).getHost(); // use host as siteUrl                
+		//final String siteUrl = URI.create(pageUrls.getFirst()).getHost(); // use host as siteUrl                
 
 		System.out.println("Caricamento di " + pageUrls.size() + " pagine ");
 		final Set<Page> pages = createPages(pageUrls);
@@ -111,7 +105,7 @@ public class MakePartitions {
 		System.out.println("\n");
 		System.out.println("\n");
 		for(Partition i : senzaDuplicati) {
-			i.print();
+			System.out.println(i);
 			System.out.println("\n");
 		}
 
@@ -176,7 +170,7 @@ public class MakePartitions {
 		//gestisce i casi in cui viene inserita un'unica ClasseDiPagine che contiene tutte le pagine (che è una partizione da sè)
 		if(n==max) {
 			final Partition partizione= new Partition();
-			partizione.setpClasses(toAdd);
+			partizione.setPageClasses(toAdd);
 			partizioni.add(partizione);
 		}
 
@@ -197,7 +191,7 @@ public class MakePartitions {
 				//le pagine FORMANO UNA PARTIZIONE
 				else if(n_for==max) {
 					final Partition partizione= new Partition();
-					partizione.setpClasses(setClassi);
+					partizione.setPageClasses(setClassi);
 					partizioni.add(partizione);
 				}
 			}

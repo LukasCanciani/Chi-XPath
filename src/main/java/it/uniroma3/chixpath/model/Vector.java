@@ -3,28 +3,26 @@ package it.uniroma3.chixpath.model;
 import static it.uniroma3.fragment.util.XPathUtils.evaluateXPath;
 import org.w3c.dom.Node;
 
-import java.util.Set;
-
 import javax.xml.xpath.XPathExpressionException;
 
 import org.w3c.dom.NodeList;
 
-public class ValuesVector implements Comparable<ValuesVector>  {
-	private String xPath;
-	private PageClass pClass;
+public class Vector implements Comparable<Vector>  {
+	private String xpath;
+	private PageClass pageClass;
 	private int n_Pag;
 	private NodeList[] extractedNodes;
-	public ValuesVector(String xPath, PageClass pClass, int n_Pag) throws XPathExpressionException {
-		this.xPath=xPath;
-		this.pClass=pClass;
+	public Vector(String xpath, PageClass pageClass, int n_Pag) throws XPathExpressionException {
+		this.xpath=xpath;
+		this.pageClass=pageClass;
 		this.n_Pag=n_Pag;
 		this.extractedNodes=extractNodes();
 	}
 
 	public NodeList[] extractNodes() throws XPathExpressionException {
 		final NodeList[] extractedNodes = new NodeList[n_Pag]; 
-		for(Page p : this.pClass.getPages()) {
-			NodeList node = evaluateXPath(p.getDocument(), this.xPath);
+		for(Page p : this.pageClass.getPages()) {
+			NodeList node = evaluateXPath(p.getDocument(), this.xpath);
 			
 			//System.out.println("estratti "+node.getLength()+" nodi dalla pagina "+p.getId());
 			//inserisco i valori estratti dalla regola nelle posizioni dell'array corrispondenti all'id pagina, che è una stringa e va convertito in int
@@ -35,7 +33,7 @@ public class ValuesVector implements Comparable<ValuesVector>  {
 		return extractedNodes;
 	}
 	//controllo stesso vettore. Creo un array di stringhe in cui inserisco "1" -e i nodi estratti su una pagina dalla regola "A"sono uguali a quelli estratti dalla regola "B"; null altrimenti.
-	public boolean sameVector(ValuesVector vett) {
+	public boolean sameVector(Vector vett) {
 		boolean stesse= false;
 
 		String[] sameVector = new String[this.getExtractedNodes().length];
@@ -61,7 +59,7 @@ public class ValuesVector implements Comparable<ValuesVector>  {
 			}
 
 			else if(sameVector[k]=="1" && k==sameVector.length-1) {
-				System.out.println("Gli xPath" +this.getxPath()+" e "+vett.getxPath()+" danno gli stessi valori");
+				System.out.println("Gli xPath" +this.getXPath()+" e "+vett.getXPath()+" danno gli stessi valori");
 				return stesse=true;
 			}
 		}
@@ -103,20 +101,20 @@ public class ValuesVector implements Comparable<ValuesVector>  {
 		return stessi;
 	}
 
-	public String getxPath() {
-		return xPath;
+	public String getXPath() {
+		return xpath;
 	}
 
-	public void setxPath(String xPath) {
-		this.xPath = xPath;
+	public void setXPath(String xpath) {
+		this.xpath = xpath;
 	}
 
-	public PageClass getpClass() {
-		return pClass;
+	public PageClass getPageClass() {
+		return pageClass;
 	}
 
-	public void setpClass(PageClass pClass) {
-		this.pClass = pClass;
+	public void setPageClass(PageClass pageClass) {
+		this.pageClass = pageClass;
 	}
 
 	public NodeList[] getExtractedNodes() {
@@ -134,18 +132,18 @@ public class ValuesVector implements Comparable<ValuesVector>  {
 	}
 
 	@Override
-	public int compareTo(ValuesVector that) {
-		return this.getpClass().getId().compareTo(that.getpClass().getId());
+	public int compareTo(Vector that) {
+		return this.getPageClass().getId().compareTo(that.getPageClass().getId());
 	}
 
 	@Override
 	public int hashCode() {
-		return this.getpClass().getId().hashCode();
+		return this.getPageClass().getId().hashCode();
 	}
 
 	@Override
 	public boolean equals(Object o) {
-		final ValuesVector that = (ValuesVector)o;
+		final Vector that = (Vector)o;
 		return this.sameVector(that);
 	}
 

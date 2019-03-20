@@ -172,14 +172,14 @@ public class RulesRepository {
 	}*/
 	//VECCHIA 10,39 MIN NUOVA 15s sul test Messaggero
 	private static Set<String> deleteEquivalentXpaths(PageClass pClass, int MAX_PAGES) throws XPathExpressionException{
-		VectorContainer container = new VectorContainer(pClass,MAX_PAGES,pClass.getId());
+		VectorRepository container = new VectorRepository(pClass,MAX_PAGES,pClass.getId());
 		int index=1;
 		for (String rule : pClass.getxPaths()) {
 				System.out.println("controllando xpath "+index+ " di "+pClass.getxPaths().size());
 				container.addUnique(rule);
 				index++;
 		}
-		return container.getxPaths();
+		return container.getXPaths();
 	}
 	
 	public  void selectCharacteristicXPath() {
