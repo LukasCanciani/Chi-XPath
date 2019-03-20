@@ -62,9 +62,8 @@ public class Partitioner {
 		final Set<Page> pages = createPages(pageUrls);
 
 		
-		final RulesRepository rulesRep = new RulesRepository(pages,MAX_PAGES);
-
-		
+		final RulesRepository rulesRep = new RulesRepository(pages);		
+	
 
 		//raggruppamento di TUTTE LE PAGINE che condividono GLI STESSI xPath
 		final ArrayList<PageClass> pageClasses = groupPagesByXpaths(rulesRep.getxPath2Pages());
@@ -78,12 +77,29 @@ public class Partitioner {
 		}
 		System.out.println("");
 
-	
-		rulesRep.createUniqueXPaths(pageClasses);
-		
+		PageClass.createUniqueXPaths(pageClasses, MAX_PAGES);
+		///DATOGLIERE
+		rulesRep.OLDcreateUniqueXPaths(pageClasses);
+		for(PageClass pc: pageClasses) {
+			if (pc.getUniqueXPaths().size() != rulesRep.OLDclass2UniqueXpaths.get(pc).size()) {
+				System.out.println("DIMENSIONI DIFFERENTI SU PAGINEA " + pc.getId());
+			}
+			else {
+				boolean uguali = true;
+				for (String str: pc.getUniqueXPaths()) {
+					if(!rulesRep.OLDclass2UniqueXpaths.get(pc).contains(str)) {
+						uguali = false;
+						System.out.println("Trovato elemento diverso su pagina "+pc.getId());
+					}
+				}
+				if (uguali)
+						System.out.println("TUTTI ELEMENTI UGUALI SU PAGINA "+pc.getId());
+			}
+		}
+		//FINO A QUI
 		
 		//selezione dell'Xpath caratteristico per ogni classe di pagine
-		rulesRep.selectCharacteristicXPath(pageClasses);
+		PageClass.selectCharacteristicXPath(pageClasses);
 		for(PageClass pageClass : pageClasses) {
 			System.out.println("Classe di pagine "+pageClass.getId()+" ha xPath caratteristico "+pageClass.getCharacteristicXPath());
 		}

@@ -1,8 +1,12 @@
 package it.uniroma3.chixpath.model;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Set;
+
+import javax.xml.xpath.XPathExpressionException;
 
 public class PageClass implements Comparable<PageClass> {
 	private Set<String> xPaths = new HashSet<>();
@@ -116,6 +120,44 @@ public class PageClass implements Comparable<PageClass> {
 
 		public void setCharacteristicXPath(String characteristicXPath) {
 			this.characteristicXPath = characteristicXPath;
+		}
+		public static void createUniqueXPaths(ArrayList<PageClass> pageClasses,int max_p) throws XPathExpressionException {
+			for(PageClass classe : pageClasses) {
+				final Set<String> senzaEquivalenti = classe.deleteEquivalentXpaths(max_p);
+				classe.setUniqueXPaths(senzaEquivalenti);
+				//System.out.println("Classe di pagine "+classe.getId()+" matcha con "+senzaEquivalenti.size()+" xpaths");
+			}
+			System.out.println("");
+		}
+
+		public Set<String> deleteEquivalentXpaths(int max_P) throws XPathExpressionException{
+				VectorRepository container = new VectorRepository(this,max_P,this.getId());
+				int index=1;
+				for (String rule : this.getxPaths()) {
+						System.out.println("controllando xpath "+index+ " di "+this.getxPaths().size());
+						container.addUnique(rule);
+						index++;
+				}
+				return container.getXPaths();
+		}
+		public static void selectCharacteristicXPath(ArrayList<PageClass> pageClasses) {
+			for(PageClass pageClass : pageClasses) {
+				final Set<String> rules = pageClass.getUniqueXPaths();
+				String bestXPath = null;
+
+				if (!rules.isEmpty()) {
+					final LinkedList<String> ranking = new LinkedList<String>(rules);
+					/* order by XPath expression length */
+					ranking.sort(Comparator.<String>comparingInt( xpath -> xpath.length() )
+							.thenComparing( xpath -> xpath.toString() )
+							);
+					bestXPath = ranking.getFirst();
+				}
+				else
+					System.out.println("Nessun xPath caratteristico trovato per la classe di pagine"+ pageClass.getId());
+				pageClass.setCharacteristicXPath(bestXPath);
+			}
+			
 		}
 	    
 	

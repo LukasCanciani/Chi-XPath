@@ -1,10 +1,8 @@
 package it.uniroma3.chixpath.model;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
@@ -15,18 +13,17 @@ import it.uniroma3.fragment.RuleInference;
 
 
 public class RulesRepository {
-	public RulesRepository(Set<Page> pages,int max) {
+	public RulesRepository(Set<Page> pages) {
 		this.setPages(pages);
 		this.rulesGeneration();
 		this.generateDifferentXpaths();
 		this.createXpath2Pages();
-		this.max_P=max;
 	}
 
 	private Set<String> differentXpaths  = new HashSet<>();
 	private Map<String, Set<Page>> xPath2Pages  = new HashMap<>();
 	private Set<Page> pages;
-	private int max_P;
+	public Map<PageClass, Set<String>> OLDclass2UniqueXpaths;
 
 	public void rulesGeneration() {
 		//chifragment specification senza argomenti usa l'HTML_STANDARD_CASEHANDLER
@@ -65,26 +62,17 @@ public class RulesRepository {
 		}
 		this.setxPath2Pages(x2p);
 	}
-
-	public void createUniqueXPaths(ArrayList<PageClass> pageClasses) throws XPathExpressionException {
-		for(PageClass classe : pageClasses) {
-			final Set<String> senzaEquivalenti = deleteEquivalentXpaths(classe,this.max_P);
-			classe.setUniqueXPaths(senzaEquivalenti);
-			//System.out.println("Classe di pagine "+classe.getId()+" matcha con "+senzaEquivalenti.size()+" xpaths");
-		}
-		System.out.println("");
-	}
-	
-	/*public void OLDcreateUniqueXPaths(ArrayList<PageClass> classiDiPagine) throws XPathExpressionException {
+	//Da togliere
+	public void OLDcreateUniqueXPaths(ArrayList<PageClass> classiDiPagine) throws XPathExpressionException {
 		final Map<PageClass, Set<String>> c2ux = new HashMap<>();
 		for(PageClass classe : classiDiPagine) {
-			final Set<String> senzaEquivalenti = deleteEquivalentXpaths(classe,this.max_P);
+			final Set<String> senzaEquivalenti = OLDdeleteEquivalentXpaths(classe,4);
 			c2ux.put(classe, senzaEquivalenti);
 			//System.out.println("Classe di pagine "+classe.getId()+" matcha con "+senzaEquivalenti.size()+" xpaths");
 		}
 		System.out.println("");
 		this.OLDclass2UniqueXpaths=c2ux;
-	}*/
+	}
 
 	
 	/*public void createUniqueXPaths(ArrayList<PageClass> classiDiPagine) throws XPathExpressionException {
@@ -171,7 +159,8 @@ public class RulesRepository {
 		return senzaEquivalenti;
 	}*/
 	//VECCHIA 10,39 MIN NUOVA 15s sul test Messaggero
-	private static Set<String> deleteEquivalentXpaths(PageClass pClass, int MAX_PAGES) throws XPathExpressionException{
+	//Datogliere!!!
+	private static Set<String> OLDdeleteEquivalentXpaths(PageClass pClass, int MAX_PAGES) throws XPathExpressionException{
 		VectorRepository container = new VectorRepository(pClass,MAX_PAGES,pClass.getId());
 		int index=1;
 		for (String rule : pClass.getxPaths()) {
@@ -182,25 +171,7 @@ public class RulesRepository {
 		return container.getXPaths();
 	}
 	
-	public  void selectCharacteristicXPath(ArrayList<PageClass> pageClasses) {
-		for(PageClass pageClass : pageClasses) {
-			final Set<String> rules = pageClass.getUniqueXPaths();
-			String bestXPath = null;
-
-			if (!rules.isEmpty()) {
-				final LinkedList<String> ranking = new LinkedList<String>(rules);
-				/* order by XPath expression length */
-				ranking.sort(Comparator.<String>comparingInt( xpath -> xpath.length() )
-						.thenComparing( xpath -> xpath.toString() )
-						);
-				bestXPath = ranking.getFirst();
-			}
-			else
-				System.out.println("Nessun xPath caratteristico trovato per la classe di pagine"+ pageClass.getId());
-			pageClass.setCharacteristicXPath(bestXPath);
-		}
-		
-	}
+	
 	
 	
 	public void setDifferentXpaths(Set<String> differentXpaths) {
