@@ -12,13 +12,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
-import java.util.Map;
 import java.util.Set;
 
 import javax.xml.xpath.XPathExpressionException;
 
 import it.uniroma3.chixpath.model.PageClass;
 import it.uniroma3.chixpath.model.RulesRepository;
+import it.uniroma3.chixpath.model.XPath;
 import it.uniroma3.chixpath.model.Partition;
 import it.uniroma3.chixpath.model.Page;
 
@@ -61,12 +61,16 @@ public class Partitioner {
 		System.out.println("Caricamento di " + pageUrls.size() + " pagine ");
 		final Set<Page> pages = createPages(pageUrls);
 
-		
+
 		final RulesRepository rulesRep = new RulesRepository(pages);		
-	
+
 
 		//raggruppamento di TUTTE LE PAGINE che condividono GLI STESSI xPath
-		final ArrayList<PageClass> pageClasses = groupPagesByXpaths(rulesRep.getxPath2Pages());
+		
+		final ArrayList<PageClass> pageClasses = groupPagesByXPaths(rulesRep.getXPaths());
+		
+		
+		
 		System.out.println("classiDiPagine ha una size di "+pageClasses.size());
 
 		//stampa delle informazioni di ogni Classe di Pagine
@@ -79,7 +83,7 @@ public class Partitioner {
 
 		PageClass.createUniqueXPaths(pageClasses, MAX_PAGES);
 		///DATOGLIERE
-		rulesRep.OLDcreateUniqueXPaths(pageClasses);
+		/*rulesRep.OLDcreateUniqueXPaths(pageClasses);
 		for(PageClass pc: pageClasses) {
 			if (pc.getUniqueXPaths().size() != rulesRep.OLDclass2UniqueXpaths.get(pc).size()) {
 				System.out.println("DIMENSIONI DIFFERENTI SU PAGINEA " + pc.getId());
@@ -96,8 +100,8 @@ public class Partitioner {
 						System.out.println("TUTTI ELEMENTI UGUALI SU PAGINA "+pc.getId());
 			}
 		}
-		//FINO A QUI
-		
+		//FINO A QUI*/
+
 		//selezione dell'Xpath caratteristico per ogni classe di pagine
 		PageClass.selectCharacteristicXPath(pageClasses);
 		for(PageClass pageClass : pageClasses) {
@@ -135,7 +139,7 @@ public class Partitioner {
 
 		}*/
 		for(Partition c1 : senzaDuplicati) {
-			
+
 			for(Partition c2 : senzaDuplicati) {
 				if(c1.isRefinementOf(c2, MAX_PAGES))
 					System.out.println("La partizione "+c1.getId()+ " e' raffinamento di "+c2.getId());
@@ -144,10 +148,10 @@ public class Partitioner {
 		}
 		long endTime = System.currentTimeMillis();
 		System.out.println("It took " + (endTime - startTime)/1000 + " seconds");
-		
+
 	}
 
-	
+
 
 
 	//ciclo for, se i è un indice da eliminare vai avanti sennò aggiungi al nuovo array list
@@ -174,13 +178,13 @@ public class Partitioner {
 	}
 
 
-	  /**
-     * @param toAdd - attuale combinazione di classi di pagine da cui si vuole creare la partizione
-     * @param classiDiPagine - TUTTE le classi di pagine create dalle quali si vogliono generare le partizioni
-     * @param n - somma delle pagine dell'attuale combinazione di classi di pagine (una combinazione di classi di pagine è una partizione quando n==max)
-     * @param max - numero di pagine inserite in INPUT
-     * @return tutte le possibili partizioni a partire da una singola classe di pagine
-     */
+	/**
+	 * @param toAdd - attuale combinazione di classi di pagine da cui si vuole creare la partizione
+	 * @param classiDiPagine - TUTTE le classi di pagine create dalle quali si vogliono generare le partizioni
+	 * @param n - somma delle pagine dell'attuale combinazione di classi di pagine (una combinazione di classi di pagine è una partizione quando n==max)
+	 * @param max - numero di pagine inserite in INPUT
+	 * @return tutte le possibili partizioni a partire da una singola classe di pagine
+	 */
 	private static ArrayList<Partition> allPossiblePartitions(Set<PageClass> toAdd,ArrayList<PageClass> classiDiPagine, int n,int max){
 		final ArrayList<Partition> partizioni = new ArrayList<>();
 		//gestisce i casi in cui viene inserita un'unica ClasseDiPagine che contiene tutte le pagine (che è una partizione da sè)
@@ -217,19 +221,22 @@ public class Partitioner {
 	}
 
 
-	//metodo che crea la mappa delle pagine che matchano con gli stessi xpath
-	private static ArrayList<PageClass> groupPagesByXpaths(Map<String, Set<Page>> xPath2Pages) {
+	
+
+	private static ArrayList<PageClass> groupPagesByXPaths(Set<XPath> xpaths) {
 		final ArrayList<PageClass> classiDiPagine = new ArrayList<>();
 
-		for(String toCheckl : xPath2Pages.keySet()) {
+		for(XPath xpath1 : xpaths) {
+			String toCheck1 = xpath1.getRule();
 			final PageClass pageClasses = new PageClass();
 			final Set<String> xPaths = new HashSet<>();
 			final Set<Page> pages = new HashSet<>();
-			xPaths.add(toCheckl);
-			pages.addAll(xPath2Pages.get(toCheckl));
+			xPaths.add(toCheck1);
+			pages.addAll(xpath1.getPages());
 
-			for( String toCheck2 : xPath2Pages.keySet()) {
-				if((!toCheckl.equals(toCheck2)) && (checkSamePages(xPath2Pages.get(toCheckl),xPath2Pages.get(toCheck2)))){
+			for( XPath xpath2 : xpaths) {
+				String toCheck2=xpath2.getRule();
+				if((!toCheck1.equals(toCheck2)) && (checkSamePages(xpath1.getPages(),xpath2.getPages()))){
 					xPaths.add(toCheck2);
 					//pages.addAll(xPath2Pages.get(toCheck2));
 				}
@@ -275,7 +282,7 @@ public class Partitioner {
 		return same;
 	}
 
-	
+
 	static private boolean isAnUrl(String s) {
 		try {
 			new URL(s);

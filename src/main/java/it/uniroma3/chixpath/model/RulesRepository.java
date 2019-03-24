@@ -1,12 +1,12 @@
 package it.uniroma3.chixpath.model;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+//import java.util.ArrayList;
+//import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
+//import java.util.Map;
 import java.util.Set;
 
-import javax.xml.xpath.XPathExpressionException;
+//import javax.xml.xpath.XPathExpressionException;
 
 import it.uniroma3.chixpath.fragment.ChiFragmentSpecification;
 import it.uniroma3.fragment.RuleInference;
@@ -18,13 +18,39 @@ public class RulesRepository {
 		this.rulesGeneration();
 		this.generateDifferentXpaths();
 		this.createXpath2Pages();
+		
 	}
 
 	private Set<String> differentXpaths  = new HashSet<>();
-	private Map<String, Set<Page>> xPath2Pages  = new HashMap<>();
+	//private Map<String, Set<Page>> xPath2Pages  = new HashMap<>();
 	private Set<Page> pages;
-	public Map<PageClass, Set<String>> OLDclass2UniqueXpaths;
+	private Set<XPath> xpaths;
+	//public Map<PageClass, Set<String>> OLDclass2UniqueXpaths;
 
+	/*public void controllo() {
+		boolean trovatoErrore=false;
+		for (XPath xp : this.xpaths) {
+			if (xp.getPages().size() == this.xPath2Pages.get(xp.getRule()).size()) {
+				for (Page s : xp.getPages()) {
+					if (!this.xPath2Pages.get(xp.rule).contains(s)) {
+						System.out.println("RULE NON TROVATA");
+						trovatoErrore = true;
+						break;
+					}
+				}
+			}
+			else {
+				System.out.println("Lunghezza non torna");
+			}
+		}
+		if (!trovatoErrore) {
+			System.out.println("TUTTO OK!!!!");
+		}else
+		{
+			System.out.println("ERRRRRRRORE");
+		}
+	}*/
+	
 	public void rulesGeneration() {
 		//chifragment specification senza argomenti usa l'HTML_STANDARD_CASEHANDLER
 		final RuleInference engine = new RuleInference(new ChiFragmentSpecification());
@@ -49,21 +75,22 @@ public class RulesRepository {
 	}
 
 	private void createXpath2Pages() {
-		final Map<String, Set<Page>> x2p= new HashMap<>();
-
+		Set<XPath> x2pag = new HashSet<>();
 		for(String xpath : differentXpaths) {
+			XPath rule = new XPath(xpath);
 			final Set<Page> pagesMatching = new HashSet<>();
 			for(Page sample : this.pages) {
 				if(sample.getXPaths().contains(xpath)) {
 					pagesMatching.add(sample);
 				}
 			}
-			x2p.put(xpath, pagesMatching);
+			rule.setPages(pagesMatching);
+			x2pag.add(rule);
 		}
-		this.setxPath2Pages(x2p);
+		this.setXPaths(x2pag);
 	}
 	//Da togliere
-	public void OLDcreateUniqueXPaths(ArrayList<PageClass> classiDiPagine) throws XPathExpressionException {
+	/*public void OLDcreateUniqueXPaths(ArrayList<PageClass> classiDiPagine) throws XPathExpressionException {
 		final Map<PageClass, Set<String>> c2ux = new HashMap<>();
 		for(PageClass classe : classiDiPagine) {
 			final Set<String> senzaEquivalenti = OLDdeleteEquivalentXpaths(classe,4);
@@ -72,7 +99,7 @@ public class RulesRepository {
 		}
 		System.out.println("");
 		this.OLDclass2UniqueXpaths=c2ux;
-	}
+	}*/
 
 	
 	/*public void createUniqueXPaths(ArrayList<PageClass> classiDiPagine) throws XPathExpressionException {
@@ -160,7 +187,7 @@ public class RulesRepository {
 	}*/
 	//VECCHIA 10,39 MIN NUOVA 15s sul test Messaggero
 	//Datogliere!!!
-	private static Set<String> OLDdeleteEquivalentXpaths(PageClass pClass, int MAX_PAGES) throws XPathExpressionException{
+	/*private static Set<String> OLDdeleteEquivalentXpaths(PageClass pClass, int MAX_PAGES) throws XPathExpressionException{
 		VectorRepository container = new VectorRepository(pClass,MAX_PAGES,pClass.getId());
 		int index=1;
 		for (String rule : pClass.getxPaths()) {
@@ -169,7 +196,7 @@ public class RulesRepository {
 				index++;
 		}
 		return container.getXPaths();
-	}
+	}*/
 	
 	
 	
@@ -178,33 +205,16 @@ public class RulesRepository {
 		this.differentXpaths = differentXpaths;
 	}
 	
-	public Map<String, Set<Page>> getxPath2Pages() {
-		return xPath2Pages;
+	public void setXPaths(Set<XPath> xpaths) {
+		this.xpaths = xpaths;
 	}
 
-	public void setxPath2Pages(Map<String, Set<Page>> xPath2Pages) {
-		this.xPath2Pages = xPath2Pages;
+	public Set<XPath> getXPaths() {
+		return xpaths;
 	}
-			/*public void setIds2xpath(Map<String, Set<String>> ids2xpath) {
-				this.ids2xpath = ids2xpath;
-			}*/
 	
 	public void setPages(Set<Page> pages) {
 		this.pages = pages;
 	}
 	
-	/*public Map<PageClass, Set<String>> getClass2UniqueXpaths() {
-		return class2UniqueXpaths;
-	}
-
-	public void setClass2UniqueXpaths(Map<PageClass, Set<String>> class2UniqueXpaths) {
-		this.class2UniqueXpaths = class2UniqueXpaths;
-	}
-	
-	public Map<PageClass, String> getCharacteristicXpath() {
-		return characteristicXpath;
-	}
-	public void setCharacteristicXpath(Map<PageClass,String> charact) {
-		this.characteristicXpath=charact;
-	}*/
 }
