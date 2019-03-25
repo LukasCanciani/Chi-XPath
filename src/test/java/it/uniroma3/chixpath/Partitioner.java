@@ -224,7 +224,7 @@ public class Partitioner {
 	
 
 	private static ArrayList<PageClass> groupPagesByXPaths(Set<XPath> xpaths) {
-		final ArrayList<PageClass> classiDiPagine = new ArrayList<>();
+		final ArrayList<PageClass> pClasses = new ArrayList<>();
 
 		for(XPath xpath1 : xpaths) {
 			String toCheck1 = xpath1.getRule();
@@ -244,14 +244,14 @@ public class Partitioner {
 
 			pageClasses.setPages(pages);
 			pageClasses.setxPaths(xPaths);
-			if(!pageClasses.containsXpathsSet(classiDiPagine)) {
-				classiDiPagine.add(pageClasses);
+			if(!pageClasses.containsXpathsSet(pClasses)) {
+				pClasses.add(pageClasses);
 			}
 		}
-		for(int i=1;i<classiDiPagine.size()+1;i++) {
-			classiDiPagine.get(i-1).setId(Integer.toString(i));
+		for(int i=1;i<pClasses.size()+1;i++) {
+			pClasses.get(i-1).setId(Integer.toString(i));
 		}
-		return classiDiPagine;
+		return pClasses;
 	}
 
 	/*

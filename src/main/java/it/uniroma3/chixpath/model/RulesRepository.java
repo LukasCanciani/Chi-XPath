@@ -17,7 +17,7 @@ public class RulesRepository {
 		this.setPages(pages);
 		this.rulesGeneration();
 		this.generateDifferentXpaths();
-		this.createXpath2Pages();
+		this.createXPath2Pages();
 		
 	}
 
@@ -74,7 +74,7 @@ public class RulesRepository {
 		this.setDifferentXpaths(diffXpaths);
 	}
 
-	private void createXpath2Pages() {
+	private void createXPath2Pages() {
 		Set<XPath> x2pag = new HashSet<>();
 		for(String xpath : differentXpaths) {
 			XPath rule = new XPath(xpath);

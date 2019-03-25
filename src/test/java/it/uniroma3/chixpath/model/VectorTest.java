@@ -18,7 +18,7 @@ import it.uniroma3.chixpath.model.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class VettoreDiValoriTest {
+public class VectorTest {
 
 	@Before
 	public void setUp() throws Exception {
