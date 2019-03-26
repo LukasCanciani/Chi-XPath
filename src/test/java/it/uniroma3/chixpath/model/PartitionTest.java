@@ -9,18 +9,18 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
-
-import javax.xml.xpath.XPathExpressionException;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public class PageClassTest {
+public class PartitionTest {
 	public Page page1;
 	public Page page2;
+	PageClass pageClass1;
+	PageClass pageClass2;
+	PageClass pageClass3;
 	@Before
 	public void setUp() throws Exception {
 		//creazione pagina1
@@ -37,63 +37,58 @@ public class PageClassTest {
         page2 = createPage(content2);
         page2.setUrl(url2);
         page2.setId("1");
-	}
-
-	@Test
-	public void samePages() {
-		PageClass pageClass1 = new PageClass();
-		PageClass pageClass2 = new PageClass();
+        pageClass1 = new PageClass();
+        pageClass2 = new PageClass();
+        pageClass3 = new PageClass();
 		Set<Page> set = new HashSet<>();
 		Set<Page> set2 = new HashSet<>();
+		Set<Page> set3 = new HashSet<>();
 		set.add(page1);
 		set2.add(page1);
 		set2.add(page2);
+		set3.add(page2);
 		pageClass1.setPages(set);
 		pageClass2.setPages(set2);
-		Set<PageClass> pcSet = new HashSet<>();
-		pcSet.add(pageClass2);
-		assertTrue(pageClass1.hasSamePagesAs(pcSet));
-		pageClass2.setPages(new HashSet<>());
-		assertFalse(pageClass1.hasSamePagesAs(pcSet));
+		pageClass3.setPages(set3);
+	}
+	
+	@Test
+	public void SamePartition() {
+		Partition p1 = new Partition();
+		Set<PageClass> set1 = new HashSet<PageClass>();
+		set1.add(pageClass1);
+		p1.setPageClasses(set1);
+		Set<PageClass> set2 = new HashSet<PageClass>();
+		set2.add(pageClass1);
+		Partition p2 = new Partition();
+		p2.setPageClasses(set2);
+		assertTrue(p1.samePartition(p2));
 	}
 	@Test
-	public void createUniqueXPathsSAME()  throws XPathExpressionException {
-		final Set<String> xPaths1 = new HashSet<>();
-        xPaths1.add("/HTML");
-        xPaths1.add("HTML");
-        page1.setXPaths(xPaths1);
-		PageClass pageClass1 = new PageClass();
-		pageClass1.setxPaths(xPaths1);
-		Set<Page> set = new HashSet<>();
-		set.add(page1);
-		pageClass1.setPages(set);
-		ArrayList<PageClass> classes = new ArrayList<>();
-		classes.add(pageClass1);
-		assertEquals(2,pageClass1.getxPaths().size());
-		PageClass.createUniqueXPaths(classes, 1);
-		assertEquals(1,pageClass1.getUniqueXPaths().size());
-		
-		
+	public void PartialSame() {
+		Partition p1 = new Partition();
+		Set<PageClass> set1 = new HashSet<PageClass>();
+		set1.add(pageClass1);
+		p1.setPageClasses(set1);
+		Set<PageClass> set2 = new HashSet<PageClass>();
+		set2.add(pageClass2);
+		Partition p2 = new Partition();
+		p2.setPageClasses(set2);
+		assertFalse(p1.samePartition(p2));
 	}
 	@Test
-	public void createUniqueXPathsNOTSAME()  throws XPathExpressionException {
-		final Set<String> xPaths1 = new HashSet<>();
-        xPaths1.add("/HTML");
-        xPaths1.add("a");
-        page1.setXPaths(xPaths1);
-		PageClass pageClass1 = new PageClass();
-		pageClass1.setxPaths(xPaths1);
-		Set<Page> set = new HashSet<>();
-		set.add(page1);
-		pageClass1.setPages(set);
-		ArrayList<PageClass> classes = new ArrayList<>();
-		classes.add(pageClass1);
-		assertEquals(2,pageClass1.getxPaths().size());
-		PageClass.createUniqueXPaths(classes, 1);
-		assertEquals(2,pageClass1.getUniqueXPaths().size());
-		
-		
+	public void DifferentPartition() {
+		Partition p1 = new Partition();
+		Set<PageClass> set1 = new HashSet<PageClass>();
+		set1.add(pageClass1);
+		p1.setPageClasses(set1);
+		Set<PageClass> set2 = new HashSet<PageClass>();
+		set2.add(pageClass3);
+		Partition p2 = new Partition();
+		p2.setPageClasses(set2);
+		assertFalse(p1.samePartition(p2));
 	}
+	
 	
 	static private String loadPageContent(String anURL) {
         final StringWriter out = new StringWriter();
@@ -118,4 +113,5 @@ public class PageClassTest {
 
         return out.toString();
     }
+
 }

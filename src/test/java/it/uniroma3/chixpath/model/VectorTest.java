@@ -14,7 +14,6 @@ import java.util.Set;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import it.uniroma3.chixpath.model.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -59,7 +58,8 @@ public class VectorTest {
         
         //creazine e test vettori
 		Vector vett1 = new Vector("/HTML",c1,2);
-		Vector vett2 = new Vector("/HTML",c1,2);
+		//Vector vett2 = new Vector("/HTML",c1,2);
+		Vector vett2 = new Vector("HTML",c1,2);
 		assertTrue(vett1.equals(vett2));
 		
 		
