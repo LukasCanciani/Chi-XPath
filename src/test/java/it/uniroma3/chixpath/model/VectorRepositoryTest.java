@@ -54,7 +54,6 @@ public class VectorRepositoryTest {
 		assertEquals(1,vr.getVectors().size());
 		vr.addUnique("HTML");
 		assertEquals(1,vr.getVectors().size());
-		
 	}
 	
 	@Test
@@ -64,16 +63,15 @@ public class VectorRepositoryTest {
 		assertEquals(1,vr.getVectors().size());
 		vr.addUnique("/HTML");
 		assertEquals(1,vr.getVectors().size());
-		
 	}
+	
 	@Test
 	public void DifferentString() throws XPathExpressionException {
 		assertEquals(0,vr.getVectors().size());
 		vr.addUnique("HTML");
 		assertEquals(1,vr.getVectors().size());
 		vr.addUnique("a");
-		assertEquals(2,vr.getVectors().size());
-		
+		assertEquals(2,vr.getVectors().size());	
 	}
 	
 	static private String loadPageContent(String anURL) {

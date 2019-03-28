@@ -11,12 +11,11 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.HashSet;
 import java.util.Set;
-import it.uniroma3.chixpath.model.*;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public class isRaffinamentoTest {
+public class IsRefinementTest {
 
 	@Before
 	public void setUp() throws Exception {
