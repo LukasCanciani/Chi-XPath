@@ -39,38 +39,37 @@ public class VectorRepositoryTest {
         page2.setUrl(url2);
         page2.setId("1");
         
-        pageClass = new PageClass();
         Set<Page> set = new HashSet<>();
         set.add(page1);
         set.add(page2);
-        pageClass.setPages(set);
+        pageClass = new PageClass(set,null);
         vr = new VectorRepository(pageClass,2,pageClass.getId());
         
 	}
 	@Test
 	public void SameString() throws XPathExpressionException {
 		assertEquals(0,vr.getVectors().size());
-		vr.addUnique("HTML");
+		vr.addUnique(new XPath("HTML"));
 		assertEquals(1,vr.getVectors().size());
-		vr.addUnique("HTML");
+		vr.addUnique(new XPath("HTML"));
 		assertEquals(1,vr.getVectors().size());
 	}
 	
 	@Test
 	public void SameValues() throws XPathExpressionException {
 		assertEquals(0,vr.getVectors().size());
-		vr.addUnique("HTML");
+		vr.addUnique(new XPath("HTML"));
 		assertEquals(1,vr.getVectors().size());
-		vr.addUnique("/HTML");
+		vr.addUnique(new XPath("/HTML"));
 		assertEquals(1,vr.getVectors().size());
 	}
 	
 	@Test
 	public void DifferentString() throws XPathExpressionException {
 		assertEquals(0,vr.getVectors().size());
-		vr.addUnique("HTML");
+		vr.addUnique(new XPath("HTML"));
 		assertEquals(1,vr.getVectors().size());
-		vr.addUnique("a");
+		vr.addUnique(new XPath("a"));
 		assertEquals(2,vr.getVectors().size());	
 	}
 	

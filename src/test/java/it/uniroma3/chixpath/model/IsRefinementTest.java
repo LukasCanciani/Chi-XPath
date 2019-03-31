@@ -25,23 +25,23 @@ public class IsRefinementTest {
 	*/
 	@Test
     public void testSampePages() {
-    	final Set<String> xPaths1 = new HashSet<>();
-        xPaths1.add("a");
+    	final Set<XPath> xPaths1 = new HashSet<>();
+        xPaths1.add(new XPath("a"));
         
-        final Set<String> xPaths2 = new HashSet<>();
-        xPaths2.add("b");
+        final Set<XPath> xPaths2 = new HashSet<>();
+        xPaths2.add(new XPath("b"));
         
-        final Set<String> xPaths3 = new HashSet<>();
-        xPaths3.add("c");
+        final Set<XPath> xPaths3 = new HashSet<>();
+        xPaths3.add(new XPath("c"));
         
-        final Set<String> xPaths4 = new HashSet<>();
-        xPaths4.add("d");
+        final Set<XPath> xPaths4 = new HashSet<>();
+        xPaths4.add(new XPath("d"));
         
-        final Set<String> xPaths5 = new HashSet<>();
-        xPaths5.add("e");
+        final Set<XPath> xPaths5 = new HashSet<>();
+        xPaths5.add(new XPath("e"));
         
-        final Set<String> xPaths6 = new HashSet<>();
-        xPaths6.add("e");
+        final Set<XPath> xPaths6 = new HashSet<>();
+        xPaths6.add(new XPath("e"));
     	
     	String url1 = "file:./src/test/resources/basic/section.html";
         final String content1 = loadPageContent(url1);
@@ -95,25 +95,19 @@ public class IsRefinementTest {
         set5.add(page4);
         
       // ----------------------------------------------------------------------------------------------------------------- 
-        PageClass c1 = new PageClass();
-        c1.setPages(set1);
-        c1.setxPaths(xPaths1);
+        PageClass c1 = new PageClass(set1,xPaths1);
         
-        PageClass c2 = new PageClass();
-        c2.setPages(set2);
-        c2.setxPaths(xPaths2);
+        PageClass c2 = new PageClass(set2,xPaths2);
         
-        PageClass c3 = new PageClass();
-        c3.setPages(set3);
-        c3.setxPaths(xPaths3);
         
-        PageClass c4 = new PageClass();
-        c4.setPages(set4);
-        c4.setxPaths(xPaths4);
+        PageClass c3 = new PageClass(set3,xPaths3);
+      
         
-        PageClass c5 = new PageClass();
-        c5.setPages(set5);
-        c5.setxPaths(xPaths5);
+        PageClass c4 = new PageClass(set4,xPaths4);
+        
+        
+        PageClass c5 = new PageClass(set5,xPaths5);
+        
         
       // ---------------------------------------------------------------------------------------------------------------------  
             
@@ -121,16 +115,16 @@ public class IsRefinementTest {
         p1.add(c1);
         p1.add(c2);
         
-        Partition i1 = new Partition();
-        i1.setPageClasses(p1);
+        
+        Partition i1 = new Partition(p1);
       // -----------------------------------------------------------------------------------------------------------------------------------  
         Set<PageClass> p2 = new HashSet<>();
         p2.add(c3);
         p2.add(c4);
         p2.add(c5);
         
-        Partition i2 = new Partition();
-        i2.setPageClasses(p2);
+        
+        Partition i2 = new Partition(p2);
       // --------------------------------------------------------------------------------------------------------------------------------  
        // assertTrue(i1.equals(i2)==true);
         

@@ -41,32 +41,32 @@ public class PageClassTest {
 
 	@Test
 	public void samePages() {
-		PageClass pageClass1 = new PageClass();
-		PageClass pageClass2 = new PageClass();
+		
 		Set<Page> set = new HashSet<>();
 		Set<Page> set2 = new HashSet<>();
 		set.add(page1);
 		set2.add(page1);
 		set2.add(page2);
-		pageClass1.setPages(set);
-		pageClass2.setPages(set2);
+		PageClass pageClass1 = new PageClass(set,null);
+		PageClass pageClass2 = new PageClass(set2,null);
 		Set<PageClass> pcSet = new HashSet<>();
 		pcSet.add(pageClass2);
 		assertTrue(pageClass1.hasSamePagesAs(pcSet));
-		pageClass2.setPages(new HashSet<>());
+		pageClass2 = new PageClass(null,null);
+		pcSet.clear();
+		pcSet.add(pageClass2);
 		assertFalse(pageClass1.hasSamePagesAs(pcSet));
 	}
 	@Test
 	public void createUniqueXPathsSAME()  throws XPathExpressionException {
-		final Set<String> xPaths1 = new HashSet<>();
-        xPaths1.add("/HTML");
-        xPaths1.add("HTML");
-        page1.setXPaths(xPaths1);
-		PageClass pageClass1 = new PageClass();
-		pageClass1.setxPaths(xPaths1);
+		final Set<XPath> xPaths1 = new HashSet<>();
+        xPaths1.add(new XPath("/HTML"));
+        xPaths1.add(new XPath("HTML"));
+        page1.addXPath(new XPath("HTML"));
+        page1.addXPath(new XPath("/HTML"));
 		Set<Page> set = new HashSet<>();
 		set.add(page1);
-		pageClass1.setPages(set);
+		PageClass pageClass1 = new PageClass(set,xPaths1);
 		ArrayList<PageClass> classes = new ArrayList<>();
 		classes.add(pageClass1);
 		assertEquals(2,pageClass1.getxPaths().size());
@@ -77,15 +77,14 @@ public class PageClassTest {
 	}
 	@Test
 	public void createUniqueXPathsNOTSAME()  throws XPathExpressionException {
-		final Set<String> xPaths1 = new HashSet<>();
-        xPaths1.add("/HTML");
-        xPaths1.add("a");
-        page1.setXPaths(xPaths1);
-		PageClass pageClass1 = new PageClass();
-		pageClass1.setxPaths(xPaths1);
+		final Set<XPath> xPaths1 = new HashSet<>();
+        xPaths1.add(new XPath("/HTML"));
+        xPaths1.add(new XPath("a"));
+        page1.addXPath(new XPath("/HTML"));
+        page1.addXPath(new XPath("a"));
 		Set<Page> set = new HashSet<>();
 		set.add(page1);
-		pageClass1.setPages(set);
+		PageClass pageClass1 = new PageClass(set,xPaths1);
 		ArrayList<PageClass> classes = new ArrayList<>();
 		classes.add(pageClass1);
 		assertEquals(2,pageClass1.getxPaths().size());

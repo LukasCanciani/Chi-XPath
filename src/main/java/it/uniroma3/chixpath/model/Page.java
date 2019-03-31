@@ -9,9 +9,14 @@ public class Page {
     
     private String id;
     
-    private Set<String> xpaths= new HashSet<>();
     
-    private String url;
+    private Set<XPath> xpaths = new HashSet<>();
+    
+    public Set<XPath> S() {
+		return xpaths;
+	}
+
+	private String url;
     
     private Document document;
 
@@ -41,22 +46,14 @@ public class Page {
         return this.document;
     }
 
-    public Page setDocument(Document pageDom) {
-        this.document = pageDom;
-        return this;
-    }
-    
     @Override
     public String toString() {
         return this.getClass().getSimpleName()+" "+this.getUrl();
     }
-
-	public Set<String> getXPaths() {
-		return xpaths;
+	
+	public void addXPath(XPath x) {
+		this.xpaths.add(x);
 	}
 
-	public void setXPaths(Set<String> xpaths) {
-		this.xpaths = xpaths;
-	}
 
 }

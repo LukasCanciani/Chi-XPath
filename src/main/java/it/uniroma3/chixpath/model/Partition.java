@@ -12,25 +12,22 @@ public class Partition implements Comparable<Partition> {
 	private Set<PageClass>  pageClasses;
 	private String id;
 
-	public Partition() {
-		this.setId(Integer.toString(progId++));
+	public Partition(Set<PageClass> pc) {
+		this.pageClasses = pc;
+		this.id = (Integer.toString(progId++));
 	}
 
 	public String getId() {
 		return id;
 	}
 
-	public void setId(String id) {
-		this.id = id;
-	}
+	
 
 	public Set<PageClass> getPageClasses() {
 		return pageClasses;
 	}
 
-	public void setPageClasses(Set<PageClass> classes) {
-		this.pageClasses = classes;
-	}
+	
 
 	public boolean samePartition(Partition partition) {
 		boolean stesse= false;
@@ -96,36 +93,7 @@ public class Partition implements Comparable<Partition> {
 
 	}
 
-	/*
-	 * CONTROLLO SE LA PARTIZIONE SULLA QUALE CHIAMO IL METODO E' UN RAFFINAMENTO DELL'ARGOMENTO
-	 */
-	/*public boolean isRaffinamentoDi(InsiemeDiClassi i,int n_pagine) {
-			final Set<String> differentClasses = new HashSet<>();
-
-			final String[] id = new String[n_pagine];
-			for(ClasseDiPagine classe : this.getClassi()) {
-				differentClasses.add(classe.getId());
-				for(Page p : classe.getPages()) {
-					id[Integer.parseInt(p.getId())]=classe.getId();
-				}
-			}
-
-			final String[] id1 = new String[n_pagine];
-
-			for(ClasseDiPagine classe : i.getClassi()) {
-				for(Page p : classe.getPages()) {
-					id1[Integer.parseInt(p.getId())]=classe.getId();
-				}
-			}
-
-			for(int j=0;j<id.length;j++) {
-
-			}
-
-
-
-			return false;
-		}*/
+	
 
 	public boolean isRefinementOf(Partition i,int n_pagine) {
 		boolean isRefinement=true;

@@ -6,22 +6,22 @@ import java.util.Set;
 import javax.xml.xpath.XPathExpressionException;
 
 public class VectorRepository {
-	private Set<String> xpaths = new HashSet<>();
+	private Set<XPath> xpaths = new HashSet<>();
 	private Set<Vector> vectors = new HashSet<>();
 	private PageClass pageClass;
 	private String id;
-	private int n_Pag;
+	private int pagNum;
 	
 	public VectorRepository(PageClass pageClass, int pag , String id) {
 		this.pageClass = pageClass;
-		this.n_Pag = pag;
+		this.pagNum = pag;
 		this.id = id;
 	}
 	
-	private boolean containsXPaths(String rule) {
+	private boolean containsXPaths(XPath rule) {
 		boolean found = false;
-		for (String rule2 : this.getXPaths()) {
-			if (rule2.compareTo(rule)==0) {
+		for (XPath rule2 : this.getXPaths()) {
+			if (rule2.getRule().compareTo(rule.getRule())==0) {
 				found = true;
 			}
 		}
@@ -39,41 +39,36 @@ public class VectorRepository {
 		return found;
 	}
 	
-	void addUnique(String rule) throws XPathExpressionException {
+	void addUnique(XPath rule) throws XPathExpressionException {
 		if (!this.containsXPaths(rule)) {
-			Vector vector = new Vector(rule,this.getpageClass(),this.getN_Pag());
+			Vector vector = new Vector(rule,this.getpageClass(),this.getPagNum());
 			if(!this.containsVector(vector)) {
-				Set<String> newxPaths = this.getXPaths();
+				Set<XPath> newxPaths = this.getXPaths();
 				Set<Vector> newVectors = this.getVectors();
 				newxPaths.add(rule);
 				newVectors.add(vector);
-				this.setVectors(newVectors);
-				this.setXPaths(newxPaths);
+				this.vectors = (newVectors);
+				this.xpaths = (newxPaths);
 			}
 		}
 	}
 
-	public Set<String> getXPaths() {
+	public Set<XPath> getXPaths() {
 		return xpaths;
 	}
 
-	public void setXPaths(Set<String> xpaths) {
-		this.xpaths = xpaths;
-	}
+	
 
 	public Set<Vector> getVectors() {
 		return vectors;
 	}
 
-	public void setVectors(Set<Vector> vectors) {
-		this.vectors = vectors;
-	}
 
 	public PageClass getpageClass() {
 		return pageClass;
 	}
 
-	public int getN_Pag() {
-		return n_Pag;
+	public int getPagNum() {
+		return pagNum;
 	}
 }

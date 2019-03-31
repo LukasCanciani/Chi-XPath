@@ -8,21 +8,21 @@ import javax.xml.xpath.XPathExpressionException;
 import org.w3c.dom.NodeList;
 
 public class Vector implements Comparable<Vector>  {
-	private String xpath;
+	private XPath xpath;
 	private PageClass pageClass;
-	private int n_Pag;
+	private int pagNum;
 	private NodeList[] extractedNodes;
-	public Vector(String xpath, PageClass pageClass, int n_Pag) throws XPathExpressionException {
+	public Vector(XPath xpath, PageClass pageClass, int pagNum) throws XPathExpressionException {
 		this.xpath=xpath;
 		this.pageClass=pageClass;
-		this.n_Pag=n_Pag;
+		this.pagNum=pagNum;
 		this.extractedNodes=extractNodes();
 	}
 
 	public NodeList[] extractNodes() throws XPathExpressionException {
-		final NodeList[] extractedNodes = new NodeList[n_Pag]; 
+		final NodeList[] extractedNodes = new NodeList[pagNum]; 
 		for(Page p : this.pageClass.getPages()) {
-			NodeList node = evaluateXPath(p.getDocument(), this.xpath);
+			NodeList node = evaluateXPath(p.getDocument(), this.xpath.getRule());
 			
 			//System.out.println("estratti "+node.getLength()+" nodi dalla pagina "+p.getId());
 			//inserisco i valori estratti dalla regola nelle posizioni dell'array corrispondenti all'id pagina, che è una stringa e va convertito in int
@@ -101,34 +101,27 @@ public class Vector implements Comparable<Vector>  {
 		return stessi;
 	}
 
-	public String getXPath() {
+	public XPath getXPath() {
 		return xpath;
 	}
 
-	public void setXPath(String xpath) {
-		this.xpath = xpath;
-	}
 
 	public PageClass getPageClass() {
 		return pageClass;
 	}
 
-	public void setPageClass(PageClass pageClass) {
-		this.pageClass = pageClass;
-	}
+	
 
 	public NodeList[] getExtractedNodes() {
 		return extractedNodes;
 	}
 
-	public void setExtractedNodes(NodeList[] extractedNodes) {
-		this.extractedNodes = extractedNodes;
-	}
+	
 
 
 
-	public int getN_Pag() {
-		return n_Pag;
+	public int getPagNum() {
+		return pagNum;
 	}
 
 	@Override

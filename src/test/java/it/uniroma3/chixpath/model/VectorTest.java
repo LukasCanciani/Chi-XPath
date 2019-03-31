@@ -43,8 +43,8 @@ public class VectorTest {
         page2.setId("1");
         
         //insieme di xPath qualsiasi della ClasseDiPagine
-        final Set<String> xPaths1 = new HashSet<>();
-        xPaths1.add("a");
+        final Set<XPath> xPaths1 = new HashSet<>();
+        xPaths1.add(new XPath("a"));
        
         //insieme di pagine della ClasseDiPagine
         final Set<Page> set1 = new HashSet<>();
@@ -52,19 +52,18 @@ public class VectorTest {
         set1.add(page2);
         
         //creazione ClasseDiPagine
-        PageClass c1 = new PageClass();
-        c1.setPages(set1);
-        c1.setxPaths(xPaths1);
+        
+        PageClass c1 = new PageClass(set1,xPaths1);
         
         //creazine e test vettori
-		Vector vett1 = new Vector("/HTML",c1,2);
+		Vector vett1 = new Vector(new XPath("/HTML"),c1,2);
 		//Vector vett2 = new Vector("/HTML",c1,2);
-		Vector vett2 = new Vector("HTML",c1,2);
+		Vector vett2 = new Vector(new XPath("HTML"),c1,2);
 		assertTrue(vett1.equals(vett2));
 		
 		
-		Vector vett3 = new Vector("//H2",c1,2);
-		Vector vett4 = new Vector("/HTML",c1,2);
+		Vector vett3 = new Vector(new XPath("//H2"),c1,2);
+		Vector vett4 = new Vector(new XPath("/HTML"),c1,2);
 		assertFalse(vett3.equals(vett4));
 		
 	}

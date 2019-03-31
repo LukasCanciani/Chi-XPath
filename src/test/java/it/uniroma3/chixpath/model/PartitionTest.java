@@ -37,9 +37,6 @@ public class PartitionTest {
         page2 = createPage(content2);
         page2.setUrl(url2);
         page2.setId("1");
-        pageClass1 = new PageClass();
-        pageClass2 = new PageClass();
-        pageClass3 = new PageClass();
 		Set<Page> set = new HashSet<>();
 		Set<Page> set2 = new HashSet<>();
 		Set<Page> set3 = new HashSet<>();
@@ -47,45 +44,44 @@ public class PartitionTest {
 		set2.add(page1);
 		set2.add(page2);
 		set3.add(page2);
-		pageClass1.setPages(set);
-		pageClass2.setPages(set2);
-		pageClass3.setPages(set3);
+		pageClass1 = new PageClass(set,null);
+		pageClass2 = new PageClass(set2,null);
+		pageClass3 = new PageClass(set3,null);
+		
 	}
 	
 	@Test
 	public void SamePartition() {
-		Partition p1 = new Partition();
+		
 		Set<PageClass> set1 = new HashSet<PageClass>();
 		set1.add(pageClass1);
-		p1.setPageClasses(set1);
+		Partition p1 = new Partition(set1);
 		Set<PageClass> set2 = new HashSet<PageClass>();
 		set2.add(pageClass1);
-		Partition p2 = new Partition();
-		p2.setPageClasses(set2);
+		Partition p2 = new Partition(set2);
 		assertTrue(p1.samePartition(p2));
 	}
 	@Test
 	public void PartialSame() {
-		Partition p1 = new Partition();
+		
 		Set<PageClass> set1 = new HashSet<PageClass>();
 		set1.add(pageClass1);
-		p1.setPageClasses(set1);
-		Set<PageClass> set2 = new HashSet<PageClass>();
+		Partition p1 = new Partition(set1);
+		Set<PageClass> set2 = new HashSet<PageClass>(set1);
 		set2.add(pageClass2);
-		Partition p2 = new Partition();
-		p2.setPageClasses(set2);
+		
+		Partition p2 = new Partition(set2);
 		assertFalse(p1.samePartition(p2));
 	}
 	@Test
 	public void DifferentPartition() {
-		Partition p1 = new Partition();
+		
 		Set<PageClass> set1 = new HashSet<PageClass>();
 		set1.add(pageClass1);
-		p1.setPageClasses(set1);
+		Partition p1 = new Partition(set1);
 		Set<PageClass> set2 = new HashSet<PageClass>();
 		set2.add(pageClass3);
-		Partition p2 = new Partition();
-		p2.setPageClasses(set2);
+		Partition p2 = new Partition(set2);
 		assertFalse(p1.samePartition(p2));
 	}
 	

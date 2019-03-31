@@ -189,8 +189,7 @@ public class Partitioner {
 		final ArrayList<Partition> partizioni = new ArrayList<>();
 		//gestisce i casi in cui viene inserita un'unica ClasseDiPagine che contiene tutte le pagine (che è una partizione da sè)
 		if(n==max) {
-			final Partition partizione= new Partition();
-			partizione.setPageClasses(toAdd);
+			final Partition partizione= new Partition(toAdd);
 			partizioni.add(partizione);
 		}
 
@@ -210,8 +209,7 @@ public class Partitioner {
 				}
 				//le pagine FORMANO UNA PARTIZIONE
 				else if(n_for==max) {
-					final Partition partizione= new Partition();
-					partizione.setPageClasses(setClassi);
+					final Partition partizione= new Partition(setClassi);
 					partizioni.add(partizione);
 				}
 			}
@@ -228,29 +226,27 @@ public class Partitioner {
 
 		for(XPath xpath1 : xpaths) {
 			String toCheck1 = xpath1.getRule();
-			final PageClass pageClasses = new PageClass();
-			final Set<String> xPaths = new HashSet<>();
+			final Set<XPath> XPaths = new HashSet<>();
 			final Set<Page> pages = new HashSet<>();
-			xPaths.add(toCheck1);
+			XPaths.add(xpath1);
 			pages.addAll(xpath1.getPages());
 
 			for( XPath xpath2 : xpaths) {
 				String toCheck2=xpath2.getRule();
 				if((!toCheck1.equals(toCheck2)) && (checkSamePages(xpath1.getPages(),xpath2.getPages()))){
-					xPaths.add(toCheck2);
+					XPaths.add(xpath2);
 					//pages.addAll(xPath2Pages.get(toCheck2));
 				}
 			}
-
-			pageClasses.setPages(pages);
-			pageClasses.setxPaths(xPaths);
+			final PageClass pageClasses = new PageClass(pages,XPaths);
 			if(!pageClasses.containsXpathsSet(pClasses)) {
 				pClasses.add(pageClasses);
 			}
 		}
-		for(int i=1;i<pClasses.size()+1;i++) {
+		//Sistema gli id
+		/*for(int i=1;i<pClasses.size()+1;i++) {
 			pClasses.get(i-1).setId(Integer.toString(i));
-		}
+		}*/
 		return pClasses;
 	}
 
