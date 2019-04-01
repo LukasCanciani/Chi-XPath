@@ -54,6 +54,10 @@ public class Page {
 	public void addXPath(XPath x) {
 		this.xpaths.add(x);
 	}
+	
+	public Set<XPath> getXPaths() {
+		return this.xpaths;
+	}
 
 
 }

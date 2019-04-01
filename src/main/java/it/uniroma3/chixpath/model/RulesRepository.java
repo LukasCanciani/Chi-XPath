@@ -52,12 +52,12 @@ public class RulesRepository {
 		final RuleInference engine = new RuleInference(new ChiFragmentSpecification());
 		Set<String> diffXPaths = new HashSet<String>();
 		for(Page sample : this.pages) {
+			System.out.println("Generando xPaths sulla pagina"+sample.getUrl()+" con id: "+sample.getId());
 			final Set<String> rules = engine.inferRules(sample.getDocument());
 			for (String str : rules) {
 				if(!diffXPaths.contains(str))
 					diffXPaths.add(str);
 			}
-			System.out.println("Generando xPaths sulla pagina"+sample.getUrl()+" con id: "+sample.getId());
 			p2x.put(sample, rules);
 		}
 		Set<XPath> xpaths = new HashSet<XPath>();

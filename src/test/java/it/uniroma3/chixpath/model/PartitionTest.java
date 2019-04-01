@@ -61,6 +61,43 @@ public class PartitionTest {
 		Partition p2 = new Partition(set2);
 		assertTrue(p1.samePartition(p2));
 	}
+	
+	@Test
+	public void DeleteDuplicates() {
+		
+		Set<PageClass> set1 = new HashSet<PageClass>();
+		set1.add(pageClass1);
+		Partition p1 = new Partition(set1);
+		Set<PageClass> set2 = new HashSet<PageClass>();
+		set2.add(pageClass1);
+		Partition p2 = new Partition(set2);
+		assertTrue(p1.samePartition(p2));
+		Set<Partition> partitions = new HashSet<>();
+		partitions.add(p2);
+		partitions.add(p1);
+		assertSame(2,partitions.size());
+		Set<Partition> noDuplicates = Partition.deleteDuplicates(partitions);
+		assertSame(1, noDuplicates.size());
+	}
+	
+	@Test
+	public void DeleteDuplicatesPartialSame() {
+		
+		Set<PageClass> set1 = new HashSet<PageClass>();
+		set1.add(pageClass1);
+		Partition p1 = new Partition(set1);
+		Set<PageClass> set2 = new HashSet<PageClass>();
+		set2.add(pageClass1);
+		set2.add(pageClass2);
+		Partition p2 = new Partition(set2);
+		Set<Partition> partitions = new HashSet<>();
+		assertFalse(p1.samePartition(p2));
+		partitions.add(p2);
+		partitions.add(p1);
+		assertSame(2,partitions.size());
+		Set<Partition> noDuplicates = Partition.deleteDuplicates(partitions);
+		assertSame(2, noDuplicates.size());
+	}
 	@Test
 	public void PartialSame() {
 		
@@ -109,5 +146,6 @@ public class PartitionTest {
 
         return out.toString();
     }
+	
 
 }

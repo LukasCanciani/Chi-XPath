@@ -1,6 +1,5 @@
 package it.uniroma3.chixpath.model;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -99,9 +98,11 @@ public class PageClass implements Comparable<PageClass> {
 		return containsId;
 	}
 
-	public boolean containsXpathsSet(ArrayList<PageClass> classi) {
-		for(int i=0;i<classi.size();i++) {
-			if(this.getxPaths().equals(classi.get(i).getxPaths())) return true;
+	
+	
+	public boolean containsXpathsSet(Set<PageClass> classes) {
+		for(PageClass pageClass : classes) {
+			if(this.getxPaths().equals(pageClass.getxPaths())) return true;
 		}
 		return false;
 	}
@@ -118,7 +119,7 @@ public class PageClass implements Comparable<PageClass> {
 		return characteristicXPath;
 	}
 
-	public static void createUniqueXPaths(ArrayList<PageClass> pageClasses,int max_p) throws XPathExpressionException {
+	public static void createUniqueXPaths(Set<PageClass> pageClasses,int max_p) throws XPathExpressionException {
 		for(PageClass classe : pageClasses) {
 			final Set<XPath> senzaEquivalenti = classe.deleteEquivalentXpaths(max_p);
 			classe.setUniqueXPaths(senzaEquivalenti);
@@ -137,7 +138,7 @@ public class PageClass implements Comparable<PageClass> {
 		}
 		return container.getXPaths();
 	}
-	public static void selectCharacteristicXPath(ArrayList<PageClass> pageClasses) {
+	public static void selectCharacteristicXPath(Set<PageClass> pageClasses) {
 		for(PageClass pageClass : pageClasses) {
 			final Set<XPath> rules = pageClass.getUniqueXPaths();
 			XPath bestXPath = null;

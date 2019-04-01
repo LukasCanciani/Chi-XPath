@@ -1,6 +1,5 @@
 package it.uniroma3.chixpath.model;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -21,13 +20,12 @@ public class Partition implements Comparable<Partition> {
 		return id;
 	}
 
-	
 
 	public Set<PageClass> getPageClasses() {
 		return pageClasses;
 	}
 
-	
+
 
 	public boolean samePartition(Partition partition) {
 		boolean stesse= false;
@@ -70,21 +68,23 @@ public class Partition implements Comparable<Partition> {
 
 
 	//ciclo for, se i=indicedaeliminare vai avanti sennò aggiungi al nuovo array list
-	public ArrayList<Partition> deleteDuplicates(ArrayList<Partition> partitions){
+	public static Set<Partition> deleteDuplicates(Set<Partition> partitions){
 
 		final Set<Partition> alreadyChecked = new HashSet<>();
 		final Set<String> deleteIds = new HashSet<>();
 
 		for(Partition i : partitions) {
 			for(Partition j :partitions) {
-				if(i.samePartition(j) && !(alreadyChecked.contains(j))) {
-					deleteIds.add(j.getId());
+				if (!i.getId().equals(j.getId())) {
+					if(i.samePartition(j) && !(alreadyChecked.contains(j))) {
+						deleteIds.add(j.getId());
+					}
 				}
 			}
 			alreadyChecked.add(i);
 		}
 
-		final ArrayList<Partition> noDuplicate = new ArrayList<>();
+		final Set<Partition> noDuplicate = new HashSet<>();
 		for(Partition toDelete : partitions) {
 			if(!deleteIds.contains(toDelete.getId())) noDuplicate.add(toDelete);
 		}
@@ -93,7 +93,7 @@ public class Partition implements Comparable<Partition> {
 
 	}
 
-	
+
 
 	public boolean isRefinementOf(Partition i,int n_pagine) {
 		boolean isRefinement=true;
@@ -158,7 +158,7 @@ public class Partition implements Comparable<Partition> {
 			}
 		}
 	}*/
-	
+
 	@Override
 	public String toString() {
 		String str = "La partizione "+this.getId()+" e' divisa in:\n";

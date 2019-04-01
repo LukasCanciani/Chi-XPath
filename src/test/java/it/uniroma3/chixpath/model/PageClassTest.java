@@ -9,7 +9,6 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -21,6 +20,8 @@ import org.junit.Test;
 public class PageClassTest {
 	public Page page1;
 	public Page page2;
+	public Page page3;
+	public Page page4;
 	@Before
 	public void setUp() throws Exception {
 		//creazione pagina1
@@ -57,6 +58,57 @@ public class PageClassTest {
 		pcSet.add(pageClass2);
 		assertFalse(pageClass1.hasSamePagesAs(pcSet));
 	}
+	
+	@Test
+	public void containsXPathTrue()  throws XPathExpressionException {
+		final Set<XPath> xPaths1 = new HashSet<>();
+        xPaths1.add(new XPath("/HTML"));
+        xPaths1.add(new XPath("HTML"));
+        page1.addXPath(new XPath("HTML"));
+        page1.addXPath(new XPath("/HTML"));
+		Set<Page> set = new HashSet<>();
+		set.add(page1);
+		PageClass pageClass1 = new PageClass(set,xPaths1);
+		Set<PageClass> classes = new HashSet<>();
+		classes.add(pageClass1);
+		Set<XPath> x2 = new HashSet<>();
+		x2.add(new XPath("/HTML"));
+		x2.add(new XPath("HTML"));
+		page2.addXPath(new XPath("/HTML"));
+		page2.addXPath(new XPath("HTML"));
+		Set<Page> set2 = new HashSet<>();
+		set2.add(page2);
+		PageClass pageClass2 = new PageClass(set2,x2);
+		assertTrue(pageClass2.containsXpathsSet(classes));
+		
+		
+	}
+	
+	@Test
+	public void containsXPathFalse()  throws XPathExpressionException {
+		final Set<XPath> xPaths1 = new HashSet<>();
+        xPaths1.add(new XPath("/HTML"));
+        xPaths1.add(new XPath("HTML"));
+        page1.addXPath(new XPath("HTML"));
+        page1.addXPath(new XPath("/HTML"));
+		Set<Page> set = new HashSet<>();
+		set.add(page1);
+		PageClass pageClass1 = new PageClass(set,xPaths1);
+		Set<PageClass> classes = new HashSet<>();
+		classes.add(pageClass1);
+		Set<XPath> x2 = new HashSet<>();
+		x2.add(new XPath("a"));
+		x2.add(new XPath("b"));
+		page2.addXPath(new XPath("a"));
+		page2.addXPath(new XPath("b"));
+		Set<Page> set2 = new HashSet<>();
+		set2.add(page2);
+		PageClass pageClass2 = new PageClass(set2,x2);
+		assertFalse(pageClass2.containsXpathsSet(classes));
+		
+		
+	}
+	
 	@Test
 	public void createUniqueXPathsSAME()  throws XPathExpressionException {
 		final Set<XPath> xPaths1 = new HashSet<>();
@@ -67,7 +119,7 @@ public class PageClassTest {
 		Set<Page> set = new HashSet<>();
 		set.add(page1);
 		PageClass pageClass1 = new PageClass(set,xPaths1);
-		ArrayList<PageClass> classes = new ArrayList<>();
+		Set<PageClass> classes = new HashSet<>();
 		classes.add(pageClass1);
 		assertEquals(2,pageClass1.getxPaths().size());
 		PageClass.createUniqueXPaths(classes, 1);
@@ -85,7 +137,7 @@ public class PageClassTest {
 		Set<Page> set = new HashSet<>();
 		set.add(page1);
 		PageClass pageClass1 = new PageClass(set,xPaths1);
-		ArrayList<PageClass> classes = new ArrayList<>();
+		Set<PageClass> classes = new HashSet<>();
 		classes.add(pageClass1);
 		assertEquals(2,pageClass1.getxPaths().size());
 		PageClass.createUniqueXPaths(classes, 1);
@@ -93,6 +145,71 @@ public class PageClassTest {
 		
 		
 	}
+	
+	@Test
+	public void selectCharacteristicXPathOnePage()  throws XPathExpressionException {
+		final Set<XPath> xPaths1 = new HashSet<>();
+        xPaths1.add(new XPath("/HTML"));
+        xPaths1.add(new XPath("a"));
+        page1.addXPath(new XPath("/HTML"));
+        page1.addXPath(new XPath("a"));
+        Set<Page> set = new HashSet<>();
+		set.add(page1);
+		PageClass pageClass1 = new PageClass(set,xPaths1);
+		Set<PageClass> classes = new HashSet<>();
+		classes.add(pageClass1);
+		PageClass.createUniqueXPaths(classes, 1);
+		PageClass.selectCharacteristicXPath(classes);
+		assertEquals("a",pageClass1.getCharacteristicXPath().getRule());
+		
+	}
+	@Test
+	public void selectCharacteristicXPathTwoPage()  throws XPathExpressionException {
+		final Set<XPath> xPaths1 = new HashSet<>();
+        xPaths1.add(new XPath("/HTML"));
+        xPaths1.add(new XPath("a"));
+        page1.addXPath(new XPath("/HTML"));
+        page1.addXPath(new XPath("a"));
+        page2.addXPath(new XPath("/HTML"));
+        page2.addXPath(new XPath("a"));
+        Set<Page> set = new HashSet<>();
+		set.add(page1);
+		set.add(page2);
+		PageClass pageClass1 = new PageClass(set,xPaths1);
+		Set<PageClass> classes = new HashSet<>();
+		classes.add(pageClass1);
+		PageClass.createUniqueXPaths(classes, 2);
+		PageClass.selectCharacteristicXPath(classes);
+		assertEquals("a",pageClass1.getCharacteristicXPath().getRule());
+		
+	}
+	
+	@Test
+	public void selectCharacteristicXPathTwoClasses()  throws XPathExpressionException {
+		final Set<XPath> xPaths1 = new HashSet<>();
+        xPaths1.add(new XPath("/HTML"));
+        xPaths1.add(new XPath("a"));
+        page1.addXPath(new XPath("/HTML"));
+        page1.addXPath(new XPath("a"));
+        
+        final Set<XPath> xPaths2 = new HashSet<>();
+        xPaths2.add(new XPath("H2"));
+        page2.addXPath(new XPath("H2"));
+        Set<Page> set = new HashSet<>();
+		set.add(page1);
+		PageClass pageClass1 = new PageClass(set,xPaths1);
+        Set<Page> set2 = new HashSet<>();
+		set2.add(page2);
+		PageClass pageClass2 = new PageClass(set2,xPaths2);
+		Set<PageClass> classes = new HashSet<>();
+		classes.add(pageClass1);
+		classes.add(pageClass2);
+		PageClass.createUniqueXPaths(classes, 2);
+		PageClass.selectCharacteristicXPath(classes);
+		assertEquals("a",pageClass1.getCharacteristicXPath().getRule());
+		
+	}
+	
 	
 	static private String loadPageContent(String anURL) {
         final StringWriter out = new StringWriter();

@@ -67,15 +67,14 @@ public class Partitioner {
 
 		//raggruppamento di TUTTE LE PAGINE che condividono GLI STESSI xPath
 		
-		final ArrayList<PageClass> pageClasses = groupPagesByXPaths(rulesRep.getXPaths());
+		final Set<PageClass> pageClasses = groupPagesByXPaths(rulesRep.getXPaths());
 		
 		
 		
 		System.out.println("classiDiPagine ha una size di "+pageClasses.size());
 
 		//stampa delle informazioni di ogni Classe di Pagine
-		for(int i=0;i<pageClasses.size();i++) {
-			PageClass temp = pageClasses.get(i);
+		for(PageClass temp : pageClasses) {
 			temp.print();
 			System.out.print("\n");
 		}
@@ -110,12 +109,12 @@ public class Partitioner {
 
 		//generazione partizioni
 		final Set<Partition> partizioni = new HashSet<>();
-		for(int i=0;i<pageClasses.size();i++) {
+		for(PageClass pageClass : pageClasses) {
 			//creazione di un Set<> di Classi di pagine per innescare il metodo ricorsivo che genera le partizioni
 			final Set<PageClass> classi = new HashSet<>();
-			classi.add(pageClasses.get(i));
+			classi.add(pageClass);
 			//metodo ricorsivo che a partire da una classe di pagine trova tutte le combinazioni di queste che formano una partizione 
-			partizioni.addAll(allPossiblePartitions(classi,pageClasses,pageClasses.get(i).getPages().size(),MAX_PAGES));
+			partizioni.addAll(allPossiblePartitions(classi,pageClasses,pageClass.getPages().size(),MAX_PAGES));
 		}
 
 		//eliminazione partizioni equivalenti
@@ -185,7 +184,7 @@ public class Partitioner {
 	 * @param max - numero di pagine inserite in INPUT
 	 * @return tutte le possibili partizioni a partire da una singola classe di pagine
 	 */
-	private static ArrayList<Partition> allPossiblePartitions(Set<PageClass> toAdd,ArrayList<PageClass> classiDiPagine, int n,int max){
+	private static ArrayList<Partition> allPossiblePartitions(Set<PageClass> toAdd,Set<PageClass> classiDiPagine, int n,int max){
 		final ArrayList<Partition> partizioni = new ArrayList<>();
 		//gestisce i casi in cui viene inserita un'unica ClasseDiPagine che contiene tutte le pagine (che è una partizione da sè)
 		if(n==max) {
@@ -221,8 +220,8 @@ public class Partitioner {
 
 	
 
-	private static ArrayList<PageClass> groupPagesByXPaths(Set<XPath> xpaths) {
-		final ArrayList<PageClass> pClasses = new ArrayList<>();
+	private static Set<PageClass> groupPagesByXPaths(Set<XPath> xpaths) {
+		final Set<PageClass> pClasses = new HashSet<>();
 
 		for(XPath xpath1 : xpaths) {
 			String toCheck1 = xpath1.getRule();
