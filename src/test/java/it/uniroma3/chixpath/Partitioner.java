@@ -8,7 +8,6 @@ import java.io.StringWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -184,8 +183,8 @@ public class Partitioner {
 	 * @param max - numero di pagine inserite in INPUT
 	 * @return tutte le possibili partizioni a partire da una singola classe di pagine
 	 */
-	private static ArrayList<Partition> allPossiblePartitions(Set<PageClass> toAdd,Set<PageClass> classiDiPagine, int n,int max){
-		final ArrayList<Partition> partizioni = new ArrayList<>();
+	private static Set<Partition> allPossiblePartitions(Set<PageClass> toAdd,Set<PageClass> classiDiPagine, int n,int max){
+		final Set<Partition> partizioni = new HashSet<>();
 		//gestisce i casi in cui viene inserita un'unica ClasseDiPagine che contiene tutte le pagine (che è una partizione da sè)
 		if(n==max) {
 			final Partition partizione= new Partition(toAdd);
