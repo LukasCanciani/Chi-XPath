@@ -37,6 +37,16 @@ public class Fixtures {
         return result.build();
     }
     
+    static public Page createPage(String content, String url, String id) {
+        final Document document = DOMUtils.makeDocument(content);
+        return new Page(document, url, id);
+    }
+    
+    static public Page createPage(String content, String url) {
+        final Document document = DOMUtils.makeDocument(content);
+        return new Page(document, url);
+    }
+    
     static public Page createPage(String content) {
         final Document document = DOMUtils.makeDocument(content);
         return new Page(document);

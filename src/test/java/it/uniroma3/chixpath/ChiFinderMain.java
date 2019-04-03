@@ -18,7 +18,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
 
 import it.uniroma3.chixpath.ChiFinder;
 import it.uniroma3.chixpath.fragment.ChiFragmentSpecification;
@@ -122,8 +121,8 @@ public class ChiFinderMain {
         for(int i=0; i<templateSize; i++) {
             final String url = pageUrls.removeFirst();
             final String content = loadPageContent(url);
-            final Page page = createPage(content);
-            page.setUrl(url);
+            final Page page = createPage(content, url);
+            //page.setUrl(url);
             pages.add(page);
             System.out.print(".");
         }

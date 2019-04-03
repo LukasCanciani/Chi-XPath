@@ -30,9 +30,7 @@ public class EvaluateXPathsTest {
 	public void test() throws XPathExpressionException {
 		final String url = "file:./src/test/resources/basic/article1.html";
 		final String content = loadPageContent(url);
-		final Page page = createPage(content);
-		page.setUrl(url);
-		page.setId("0");
+		final Page page = createPage(content,url,"0");
 	//	Document doc = page.getDocument();
 		final RuleInference engine = new RuleInference(new ChiFragmentSpecification());
 

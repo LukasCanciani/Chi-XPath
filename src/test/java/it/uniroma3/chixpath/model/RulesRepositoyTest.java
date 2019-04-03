@@ -22,25 +22,19 @@ public class RulesRepositoyTest {
 	@Before
 	public void setUp() throws Exception {
 		//creazione pagina1
-		String url1 = "file:./src/test/resources/basic/article1.html";
+		String url1 = "file:./src/test/resources/basic/test1.html";
 		
         String content1 = loadPageContent(url1);
-        page1 = createPage(content1);
-        page1.setUrl(url1);
-        page1.setId("0");
+        page1 = createPage(content1,url1,"0");
         
         //creazione pagina2
-        String url2 = "file:./src/test/resources/basic/article1.html";
+        String url2 = "file:./src/test/resources/basic/test2.html";
         String content2 = loadPageContent(url2);
-        page2 = createPage(content2);
-        page2.setUrl(url2);
-        page2.setId("1");
+        page2 = createPage(content2,url2,"1");
         
-        String url3 = "file:./src/test/resources/basic/section.html";
+        String url3 = "file:./src/test/resources/basic/test3.html";
         String content3 = loadPageContent(url3);
-        page3 = createPage(content3);
-        page3.setUrl(url3);
-        page3.setId("2");
+        page3 = createPage(content3,url3,"2");
 	}
 	
 	@Test
@@ -49,60 +43,85 @@ public class RulesRepositoyTest {
 		set.add(page1);
 		set.add(page2);
 		RulesRepository rp = new RulesRepository(set);
-		assertTrue(rp.getXPaths().contains(new XPath("//H2[contains(@class,'article')]/text()[contains(.,'Article')]/self::text()")));
+		assertTrue(rp.getXPaths().contains(new XPath("//H2[contains(@class,'article')]/@class/self::node()")));
 	}
 	@Test
 	public void RulesGenerationFalseTest() {
 		Set<Page> set = new HashSet<>();
 		set.add(page3);
 		RulesRepository rp = new RulesRepository(set);
-		assertFalse(rp.getXPaths().contains(new XPath("//H2[contains(@class,'article')]/text()[contains(.,'Article')]/self::text()")));
+		assertFalse(rp.getXPaths().contains(new XPath("//H2[contains(@class,'article')]/@class/self::node()")));
 	}
 	@Test
-	public void createXPath2PagesPartialTest() { //Solo alcune classi hanno l'xpath cercato
+	public void rulesGenerationPartialTest() { //Solo alcune classi hanno l'xpath cercato
 		Set<Page> set = new HashSet<>();
 		set.add(page1);
 		set.add(page2);
 		set.add(page3);
 		RulesRepository rp = new RulesRepository(set);
-		XPath xp = new XPath("//H2[contains(@class,'article')]/text()[contains(.,'Article')]/self::text()");
+		XPath xp = new XPath("//H2[contains(@class,'folder')]/following-sibling::P/text()[contains(.,'folder')]/self::text()");
+		boolean found = false;
 		for (XPath x : rp.getXPaths()) {
 			if (x.equals(xp)) {
-				assertTrue(x.getPages().contains(page1));
-				assertTrue(x.getPages().contains(page2));
-				assertFalse(x.getPages().contains(page3));
+				found = true;
+				assertFalse(x.getPages().contains(page1));
+				assertFalse(x.getPages().contains(page2));
+				assertTrue(x.getPages().contains(page3));
 			}
 		}
+		assertTrue(found);
 	}
 	@Test 
-	public void createXPath2PagesAllTest() { //tutte le classi hanno l'xpath cercato
+	public void rulesGenerationAllTest() { //tutte le classi hanno l'xpath cercato
 		Set<Page> set = new HashSet<>();
 		set.add(page1);
 		set.add(page2);
 		RulesRepository rp = new RulesRepository(set);
-		XPath xp = new XPath("//H2[contains(@class,'article')]/following-sibling::P/text()[contains(.,'Author')]/self::text()");
+		XPath xp = new XPath("//H2[contains(@class,'article')]/@class/self::node()");
+		boolean found = false;
 		for (XPath x : rp.getXPaths()) {
 			if (x.equals(xp)) {
+				found = true;
 				assertTrue(x.getPages().contains(page1));
 				assertTrue(x.getPages().contains(page2));
 			}
 		}
+		assertTrue(found);
 	}
 	
 	
 	@Test
-	public void createXPath2PagesNoneTest() { //Nessuna classe ha l'xpath cercato
+	public void rulesGenerationNoneTest() { //Nessuna classe ha l'xpath cercato
 		Set<Page> set = new HashSet<>();
 		set.add(page1);
 		set.add(page2);
 		RulesRepository rp = new RulesRepository(set);
-		XPath xp = new XPath("//DIV[contains(@class,'news')]/@class/self::node()");
+		XPath xp = new XPath("//H2[contains(@class,'folder')]/following-sibling::P/text()[contains(.,'folder')]/self::text()");
+		boolean found = false;
 		for (XPath x : rp.getXPaths()) {
 			if (x.equals(xp)) {
-				assertFalse(x.getPages().contains(page1));
+				found = true;
+			}
+		}
+		assertFalse(found);
+	}
+	
+	@Test
+	public void rulesGenerationOneOfTwo() { //una classe ha l'xpath cercato
+		Set<Page> set = new HashSet<>();
+		set.add(page1);
+		set.add(page2);
+		RulesRepository rp = new RulesRepository(set);
+		XPath xp = new XPath("//H2[contains(@class,'article')]/following-sibling::P/text()[contains(.,'Test1')]/self::text()");
+		boolean found = false;
+		for (XPath x : rp.getXPaths()) {
+			if (x.equals(xp)) {
+				found = true;
+				assertTrue(x.getPages().contains(page1));
 				assertFalse(x.getPages().contains(page2));
 			}
 		}
+		assertTrue(found);
 	}
 	
 	static private String loadPageContent(String anURL) {

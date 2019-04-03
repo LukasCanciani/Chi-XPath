@@ -111,7 +111,7 @@ public class PageClass implements Comparable<PageClass> {
 		return uniqueXPaths;
 	}
 
-	public void setUniqueXPaths(Set<XPath> uniqueXPaths) {
+	private  void setUniqueXPaths(Set<XPath> uniqueXPaths) {
 		this.uniqueXPaths = uniqueXPaths;
 	}
 

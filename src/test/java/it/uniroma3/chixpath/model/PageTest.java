@@ -21,9 +21,7 @@ public class PageTest {
 		String url1 = "file:./src/test/resources/basic/test1.html";
 		
         String content1 = loadPageContent(url1);
-        page1 = createPage(content1);
-        page1.setUrl(url1);
-        page1.setId("0");
+        page1 = createPage(content1,url1,"0");
 	}
 	@Test
 	public void addXPath() {

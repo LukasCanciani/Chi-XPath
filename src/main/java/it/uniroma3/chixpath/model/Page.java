@@ -20,6 +20,17 @@ public class Page {
     
     private Document document;
 
+    public Page(Document document, String url, String id) {
+        this.document = document ;
+        this.url = url;
+        this.id = id;
+    }
+    
+    public Page(Document document, String url) {
+        this.document = document ;
+        this.url = url;
+    }
+    
     public Page(Document document) {
         this.document = document ;
     }
@@ -28,19 +39,10 @@ public class Page {
         return this.id;
     }
 
-    public Page setId(String id) {
-        this.id = id;
-        return this;
-    }
-
     public String getUrl() {
         return this.url;
     }
 
-    public Page setUrl(String url) {
-        this.url = url;
-        return this;
-    }
 
     public Document getDocument() {
         return this.document;

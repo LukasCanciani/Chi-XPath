@@ -59,7 +59,7 @@ public class Vector implements Comparable<Vector>  {
 			}
 
 			else if(sameVector[k]=="1" && k==sameVector.length-1) {
-				System.out.println("Gli xPath" +this.getXPath()+" e "+vett.getXPath()+" danno gli stessi valori");
+				System.out.println("Gli xPath " +this.getXPath().getRule()+" e "+vett.getXPath().getRule()+" danno gli stessi valori");
 				return stesse=true;
 			}
 		}

@@ -45,33 +45,25 @@ public class IsRefinementTest {
     	
     	String url1 = "file:./src/test/resources/basic/section.html";
         final String content1 = loadPageContent(url1);
-        final Page page1 = createPage(content1);
-        page1.setUrl(url1);
-        page1.setId("1");
+        final Page page1 = createPage(content1, url1, "1");
+        
         
         String url2 = "file:./src/test/resources/basic/section.html";
         final String content2 = loadPageContent(url2);
-        final Page page2 = createPage(content2);
-        page2.setUrl(url2);
-        page2.setId("2");
+        final Page page2 = createPage(content2, url2, "2");
         
         String url3 = "file:./src/test/resources/basic/section.html";
         final String content3 = loadPageContent(url3);
-        final Page page3 = createPage(content3);
-        page3.setUrl(url3);
-        page3.setId("3");
+        final Page page3 = createPage(content3, url3, "3");
+        
         
         String url4 = "file:./src/test/resources/basic/section.html";
         final String content4 = loadPageContent(url4);
-        final Page page4 = createPage(content4);
-        page4.setUrl(url4);
-        page4.setId("4");
+        final Page page4 = createPage(content4, url4,"4");
         
         String url5 = "file:./src/test/resources/basic/section.html";
         final String content5 = loadPageContent(url5);
-        final Page page5 = createPage(content5);
-        page5.setUrl(url5);
-        page5.setId("5");
+        final Page page5 = createPage(content5, url5, "5");
         
         final Set<Page> setTest = new HashSet<>();
         setTest.add(page5);

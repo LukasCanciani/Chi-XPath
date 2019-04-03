@@ -18,30 +18,32 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class VectorTest {
+	
+	private Page page1;
+	private Page page2;
 
 	@Before
 	public void setUp() throws Exception {
+		//creazione pagina1
+		String url1 = "file:./src/test/resources/basic/test3.html";
+        final String content1 = loadPageContent(url1);
+        page1 = createPage(content1,url1,"0");
+        
+        //creazione pagina2
+        String url2 = "file:./src/test/resources/basic/test1.html";
+        final String content2 = loadPageContent(url2);
+        page2 = createPage(content2,url2,"1");
 	}
    /*in questo test creo una ClasseDiPagine con dentro due pagine e un xPath "a" qualsiasi. Mi aspetto che
     *  l'xPath "/html" estragga gli stessi valori su entrambe le pagine e quindi il metodo equals() abbia esito positivo.
     *  NOTA:E' DATO PER SCONTATO che l'xPath inserito nel costruttore del vettore MATCHA con le pagine della ClasseDiPagine inserita anch'essa nel costruttore!!
     */
+
+	
 	
 	@Test
 	public void SameVectorTrue() throws XPathExpressionException {
-		//creazione pagina1
-		String url1 = "file:./src/test/resources/basic/section.html";
-        final String content1 = loadPageContent(url1);
-        final Page page1 = createPage(content1);
-        page1.setUrl(url1);
-        page1.setId("0");
-        
-        //creazione pagina2
-        String url2 = "file:./src/test/resources/basic/article1.html";
-        final String content2 = loadPageContent(url2);
-        final Page page2 = createPage(content2);
-        page2.setUrl(url2);
-        page2.setId("1");
+		
         
         //insieme di xPath qualsiasi della ClasseDiPagine
         final Set<XPath> xPaths1 = new HashSet<>();
@@ -67,19 +69,7 @@ public class VectorTest {
 	}
 	@Test
 	public void sameVectorFalse() throws XPathExpressionException {
-		//creazione pagina1
-		String url1 = "file:./src/test/resources/basic/section.html";
-        final String content1 = loadPageContent(url1);
-        final Page page1 = createPage(content1);
-        page1.setUrl(url1);
-        page1.setId("0");
-        
-        //creazione pagina2
-        String url2 = "file:./src/test/resources/basic/article1.html";
-        final String content2 = loadPageContent(url2);
-        final Page page2 = createPage(content2);
-        page2.setUrl(url2);
-        page2.setId("1");
+		
         
         //insieme di xPath qualsiasi della ClasseDiPagine
         final Set<XPath> xPaths1 = new HashSet<>();
@@ -105,19 +95,7 @@ public class VectorTest {
 	}
 	@Test
 	public void sameVectorSameString() throws XPathExpressionException {
-		//creazione pagina1
-		String url1 = "file:./src/test/resources/basic/section.html";
-        final String content1 = loadPageContent(url1);
-        final Page page1 = createPage(content1);
-        page1.setUrl(url1);
-        page1.setId("0");
-        
-        //creazione pagina2
-        String url2 = "file:./src/test/resources/basic/article1.html";
-        final String content2 = loadPageContent(url2);
-        final Page page2 = createPage(content2);
-        page2.setUrl(url2);
-        page2.setId("1");
+		
         
         //insieme di xPath qualsiasi della ClasseDiPagine
         final Set<XPath> xPaths1 = new HashSet<>();

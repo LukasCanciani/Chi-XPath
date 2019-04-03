@@ -293,9 +293,8 @@ public class Partitioner {
 		int id=0;
 		for(String url : pageUrls) {
 			String content = loadPageContent(url);
-			Page page = createPage(content);
-			page.setUrl(url);
-			page.setId(""+id);
+			Page page = createPage(content, url, ""+id);
+			//page.setId(""+id);
 			id++;
 			pages.add(page);
 		}
