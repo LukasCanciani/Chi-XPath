@@ -104,7 +104,7 @@ public class Partitioner {
 		//selezione dell'Xpath caratteristico per ogni classe di pagine
 		PageClass.selectCharacteristicXPath(pageClasses);
 		for(PageClass pageClass : pageClasses) {
-			System.out.println("Classe di pagine "+pageClass.getId()+" ha xPath caratteristico "+pageClass.getCharacteristicXPath());
+			System.out.println("Classe di pagine "+pageClass.getId()+" ha xPath caratteristico "+pageClass.getCharacteristicXPath().getRule());
 		}
 
 		//generazione partizioni
@@ -243,9 +243,11 @@ public class Partitioner {
 			}
 		}
 		//Sistema gli id
-		/*for(int i=1;i<pClasses.size()+1;i++) {
-			pClasses.get(i-1).setId(Integer.toString(i));
-		}*/
+		int i = 0;
+		for(PageClass p : pClasses) {
+			p.setId(Integer.toString(i));
+			i++;
+		}
 		return pClasses;
 	}
 

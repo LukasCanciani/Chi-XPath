@@ -14,6 +14,10 @@ public class PageClass implements Comparable<PageClass> {
 
 	private String id;
 
+	public void setId(String id) {
+		this.id = id;
+	}
+
 	private Set<XPath> uniqueXPaths;
 
 	private XPath characteristicXPath;
@@ -123,7 +127,6 @@ public class PageClass implements Comparable<PageClass> {
 		for(PageClass classe : pageClasses) {
 			final Set<XPath> senzaEquivalenti = classe.deleteEquivalentXpaths(max_p);
 			classe.setUniqueXPaths(senzaEquivalenti);
-			//System.out.println("Classe di pagine "+classe.getId()+" matcha con "+senzaEquivalenti.size()+" xpaths");
 		}
 		System.out.println("");
 	}
