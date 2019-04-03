@@ -7,18 +7,10 @@ public class XPath implements Comparable<XPath> {
 		this.rule = rule;
 		this.pages = pages;
 	}
-	
-	public XPath(String rule) {
-		this.rule = rule;
-		this.pages = null;
-	}
 	String rule;
 	Set<Page> pages;
 	public String getRule() {
 		return rule;
-	}
-	public void addPage(Page pag) {
-		this.pages.add(pag);
 	}
 	public Set<Page> getPages() {
 		return pages;

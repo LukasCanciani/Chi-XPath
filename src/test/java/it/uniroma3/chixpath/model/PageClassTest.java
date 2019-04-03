@@ -20,18 +20,16 @@ import org.junit.Test;
 public class PageClassTest {
 	public Page page1;
 	public Page page2;
-	public Page page3;
-	public Page page4;
 	@Before
 	public void setUp() throws Exception {
 		//creazione pagina1
-		String url1 = "file:./src/test/resources/basic/section.html";
+		String url1 = "file:./src/test/resources/basic/test3.html";
 		
         String content1 = loadPageContent(url1);
         page1 = createPage(content1, url1,"0");
         
         //creazione pagina2
-        String url2 = "file:./src/test/resources/basic/article1.html";
+        String url2 = "file:./src/test/resources/basic/test1.html";
         String content2 = loadPageContent(url2);
         page2 = createPage(content2,url2,"1");
 	}
@@ -58,20 +56,20 @@ public class PageClassTest {
 	@Test
 	public void containsXPathTrue()  throws XPathExpressionException {
 		final Set<XPath> xPaths1 = new HashSet<>();
-        xPaths1.add(new XPath("/HTML"));
-        xPaths1.add(new XPath("HTML"));
-        page1.addXPath(new XPath("HTML"));
-        page1.addXPath(new XPath("/HTML"));
+        xPaths1.add(new XPath("/HTML",null));
+        xPaths1.add(new XPath("HTML",null));
+        page1.addXPath(new XPath("HTML",null));
+        page1.addXPath(new XPath("/HTML",null));
 		Set<Page> set = new HashSet<>();
 		set.add(page1);
 		PageClass pageClass1 = new PageClass(set,xPaths1);
 		Set<PageClass> classes = new HashSet<>();
 		classes.add(pageClass1);
 		Set<XPath> x2 = new HashSet<>();
-		x2.add(new XPath("/HTML"));
-		x2.add(new XPath("HTML"));
-		page2.addXPath(new XPath("/HTML"));
-		page2.addXPath(new XPath("HTML"));
+		x2.add(new XPath("/HTML",null));
+		x2.add(new XPath("HTML",null));
+		page2.addXPath(new XPath("/HTML",null));
+		page2.addXPath(new XPath("HTML",null));
 		Set<Page> set2 = new HashSet<>();
 		set2.add(page2);
 		PageClass pageClass2 = new PageClass(set2,x2);
@@ -83,20 +81,20 @@ public class PageClassTest {
 	@Test
 	public void containsXPathFalse()  throws XPathExpressionException {
 		final Set<XPath> xPaths1 = new HashSet<>();
-        xPaths1.add(new XPath("/HTML"));
-        xPaths1.add(new XPath("HTML"));
-        page1.addXPath(new XPath("HTML"));
-        page1.addXPath(new XPath("/HTML"));
+        xPaths1.add(new XPath("/HTML",null));
+        xPaths1.add(new XPath("HTML",null));
+        page1.addXPath(new XPath("HTML",null));
+        page1.addXPath(new XPath("/HTML",null));
 		Set<Page> set = new HashSet<>();
 		set.add(page1);
 		PageClass pageClass1 = new PageClass(set,xPaths1);
 		Set<PageClass> classes = new HashSet<>();
 		classes.add(pageClass1);
 		Set<XPath> x2 = new HashSet<>();
-		x2.add(new XPath("a"));
-		x2.add(new XPath("b"));
-		page2.addXPath(new XPath("a"));
-		page2.addXPath(new XPath("b"));
+		x2.add(new XPath("a",null));
+		x2.add(new XPath("b",null));
+		page2.addXPath(new XPath("a",null));
+		page2.addXPath(new XPath("b",null));
 		Set<Page> set2 = new HashSet<>();
 		set2.add(page2);
 		PageClass pageClass2 = new PageClass(set2,x2);
@@ -108,10 +106,10 @@ public class PageClassTest {
 	@Test
 	public void createUniqueXPathsSAME()  throws XPathExpressionException {
 		final Set<XPath> xPaths1 = new HashSet<>();
-        xPaths1.add(new XPath("/HTML"));
-        xPaths1.add(new XPath("HTML"));
-        page1.addXPath(new XPath("HTML"));
-        page1.addXPath(new XPath("/HTML"));
+        xPaths1.add(new XPath("/HTML",null));
+        xPaths1.add(new XPath("HTML",null));
+        page1.addXPath(new XPath("HTML",null));
+        page1.addXPath(new XPath("/HTML",null));
 		Set<Page> set = new HashSet<>();
 		set.add(page1);
 		PageClass pageClass1 = new PageClass(set,xPaths1);
@@ -126,10 +124,10 @@ public class PageClassTest {
 	@Test
 	public void createUniqueXPathsNOTSAME()  throws XPathExpressionException {
 		final Set<XPath> xPaths1 = new HashSet<>();
-        xPaths1.add(new XPath("/HTML"));
-        xPaths1.add(new XPath("a"));
-        page1.addXPath(new XPath("/HTML"));
-        page1.addXPath(new XPath("a"));
+        xPaths1.add(new XPath("/HTML",null));
+        xPaths1.add(new XPath("a",null));
+        page1.addXPath(new XPath("/HTML",null));
+        page1.addXPath(new XPath("a",null));
 		Set<Page> set = new HashSet<>();
 		set.add(page1);
 		PageClass pageClass1 = new PageClass(set,xPaths1);
@@ -145,10 +143,10 @@ public class PageClassTest {
 	@Test
 	public void selectCharacteristicXPathOnePage()  throws XPathExpressionException {
 		final Set<XPath> xPaths1 = new HashSet<>();
-        xPaths1.add(new XPath("/HTML"));
-        xPaths1.add(new XPath("a"));
-        page1.addXPath(new XPath("/HTML"));
-        page1.addXPath(new XPath("a"));
+        xPaths1.add(new XPath("/HTML",null));
+        xPaths1.add(new XPath("a",null));
+        page1.addXPath(new XPath("/HTML",null));
+        page1.addXPath(new XPath("a",null));
         Set<Page> set = new HashSet<>();
 		set.add(page1);
 		PageClass pageClass1 = new PageClass(set,xPaths1);
@@ -162,12 +160,12 @@ public class PageClassTest {
 	@Test
 	public void selectCharacteristicXPathTwoPage()  throws XPathExpressionException {
 		final Set<XPath> xPaths1 = new HashSet<>();
-        xPaths1.add(new XPath("/HTML"));
-        xPaths1.add(new XPath("a"));
-        page1.addXPath(new XPath("/HTML"));
-        page1.addXPath(new XPath("a"));
-        page2.addXPath(new XPath("/HTML"));
-        page2.addXPath(new XPath("a"));
+        xPaths1.add(new XPath("/HTML",null));
+        xPaths1.add(new XPath("a",null));
+        page1.addXPath(new XPath("/HTML",null));
+        page1.addXPath(new XPath("a",null));
+        page2.addXPath(new XPath("/HTML",null));
+        page2.addXPath(new XPath("a",null));
         Set<Page> set = new HashSet<>();
 		set.add(page1);
 		set.add(page2);
@@ -183,14 +181,13 @@ public class PageClassTest {
 	@Test
 	public void selectCharacteristicXPathTwoClasses()  throws XPathExpressionException {
 		final Set<XPath> xPaths1 = new HashSet<>();
-        xPaths1.add(new XPath("/HTML"));
-        xPaths1.add(new XPath("a"));
-        page1.addXPath(new XPath("/HTML"));
-        page1.addXPath(new XPath("a"));
+        xPaths1.add(new XPath("/HTML",null));
+        xPaths1.add(new XPath("a",null));
+        page1.addXPath(new XPath("/HTML",null));
+        page1.addXPath(new XPath("a",null));
         
         final Set<XPath> xPaths2 = new HashSet<>();
-        xPaths2.add(new XPath("H2"));
-        page2.addXPath(new XPath("H2"));
+        xPaths2.add(new XPath("H2",null));
         Set<Page> set = new HashSet<>();
 		set.add(page1);
 		PageClass pageClass1 = new PageClass(set,xPaths1);

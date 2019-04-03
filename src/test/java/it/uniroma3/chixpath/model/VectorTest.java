@@ -47,7 +47,7 @@ public class VectorTest {
         
         //insieme di xPath qualsiasi della ClasseDiPagine
         final Set<XPath> xPaths1 = new HashSet<>();
-        xPaths1.add(new XPath("a"));
+        xPaths1.add(new XPath("a",null));
        
         //insieme di pagine della ClasseDiPagine
         final Set<Page> set1 = new HashSet<>();
@@ -59,9 +59,9 @@ public class VectorTest {
         PageClass c1 = new PageClass(set1,xPaths1);
         
         //creazine e test vettori
-		Vector vett1 = new Vector(new XPath("/HTML"),c1,2);
+		Vector vett1 = new Vector(new XPath("/HTML",null),c1,2);
 		//Vector vett2 = new Vector("/HTML",c1,2);
-		Vector vett2 = new Vector(new XPath("HTML"),c1,2);
+		Vector vett2 = new Vector(new XPath("HTML",null),c1,2);
 		assertTrue(vett1.equals(vett2));
 		
 		
@@ -73,7 +73,7 @@ public class VectorTest {
         
         //insieme di xPath qualsiasi della ClasseDiPagine
         final Set<XPath> xPaths1 = new HashSet<>();
-        xPaths1.add(new XPath("a"));
+        xPaths1.add(new XPath("a",null));
        
         //insieme di pagine della ClasseDiPagine
         final Set<Page> set1 = new HashSet<>();
@@ -85,9 +85,9 @@ public class VectorTest {
         PageClass c1 = new PageClass(set1,xPaths1);
         
         //creazine e test vettori
-		Vector vett1 = new Vector(new XPath("/HTML"),c1,2);
+		Vector vett1 = new Vector(new XPath("/HTML",null),c1,2);
 		//Vector vett2 = new Vector("/HTML",c1,2);
-		Vector vett2 = new Vector(new XPath("H2"),c1,2);
+		Vector vett2 = new Vector(new XPath("H2",null),c1,2);
 		assertFalse(vett1.equals(vett2));
 		
 		
@@ -99,7 +99,7 @@ public class VectorTest {
         
         //insieme di xPath qualsiasi della ClasseDiPagine
         final Set<XPath> xPaths1 = new HashSet<>();
-        xPaths1.add(new XPath("a"));
+        xPaths1.add(new XPath("a",null));
        
         //insieme di pagine della ClasseDiPagine
         final Set<Page> set1 = new HashSet<>();
@@ -111,9 +111,9 @@ public class VectorTest {
         PageClass c1 = new PageClass(set1,xPaths1);
         
         //creazine e test vettori
-		Vector vett1 = new Vector(new XPath("/HTML"),c1,2);
+		Vector vett1 = new Vector(new XPath("/HTML",null),c1,2);
 		//Vector vett2 = new Vector("/HTML",c1,2);
-		Vector vett2 = new Vector(new XPath("/HTML"),c1,2);
+		Vector vett2 = new Vector(new XPath("/HTML",null),c1,2);
 		assertTrue(vett1.equals(vett2));
 		
 		

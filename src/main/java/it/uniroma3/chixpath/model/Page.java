@@ -12,9 +12,6 @@ public class Page {
     
     private Set<XPath> xpaths = new HashSet<>();
     
-    public Set<XPath> S() {
-		return xpaths;
-	}
 
 	private String url;
     

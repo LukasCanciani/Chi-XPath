@@ -26,23 +26,23 @@ public class PageTest {
 	@Test
 	public void addXPath() {
 		assertSame(page1.getXPaths().size(),0);
-		page1.addXPath(new XPath("a"));
+		page1.addXPath(new XPath("a",null));
 		assertSame(page1.getXPaths().size(),1);
 	}
 	@Test
 	public void addXPathDifferent() {
 		assertSame(page1.getXPaths().size(),0);
-		page1.addXPath(new XPath("a"));
+		page1.addXPath(new XPath("a",null));
 		assertSame(page1.getXPaths().size(),1);
-		page1.addXPath(new XPath("b"));
+		page1.addXPath(new XPath("b",null));
 		assertSame(page1.getXPaths().size(),2);
 	}
 	@Test
 	public void addXPathSame() {
 		assertSame(page1.getXPaths().size(),0);
-		page1.addXPath(new XPath("a"));
+		page1.addXPath(new XPath("a",null));
 		assertSame(page1.getXPaths().size(),1);
-		page1.addXPath(new XPath("a"));
+		page1.addXPath(new XPath("a",null));
 		assertSame(page1.getXPaths().size(),1);
 	}
 	

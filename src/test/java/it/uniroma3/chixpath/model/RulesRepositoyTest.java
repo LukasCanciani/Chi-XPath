@@ -43,14 +43,14 @@ public class RulesRepositoyTest {
 		set.add(page1);
 		set.add(page2);
 		RulesRepository rp = new RulesRepository(set);
-		assertTrue(rp.getXPaths().contains(new XPath("//H2[contains(@class,'article')]/@class/self::node()")));
+		assertTrue(rp.getXPaths().contains(new XPath("//H2[contains(@class,'article')]/@class/self::node()",null)));
 	}
 	@Test
 	public void RulesGenerationFalseTest() {
 		Set<Page> set = new HashSet<>();
 		set.add(page3);
 		RulesRepository rp = new RulesRepository(set);
-		assertFalse(rp.getXPaths().contains(new XPath("//H2[contains(@class,'article')]/@class/self::node()")));
+		assertFalse(rp.getXPaths().contains(new XPath("//H2[contains(@class,'article')]/@class/self::node()",null)));
 	}
 	@Test
 	public void rulesGenerationPartialTest() { //Solo alcune classi hanno l'xpath cercato
@@ -59,7 +59,7 @@ public class RulesRepositoyTest {
 		set.add(page2);
 		set.add(page3);
 		RulesRepository rp = new RulesRepository(set);
-		XPath xp = new XPath("//H2[contains(@class,'folder')]/following-sibling::P/text()[contains(.,'folder')]/self::text()");
+		XPath xp = new XPath("//H2[contains(@class,'folder')]/following-sibling::P/text()[contains(.,'folder')]/self::text()",null);
 		boolean found = false;
 		for (XPath x : rp.getXPaths()) {
 			if (x.equals(xp)) {
@@ -77,7 +77,7 @@ public class RulesRepositoyTest {
 		set.add(page1);
 		set.add(page2);
 		RulesRepository rp = new RulesRepository(set);
-		XPath xp = new XPath("//H2[contains(@class,'article')]/@class/self::node()");
+		XPath xp = new XPath("//H2[contains(@class,'article')]/@class/self::node()",null);
 		boolean found = false;
 		for (XPath x : rp.getXPaths()) {
 			if (x.equals(xp)) {
@@ -96,7 +96,7 @@ public class RulesRepositoyTest {
 		set.add(page1);
 		set.add(page2);
 		RulesRepository rp = new RulesRepository(set);
-		XPath xp = new XPath("//H2[contains(@class,'folder')]/following-sibling::P/text()[contains(.,'folder')]/self::text()");
+		XPath xp = new XPath("//H2[contains(@class,'folder')]/following-sibling::P/text()[contains(.,'folder')]/self::text()",null);
 		boolean found = false;
 		for (XPath x : rp.getXPaths()) {
 			if (x.equals(xp)) {
@@ -112,7 +112,7 @@ public class RulesRepositoyTest {
 		set.add(page1);
 		set.add(page2);
 		RulesRepository rp = new RulesRepository(set);
-		XPath xp = new XPath("//H2[contains(@class,'article')]/following-sibling::P/text()[contains(.,'Test1')]/self::text()");
+		XPath xp = new XPath("//H2[contains(@class,'article')]/following-sibling::P/text()[contains(.,'Test1')]/self::text()",null);
 		boolean found = false;
 		for (XPath x : rp.getXPaths()) {
 			if (x.equals(xp)) {

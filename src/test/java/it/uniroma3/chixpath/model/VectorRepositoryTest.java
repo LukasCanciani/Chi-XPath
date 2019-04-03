@@ -45,27 +45,27 @@ public class VectorRepositoryTest {
 	@Test
 	public void SameString() throws XPathExpressionException {
 		assertEquals(0,vr.getVectors().size());
-		vr.addUnique(new XPath("HTML"));
+		vr.addUnique(new XPath("HTML",null));
 		assertEquals(1,vr.getVectors().size());
-		vr.addUnique(new XPath("HTML"));
+		vr.addUnique(new XPath("HTML",null));
 		assertEquals(1,vr.getVectors().size());
 	}
 	
 	@Test
 	public void SameValues() throws XPathExpressionException {
 		assertEquals(0,vr.getVectors().size());
-		vr.addUnique(new XPath("HTML"));
+		vr.addUnique(new XPath("HTML",null));
 		assertEquals(1,vr.getVectors().size());
-		vr.addUnique(new XPath("/HTML"));
+		vr.addUnique(new XPath("/HTML",null));
 		assertEquals(1,vr.getVectors().size());
 	}
 	
 	@Test
 	public void DifferentString() throws XPathExpressionException {
 		assertEquals(0,vr.getVectors().size());
-		vr.addUnique(new XPath("HTML"));
+		vr.addUnique(new XPath("HTML",null));
 		assertEquals(1,vr.getVectors().size());
-		vr.addUnique(new XPath("a"));
+		vr.addUnique(new XPath("a",null));
 		assertEquals(2,vr.getVectors().size());	
 	}
 	

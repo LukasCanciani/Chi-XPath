@@ -75,7 +75,7 @@ public class Partitioner {
 
 		//stampa delle informazioni di ogni Classe di Pagine
 		for(PageClass temp : pageClasses) {
-			temp.print();
+			System.out.println(temp);
 			System.out.print("\n");
 		}
 		System.out.println("");

@@ -26,22 +26,22 @@ public class IsRefinementTest {
 	@Test
     public void testSampePages() {
     	final Set<XPath> xPaths1 = new HashSet<>();
-        xPaths1.add(new XPath("a"));
+        xPaths1.add(new XPath("a",null));
         
         final Set<XPath> xPaths2 = new HashSet<>();
-        xPaths2.add(new XPath("b"));
+        xPaths2.add(new XPath("b",null));
         
         final Set<XPath> xPaths3 = new HashSet<>();
-        xPaths3.add(new XPath("c"));
+        xPaths3.add(new XPath("c",null));
         
         final Set<XPath> xPaths4 = new HashSet<>();
-        xPaths4.add(new XPath("d"));
+        xPaths4.add(new XPath("d",null));
         
         final Set<XPath> xPaths5 = new HashSet<>();
-        xPaths5.add(new XPath("e"));
+        xPaths5.add(new XPath("e",null));
         
         final Set<XPath> xPaths6 = new HashSet<>();
-        xPaths6.add(new XPath("e"));
+        xPaths6.add(new XPath("e",null));
     	
     	String url1 = "file:./src/test/resources/basic/section.html";
         final String content1 = loadPageContent(url1);

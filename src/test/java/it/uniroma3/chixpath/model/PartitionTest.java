@@ -18,9 +18,9 @@ import org.junit.Test;
 public class PartitionTest {
 	public Page page1;
 	public Page page2;
-	PageClass pageClass1;
-	PageClass pageClass2;
-	PageClass pageClass3;
+	public PageClass pageClass1;
+	public PageClass pageClass2;
+	public PageClass pageClass3;
 	@Before
 	public void setUp() throws Exception {
 		//creazione pagina1

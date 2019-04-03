@@ -42,7 +42,7 @@ public class EvaluateXPathsTest {
 		Set<XPath> rules = new HashSet<XPath>();
 			for (String s : strings) {
 				
-				rules.add(new XPath(s));
+				rules.add(new XPath(s,null));
 			}
 
 		final Set<Page> pages = new HashSet<>();

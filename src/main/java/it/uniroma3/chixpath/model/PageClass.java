@@ -65,11 +65,12 @@ public class PageClass implements Comparable<PageClass> {
 	}
 
 
-	public void print() {
-		System.out.print("Classe di pagine "+this.getId()+" ha "+this.getxPaths().size()+" xpaths che matchano con le pagine");
+	public String toString() {
+		String out = "Classe di pagine "+this.getId()+" ha "+this.getxPaths().size()+" xpaths che matchano con le pagine";
 		for(Page page : this.getPages()) {
-			System.out.print("  ID:"+page.getId()+" ");
-		}	    	
+			out.concat("  ID:"+page.getId()+" ");
+		}	
+		return out;
 	}
 
 	public boolean hasSamePagesAs(Set<PageClass> toAdd) {
