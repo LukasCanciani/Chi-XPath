@@ -18,7 +18,7 @@ public class PageTest {
 	@Before
 	public void setUp() throws Exception {
 		//creazione pagina1
-		String url1 = "file:./src/test/resources/basic/test1.html";
+		String url1 = "file:./src/test/resources/basic/Test/test1.html";
 		
         String content1 = loadPageContent(url1);
         page1 = createPage(content1,url1,"0");

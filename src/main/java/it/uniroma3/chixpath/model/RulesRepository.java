@@ -16,10 +16,7 @@ import it.uniroma3.fragment.RuleInference;
 
 public class RulesRepository {
 	public RulesRepository(Set<Page> pages) {
-		/*this.setPages(pages);
-		this.rulesGeneration();
-		this.generateDifferentXpaths();
-		this.createXPath2Pages();*/
+		
 		
 		this.pages = pages;
 		rulesGeneration();
