@@ -120,8 +120,8 @@ public class IsRefinementTest {
       // --------------------------------------------------------------------------------------------------------------------------------  
        // assertTrue(i1.equals(i2)==true);
         
-        assertTrue(i2.isRefinementOf(i1, 4));
-        assertFalse(i1.isRefinementOf(i2, 4));
+        assertTrue(i2.isRefinementOf(i1));
+        assertFalse(i1.isRefinementOf(i2));
         
     } 
 	

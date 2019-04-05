@@ -20,6 +20,7 @@ import it.uniroma3.chixpath.model.PageClass;
 import it.uniroma3.chixpath.model.RulesRepository;
 import it.uniroma3.chixpath.model.XPath;
 import it.uniroma3.chixpath.model.Partition;
+import it.uniroma3.chixpath.model.Lattice;
 import it.uniroma3.chixpath.model.Page;
 
 public class Partitioner {
@@ -61,8 +62,9 @@ public class Partitioner {
 		System.out.println("Caricamento di " + pageUrls.size() + " pagine ");
 		final Set<Page> pages = createPages(pageUrls);
 
-
-		final RulesRepository rulesRep = new RulesRepository(pages);		
+		long rulesGenerationStart = System.currentTimeMillis();
+		final RulesRepository rulesRep = new RulesRepository(pages);	
+		long rulesGenerationStop = System.currentTimeMillis();
 
 
 		//raggruppamento di TUTTE LE PAGINE che condividono GLI STESSI xPath
@@ -79,27 +81,10 @@ public class Partitioner {
 			System.out.print("\n");
 		}
 		System.out.println("");
-
+		long rulesControlStart = System.currentTimeMillis();
 		PageClass.createUniqueXPaths(pageClasses, MAX_PAGES);
-		///DATOGLIERE
-		/*rulesRep.OLDcreateUniqueXPaths(pageClasses);
-		for(PageClass pc: pageClasses) {
-			if (pc.getUniqueXPaths().size() != rulesRep.OLDclass2UniqueXpaths.get(pc).size()) {
-				System.out.println("DIMENSIONI DIFFERENTI SU PAGINEA " + pc.getId());
-			}
-			else {
-				boolean uguali = true;
-				for (String str: pc.getUniqueXPaths()) {
-					if(!rulesRep.OLDclass2UniqueXpaths.get(pc).contains(str)) {
-						uguali = false;
-						System.out.println("Trovato elemento diverso su pagina "+pc.getId());
-					}
-				}
-				if (uguali)
-						System.out.println("TUTTI ELEMENTI UGUALI SU PAGINA "+pc.getId());
-			}
-		}
-		//FINO A QUI*/
+		long rulesControlStop = System.currentTimeMillis();
+		
 
 		//selezione dell'Xpath caratteristico per ogni classe di pagine
 		PageClass.selectCharacteristicXPath(pageClasses);
@@ -107,46 +92,18 @@ public class Partitioner {
 			System.out.println("Classe di pagine "+pageClass.getId()+" ha xPath caratteristico "+pageClass.getCharacteristicXPath().getRule());
 		}
 
-		//generazione partizioni
-		final Set<Partition> partizioni = new HashSet<>();
-		for(PageClass pageClass : pageClasses) {
-			//creazione di un Set<> di Classi di pagine per innescare il metodo ricorsivo che genera le partizioni
-			final Set<PageClass> classi = new HashSet<>();
-			classi.add(pageClass);
-			//metodo ricorsivo che a partire da una classe di pagine trova tutte le combinazioni di queste che formano una partizione 
-			partizioni.addAll(allPossiblePartitions(classi,pageClasses,pageClass.getPages().size(),MAX_PAGES));
-		}
-
-		//eliminazione partizioni equivalenti
-		Set<Partition> senzaDuplicati = deleteDuplicates(partizioni);
-
+		
+		Lattice lattice = generatePartitions(pageClasses, MAX_PAGES);
 		//per ogni partizione stampa il suo id, gli id delle classi di pagine al suo interno, e gl id delle pagine di ogni ClasseDiPagine
 		System.out.println("\n");
 		System.out.println("\n");
-		for(Partition i : senzaDuplicati) {
-			System.out.println(i);
-			System.out.println("\n");
-		}
-
-		//controllo relazione di raffiamento
-		/*for(int i=0; i<senzaDuplicati.size();i++) {
-			ClassContainer ins = senzaDuplicati.get(i);
-			for(int j=0; j<senzaDuplicati.size();j++) {
-				if(ins.isRefinementOf(senzaDuplicati.get(j), MAX_PAGES))
-					System.out.println("La partizione "+ins.getId()+ " e' raffinamento di "+senzaDuplicati.get(j).getId());
-			}
-
-		}*/
-		for(Partition c1 : senzaDuplicati) {
-
-			for(Partition c2 : senzaDuplicati) {
-				if(c1.isRefinementOf(c2, MAX_PAGES))
-					System.out.println("La partizione "+c1.getId()+ " e' raffinamento di "+c2.getId());
-			}
-
-		}
+	
+		System.out.println(lattice);
+	
 		long endTime = System.currentTimeMillis();
 		System.out.println("It took " + (endTime - startTime)/1000 + " seconds");
+		System.out.println("Rules Generation : " + (rulesGenerationStop-rulesGenerationStart)/1000 + " seconds");
+		System.out.println("Rules Control  : " + (rulesControlStop-rulesControlStart)/1000 + " seconds");
 
 	}
 
@@ -154,25 +111,25 @@ public class Partitioner {
 
 
 	//ciclo for, se i è un indice da eliminare vai avanti sennò aggiungi al nuovo array list
-	private static Set<Partition> deleteDuplicates(Set<Partition> partizioni){
+	private static Set<Partition> deleteDuplicates(Set<Partition> partitions){
 		final Set<String> alreadyChecked = new HashSet<>();
-		final Set<String> idDaEliminare = new HashSet<>();
+		final Set<String> deleteId = new HashSet<>();
 
-		for(Partition i : partizioni) {
-			for(Partition j :partizioni) {
+		for(Partition i : partitions) {
+			for(Partition j :partitions) {
 				if(!i.getId().equals(j.getId()) && i.samePartition(j) && !(alreadyChecked.contains(j.getId()))) {
-					idDaEliminare.add(j.getId());
+					deleteId.add(j.getId());
 				}
 			}
 			alreadyChecked.add(i.getId());
 		}
 
-		final Set<Partition> senzaDuplicati = new HashSet<>();
-		for(Partition toAdd : partizioni) {
-			if(!idDaEliminare.contains(toAdd.getId())) senzaDuplicati.add(toAdd);
+		final Set<Partition> uniques = new HashSet<>();
+		for(Partition toAdd : partitions) {
+			if(!deleteId.contains(toAdd.getId())) uniques.add(toAdd);
 		}
-
-		return senzaDuplicati;
+		Partition.reorderPartitions(uniques);
+		return uniques;
 
 	}
 
@@ -184,6 +141,26 @@ public class Partitioner {
 	 * @param max - numero di pagine inserite in INPUT
 	 * @return tutte le possibili partizioni a partire da una singola classe di pagine
 	 */
+	
+	private static Lattice generatePartitions(Set<PageClass> pageClasses, int MAX_PAGES) {
+		//generazione partizioni
+				final Set<Partition> partitions = new HashSet<>();
+				for(PageClass pageClass : pageClasses) {
+					//creazione di un Set<> di Classi di pagine per innescare il metodo ricorsivo che genera le partizioni
+					final Set<PageClass> classi = new HashSet<>();
+					classi.add(pageClass);
+					//metodo ricorsivo che a partire da una classe di pagine trova tutte le combinazioni di queste che formano una partizione 
+					partitions.addAll(allPossiblePartitions(classi,pageClasses,pageClass.getPages().size(),MAX_PAGES));
+				}
+				
+
+				//eliminazione partizioni equivalenti
+				Set<Partition> unique = deleteDuplicates(partitions);
+				Lattice lattice = new Lattice(unique);
+				return lattice;
+	}
+	
+	
 	private static ArrayList<Partition> allPossiblePartitions(Set<PageClass> toAdd,Set<PageClass> classiDiPagine, int n,int max){
 		final ArrayList<Partition> partizioni = new ArrayList<>();
 		//gestisce i casi in cui viene inserita un'unica ClasseDiPagine che contiene tutte le pagine (che è una partizione da sè)
@@ -242,12 +219,7 @@ public class Partitioner {
 				pClasses.add(pageClasses);
 			}
 		}
-		//Sistema gli id
-		int i = 0;
-		for(PageClass p : pClasses) {
-			p.setId(Integer.toString(i));
-			i++;
-		}
+		PageClass.reorderClasses(pClasses);
 		return pClasses;
 	}
 
@@ -329,21 +301,3 @@ public class Partitioner {
 	}
 }
 
-/*
-rulesRep.OLDcreateUniqueXPaths(pageClasses);
-for(PageClass pc: pageClasses) {
-	if (pc.getUniqueXPaths().size() != rulesRep.OLDclass2UniqueXpaths.get(pc).size()) {
-		System.out.println("DIMENSIONI DIFFERENTI SU PAGINEA " + pc.getId());
-	}
-	else {
-		boolean uguali = true;
-		for (String str: pc.getUniqueXPaths()) {
-			if(!rulesRep.OLDclass2UniqueXpaths.get(pc).contains(str)) {
-				uguali = false;
-				System.out.println("Trovato elemento diverso su pagina "+pc.getId());
-			}
-		}
-		if (uguali)
-				System.out.println("TUTTI ELEMENTI UGUALI SU PAGINA "+pc.getId());
-	}
-}*/

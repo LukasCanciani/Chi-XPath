@@ -95,7 +95,7 @@ public class Partition implements Comparable<Partition> {
 
 
 
-	public boolean isRefinementOf(Partition i,int n_pagine) {
+	public boolean isRefinementOf(Partition i) {
 		boolean isRefinement=true;
 		final Map<Set<Page>,String> p1 = new HashMap<>();
 
@@ -149,15 +149,18 @@ public class Partition implements Comparable<Partition> {
 
 	}
 
-	/*public void print() {
-		System.out.println("La partizione "+this.getId()+" e' divisa in: ");
-		for(PageClass Pset : this.getPageClasses()) {
-			System.out.println("Classe di pagine "+Pset.getId()+":");
-			for(Page page : Pset.getPages()) {
-				System.out.println("id:"+page.getId()+" ");
-			}
+	public static void reorderPartitions ( Set<Partition> partitions) {
+		int i = 0;
+		for (Partition partition : partitions) {
+			partition.setId(Integer.toString(i));
+			i++;
 		}
-	}*/
+	}
+
+	private void setId(String id) {
+		this.id  = id;
+		
+	}
 
 	@Override
 	public String toString() {

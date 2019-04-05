@@ -14,7 +14,7 @@ public class PageClass implements Comparable<PageClass> {
 
 	private String id;
 
-	public void setId(String id) {
+	private void setId(String id) {
 		this.id = id;
 	}
 
@@ -160,6 +160,14 @@ public class PageClass implements Comparable<PageClass> {
 			pageClass.setCharacteristicXPath(bestXPath);
 		}
 
+	}
+	
+	public static void reorderClasses ( Set<PageClass> pageClasses) {
+		int i = 0;
+		for (PageClass pClass : pageClasses) {
+			pClass.setId(Integer.toString(i));
+			i++;
+		}
 	}
 
 	private void setCharacteristicXPath(XPath bestXPath) {
