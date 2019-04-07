@@ -136,7 +136,7 @@ public class PageClass implements Comparable<PageClass> {
 		VectorRepository container = new VectorRepository(this,max_P,this.getId());
 		int index=1;
 		for (XPath rule : this.getxPaths()) {
-			System.out.println("controllando xpath "+index+ " di "+this.getxPaths().size());
+			//System.out.println("controllando xpath "+index+ " di "+this.getxPaths().size());
 			container.addUnique(rule);
 			index++;
 		}

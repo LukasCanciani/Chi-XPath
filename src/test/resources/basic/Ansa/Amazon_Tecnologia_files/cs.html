@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://cs.seedtag.com/cs.html?cmp=false&ga=true&cd= -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head>
+<body>
+<script>
+  var channels = getChannels();
+  var protocol = window.location.protocol;
+  var uuid = '';
+
+  try {
+    var cookies = document.cookie.split(';');
+
+    for (var i = 0; i < cookies.length && uuid === ''; i++) {
+      var cookie = cookies[i];
+      if (cookie.indexOf('st_uid') !== -1) {
+        uuid = cookie.split('=')[1];
+      }
+    }
+  } catch (e) {
+  }
+
+  for (var i = 0; i < channels.length; i++) {
+    var channel = channels[i];
+    var seedtagCSUrl = '';
+
+    if (channel.redirect) {
+      seedtagCSUrl = encodeURIComponent(getCSyncURL(protocol, channel.name, channel.uid));
+    }
+    var url = replaceMacros(channel.url, uuid);
+    var finalUrl = protocol + url + seedtagCSUrl;
+
+    switch (channel.format) {
+      case 'script':
+        insertScript(finalUrl);
+        break;
+      case 'img':
+        insertImg(finalUrl);
+        break;
+      case 'iframe':
+        insertIframe(finalUrl);
+        break;
+    }
+  }
+
+  function replaceMacros (url, uuid) {
+    var updatedUrl = url.replace('$USER_ID', uuid);
+
+    var queryParams = window.location.search.substring(1)
+      .split('&');
+
+    var ga = '';
+    var consent = '';
+
+    for (var paramIndex = 0; paramIndex < queryParams.length; paramIndex++) {
+      var keyValue = queryParams[paramIndex].split('=');
+
+      if (keyValue[0] === 'ga') {
+        if (keyValue[1] === true) {
+          ga = 1;
+        } else if (keyValue[1] === false) {
+          ga = 0;
+        }
+      }
+
+      if (keyValue[0] === 'cd') {
+        consent = keyValue[1];
+      }
+    }
+    updatedUrl = updatedUrl.replace('$GDPR', ga);
+    updatedUrl = updatedUrl.replace('$GDPRCONSENT', consent);
+    updatedUrl = updatedUrl.replace('$TIMESTAMP', new Date().getTime());
+
+    return updatedUrl;
+  }
+
+  function insertScript (url) {
+    var channelScript = document.createElement('script');
+    channelScript.setAttribute('src', url);
+    channelScript.setAttribute('type', 'text/javascript');
+
+    document.body.appendChild(channelScript);
+  }
+
+  function insertImg (url) {
+    var channelImg = new Image(1, 1);
+    channelImg.src = url;
+
+    document.body.appendChild(channelImg);
+  }
+
+  function insertIframe (url) {
+    var channelIframe = document.createElement('iframe');
+    channelIframe.src = url;
+    channelIframe.scrolling = 'no';
+    channelIframe.frameBorder = 0;
+    channelIframe.width = 0;
+    channelIframe.height = 0;
+    channelIframe.style.margin = 0;
+    channelIframe.style.padding = 0;
+    channelIframe.style.display = 'none';
+    channelIframe.style.width = '0px';
+    channelIframe.style.height = '0px';
+
+    document.body.appendChild(channelIframe);
+  }
+
+  function getCSyncURL (protocol, channel, channeluid) {
+    return protocol + '//s.seedtag.com/cs/cookiesync/' + channel + '?channeluid=' + channeluid;
+  }
+
+  function getChannels () {
+    return [
+      {
+        name: 'Bidswitch',
+        url: '//x.bidswitch.net/sync?ssp=seedtag&user_id=$USER_ID&gdpr=$GDPR&gdpr_consent=$GDPRCONSENT',
+        format: 'img',
+        redirect: false
+      },
+      {
+        name: 'smart-client',
+        url: '//csync.smartadserver.com/rtb/csync/CookieSync.html?nwid=3050&dcid=3',
+        format: 'iframe',
+        redirect: false
+      },
+      {
+        name: 'smart',
+        url: '//sync.smartadserver.com/getuid?url=',
+        uid: '[sas_uid]',
+        format: 'img',
+        redirect: true
+      },
+      {
+        name: 'outbrain',
+        url: '//b1sync.zemanta.com/usersync/seedtag/?cb=',
+        uid: '__ZUID__',
+        format: 'img',
+        redirect: true
+      },
+      {
+        name: 'Rubicon',
+        url: '//secure-assets.rubiconproject.com/utils/xapi/multi-sync.html?p=seedtag&endpoint=eu',
+        format: 'iframe',
+        redirect: false
+      },
+      {
+        name: 'spotx',
+        url: '//sync.search.spotxchange.com/partner?adv_id=8651&redir=',
+        format: 'img',
+        uid: '$SPOTX_USER_ID',
+        redirect: true
+      },
+      {
+        name: 'pubmatic',
+        url: '//ads.pubmatic.com/AdServer/js/user_sync.html?p=157743&gdpr=$GDPR&gdpr_consent=$GDPRCONSENT&predirect=',
+        uid: '',
+        format: 'iframe',
+        redirect: true
+      }
+    ];
+  }
+
+</script><img width="1" height="1" src="./sync"><iframe src="./CookieSync.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><img width="1" height="1" src="./getuid"><img width="1" height="1" src="./saved_resource"><iframe src="./multi-sync.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><img width="1" height="1" src="./partner"><iframe src="./user_sync.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe>
+
+
+</body></html>
