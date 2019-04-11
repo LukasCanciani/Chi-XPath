@@ -59,9 +59,12 @@ public class Lattice {
 	@Override
 	public String toString() {
 		String out = "Il reticolo è composto da: \n";
+		int i = 0;
 		for (Partition p : this.partitions) {
+			
 			out = out.concat(p.toString());
 			out = out.concat("\n");
+			
 		}
 		for (Partition p : this.isRefinementOf.keySet()) {
 			out = out.concat("La partizione " + p.getId() + " è raffinamento di: ");

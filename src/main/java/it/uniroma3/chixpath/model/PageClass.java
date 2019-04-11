@@ -88,7 +88,6 @@ public class PageClass implements Comparable<PageClass> {
 				for(Page page : test.getPages()) {
 					Set<String> ids = new HashSet<>();
 					ids.add(page.getId());
-
 					//controllo che nessun id del primo set sia nel set da controllare
 					for(String id : idsToCheck ) {
 						if(ids.contains(id)) {

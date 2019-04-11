@@ -91,9 +91,10 @@ public class Partitioner {
 		for(PageClass pageClass : pageClasses) {
 			System.out.println("Classe di pagine "+pageClass.getId()+" ha xPath caratteristico "+pageClass.getCharacteristicXPath().getRule());
 		}
-
-		
+		long partitionStart = System.currentTimeMillis();
+		System.out.println("Genero le partizioni");
 		Lattice lattice = generatePartitions(pageClasses, MAX_PAGES);
+		long partitionStop = System.currentTimeMillis();
 		//per ogni partizione stampa il suo id, gli id delle classi di pagine al suo interno, e gl id delle pagine di ogni ClasseDiPagine
 		System.out.println("\n");
 		System.out.println("\n");
@@ -104,13 +105,14 @@ public class Partitioner {
 		System.out.println("It took " + (endTime - startTime)/1000 + " seconds");
 		System.out.println("Rules Generation : " + (rulesGenerationStop-rulesGenerationStart)/1000 + " seconds");
 		System.out.println("Rules Control  : " + (rulesControlStop-rulesControlStart)/1000 + " seconds");
+		System.out.println("Lattice creation  : " + (partitionStart-partitionStop)/1000 + " seconds");
 
 	}
 
 
 
 
-	//ciclo for, se i è un indice da eliminare vai avanti sennò aggiungi al nuovo array list
+	/*//ciclo for, se i è un indice da eliminare vai avanti sennò aggiungi al nuovo array list
 	private static Set<Partition> deleteDuplicates(Set<Partition> partitions){
 		final Set<String> alreadyChecked = new HashSet<>();
 		final Set<String> deleteId = new HashSet<>();
@@ -131,7 +133,7 @@ public class Partitioner {
 		Partition.reorderPartitions(uniques);
 		return uniques;
 
-	}
+	}*/
 
 
 	/**
@@ -142,7 +144,46 @@ public class Partitioner {
 	 * @return tutte le possibili partizioni a partire da una singola classe di pagine
 	 */
 	
+	
 	private static Lattice generatePartitions(Set<PageClass> pageClasses, int MAX_PAGES) {
+			final Set<Partition> partitions = new HashSet<>();
+			Set<PageClass> toCheck = new HashSet<>();
+			toCheck.addAll(pageClasses);
+			for (PageClass pageClass : pageClasses) {
+				toCheck.remove(pageClass);
+				Set<PageClass> classes = new HashSet<>();
+				classes.add(pageClass);
+				partitions.addAll(allPossiblePartitions(classes,toCheck,pageClass.getPages().size(),MAX_PAGES));
+			}
+			Partition.reorderPartitions(partitions);
+			Lattice lattice = new Lattice(partitions);
+			return lattice;
+	}
+	
+	private static Set<Partition> allPossiblePartitions(Set<PageClass> currentClasses,Set<PageClass> toCheck, int pageCount,int max){
+			final Set<Partition> partitions = new HashSet<>();
+			if (pageCount == max) {
+				final Partition partition = new Partition(currentClasses);
+				partitions.add(partition);
+			}
+			else if(!toCheck.isEmpty()) {
+				Set<PageClass> newToCheck = new  HashSet<>();
+				newToCheck.addAll(toCheck);
+				for (PageClass PClass : toCheck) {
+					if ((pageCount+PClass.getPages().size()<=max)&&(!PClass.hasSamePagesAs(currentClasses))){
+						Set<PageClass> newClasses = new HashSet<>();
+						newClasses.addAll(currentClasses);
+						newClasses.add(PClass);
+						newToCheck.remove(PClass);
+						partitions.addAll(allPossiblePartitions(newClasses,newToCheck,(pageCount+PClass.getPages().size()),max));
+					}
+				}
+			}
+			return partitions;
+	}
+	
+
+	/*private static Lattice generatePartitionsOld(Set<PageClass> pageClasses, int MAX_PAGES) {
 		//generazione partizioni
 				final Set<Partition> partitions = new HashSet<>();
 				for(PageClass pageClass : pageClasses) {
@@ -152,7 +193,7 @@ public class Partitioner {
 					//metodo ricorsivo che a partire da una classe di pagine trova tutte le combinazioni di queste che formano una partizione 
 					partitions.addAll(allPossiblePartitions(classi,pageClasses,pageClass.getPages().size(),MAX_PAGES));
 				}
-				
+				System.out.println("Finito di generare ora elimino le ripetizioni");
 
 				//eliminazione partizioni equivalenti
 				Set<Partition> unique = deleteDuplicates(partitions);
@@ -160,8 +201,7 @@ public class Partitioner {
 				return lattice;
 	}
 	
-	
-	private static ArrayList<Partition> allPossiblePartitions(Set<PageClass> toAdd,Set<PageClass> classiDiPagine, int n,int max){
+	private static ArrayList<Partition> allPossiblePartitionsOld(Set<PageClass> toAdd,Set<PageClass> classiDiPagine, int n,int max){
 		final ArrayList<Partition> partizioni = new ArrayList<>();
 		//gestisce i casi in cui viene inserita un'unica ClasseDiPagine che contiene tutte le pagine (che è una partizione da sè)
 		if(n==max) {
@@ -192,7 +232,7 @@ public class Partitioner {
 			else {}
 		}
 		return partizioni;
-	}
+	}*/
 
 
 	
