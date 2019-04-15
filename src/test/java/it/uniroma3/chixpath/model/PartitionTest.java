@@ -24,13 +24,13 @@ public class PartitionTest {
 	@Before
 	public void setUp() throws Exception {
 		//creazione pagina1
-		String url1 = "file:./src/test/resources/basic/test3.html";
+		String url1 = "file:./src/test/resources/basic/Test/test3.html";
 		
         String content1 = loadPageContent(url1);
         page1 = createPage(content1,url1,"0");
         
         //creazione pagina2
-        String url2 = "file:./src/test/resources/basic/test1.html";
+        String url2 = "file:./src/test/resources/basic/Test/test1.html";
         String content2 = loadPageContent(url2);
         page2 = createPage(content2,url2,"1");
 		Set<Page> set = new HashSet<>();

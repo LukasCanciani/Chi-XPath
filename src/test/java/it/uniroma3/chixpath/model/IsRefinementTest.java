@@ -43,25 +43,25 @@ public class IsRefinementTest {
         final Set<XPath> xPaths6 = new HashSet<>();
         xPaths6.add(new XPath("e",null));
     	
-    	String url1 = "file:./src/test/resources/basic/section.html";
+    	String url1 = "file:./src/test/resources/basic/Basic/section.html";
         final String content1 = loadPageContent(url1);
         final Page page1 = createPage(content1, url1, "1");
         
         
-        String url2 = "file:./src/test/resources/basic/section.html";
+        String url2 = "file:./src/test/resources/basic/Basic/section.html";
         final String content2 = loadPageContent(url2);
         final Page page2 = createPage(content2, url2, "2");
         
-        String url3 = "file:./src/test/resources/basic/section.html";
+        String url3 = "file:./src/test/resources/basic/Basic/section.html";
         final String content3 = loadPageContent(url3);
         final Page page3 = createPage(content3, url3, "3");
         
         
-        String url4 = "file:./src/test/resources/basic/section.html";
+        String url4 = "file:./src/test/resources/basic/Basic/Tsection.html";
         final String content4 = loadPageContent(url4);
         final Page page4 = createPage(content4, url4,"4");
         
-        String url5 = "file:./src/test/resources/basic/section.html";
+        String url5 = "file:./src/test/resources/basic/Basic/section.html";
         final String content5 = loadPageContent(url5);
         final Page page5 = createPage(content5, url5, "5");
         
@@ -120,8 +120,8 @@ public class IsRefinementTest {
       // --------------------------------------------------------------------------------------------------------------------------------  
        // assertTrue(i1.equals(i2)==true);
         
-        assertTrue(i2.isRefinementOf(i1, 4));
-        assertFalse(i1.isRefinementOf(i2, 4));
+        assertTrue(i2.isRefinementOf(i1));
+        assertFalse(i1.isRefinementOf(i2));
         
     } 
 	

@@ -10,10 +10,14 @@ public class Partition implements Comparable<Partition> {
 	private static int progId=0;
 	private Set<PageClass>  pageClasses;
 	private String id;
+	private float avgXPaths;
+
+	
 
 	public Partition(Set<PageClass> pc) {
 		this.pageClasses = pc;
 		this.id = (Integer.toString(progId++));
+		this.avgXPaths = averageXPaths();
 	}
 
 	public String getId() {
@@ -25,7 +29,13 @@ public class Partition implements Comparable<Partition> {
 		return pageClasses;
 	}
 
-
+	private float averageXPaths() {
+		float sum = 0;
+		for (PageClass page : this.pageClasses) {
+			sum=sum+page.getxPaths().size();
+		}
+		return (sum/this.pageClasses.size());
+	}
 
 	public boolean samePartition(Partition partition) {
 		boolean stesse= false;
@@ -95,7 +105,7 @@ public class Partition implements Comparable<Partition> {
 
 
 
-	public boolean isRefinementOf(Partition i,int n_pagine) {
+	public boolean isRefinementOf(Partition i) {
 		boolean isRefinement=true;
 		final Map<Set<Page>,String> p1 = new HashMap<>();
 
@@ -149,19 +159,25 @@ public class Partition implements Comparable<Partition> {
 
 	}
 
-	/*public void print() {
-		System.out.println("La partizione "+this.getId()+" e' divisa in: ");
-		for(PageClass Pset : this.getPageClasses()) {
-			System.out.println("Classe di pagine "+Pset.getId()+":");
-			for(Page page : Pset.getPages()) {
-				System.out.println("id:"+page.getId()+" ");
-			}
+	public static void reorderPartitions ( Set<Partition> partitions) {
+		int i = 0;
+		for (Partition partition : partitions) {
+			partition.setId(Integer.toString(i));
+			i++;
 		}
-	}*/
+	}
+
+	private void setId(String id) {
+		this.id  = id;
+		
+	}
+	public float getAvgXPaths() {
+		return avgXPaths;
+	}
 
 	@Override
 	public String toString() {
-		String str = "La partizione "+this.getId()+" e' divisa in:\n";
+		String str = "La partizione "+this.getId()+" matcha con "+this.getAvgXPaths() +" xpaths in media ed e' divisa in:\n";
 		for(PageClass Pset : this.getPageClasses()) {
 			str=str.concat("Classe di pagine "+Pset.getId()+":\n");
 			for(Page page : Pset.getPages()) {

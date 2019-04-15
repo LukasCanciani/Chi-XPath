@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<stringAttribute key="bad_container_name" value="\chi-xpath\src\la"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/chi-xpath/src/test/java/it/uniroma3/chixpath/Partitioner.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="it.uniroma3.chixpath.Partitioner"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="file:./src/test/resources/basic/Ansa/Amazon_Tecnologia.html&#13;&#10;file:./src/test/resources/basic/Ansa/Google_Tecnologia.html&#13;&#10;file:./src/test/resources/basic/Ansa/Internet_Tecnologia.html&#13;&#10;file:./src/test/resources/basic/Ansa/Sezione_Tecnologia.html&#13;&#10;file:./src/test/resources/basic/Ansa/Banche_Economia.html&#13;&#10;file:./src/test/resources/basic/Ansa/Fca_Economia.html&#13;&#10;file:./src/test/resources/basic/Ansa/Sezione_Economia.html&#13;&#10;file:./src/test/resources/basic/Ansa/Vinitaly_Economia.html&#13;&#10;file:./src/test/resources/basic/Ansa/Calcio_Sport.html&#13;&#10;file:./src/test/resources/basic/Ansa/Ciclismo_Sport.html&#13;&#10;file:./src/test/resources/basic/Ansa/Sezione_Sport.html&#13;&#10;file:./src/test/resources/basic/Ansa/Taekwondo_Sport.html"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="chi-xpath"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
+</launchConfiguration>

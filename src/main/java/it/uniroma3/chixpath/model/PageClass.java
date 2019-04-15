@@ -14,7 +14,7 @@ public class PageClass implements Comparable<PageClass> {
 
 	private String id;
 
-	public void setId(String id) {
+	private void setId(String id) {
 		this.id = id;
 	}
 
@@ -88,7 +88,6 @@ public class PageClass implements Comparable<PageClass> {
 				for(Page page : test.getPages()) {
 					Set<String> ids = new HashSet<>();
 					ids.add(page.getId());
-
 					//controllo che nessun id del primo set sia nel set da controllare
 					for(String id : idsToCheck ) {
 						if(ids.contains(id)) {
@@ -136,7 +135,7 @@ public class PageClass implements Comparable<PageClass> {
 		VectorRepository container = new VectorRepository(this,max_P,this.getId());
 		int index=1;
 		for (XPath rule : this.getxPaths()) {
-			System.out.println("controllando xpath "+index+ " di "+this.getxPaths().size());
+			//System.out.println("controllando xpath "+index+ " di "+this.getxPaths().size());
 			container.addUnique(rule);
 			index++;
 		}
@@ -160,6 +159,14 @@ public class PageClass implements Comparable<PageClass> {
 			pageClass.setCharacteristicXPath(bestXPath);
 		}
 
+	}
+	
+	public static void reorderClasses ( Set<PageClass> pageClasses) {
+		int i = 0;
+		for (PageClass pClass : pageClasses) {
+			pClass.setId(Integer.toString(i));
+			i++;
+		}
 	}
 
 	private void setCharacteristicXPath(XPath bestXPath) {
