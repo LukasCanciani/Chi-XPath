@@ -2,13 +2,14 @@ package it.uniroma3.chixpath;
 
 import static it.uniroma3.fragment.test.Fixtures.createPage;
 import java.io.BufferedReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -22,6 +23,7 @@ import it.uniroma3.chixpath.model.XPath;
 import it.uniroma3.chixpath.model.Partition;
 import it.uniroma3.chixpath.model.Lattice;
 import it.uniroma3.chixpath.model.Page;
+
 
 public class Partitioner {
 	public static void main(String args[]) throws XPathExpressionException {
@@ -100,7 +102,8 @@ public class Partitioner {
 		System.out.println("\n");
 	
 		System.out.println(lattice);
-	
+		String siteName = pageUrls.getFirst().split("/")[5];
+		generateGraph(siteName,pages,lattice);
 		long endTime = System.currentTimeMillis();
 		System.out.println("It took " + (endTime - startTime)/1000 + " seconds");
 		System.out.println("Rules Generation : " + (rulesGenerationStop-rulesGenerationStart)/1000 + " seconds");
@@ -109,6 +112,40 @@ public class Partitioner {
 
 	}
 
+
+
+	
+	private static void generateGraph(String siteName, Set<Page> pages, Lattice lattice) {
+		FileWriter fw = null;
+		String fileName = siteName.concat(".dot");
+		try {
+			fw = new FileWriter(fileName);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		PrintWriter pw = new PrintWriter(fw);
+		pw.println("graph "+siteName +" {");
+		pw.print("node [shape=circle]; ");
+		for (Partition p : lattice.getPartitions()) {
+			pw.print(" "+p.getId()+";");
+		}
+		pw.println();
+		for(Partition p : lattice.getIsRefinedBy().keySet()) {
+			for(Partition p1: lattice.getIsRefinedBy().get(p)) {
+				pw.println(p.getId() + " -- "+p1.getId());
+			}
+		}
+		pw.println("}");
+		pw.close();
+		try {
+			fw.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 
 
 

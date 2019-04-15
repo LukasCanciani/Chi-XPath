@@ -59,7 +59,6 @@ public class Lattice {
 	@Override
 	public String toString() {
 		String out = "Il reticolo è composto da: \n";
-		int i = 0;
 		for (Partition p : this.partitions) {
 			
 			out = out.concat(p.toString());

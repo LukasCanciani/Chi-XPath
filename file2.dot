@@ -1,0 +1,48 @@
+graph test {
+    graph [ratio=fill];
+    node [label="\N", fontsize=15, shape=rect];
+    1[label=<
+        <TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+            <TR><TD BORDER="0" ALIGN = "CENTER">PARTIZIONE</TD></TR>
+            <TR>
+                <TD>
+                <TABLE BORDER="0" CELLBORDER = "1">
+                		<TR><TD BORDER="0">1</TD></TR>
+                        <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\Desktop\Tirocinio\SceltaMigliore\Messaggero\Economia.PNG"/></TD></TR>
+                        <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="BOTH=10" SRC="C:\Users\Lukas\Desktop\Tirocinio\SceltaMigliore\Messaggero\Economia.PNG"/></TD></TR>
+                    </TABLE>
+                </TD>
+                <TD>
+                    <TABLE BORDER="0" CELLBORDER ="1">
+                   	 	<TR><TD BORDER="0">2</TD></TR>
+                        <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\Desktop\Tirocinio\SceltaMigliore\Messaggero\Economia.PNG"/></TD></TR>
+                        <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="BOTH=10" SRC="C:\Users\Lukas\Desktop\Tirocinio\SceltaMigliore\Messaggero\Economia.PNG"/></TD></TR>
+                    </TABLE>
+                </TD>
+            </TR>
+        </TABLE>
+    >, ];
+     2[label=<
+        <TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+            <TR><TD BORDER="0" ALIGN = "CENTER">PARTIZIONE</TD></TR>
+            <TR>
+                <TD>
+                <TABLE BORDER="0" CELLBORDER = "1">
+                		<TR><TD BORDER="0">1</TD></TR>
+                        <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\Desktop\Tirocinio\SceltaMigliore\Messaggero\Economia.PNG"/></TD></TR>
+                        <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="BOTH=10" SRC="C:\Users\Lukas\Desktop\Tirocinio\SceltaMigliore\Messaggero\Economia.PNG"/></TD></TR>
+                    </TABLE>
+                </TD>
+                <TD>
+                    <TABLE BORDER="0" CELLBORDER ="1">
+                   	 	<TR><TD BORDER="0">2</TD></TR>
+                        <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\Desktop\Tirocinio\SceltaMigliore\Messaggero\Economia.PNG"/></TD></TR>
+                        <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="BOTH=10" SRC="C:\Users\Lukas\Desktop\Tirocinio\SceltaMigliore\Messaggero\Economia.PNG"/></TD></TR>
+                    </TABLE>
+                </TD>
+            </TR>
+        </TABLE>
+    >, ];
+    
+    1--2
+}
