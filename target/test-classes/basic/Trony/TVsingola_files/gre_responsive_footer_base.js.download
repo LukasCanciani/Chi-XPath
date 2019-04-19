@@ -1,4 +1,0 @@
-function toogleFooterMobile(el){
- var footerEl=$(el).parents(".footer_corpo_colonna");
- footerEl.hasClass("active")?footerEl.removeClass("active"):footerEl.addClass("active");
-}

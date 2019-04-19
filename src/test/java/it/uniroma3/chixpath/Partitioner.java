@@ -140,12 +140,15 @@ public class Partitioner {
 		pw.println("node [label=\"\\N\", fontsize=20, shape=rect];");
 		for (Partition p : lattice.getPartitions()) {
 			pw.println(p.getId()+"[label=<<TABLE ALIGN=\"LEFT\" CELLBORDER= \"1\" BORDER=\"0\">");
-			pw.println("<TR><TD BORDER=\"0\" ALIGN = \"CENTER\">"+p.getId()+"</TD></TR>");
+			pw.println("<TR><TD BORDER=\"0\" ALIGN = \"CENTER\" COLSPAN=\">"+p.getId()+"</TD></TR>");
 			pw.println("<TR>");
 			for(PageClass pc : p.getPageClasses()) {
+				//Dividere le colonne, per non avere tutte le pagine una sotto l'altra
+				/*int range = pc.getPages().size()/2;
+				int rest = pc.getPages().size()%2;*/
 				pw.println("<TD>");
 				pw.println("<TABLE BORDER=\"0\" CELLBORDER = \"1\">");
-				pw.println("<TR><TD BORDER=\"0\">"+pc.getId()+"</TD></TR>");
+				pw.println("<TR><TD BORDER=\"0\" COLSPAN=\"2\">"+pc.getId()+"</TD></TR>");
 				for(Page pag : pc.getPages()) {
 					pw.println("<TR><TD fixedsize=\"true\" width=\"100\" height=\"100\"><IMG SCALE=\"FALSE\" "
 							+ "SRC=\"C:/Users/Lukas/git/Chi-Xpath"+p2i.get(pag).split("[.]")[1]+".PNG\"/></TD></TR>");

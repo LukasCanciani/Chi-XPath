@@ -155,13 +155,13 @@ node [label="\N", fontsize=20, shape=rect];
 </TR>
 </TABLE>> ];
 7[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
-<TR><TD BORDER="0" ALIGN = "CENTER">7</TD></TR>
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">7</TD></TR>
 <TR>
 <TD>
 <TABLE BORDER="0" CELLBORDER = "1">
 <TR><TD BORDER="0">4</TD></TR>
-<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Messaggero/images/Istat.PNG"/></TD></TR>
-<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Messaggero/images/POLITICA1.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Messaggero/images/Istat.PNG"/></TD>
+ <TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Messaggero/images/POLITICA1.PNG"/></TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Messaggero/images/Manovra.PNG"/></TD></TR>
 </TABLE>
 </TD>
