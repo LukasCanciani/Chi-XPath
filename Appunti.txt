@@ -1,0 +1,5 @@
+TF - IDF -> -> Ignora la partizione tutte insieme!! Va bene? Se considero Documento(wikipedia) = Classe di Pagine
+
+MDL ?? Poco chiaro
+
+Espressivita xpath -> ricerca se gia esiste qualcosa!! Guarda impostazioni del generatore, magari si riesce a sfoltire i tag generici e non signicativi (/HTML) e simili!

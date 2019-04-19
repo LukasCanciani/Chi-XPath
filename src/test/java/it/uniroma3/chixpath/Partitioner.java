@@ -140,7 +140,7 @@ public class Partitioner {
 		pw.println("node [label=\"\\N\", fontsize=20, shape=rect];");
 		for (Partition p : lattice.getPartitions()) {
 			pw.println(p.getId()+"[label=<<TABLE ALIGN=\"LEFT\" CELLBORDER= \"1\" BORDER=\"0\">");
-			pw.println("<TR><TD BORDER=\"0\" ALIGN = \"CENTER\" COLSPAN=\">"+p.getId()+"</TD></TR>");
+			pw.println("<TR><TD BORDER=\"0\" ALIGN = \"CENTER\" COLSPAN=\"2\">"+p.getId()+"</TD></TR>");
 			pw.println("<TR>");
 			for(PageClass pc : p.getPageClasses()) {
 				//Dividere le colonne, per non avere tutte le pagine una sotto l'altra
