@@ -133,11 +133,11 @@ public class PageClass implements Comparable<PageClass> {
 
 	public Set<XPath> deleteEquivalentXpaths(int max_P) throws XPathExpressionException{
 		VectorRepository container = new VectorRepository(this,max_P,this.getId());
-		int index=1;
+		//int index=1;
 		for (XPath rule : this.getxPaths()) {
 			//System.out.println("controllando xpath "+index+ " di "+this.getxPaths().size());
 			container.addUnique(rule);
-			index++;
+			//index++;
 		}
 		return container.getXPaths();
 	}

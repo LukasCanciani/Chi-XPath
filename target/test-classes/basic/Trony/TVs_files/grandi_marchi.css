@@ -1,0 +1,300 @@
+@charset "utf-8";
+#grandi_marchi {
+	width: 100%;
+	margin-top: 30px;
+}
+.grandi_marchi_titolo
+{
+	font-family: "FuturaMdBTBold";
+	font-size: 25px;
+	text-shadow: 0 0 1px rgba(31,41,87,0.2);
+	color: #1f2957;
+	padding-bottom: 15px;
+	border-bottom: solid 1px #d2d2d2;
+	margin-bottom: 25px;
+}
+.grandi_marchi_bordo {
+	margin-top: 20px;
+	border: solid 1px #dbdbdb;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.grandi_marchi_brands  {
+	height: auto;
+}
+#grandi_marchi_selezione_marchio {
+	width: 100%;
+	height: 75px;
+	background-image: url(../images/cssimages/sfondo_grandimarchi_top.png);
+	margin-bottom: 190px;
+}
+
+.grandi_marchi_selezione_marchio_pos {
+	position:relative;
+}
+
+.grandi_marchi_lanci {
+	background-image: url(../images/cssimages/sfondo_grandimarchi.png);
+	width: 100%;
+	height: 175px;
+	display: table;
+	position:absolute;
+	left:1px;
+}
+.grandi_marchi_freccia_su {
+	width: 11px;
+	height: 6px;
+	position: absolute;
+	left: 70px;
+	top: 69px;
+}
+.grandi_marchi_selezione_marchio_cella {
+	width: 150px;
+	padding-left:0px;
+	padding-right:0px;
+	position: relative;
+	cursor: pointer;
+}
+
+.flexslider .slides .freccia_brands{
+	width:13px
+}
+
+.freccia_brands {
+	position: absolute;
+	z-index: 4;
+	left: 67px;
+	top:35px;
+	top: 67px;
+}
+
+
+
+.grandi_marchi_lanci_cella_img {
+	width: 110px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.grandi_marchi_lanci_cella_testo {
+	font-family: 'Anton', Arial, Helvetica, sans-serif;
+	width: 108px;
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 2px;
+	padding-right: 4px;
+	overflow: hidden;
+}
+.grandi_marchi_lanci_cella_testo_1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #7d7d7d;
+	height:29px;
+}
+.grandi_marchi_lanci_cella_testo_2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #213366;
+}
+.grandi_marchi_lanci_cella_testo_3 {
+	font-family: 'Anton', Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: #da0015;
+	margin-top: 10px;
+}
+
+.grandi_marchi_lanci_cella_under_slider_img {
+	/*background-image: url(../images/cssimages/sfondo_grandimarchi.png);*/
+	width: 114px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.grandi_marchi_lanci_cella_under_slider_testo {
+	/*background-image: url(../images/cssimages/sfondo_grandimarchi.png);*/
+	font-family: 'Anton', Arial, Helvetica, sans-serif;
+	width: 115px;
+	height:145px;
+	display: table-cell;
+	vertical-align: top;
+	padding-left: 1px;
+	padding-right: 1px;
+	overflow: hidden;
+	position:relative;
+	padding-top: 20px;
+}
+.grandi_marchi_lanci_cella_under_slider_testo_1 {
+	background:transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #7d7d7d;
+	width: 115px;
+	text-transform: uppercase;
+}
+.grandi_marchi_lanci_cella_under_slider_testo_2 {
+	background:transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #213366;
+	width: 115px;
+	line-height: 14px;
+}
+.grandi_marchi_lanci_cella_under_slider_testo_3 {
+	background:transparent;
+	font-family: 'Anton', Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: #da0015;
+	margin-top: 10px;
+	width: 115px;
+	bottom:0px;
+	position: absolute;
+
+}
+.grandi_marchi_lanci_cella_under_slider_testo_3  .ish-priceContainer-salePrice, .ish-priceContainer-salePrice-lower {
+	font-size: 22px;
+}
+
+.grandi_marchi_lanci_cella_under_slider_testo_3  .ish-priceContainer{
+	margin-top:10px: 22px;
+}
+
+.grandi_marchi_lancio_prodotti {
+	display: table;
+	width: 100%;
+	margin-top: 16px;
+	margin-bottom: 8px;
+	height:222px;
+
+}
+.grandi_marchi_lancio_prodotto .launches_link{
+	position:absolute;
+	top: 182px;
+}
+
+.grandi_marchi_lancio_prodotto {
+	/*display:block;
+	width: 475px;
+	height: 220px;
+	border: solid 1px #dddddd;*/
+	margin-top:15px;
+	margin-bottom:15px;
+}
+
+.grandi_marchi_img{
+	width:100%;
+}
+
+
+.prodotti_marchi{
+	background-image: url(../images/cssimages/sfondo_grandimarchi.png);
+	background-position:center top;
+	background-repeat:repeat-x;
+	top: 75px;
+	left:1px;
+	width: 100%;
+	padding-top: 27px;
+	padding-left: 3px;
+}
+
+.marchi_unselect{
+	opacity: 0.3;
+}
+
+
+.grandi_marchi_lanci_nascosto {
+	display: none;
+	position: absolute;
+}
+
+.grandi_marchi_brands_prodotto {
+	width: 239px;
+	float: left;
+}
+
+#brands_icons{
+	background-image: url(../images/cssimages/sfondo_grandimarchi_top.png);
+	width:95%;
+}
+
+@media (min-width: 1200px)  {
+	.grandi_marchi_brands_prodotto {
+	width: 290px;
+	float: left;
+	}
+
+}
+
+
+@media (max-width: 1080px) {
+
+	#brands_icons{
+		width:93%;
+		}
+
+	.grandi_marchi_bordo {
+	height: 400px;
+	}
+
+
+}
+
+
+@media (min-width: 768px) {
+
+	.grandi_marchi_lancio_prodotto1{
+		padding-left:0px;
+	}
+	.grandi_marchi_lancio_prodotto2{
+		padding-right:0px;
+	}
+
+}
+
+
+@media (max-width: 900px) {
+
+	#brands_icons{
+		width:92%;
+		}
+}
+
+
+@media (max-width: 767px) {
+
+	#brands_icons{
+		width:88%;
+		}
+}
+
+@media (max-width: 500px) {
+
+	.grandi_marchi_bordo {
+	height: 713px;
+	}
+
+	.grandi_marchi_brands_prodotto {
+    float: none;
+    margin: auto;
+    width: 239px;
+	}
+}
+
+@media (max-width: 492px) {
+
+	#brands_icons{
+		width:85%;
+		}
+}
+
+@media (max-width: 400px) {
+
+	#brands_icons{
+		width:80%;
+		}
+}
+

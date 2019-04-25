@@ -1,0 +1,248 @@
+
+	function togliBold(label){
+		label = label.replace('<b>','');
+		label = label.replace('</b>','');
+		return label;
+		}
+
+	$(document).ready(function () {
+		var valRicerca = "";
+
+		//restored from preference GSA_HostName in SMCCSection
+		GSABaseUrl = $('#GSA_HostName').val();
+
+		$( "#inputSearch" ).autocomplete({
+		      source: function( request, response ) {
+		    	valRicerca = request.term;
+
+
+		    	// added 13/03/2014
+
+		    	//Commentato 04/06/2014 e sostituita con la riga seguente
+		        //var urlSearch = GSABaseUrl + "/search";
+		        var urlSearch = "https://www.grespa.com/SearchSuggestionGSA/search.ashx";
+
+		        //20/01/2016 Put Under comment when switched to https
+			        /*
+				    var trident = !!navigator.userAgent.match(/Trident\/7.0/);
+				    var net = !!navigator.userAgent.match(/.NET4.0E/);
+				    var IE11 = trident && net;
+				    var IEold = ( navigator.userAgent.match(/MSIE/i) ? true : false );
+				    */
+			    //Commentato 04/06/2014 perche gia definita a monte vedi sopra
+				    //if(IE11 || IEold)
+				    //	{
+				    //	urlSearch = "http://www.grespa.com/SearchSuggestionGSA/search.ashx";
+				    //	}
+		        // EO added 13/03/2014
+
+		        $.ajax({
+		          url: GSABaseUrl +"/suggest",
+		          dataType: 'jsonp',
+		          jsonpCallback: 'callback',
+		          jsonp: false,
+		          async: false,
+		          data: {
+		        	max: "5",
+		            site: "trony",
+		            client: "trony",
+		            access: "p",
+		            format: "rich",
+		            callback: "callback",
+		            q: request.term
+		          },
+		          //cache: true,
+		          //timeout: 1000,
+		          success: function( data ) {
+		        	  source = [];
+
+		        	  response($.map(data.results, function( item, index) {
+		        		  if(index==0)
+		        		  		{
+		        			  	// added 13/03/2014
+		                     	if((item.name).indexOf((request.term).trim()+" ")==0)
+		                     		{
+		                     		valRicerca=request.term;
+		                     		}
+		                     	else
+		                     	// EO added 13/03/2014
+		                     		{
+		                     		valRicerca=item.name;
+		                     		}
+		        		  		}
+		        		//20/01/2016 changed
+		        		//var url = GSABaseUrl + "/search?client=trony&proxystylesheet=trony&site=trony&filter=0&getfields=*&q="+item.name;
+		            	var url = "/search?client=trony&proxystylesheet=trony&site=trony&filter=0&getfields=*&q="+item.name;
+		            	source.push({
+			                label: item.name,
+			                value: item.name,
+			                type: "suggest",
+			                url: url,
+			                num: index
+			            	});
+		        	}));
+		        	//source = suggestSearch(valRicerca,source);
+
+
+
+		        	// faccio la seconda richiesta
+		        	//url: GSABaseUrl +"/search",
+		        	  $.ajax({
+		      	         url:  urlSearch,
+		      	         dataType: "jsonp",
+		      	         jsonpCallback: 'cback',
+		      	         jsonp: false,
+		      	         data: {
+		      	       	num: "5",
+		      	           site: "trony_suggestion",
+		      	           client: "json_global",
+		      	           proxystylesheet: "json_global",
+		      	           getfields: "ecat_cd.txt_sugg.name_mod.prom_icon.prom_label.tipo_ec_desc.prom",
+		      	           sort: "date:D:L:d1",
+		      	           filter: "0",
+		      	           callback: "cback",
+		      	           entsp: "a__trony_suggest",
+		      	           q: valRicerca
+		      	         },
+		  	          //async: false,
+		  	          //cache: true,
+		  	          //timeout: 1000,
+		  	          //getfields: "ecat_cd.txt_sugg.name_mod",
+
+		  	          success: function( msg,index ) {
+		  	        	  var data = eval(msg);
+		  	        	if(data.GSP.RES){
+		  	        		$.each(data.GSP.RES.R, function (index,item) {
+		  	             	 	//es. http://immagini.grespa.com/wsimmagini?socio=ECOMMERCE&ecat=1902083635&w=170&aspect=
+		  	             	 	var urlImg = "https://immagini.grespa.com/wsimmagini?socio=ECOMMERCE&ecat=" + item.MT.ecat_cd + "&w=170&aspect";
+							  	      source.push({
+							  	      label: togliBold(item.T),
+							  	      value: togliBold(item.T),
+							  	      foto: urlImg,
+							  	      type: "search",
+							  	      url: item.U,
+							  	      num: index,
+							  	      snippet: item.S,
+							  	      promo: item.MT.prom,
+							  	      tipoProd: item.MT.tipo_ec_desc,
+							  	      prom_icon: item.MT.prom_icon,
+							  	      prom_label: item.MT.prom_label
+							  	      });
+					  	      });
+		  	        	  	}
+
+		  	        	  response(source);
+		  	          }
+		  	        });
+
+		          }
+		        });
+		      },
+
+		      minLength: 1,
+
+		      select: function( event, ui ) {
+		        document.location.href = ui.item.url;
+		      }
+
+		      ,
+		      open: function() {
+		    	 $( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+		      },
+		      close: function() {
+		    	 $( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+		      }
+		      /* */
+		    })
+
+
+
+
+
+
+
+
+		    //sovrascrittura rendering
+
+
+		    .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+				 var ret = null;
+				 var ret2 = null;
+				 if(item.type == "suggest"){
+				 if(item.num == 0){
+
+						 ret2 = $( "<li class=\"suggestion_title\">" )
+						 .append("<table cellpadding=\"0\" cellspacig=\"0\" style=\"width:100%;\"><tbody><tr><td style=\"width:15%\"></td><td class=\"td2Suggest\">Forse stai cercando...</td><td style=\"vertical-align: middle;width:15%\"></td></tr></tbody></table>")
+						 .appendTo( ul );
+						 }
+				 	searchFromSuggest=$("#searchGSAForm").attr('action') + "?client=trony&proxystylesheet=tronyNoHeaderFooter2&site=trony&output=xml_no_dtd&filter=0&sort=date:D:L:d1&entsp=a__trony&oe=UTF-8&ie=UTF-8&ud=1&exclude_apps=1&site=trony&getfields=*&q="+item.label;
+					 ret = $( "<li>" )
+					 .append("<a href=\""+searchFromSuggest+"\" ><table style=\"width:100%;\"><tbody><tr><td style=\"width:15%\"></td><td class=\"td2Suggest\">"+ item.label + "</td><td style=\"vertical-align: middle;width:15%\"></td></tr></tbody></table></a>" )
+					 .appendTo( ul );
+					 }
+				 else{
+				 if(item.num == 0){
+					 ret2 = $( "<li class=\"search_title\">" )
+					 .append( "" )
+					 .appendTo( ul );
+					 }
+				 baseStoreUrl = location.host + '/online';
+				 linkFromSuggest=item.url.replace("trony.it/online", baseStoreUrl);
+				 linkFromSuggest=linkFromSuggest.replace("www.www", "www");
+				 ret = $( "<li class=\"itemSearchSugg\">" )
+				 .append( "<a href=\""+linkFromSuggest+"\" ><table style=\"width:100%\"><tbody><tr><td style=\"width:15%\"><img style=\"margin-right:5px;\" width=\"50px\" class=\"img_preview\" src=\"" + item.foto + "\" /></td><td  class=\"td2SearchSuggest\"><span class=\"listing_risultati_prodotto_1\">" + item.tipoProd + "</span><br/>" +  item.label + "</td><td style=\"vertical-align: middle;width:15%\">" +  (item.promo=='si' ? "<img width=\"50px\" src=\"" + item.prom_icon + "\" />" : "") +  "</td></tr></tbody></table></a>" )
+				 //.append( "<a href=\""+linkFromSuggest+"\" ><span class=\"img\"><img width=\"30px\" class=\"img_preview\" src=\"" + item.foto + "\" /></span><span class=\"dati\"><b>" + item.name + "</b><br/>"+item.txt+"</span></a>" )
+				 .appendTo( ul );
+				 }
+				 return ret;
+				    };
+
+		 });  /* */
+
+
+
+
+
+
+
+
+
+		  //sovrascrittura rendering
+		    /*
+		    .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+				var ret = null;
+				var ret2 = null;
+				if(item.type == "suggest"){
+					if(item.num == 0){
+						ret2 = $( "<li class=\"suggestion_title\">" )
+						.append( "Suggerimenti Ricerche" )
+						.appendTo( ul );
+					}
+
+					searchFromSuggest=$("#searchGSAForm").attr('action') + "?client=trony&proxystylesheet=tronyNoHeaderFooter2&site=trony&output=xml_no_dtd&filter=0&sort=date:D:L:d1&entsp=a__trony&oe=UTF-8&ie=UTF-8&ud=1&exclude_apps=1&site=trony&getfields=*&q="+item.label;
+					ret = $( "<li>" )
+					.append( "<a href=\"" + searchFromSuggest + "\" >"+ item.label + "</a>" )
+					.appendTo( ul );
+				}
+				else{
+					if(item.num == 0){
+						ret2 = $( "<li class=\"search_title\">" )
+						.append( "Collegamenti Rapidi" )
+						.appendTo( ul );
+					}
+
+					//.append( "<a href=\""+item.url+"\" ><img width=\"30px\" class=\"img_preview\" src=\"" + item.foto + "\" />" + item.label + ": "+item.txt+"</a>" )
+					//.append( "<a href=\""+item.url+"\" ><table style=\"width:100%\"><tbody><tr><td style=\"width:15%\"><img style=\"margin-right:5px;\" width=\"50px\" class=\"img_preview\" src=\"" + item.foto + "\" /></td><td  style=\"width:70%;vertical-align: middle;text-align:left;\">" + item.label + "</td><td style=\"vertical-align: middle;width:15%\">" +  (item.promo=='si' ? "<img width=\"50px\" src=\"http://www.trony.it/online/static/WFS/Trony-B2C-Site/-/-/it_IT/images/flags/pf_5.png\" />" : "") +  "</td></tr></tbody></table></a>" )
+					//.append( "<a href=\""+linkFromSuggest+"\" ><table style=\"width:100%\"><tbody><tr><td style=\"width:15%\"><img style=\"margin-right:5px;\" width=\"50px\" class=\"img_preview\" src=\"" + item.foto + "\" /></td><td  class=\"td2SearchSuggest\"><span class=\"listing_risultati_prodotto_1\">" + item.tipoProd + "</span><br/>" +  item.label + "</td><td style=\"vertical-align: middle;width:15%\">" +  (item.promo=='si' ? "<img width=\"50px\" src=\"http://www.trony.it/online/static/WFS/Trony-B2C-Site/-/-/it_IT/images/flags/pf_promozione.png\" />" : "") +  "</td></tr></tbody></table></a>" )
+					baseStoreUrl = location.host + '/online';
+					linkFromSuggest=item.url.replace("trony.it/online", baseStoreUrl);
+					ret = $( "<li class=\"itemSearchSugg\">" )
+					.append( "<a href=\""+linkFromSuggest+"\" ><table style=\"width:100%\"><tbody><tr><td style=\"width:15%\"><img style=\"margin-right:5px;\" width=\"60px\" class=\"img_preview\" src=\"" + item.foto + "\" /></td><td  class=\"td2SearchSuggest\"><span class=\"listing_risultati_prodotto_1\"><img src=\"" + item.prom_label + "\" />"  + (item.tipoProd  ?  item.tipoProd : "")+ "</span><br/>" +  item.label + (item.txt  ? ": " + item.txt : "") +"</td><td style=\"vertical-align: middle;width:15%\">" +  (item.prom_icon ? "<img width=\"50px\" src=\"" + item.prom_icon + "\" />" : "") +  "</td></tr></tbody></table></a>" )
+					.appendTo( ul );
+				}
+				return ret;
+		    };
+
+	});*/
+
+

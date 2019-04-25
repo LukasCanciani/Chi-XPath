@@ -13,6 +13,7 @@ import java.util.Set;
 import it.uniroma3.chixpath.fragment.ChiFragmentSpecification;
 import it.uniroma3.fragment.RuleInference;
 
+import static it.uniroma3.fragment.step.CaseHandler.*;
 
 public class RulesRepository {
 	public RulesRepository(Set<Page> pages) {
@@ -32,7 +33,8 @@ public class RulesRepository {
 	
 	public void rulesGeneration() {
 		Map<Page,Set<String>> p2x = new HashMap<Page,Set<String>>();
-		final RuleInference engine = new RuleInference(new ChiFragmentSpecification());
+		//final RuleInference engine = new RuleInference(new ChiFragmentSpecification());
+		final RuleInference engine = new RuleInference(new ChiFragmentSpecification(HTML_STANDARD_CASEHANDLER,6));
 		Set<String> diffXPaths = new HashSet<String>();
 		for(Page sample : this.pages) {
 			System.out.println("Generando xPaths sulla pagina"+sample.getUrl()+" con id: "+sample.getId());

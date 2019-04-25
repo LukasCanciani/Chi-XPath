@@ -1,0 +1,200 @@
+
+	function getDataCheckCF(fieldID){
+		var entryPoint;
+		$("table.address-book").each(function(){
+			//alert($(this).find("div[class ^= 'address-editbox-']").is(':visible'));
+			if($(this).find("div[class ^= 'address-editbox-']").is(':visible')){
+				entryPoint = $(this);
+			}
+		});
+
+		if ($(entryPoint).find(fieldID).val() != undefined)
+			{
+			//alert('il campo non è singolo');
+			return $(entryPoint).find(fieldID).val();
+			}
+		else
+			{
+			//alert('il campo è singolo');
+			return $(fieldID).val();
+			}
+		}
+
+
+	//function for displaying Privato Form during Consumer Registration
+	function SwitchToPrivato(firstTimeLoad, LastNameLabelContent){
+		$("#cf_proj").show();
+			//Rimosso il timeout perchè non si capisce a cosa serva!!!
+			//con il timeout se uno si muove rapidamente tra privato e partita iva emtro i 3 secondi genera sicuramente delle anomalie!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			//setTimeout(function(){
+			$("#pIVA_proj").hide();
+			//delete content inside pIVA_proj input
+			$("#pIVA_proj input[type='text']").val('');
+			//restore firstname and lastname
+			//},3000);
+		$("#firstname").show();
+		$("#lastname label").html(LastNameLabelContent);
+		$("#lastname input").attr('data-validate-error-message','Per favore inserisci il Cognome.')
+		//erase content in inputs if the page is loaded for the first time
+		if(!firstTimeLoad){
+			$("#firstname input").val('');
+			$("#lastname input").val('');
+		}
+		//remove EventListener on "#lastname input"
+		$("#lastname input").unbind('change');
+
+		//unmark Required field on codice fiscale
+		/* 07-05-2013 CodiceFiscale is always required
+		$("#cf_proj label").html('Codice Fiscale');
+		$("#cf_proj input").attr('data-validate','');
+		$("#cf_proj input").attr('data-validate-error-message','');
+		*/
+		//20-06-2013 - Unmark PartitaIVA as required
+		$("#pIVA_proj label").html('Partita IVA<span class="ws-required">*</span>');
+		$("#pIVA_proj input").removeAttr('data-validate');
+		$("#pIVA_proj input").removeAttr('data-validate-error-message');
+		//show carta fan
+		$("#carta-fan").show();
+		//alert('out privato');
+
+		$("#CFInputField").attr('data-validate', 'required codicefiscale codicefiscale_basic_match_data');
+
+		//show and reset values on select
+		$("#BirthdayField").show();
+		$("#AddressForm_Birthday_Day").val('');
+		$("#AddressForm_Birthday_Month").val('');
+		$("#AddressForm_Birthday_Year").val('');
+
+	};
+
+	//function for displaying PartitaIVA Form during Consumer Registration
+	function SwitchToPartitaIVA(firstTimeLoad){
+		$("#cf_proj").show();
+		$("#pIVA_proj").show();
+		//hide Nome and change label of Cognome
+		$("#firstname").hide();
+		$("#lastname label").html('Ragione Sociale<span class="ws-required">*</span>');
+		$("#lastname input").attr('data-validate-error-message','Devi inserire la Ragione Sociale.');
+		//erase content in inputs if the page is loaded for the first time
+		if(!firstTimeLoad){
+			$("#firstname input").val('');
+			$("#lastname input").val('');
+		}
+		//when user ends editing lastname copy value to firstname (firstname=lastname=ragionesociale)
+		$("#lastname input").change(function(){
+			var lastname_value = $("#lastname input").val();
+			$("#firstname input").val(lastname_value);
+		});
+		//mark Required field on codice fiscale
+		/* 07-05-2013 CodiceFiscale is always required
+		$("#cf_proj label").html('Codice Fiscale<span class="ws-required">*</span>');
+		$("#cf_proj input").attr('data-validate','required');
+		*/
+		//20-06-2013 - Mark PartitaIVA as required
+		$("#pIVA_proj label").html('Partita IVA<span class="ws-required">*</span>');
+		$("#pIVA_proj input").attr('data-validate','required partitaiva');
+		$("#pIVA_proj input").attr('data-validate-error-message','Devi inserire la Partita IVA.');
+
+		//hide carta fan and delete checked
+		$("#carta-fan").hide();
+		$("#carta-fan input[name='RegisterUserFullEmail_CartaFan']").prop('checked',false);
+
+		$("#CFInputField").attr('data-validate', 'required codicefiscale_11_16 codicefiscale_11_16_basic_match_data');
+
+		//hide and force birthday to 1970-01-01
+		$("#BirthdayField").hide();
+		$("#AddressForm_Birthday_Day").val('1');
+		$("#AddressForm_Birthday_Month").val('1');
+		$("#AddressForm_Birthday_Year").val('1970');
+	};
+
+	//Function to display either Privato or PartitaIVA Form during Consumer Registration
+	/*
+	 * this function is used in registration page and checkout registration page
+	 *
+	 */
+	$(document).ready(function() {
+		//hide Language selection
+
+			$("#AddressForm_LocaleID").parent().hide();
+			//store lastname label content to be restored when user changes from Privato to PartitaIVA
+			var lastname_label_content = $("#lastname label").html();
+			if ($("#radio_cf_piva").length > 0){
+				//this is executed when loading the page or returning from erroneous Form validation
+				var isPrivatoLoad = $("#radio_cf_piva input[value='Privato']:checked").val();
+				if(isPrivatoLoad==='Privato')
+					{
+					$(".radioToBtn .box_menu_home_container_left .radioToBtn_btn").addClass("checked");
+					SwitchToPrivato(true,lastname_label_content);
+					}
+				else{
+					$(".radioToBtn .box_menu_home_container_right .radioToBtn_btn").addClass("checked");
+					SwitchToPartitaIVA(true);
+					}
+				//subscribe to change event on Radio Button Privato/PartitaIVA
+			    $('#radio_cf_piva input[type=radio]').change(function() {
+			    	var isPrivato = $("input[value='Privato']:checked").val();
+			    	var isPrivato = $("input[value='Privato']:checked").val();
+			    	firstname_content = $("#lastname label").html();
+			    	//check if we are called from Registration Page
+			    	if($("#GuestCheckoutRegistration").length == 0)
+			    		{
+			    		if(isPrivato==='Privato')
+			    			{
+			    			$("#radio_cf_piva input[id='toggle-on']").attr('checked',true);
+				    		$("#radio_cf_piva input[id='toggle-off']").attr('checked',false);
+				    		$(".radioToBtn .box_menu_home_container_left .radioToBtn_btn").addClass("checked");
+				    		$(".radioToBtn .box_menu_home_container_right .radioToBtn_btn").removeClass("checked");
+//				    		$("#radio_cf_piva input[name='RegisterUserFullEmail_UserType']:nth(0)").attr('checked',true);
+//				    		$("#radio_cf_piva input[name='RegisterUserFullEmail_UserType']:nth(1)").attr('checked',false);
+				    		SwitchToPrivato(false,lastname_label_content);
+				    		}
+				    	else{
+				    		$("#radio_cf_piva input[id='toggle-on']").attr('checked',false);
+				    		$("#radio_cf_piva input[id='toggle-off']").attr('checked',true);
+				    		$(".radioToBtn .box_menu_home_container_left .radioToBtn_btn").removeClass("checked");
+				    		$(".radioToBtn .box_menu_home_container_right .radioToBtn_btn").addClass("checked");
+//				    		$("#radio_cf_piva input[name='RegisterUserFullEmail_UserType']:nth(0)").attr('checked',false);
+//				    		$("#radio_cf_piva input[name='RegisterUserFullEmail_UserType']:nth(1)").attr('checked',true);
+				    		SwitchToPartitaIVA(false);
+				    		}
+			    		}
+			    	else
+			    		{
+			    		//we are in GuestRegistrationPage
+			    		if(isPrivato==='Privato')
+			    			{
+			    			$("#radio_cf_piva input[id='toggle-on']").attr('checked',true);
+				    		$("#radio_cf_piva input[id='toggle-off']").attr('checked',false);
+				    		$(".radioToBtn .box_menu_home_container_left .radioToBtn_btn").addClass("checked");
+				    		$(".radioToBtn .box_menu_home_container_right .radioToBtn_btn").removeClass("checked");
+//				    		$("#radio_cf_piva input[name='RegisterUserFullEmail_UserType']:nth(0)").attr('checked',true);
+//				    		$("#radio_cf_piva input[name='RegisterUserFullEmail_UserType']:nth(1)").attr('checked',false);
+			    			SwitchToPrivato(true,lastname_label_content);
+			    			}
+				    	else
+				    		{
+				    		$("#radio_cf_piva input[id='toggle-on']").attr('checked',false);
+				    		$("#radio_cf_piva input[id='toggle-off']").attr('checked',true);
+				    		$(".radioToBtn .box_menu_home_container_left .radioToBtn_btn").removeClass("checked");
+				    		$(".radioToBtn .box_menu_home_container_right .radioToBtn_btn").addClass("checked");
+//				    		$("#radio_cf_piva input[name='RegisterUserFullEmail_UserType']:nth(0)").attr('checked',false);
+//				    		$("#radio_cf_piva input[name='RegisterUserFullEmail_UserType']:nth(1)").attr('checked',true);
+				    		SwitchToPartitaIVA(true);
+				    		}
+			    		}
+		    	});
+
+			}
+	});
+
+	//Registration Form
+	//AddressForm_State hidden field fix
+	//first time loading the fix does nothing
+	//in case the form is loaded the 2nd time it copies the AddressForm_State value in the hidden field
+	$(document).ready(function(){
+		if($("#AddressForm_State").length > 0){
+			var selectedState = $('#AddressForm_State').val();
+			$('input[name="AddressForm_State"][type="hidden"]').val(selectedState);
+			}
+	});
