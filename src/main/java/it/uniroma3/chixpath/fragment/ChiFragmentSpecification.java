@@ -60,17 +60,9 @@ public class ChiFragmentSpecification extends XPathFragmentSpecification {
     
     public ChiFragmentSpecification(CaseHandler ch) {
         super(new DownTextValue(), new RightNamedElement(), new NamedAttribute(CLASS_ATTRIBUTE));
-        this.setRange(3); // TODO Make it configurable 
+        this.setRange(3); // TODO Make it configurable
         this.caseHandler = ch;
     }
-    
-    public ChiFragmentSpecification(CaseHandler ch, int range) {
-        super(new DownTextValue(), new RightNamedElement(), new NamedAttribute(CLASS_ATTRIBUTE));
-        this.setRange(range); // TODO Make it configurable 
-        this.caseHandler = ch;
-    }
-    
-    
     
     @Override
     public boolean isSuitablePivot(Node node) {

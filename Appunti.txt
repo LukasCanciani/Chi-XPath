@@ -3,11 +3,3 @@ TF - IDF -> -> Ignora la partizione tutte insieme!! Va bene? Se considero Docume
 MDL ?? Poco chiaro
 
 Espressivita xpath -> ricerca se gia esiste qualcosa!! Guarda impostazioni del generatore, magari si riesce a sfoltire i tag generici e non signicativi (/HTML) e simili!
-
-Collegamenti ad altri link -> non trovato href!!!!!!!!!
-
-!!!!!SE UNA REGOLA GENERA GLI STESSI IDENTICI NODI SU TUTTE LE PAGINE IN TEORIA DOVREBBE ESSERE SUPERFLUO!!!!
-!!! PROVARE AD ELIMINARE LE XPATH IN CUI TUTTI ELENTI DELL'ARRAY DI NODIESTRATTI RISULTANO UGUALI!!!!
-
-
-
