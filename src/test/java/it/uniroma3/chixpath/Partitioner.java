@@ -121,7 +121,6 @@ public class Partitioner {
 		Map<Page,String> p2i = new HashMap<Page,String>();
 		for (Page p : pages) {
 			String name = p.getUrl().split("/")[6].split("[.]")[0] ;
-			System.out.println(name);
 			String image = "./src/test/resources/basic/"+siteName+"/images/"+name;
 			p2i.put(p, image);
 		}
@@ -151,7 +150,7 @@ public class Partitioner {
 				pw.println("<TR><TD BORDER=\"0\" COLSPAN=\"2\">"+pc.getId()+"</TD></TR>");
 				for(Page pag : pc.getPages()) {
 					pw.println("<TR><TD fixedsize=\"true\" width=\"100\" height=\"100\"><IMG SCALE=\"FALSE\" "
-							+ "SRC=\"C:/Users/Lukas/git/Chi-Xpath"+p2i.get(pag).split("[.]")[1]+".PNG\"/></TD></TR>");
+							+ "SRC=\"C:\\Users\\Lukas\\Documents\\GitHub\\Chi-Xpath"+p2i.get(pag).split("[.]")[1]+".PNG\"/></TD></TR>");
 				}
 				pw.println("</TABLE>");
 				pw.println("</TD>");

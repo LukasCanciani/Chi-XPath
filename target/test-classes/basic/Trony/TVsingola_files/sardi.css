@@ -1,0 +1,664 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* RIEPILOGO CARRELLO */
+
+.ws-checkout .ws-product-item-number, /*#ws-cart .ws-update-cart,*/ .ws-cost-summary .ws-subtotal, .ws-cost-summary .ws-tax  {
+	display:none;
+}
+
+.ws-cart-items .ws-product-info .ws-product-title a {
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+
+
+
+#ws-cart .ws-proceed-to-checkout {
+	padding:12px 24px;
+	/*margin: 3px! important;*/
+	font-size:18px;
+	background-position: center bottom;
+    background-repeat: no-repeat;
+}
+#ws-cart .ws-promotion-codes .ws-wrapper .ws-usePromotionCode, #ws-cart .ws-shopping-cart input.ws-product-quantity-input {
+	border: 1px solid #c5c5c5;
+	padding: 7px!important;
+}
+#ws-cart .ws-promotion-codes label {
+	margin-top: 15px;
+}
+#ws-cart .ws-promotion-codes .ws-field {
+	margin-top:5px!important;
+	margin-bottom: 15px;
+	display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+.ws-checkout .ws-action-buttons-paypal_express_sale .fastCheckoutImage {
+	margin-top:0;
+}
+.ws-add-voucher span{
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	background: url(../images/personalarea/bullete2.png) no-repeat 0 0 transparent;
+	margin-right: 10px;
+}
+
+#ws-cart .ws-shopping-cart .ws-cart-service {
+	//background: url(../images/checkout/sa_background.png) repeat-x 0 0 #EAEAEA;
+}
+.blocco-popover {
+	background: url(../images/checkout/popover-arrow.png) no-repeat 0 10px transparent;
+
+	padding-left: 5px;
+}
+.blocco-popover-content {
+	background: url(../images/checkout/servizi-overlay.jpg) repeat-x 0 0 #192649;
+	padding: 27px 30px;
+	//width: 185px;
+	width: 505px;
+	color: white;
+	-webkit-box-shadow: 0 0 10px #ccc;
+	-moz-box-shadow: 0 0 10px #ccc;
+	box-shadow: 0 0 10px #ccc;
+}
+.blocco-popover-arrow {
+
+}
+.blocco-popover-content h3 {
+	color: white;
+	font-weight: bold;
+	margin-bottom:20px;
+}
+.blocco-popover-content p {
+	font-family: arial;
+    font-size: 12px;
+    font-weight: lighter;
+}
+.blocco-popover-content p a{
+	color: white;
+}
+
+/* AUTENTICAZIONE */
+.login-screen a.catalog{
+	font-weight:bold;
+}
+.login-screen .ws-wrapper{
+    margin-top: 30px !important;
+}
+.checkout-registration-choice .login-screen{
+	min-height:318px;
+}
+.ws-header .check-text{
+	margin-top:10px !important;
+}
+.checkout-registration-choice .registration .login-label {
+    color: #7C7C7C;
+    margin-top: 0;
+}
+.login-screen a.catalog{
+	font-weight:normal;
+}
+.login-screen .ws-wrapper{
+    margin-top: 0 !important;
+}
+.checkout-registration-choice .login-screen{
+	min-height:318px;
+}
+.ws-header .check-text{
+    font-size:15px;
+	margin-top:10px !important;
+    margin-bottom: 25px;
+}
+.checkout-registration-choice .registration .login-label {
+    color: #7C7C7C;
+    margin-top: 20px;
+}
+.checkout-registration-choice .check-text {
+    margin-top: 15px;
+}
+.registration > div{
+	margin-bottom:25px;
+}
+.checkout-registration-choice .registration{
+	/*padding:20px 50px 0 50px;*/
+}
+.go-back-to-order .goback{
+	font-weight:normal;
+}
+.ws-form.ws-credentialsForm .login-label {
+    margin-top: 28px;
+}
+.registration .check-text:nth-child(4){
+	font-size:14px;
+}
+#login-user-form .guest-button{
+	/*margin-top:25px;*/
+}
+.checkout-registration-choice .login-screen .login-input {
+    margin-bottom: 12px;
+}
+.ws-form.ws-credentialsForm .login-label {
+    margin-top: 0;
+}
+
+/* ASSISTENZA CLIENTI */
+
+//MATTIA: QUESTO SOTTO DISTRUGGE TUTTO
+.gd-container .gd-grid-18 {
+	//width: 670px!important;
+	//margin-left: 40px;
+}
+.orari {
+	width:195px;
+}
+.orari img {
+	border: 1px solid #c5c5c5;
+}
+.orari p {
+	padding: 15px;
+	margin: 0;
+	background: #eee;
+	width: 198px;
+	border: 1px solid #c5c5c5;
+}
+.subtitle h3 {
+	margin: 20px 0 30px;
+	font-weight: bold;
+	color: #0d2547!important;
+	font-size: 14px;
+}
+.oggetto {
+	border: 1px solid #c5c5c5;
+	padding: 7px!important;
+	width:255px;
+}
+.msg-title {
+	padding-left: 100px;
+}
+.msg-head {
+	border-top: 1px solid #c5c5c5;
+}
+.data-msg {
+	color:#7b7b7b;
+	font-size:12px;
+	font-weight:normal;
+}
+.block4 .row {
+	margin-left:75px;
+}
+
+/* RIEPILOGO CARRELLO */
+
+.heading_right strong {
+	font-weight:bold!important;
+}
+.heading_right #arrowImage {
+	margin-top:19px;
+}
+.ws-shipping-address-book thead tr th, .ws-billing-address-book thead tr th{
+	border-bottom:none!important;
+}
+.ws-required {
+	color:#16294a;
+}
+.ws-available-addresses {
+}
+.jqTransformSelectWrapper {
+	width: 220px!important;
+	background:#fff!important;
+	border: 1px solid #c5c5c5;
+}
+.jqTransformSelectWrapper div span {
+	width: 200px!important;
+}
+.jqTransformInputInner {
+	background: #fff!important;
+	border: 1px solid #c5c5c5;
+}
+.jqTransformInputInner div input {
+	background:#fff!important;
+}
+.checkbox {
+	display:inline-block;
+	margin-top:30px;
+}
+.checkbox a {
+	float:none!important;
+}
+.checkbox span.jqTransformCheckboxWrapper {
+display: inline-block!important;
+float: none!important;
+margin-top:0!important;
+margin-bottom:-4px;
+}
+.checkbox label {
+margin-top: 4px;
+margin-right: 8px;
+display: inline-block!important;
+float: none!important;
+}
+.ws-field {
+	//mi scombina la grafica delle form ovunque
+	//padding-bottom:3px!important;
+}
+.obbligatori {/*smcc modified*/
+  	clear: both;
+    float: left;
+    font-size: 11px;
+    margin-left: 200px;
+    margin-top: 25px;
+}
+.procedi_box {
+	margin-bottom: 40px;
+	padding-top: 10px;
+}
+.ws-cart-totals.ws-section .ws-wrapper {
+	width:auto!important;
+}
+.ws-cost-summary .value {
+	text-align:right!important;
+}
+a.right_button {
+	width:200px!important;
+}
+/* I TUOI DATI */
+.ws-your-addresses .columnBox label{
+	font-weight:bold;
+	font-family: arial,sans-serif;
+}
+.kor-open-as-dialog-check-login.ws-delete-address, .ws-edit.ws-update-address{
+	font-size:11px !important;
+}
+.dati_form .fl-rt a.changeLink {
+	bottom: 14px;
+}
+.ws-account-container-contents .dati_form.pad:nth-child(4){
+	border-bottom:0 none;
+}
+.dati_form.pad.no-border-bottom{
+	border-bottom:0 none;
+}
+
+/* I TUOI INDIRIZZI */
+.indirizzi_fatturazione{
+	padding-top:55px;
+}
+.dati_form h2.myAddresses{
+	line-height:15px;
+}
+.indirizzi_fatturazione .ws-edit-buttons > div, .indirizzi_spedizione .ws-edit-buttons > div{
+	margin-top: 283px !important;
+}
+.indirizzi_fatturazione .ws-edit-buttons .ws-edit, .indirizzi_spedizione .ws-edit-buttons .ws-edit{
+	background:none;
+    font-size: 12px !important;
+    font-weight: bold;
+}
+.indirizzi_fatturazione .ws-your-addresses .columnBox label, .indirizzi_spedizione .ws-your-addresses .columnBox label{
+	font-weight:normal;
+}
+.dati_form h2.myAddresses {
+    clear: both;
+}
+div.mx_account_indirizzo span {
+    margin-top: -20px;
+}
+.dati_form h2.myAddresses {
+    margin: 0;
+}
+.mx_account_indirizzo{
+	clear:both;
+}
+.indirizzi_spedizione{
+	clear:both;
+}
+.title-personal-area.mg h1{
+	font-weight:bold;
+	font-size:23px;
+}
+.address-book .address{
+	padding-left:0;
+}
+.dati_form .fl-rt a.changeLink, .dati_form a.changeLink{
+	font-size:12px;
+	font-family: arial,sans-serif;
+}
+
+/* CARTA FAN E VOUCHER */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.cartaFan-content .cartaFan-registered .featurePost h1 {
+	padding-bottom: 15px;
+}
+.cartaFan-content .cartaFan-registered .middle {
+	/*margin-bottom: 15px;*/
+}
+.sconto-fan {
+	width:680px;
+}
+.sconto-fan-cont {
+	padding: 30px;
+	border: 1px solid #c5c5c5;
+	border-top: none!important;
+}
+.blocco-sinistra, .blocco-centro, .blocco-destra {
+	float: left;
+	margin-right: 40px;
+}
+.sconto-fan-cont span {
+	display:block;
+}
+.sconto-fan h3 {
+	margin-top:0;
+}
+.blocco-sinistra img {
+margin: 30px 0;
+}
+.sconto-big {
+	font-family: sans-serif;
+	color: #db0016;
+	font-size: 64px;
+	margin-bottom: 20px;
+}
+.mod-name {
+	font-weight:bold;
+}
+.mod-name, .mod-cat {
+	color:#1e3360;
+}
+.cod-art {
+	font-size:18px;
+	color:#c5c5c5;
+	margin-bottom:50px;
+}
+
+/* MODALITA' DI PAGAMENTO */
+
+#ws-payment .ws-payment-methods li label.ws-method-name input.ws-radio {
+    /*margin-right: 3px;
+    margin-top: 5px;*/
+    margin-right: 7px;
+    margin-left: 6px;
+}
+.mx_pay_mode .mx_pay_box {
+    /*height: 88px;*/
+    height: 115px;
+}
+.mx_content_large {
+    margin: 0 0 10px;
+}
+.ws-select-a-payment-method.ws-section.mx_content_large.fl-lt p{
+	clear:both;
+	padding-left:13px;
+	padding-top:5px;
+}
+.procedi_box {
+    margin-bottom: 35px;
+    padding-top: 0;
+}
+.list_row a{
+	font-weight:bold !important;
+}
+.not-compl-element a{
+	color:#747474;
+}
+.heading h2 small{
+	font-weight:bold;
+}
+.mx_pay_box.fl-lt label span:nth-child(2) {
+	margin-left:10px;
+}
+.jqTransformRadioWrapper {
+margin: 5px 0px 0px 0px!important;
+}
+.mx_pay_mode .mx_pay_box img {
+	padding-left:23px;
+}
+
+/* REGISTRAZIONE */
+
+#radio_cf_piva, #radio_cf_private {
+	/*display:inline-block;
+	margin:0px 115px 20px 0px!important*/
+}
+#radio_cf_piva .jqTransformRadioWrapper, #radio_cf_private .jqTransformRadioWrapper {
+	margin: 0px 5px 0px 0px!important;
+}
+#ws-create-account .ws-section label {
+	font-size:14px;
+}
+#ws-create-account .ws-section .jqTransformInputWrapper, .registration-form-input, #ws-create-account .jqTransformSelectWrapper  {
+	/* smcc: modificato margin-bottom, era eccessivo
+	margin-bottom:20px;
+	*/
+	margin-bottom:6px;
+}
+#ws-create-account .jqTransformSelectWrapper {
+	width:326px!important;
+}
+/*smcc: distrugge il fondo della pagina di registrazione
+#ws-create-account .ws-indicates-required {
+	font-size: 10px;
+	padding-bottom: 14px;
+	color: #999;
+	width: 300px;
+	float: right;
+	margin-right: -45px;
+	margin-top: -20px;
+}*/
+#ws-create-account .ws-required {
+	/* smcc: mi distrugge la visualizzazione dei campi obbligatori
+	padding:0!important;
+	*/
+}
+#ws-create-account .ws-section {
+	/*width:680px!important;*/
+}
+#ws-create-account .ws-enter-address.ws-section {
+	/* smcc: sono troppi, disabilito*/
+	//padding-bottom:40px;
+}
+#ws-create-account .carta-fan-container {
+	/* quando clicco su PartitaIVA il div carta fan
+	display:block!important;
+	*/
+}
+#ws-create-account .jqTransformCheckboxWrapper {
+	margin-top:0!important;
+	margin-right:10px!important;
+}
+.carta-fan-pdv {
+	width:680px;
+}
+.scegli {
+	margin: 20px 0;
+	font-size: 12px;
+	color: darkblue;
+	font-weight: bold;
+}
+
+.condizioni-servizio #ws-create-account .ws-indicates-required {
+	font-size: 10px;
+	padding-bottom: 0px;
+	color: #999;
+	width: auto!important;
+	float: left;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+
+.condizioni-servizio hr {
+	margin: 0;
+}
+
+/* INVIA RECENSIONE */
+
+.invia_form {
+	/*width:auto!important;
+	height:480px;*/
+}
+.invia_form p {
+	padding-top: 16px;
+}
+table.jqTransformTextarea {
+	width:200px;
+	border:1px solid #c5c5c5;
+}
+table.jqTransformTextarea .jqTransformSafariTextarea div {
+	width:267px!important;
+}
+table.jqTransformTextarea td#jqTransformTextarea-ml, table.jqTransformTextarea td#jqTransformTextarea-tl, table.jqTransformTextarea td#jqTransformTextarea-tm, table.jqTransformTextarea td#jqTransformTextarea-tr, table.jqTransformTextarea td#jqTransformTextarea-bl, table.jqTransformTextarea td#jqTransformTextarea-bm, table.jqTransformTextarea td#jqTransformTextarea-br {
+	background: none!important;
+}
+.invia_form .row.pad {
+	height: auto!important;
+}
+
+.invia_form .jqTransformSelectWrapper {
+	width:270px!important;
+}
+.invia_form .row button {
+	/*float:left!important;*/
+}
+.invia_form .row small {
+	/*margin-left:168px!important;
+	margin-right:78px!important;*/
+	color:#0b284f;
+}
+
+/* I TUOI ORDINI */
+
+.order_col bold{
+	text-transform:capitalize;
+}
+
+.order_col h3 span {
+    line-height: 0.9em;
+    padding-bottom: 0;
+}
+.my-order-class .ws-section{
+	margin-left:0 !important;
+}
+.my-order-class .order_col h2{
+	font-weight:100;
+}
+.order_box{
+	padding-top:20px;
+}
+.my-order-class .orderTable .order_box{
+	border-bottom:0 none;
+	border-top:1px solid #D2D2D2;
+	margin-bottom:0;
+}
+.logout{
+	margin-left:20px;
+}
+.acList .active-element{
+	background:url("../../css/../images/personalarea/hv_sp.png") no-repeat scroll right top #DDDDDD;
+}
+.acList .active-element span{
+	background:url("../../css/../images/personalarea/hv_sp.png") no-repeat scroll right top #DDDDDD;
+}
+
+/* NEWS */
+
+.boxSX .tag span, .boxSX .tag a {
+	font-weight:bold;
+}
+
+
+
+/* GESTIONE RESI */
+
+.metaContent {
+	/*width:auto;*/
+	margin-left:0;
+}
+
+.prod-type{
+	color:#808080;
+	font-size:13px;
+	font-weight:bold;
+	text-transform:uppercase;
+	margin-bottom:5px;
+}
+.data-container.fl-lt{
+	width:510px;
+}
+.image-container.fl-lt{
+	width:160px;
+}
+.prod-name{
+	font-weight:bold;
+	margin-bottom:5px;
+}
+.prod-qt strong{
+	font-weight:bold;
+}
+.data-container .fl-lt{
+	padding-top:10px;
+}
+.pricecont{
+    color: #102447;
+    font-family: Anton;
+    font-size: 27px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    text-align: right;
+	padding-top:15px;
+}
+.gestione-resi .ws-cost-summary .ws-first-item {
+border-top: none;
+}
+.ws-cost-summary .ws-total .type {
+	text-align:left;
+	align-items: center;
+    display: flex;
+    height: 50px;
+}
+.gestione-resi .tablet_box.pad {
+	border-bottom:none;
+}
+ a.printLink {
+	margin-left:0;
+}
+.sconto-red {
+	font-size:24px!important;
+	color: #db0016!important;
+
+}
+
+/* ORDINE SPEDITO */
+.spedito .tablet_box.pad {
+	padding-bottom:70px;
+	border-bottom:1px solid #c5c5c5!important;
+}
+.spedito .tablet_box {
+	padding-bottom:0;
+	border-bottom:none!important;
+}
+
+@media (max-width: 767px){
+
+	.blocco-popover-content {
+	width: 300px;
+	}
+}
+
+
+@media (max-width: 460px){
+
+	.blocco-popover-content {
+	width: 225px;
+	}
+}

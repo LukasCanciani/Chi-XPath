@@ -1,0 +1,71 @@
+
+#product-gallery-full-viewport-product-detail-page{
+    background: #FFF;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+}
+
+#product-gallery-full-viewport-product-detail-page  .gallery-button-close{
+    position: absolute;
+    right: 36px;
+    top: 20px;
+    color: #213264;
+    z-index: 999999;
+    font-size: 51px;
+    cursor: pointer;
+}
+
+#product-gallery-full-viewport-product-detail-page .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+#product-gallery-full-viewport-product-detail-page .swiper-slide {
+    overflow: hidden;
+}
+
+#product-gallery-full-viewport-product-detail-page .swiper-button-prev,
+#product-gallery-full-viewport-product-detail-page .swiper-container-rtl .swiper-button-next{
+    color: #2b6fb9;
+}
+
+.swiper-thumb-button-prev{
+	background-image: url("../images/cssimages/prev_slider.png");
+    background-size: auto auto;
+    height: 27px;
+    width: 30px;
+    right: auto;
+    left: 2px;
+    position: absolute;
+    bottom: 36px;
+	}
+
+.swiper-thumb-button-next{
+	background-image: url("../images/cssimages/next_slider.png");
+    background-size: auto auto;
+    height: 27px;
+    width: 30px;
+    left: auto;
+    right: -10px;
+    bottom: 36px;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
