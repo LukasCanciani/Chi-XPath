@@ -13,6 +13,12 @@ public class PageClass implements Comparable<PageClass> {
 	private Set<Page> pages= new HashSet<>();
 
 	private String id;
+	
+	private VectorRepository vr;
+
+	public VectorRepository getVr() {
+		return vr;
+	}
 
 	private void setId(String id) {
 		this.id = id;
@@ -46,7 +52,21 @@ public class PageClass implements Comparable<PageClass> {
 		return pages;
 	}
 
-
+	
+	public float tfIdf() {
+		float totaltf = 0;
+		for(Vector v : this.getVr().getVectors()) {
+			float tf = 0;
+			for(Page p : this.getPages()) {
+				tf = tf + ((float) v.getExtractedNodes()[Integer.parseInt(p.getId())].getLength() )/ (float)this.getVr().getTotalNodes()[Integer.parseInt(p.getId())];
+			}
+			tf = tf/this.getPages().size();
+			totaltf =totaltf+ tf;
+		}
+		totaltf= totaltf/this.getVr().getVectors().size();
+		float totalIdf = (float) (Math.log(this.getVr().getPagNum()/this.getPages().size())/Math.log(10));
+		return totaltf * totalIdf;
+	}
 
 	@Override
 	public int compareTo(PageClass that) {
@@ -66,7 +86,7 @@ public class PageClass implements Comparable<PageClass> {
 
 
 	public String toString() {
-		String out = "Classe di pagine "+this.getId()+" ha "+this.getxPaths().size()+" xpaths che matchano con le pagine";
+		String out = "Classe di pagine "+this.getId()+" ha "+this.getUniqueXPaths().size()+" xpaths univoci che matchano con le pagine";
 		for(Page page : this.getPages()) {
 			out.concat("  ID:"+page.getId()+" ");
 		}	
@@ -139,6 +159,7 @@ public class PageClass implements Comparable<PageClass> {
 			container.addUnique(rule);
 			//index++;
 		}
+		this.vr = container;
 		return container.getXPaths();
 	}
 	public static void selectCharacteristicXPath(Set<PageClass> pageClasses) {

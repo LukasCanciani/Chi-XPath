@@ -66,7 +66,7 @@ public class ChiFragmentSpecification extends XPathFragmentSpecification {
     
     public ChiFragmentSpecification(CaseHandler ch, int range) {
         super(new DownTextValue(), new RightNamedElement(), new NamedAttribute(CLASS_ATTRIBUTE));
-        this.setRange(range); // TODO Make it configurable 
+        this.setRange(range); 
         this.caseHandler = ch;
     }
     

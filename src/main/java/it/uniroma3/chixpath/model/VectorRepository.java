@@ -2,9 +2,6 @@ package it.uniroma3.chixpath.model;
 
 import java.util.HashSet;
 
-import org.w3c.dom.Attr;
-import org.w3c.dom.Element;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -18,11 +15,18 @@ public class VectorRepository {
 	private PageClass pageClass;
 	private String id;
 	private int pagNum;
+	
+	private int totalNodes[];
+
+	public int[] getTotalNodes() {
+		return totalNodes;
+	}
 
 	public VectorRepository(PageClass pageClass, int pag , String id) {
 		this.pageClass = pageClass;
 		this.pagNum = pag;
 		this.id = id;
+		this.totalNodes = new int[pagNum];
 	}
 
 	private boolean containsXPaths(XPath rule) {
@@ -57,7 +61,7 @@ public class VectorRepository {
 	void addUnique(XPath rule) throws XPathExpressionException {
 		if (!this.containsXPaths(rule)) {
 			Vector vector = new Vector(rule,this.getpageClass(),this.getPagNum());
-			//**Ricerca di xpath specifici**
+			/*//**Ricerca di xpath specifici**
 			if (rule.getRule().toLowerCase().contains("@class")) {
 				System.out.println("RULE TROVATA -> "+rule.getRule());
 				for (NodeList nl : vector.getExtractedNodes()) {
@@ -65,7 +69,7 @@ public class VectorRepository {
 						for(int i = 0 ; i<nl.getLength(); i++) {
 							Node n = nl.item(i);
 							System.out.println(n.getTextContent());
-							
+
 
 						}
 
@@ -74,14 +78,47 @@ public class VectorRepository {
 
 			}
 			//System.out.println("Regola - "+rule);
-			//******************************
+			//*******************************/
 			if(!this.containsVector(vector)) {
-				Set<XPath> newxPaths = this.getXPaths();
-				Set<Vector> newVectors = this.getVectors();
-				newxPaths.add(rule);
-				newVectors.add(vector);
-				this.vectors = (newVectors);
-				this.xpaths = (newxPaths);
+				boolean equals = true;
+				
+				String[] sameNodes = new String[vector.getExtractedNodes().length];
+				for(int i=0;i<vector.getExtractedNodes().length-1;i++) {
+					NodeList node = vector.getExtractedNodes()[i];
+					NodeList node1 = vector.getExtractedNodes()[i+1];
+					if(node == null && node1==null) {
+						//System.out.println("entrambi null");
+						sameNodes[i]="1";
+					}
+
+					else if(node!=null && node1!=null) {
+						if(vector.sameNodes(node,node1)) {
+							//System.out.println("uguali");
+							sameNodes[i]="1";
+						}
+					}
+				}
+				for(int k=0;k<sameNodes.length && equals;k++) {
+					if(sameNodes[k]==null) {
+						//System.out.println("non ha trovato riscontro");
+						equals=false;
+					}
+				}
+				
+				if(!equals) {
+					Set<XPath> newxPaths = this.getXPaths();
+					Set<Vector> newVectors = this.getVectors();
+					newxPaths.add(rule);
+					newVectors.add(vector);
+					this.vectors = (newVectors);
+					for(Page p : this.getpageClass().getPages()) {
+						this.totalNodes[Integer.parseInt(p.getId())] += vector.getExtractedNodes()[Integer.parseInt(p.getId())].getLength();
+					}
+					this.xpaths = (newxPaths);
+				}
+				else {
+					System.out.println("TROVATA XPATH NON SIGNIFICATIVA IN PAGECLASS "+this.getpageClass().getId());
+				}
 			}
 		}
 	}

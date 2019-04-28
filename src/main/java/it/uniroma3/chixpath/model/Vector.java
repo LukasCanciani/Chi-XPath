@@ -34,7 +34,7 @@ public class Vector implements Comparable<Vector>  {
 	}
 	//controllo stesso vettore. Creo un array di stringhe in cui inserisco "1" -e i nodi estratti su una pagina dalla regola "A"sono uguali a quelli estratti dalla regola "B"; null altrimenti.
 	public boolean sameVector(Vector vett) {
-		boolean stesse= false;
+		boolean same= false;
 
 		String[] sameVector = new String[this.getExtractedNodes().length];
 		for(int i=0;i<this.getExtractedNodes().length;i++) {
@@ -55,15 +55,15 @@ public class Vector implements Comparable<Vector>  {
 		for(int k=0;k<sameVector.length;k++) {
 			if(sameVector[k]==null) {
 				//System.out.println("non ha trovato riscontro");
-				return stesse=false;
+				return same=false;
 			}
 
 			else if(sameVector[k]=="1" && k==sameVector.length-1) {
 				//System.out.println("Gli xPath " +this.getXPath().getRule()+" e "+vett.getXPath().getRule()+" danno gli stessi valori");
-				return stesse=true;
+				return same=true;
 			}
 		}
-		return stesse;
+		return same;
 	}
 
 	//controllo elemento per elemento che i nodi siano gli stessi sempre tramite un array di stringhe in cui inserisco 1 se tutti i nodi sono uguali

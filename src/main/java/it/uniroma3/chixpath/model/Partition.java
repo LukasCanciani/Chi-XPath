@@ -11,6 +11,7 @@ public class Partition implements Comparable<Partition> {
 	private Set<PageClass>  pageClasses;
 	private String id;
 	private float avgXPaths;
+	private float avgTfIdf;
 
 	
 
@@ -18,6 +19,15 @@ public class Partition implements Comparable<Partition> {
 		this.pageClasses = pc;
 		this.id = (Integer.toString(progId++));
 		this.avgXPaths = averageXPaths();
+		this.avgTfIdf = averageTfIdf();
+	}
+
+	private float averageTfIdf() {
+		float sum = 0;
+		for (PageClass pc : this.getPageClasses()) {
+			sum = sum+pc.tfIdf();
+		}
+		return ( sum/this.pageClasses.size());
 	}
 
 	public String getId() {
@@ -32,7 +42,7 @@ public class Partition implements Comparable<Partition> {
 	private float averageXPaths() {
 		float sum = 0;
 		for (PageClass page : this.pageClasses) {
-			sum=sum+page.getxPaths().size();
+			sum=sum+page.getUniqueXPaths().size();
 		}
 		return (sum/this.pageClasses.size());
 	}
@@ -177,7 +187,7 @@ public class Partition implements Comparable<Partition> {
 
 	@Override
 	public String toString() {
-		String str = "La partizione "+this.getId()+" matcha con "+this.getAvgXPaths() +" xpaths in media ed e' divisa in:\n";
+		String str = "La partizione "+this.getId()+" matcha con "+this.getAvgXPaths() +" xpaths in media e ha un TfIdf medio di "+ this.averageTfIdf() +  " ed e' divisa in:\n";
 		for(PageClass Pset : this.getPageClasses()) {
 			str=str.concat("Classe di pagine "+Pset.getId()+":\n");
 			for(Page page : Pset.getPages()) {

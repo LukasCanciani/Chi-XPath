@@ -4,10 +4,14 @@ MDL ?? Poco chiaro
 
 Espressivita xpath -> ricerca se gia esiste qualcosa!! Guarda impostazioni del generatore, magari si riesce a sfoltire i tag generici e non signicativi (/HTML) e simili!
 
-Collegamenti ad altri link -> non trovato href!!!!!!!!!
-
+Collegamenti ad altri link -> In vector test, generato vettore che trova le varie liste
 !!!!!SE UNA REGOLA GENERA GLI STESSI IDENTICI NODI SU TUTTE LE PAGINE IN TEORIA DOVREBBE ESSERE SUPERFLUO!!!!
-!!! PROVARE AD ELIMINARE LE XPATH IN CUI TUTTI ELENTI DELL'ARRAY DI NODIESTRATTI RISULTANO UGUALI!!!!
+!!! PROVARE AD ELIMINARE LE XPATH IN CUI TUTTI ELENTI DELL'ARRAY DI NODIESTRATTI RISULTANO UGUALI!!!! 
+NONFUNZIONA!!!
+
+
+espressivita degli xpath -> più lungo più specifico! meglio. Più "/" singole più specifico il cammino. più "//" anche di più di uno ma meno specifico.
+
 
 
 
