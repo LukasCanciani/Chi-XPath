@@ -1,4 +1,4 @@
-TF - IDF -> -> Ignora la partizione tutte insieme!! Va bene? Se considero Documento(wikipedia) = Classe di Pagine
+﻿TF - IDF -> -> Ignora la partizione tutte insieme!! Va bene? Se considero Documento(wikipedia) = Classe di Pagine
 
 MDL ?? Poco chiaro
 
@@ -12,6 +12,13 @@ NONFUNZIONA!!!
 
 espressivita degli xpath -> più lungo più specifico! meglio. Più "/" singole più specifico il cammino. più "//" anche di più di uno ma meno specifico.
 
+XFP--------------
+Prima pagina -> "HOME" applico NFP -> quindi Navigable fixing point. Presi i risultati
+cerco se sono punti fissi ( elimino singleton, poco rilevanti)
+
+-trovati i punti fissi passo all'analisi DFP sulle pagine "linkate"
+
+file:///C:/Users/Lukas/Desktop/Tirocinio/FileXFP/hlog-xfp/log/Running_XFP_on_website__list1ap(6)/Applying_NFP(0)/Applying_NFP(0).log.html (Sono alla fase "Applying DFP on this link collection);
 
 
 
