@@ -18,7 +18,16 @@ cerco se sono punti fissi ( elimino singleton, poco rilevanti)
 
 -trovati i punti fissi passo all'analisi DFP sulle pagine "linkate"
 
-file:///C:/Users/Lukas/Desktop/Tirocinio/FileXFP/hlog-xfp/log/Running_XFP_on_website__list1ap(6)/Applying_NFP(0)/Applying_NFP(0).log.html (Sono alla fase "Applying DFP on this link collection);
+
+-Cerco regole pf su ognuna delle pagine, poi li applico a tutti
+
+-- Classe non valida, perche?
+
+Non potrei applicare solo DPF su ogni pag di classi e fare media dei punti fissi?
+
+Es menuNap -> persone e stampanti stessa classe???
+
+in base a cosa valid / invalid?
 
 
 
