@@ -30,4 +30,5 @@ Es menuNap -> persone e stampanti stessa classe???
 in base a cosa valid / invalid?
 
 
-
+---------------------------------------
+Applicare dfp alle pagine di classi e poi fare media per ogni partizione ?? possibile??
