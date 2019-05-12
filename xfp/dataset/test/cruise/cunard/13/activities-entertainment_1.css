@@ -1,0 +1,1287 @@
+?
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js ie6 ltr"><![endif]-->
+<!--[if IE 7 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js ie7 ltr"><![endif]-->
+<!--[if IE 8 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js ie8 ltr"><![endif]-->
+<!--[if IE 9 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js ie9 ltr"><![endif]-->
+<!--[if IEMobile 7 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js iem7 ltr"><![endif]-->
+<!--[if (gt IE 9)|!(IE)|(gt IEMobile 7)|!(IEMobile) ]><!--><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js ltr"><!--<![endif]-->
+
+<head>
+    
+<script type="text/javascript" src="//nexus.ensighten.com/carnivalplc/cunardbrand/Bootstrap.js"></script>
+    
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="format-detection" content="telephone=no" />
+
+
+
+<meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"0205fafc28","applicationID":"3704373","transactionName":"YVUANkRYVxIEAUdRV1gfIzFmFk0ECBJfWUxTQ00VU1sWEQQFVksXUVUMB0RQWgIKDEddVkIeAxFGQQ==","queueTime":0,"applicationTime":77,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<!--[if IE]><![endif]-->
+<meta name="distribution" content="global" />
+<meta name="rating" content="general" />
+<meta name="viewport" content="width=device-width" />
+<meta name="release-version" content="2.24" />
+<!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+<meta http-equiv="cleartype" content="on" />
+    <link rel="alternate" hreflang="en-GB" href="http://www.cunard.co.uk/cruise-ships/queen-victoria/activities-entertainment/" />
+    <link rel="alternate" hreflang="en-US" href="http://www.cunard.com/cruise-ships/queen-victoria/activities-entertainment/" />
+    <link rel="alternate" hreflang="en-AU" href="http://www.cunardline.com.au/cruise-ships/queen-victoria/activities-entertainment/" />
+
+    <meta name="title" content="Queen Victoria Daytime &amp; Night Time Activities | Cunard Line" />
+    <meta name="created" content="16/11/2015 11:56:00" />
+    <meta name="modified" content="18/10/2016 15:53:48" />
+    <meta name="description" content="Learn all about the activities you can look forward to on our Queen Victoria cruise ship including lectures, sports, spa, musicals and theatre performances. Cunard Line." />
+    <meta name="creator" content="Cunard UK" />
+    <meta name="publisher" content="Cunard UK" />
+    <meta name="robots" content="noindex,follow" />
+    <meta name="language" content="en-GB" />
+
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+    <meta name="DC.title" content="Queen Victoria Daytime &amp; Night Time Activities | Cunard Line" />
+    <meta name="DC.created" content="16/11/2015 11:56:00" />
+    <meta name="DC.modified" content="18/10/2016 15:53:48" />
+    <meta name="DC.description" content="Learn all about the activities you can look forward to on our Queen Victoria cruise ship including lectures, sports, spa, musicals and theatre performances. Cunard Line." />
+    <meta name="DC.creator" content="Cunard UK" />
+    <meta name="DC.publisher" content="Cunard UK" />
+    <meta name="DC.language" content="en-GB" />
+
+
+    <meta property="og:title" content="Activities" />
+    <meta property="og:site_name" content="Cunard" />
+    <meta property="og:type" content="article" />
+    <meta property="fb:app_id" content="1410557182550135" />
+
+<link rel="shortcut icon" href="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/apple-touch-icon-114x114-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/apple-touch-icon-72x72-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" href="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/apple-touch-icon-57x57-precomposed.png" />
+
+
+
+<link mdp-ref="csscore" href="/cdpx/core/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/navigation/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/inspiration/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/story/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/Promo/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/search/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/ship-where/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/carousel/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/features/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/ctas/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/grills/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/html/styles/main.css" rel="stylesheet" type="text/css" media="all" /> 
+<link mdp-ref="cssmain" href="/cdpx/style-guide/styles/main.css" rel="stylesheet" type="text/css" media="all" /> 
+<link mdp-ref="cssmain" href="/cdpx/Reviews/styles/main.css" rel="stylesheet" type="text/css" media="all" /> 
+
+<script src="http://cdn.js.cunard.com/assets/lib/modernizr-2.6.1-custom.min.js"></script>
+
+
+
+    
+    
+
+<title>
+	Queen Victoria Daytime & Night Time Activities | Cunard Line
+</title></head>
+<body class="" id="">
+    
+    <div id="outer">
+        
+
+<div cdp-scrap-cookies="" class="cookiePolicy">
+	<p class="heading">Cookie Policy</p>
+	<p><span>&nbsp;</span><span>This website uses cookies to give you the very best user experience. By using our website, you agree that we can place cookies on your device. For more information see the '</span><a href="/cookie-policy/">Cookie Policy</a><span>' link at the bottom of this page.</span></p>
+	<a href="#" class="cookieOverlayCloseBtn" title="Close"></a>
+</div>
+        
+    
+    
+    <h2 class="ng-hide">Activities</h2>
+    
+<div id="overlay"></div>
+<div cdp-scrap-header="" class="newHeader">
+    <div class="globalNav clearfix">
+        <p class="callBack"><a class="boldLink" href="/arrange-a-callback/">Request a callback</a><span class="number"> or call 0344 338 8650</span><span class="disclaimer">local call charges apply.</span></p>
+        <ul class="primaryNav"><li></li><li id="ctl00_ctl00_ctl00_cphMain_ctl01_rptLinks_ctl01_liLink"><a href="/already-booked/voyage-personaliser/">Manage booking</a><span class="goldStrip gradient bottom"></span> | </li><li id="ctl00_ctl00_ctl00_cphMain_ctl01_rptLinks_ctl02_liLink"><a href="/already-booked/cunard-world-club/">World Club</a><span class="goldStrip gradient bottom"></span> | </li><li id="ctl00_ctl00_ctl00_cphMain_ctl01_rptLinks_ctl03_liLink"><a href="/already-booked/ask-cunard/">Help and advice</a><span class="goldStrip gradient bottom"></span></li></ul>
+    </div>
+    <div class="logoWrapper">
+    
+    
+        <a class="logo" href="/" title="Cunard UK"><img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/header/new_logo.png" alt="Cunard UK" /></a>
+    
+	</div>
+    
+    <div class="megaNavWrapper">
+        
+
+<ul class="megaNav clearfix gradient">
+    <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_liHome" class="megaNavItem">
+        <div class="navItem">
+            <a href="/" class="home">
+                <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/header/home_icon.png" alt="home" />
+                <span>Home</span>
+            </a>
+        </div>
+    </li>
+    
+            <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl00_ctl00_li" class="megaNavItem">
+    <div class="navItem">
+        <span class="goldStrip gradient top"></span>
+        <a href="/cruise-search/book-a-cruise/">Find and book a cruise</a>
+        <span class="arrow"></span>
+    </div>
+
+    <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl00_ctl00_divSearch" class="subNavBlock fixedSubNav clearfix searchUK">
+        <form action="/cruise-search/book-a-cruise/results/" method="get">
+            <div class="selectPlace">
+                <label>Search for cruises</label>
+                <select class="customSelect" name="tids"><option value="">Where would you like to go?</option><option value="AFRI">Africa</option><option value="ATIS">Atlantic Isles &amp; Canaries</option><option value="AUST">Australia &amp; Pacific Islands</option><option value="BRIT">British Isles &amp; North West Europe</option><option value="CARI">Caribbean</option><option value="CEAM">Central America &amp; Panama Canal</option><option value="FARE">Far East</option><option value="HAWA">Hawaii</option><option value="MEDI">Mediterranean</option><option value="MIDE">Middle East</option><option value="NYSO">New York to Southampton</option><option value="SONY">Southampton to New York</option><option value="BALT">The Baltic, Scandinavia &amp; Iceland</option><option value="TRAN">Transatlantic Crossing</option><option value="NOAM">USA &amp; Canada</option><option value="WORL">World Cruise</option></select>
+            </div>
+            <div class="searchCruise">
+                <span class="searchBy">Or search by
+                        <a href="/cruise-search/book-a-cruise/#byDateTab">date</a>
+                    or
+                        <a href="/cruise-search/book-a-cruise/?method=number">cruise number</a>.</span>
+                <div class="primaryCta">
+                    <input type="submit" class="button" value="Search" />
+                </div>
+            </div>
+        </form>
+        
+    </div>
+
+    
+
+
+</li>
+
+        
+            <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl01_ctl00_li" class="megaNavItem">
+    <div class="navItem">
+        <span class="goldStrip gradient top"></span>
+        <a href="/destinations/regions/">Destinations</a>
+        <span class="arrow"></span>
+    </div>
+
+    
+
+    
+        <div class="subNavBlock">
+            <div class="subNav clearfix">
+                <div class="subnavItems">
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl01_ctl00_ctlSubNav_rptCols_ctl01_divCol" class="col col25 clearfix">
+            <h3 class="title">Cruise type</h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-types/cruises-from-southampton/">Cruises from Southampton</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/transatlantic-cruises/">Transatlantic Crossings</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/mediterranean-fly-cruises/">Mediterranean Fly-Cruises</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/mini-cruises/">Mini cruises</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/event-cruises/">Special event cruises</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/christmas-cruises/">Christmas cruises</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/regions-of-the-world/">Regions of the World, by Cunard</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/grand-voyages/">Grand Voyages, by Cunard</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/world-cruises/">World cruises</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl01_ctl00_ctlSubNav_rptCols_ctl02_divCol" class="col col50 clearfix">
+            <h3 class="title"><a href="/destinations/regions/">Regions we visit</a></h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/destinations/africa-cruises/">Africa</a></li>
+                
+                    <li>
+                        <a href="/destinations/atlantic-islands-cruises/">Atlantic Islands</a></li>
+                
+                    <li>
+                        <a href="/destinations/south-pacific-cruises/">Australia & South Pacific</a></li>
+                
+                    <li>
+                        <a href="/destinations/british-isles-cruises/">British Isles</a></li>
+                
+                    <li>
+                        <a href="/destinations/canada-cruises/">Canada</a></li>
+                
+                    <li>
+                        <a href="/destinations/canary-islands-cruises/">Canary Islands</a></li>
+                
+                    <li>
+                        <a href="/destinations/caribbean-cruises/">Caribbean</a></li>
+                
+                    <li>
+                        <a href="/destinations/central-america-cruises/">Central America</a></li>
+                
+                    <li>
+                        <a href="/destinations/far-east-and-asia-cruises/">Far East</a></li>
+                
+                    <li>
+                        <a href="/destinations/indian-ocean-cruises/">Indian Ocean</a></li>
+                </ul>
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/destinations/mediterranean-cruises/">Mediterranean</a></li>
+                
+                    <li>
+                        <a href="/destinations/middle-east-cruises/">Middle East</a></li>
+                
+                    <li>
+                        <a href="/destinations/northern-europe-cruises/">Northern Europe</a></li>
+                
+                    <li>
+                        <a href="/destinations/scandinavia-cruises/">The Baltic, Scandinavia & Iceland</a></li>
+                
+                    <li>
+                        <a href="/destinations/south-america-cruises/">South America</a></li>
+                
+                    <li>
+                        <a href="/destinations/usa-cruises/">USA</a></li>
+                
+                    <li>
+                        <a href="/destinations/top-10-destinations-2017/">Top 10 destinations in 2017</a></li>
+                
+                    <li>
+                        <a href="/destinations/top-10-exotic-destinations-2018/">Top 10 exotic destinations in 2018</a></li>
+                
+                    <li>
+                        <a href="/destinations/top-10-destinations-2018/">Top 10 destinations 2018</a></li>
+                
+                    <li>
+                        <a href="/destinations/top-10-destinations-2019/">Top 10 exotic destinations in 2019</a></li>
+                </ul>
+        </div>
+        
+        </div>
+            <div class="promoCol promoBlock">
+                <a href="/cruise-types/winter-highlights/">
+                <div class="promoImg"><img id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl01_ctl00_ctlSubNav_rptCols_ctl02_imgPromo" src="http://cdn.images.cunard.com/webimage/MegaNavThumb/Global/Images/Home_Page/tiles/1/Planet_earth.jpg" alt="" style="border-width:0px;" /></div>
+                <div class="promoMain">
+                    <h3>Oceans of Discovery, by Cunard.</h3>
+                    <p>Introducing our 2019 winter programme. On sale now.</p>
+                    <span class="promoLink">Discover more <span class="icon"></span></span>
+                </div>
+                </a>
+        
+    
+        </div>
+        </div>
+            <div class="closeSubNav">
+                <a href="#">Close</a>
+            </div>
+        </div>
+    
+
+
+</li>
+
+        
+            <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_li" class="megaNavItem current">
+    <div class="navItem">
+        <span class="goldStrip gradient top"></span>
+        <a href="/cruise-ships/queen-mary-2/">Our Ships</a>
+        <span class="arrow"></span>
+    </div>
+
+    
+
+    
+        <div class="subNavBlock">
+            <div class="subNav clearfix">
+                <div class="subnavItems">
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl01_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/cruise-ships/queen-elizabeth/">Queen Elizabeth</a></h3>
+            <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/QU_ship.png" id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl01_imgTitle" class="shipImg" />
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-ships/queen-elizabeth/">Overview</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-elizabeth/accommodation/">Accommodation</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-elizabeth/dining-bars-lounges/">Dining, bars and lounges</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-elizabeth/activities-entertainment/">Activities</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl02_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/cruise-ships/queen-mary-2/">Queen Mary 2</a></h3>
+            <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/QM_ship.png" id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl02_imgTitle" class="shipImg" />
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-ships/queen-mary-2/">Overview</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-mary-2/accommodation/">Accommodation</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-mary-2/dining-bars-lounges/">Dining, bars & lounges</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-mary-2/activities-entertainment/">Activities</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-mary-2/remastered/">QM2 Remastered</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl03_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/cruise-ships/queen-victoria/">Queen Victoria</a></h3>
+            <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/QV_ship.png" id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl03_imgTitle" class="shipImg" />
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-ships/queen-victoria/">Overview</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-victoria/accommodation/">Accommodation</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-victoria/dining-bars-lounges/">Dining, bars and lounges</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-victoria/activities-entertainment/">Activities</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-victoria/refit-for-a-queen/">Refit for a Queen</a></li>
+                </ul>
+            
+        </div>
+        
+        </div>
+            <div class="promoCol promoBlock">
+                <a href="/cruise-ships/queen-victoria/refit-for-a-queen/">
+                <div class="promoImg"><img id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl03_imgPromo" src="http://cdn.images.cunard.com/webimage/MegaNavThumb/Global/Images/Home_Page/tiles/Queen_Victoria_postrefit_navhotspot.jpg" alt="" style="border-width:0px;" /></div>
+                <div class="promoMain">
+                    <h3>Refit for a Queen.</h3>
+                    <p>On 5 May Queen Victoria entered dry dock for a partial refit to enhance your experience on board.</p>
+                    <span class="promoLink">Discover more <span class="icon"></span></span>
+                </div>
+                </a>
+        
+    
+        </div>
+        </div>
+            <div class="closeSubNav">
+                <a href="#">Close</a>
+            </div>
+        </div>
+    
+
+
+</li>
+
+        
+            <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl03_ctl00_li" class="megaNavItem">
+    <div class="navItem">
+        <span class="goldStrip gradient top"></span>
+        <a href="/cunard-experience/">The Cunard experience</a>
+        <span class="arrow"></span>
+    </div>
+
+    
+
+    
+        <div class="subNavBlock">
+            <div class="subNav clearfix">
+                <div class="subnavItems">
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl03_ctl00_ctlSubNav_rptCols_ctl01_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/cunard-experience/">Why Cunard</a></h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/whats-included/">What's included</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/new-to-cruising/">New to cruising</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/enrichment-programmes/">Enrichment programmes</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/event-cruises/">Event cruises</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/signature-drinks/">Cunard signature drinks</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/white-star-service/">White Star Service</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/inspired-by-cunard/">Inspired, by Cunard</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl03_ctl00_ctlSubNav_rptCols_ctl02_divCol" class="col col25 clearfix">
+            <h3 class="title">Cruise & stay holidays</h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/hotels/">Hotels</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/flagship-collection/">Flagship Hotels Collection</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/shore-excursions/">Shore excursions</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/overland-excursions/">Overland excursions</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/land-tours/">Land tours</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/reduced-mobility/">Accessibility</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/our-fares/">Our fares</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl03_ctl00_ctlSubNav_rptCols_ctl03_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/life-on-board/staterooms-and-suites/">Life on board</a></h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/life-on-board/staterooms-and-suites/">Staterooms and suites</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/staterooms-and-suites/grills-experience/">Grills experience</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/staterooms-and-suites/britannia-club-experience/">Britannia Club experience</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/staterooms-and-suites/britannia-experience/">Britannia experience</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/dining-and-bars/">Dining, bars and lounges</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/daytime-activities/">Daytime activities</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/night-time-entertainment/">Night-time entertainment</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/guest-speakers/">Guest speakers</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/gifts-and-celebrations/">Gifts and celebrations</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        </div>
+        </div>
+            <div class="closeSubNav">
+                <a href="#">Close</a>
+            </div>
+        </div>
+    
+
+
+</li>
+
+        
+            <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl04_ctl00_li" class="megaNavItem">
+    <div class="navItem">
+        <span class="goldStrip gradient top"></span>
+        <a href="/cruise-deals/offers/on-board-spending-money/">Cruise Deals</a>
+        <span class="arrow"></span>
+    </div>
+
+    
+
+    
+        <div class="subNavBlock">
+            <div class="subNav clearfix">
+                <div class="subnavItems">
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl04_ctl00_ctlSubNav_rptCols_ctl01_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/cruise-deals/offers/on-board-spending-money/">Cruise deals & offers</a></h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-deals/offers/on-board-spending-money/">Complimentary on board spending money</a></li>
+                
+                    <li>
+                        <a href="/cruise-deals/early-saver-cruises/">Early saver cruise offers</a></li>
+                
+                    <li>
+                        <a href="/cruise-deals/last-minute-cruises/">Last minute cruise offers</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl04_ctl00_ctlSubNav_rptCols_ctl02_divCol" class="col col25 clearfix">
+            <h3 class="title">Offers by destination</h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-deals/destinations/cruises-from-southampton/">Cruise offers from Southampton<br /> 2017 & 2018</a></li>
+                
+                    <li>
+                        <a href="/cruise-deals/destinations/mediterranean-cruises/">Mediterranean cruise offers<br />2017 & 2018</a></li>
+                
+                    <li>
+                        <a href="/cruise-deals/destinations/transatlantic-cruises/">Transatlantic cruise offers<br />2017 & 2018</a></li>
+                </ul>
+            
+        </div>
+        
+        </div>
+            <div class="promoCol promoBlock">
+                <a href="/cruise-deals/offers/on-board-spending-money/">
+                <div class="promoImg"><img id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl04_ctl00_ctlSubNav_rptCols_ctl02_imgPromo" src="http://cdn.images.cunard.com/webimage/MegaNavThumb/Global/Images/Home_Page/tiles/1/Fjords_Brand_Image_hotspot.jpg" alt="" style="border-width:0px;" /></div>
+                <div class="promoMain">
+                    <h3>Complimentary on-board spending money.</h3>
+                    <p>Enrich your experience with complimentary on-board spending money when you book your voyage by 2 October.</p>
+                    <span class="promoLink">View offer <span class="icon"></span></span>
+                </div>
+                </a>
+        
+    
+        </div>
+        </div>
+            <div class="closeSubNav">
+                <a href="#">Close</a>
+            </div>
+        </div>
+    
+
+
+</li>
+
+        
+    
+</ul>
+        
+<div class="innerPageNav clearfix">
+    <p class="thirdNavTitle"><a href="/cruise-ships/queen-victoria/">Queen Victoria</a></p>
+    <div class="thirdNavWrapper">
+        
+                <ul class="thirdNavItems clearfix">
+            
+                <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaSubNav_rptLinks_ctl01_liItem">
+                    <span class="goldStrip gradient bottom"></span>
+                    <a href="/cruise-ships/queen-victoria/">Overview</a>
+                </li>
+                
+            
+                <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaSubNav_rptLinks_ctl02_liItem">
+                    <span class="goldStrip gradient bottom"></span>
+                    <a href="/cruise-ships/queen-victoria/accommodation/">Accommodation</a>
+                </li>
+                
+            
+                <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaSubNav_rptLinks_ctl03_liItem">
+                    <span class="goldStrip gradient bottom"></span>
+                    <a href="/cruise-ships/queen-victoria/dining-bars-lounges/">Dining, bars and lounges</a>
+                </li>
+                <div class="extraLinks"><a href="#" class="moreLinks">More <span class="moreArrowUp"></span><span class="moreArrowDown"></span></a><ul class="extraThirdLevelLinks">
+            
+                <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaSubNav_rptLinks_ctl04_liItem" class="active">
+                    <span class="goldStrip gradient bottom"></span>
+                    <a href="/cruise-ships/queen-victoria/activities-entertainment/">Activities</a>
+                </li>
+                
+            
+                <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaSubNav_rptLinks_ctl05_liItem">
+                    <span class="goldStrip gradient bottom"></span>
+                    <a href="/cruise-ships/queen-victoria/refit-for-a-queen/">Refit for a Queen</a>
+                </li>
+                </ul></div>
+            
+                </ul>
+            
+        
+            <div class="primaryCtaGold viewCruises">
+                <a href="/cruise-search/book-a-cruise/results/?s=QV">View 135 cruises <span class="icon whiteChevron"></span></a>
+            </div>
+        
+    </div>
+</div>
+    </div>
+</div>
+
+    <div id="page" class="content">
+        
+
+        <div id="main" role="main" class="">
+            <form name="aspnetForm" method="post" action="/cruise-ships/queen-victoria/activities-entertainment/" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+                
+    
+        
+
+<div class="module h1Intro ng-hide">
+    <h1>Activities</h1>
+    <div>
+        
+    </div>
+</div>
+    
+
+                
+    
+    
+        
+    
+    
+    
+
+<div cdp-promotional-gallery="" id="" type="Carousel" display-thumbnails="true" display-features="false" class="">
+    <ul core-model="gallery">
+
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Activities from day until night.</span>
+            <span core-model-prop="content">From when you wake until you retire for the night, you?ll find endless activities to keep you entertained.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QE/Activities/Deck-sports_966x650.jpg" alt="Activities day and night." />
+            <a core-model-prop="link" title="" href="/cruise-ships/queen-victoria/activities-entertainment/" target=""></a>
+        </li>
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Activities from day until night.</span>
+            <span core-model-prop="content">From when you wake until you retire for the night, you?ll find endless activities to keep you entertained.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QV/Activities/guests-on-sunlounges-terrace-grill-966x494.jpg" alt="Spa and pool" />
+            <a core-model-prop="link" title="" href="/cruise-ships/queen-victoria/activities-entertainment/" target=""></a>
+        </li>
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Activities from day until night.</span>
+            <span core-model-prop="content">From when you wake until you retire for the night, you?ll find endless activities to keep you entertained.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QE/Activities/Whisky_tasting_966x442.jpg" alt="Whisky tasting" />
+            <a core-model-prop="link" title="" href="/cruise-ships/queen-victoria/activities-entertainment/" target=""></a>
+        </li>
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Activities from day until night.</span>
+            <span core-model-prop="content">From when you wake until you retire for the night, you?ll find endless activities to keep you entertained.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QV/Activities/queensroom-dance-955x494.jpg" alt="Cunard Activities" />
+            <a core-model-prop="link" title="" href="/cruise-ships/queen-victoria/activities-entertainment/" target=""></a>
+        </li>
+        
+    </ul>
+</div>
+
+
+            <div cdp-story="" id="" class="">
+                
+
+
+                <div core-model="setup">
+                    <div core-model-prop="title">Feel free to do as little or as much as you like. </div>
+
+                    
+
+                    <div core-model-prop="description">From the moment you step on board Queen Victoria, you are invited to do as much or as little as you like. Maybe you&#39;d like to unwind and visit the impressive spa, or perhaps you&#39;ve always wanted to learn the tango? From world renowned speakers sharing stories to shopping in the Royal Arcade - experience a world that revolves around you.
+</div>
+                    
+                    
+                </div>
+
+
+                
+</div>
+
+
+<div cdp-inspiration-main="" class="standard " id="" version="dining">
+
+    <header core-model="header">
+        <h1 core-model-prop="title">Activity types.</h1>
+        <h2 core-model-prop="subtitle"></h2>
+    </header>
+
+    <div core-model="tabs">
+        <ul core-model-prop="tab" data-tab-title="Insight and Enrichment Programmes.">
+
+            
+            <li core-model-prop="triplet">
+                <ul>
+                    
+
+                    <li core-model-prop="item">
+                        <img core-model-prop="image" alt="" src="http://cdn.images.cunard.com/Global/Images/Ships/QE/Overview_page/insight-speakers_966x650.jpg" />
+                        <p core-model-prop="title">Insight and enrichment.</p>
+                        <span core-model-prop="copy">World renowned speakers offer informative talks as part of our Insights programme. Experts from the world of art are also welcomed on board to offer both talks and practical demonstrations. </span>
+                        
+                        
+                        
+                              <div core-model-prop="menu"> 
+                                <p core-model-prop="title"></p>
+                                <div core-model-prop="desc"></div>
+                              
+                                  
+                                <a core-model-prop="link" href="/cruise-ships/queen-victoria/activities-entertainment/speaker-programmes/" target="_self">Discover Insights</a>
+                                
+                            </div>
+                        
+                    </li>
+
+                    
+
+                    <li core-model-prop="item">
+                        <img core-model-prop="image" alt="" src="http://cdn.images.cunard.com/Global/Images/Ships/QV/Activities/gallery-966x650.jpg" />
+                        <p core-model-prop="title">Shopping and galleries.</p>
+                        <span core-model-prop="copy">Our shops offer stunning jewellery, fashion and the latest fragrances, not to mention Cunard gifts. Additionally the gallery on board presents some of the world?s best artists? works for viewing and sale.</span>
+                        
+                        
+                        
+                              <div core-model-prop="menu"> 
+                                <p core-model-prop="title"></p>
+                                <div core-model-prop="desc"></div>
+                              
+                                  
+                                <a core-model-prop="link" href="/cruise-ships/queen-victoria/activities-entertainment/shopping-and-galleries/" target="_self">Discover more</a>
+                                
+                            </div>
+                        
+                    </li>
+
+                    
+
+                    <li core-model-prop="item">
+                        <img core-model-prop="image" alt="Deck tennis" src="http://cdn.images.cunard.com/Global/Images/Ships/QE/Activities/deck-tennis_966x650.jpg" />
+                        <p core-model-prop="title">Sports and fitness.</p>
+                        <span core-model-prop="copy">Whether you enjoy taking part or simply watching, Queen Victoria offers something for every sports enthusiast. The modern gym, swimming pools and live sport on television offer plenty of ways to get the adrenaline flowing.</span>
+                        
+                        
+                        
+                              <div core-model-prop="menu"> 
+                                <p core-model-prop="title"></p>
+                                <div core-model-prop="desc"></div>
+                              
+                                  
+                                <a core-model-prop="link" href="/cruise-ships/queen-victoria/activities-entertainment/sports/" target="_self">Discover sports</a>
+                                
+                                <a core-model-prop="link" href="/cruise-ships/queen-victoria/activities-entertainment/spa-and-fitness/" target="_self">Discover fitness</a>
+                                
+                            </div>
+                        
+                    </li>
+
+                    
+                </ul>
+            </li>
+            
+            <li core-model-prop="triplet">
+                <ul>
+                    
+
+                    <li core-model-prop="item">
+                        <img core-model-prop="image" alt="" src="http://cdn.images.cunard.com/Global/Images/Ships/QE/Overview_page/Royal_spa_thermal_suite_966x650.jpg" />
+                        <p core-model-prop="title">Spa, relaxation and leisure.</p>
+                        <span core-model-prop="copy">There?s so much to do on board, from enjoying a delicious Afternoon Tea to browsing the large library. You may choose to spend your time relaxing in the large spa, complete with treatment rooms, saunas, pool and hot stone beds.</span>
+                        
+                        
+                        
+                              <div core-model-prop="menu"> 
+                                <p core-model-prop="title"></p>
+                                <div core-model-prop="desc"></div>
+                              
+                                  
+                                <a core-model-prop="link" href="/cruise-ships/queen-victoria/activities-entertainment/spa-and-fitness/" target="_self">Discover spa</a>
+                                
+                                <a core-model-prop="link" href="/cruise-ships/queen-victoria/activities-entertainment/relaxation-and-leisure/" target="_self">Discover leisure</a>
+                                
+                            </div>
+                        
+                    </li>
+
+                    
+
+                    <li core-model-prop="item">
+                        <img core-model-prop="image" alt="" src="http://cdn.images.cunard.com/Global/Images/Ships/QM2/refit/SYZ01_Inspiration_Activities_Children.jpg" />
+                        <p core-model-prop="title">Children?s activities.</p>
+                        <span core-model-prop="copy">Our young passengers are well catered for with activities through the day and into the evening, all age appropriate and fully staffed.</span>
+                        
+                        
+                        
+                              <div core-model-prop="menu"> 
+                                <p core-model-prop="title"></p>
+                                <div core-model-prop="desc"></div>
+                              
+                                  
+                                <a core-model-prop="link" href="/cruise-ships/queen-victoria/activities-entertainment/childrens-activities/" target="_self">Discover more</a>
+                                
+                            </div>
+                        
+                    </li>
+
+                    
+
+                    <li core-model-prop="item">
+                        <img core-model-prop="image" alt="" src="http://cdn.images.cunard.com/Global/Images/Ships/QE/Activities/Theatre_966x650.jpg" />
+                        <p core-model-prop="title">Music and theatre.</p>
+                        <span core-model-prop="copy">You?ll find music is at the very heart of Queen Victoria, with the sound of live performances gently drifting through the ship throughout the day and into the evening. The Royal Court Theatre offers West-End style shows, delivered by a cast of very talented dancers and singers. </span>
+                        
+                        
+                        
+                              <div core-model-prop="menu"> 
+                                <p core-model-prop="title"></p>
+                                <div core-model-prop="desc"></div>
+                              
+                                  
+                                <a core-model-prop="link" href="/cruise-ships/queen-victoria/activities-entertainment/music/" target="_self">Discover music</a>
+                                
+                                <a core-model-prop="link" href="/cruise-ships/queen-victoria/activities-entertainment/theatre/" target="_self">Discover theatre</a>
+                                
+                            </div>
+                        
+                    </li>
+
+                    
+                </ul>
+            </li>
+            
+            <li core-model-prop="triplet">
+                <ul>
+                    
+
+                    <li core-model-prop="item">
+                        <img core-model-prop="image" alt="" src="http://cdn.images.cunard.com/Global/Images/Ships/QM2/refit/SYZ01_Inspiration_WhiskyandwineTasting.jpg" />
+                        <p core-model-prop="title">Wine programme.</p>
+                        <span core-model-prop="copy">Queen Victoria?s wine cellar is extensive. Join our sommeliers to learn more about some of the special vintages we carry.</span>
+                        
+                        
+                        
+                              <div core-model-prop="menu"> 
+                                <p core-model-prop="title"></p>
+                                <div core-model-prop="desc"></div>
+                              
+                                  
+                                <a core-model-prop="link" href="/cruise-ships/queen-victoria/activities-entertainment/wine-programmes/" target="_self">Discover more</a>
+                                
+                            </div>
+                        
+                    </li>
+
+                    
+
+                    <li core-model-prop="item">
+                        <img core-model-prop="image" alt="" src="http://cdn.images.cunard.com/Global/Images/Ships/QE/Activities/Dancing_966x650.jpg" />
+                        <p core-model-prop="title">Dancing.</p>
+                        <span core-model-prop="copy">The Queens Room with its sprung dance floor and crystal chandeliers is simply stunning. Dance the night away at one of the glamorous balls, or for something more contemporary head to the Yacht Club with superb dedicated jazz music, followed by a DJ and dance band late into the night.</span>
+                        
+                        
+                        
+                              <div core-model-prop="menu"> 
+                                <p core-model-prop="title"></p>
+                                <div core-model-prop="desc"></div>
+                              
+                                  
+                                <a core-model-prop="link" href="/cruise-ships/queen-victoria/activities-entertainment/dancing/" target="_self">Discover dancing</a>
+                                
+                            </div>
+                        
+                    </li>
+
+                    
+
+                    <li core-model-prop="item">
+                        <img core-model-prop="image" alt="" src="http://cdn.images.cunard.com/Global/Images/Ships/QM2/refit/SYZ01_Inspiration_Activities_PubEntertainment.jpg" />
+                        <p core-model-prop="title">Pub entertainment.</p>
+                        <span core-model-prop="copy">The Golden Lion is a faithful recreation of an English pub, complete with live sports, pub games and quizzes. It also boasts an authentic pub lunch menu including tempting fish and chips and traditional ploughman?s.</span>
+                        
+                        
+                        
+                              <div core-model-prop="menu"> 
+                                <p core-model-prop="title"></p>
+                                <div core-model-prop="desc"></div>
+                              
+                                  
+                                <a core-model-prop="link" href="/cruise-ships/queen-victoria/activities-entertainment/pub-entertainment/" target="_self">Discover entertainment</a>
+                                
+                            </div>
+                        
+                    </li>
+
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        
+    </div>
+
+</div>
+
+
+<div cdp-feature-cruises="" id="">
+    <div core-model="cruises">
+        <h3 core-model-prop="title">A selection of cruises on Queen Victoria.</h3>
+        <p core-model-prop="description"> </p>
+        
+        
+        <div core-model-prop="first">
+            <img core-model-prop="image" src="http://cdn.images.cunard.com/Global/Images/christmas-page/champagne_celebratios.jpg" alt="Canary Islands Celebration" />
+            <p core-model-prop="ship" top="true">Queen Victoria</p>
+            <p core-model-prop="name">Canary Islands Celebration</p>
+            <p core-model-prop="date">Sun 17 Dec to 29 Dec 2017</p>
+            <p core-model-prop="info">
+                12 nights from £1,399 per person</p>
+            <a core-model-prop="link" href="/cruise-search/book-a-cruise/cruises/qv/2478-v729-sou1-sou2/" target="_self">View this cruise</a>
+        </div>
+        <div core-model-prop="second">
+            <img core-model-prop="image" src="http://cdn.images.cunard.com/Global/Images/Destinations/le_havre.jpg" alt="Autumn Escape" />
+            <p core-model-prop="ship" top="true">Queen Victoria</p>
+            <p core-model-prop="name">Autumn Escape</p>
+            <p core-model-prop="date">Fri 16 Nov to 19 Nov 2018</p>
+            <p core-model-prop="info">3 nights from £349 per person </p>
+            <a core-model-prop="link" href="/cruise-search/book-a-cruise/cruises/qv/2777-v834-sou1-sou2/" target="_self">View this cruise</a>
+        </div>
+        <div core-model-prop="third">
+            <img core-model-prop="image" src="http://cdn.images.cunard.com/Global/Images/Destinations/Ft_Lauderdale_117621184.jpg" alt="Westbound Transatlantic Crossing to Fort Lauderdale" />
+            <p core-model-prop="ship" top="true">Queen Victoria</p>
+            <p core-model-prop="name">Westbound Transatlantic Crossing to Fort Lauderdale</p>
+            <p core-model-prop="date">Thu 10 Jan to 21 Jan 2019</p>
+            <p core-model-prop="info">
+                11 nights from £829 per person</p>
+            <a core-model-prop="link" href="/cruise-search/book-a-cruise/cruises/qv/2817-v904-sou1-fll1/" target="_self">View this cruise</a>
+        </div>
+
+        
+    </div>
+</div>
+
+
+<input type="hidden" value="Search Module" />
+
+<div cdp-search-enhanced="" dest="{&quot;where&quot;:[{&quot;name&quot;:&quot;I don&#39;t mind&quot;,&quot;value&quot;:&quot;&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;I don&#39;t mind&quot;,&quot;value&quot;:&quot;&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;I don&#39;t mind&quot;,&quot;value&quot;:&quot;&quot;}]}]},{&quot;name&quot;:&quot;Africa&quot;,&quot;value&quot;:&quot;AFRI&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;January 2018&quot;,&quot;value&quot;:&quot;1801&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;}]},{&quot;name&quot;:&quot;February 2018&quot;,&quot;value&quot;:&quot;1802&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;}]},{&quot;name&quot;:&quot;March 2018&quot;,&quot;value&quot;:&quot;1803&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;}]},{&quot;name&quot;:&quot;April 2018&quot;,&quot;value&quot;:&quot;1804&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;January 2019&quot;,&quot;value&quot;:&quot;1901&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;}]},{&quot;name&quot;:&quot;February 2019&quot;,&quot;value&quot;:&quot;1902&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;}]},{&quot;name&quot;:&quot;March 2019&quot;,&quot;value&quot;:&quot;1903&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;April 2019&quot;,&quot;value&quot;:&quot;1904&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]}]},{&quot;name&quot;:&quot;Atlantic Islands&quot;,&quot;value&quot;:&quot;ATIS&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;September 2017&quot;,&quot;value&quot;:&quot;1709&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;October 2017&quot;,&quot;value&quot;:&quot;1710&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;November 2017&quot;,&quot;value&quot;:&quot;1711&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;December 2017&quot;,&quot;value&quot;:&quot;1712&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;January 2018&quot;,&quot;value&quot;:&quot;1801&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;March 2018&quot;,&quot;value&quot;:&quot;1803&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;October 2018&quot;,&quot;value&quot;:&quot;1810&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;November 2018&quot;,&quot;value&quot;:&quot;1811&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;December 2018&quot;,&quot;value&quot;:&quot;1812&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;January 2019&quot;,&quot;value&quot;:&quot;1901&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]}]},{&quot;name&quot;:&quot;Australia &amp; Pacific Islands&quot;,&quot;value&quot;:&quot;AUST&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;January 2018&quot;,&quot;value&quot;:&quot;1801&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;}]},{&quot;name&quot;:&quot;February 2018&quot;,&quot;value&quot;:&quot;1802&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;March 2018&quot;,&quot;value&quot;:&quot;1803&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;April 2018&quot;,&quot;value&quot;:&quot;1804&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;}]},{&quot;name&quot;:&quot;January 2019&quot;,&quot;value&quot;:&quot;1901&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;}]},{&quot;name&quot;:&quot;February 2019&quot;,&quot;value&quot;:&quot;1902&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;March 2019&quot;,&quot;value&quot;:&quot;1903&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;April 2019&quot;,&quot;value&quot;:&quot;1904&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]}]},{&quot;name&quot;:&quot;British Isles&quot;,&quot;value&quot;:&quot;BRIT&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;May 2018&quot;,&quot;value&quot;:&quot;1805&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;July 2018&quot;,&quot;value&quot;:&quot;1807&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]}]},{&quot;name&quot;:&quot;Canada&quot;,&quot;value&quot;:&quot;CA&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;September 2017&quot;,&quot;value&quot;:&quot;1709&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;June 2018&quot;,&quot;value&quot;:&quot;1806&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;July 2018&quot;,&quot;value&quot;:&quot;1807&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;name&quot;:&quot;September 2018&quot;,&quot;value&quot;:&quot;1809&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;May 2019&quot;,&quot;value&quot;:&quot;1905&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]}]},{&quot;name&quot;:&quot;Canary Islands&quot;,&quot;value&quot;:&quot;CAIS&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;December 2018&quot;,&quot;value&quot;:&quot;1812&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]}]},{&quot;name&quot;:&quot;Caribbean&quot;,&quot;value&quot;:&quot;CARI&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;November 2017&quot;,&quot;value&quot;:&quot;1711&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;December 2017&quot;,&quot;value&quot;:&quot;1712&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;January 2018&quot;,&quot;value&quot;:&quot;1801&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;November 2018&quot;,&quot;value&quot;:&quot;1811&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;December 2018&quot;,&quot;value&quot;:&quot;1812&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]}]},{&quot;name&quot;:&quot;Central America &amp; Panama Canal&quot;,&quot;value&quot;:&quot;CEAM&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;February 2018&quot;,&quot;value&quot;:&quot;1802&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;}]},{&quot;name&quot;:&quot;January 2019&quot;,&quot;value&quot;:&quot;1901&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]}]},{&quot;name&quot;:&quot;Far East&quot;,&quot;value&quot;:&quot;FARE&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;February 2018&quot;,&quot;value&quot;:&quot;1802&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;}]},{&quot;name&quot;:&quot;March 2018&quot;,&quot;value&quot;:&quot;1803&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;name&quot;:&quot;April 2018&quot;,&quot;value&quot;:&quot;1804&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;January 2019&quot;,&quot;value&quot;:&quot;1901&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;}]},{&quot;name&quot;:&quot;February 2019&quot;,&quot;value&quot;:&quot;1902&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;}]},{&quot;name&quot;:&quot;March 2019&quot;,&quot;value&quot;:&quot;1903&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;April 2019&quot;,&quot;value&quot;:&quot;1904&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;May 2019&quot;,&quot;value&quot;:&quot;1905&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]}]},{&quot;name&quot;:&quot;Hawaii&quot;,&quot;value&quot;:&quot;HAWA&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;February 2018&quot;,&quot;value&quot;:&quot;1802&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;}]},{&quot;name&quot;:&quot;January 2019&quot;,&quot;value&quot;:&quot;1901&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;}]},{&quot;name&quot;:&quot;February 2019&quot;,&quot;value&quot;:&quot;1902&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;}]}]},{&quot;name&quot;:&quot;Indian Ocean&quot;,&quot;value&quot;:&quot;INOC&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;January 2018&quot;,&quot;value&quot;:&quot;1801&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;}]},{&quot;name&quot;:&quot;February 2018&quot;,&quot;value&quot;:&quot;1802&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;}]},{&quot;name&quot;:&quot;March 2018&quot;,&quot;value&quot;:&quot;1803&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;}]},{&quot;name&quot;:&quot;April 2018&quot;,&quot;value&quot;:&quot;1804&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;}]},{&quot;name&quot;:&quot;January 2019&quot;,&quot;value&quot;:&quot;1901&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;February 2019&quot;,&quot;value&quot;:&quot;1902&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;}]},{&quot;name&quot;:&quot;March 2019&quot;,&quot;value&quot;:&quot;1903&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]}]},{&quot;name&quot;:&quot;Mediterranean&quot;,&quot;value&quot;:&quot;MEDI&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;September 2017&quot;,&quot;value&quot;:&quot;1709&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;October 2017&quot;,&quot;value&quot;:&quot;1710&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;April 2018&quot;,&quot;value&quot;:&quot;1804&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;May 2018&quot;,&quot;value&quot;:&quot;1805&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;June 2018&quot;,&quot;value&quot;:&quot;1806&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;July 2018&quot;,&quot;value&quot;:&quot;1807&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;August 2018&quot;,&quot;value&quot;:&quot;1808&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;}]},{&quot;name&quot;:&quot;September 2018&quot;,&quot;value&quot;:&quot;1809&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;}]},{&quot;name&quot;:&quot;October 2018&quot;,&quot;value&quot;:&quot;1810&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;January 2019&quot;,&quot;value&quot;:&quot;1901&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;March 2019&quot;,&quot;value&quot;:&quot;1903&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]}]},{&quot;name&quot;:&quot;Middle East&quot;,&quot;value&quot;:&quot;MIDE&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;March 2018&quot;,&quot;value&quot;:&quot;1803&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;}]},{&quot;name&quot;:&quot;April 2018&quot;,&quot;value&quot;:&quot;1804&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;}]},{&quot;name&quot;:&quot;January 2019&quot;,&quot;value&quot;:&quot;1901&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;}]},{&quot;name&quot;:&quot;February 2019&quot;,&quot;value&quot;:&quot;1902&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;}]},{&quot;name&quot;:&quot;March 2019&quot;,&quot;value&quot;:&quot;1903&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]}]},{&quot;name&quot;:&quot;New York to Southampton&quot;,&quot;value&quot;:&quot;NYSO&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;September 2017&quot;,&quot;value&quot;:&quot;1709&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;October 2017&quot;,&quot;value&quot;:&quot;1710&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;November 2017&quot;,&quot;value&quot;:&quot;1711&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;December 2017&quot;,&quot;value&quot;:&quot;1712&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;January 2018&quot;,&quot;value&quot;:&quot;1801&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;May 2018&quot;,&quot;value&quot;:&quot;1805&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;June 2018&quot;,&quot;value&quot;:&quot;1806&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;July 2018&quot;,&quot;value&quot;:&quot;1807&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;August 2018&quot;,&quot;value&quot;:&quot;1808&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;September 2018&quot;,&quot;value&quot;:&quot;1809&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;October 2018&quot;,&quot;value&quot;:&quot;1810&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;November 2018&quot;,&quot;value&quot;:&quot;1811&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;December 2018&quot;,&quot;value&quot;:&quot;1812&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;January 2019&quot;,&quot;value&quot;:&quot;1901&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;April 2019&quot;,&quot;value&quot;:&quot;1904&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]}]},{&quot;name&quot;:&quot;Northern Europe&quot;,&quot;value&quot;:&quot;NOEU&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;August 2017&quot;,&quot;value&quot;:&quot;1708&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;name&quot;:&quot;November 2017&quot;,&quot;value&quot;:&quot;1711&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;name&quot;:&quot;December 2017&quot;,&quot;value&quot;:&quot;1712&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;name&quot;:&quot;January 2018&quot;,&quot;value&quot;:&quot;1801&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;name&quot;:&quot;March 2018&quot;,&quot;value&quot;:&quot;1803&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;name&quot;:&quot;May 2018&quot;,&quot;value&quot;:&quot;1805&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;name&quot;:&quot;June 2018&quot;,&quot;value&quot;:&quot;1806&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;name&quot;:&quot;July 2018&quot;,&quot;value&quot;:&quot;1807&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;name&quot;:&quot;August 2018&quot;,&quot;value&quot;:&quot;1808&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;name&quot;:&quot;September 2018&quot;,&quot;value&quot;:&quot;1809&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;name&quot;:&quot;October 2018&quot;,&quot;value&quot;:&quot;1810&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;name&quot;:&quot;November 2018&quot;,&quot;value&quot;:&quot;1811&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;name&quot;:&quot;December 2018&quot;,&quot;value&quot;:&quot;1812&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;name&quot;:&quot;January 2019&quot;,&quot;value&quot;:&quot;1901&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;name&quot;:&quot;April 2019&quot;,&quot;value&quot;:&quot;1904&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]}]},{&quot;name&quot;:&quot;Scandinavia &amp; Iceland&quot;,&quot;value&quot;:&quot;SCAN&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;May 2018&quot;,&quot;value&quot;:&quot;1805&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;June 2018&quot;,&quot;value&quot;:&quot;1806&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;July 2018&quot;,&quot;value&quot;:&quot;1807&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;August 2018&quot;,&quot;value&quot;:&quot;1808&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]}]},{&quot;name&quot;:&quot;South America&quot;,&quot;value&quot;:&quot;SOAM&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;January 2018&quot;,&quot;value&quot;:&quot;1801&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;}]},{&quot;name&quot;:&quot;February 2018&quot;,&quot;value&quot;:&quot;1802&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;}]}]},{&quot;name&quot;:&quot;Southampton to New York&quot;,&quot;value&quot;:&quot;SONY&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;September 2017&quot;,&quot;value&quot;:&quot;1709&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;October 2017&quot;,&quot;value&quot;:&quot;1710&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;November 2017&quot;,&quot;value&quot;:&quot;1711&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;December 2017&quot;,&quot;value&quot;:&quot;1712&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;January 2018&quot;,&quot;value&quot;:&quot;1801&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;May 2018&quot;,&quot;value&quot;:&quot;1805&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]},{&quot;name&quot;:&quot;June 2018&quot;,&quot;value&quot;:&quot;1806&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;July 2018&quot;,&quot;value&quot;:&quot;1807&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;August 2018&quot;,&quot;value&quot;:&quot;1808&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;September 2018&quot;,&quot;value&quot;:&quot;1809&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;October 2018&quot;,&quot;value&quot;:&quot;1810&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;November 2018&quot;,&quot;value&quot;:&quot;1811&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;December 2018&quot;,&quot;value&quot;:&quot;1812&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;April 2019&quot;,&quot;value&quot;:&quot;1904&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]}]},{&quot;name&quot;:&quot;The Baltic, Scandinavia &amp; Iceland&quot;,&quot;value&quot;:&quot;BALT&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;May 2018&quot;,&quot;value&quot;:&quot;1805&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;June 2018&quot;,&quot;value&quot;:&quot;1806&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;July 2018&quot;,&quot;value&quot;:&quot;1807&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;August 2018&quot;,&quot;value&quot;:&quot;1808&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;}]}]},{&quot;name&quot;:&quot;Transatlantic Crossing&quot;,&quot;value&quot;:&quot;TRAN&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;August 2017&quot;,&quot;value&quot;:&quot;1708&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;September 2017&quot;,&quot;value&quot;:&quot;1709&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;}]},{&quot;name&quot;:&quot;October 2017&quot;,&quot;value&quot;:&quot;1710&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;November 2017&quot;,&quot;value&quot;:&quot;1711&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;December 2017&quot;,&quot;value&quot;:&quot;1712&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;January 2018&quot;,&quot;value&quot;:&quot;1801&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;March 2018&quot;,&quot;value&quot;:&quot;1803&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;May 2018&quot;,&quot;value&quot;:&quot;1805&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;June 2018&quot;,&quot;value&quot;:&quot;1806&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;July 2018&quot;,&quot;value&quot;:&quot;1807&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;August 2018&quot;,&quot;value&quot;:&quot;1808&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;September 2018&quot;,&quot;value&quot;:&quot;1809&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;}]},{&quot;name&quot;:&quot;October 2018&quot;,&quot;value&quot;:&quot;1810&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;November 2018&quot;,&quot;value&quot;:&quot;1811&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;December 2018&quot;,&quot;value&quot;:&quot;1812&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;}]},{&quot;name&quot;:&quot;January 2019&quot;,&quot;value&quot;:&quot;1901&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]},{&quot;name&quot;:&quot;April 2019&quot;,&quot;value&quot;:&quot;1904&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;}]}]},{&quot;name&quot;:&quot;USA&quot;,&quot;value&quot;:&quot;USA&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;September 2017&quot;,&quot;value&quot;:&quot;1709&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;October 2017&quot;,&quot;value&quot;:&quot;1710&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;November 2017&quot;,&quot;value&quot;:&quot;1711&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;}]},{&quot;name&quot;:&quot;January 2018&quot;,&quot;value&quot;:&quot;1801&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;}]},{&quot;name&quot;:&quot;February 2018&quot;,&quot;value&quot;:&quot;1802&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;}]},{&quot;name&quot;:&quot;March 2018&quot;,&quot;value&quot;:&quot;1803&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;May 2018&quot;,&quot;value&quot;:&quot;1805&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;June 2018&quot;,&quot;value&quot;:&quot;1806&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;July 2018&quot;,&quot;value&quot;:&quot;1807&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;1-5 Days&quot;,&quot;value&quot;:&quot;1&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;August 2018&quot;,&quot;value&quot;:&quot;1808&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;September 2018&quot;,&quot;value&quot;:&quot;1809&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;October 2018&quot;,&quot;value&quot;:&quot;1810&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;November 2018&quot;,&quot;value&quot;:&quot;1811&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;}]},{&quot;name&quot;:&quot;January 2019&quot;,&quot;value&quot;:&quot;1901&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]}]},{&quot;name&quot;:&quot;USA &amp; Canada&quot;,&quot;value&quot;:&quot;NOAM&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;September 2017&quot;,&quot;value&quot;:&quot;1709&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;}]},{&quot;name&quot;:&quot;September 2018&quot;,&quot;value&quot;:&quot;1809&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;6-9 Days&quot;,&quot;value&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;January 2019&quot;,&quot;value&quot;:&quot;1901&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;10-14 Days&quot;,&quot;value&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;29-60 Days&quot;,&quot;value&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]},{&quot;name&quot;:&quot;May 2019&quot;,&quot;value&quot;:&quot;1905&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;21-28 Days&quot;,&quot;value&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;15-20 Days&quot;,&quot;value&quot;:&quot;4&quot;}]}]},{&quot;name&quot;:&quot;World Cruise&quot;,&quot;value&quot;:&quot;WORL&quot;,&quot;when&quot;:[{&quot;name&quot;:&quot;January 2018&quot;,&quot;value&quot;:&quot;1801&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;}]},{&quot;name&quot;:&quot;February 2018&quot;,&quot;value&quot;:&quot;1802&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;}]},{&quot;name&quot;:&quot;January 2019&quot;,&quot;value&quot;:&quot;1901&quot;,&quot;howlong&quot;:[{&quot;name&quot;:&quot;60+ Days&quot;,&quot;value&quot;:&quot;7&quot;}]}]}]}">
+	<div core-model="search">
+	    
+	        <h3 core-model-prop="header">Find your perfect cruise.</h3>
+        
+		<p core-model-prop="submit" data-url="/cruise-search/book-a-cruise/results/">Search</p>
+        
+            <p core-model-prop="theme" data-type="standard" data-full="false"></p>
+        
+	</div>
+</div>
+
+
+            </form>
+        </div>
+
+        
+
+        <div id="backToTop" class="ng-hide">
+            <a href="#page">
+                <span class="icon"></span>
+                <em>Back to top</em>
+            </a>
+        </div>
+    </div>
+
+    
+<div cdp-scrap-footer="" id="footer">
+    <div class="footer-wrapper">
+        <div class="cols twoCols">
+            <div class="col">
+                <div class="col1" data-childtype="first">
+                    <a class="footer-link-titles" href="/">Cunard</a>
+                    
+                            <ul class="footer-links">
+                        
+                            <li>
+                                <a href="/cunard-experience/">About Cunard</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/about-us/awards/">Our awards</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/about-us/our-partners/">Our partners</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/contact-us/">Contact us</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/arrange-a-callback/">Request a call back</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/contact-us/travel-agents/">Find a travel agent</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/contact-us/contact/">Media enquiries</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/cunard-experience/media-centre/press-releases/">Press releases</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.carnivalukcareers.co.uk/" target="_blank">Careers</a>
+                            </li>
+                        
+                            </ul>
+                        
+                </div>
+                <div class="col1">
+                    <a class="footer-link-titles" href="/legal-information/">Advice and policies</a>
+                    
+                            <ul class="footer-links">
+                        
+                            <li>
+                                <a href="/already-booked/ask-cunard/">Frequently asked questions</a>
+                            </li>
+                        
+                            <li>
+                                <a href="https://www.gov.uk/foreign-travel-advice" target="_blank">Foreign travel advice</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cunard.co.uk/legal-information/?view=4026">Passenger Bill of Rights</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/cookie-policy/">Cookie Policy</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cunard.co.uk/legal-information/?view=1992">Privacy Policy</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cunard.co.uk/legal-information/?view=4070">Website terms of use</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/legal-information/">Legal information</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/footer-links/advice-and-policies/credit-card-charges/">Credit card charges</a>
+                            </li>
+                        
+                            </ul>
+                        
+
+                    
+                    
+                            <ul class="footer-links">
+                        
+                            </ul>
+                        
+                </div>
+            </div>
+            <div class="col">
+                
+                <div class="col1" data-childtype="first">
+                    
+                        <a class="footer-link-titles">More Information</a>
+                    
+                    
+                            <ul class="footer-links">
+                        
+                            <li>
+                                <a href="/already-booked/voyage-personaliser/">Manage your booking</a></li>
+                        
+                            <li>
+                                <a href="/cruise-search/how-to-book/brochure-request/">Request a brochure</a></li>
+                        
+                            <li>
+                                <a href="https://cunard.inbro.net/" target="_blank">View brochure online</a></li>
+                        
+                            <li>
+                                <a href="/cruise-types/cruises-2017/">2017 cruises</a></li>
+                        
+                            <li>
+                                <a href="/cruise-types/cruises-2018/">2018 cruises</a></li>
+                        
+                            <li>
+                                <a href="/cruise-types/winter-highlights/">2019 cruises</a></li>
+                        
+                            <li>
+                                <a href="/cruise-types/event-cruises/">Event cruises</a></li>
+                        
+                            <li>
+                                <a href="/destinations-old/regions-old/">Where we sail</a></li>
+                        
+                            <li>
+                                <a href="/site-map/">Site map</a></li>
+                        
+                            </ul>
+                        
+                </div>
+                <div class="col1">
+                    
+                        <a class="footer-link-titles">Cunard On Social Media</a>
+                        <div class="twitterWidgetContainer">
+                            <a class="twitter-timeline" href="https://twitter.com/cunardline" data-theme="dark" data-widget-id="487567030296391680" width="350" height="387" data-link-color="#917233" data-tweet-limit="1" border-color="#917233" data-chrome="nofooter transparent">Tweets by @cunardline</a>
+                            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+                        </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-divider clearfix">
+            
+                <ul class="cruise-line-logo">
+                    
+                        <li>
+                            <a href="http://www.cunard.co.uk/legal-information/?view=4068"><img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/footer/atol-logo-small.jpg" alt="ATOL Protected" /></a></li>
+                    
+                        <li>
+                            <a href="http://www.cunard.co.uk/legal-information/?view=4068"><img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/footer/abta-logo-small.jpg" alt="ABTA logo" /></a></li>
+                    
+                        <li>
+                            <a href="http://www.cunard.co.uk/legal-information/?view=4026"><img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/footer/clia-logo-small.jpg" alt="CLIA - Uk and Ireland" /></a>
+                        </li>
+                    
+                </ul>
+            
+
+            <div class="addressBlock">
+            
+
+            <p id="copyright">&copy; 2017 Cunard Line. All rights reserved</p>
+            </div>
+            <ul id="socialFollow">
+                <li><a href="http://instagram.com/cunardline" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_instagram_30x30.png" alt="Instagram" /></a></li>
+                <li><a href="https://twitter.com/cunardline" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_twitter_30x30.png" alt="Twitter" /></a></li>
+                <li><a href="https://www.facebook.com/cunard" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_facebook_30x30.png" alt="Facebook" /></a></li>
+                <li><a href="https://plus.google.com/109804427722205051153/posts" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_googleplus_30x30.png" alt="Google Plus" /></a></li>
+                <li><a href="http://www.youtube.com/user/WeAreCunard" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_youtube_30x30.png" alt="YouTube" /></a></li>
+                <li><a href="http://wearecunard.com/" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_blog_30x30.png" alt="Blog" /></a></li>
+            </ul>
+        </div>
+    
+    </div>
+</div>
+
+    
+
+    </div>
+    
+    
+
+<script mdp-ref="jsdeps" src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.12/es5-shim.min.js" type="text/javascript"></script>
+<script mdp-ref="jsdeps" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+<script mdp-ref="jsdeps" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js" type="text/javascript"></script>
+<script mdp-ref="jsdeps" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js" type="text/javascript"></script>
+<script mdp-ref="jsdeps" src="//cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js" type="text/javascript"></script>
+
+
+<!-- New Module V2 Required JS includes-->
+<script src="/cdpx/navigation/scripts/main.min.js"></script>
+<script src="/cdpx/story/scripts/main.min.js"></script>
+<script src="/cdpx/ship-where/scripts/main.min.js"></script>
+<script src="/cdpx/promo/scripts/main.min.js"></script>
+<script src="/cdpx/inspiration/scripts/main.min.js"></script>
+<script src="/cdpx/search/scripts/main.min.js"></script>
+<script src="/cdpx/carousel/scripts/main.min.js"></script>
+<script src="/cdpx/features/scripts/main.min.js"></script>
+<script src="/cdpx/ctas/scripts/main.min.js"></script>
+<script src="/cdpx/grills/scripts/main.min.js"></script>
+<script src="/cdpx/html/scripts/main.min.js"></script>
+<script src="/cdpx/style-guide/scripts/main.min.js"></script>
+<script src="/cdpx/Reviews/scripts/main.min.js"></script>
+
+<script src="/cdpx/core/scripts/core.min.js"></script> <!-- leave core at the end -->
+
+<!-- Include theme JS files here in build order -->
+
+
+
+<!--[if lte IE 8 ]>
+<script src="/assets/theme_tab_desk/ie_upgrade/iewarning.js"></script>
+<![endif]-->
+    
+    
+
+    
+    
+    
+
+</body>
+</html>

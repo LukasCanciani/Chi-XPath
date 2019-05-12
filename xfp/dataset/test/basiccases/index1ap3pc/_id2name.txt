@@ -1,0 +1,13 @@
+idAP	ap.html	entry
+id1	person1.html	person
+id2	person2.html	person
+id3	person3.html	person
+id4	person4.html	person
+id5	person5.html	person
+id6	person6.html	person
+id7	person7.html	person
+id8	person8.html	person
+id9	person9.html	person
+i10	index1.html	index
+i11	index2.html	index
+i12	index3.html	index

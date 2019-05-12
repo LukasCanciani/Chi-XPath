@@ -1,0 +1,1033 @@
+?
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js ie6 ltr"><![endif]-->
+<!--[if IE 7 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js ie7 ltr"><![endif]-->
+<!--[if IE 8 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js ie8 ltr"><![endif]-->
+<!--[if IE 9 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js ie9 ltr"><![endif]-->
+<!--[if IEMobile 7 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js iem7 ltr"><![endif]-->
+<!--[if (gt IE 9)|!(IE)|(gt IEMobile 7)|!(IEMobile) ]><!--><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js ltr"><!--<![endif]-->
+
+<head>
+    
+<script type="text/javascript" src="//nexus.ensighten.com/carnivalplc/cunardbrand/Bootstrap.js"></script>
+    
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="format-detection" content="telephone=no" />
+
+
+
+<meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"0205fafc28","applicationID":"3704373","transactionName":"YVUANkRYVxIEAUdRV1gfIzFmFk0ECBJfWUxTQ00VU1sWEQQFVksXUVUMB0RQWgIKDEddVkIeAxFGQQ==","queueTime":0,"applicationTime":65,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<!--[if IE]><![endif]-->
+<meta name="distribution" content="global" />
+<meta name="rating" content="general" />
+<meta name="viewport" content="width=device-width" />
+<meta name="release-version" content="2.24" />
+<!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+<meta http-equiv="cleartype" content="on" />
+    <link rel="alternate" hreflang="en-GB" href="http://www.cunard.co.uk/cruise-ships/queen-mary-2/remastered/" />
+    <link rel="alternate" hreflang="en-US" href="http://www.cunard.com/cruise-ships/queen-mary-2/remastered/" />
+    <link rel="alternate" hreflang="en-AU" href="http://www.cunardline.com.au/cruise-ships/queen-mary-2/remastered/" />
+
+    <meta name="title" content="Queen Mary 2 Remastered - Follow the Progress - Cunard" />
+    <meta name="created" content="01/06/2016 11:55:00" />
+    <meta name="modified" content="02/06/2016 16:04:04" />
+    <meta name="description" content="Follow the progress of Cunard&#39;s flagship Queen Mary 2, undergoing a remastering of unparalleled scale. View and book a cruise on the QM2 Remastered." />
+    <meta name="creator" content="Cunard UK" />
+    <meta name="publisher" content="Cunard UK" />
+    <meta name="robots" content="index,follow" />
+    <meta name="language" content="en-GB" />
+
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+    <meta name="DC.title" content="Queen Mary 2 Remastered - Follow the Progress - Cunard" />
+    <meta name="DC.created" content="01/06/2016 11:55:00" />
+    <meta name="DC.modified" content="02/06/2016 16:04:04" />
+    <meta name="DC.description" content="Follow the progress of Cunard&#39;s flagship Queen Mary 2, undergoing a remastering of unparalleled scale. View and book a cruise on the QM2 Remastered." />
+    <meta name="DC.creator" content="Cunard UK" />
+    <meta name="DC.publisher" content="Cunard UK" />
+    <meta name="DC.language" content="en-GB" />
+
+
+    <meta property="og:title" content="QM2 Remastered" />
+    <meta property="og:site_name" content="Cunard" />
+    <meta property="og:type" content="article" />
+    <meta property="fb:app_id" content="1410557182550135" />
+
+<link rel="shortcut icon" href="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/apple-touch-icon-114x114-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/apple-touch-icon-72x72-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" href="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/apple-touch-icon-57x57-precomposed.png" />
+
+
+
+<link rel="canonical" href="http://www.cunard.co.uk/cruise-ships/queen-mary-2/remastered/" />
+
+
+
+<link mdp-ref="csscore" href="/cdpx/core/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/navigation/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/inspiration/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/story/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/Promo/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/search/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/ship-where/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/carousel/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/features/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/ctas/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/grills/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/html/styles/main.css" rel="stylesheet" type="text/css" media="all" /> 
+<link mdp-ref="cssmain" href="/cdpx/style-guide/styles/main.css" rel="stylesheet" type="text/css" media="all" /> 
+<link mdp-ref="cssmain" href="/cdpx/Reviews/styles/main.css" rel="stylesheet" type="text/css" media="all" /> 
+
+<script src="http://cdn.js.cunard.com/assets/lib/modernizr-2.6.1-custom.min.js"></script>
+
+
+
+    
+    
+
+<title>
+	Queen Mary 2 Remastered - Follow the Progress - Cunard
+</title></head>
+<body class="" id="">
+    
+    <div id="outer">
+        
+
+<div cdp-scrap-cookies="" class="cookiePolicy">
+	<p class="heading">Cookie Policy</p>
+	<p><span>&nbsp;</span><span>This website uses cookies to give you the very best user experience. By using our website, you agree that we can place cookies on your device. For more information see the '</span><a href="/cookie-policy/">Cookie Policy</a><span>' link at the bottom of this page.</span></p>
+	<a href="#" class="cookieOverlayCloseBtn" title="Close"></a>
+</div>
+        
+    
+    
+    <h2 class="ng-hide">QM2 Remastered Hub</h2>
+    
+<div id="overlay"></div>
+<div cdp-scrap-header="" class="newHeader">
+    <div class="globalNav clearfix">
+        <p class="callBack"><a class="boldLink" href="/arrange-a-callback/">Request a callback</a><span class="number"> or call 0344 338 8650</span><span class="disclaimer">local call charges apply.</span></p>
+        <ul class="primaryNav"><li></li><li id="ctl00_ctl00_ctl00_cphMain_ctl01_rptLinks_ctl01_liLink"><a href="/already-booked/voyage-personaliser/">Manage booking</a><span class="goldStrip gradient bottom"></span> | </li><li id="ctl00_ctl00_ctl00_cphMain_ctl01_rptLinks_ctl02_liLink"><a href="/already-booked/cunard-world-club/">World Club</a><span class="goldStrip gradient bottom"></span> | </li><li id="ctl00_ctl00_ctl00_cphMain_ctl01_rptLinks_ctl03_liLink"><a href="/already-booked/ask-cunard/">Help and advice</a><span class="goldStrip gradient bottom"></span></li></ul>
+    </div>
+    <div class="logoWrapper">
+    
+    
+        <a class="logo" href="/" title="Cunard UK"><img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/header/new_logo.png" alt="Cunard UK" /></a>
+    
+	</div>
+    
+    <div class="megaNavWrapper">
+        
+
+<ul class="megaNav clearfix gradient">
+    <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_liHome" class="megaNavItem">
+        <div class="navItem">
+            <a href="/" class="home">
+                <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/header/home_icon.png" alt="home" />
+                <span>Home</span>
+            </a>
+        </div>
+    </li>
+    
+            <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl00_ctl00_li" class="megaNavItem">
+    <div class="navItem">
+        <span class="goldStrip gradient top"></span>
+        <a href="/cruise-search/book-a-cruise/">Find and book a cruise</a>
+        <span class="arrow"></span>
+    </div>
+
+    <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl00_ctl00_divSearch" class="subNavBlock fixedSubNav clearfix searchUK">
+        <form action="/cruise-search/book-a-cruise/results/" method="get">
+            <div class="selectPlace">
+                <label>Search for cruises</label>
+                <select class="customSelect" name="tids"><option value="">Where would you like to go?</option><option value="AFRI">Africa</option><option value="ATIS">Atlantic Isles &amp; Canaries</option><option value="AUST">Australia &amp; Pacific Islands</option><option value="BRIT">British Isles &amp; North West Europe</option><option value="CARI">Caribbean</option><option value="CEAM">Central America &amp; Panama Canal</option><option value="FARE">Far East</option><option value="HAWA">Hawaii</option><option value="MEDI">Mediterranean</option><option value="MIDE">Middle East</option><option value="NYSO">New York to Southampton</option><option value="SONY">Southampton to New York</option><option value="BALT">The Baltic, Scandinavia &amp; Iceland</option><option value="TRAN">Transatlantic Crossing</option><option value="NOAM">USA &amp; Canada</option><option value="WORL">World Cruise</option></select>
+            </div>
+            <div class="searchCruise">
+                <span class="searchBy">Or search by
+                        <a href="/cruise-search/book-a-cruise/#byDateTab">date</a>
+                    or
+                        <a href="/cruise-search/book-a-cruise/?method=number">cruise number</a>.</span>
+                <div class="primaryCta">
+                    <input type="submit" class="button" value="Search" />
+                </div>
+            </div>
+        </form>
+        
+    </div>
+
+    
+
+
+</li>
+
+        
+            <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl01_ctl00_li" class="megaNavItem">
+    <div class="navItem">
+        <span class="goldStrip gradient top"></span>
+        <a href="/destinations/regions/">Destinations</a>
+        <span class="arrow"></span>
+    </div>
+
+    
+
+    
+        <div class="subNavBlock">
+            <div class="subNav clearfix">
+                <div class="subnavItems">
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl01_ctl00_ctlSubNav_rptCols_ctl01_divCol" class="col col25 clearfix">
+            <h3 class="title">Cruise type</h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-types/cruises-from-southampton/">Cruises from Southampton</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/transatlantic-cruises/">Transatlantic Crossings</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/mediterranean-fly-cruises/">Mediterranean Fly-Cruises</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/mini-cruises/">Mini cruises</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/event-cruises/">Special event cruises</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/christmas-cruises/">Christmas cruises</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/regions-of-the-world/">Regions of the World, by Cunard</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/grand-voyages/">Grand Voyages, by Cunard</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/world-cruises/">World cruises</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl01_ctl00_ctlSubNav_rptCols_ctl02_divCol" class="col col50 clearfix">
+            <h3 class="title"><a href="/destinations/regions/">Regions we visit</a></h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/destinations/africa-cruises/">Africa</a></li>
+                
+                    <li>
+                        <a href="/destinations/atlantic-islands-cruises/">Atlantic Islands</a></li>
+                
+                    <li>
+                        <a href="/destinations/south-pacific-cruises/">Australia & South Pacific</a></li>
+                
+                    <li>
+                        <a href="/destinations/british-isles-cruises/">British Isles</a></li>
+                
+                    <li>
+                        <a href="/destinations/canada-cruises/">Canada</a></li>
+                
+                    <li>
+                        <a href="/destinations/canary-islands-cruises/">Canary Islands</a></li>
+                
+                    <li>
+                        <a href="/destinations/caribbean-cruises/">Caribbean</a></li>
+                
+                    <li>
+                        <a href="/destinations/central-america-cruises/">Central America</a></li>
+                
+                    <li>
+                        <a href="/destinations/far-east-and-asia-cruises/">Far East</a></li>
+                
+                    <li>
+                        <a href="/destinations/indian-ocean-cruises/">Indian Ocean</a></li>
+                </ul>
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/destinations/mediterranean-cruises/">Mediterranean</a></li>
+                
+                    <li>
+                        <a href="/destinations/middle-east-cruises/">Middle East</a></li>
+                
+                    <li>
+                        <a href="/destinations/northern-europe-cruises/">Northern Europe</a></li>
+                
+                    <li>
+                        <a href="/destinations/scandinavia-cruises/">The Baltic, Scandinavia & Iceland</a></li>
+                
+                    <li>
+                        <a href="/destinations/south-america-cruises/">South America</a></li>
+                
+                    <li>
+                        <a href="/destinations/usa-cruises/">USA</a></li>
+                
+                    <li>
+                        <a href="/destinations/top-10-destinations-2017/">Top 10 destinations in 2017</a></li>
+                
+                    <li>
+                        <a href="/destinations/top-10-exotic-destinations-2018/">Top 10 exotic destinations in 2018</a></li>
+                
+                    <li>
+                        <a href="/destinations/top-10-destinations-2018/">Top 10 destinations 2018</a></li>
+                
+                    <li>
+                        <a href="/destinations/top-10-destinations-2019/">Top 10 exotic destinations in 2019</a></li>
+                </ul>
+        </div>
+        
+        </div>
+            <div class="promoCol promoBlock">
+                <a href="/cruise-types/winter-highlights/">
+                <div class="promoImg"><img id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl01_ctl00_ctlSubNav_rptCols_ctl02_imgPromo" src="http://cdn.images.cunard.com/webimage/MegaNavThumb/Global/Images/Home_Page/tiles/1/Planet_earth.jpg" alt="" style="border-width:0px;" /></div>
+                <div class="promoMain">
+                    <h3>Oceans of Discovery, by Cunard.</h3>
+                    <p>Introducing our 2019 winter programme. On sale now.</p>
+                    <span class="promoLink">Discover more <span class="icon"></span></span>
+                </div>
+                </a>
+        
+    
+        </div>
+        </div>
+            <div class="closeSubNav">
+                <a href="#">Close</a>
+            </div>
+        </div>
+    
+
+
+</li>
+
+        
+            <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_li" class="megaNavItem current">
+    <div class="navItem">
+        <span class="goldStrip gradient top"></span>
+        <a href="/cruise-ships/queen-mary-2/">Our Ships</a>
+        <span class="arrow"></span>
+    </div>
+
+    
+
+    
+        <div class="subNavBlock">
+            <div class="subNav clearfix">
+                <div class="subnavItems">
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl01_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/cruise-ships/queen-elizabeth/">Queen Elizabeth</a></h3>
+            <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/QU_ship.png" id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl01_imgTitle" class="shipImg" />
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-ships/queen-elizabeth/">Overview</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-elizabeth/accommodation/">Accommodation</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-elizabeth/dining-bars-lounges/">Dining, bars and lounges</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-elizabeth/activities-entertainment/">Activities</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl02_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/cruise-ships/queen-mary-2/">Queen Mary 2</a></h3>
+            <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/QM_ship.png" id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl02_imgTitle" class="shipImg" />
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-ships/queen-mary-2/">Overview</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-mary-2/accommodation/">Accommodation</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-mary-2/dining-bars-lounges/">Dining, bars & lounges</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-mary-2/activities-entertainment/">Activities</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-mary-2/remastered/">QM2 Remastered</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl03_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/cruise-ships/queen-victoria/">Queen Victoria</a></h3>
+            <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/QV_ship.png" id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl03_imgTitle" class="shipImg" />
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-ships/queen-victoria/">Overview</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-victoria/accommodation/">Accommodation</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-victoria/dining-bars-lounges/">Dining, bars and lounges</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-victoria/activities-entertainment/">Activities</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-victoria/refit-for-a-queen/">Refit for a Queen</a></li>
+                </ul>
+            
+        </div>
+        
+        </div>
+            <div class="promoCol promoBlock">
+                <a href="/cruise-ships/queen-victoria/refit-for-a-queen/">
+                <div class="promoImg"><img id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl03_imgPromo" src="http://cdn.images.cunard.com/webimage/MegaNavThumb/Global/Images/Home_Page/tiles/Queen_Victoria_postrefit_navhotspot.jpg" alt="" style="border-width:0px;" /></div>
+                <div class="promoMain">
+                    <h3>Refit for a Queen.</h3>
+                    <p>On 5 May Queen Victoria entered dry dock for a partial refit to enhance your experience on board.</p>
+                    <span class="promoLink">Discover more <span class="icon"></span></span>
+                </div>
+                </a>
+        
+    
+        </div>
+        </div>
+            <div class="closeSubNav">
+                <a href="#">Close</a>
+            </div>
+        </div>
+    
+
+
+</li>
+
+        
+            <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl03_ctl00_li" class="megaNavItem">
+    <div class="navItem">
+        <span class="goldStrip gradient top"></span>
+        <a href="/cunard-experience/">The Cunard experience</a>
+        <span class="arrow"></span>
+    </div>
+
+    
+
+    
+        <div class="subNavBlock">
+            <div class="subNav clearfix">
+                <div class="subnavItems">
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl03_ctl00_ctlSubNav_rptCols_ctl01_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/cunard-experience/">Why Cunard</a></h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/whats-included/">What's included</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/new-to-cruising/">New to cruising</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/enrichment-programmes/">Enrichment programmes</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/event-cruises/">Event cruises</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/signature-drinks/">Cunard signature drinks</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/white-star-service/">White Star Service</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/inspired-by-cunard/">Inspired, by Cunard</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl03_ctl00_ctlSubNav_rptCols_ctl02_divCol" class="col col25 clearfix">
+            <h3 class="title">Cruise & stay holidays</h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/hotels/">Hotels</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/flagship-collection/">Flagship Hotels Collection</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/shore-excursions/">Shore excursions</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/overland-excursions/">Overland excursions</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/land-tours/">Land tours</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/reduced-mobility/">Accessibility</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/our-fares/">Our fares</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl03_ctl00_ctlSubNav_rptCols_ctl03_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/life-on-board/staterooms-and-suites/">Life on board</a></h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/life-on-board/staterooms-and-suites/">Staterooms and suites</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/staterooms-and-suites/grills-experience/">Grills experience</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/staterooms-and-suites/britannia-club-experience/">Britannia Club experience</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/staterooms-and-suites/britannia-experience/">Britannia experience</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/dining-and-bars/">Dining, bars and lounges</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/daytime-activities/">Daytime activities</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/night-time-entertainment/">Night-time entertainment</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/guest-speakers/">Guest speakers</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/gifts-and-celebrations/">Gifts and celebrations</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        </div>
+        </div>
+            <div class="closeSubNav">
+                <a href="#">Close</a>
+            </div>
+        </div>
+    
+
+
+</li>
+
+        
+            <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl04_ctl00_li" class="megaNavItem">
+    <div class="navItem">
+        <span class="goldStrip gradient top"></span>
+        <a href="/cruise-deals/offers/on-board-spending-money/">Cruise Deals</a>
+        <span class="arrow"></span>
+    </div>
+
+    
+
+    
+        <div class="subNavBlock">
+            <div class="subNav clearfix">
+                <div class="subnavItems">
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl04_ctl00_ctlSubNav_rptCols_ctl01_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/cruise-deals/offers/on-board-spending-money/">Cruise deals & offers</a></h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-deals/offers/on-board-spending-money/">Complimentary on board spending money</a></li>
+                
+                    <li>
+                        <a href="/cruise-deals/early-saver-cruises/">Early saver cruise offers</a></li>
+                
+                    <li>
+                        <a href="/cruise-deals/last-minute-cruises/">Last minute cruise offers</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl04_ctl00_ctlSubNav_rptCols_ctl02_divCol" class="col col25 clearfix">
+            <h3 class="title">Offers by destination</h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-deals/destinations/cruises-from-southampton/">Cruise offers from Southampton<br /> 2017 & 2018</a></li>
+                
+                    <li>
+                        <a href="/cruise-deals/destinations/mediterranean-cruises/">Mediterranean cruise offers<br />2017 & 2018</a></li>
+                
+                    <li>
+                        <a href="/cruise-deals/destinations/transatlantic-cruises/">Transatlantic cruise offers<br />2017 & 2018</a></li>
+                </ul>
+            
+        </div>
+        
+        </div>
+            <div class="promoCol promoBlock">
+                <a href="/cruise-deals/offers/on-board-spending-money/">
+                <div class="promoImg"><img id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl04_ctl00_ctlSubNav_rptCols_ctl02_imgPromo" src="http://cdn.images.cunard.com/webimage/MegaNavThumb/Global/Images/Home_Page/tiles/1/Fjords_Brand_Image_hotspot.jpg" alt="" style="border-width:0px;" /></div>
+                <div class="promoMain">
+                    <h3>Complimentary on-board spending money.</h3>
+                    <p>Enrich your experience with complimentary on-board spending money when you book your voyage by 2 October.</p>
+                    <span class="promoLink">View offer <span class="icon"></span></span>
+                </div>
+                </a>
+        
+    
+        </div>
+        </div>
+            <div class="closeSubNav">
+                <a href="#">Close</a>
+            </div>
+        </div>
+    
+
+
+</li>
+
+        
+    
+</ul>
+        
+<div class="innerPageNav clearfix">
+    <p class="thirdNavTitle"><a href="/cruise-ships/queen-mary-2/">Queen Mary 2</a></p>
+    <div class="thirdNavWrapper">
+        
+                <ul class="thirdNavItems clearfix">
+            
+                <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaSubNav_rptLinks_ctl01_liItem">
+                    <span class="goldStrip gradient bottom"></span>
+                    <a href="/cruise-ships/queen-mary-2/">Overview</a>
+                </li>
+                
+            
+                <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaSubNav_rptLinks_ctl02_liItem">
+                    <span class="goldStrip gradient bottom"></span>
+                    <a href="/cruise-ships/queen-mary-2/accommodation/">Accommodation</a>
+                </li>
+                
+            
+                <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaSubNav_rptLinks_ctl03_liItem">
+                    <span class="goldStrip gradient bottom"></span>
+                    <a href="/cruise-ships/queen-mary-2/dining-bars-lounges/">Dining, bars & lounges</a>
+                </li>
+                <div class="extraLinks"><a href="#" class="moreLinks">More <span class="moreArrowUp"></span><span class="moreArrowDown"></span></a><ul class="extraThirdLevelLinks">
+            
+                <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaSubNav_rptLinks_ctl04_liItem">
+                    <span class="goldStrip gradient bottom"></span>
+                    <a href="/cruise-ships/queen-mary-2/activities-entertainment/">Activities</a>
+                </li>
+                
+            
+                <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaSubNav_rptLinks_ctl05_liItem" class="active">
+                    <span class="goldStrip gradient bottom"></span>
+                    <a href="/cruise-ships/queen-mary-2/remastered/">QM2 Remastered</a>
+                </li>
+                </ul></div>
+            
+                </ul>
+            
+        
+            <div class="primaryCtaGold viewCruises">
+                <a href="/cruise-search/book-a-cruise/results/?s=QM">View 166 cruises <span class="icon whiteChevron"></span></a>
+            </div>
+        
+    </div>
+</div>
+    </div>
+</div>
+
+    <div id="page" class="content">
+        
+
+        <div id="main" role="main" class="">
+            <form name="aspnetForm" method="post" action="/cruise-ships/queen-mary-2/remastered/" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+                
+    
+        
+
+<div class="module h1Intro ng-hide">
+    <h1>QM2 Remastered</h1>
+    <div>
+        
+    </div>
+</div>
+    
+
+                
+    
+    
+        
+    
+    
+    
+
+<div cdp-promotional-gallery="" id="" type="Carousel" display-thumbnails="true" display-features="false" class="">
+    <ul core-model="gallery">
+
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Queen Mary 2 returns, Remastered.</span>
+            <span core-model-prop="content">On Thursday 23 June our flagship returned to Southampton, Remastered. Over the course of her refit, the interior and exterior of our flagship has been transformed.
+</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Campaigns/QM2%20Refit/QM2-Atrium-966x442.jpg" alt="The remastered Grand Lobby" />
+            <a core-model-prop="link" title="" href="" target=""></a>
+        </li>
+        
+    </ul>
+</div>
+
+
+            <div cdp-story="" id="" class="">
+                
+
+
+                <div core-model="setup">
+                    <div core-model-prop="title">The big reveal.</div>
+
+                    
+
+                    <div core-model-prop="description">As the first guests arrived on board in Hamburg, Queen Mary 2?s crew bristled with pride at their remastered home. Weeks of hard work have been for this moment ? the first, awe-struck reaction as guests walk into the Grand Lobby or discover the stunning Carinthia Lounge. Join us to explore how the best has been made better.</div>
+                    
+                    
+                    <div layout="" core-model-prop="config" story-type="image" asset="/Global/Images/Campaigns/QM2%20Refit/final-touches/Carinthia-Lounge.jpg" asset-image="" assetwidth=""></div>
+                    
+                    <a core-model-prop="link" cta-bg="" href="/cruise-ships/queen-mary-2/remastered/final-touches/" target="">Discover more</a>
+                    
+                </div>
+
+
+                
+</div>
+
+<div cdp-article-list="" id="">
+    <div core-model="articleHub">
+       <h3 core-model-prop="title">Previous articles.</h3>
+        <a core-model-prop="cta" target="" href=""></a>
+
+        <ul core-model-prop="articleList" rowsPerPage="3">
+
+           
+              <li core-model-prop="articleItem" layout="">
+                <h3 core-model-prop="title">The Remastered Queen begins to emerge.</h3>
+                <img core-model-prop="img" src="http://cdn.images.cunard.com/Global/Images/Campaigns/QM2%20Refit/attention-to-detail.jpg" />
+                  
+                    <a core-model-prop="link" target="" href="/cruise-ships/queen-mary-2/remastered/bringing-it-together/">Discover more</a>
+                  
+                <p core-model-prop="content">We?re over half way through Queen Mary 2?s Remastering, and work has begun focusing on the finer details ? from woodworking to upholstery. The new areas are beginning to take shape.</p>
+              </li>
+
+            
+              <li core-model-prop="articleItem" layout="">
+                <h3 core-model-prop="title">The transformation begins.</h3>
+                <img core-model-prop="img" src="http://cdn.images.cunard.com/Global/Images/Campaigns/QM2%20Refit/QM2%20the%20dry%20dock%20is%20closed.jpg" />
+                  
+                    <a core-model-prop="link" target="" href="/cruise-ships/queen-mary-2/remastered/deconstruction/">Discover more</a>
+                  
+                <p core-model-prop="content">Across the Elbe, opposite Hamburg?s bustling city centre, lies the Blohm + Voss Shipyard and their Elbe 17 dry dock. After hours of very careful maneuvering, this is now Queen Mary 2?s home for several weeks whilst she is remastered. It?s only when the dry dock is emptied that the full scale of our flagship becomes clear. </p>
+              </li>
+
+            
+
+        </ul>
+    </div>
+</div>
+
+
+<!-- Multi Story Module -->
+<div cdp-story-multi="" data-video-data="{&quot;title&quot;:&quot;Queen Mary 2 Remastered&quot;,&quot;items&quot;:[{&quot;Type&quot;:&quot;YouTube&quot;,&quot;Source&quot;:&quot;5nFlbdniFlc&quot;,&quot;Title&quot;:&quot;3 weeks in 3 minutes.&quot;,&quot;Description&quot;:&quot;Queen Mary 2?s Remastered interiors have taken years to design. We?ve worked with world-class designers to create spaces that are at once contemporary and reflective of Cunard?s illustrious past. &quot;,&quot;ThumbnailUrl&quot;:null,&quot;IsImageFromCms&quot;:false,&quot;CtaText&quot;:null,&quot;CtaLink&quot;:null,&quot;CtaTarget&quot;:null},{&quot;Type&quot;:&quot;YouTube&quot;,&quot;Source&quot;:&quot;AshNo-vfIuw&quot;,&quot;Title&quot;:&quot;Queen Mary 2 Remastered.&quot;,&quot;Description&quot;:&quot;Never before has a ship had so much attention lavished upon her. Queen Mary 2 will be refined and remastered. &quot;,&quot;ThumbnailUrl&quot;:null,&quot;IsImageFromCms&quot;:false,&quot;CtaText&quot;:null,&quot;CtaLink&quot;:&quot;https://www.youtube.com/watch?v=AshNo-vfIuw&quot;,&quot;CtaTarget&quot;:null},{&quot;Type&quot;:&quot;YouTube&quot;,&quot;Source&quot;:&quot;TVX-DdS8Y5A&quot;,&quot;Title&quot;:&quot;A room with a view.&quot;,&quot;Description&quot;:&quot;You?ll find one of the most striking views on board in Queen Mary 2?s atrium. The new view will stretch almost the length of the ship.&quot;,&quot;ThumbnailUrl&quot;:null,&quot;IsImageFromCms&quot;:false,&quot;CtaText&quot;:null,&quot;CtaLink&quot;:&quot;https://www.youtube.com/watch?v=TVX-DdS8Y5A&amp;list=PLqKH3IX3Gzjd_ir4YDdYo6WInOhCaBNBA&amp;index=3&quot;,&quot;CtaTarget&quot;:null},{&quot;Type&quot;:&quot;YouTube&quot;,&quot;Source&quot;:&quot;6gMlPawGrtY&quot;,&quot;Title&quot;:&quot;Discover where our new carpets will take you.&quot;,&quot;Description&quot;:&quot;The luxurious carpets are undeniably beautiful and the quality will shine through with every step.&quot;,&quot;ThumbnailUrl&quot;:null,&quot;IsImageFromCms&quot;:false,&quot;CtaText&quot;:null,&quot;CtaLink&quot;:&quot;https://www.youtube.com/watch?v=6gMlPawGrtY&quot;,&quot;CtaTarget&quot;:null},{&quot;Type&quot;:&quot;YouTube&quot;,&quot;Source&quot;:&quot;L59crxH44gE&quot;,&quot;Title&quot;:&quot;From port to port.&quot;,&quot;Description&quot;:null,&quot;ThumbnailUrl&quot;:null,&quot;IsImageFromCms&quot;:false,&quot;CtaText&quot;:null,&quot;CtaLink&quot;:&quot;https://www.youtube.com/watch?v=L59crxH44gE&quot;,&quot;CtaTarget&quot;:null},{&quot;Type&quot;:&quot;YouTube&quot;,&quot;Source&quot;:&quot;Jt2IdfE6ONk&quot;,&quot;Title&quot;:&quot;Food for thought and sparkling conversations.&quot;,&quot;Description&quot;:&quot;Our culinary team has taken a fresh look at the menus throughout Queen Mary 2 to create some exciting new dining experiences. &quot;,&quot;ThumbnailUrl&quot;:null,&quot;IsImageFromCms&quot;:false,&quot;CtaText&quot;:null,&quot;CtaLink&quot;:&quot;https://www.youtube.com/watch?v=Jt2IdfE6ONk&quot;,&quot;CtaTarget&quot;:null},{&quot;Type&quot;:&quot;YouTube&quot;,&quot;Source&quot;:&quot;l_YuzDwqvJs&quot;,&quot;Title&quot;:&quot;Because good times never go out of fashion.&quot;,&quot;Description&quot;:&quot;The original Queen Mary was an icon of art deco inspired luxury ocean travel, so it is fitting to incorporate some design flourishes. &quot;,&quot;ThumbnailUrl&quot;:null,&quot;IsImageFromCms&quot;:false,&quot;CtaText&quot;:null,&quot;CtaLink&quot;:&quot;https://www.youtube.com/watch?v=l_YuzDwqvJs&quot;,&quot;CtaTarget&quot;:null},{&quot;Type&quot;:&quot;YouTube&quot;,&quot;Source&quot;:&quot;QLIp90aFVlo&quot;,&quot;Title&quot;:&quot;The Cunard commission.&quot;,&quot;Description&quot;:&quot;As part of Queen Mary 2?s remastering, Cunard commissioned a renowned photographer to capture the grandeur of the Cunard Buildings.&quot;,&quot;ThumbnailUrl&quot;:null,&quot;IsImageFromCms&quot;:false,&quot;CtaText&quot;:null,&quot;CtaLink&quot;:&quot;https://youtu.be/QLIp90aFVlo&quot;,&quot;CtaTarget&quot;:null}]}" id=""></div>
+
+
+            </form>
+        </div>
+
+        
+
+        <div id="backToTop" class="ng-hide">
+            <a href="#page">
+                <span class="icon"></span>
+                <em>Back to top</em>
+            </a>
+        </div>
+    </div>
+
+    
+<div cdp-scrap-footer="" id="footer">
+    <div class="footer-wrapper">
+        <div class="cols twoCols">
+            <div class="col">
+                <div class="col1" data-childtype="first">
+                    <a class="footer-link-titles" href="/">Cunard</a>
+                    
+                            <ul class="footer-links">
+                        
+                            <li>
+                                <a href="/cunard-experience/">About Cunard</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/about-us/awards/">Our awards</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/about-us/our-partners/">Our partners</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/contact-us/">Contact us</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/arrange-a-callback/">Request a call back</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/contact-us/travel-agents/">Find a travel agent</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/contact-us/contact/">Media enquiries</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/cunard-experience/media-centre/press-releases/">Press releases</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.carnivalukcareers.co.uk/" target="_blank">Careers</a>
+                            </li>
+                        
+                            </ul>
+                        
+                </div>
+                <div class="col1">
+                    <a class="footer-link-titles" href="/legal-information/">Advice and policies</a>
+                    
+                            <ul class="footer-links">
+                        
+                            <li>
+                                <a href="/already-booked/ask-cunard/">Frequently asked questions</a>
+                            </li>
+                        
+                            <li>
+                                <a href="https://www.gov.uk/foreign-travel-advice" target="_blank">Foreign travel advice</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cunard.co.uk/legal-information/?view=4026">Passenger Bill of Rights</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/cookie-policy/">Cookie Policy</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cunard.co.uk/legal-information/?view=1992">Privacy Policy</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cunard.co.uk/legal-information/?view=4070">Website terms of use</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/legal-information/">Legal information</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/footer-links/advice-and-policies/credit-card-charges/">Credit card charges</a>
+                            </li>
+                        
+                            </ul>
+                        
+
+                    
+                    
+                            <ul class="footer-links">
+                        
+                            </ul>
+                        
+                </div>
+            </div>
+            <div class="col">
+                
+                <div class="col1" data-childtype="first">
+                    
+                        <a class="footer-link-titles">More Information</a>
+                    
+                    
+                            <ul class="footer-links">
+                        
+                            <li>
+                                <a href="/already-booked/voyage-personaliser/">Manage your booking</a></li>
+                        
+                            <li>
+                                <a href="/cruise-search/how-to-book/brochure-request/">Request a brochure</a></li>
+                        
+                            <li>
+                                <a href="https://cunard.inbro.net/" target="_blank">View brochure online</a></li>
+                        
+                            <li>
+                                <a href="/cruise-types/cruises-2017/">2017 cruises</a></li>
+                        
+                            <li>
+                                <a href="/cruise-types/cruises-2018/">2018 cruises</a></li>
+                        
+                            <li>
+                                <a href="/cruise-types/winter-highlights/">2019 cruises</a></li>
+                        
+                            <li>
+                                <a href="/cruise-types/event-cruises/">Event cruises</a></li>
+                        
+                            <li>
+                                <a href="/destinations-old/regions-old/">Where we sail</a></li>
+                        
+                            <li>
+                                <a href="/site-map/">Site map</a></li>
+                        
+                            </ul>
+                        
+                </div>
+                <div class="col1">
+                    
+                        <a class="footer-link-titles">Cunard On Social Media</a>
+                        <div class="twitterWidgetContainer">
+                            <a class="twitter-timeline" href="https://twitter.com/cunardline" data-theme="dark" data-widget-id="487567030296391680" width="350" height="387" data-link-color="#917233" data-tweet-limit="1" border-color="#917233" data-chrome="nofooter transparent">Tweets by @cunardline</a>
+                            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+                        </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-divider clearfix">
+            
+                <ul class="cruise-line-logo">
+                    
+                        <li>
+                            <a href="http://www.cunard.co.uk/legal-information/?view=4068"><img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/footer/atol-logo-small.jpg" alt="ATOL Protected" /></a></li>
+                    
+                        <li>
+                            <a href="http://www.cunard.co.uk/legal-information/?view=4068"><img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/footer/abta-logo-small.jpg" alt="ABTA logo" /></a></li>
+                    
+                        <li>
+                            <a href="http://www.cunard.co.uk/legal-information/?view=4026"><img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/footer/clia-logo-small.jpg" alt="CLIA - Uk and Ireland" /></a>
+                        </li>
+                    
+                </ul>
+            
+
+            <div class="addressBlock">
+            
+
+            <p id="copyright">&copy; 2017 Cunard Line. All rights reserved</p>
+            </div>
+            <ul id="socialFollow">
+                <li><a href="http://instagram.com/cunardline" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_instagram_30x30.png" alt="Instagram" /></a></li>
+                <li><a href="https://twitter.com/cunardline" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_twitter_30x30.png" alt="Twitter" /></a></li>
+                <li><a href="https://www.facebook.com/cunard" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_facebook_30x30.png" alt="Facebook" /></a></li>
+                <li><a href="https://plus.google.com/109804427722205051153/posts" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_googleplus_30x30.png" alt="Google Plus" /></a></li>
+                <li><a href="http://www.youtube.com/user/WeAreCunard" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_youtube_30x30.png" alt="YouTube" /></a></li>
+                <li><a href="http://wearecunard.com/" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_blog_30x30.png" alt="Blog" /></a></li>
+            </ul>
+        </div>
+    
+    </div>
+</div>
+
+    
+
+    </div>
+    
+    
+
+<script mdp-ref="jsdeps" src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.12/es5-shim.min.js" type="text/javascript"></script>
+<script mdp-ref="jsdeps" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+<script mdp-ref="jsdeps" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js" type="text/javascript"></script>
+<script mdp-ref="jsdeps" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js" type="text/javascript"></script>
+<script mdp-ref="jsdeps" src="//cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js" type="text/javascript"></script>
+
+
+<!-- New Module V2 Required JS includes-->
+<script src="/cdpx/navigation/scripts/main.min.js"></script>
+<script src="/cdpx/story/scripts/main.min.js"></script>
+<script src="/cdpx/ship-where/scripts/main.min.js"></script>
+<script src="/cdpx/promo/scripts/main.min.js"></script>
+<script src="/cdpx/inspiration/scripts/main.min.js"></script>
+<script src="/cdpx/search/scripts/main.min.js"></script>
+<script src="/cdpx/carousel/scripts/main.min.js"></script>
+<script src="/cdpx/features/scripts/main.min.js"></script>
+<script src="/cdpx/ctas/scripts/main.min.js"></script>
+<script src="/cdpx/grills/scripts/main.min.js"></script>
+<script src="/cdpx/html/scripts/main.min.js"></script>
+<script src="/cdpx/style-guide/scripts/main.min.js"></script>
+<script src="/cdpx/Reviews/scripts/main.min.js"></script>
+
+<script src="/cdpx/core/scripts/core.min.js"></script> <!-- leave core at the end -->
+
+<!-- Include theme JS files here in build order -->
+
+
+
+<!--[if lte IE 8 ]>
+<script src="/assets/theme_tab_desk/ie_upgrade/iewarning.js"></script>
+<![endif]-->
+    
+    
+
+    
+    
+    
+
+</body>
+</html>

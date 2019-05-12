@@ -1,0 +1,185 @@
+/* STYLE OF LOPAGES */
+html {
+    font-family : sans-serif;
+}
+
+/* STYLE OF HYPERTEXTUAL RECORDS */
+div.lr {
+	/* log-record */
+    padding : 3px;
+}
+div.tlr {
+	/* tabular log-records */
+    padding : 3px;
+    display : table;
+}
+div.rph {
+	/* root page header */
+  	color : red;
+  	border : outset;
+  	padding-bottom : 0.5em;
+  	margin-bottom : 0.5em;
+}
+div.rpf {
+  	/* root page footer */
+	color : red;
+	border : inset;
+	padding-top : 0.5em;
+	margin-top : 0.5em;
+}
+div.pnp {
+	/* parent new-page log-record */
+    padding : 3px;
+}
+div.cnp {
+	/* child new-page  log-record */
+  	color : red;
+  	border : outset;
+  	padding-bottom : 0.5em;
+  	margin-bottom : 0.5em;
+}
+div.cep {
+  	/* child end-page  log-record */
+	color : red;
+	border : inset;
+	padding-top : 0.5em;
+	margin-top : 0.5em;
+}
+div.pep {
+	/* parent end-page log-record */
+	padding : 3px;
+}
+
+div.pnp_null {
+	/* parent new-page log-record for null msgs */
+    display : none;
+    /* do not display, once the link to the new page has been fully written */
+}
+
+div.pnp_null:last-child {
+	/* parent new-page log-record for null msgs */
+	display : block;
+	/* display pending links (not completed yet) at the end of page */	
+}
+
+div.tr {
+	/* row of a tabular log record */
+	display : table-row;
+}
+
+div.tc {
+	/* cell of a tabular log record */
+	display : table-cell;
+	padding : 3px;
+	border : solid 1px grey;
+}
+
+div.tlr > div.pep {
+	/* log record as a tabular row */
+	width : 100%;
+}
+
+/* STYLE OF TABLEs as from TableRenderer */
+th {
+  	background-color : transparent;
+}
+
+/* STYLE OF POP-UPs */
+div.popup {
+  	position : relative;
+  	z-index : auto;
+  	display : inline; 
+}
+  
+div.popup:hover {
+  	z-index : +1;
+}
+
+span.anchor:hover {
+  	color : red;
+}
+
+div.show {
+  	display : none;
+}
+
+span.anchor {
+	display : inline;
+	border-bottom-color : blue;
+	border-bottom-style : dashed;
+	border-bottom-width : thin;
+}
+
+span.anchor:hover div.show {
+  	display : block;
+  	position : absolute;
+  	color : black;
+    
+  	/* popup-box */
+  	top : 20px;
+ 	left : 10px;   
+  	width : 40vw;
+  	max-width : 48vw;
+  	max-height : 48vh;
+  	overflow : auto;
+  
+  	padding : 15px;
+  	border : 1px solid #AAAAAA;
+  	border-radius : 10px;
+  	background-color : #DFDFDF;
+}
+
+div.show:hover {
+  	resize : both;
+/*  cursor : se-resize; */
+} 
+
+object /*,iframe*/ {
+  	width : 100%;
+}
+
+/*  <!--  how to use pop-ups -->
+    <p>html page starts here ...</p>
+
+    <DIV class="popup">
+      <SPAN class="anchor">Rich HTML anchor to hover on to pop-up
+	    <DIV class="show">
+	       <b>Rich HTML content to show in the pop-up</b>      
+	    </DIV>
+      </SPAN>
+    </DIV>
+
+    <p>html page continues here ...</p>
+    
+*/
+
+/* STYLE OF	CUSTOM TOOLTIPS	*/
+[tooltip] {
+	border-bottom : 1px dotted #333;
+    position : relative;
+    cursor : none;
+}
+[tooltip]:hover:after {
+    content : attr(tooltip);
+    position : absolute;
+    white-space : nowrap;
+    background : rgba(0, 0, 0, 0.85);
+    padding : 3px 6px;
+    color : #FFF;
+    border-radius : 3px;
+    margin-left : 10px;
+    margin-top : -10px;
+}
+
+/*  <!--  how to use custom tooltips -->
+<SPAN tooltip="tooltip content">tooltip anchor</SPAN>
+*/
+
+/* CUSTOM AND NATIVE TOOLTIPS' ANCHORs SHARE THE SAME STYLE */
+span.tooltipAnchor, span[title] {
+	display : inline;
+	border-bottom-color : gray;
+	border-bottom-style : dashed;
+	border-bottom-width: thin;
+}
+

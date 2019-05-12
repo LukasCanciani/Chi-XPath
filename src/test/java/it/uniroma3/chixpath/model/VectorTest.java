@@ -20,7 +20,6 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import it.uniroma3.chixpath.Partitioner;
 
 public class VectorTest {
 

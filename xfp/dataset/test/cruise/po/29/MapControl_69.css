@@ -1,0 +1,109 @@
+?/*
+    is CSS loaded, map is assumed at top, so remove to margin to moveup
+*/
+#main .ControlItem:first-child {
+    margin-top: 0px;
+}
+
+@media screen and (max-width: 767px) and (min-width: 0px) {
+    #main .InPageControls .ControlItem:first-child {
+         margin-top: 0px;
+    }
+}
+
+.mapContainer
+{
+    margin-bottom: 30px;
+	/*position:relative;	*/
+}
+
+.mapInfoContainer
+{
+	display:none;
+	width:281px;
+	height:140px;
+	/*height:122px;*/
+	float:left;
+	/*width:173px;*/
+	/*height:99px;*/
+	background:url(../Images/googlemap/mapInfoBg.png) no-repeat 0px 0px; 
+	position:relative;
+	top:30px;
+	left:30px;
+	z-Index:40 !important;
+	margin-top:-305px;
+	/*zoom:1;*/
+}
+.mpinfoTop 
+{
+	float:right;
+	width:15px;
+	font-size:60%;
+	height:10px;
+	/*margin-right:15px;	*/
+	margin-right:0px;
+	/*margin-top:5px;*/
+}
+
+.mpinfoTop a,.mpinfoTop a:active, .mpinfoTop a:visited, .mpinfoTop a:hover
+{	
+	text-decoration:none;
+}
+.clearFloats
+{
+	clear:both;
+}
+
+.mpInfoConLt
+{
+	float:left;
+	/*margin-left:10px;*/
+	/*margin-left:8px;	*/
+	/*margin-left:6px;*/
+	margin-left:8px;
+}
+
+.mpInfoConRt strong {
+    font-weight: bold;
+}
+.mpInfoConRt
+{
+	/*width:85px;*/
+	float:left;
+	font-size:0.78em;
+	/*padding-left:5px;*/
+	/*padding-left:2px;*/
+	padding-left:8px;
+	padding-right:8px;
+	/*width:auto;*/
+	width:187px;
+	line-height:1.0em;
+	margin-top:-1px;
+    font-family: arial, verdana, helvetica, "sans serif";
+}
+
+.mpInfoConRt a,.mpInfoConRt a:active, .mpInfoConRt a:visited 
+{	
+	text-decoration:none;
+}
+.mpInfoConRt a:hover
+{
+	text-decoration:underline;
+}
+
+.mpImageLink
+{
+	display:none;
+}
+.mpInfoInner
+{
+	float:left;
+	/*width:100%;	*/
+	margin-top:-1px;
+	margin-right:12px;
+	padding:0px;
+	/*width:216px;*/
+	width:281px;	
+    font-size: 16px;
+	/*display:none;*/
+}

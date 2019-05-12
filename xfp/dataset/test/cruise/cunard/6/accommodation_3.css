@@ -1,0 +1,1212 @@
+?
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js ie6 ltr"><![endif]-->
+<!--[if IE 7 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js ie7 ltr"><![endif]-->
+<!--[if IE 8 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js ie8 ltr"><![endif]-->
+<!--[if IE 9 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js ie9 ltr"><![endif]-->
+<!--[if IEMobile 7 ]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js iem7 ltr"><![endif]-->
+<!--[if (gt IE 9)|!(IE)|(gt IEMobile 7)|!(IEMobile) ]><!--><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-gb" dir="ltr" class="no-js ltr"><!--<![endif]-->
+
+<head>
+    
+<script type="text/javascript" src="//nexus.ensighten.com/carnivalplc/cunardbrand/Bootstrap.js"></script>
+    
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="format-detection" content="telephone=no" />
+
+
+
+<meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"0205fafc28","applicationID":"3704373","transactionName":"YVUANkRYVxIEAUdRV1gfIzFmFk0ECBJfWUxTQ00VU1sWEQQFVksXV1MBDVtUVgUEFlpXVl5FAExXSkkZ","queueTime":15,"applicationTime":74,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<!--[if IE]><![endif]-->
+<meta name="distribution" content="global" />
+<meta name="rating" content="general" />
+<meta name="viewport" content="width=device-width" />
+<meta name="release-version" content="2.24" />
+<!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+<meta http-equiv="cleartype" content="on" />
+    <link rel="alternate" hreflang="en-GB" href="http://www.cunard.co.uk/cruise-ships/queen-mary-2/accommodation/" />
+    <link rel="alternate" hreflang="en-US" href="http://www.cunard.com/cruise-ships/queen-mary-2/accommodation/" />
+    <link rel="alternate" hreflang="en-AU" href="http://www.cunardline.com.au/cruise-ships/queen-mary-2/accommodation/" />
+
+    <meta name="title" content="Queen Mary 2 Suites And Staterooms - Cunard Cruise Line" />
+    <meta name="created" content="16/11/2015 11:39:00" />
+    <meta name="modified" content="07/12/2015 12:58:50" />
+    <meta name="description" content="Learn about the luxurious suites and staterooms available on the Queen Mary 2 cruise ship. A wide range of onboard accommodation is available." />
+    <meta name="creator" content="Cunard UK" />
+    <meta name="publisher" content="Cunard UK" />
+    <meta name="robots" content="index,follow" />
+    <meta name="language" content="en-GB" />
+
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+    <meta name="DC.title" content="Queen Mary 2 Suites And Staterooms - Cunard Cruise Line" />
+    <meta name="DC.created" content="16/11/2015 11:39:00" />
+    <meta name="DC.modified" content="07/12/2015 12:58:50" />
+    <meta name="DC.description" content="Learn about the luxurious suites and staterooms available on the Queen Mary 2 cruise ship. A wide range of onboard accommodation is available." />
+    <meta name="DC.creator" content="Cunard UK" />
+    <meta name="DC.publisher" content="Cunard UK" />
+    <meta name="DC.language" content="en-GB" />
+
+
+    <meta property="og:title" content="Accommodation" />
+    <meta property="og:site_name" content="Cunard" />
+    <meta property="og:type" content="article" />
+    <meta property="fb:app_id" content="1410557182550135" />
+
+<link rel="shortcut icon" href="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/apple-touch-icon-114x114-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/apple-touch-icon-72x72-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" href="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/apple-touch-icon-57x57-precomposed.png" />
+
+
+
+<link rel="canonical" href="http://www.cunard.co.uk/cruise-ships/queen-mary-2/accommodation/" />
+
+
+
+<link mdp-ref="csscore" href="/cdpx/core/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/navigation/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/inspiration/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/story/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/Promo/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/search/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/ship-where/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/carousel/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/features/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/ctas/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/grills/styles/main.css" rel="stylesheet" type="text/css" media="all" />    
+<link mdp-ref="cssmain" href="/cdpx/html/styles/main.css" rel="stylesheet" type="text/css" media="all" /> 
+<link mdp-ref="cssmain" href="/cdpx/style-guide/styles/main.css" rel="stylesheet" type="text/css" media="all" /> 
+<link mdp-ref="cssmain" href="/cdpx/Reviews/styles/main.css" rel="stylesheet" type="text/css" media="all" /> 
+
+<script src="http://cdn.js.cunard.com/assets/lib/modernizr-2.6.1-custom.min.js"></script>
+
+
+
+    
+    
+
+<title>
+	Queen Mary 2 Suites And Staterooms - Cunard Cruise Line
+</title></head>
+<body class="" id="">
+    
+    <div id="outer">
+        
+
+<div cdp-scrap-cookies="" class="cookiePolicy">
+	<p class="heading">Cookie Policy</p>
+	<p><span>&nbsp;</span><span>This website uses cookies to give you the very best user experience. By using our website, you agree that we can place cookies on your device. For more information see the '</span><a href="/cookie-policy/">Cookie Policy</a><span>' link at the bottom of this page.</span></p>
+	<a href="#" class="cookieOverlayCloseBtn" title="Close"></a>
+</div>
+        
+    
+    
+    <h2 class="ng-hide">Queen Mary 2 accommodation</h2>
+    
+<div id="overlay"></div>
+<div cdp-scrap-header="" class="newHeader">
+    <div class="globalNav clearfix">
+        <p class="callBack"><a class="boldLink" href="/arrange-a-callback/">Request a callback</a><span class="number"> or call 0344 338 8650</span><span class="disclaimer">local call charges apply.</span></p>
+        <ul class="primaryNav"><li></li><li id="ctl00_ctl00_ctl00_cphMain_ctl01_rptLinks_ctl01_liLink"><a href="/already-booked/voyage-personaliser/">Manage booking</a><span class="goldStrip gradient bottom"></span> | </li><li id="ctl00_ctl00_ctl00_cphMain_ctl01_rptLinks_ctl02_liLink"><a href="/already-booked/cunard-world-club/">World Club</a><span class="goldStrip gradient bottom"></span> | </li><li id="ctl00_ctl00_ctl00_cphMain_ctl01_rptLinks_ctl03_liLink"><a href="/already-booked/ask-cunard/">Help and advice</a><span class="goldStrip gradient bottom"></span></li></ul>
+    </div>
+    <div class="logoWrapper">
+    
+    
+        <a class="logo" href="/" title="Cunard UK"><img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/header/new_logo.png" alt="Cunard UK" /></a>
+    
+	</div>
+    
+    <div class="megaNavWrapper">
+        
+
+<ul class="megaNav clearfix gradient">
+    <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_liHome" class="megaNavItem">
+        <div class="navItem">
+            <a href="/" class="home">
+                <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/header/home_icon.png" alt="home" />
+                <span>Home</span>
+            </a>
+        </div>
+    </li>
+    
+            <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl00_ctl00_li" class="megaNavItem">
+    <div class="navItem">
+        <span class="goldStrip gradient top"></span>
+        <a href="/cruise-search/book-a-cruise/">Find and book a cruise</a>
+        <span class="arrow"></span>
+    </div>
+
+    <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl00_ctl00_divSearch" class="subNavBlock fixedSubNav clearfix searchUK">
+        <form action="/cruise-search/book-a-cruise/results/" method="get">
+            <div class="selectPlace">
+                <label>Search for cruises</label>
+                <select class="customSelect" name="tids"><option value="">Where would you like to go?</option><option value="AFRI">Africa</option><option value="ATIS">Atlantic Isles &amp; Canaries</option><option value="AUST">Australia &amp; Pacific Islands</option><option value="BRIT">British Isles &amp; North West Europe</option><option value="CARI">Caribbean</option><option value="CEAM">Central America &amp; Panama Canal</option><option value="FARE">Far East</option><option value="HAWA">Hawaii</option><option value="MEDI">Mediterranean</option><option value="MIDE">Middle East</option><option value="NYSO">New York to Southampton</option><option value="SONY">Southampton to New York</option><option value="BALT">The Baltic, Scandinavia &amp; Iceland</option><option value="TRAN">Transatlantic Crossing</option><option value="NOAM">USA &amp; Canada</option><option value="WORL">World Cruise</option></select>
+            </div>
+            <div class="searchCruise">
+                <span class="searchBy">Or search by
+                        <a href="/cruise-search/book-a-cruise/#byDateTab">date</a>
+                    or
+                        <a href="/cruise-search/book-a-cruise/?method=number">cruise number</a>.</span>
+                <div class="primaryCta">
+                    <input type="submit" class="button" value="Search" />
+                </div>
+            </div>
+        </form>
+        
+    </div>
+
+    
+
+
+</li>
+
+        
+            <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl01_ctl00_li" class="megaNavItem">
+    <div class="navItem">
+        <span class="goldStrip gradient top"></span>
+        <a href="/destinations/regions/">Destinations</a>
+        <span class="arrow"></span>
+    </div>
+
+    
+
+    
+        <div class="subNavBlock">
+            <div class="subNav clearfix">
+                <div class="subnavItems">
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl01_ctl00_ctlSubNav_rptCols_ctl01_divCol" class="col col25 clearfix">
+            <h3 class="title">Cruise type</h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-types/cruises-from-southampton/">Cruises from Southampton</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/transatlantic-cruises/">Transatlantic Crossings</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/mediterranean-fly-cruises/">Mediterranean Fly-Cruises</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/mini-cruises/">Mini cruises</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/event-cruises/">Special event cruises</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/christmas-cruises/">Christmas cruises</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/regions-of-the-world/">Regions of the World, by Cunard</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/grand-voyages/">Grand Voyages, by Cunard</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/world-cruises/">World cruises</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl01_ctl00_ctlSubNav_rptCols_ctl02_divCol" class="col col50 clearfix">
+            <h3 class="title"><a href="/destinations/regions/">Regions we visit</a></h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/destinations/africa-cruises/">Africa</a></li>
+                
+                    <li>
+                        <a href="/destinations/atlantic-islands-cruises/">Atlantic Islands</a></li>
+                
+                    <li>
+                        <a href="/destinations/south-pacific-cruises/">Australia & South Pacific</a></li>
+                
+                    <li>
+                        <a href="/destinations/british-isles-cruises/">British Isles</a></li>
+                
+                    <li>
+                        <a href="/destinations/canada-cruises/">Canada</a></li>
+                
+                    <li>
+                        <a href="/destinations/canary-islands-cruises/">Canary Islands</a></li>
+                
+                    <li>
+                        <a href="/destinations/caribbean-cruises/">Caribbean</a></li>
+                
+                    <li>
+                        <a href="/destinations/central-america-cruises/">Central America</a></li>
+                
+                    <li>
+                        <a href="/destinations/far-east-and-asia-cruises/">Far East</a></li>
+                
+                    <li>
+                        <a href="/destinations/indian-ocean-cruises/">Indian Ocean</a></li>
+                </ul>
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/destinations/mediterranean-cruises/">Mediterranean</a></li>
+                
+                    <li>
+                        <a href="/destinations/middle-east-cruises/">Middle East</a></li>
+                
+                    <li>
+                        <a href="/destinations/northern-europe-cruises/">Northern Europe</a></li>
+                
+                    <li>
+                        <a href="/destinations/scandinavia-cruises/">The Baltic, Scandinavia & Iceland</a></li>
+                
+                    <li>
+                        <a href="/destinations/south-america-cruises/">South America</a></li>
+                
+                    <li>
+                        <a href="/destinations/usa-cruises/">USA</a></li>
+                
+                    <li>
+                        <a href="/destinations/top-10-destinations-2017/">Top 10 destinations in 2017</a></li>
+                
+                    <li>
+                        <a href="/destinations/top-10-exotic-destinations-2018/">Top 10 exotic destinations in 2018</a></li>
+                
+                    <li>
+                        <a href="/destinations/top-10-destinations-2018/">Top 10 destinations 2018</a></li>
+                
+                    <li>
+                        <a href="/destinations/top-10-destinations-2019/">Top 10 exotic destinations in 2019</a></li>
+                </ul>
+        </div>
+        
+        </div>
+            <div class="promoCol promoBlock">
+                <a href="/cruise-types/winter-highlights/">
+                <div class="promoImg"><img id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl01_ctl00_ctlSubNav_rptCols_ctl02_imgPromo" src="http://cdn.images.cunard.com/webimage/MegaNavThumb/Global/Images/Home_Page/tiles/1/Planet_earth.jpg" alt="" style="border-width:0px;" /></div>
+                <div class="promoMain">
+                    <h3>Oceans of Discovery, by Cunard.</h3>
+                    <p>Introducing our 2019 winter programme. On sale now.</p>
+                    <span class="promoLink">Discover more <span class="icon"></span></span>
+                </div>
+                </a>
+        
+    
+        </div>
+        </div>
+            <div class="closeSubNav">
+                <a href="#">Close</a>
+            </div>
+        </div>
+    
+
+
+</li>
+
+        
+            <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_li" class="megaNavItem current">
+    <div class="navItem">
+        <span class="goldStrip gradient top"></span>
+        <a href="/cruise-ships/queen-mary-2/">Our Ships</a>
+        <span class="arrow"></span>
+    </div>
+
+    
+
+    
+        <div class="subNavBlock">
+            <div class="subNav clearfix">
+                <div class="subnavItems">
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl01_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/cruise-ships/queen-elizabeth/">Queen Elizabeth</a></h3>
+            <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/QU_ship.png" id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl01_imgTitle" class="shipImg" />
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-ships/queen-elizabeth/">Overview</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-elizabeth/accommodation/">Accommodation</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-elizabeth/dining-bars-lounges/">Dining, bars and lounges</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-elizabeth/activities-entertainment/">Activities</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl02_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/cruise-ships/queen-mary-2/">Queen Mary 2</a></h3>
+            <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/QM_ship.png" id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl02_imgTitle" class="shipImg" />
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-ships/queen-mary-2/">Overview</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-mary-2/accommodation/">Accommodation</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-mary-2/dining-bars-lounges/">Dining, bars & lounges</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-mary-2/activities-entertainment/">Activities</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-mary-2/remastered/">QM2 Remastered</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl03_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/cruise-ships/queen-victoria/">Queen Victoria</a></h3>
+            <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/QV_ship.png" id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl03_imgTitle" class="shipImg" />
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-ships/queen-victoria/">Overview</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-victoria/accommodation/">Accommodation</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-victoria/dining-bars-lounges/">Dining, bars and lounges</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-victoria/activities-entertainment/">Activities</a></li>
+                
+                    <li>
+                        <a href="/cruise-ships/queen-victoria/refit-for-a-queen/">Refit for a Queen</a></li>
+                </ul>
+            
+        </div>
+        
+        </div>
+            <div class="promoCol promoBlock">
+                <a href="/cruise-ships/queen-victoria/refit-for-a-queen/">
+                <div class="promoImg"><img id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl02_ctl00_ctlSubNav_rptCols_ctl03_imgPromo" src="http://cdn.images.cunard.com/webimage/MegaNavThumb/Global/Images/Home_Page/tiles/Queen_Victoria_postrefit_navhotspot.jpg" alt="" style="border-width:0px;" /></div>
+                <div class="promoMain">
+                    <h3>Refit for a Queen.</h3>
+                    <p>On 5 May Queen Victoria entered dry dock for a partial refit to enhance your experience on board.</p>
+                    <span class="promoLink">Discover more <span class="icon"></span></span>
+                </div>
+                </a>
+        
+    
+        </div>
+        </div>
+            <div class="closeSubNav">
+                <a href="#">Close</a>
+            </div>
+        </div>
+    
+
+
+</li>
+
+        
+            <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl03_ctl00_li" class="megaNavItem">
+    <div class="navItem">
+        <span class="goldStrip gradient top"></span>
+        <a href="/cunard-experience/">The Cunard experience</a>
+        <span class="arrow"></span>
+    </div>
+
+    
+
+    
+        <div class="subNavBlock">
+            <div class="subNav clearfix">
+                <div class="subnavItems">
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl03_ctl00_ctlSubNav_rptCols_ctl01_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/cunard-experience/">Why Cunard</a></h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/whats-included/">What's included</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/new-to-cruising/">New to cruising</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/enrichment-programmes/">Enrichment programmes</a></li>
+                
+                    <li>
+                        <a href="/cruise-types/event-cruises/">Event cruises</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/signature-drinks/">Cunard signature drinks</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/white-star-service/">White Star Service</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/why-cunard/inspired-by-cunard/">Inspired, by Cunard</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl03_ctl00_ctlSubNav_rptCols_ctl02_divCol" class="col col25 clearfix">
+            <h3 class="title">Cruise & stay holidays</h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/hotels/">Hotels</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/flagship-collection/">Flagship Hotels Collection</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/shore-excursions/">Shore excursions</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/overland-excursions/">Overland excursions</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/land-tours/">Land tours</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/reduced-mobility/">Accessibility</a></li>
+                
+                    <li>
+                        <a href="/cunard-experience/cruise-and-stay/our-fares/">Our fares</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl03_ctl00_ctlSubNav_rptCols_ctl03_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/life-on-board/staterooms-and-suites/">Life on board</a></h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/life-on-board/staterooms-and-suites/">Staterooms and suites</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/staterooms-and-suites/grills-experience/">Grills experience</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/staterooms-and-suites/britannia-club-experience/">Britannia Club experience</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/staterooms-and-suites/britannia-experience/">Britannia experience</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/dining-and-bars/">Dining, bars and lounges</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/daytime-activities/">Daytime activities</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/night-time-entertainment/">Night-time entertainment</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/guest-speakers/">Guest speakers</a></li>
+                
+                    <li>
+                        <a href="/life-on-board/gifts-and-celebrations/">Gifts and celebrations</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        </div>
+        </div>
+            <div class="closeSubNav">
+                <a href="#">Close</a>
+            </div>
+        </div>
+    
+
+
+</li>
+
+        
+            <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl04_ctl00_li" class="megaNavItem">
+    <div class="navItem">
+        <span class="goldStrip gradient top"></span>
+        <a href="/cruise-deals/offers/on-board-spending-money/">Cruise Deals</a>
+        <span class="arrow"></span>
+    </div>
+
+    
+
+    
+        <div class="subNavBlock">
+            <div class="subNav clearfix">
+                <div class="subnavItems">
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl04_ctl00_ctlSubNav_rptCols_ctl01_divCol" class="col col25 clearfix">
+            <h3 class="title"><a href="/cruise-deals/offers/on-board-spending-money/">Cruise deals & offers</a></h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-deals/offers/on-board-spending-money/">Complimentary on board spending money</a></li>
+                
+                    <li>
+                        <a href="/cruise-deals/early-saver-cruises/">Early saver cruise offers</a></li>
+                
+                    <li>
+                        <a href="/cruise-deals/last-minute-cruises/">Last minute cruise offers</a></li>
+                </ul>
+            
+        </div>
+        
+        
+    
+        <div id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl04_ctl00_ctlSubNav_rptCols_ctl02_divCol" class="col col25 clearfix">
+            <h3 class="title">Offers by destination</h3>
+            
+            
+                    <ul class="subCols">
+                
+                    <li>
+                        <a href="/cruise-deals/destinations/cruises-from-southampton/">Cruise offers from Southampton<br /> 2017 & 2018</a></li>
+                
+                    <li>
+                        <a href="/cruise-deals/destinations/mediterranean-cruises/">Mediterranean cruise offers<br />2017 & 2018</a></li>
+                
+                    <li>
+                        <a href="/cruise-deals/destinations/transatlantic-cruises/">Transatlantic cruise offers<br />2017 & 2018</a></li>
+                </ul>
+            
+        </div>
+        
+        </div>
+            <div class="promoCol promoBlock">
+                <a href="/cruise-deals/offers/on-board-spending-money/">
+                <div class="promoImg"><img id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaNav_pglChildren_ctl04_ctl00_ctlSubNav_rptCols_ctl02_imgPromo" src="http://cdn.images.cunard.com/webimage/MegaNavThumb/Global/Images/Home_Page/tiles/1/Fjords_Brand_Image_hotspot.jpg" alt="" style="border-width:0px;" /></div>
+                <div class="promoMain">
+                    <h3>Complimentary on-board spending money.</h3>
+                    <p>Enrich your experience with complimentary on-board spending money when you book your voyage by 2 October.</p>
+                    <span class="promoLink">View offer <span class="icon"></span></span>
+                </div>
+                </a>
+        
+    
+        </div>
+        </div>
+            <div class="closeSubNav">
+                <a href="#">Close</a>
+            </div>
+        </div>
+    
+
+
+</li>
+
+        
+    
+</ul>
+        
+<div class="innerPageNav clearfix">
+    <p class="thirdNavTitle"><a href="/cruise-ships/queen-mary-2/">Queen Mary 2</a></p>
+    <div class="thirdNavWrapper">
+        
+                <ul class="thirdNavItems clearfix">
+            
+                <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaSubNav_rptLinks_ctl01_liItem">
+                    <span class="goldStrip gradient bottom"></span>
+                    <a href="/cruise-ships/queen-mary-2/">Overview</a>
+                </li>
+                
+            
+                <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaSubNav_rptLinks_ctl02_liItem" class="active">
+                    <span class="goldStrip gradient bottom"></span>
+                    <a href="/cruise-ships/queen-mary-2/accommodation/">Accommodation</a>
+                </li>
+                
+            
+                <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaSubNav_rptLinks_ctl03_liItem">
+                    <span class="goldStrip gradient bottom"></span>
+                    <a href="/cruise-ships/queen-mary-2/dining-bars-lounges/">Dining, bars & lounges</a>
+                </li>
+                <div class="extraLinks"><a href="#" class="moreLinks">More <span class="moreArrowUp"></span><span class="moreArrowDown"></span></a><ul class="extraThirdLevelLinks">
+            
+                <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaSubNav_rptLinks_ctl04_liItem">
+                    <span class="goldStrip gradient bottom"></span>
+                    <a href="/cruise-ships/queen-mary-2/activities-entertainment/">Activities</a>
+                </li>
+                
+            
+                <li id="ctl00_ctl00_ctl00_cphMain_ctl01_ctlMegaSubNav_rptLinks_ctl05_liItem">
+                    <span class="goldStrip gradient bottom"></span>
+                    <a href="/cruise-ships/queen-mary-2/remastered/">QM2 Remastered</a>
+                </li>
+                </ul></div>
+            
+                </ul>
+            
+        
+            <div class="primaryCtaGold viewCruises">
+                <a href="/cruise-search/book-a-cruise/results/?s=QM">View 166 cruises <span class="icon whiteChevron"></span></a>
+            </div>
+        
+    </div>
+</div>
+    </div>
+</div>
+
+    <div id="page" class="content">
+        
+
+        <div id="main" role="main" class="">
+            <form name="aspnetForm" method="post" action="/cruise-ships/queen-mary-2/accommodation/" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+                
+    
+        
+
+<div class="module h1Intro ng-hide">
+    <h1>Accommodation</h1>
+    <div>
+        
+    </div>
+</div>
+    
+
+                
+    
+    
+        
+    
+    
+    
+<div cdp-story="full mery" id="" class="full">
+    
+
+
+                <div core-model="setup">
+                    <div core-model-prop="title">Luxury redefined.</div>
+
+                    
+                    <div core-model-prop="subTitle">Every suite and stateroom, a personal oasis of calm. Every restaurant a celebration of cuisine. </div>
+                    
+
+                    <div core-model-prop="description"></div>
+                    
+                    
+                    <div layout="" core-model-prop="config" story-type="image" asset="http://www.cunard.co.uk/Global/Images/Ships/QM2/refit/story-module/QM2-Queens-Grill-Balmoral-Suite-lower-level.jpg" asset-image="" assetwidth=""></div>
+                    
+                    <ul core-model="cta">
+
+                        
+                        <li core-model-prop="item" ctacolor="white" point="Grills">The Grills</li>
+                        
+                        <li core-model-prop="item" ctacolor="blue" point="BritanniaClub">Britannia Club</li>
+                        
+                        <li core-model-prop="item" ctacolor="blue" point="Britannia">Britannia</li>
+                        
+                    </ul>
+                    
+                </div>
+
+
+                
+            </div>
+            
+<div cdp-promotional-gallery="" type="Carousel" display-thumbnails="false" display-features="true" class="grill" id="Grills">
+    <ul core-model="gallery">
+        <li core-model-prop="title">
+            Queens Grill.
+        </li>
+
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Luxurious suites. </span>
+            <span core-model-prop="content">Queens Grill guests enjoy the largest suites on board, commanding the most spectacular views. Meanwhile the exclusive Grills Lounge, private deck and restaurant offer the opportunity to relax in tranquil luxury.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QM2/refit/featured-gallery-module/QM2-Queens-Grill-Balmoral-Suite-upper-level.jpg" alt="" />
+            
+                <a href="/cruise-ships/queen-mary-2/accommodation/queens-grill-suites/" target="" core-model-prop="link">Queens Grill</a>
+            
+        </li>
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Queens Grill butler. </span>
+            <span core-model-prop="content">Every need will be anticipated and each request taken care of. <br /> Your butler will ensure your journey is perfectly tailored for you and that you want for nothing. From assisting you with unpacking to serving canapés, their aim is to make your holiday perfect.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QM2/refit/SYZ16_Service.PNG" alt="" />
+            
+                <a href="/cruise-ships/queen-mary-2/accommodation/queens-grill-suites/" target="" core-model-prop="link">Queens Grill</a>
+            
+        </li>
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Exclusive Queens Grill restaurant. </span>
+            <span core-model-prop="content">Queens Grill dining is world-renowned for a reason. Menus offering both modern and classic dishes, expertly prepared with the very finest ingredients are served in your exclusive Queens Grill restaurant.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QM2/refit/featured-gallery-module/QM2-Queens-Grill-Restaurant.jpg" alt="" />
+            
+                <a href="/cruise-ships/queen-mary-2/accommodation/queens-grill-suites/" target="" core-model-prop="link">Queens Grill</a>
+            
+        </li>
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Fine dining in-suite. </span>
+            <span core-model-prop="content">Enjoy the luxury of your suite or the views commanded from your balcony by dining in-suite. Your butler will serve wine and dinner prepared by Queens Grill chefs course by course, just for you.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QM2/refit/SYZ16_Dining.PNG" alt="" />
+            
+                <a href="/cruise-ships/queen-mary-2/accommodation/queens-grill-suites/" target="" core-model-prop="link">Queens Grill</a>
+            
+        </li>
+        
+    </ul>
+</div>
+
+<div cdp-promotional-gallery="" type="Carousel" display-thumbnails="false" display-features="true" class="grill" id="">
+    <ul core-model="gallery">
+        <li core-model-prop="title">
+            Princess Grill.
+        </li>
+
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Luxurious suites.</span>
+            <span core-model-prop="content">Exclusive suites and access to the private Grills Lounge and Terrace offer Princess Grill passengers space and privacy to relax in calming luxury.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QM2/refit/featured-gallery-module/QM2-Princess-Grill-Suite.jpg" alt="Princess Grill Suite" />
+            
+                <a href="/cruise-ships/queen-mary-2/accommodation/princess-grill-suites/" target="" core-model-prop="link">Princess Grill</a>
+            
+        </li>
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Exceptional dining.</span>
+            <span core-model-prop="content">Dining in the exclusive Princess Grill restaurant is an experience in itself. Menus showcasing the very best ingredients combine with exceptional cooking, exclusive surroundings and impeccable service to make every meal memorable.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QM2/refit/featured-gallery-module/QM2-Princess-Grill--Restaurant.jpg" alt="Princess Grill Restaurant" />
+            
+                <a href="/cruise-ships/queen-mary-2/accommodation/princess-grill-suites/" target="" core-model-prop="link">Princess Grill</a>
+            
+        </li>
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Grills concierge.</span>
+            <span core-model-prop="content">Your Grills concierge is always on hand to create your perfect holiday. On board dinner reservations, experiences ashore or even the coming week?s weather forecast are all simply a request away.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QM2/refit/SYZ16_Feature_Princess_Grill_Concierge_RESIZE.jpg" alt="" />
+            
+                <a href="/cruise-ships/queen-mary-2/accommodation/princess-grill-suites/" target="" core-model-prop="link">Princess Grill</a>
+            
+        </li>
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Extra special touches.</span>
+            <span core-model-prop="content">The famous Cunard Afternoon Tea is given a special touch when enjoyed in your exclusive Grills Lounge, and the additional Penhaligon?s toiletries found in your suite offer extra opportunities to pamper yourself.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QM2/refit/SYZ16_Feature_Princess_Grill_Extra_Special_RESIZE.jpg" alt="" />
+            
+                <a href="/cruise-ships/queen-mary-2/accommodation/princess-grill-suites/" target="" core-model-prop="link">Princess Grill</a>
+            
+        </li>
+        
+    </ul>
+</div>
+
+<div cdp-promotional-gallery="" type="Carousel" display-thumbnails="false" display-features="true" class="" id="BritanniaClub">
+    <ul core-model="gallery">
+        <li core-model-prop="title">
+            Britannia Club.
+        </li>
+
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">An amazing view. </span>
+            <span core-model-prop="content">Beautiful ocean views, breakfast on your balcony and wonderful natural daylight - the ever-changing seascape will continuously enthrall you. Britannia Club is the perfect way to relax and unwind whilst travelling with us.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QM2/refit/SYZ16_Slideshow_Britannia_Club_Stateroom.jpg" alt="" />
+            
+                <a href="/cruise-ships/queen-mary-2/accommodation/britannia-club-balcony/" target="" core-model-prop="link">Britannia Club</a>
+            
+        </li>
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Britannia Club dining. </span>
+            <span core-model-prop="content">Enjoy dinner in the relaxed atmosphere of your own Britannia Club Restaurant, a private part of the grand Britannia Restaurant, at a time that suits you. Varying menus and exclusive dishes create a dining event every evening.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QM2/refit/featured-gallery-module/Britannia-Club-Restaurant.jpg" alt="Britannia Club Restaurant" />
+            
+                <a href="/cruise-ships/queen-mary-2/accommodation/britannia-club-balcony/" target="" core-model-prop="link">Britannia Club</a>
+            
+        </li>
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Complimentary room service. </span>
+            <span core-model-prop="content">Whether you decide to treat yourself to breakfast in bed, or simply choose to dine in the comfort of your stateroom, 24-hour complimentary room service means that freshly-prepared food is always just a phone call away.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QM2/refit/SYZ16_Feature_Princess_Grill_Concierge_RESIZE.jpg" alt="" />
+            
+                <a href="/cruise-ships/queen-mary-2/accommodation/britannia-club-balcony/" target="" core-model-prop="link">Britannia Club</a>
+            
+        </li>
+        
+    </ul>
+</div>
+
+<div cdp-promotional-gallery="" type="Carousel" display-thumbnails="false" display-features="true" class="grill" id="Britannia">
+    <ul core-model="gallery">
+        <li core-model-prop="title">
+            Britannia Staterooms.
+        </li>
+
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Balcony.</span>
+            <span core-model-prop="content">The sea breeze and a stunning view combine to make your balcony a wonderful place to while away the hours ? and where better to enjoy a morning coffee and croissant?</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QM2/refit/balcony.jpg" alt="" />
+            
+                <a href="/cruise-ships/queen-mary-2/accommodation/britannia-balcony/" target="" core-model-prop="link">Britannia Balcony</a>
+            
+        </li>
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Oceanview.</span>
+            <span core-model-prop="content">Natural light and stunning views create a perfect oasis. An ever changing seascape will captivate you, no matter where in the world you are.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QM2/refit/SYZ03_Slideshow_Oeanview_RESIZE.jpg" alt="" />
+            
+                <a href="/cruise-ships/queen-mary-2/accommodation/britannia-oceanview/" target="" core-model-prop="link">Britannia Oceanview</a>
+            
+        </li>
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Inside.</span>
+            <span core-model-prop="content">Unwind in your own comfortable space, and dream of what?s to come - perhaps preparing for tonight?s ball or planning tomorrow?s adventure.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Ships/QM2/refit/SYZ16_Slideshow_Britannia_Club_Stateroom_RESIZE.jpg" alt="" />
+            
+                <a href="/cruise-ships/queen-mary-2/accommodation/britannia-inside/" target="" core-model-prop="link">Britannia Inside</a>
+            
+        </li>
+        
+
+        <li core-model-prop="item">
+            <span core-model-prop="title">Singles.</span>
+            <span core-model-prop="content">Relax in comfortable bliss with a stunning view or share everything your ship has to offer with fellow guests ? the 15 Single staterooms on board Queen Mary 2 offer the opportunity to do as much or little as you desire.</span>
+            <img core-model-prop="thumb" src="http://cdn.images.cunard.com/Global/Images/Destinations/02_Feature_Gallery.jpg" alt="" />
+            
+                <a href="/cruise-ships/queen-mary-2/accommodation/britannia-single-stateroom/" target="" core-model-prop="link">Britannia Single Stateroom.</a>
+            
+        </li>
+        
+    </ul>
+</div>
+
+<div id="" cdp-cta-journey="" class="">
+    <div core-model="journey">
+        <div core-model-prop="contact">
+            <span core-model-prop="name">
+                Call our team.</span>
+            <img core-model-prop="image" src="http://cdn.images.cunard.com/CunardAssets/QM2%20Refit/Syz%2004%20onward%20journey%20icon%20126x126.png" />
+            <p core-model-prop="description">
+                With a wide variety of knowledge and experience, our team of experts are waiting to answer your questions.</p>
+            <a core-model-prop="link" target="" href="/contact-us/">
+                Contact us</a>
+        </div>
+        <div core-model-prop="info">
+            <span core-model-prop="name">
+                Keep me informed.</span>
+            <img core-model-prop="image" src="http://cdn.images.cunard.com/CunardAssets/QM2%20Refit/Syz%2004%20onward%20journey%20icon%20126x126.png" />
+            <p core-model-prop="description">
+                Be amongst the first to learn about the latest news and offers from Cunard.</p>
+            <a core-model-prop="link" target="" href="/cruise-search/how-to-book/sign-up-to-cunard-email/">
+                Sign up</a>
+        </div>
+        <div core-model-prop="search">
+            <span core-model-prop="name">
+                Search QM2 cruises.</span>
+            <img core-model-prop="image" src="http://cdn.images.cunard.com/CunardAssets/QM2%20Refit/Syz%2004%20onward%20journey%20icon%20126x126.png" />
+            <p core-model-prop="description">
+                With cruises exploring every part of the world, finding your perfect holiday is effortless.</p>
+            <a core-model-prop="link" target="_blank" href="/cruise-search/book-a-cruise/results/?s=QM">
+                Search now</a>
+        </div>
+    </div>
+</div>
+
+
+
+            </form>
+        </div>
+
+        
+
+        <div id="backToTop" class="ng-hide">
+            <a href="#page">
+                <span class="icon"></span>
+                <em>Back to top</em>
+            </a>
+        </div>
+    </div>
+
+    
+<div cdp-scrap-footer="" id="footer">
+    <div class="footer-wrapper">
+        <div class="cols twoCols">
+            <div class="col">
+                <div class="col1" data-childtype="first">
+                    <a class="footer-link-titles" href="/">Cunard</a>
+                    
+                            <ul class="footer-links">
+                        
+                            <li>
+                                <a href="/cunard-experience/">About Cunard</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/about-us/awards/">Our awards</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/about-us/our-partners/">Our partners</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/contact-us/">Contact us</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/arrange-a-callback/">Request a call back</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/contact-us/travel-agents/">Find a travel agent</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/contact-us/contact/">Media enquiries</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/cunard-experience/media-centre/press-releases/">Press releases</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.carnivalukcareers.co.uk/" target="_blank">Careers</a>
+                            </li>
+                        
+                            </ul>
+                        
+                </div>
+                <div class="col1">
+                    <a class="footer-link-titles" href="/legal-information/">Advice and policies</a>
+                    
+                            <ul class="footer-links">
+                        
+                            <li>
+                                <a href="/already-booked/ask-cunard/">Frequently asked questions</a>
+                            </li>
+                        
+                            <li>
+                                <a href="https://www.gov.uk/foreign-travel-advice" target="_blank">Foreign travel advice</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cunard.co.uk/legal-information/?view=4026">Passenger Bill of Rights</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/cookie-policy/">Cookie Policy</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cunard.co.uk/legal-information/?view=1992">Privacy Policy</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cunard.co.uk/legal-information/?view=4070">Website terms of use</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/legal-information/">Legal information</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/footer-links/advice-and-policies/credit-card-charges/">Credit card charges</a>
+                            </li>
+                        
+                            </ul>
+                        
+
+                    
+                    
+                            <ul class="footer-links">
+                        
+                            </ul>
+                        
+                </div>
+            </div>
+            <div class="col">
+                
+                <div class="col1" data-childtype="first">
+                    
+                        <a class="footer-link-titles">More Information</a>
+                    
+                    
+                            <ul class="footer-links">
+                        
+                            <li>
+                                <a href="/already-booked/voyage-personaliser/">Manage your booking</a></li>
+                        
+                            <li>
+                                <a href="/cruise-search/how-to-book/brochure-request/">Request a brochure</a></li>
+                        
+                            <li>
+                                <a href="https://cunard.inbro.net/" target="_blank">View brochure online</a></li>
+                        
+                            <li>
+                                <a href="/cruise-types/cruises-2017/">2017 cruises</a></li>
+                        
+                            <li>
+                                <a href="/cruise-types/cruises-2018/">2018 cruises</a></li>
+                        
+                            <li>
+                                <a href="/cruise-types/winter-highlights/">2019 cruises</a></li>
+                        
+                            <li>
+                                <a href="/cruise-types/event-cruises/">Event cruises</a></li>
+                        
+                            <li>
+                                <a href="/destinations-old/regions-old/">Where we sail</a></li>
+                        
+                            <li>
+                                <a href="/site-map/">Site map</a></li>
+                        
+                            </ul>
+                        
+                </div>
+                <div class="col1">
+                    
+                        <a class="footer-link-titles">Cunard On Social Media</a>
+                        <div class="twitterWidgetContainer">
+                            <a class="twitter-timeline" href="https://twitter.com/cunardline" data-theme="dark" data-widget-id="487567030296391680" width="350" height="387" data-link-color="#917233" data-tweet-limit="1" border-color="#917233" data-chrome="nofooter transparent">Tweets by @cunardline</a>
+                            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+                        </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-divider clearfix">
+            
+                <ul class="cruise-line-logo">
+                    
+                        <li>
+                            <a href="http://www.cunard.co.uk/legal-information/?view=4068"><img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/footer/atol-logo-small.jpg" alt="ATOL Protected" /></a></li>
+                    
+                        <li>
+                            <a href="http://www.cunard.co.uk/legal-information/?view=4068"><img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/footer/abta-logo-small.jpg" alt="ABTA logo" /></a></li>
+                    
+                        <li>
+                            <a href="http://www.cunard.co.uk/legal-information/?view=4026"><img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/footer/clia-logo-small.jpg" alt="CLIA - Uk and Ireland" /></a>
+                        </li>
+                    
+                </ul>
+            
+
+            <div class="addressBlock">
+            
+
+            <p id="copyright">&copy; 2017 Cunard Line. All rights reserved</p>
+            </div>
+            <ul id="socialFollow">
+                <li><a href="http://instagram.com/cunardline" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_instagram_30x30.png" alt="Instagram" /></a></li>
+                <li><a href="https://twitter.com/cunardline" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_twitter_30x30.png" alt="Twitter" /></a></li>
+                <li><a href="https://www.facebook.com/cunard" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_facebook_30x30.png" alt="Facebook" /></a></li>
+                <li><a href="https://plus.google.com/109804427722205051153/posts" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_googleplus_30x30.png" alt="Google Plus" /></a></li>
+                <li><a href="http://www.youtube.com/user/WeAreCunard" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_youtube_30x30.png" alt="YouTube" /></a></li>
+                <li><a href="http://wearecunard.com/" target="_blank">
+                    <img src="http://cdn.images.cunard.com/assets/theme_tab_desk/img/icons/social_blog_30x30.png" alt="Blog" /></a></li>
+            </ul>
+        </div>
+    
+    </div>
+</div>
+
+    
+
+    </div>
+    
+    
+
+<script mdp-ref="jsdeps" src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.12/es5-shim.min.js" type="text/javascript"></script>
+<script mdp-ref="jsdeps" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+<script mdp-ref="jsdeps" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js" type="text/javascript"></script>
+<script mdp-ref="jsdeps" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js" type="text/javascript"></script>
+<script mdp-ref="jsdeps" src="//cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js" type="text/javascript"></script>
+
+
+<!-- New Module V2 Required JS includes-->
+<script src="/cdpx/navigation/scripts/main.min.js"></script>
+<script src="/cdpx/story/scripts/main.min.js"></script>
+<script src="/cdpx/ship-where/scripts/main.min.js"></script>
+<script src="/cdpx/promo/scripts/main.min.js"></script>
+<script src="/cdpx/inspiration/scripts/main.min.js"></script>
+<script src="/cdpx/search/scripts/main.min.js"></script>
+<script src="/cdpx/carousel/scripts/main.min.js"></script>
+<script src="/cdpx/features/scripts/main.min.js"></script>
+<script src="/cdpx/ctas/scripts/main.min.js"></script>
+<script src="/cdpx/grills/scripts/main.min.js"></script>
+<script src="/cdpx/html/scripts/main.min.js"></script>
+<script src="/cdpx/style-guide/scripts/main.min.js"></script>
+<script src="/cdpx/Reviews/scripts/main.min.js"></script>
+
+<script src="/cdpx/core/scripts/core.min.js"></script> <!-- leave core at the end -->
+
+<!-- Include theme JS files here in build order -->
+
+
+
+<!--[if lte IE 8 ]>
+<script src="/assets/theme_tab_desk/ie_upgrade/iewarning.js"></script>
+<![endif]-->
+    
+    
+
+    
+    
+    
+
+</body>
+</html>
