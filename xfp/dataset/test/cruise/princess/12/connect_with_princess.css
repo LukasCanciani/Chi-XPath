@@ -1,0 +1,20 @@
+#connect-with-princess { border: 1px dashed #CCC; clear: both; overflow: hidden; width: 87%; margin-right: auto; margin-left: auto; text-align: left; }
+#connect-heading { float: left; width: 205px; background: #F2FBFC; height: 87px; padding-top: 7px; }
+#special-offers-signup { float: left; width: 160px; padding: 10px 10px 8px; background: url(/images/connect/offers_bg.gif) no-repeat; }
+#social { float: left; width: 230px; padding: 20px 10px 10px; }
+#connect-with-princess h3 { font-size: 1.154em; /*15px*/ font-weight: 200; padding-bottom: 3px; padding-left: 5px; }
+#connect-with-princess h6 { padding-bottom: 6px; color: #666;}
+.social-links dd { display: inline; padding-left: 1px; vertical-align: middle; }
+.social-links { padding-left: 3px; padding-top: 3px; }
+#special-offers-signup a { padding-left: 5px; }
+.social-links img { vertical-align: middle; }
+.social-links .blog {padding-left:7px}
+#content-right #connect-heading { width: 100%; height: auto; padding: 0px; float: none; }
+#content-right #social { width: 100%; padding-top: 10px; float: none; }
+#content-right #special-offers-signup { padding:10px 0; width: 85%; background: none; border-top: 1px solid #E9E9E9; border-bottom: 1px solid #E9E9E9; margin:0 auto; float: none; }
+#content-right #connect-heading h2 { padding: 0px; }
+#content-right .social-links .blog { display: block; padding-top: 7px; padding-left: 0px; }
+#content-right #connect-with-princess { width: 80%; }
+#content-right #special-offers-signup h6 { color: #666; padding-left: 0px; }
+#content-right #special-offers-signup a { padding-left: 0px; }
+#content-right #connect-with-princess #special-offers-signup h3 { padding-left: 0px; }

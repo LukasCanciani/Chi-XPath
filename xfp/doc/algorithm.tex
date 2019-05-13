@@ -1,0 +1,48 @@
+\documentclass[]{article}
+%\usepackage{algorithm2e}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{Algorithm}
+
+\begin{algorithm}
+	\caption{Xfp algorithm}\label{xfp}
+	\begin{algorithmic}[1]
+		\Require Set of pages $I$ of the same page class
+		\Ensure Set of OXPath fixed points $O$
+		\Procedure{Xfp}{$I$}
+		%\Comment{Set of pages $I$ of the same page class, Set of OXPath fixed points $O$}
+		\State $\{L_i\}_i \gets nfp(I)$
+		\State $LCS \gets \{L_i\}_i$ map $l \mapsto top(l)$
+		\While{$LCS \neq \emptyset$}
+			\State $P \gets $ download all target pages for $l \in lc$
+			\State $data \gets dfp(P)$
+			\If{$\mid data \mid >  \lambda$}\Comment{Correct page class?}
+				\State remove $lc$ from $LCS$
+				\State $xfp(P)$\Comment{Recursive call} 
+			\Else 
+				\State remove $lc$ from $LCS$
+				\State add to $LCS$ all $lc'$: $lc' \subseteq lc$ \Comment{$[$ in the lattice $L$ of $lc]$}
+			\EndIf
+		\EndWhile
+		\EndProcedure
+	\end{algorithmic}
+\end{algorithm}
+
+\end{document}
