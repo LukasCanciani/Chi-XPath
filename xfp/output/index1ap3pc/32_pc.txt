@@ -1,0 +1,6 @@
+pages: 32
+printer3.html
+printer1.html
+printer2.html
+nr_vfp: 3
+nr_cfp: 0

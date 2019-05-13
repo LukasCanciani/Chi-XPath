@@ -1,0 +1,5 @@
+pages: 2
+index2.html
+index3.html
+nr_vfp: 0
+nr_cfp: 1
