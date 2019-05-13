@@ -1,0 +1,5 @@
+graph Basic {
+graph [ratio=fill];
+node [label="\N", fontsize=20, shape=rect];
+
+}

@@ -1,0 +1,315 @@
+var bar_offset = 60;
+
+function blocca(obj) {
+    // position fixed
+    if (!isFixed(obj)) {
+        //obj.css({position: 'fixed', top: bar_offset, left: getLeftPosAssoluta(obj), marginTop: 0});
+        obj.css({position: 'fixed', top: bar_offset, left: 'auto', right: getRightPosAssoluta(obj), marginTop: 0});
+    }
+}
+
+function sbloccaInPosizione(obj) {
+    // ferma in posizione
+    if (isFixed(obj)) {
+        var offset = Math.max(0, getCurrentPosRelativa(obj));
+        offset = Math.min(offset, obj.parent().height() - obj.height());
+        console.log('sbloccoInPosizione', offset);
+        obj.css({position: 'relative', marginTop: offset+'px', top: 0, left: 0, right: 0});
+    }
+}
+
+function riposizionaX(obj) {
+    if (isFixed(obj)) {
+        obj.css({left: 'auto', right: getRightPosAssoluta(obj.parent())});
+    }
+}
+
+function isTopHidden(obj) {
+    return (getCurrentPosRelativaWindow(obj) < bar_offset);
+}
+function isBelowStartPosition(obj) {
+    return (getCurrentPosAssoluta(obj) > getCurrentPosAssoluta(obj.parent()));
+}
+function isBelowWindow(obj) {
+    return (getCurrentPosRelativaWindow(obj) > bar_offset);
+}
+
+function isBottomReached(obj) {
+    return (getCurrentPosAssoluta(obj) + getHeight(obj) > getPosBottomAssoluta(obj) - bar_offset);
+}
+
+function getCurrentPosAssoluta(obj) {
+    return obj.offset().top;
+}
+function getCurrentPosRelativa(obj) {// relativa al contenitore
+    // non posso usare posiion perché l'elemento è staccato dal contenitore
+    return getCurrentPosAssoluta(obj) - getCurrentPosAssoluta(obj.parent());
+}
+function getCurrentPosRelativaWindow(obj) {// relativa alla finestra visibile
+    return getCurrentPosAssoluta(obj) - getAltezzaScroll();
+}
+function getLeftPosAssoluta(obj) {
+    return obj.offset().left;
+}
+function getRightPosAssoluta(obj) {
+    var tmp = $(window).width() - getLeftPosAssoluta(obj) - obj.width();
+    if (navigator.userAgent.match(/iPad/i)) tmp += 20;
+    return tmp;
+}
+function getHeight(obj) {
+    return obj.outerHeight();
+}
+function getAltezzaScroll() {
+    return $(window).scrollTop();
+}
+function getPosBottomAssoluta(obj) {// bottom: fine della corsa, fine contenitore
+    //console.log("getPosBottomAssoluta: pos"+ getCurrentPosAssoluta(obj.parent())+ " height" + getHeight(obj.parent()));
+    return getCurrentPosAssoluta(obj.parent()) + getHeight(obj.parent());
+}
+function isInteramenteMostrato(obj) {
+    return (getCurrentPosRelativaWindow(obj) > (0 - obj.height()) && getCurrentPosRelativaWindow(obj) < $(window).height());
+}
+
+function isFixed(obj) {
+    return (obj.css('position') == 'fixed');
+}
+
+
+
+function resetShareBarHeight() {
+    var barra = $('#share_bar');
+    var wrapper_barra = $('#share_bar_wrapper');
+    
+    // resetto la dimensione, poi la ricalcolo
+    wrapper_barra.height('auto');
+    
+    // aggiungo la dimensione dell'area all'interno della quale si muove la barra social verticale
+    if(wrapper_barra.hasClass('top') ){
+//        wrapper_barra.height($('#main-content .body-text').height());
+        wrapper_barra.height( wrapper_barra.parent().height() );
+    }else{
+        wrapper_barra.height( wrapper_barra.parent().height() - 250 );
+    }
+}
+
+function updateStickySidebar() {
+    $('#share_bar').stickySidebar('updateSticky');
+}
+
+$(function() {
+    resetShareBarHeight();
+/*
+    var barra = $('#share_bar');
+    $(window).scroll(function() {
+        if (!isFixed(barra)) {
+            if (isTopHidden(barra) && !isBottomReached(barra)) {
+                blocca(barra);
+            } else if (getCurrentPosRelativaWindow(barra) > bar_offset && isBelowStartPosition(barra)) {
+                blocca(barra);
+            }
+        } else {
+            if (isBottomReached(barra)) {
+                sbloccaInPosizione(barra);
+            } else if (!isBelowStartPosition(barra)) {
+                sbloccaInPosizione(barra);
+            }
+        }
+    });
+    $(window).scroll();// primo trigger
+    $(window).resize(function() {
+        riposizionaX(barra);
+    });
+   */
+
+   
+    $('#share_bar').stickySidebar({
+        topSpacing: 60,
+        bottomSpacing: 60
+    });
+    window.setTimeout(updateStickySidebar, 1000);
+    window.setTimeout(updateStickySidebar, 2000);
+    window.setTimeout(updateStickySidebar, 3000);
+    $(window).load(function() {
+        window.setTimeout(updateStickySidebar, 1000);
+        window.setTimeout(updateStickySidebar, 2000);
+        window.setTimeout(updateStickySidebar, 3000);
+    });
+
+    
+    $('.share-item .msg-art-fb').each(function() {
+        $(this).bind("click", function() {
+            url = $("meta[property='og:url']").attr("content");
+            t = $("meta[property='og:title']").attr("content");
+            console.log(url);
+            window.open('https://www.facebook.com/sharer.php?u=' + encodeURIComponent(url) + '&t=' + encodeURIComponent(t), 'sharer', 'toolbar=0,status=0,width=626,height=436');
+            return false;
+        })
+    });
+
+
+    $('.share-item .msg-art-tw').each(function() {
+        $(this).bind("click", function() {
+            u = $("meta[property='og:url']").attr("content");
+            t = $("meta[property='og:title']").attr("content");
+            sU = $("meta[name='shortenUrl']").attr("content");
+            var maxLength = 140;
+            if (t.length > maxLength) {
+                t = t.substr(0, (140 - 3)) + '...';
+            }
+            window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(t + ' ' + u + " @ilmessaggeroit"), 'sharer',"toolbar=0,status=0,width=626,height=436");
+        })
+    });
+
+
+    $('.share-item .msg-art-gp').each(function() {
+        $(this).bind("click", function() {
+            u = $("meta[property='og:url']").attr("content");
+            window.open('https://plus.google.com/share?url=' + encodeURIComponent(u),'sharer',"toolbar=0,status=0,width=626,height=436");
+        })
+    });
+
+    $('.share-item .msg-art-com').each(function() {
+        $(this).bind("click", function() {
+            var commenti = $('#commenti_articolo');
+            if (commenti.length) {
+                $("html, body").delay(2000).animate({scrollTop:commenti.offset().top},'slow' );
+            }
+        })
+    });
+    
+    $('.share-item .msg-art-em').each(function() {
+        $(this).bind("click", function() {
+          var email = '';
+          var subject = $("meta[property='og:title']").attr("content");
+          var emailBody = $("meta[property='og:url']").attr("content");
+          window.location = 'mailto:' + email + '?subject=' + subject + '&body=' +   emailBody;
+        });
+    });
+
+});
+
+
+
+
+
+/*** Video ***/
+
+var resize_video = function() {
+
+    // ridimensiono l'iframe in proporzione, ma devo anche richiamarlo con le nuove dimensioni altrimenti viene tagliato.
+    // width=640&height=405
+    // la dim massima deve essere pari a P.width();
+
+    var P = $('.contenuto');
+    var I = $(".contenuto iframe[src^='http://vid']");
+
+    if (!(P.length > 0 && I.length > 0))
+        return;
+    var rapporto = 1.45;
+
+    var new_w = parseInt(P.width(), 10);
+    var new_h = parseInt(P.width() / rapporto, 10);
+
+    //console.log('W:'+new_w+' H:'+new_h+' RATIO:'+rapporto);
+    var new_src = I.attr('src').replace(/width=(.+)&height=(.+)&/, 'width=' + new_w + '&height=' + new_h + '&');
+    // var new_src = I.attr('src').replace(/width=(.+)&height=(.+)&aplay(.+)/, 'width=' + new_w + '&height=' + new_h + '&aplay=false');
+
+
+    if (I.attr('src') == new_src)
+        return; // non è cambiato nulla, evito
+    I.width(new_w).height(new_h).attr('src', new_src);
+}
+
+
+
+
+$(document).ready(function() {
+    resize_video();
+    var embed_video = $("#multimedias .embed_video");
+
+    var video_top_url = $("#multimedias .embed_video iframe[data-src^='http://vid']").attr("data-src");
+
+    if (typeof video_top_url == 'undefined') return; //
+
+    // firefox ha un problema con il player html5 (viene muto).
+    /*if ($.browser.mozilla) {
+     var video_src = $('.video_player iframe').attr('src');
+     $('.video_player iframe').attr('src', video_src.replace(/forceHtml5=true/, ''));
+     }*/
+
+    $.ajax({
+        url: 'https://widgets.outbrain.com/outbrain.js',
+        dataType: "script",
+        success: function() {
+
+        }
+    });
+    
+});
+
+
+$(document).ready(function(){
+    // video floater
+    $.ajax({
+        url: 'https://utils.cedsdigital.it/js/videoFloater.js',
+        dataType: "script",
+        cache: true,
+        success: function() {
+
+        }
+    });
+
+    /*** SLIDER correlati in articolo***/
+    if ($(".slider-items-correlati").length > 0) {
+        try {
+            var slideShow =  $(".slider-items-correlati").data("slidestoshow");
+            $('.slider-items-correlati').slick({
+                infinite: true,
+                slidesToShow: slideShow,
+                slidesToScroll: slideShow
+            });
+        }
+        catch(err) {}
+    }
+});
+
+
+/* --- video embeddato tracking Analytics --- */
+(function($){var g,d,j=1,a,b=this,f=!1,h="postMessage",e="addEventListener",c,i=b[h]&&!($.browser&&$.browser.opera);$[h]=function(k,l,m){if(!l){return}k=typeof k==="string"?k:$.param(k);m=m||parent;if(i){m[h](k,l.replace(/([^:]+:\/\/[^\/]+).*/,"$1"))}else{if(l){m.location=l.replace(/#.*$/,"")+"#"+(+new Date)+(j++)+"&"+k}}};$.receiveMessage=c=function(l,m,k){if(i){if(l){a&&c();a=function(n){if((typeof m==="string"&&n.origin!==m)||($.isFunction(m)&&m(n.origin)===f)){return f}l(n)}}if(b[e]){b[l?e:"removeEventListener"]("message",a,f)}else{b[l?"attachEvent":"detachEvent"]("onmessage",a)}}else{g&&clearInterval(g);g=null;if(l){k=typeof m==="number"?m:typeof k==="number"?k:100;g=setInterval(function(){var o=document.location.hash,n=/^#?\d+&/;if(o!==d&&n.test(o)){d=o;l({data:o.replace(n,"")})}},k)}}}})(jQuery);
+
+$(function(){
+    try {
+        /*
+		console.log("########### MSGR video embed ###########");
+        ogurl = $("meta[property='og:url']").attr("content");
+        try {		
+            dataLayer.push({
+                'event': 'video preroll',
+                'eventCategory': 'Video',
+                'eventAction': 'embed caricato',
+                'eventLabel': ogurl
+            });			
+        } catch (e) {}  
+		*/     
+		$.receiveMessage(function(e){
+			// console.log(e.data);
+			switch (e.data) {
+				case 'PRE_START':
+				case 'PRE_END':
+					try {		
+						dataLayer.push({
+							'event': 'video preroll',
+							'eventCategory': 'Video',
+							'eventAction': 'Preroll',
+							'eventLabel': e.data
+						});			
+					} catch (e) {}					
+					break;
+			}
+		}, $('.embed_video iframe').attr('src').match(/https?:\/\/[^\/]+/) );			
+    }
+    catch (e) {}  
+});
+
+
+

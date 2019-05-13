@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one or more
+ contributor license agreements.  See the NOTICE file distributed with
+ this work for additional information regarding copyright ownership.
+ The ASF licenses this file to You under the Apache License, Version 2.0
+ (the "License"); you may not use this file except in compliance with
+ the License.  You may obtain a copy of the License at
+      http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<Configuration status="INFO" packages="">
+	<Appenders>
+		<Console name="stdout" target="SYSTEM_OUT">
+            <PatternLayout>
+                <pattern>%d{HH:mm:ss} [%t] %highlight{%level %C{0} %m}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=green, DEBUG=blue}%n</pattern>
+            </PatternLayout>
+<!--           <JsonLayout compact="true" eventEol="true" includeStacktrace="true"> -->
+<!--  	        <KeyValuePair key="@system" value="wrty"/> -->
+<!-- 			<KeyValuePair key="@service" value="extractor"/> Replace with env: lookup -->
+<!-- 			<KeyValuePair key="@timestamp" value="$${date:yyyy-MM-dd'T'HH:mm:ss'Z'}"/> -->
+<!--           </JsonLayout> -->
+        </Console>
+<!--    		<File name="file" ignoreExceptions="false" fileName="logs/main.log" append="false">
+			<JsonLayout compact="true" eventEol="true"/>
+		</File>-->
+	</Appenders>
+
+	<Loggers>
+		<Logger name="com.meltwater.wrapidity.chixpath" level="trace" additivity="false">
+            <AppenderRef ref="stdout"/>
+	    </Logger>
+		<Logger name="com.meltwater.wrapidity.chixpath.ChiFinder" level="trace" additivity="false">
+            <AppenderRef ref="stdout"/>
+	    </Logger>
+		<Logger name="com.meltwater.wrapidity.apis" level="trace" additivity="false">
+            <AppenderRef ref="stdout"/>
+	    </Logger>
+		<Logger name="com.meltwater.wrapidity.services.exec.GenericMain" level="trace" additivity="false">
+            <AppenderRef ref="stdout"/>
+	    </Logger>
+		<Logger name="com.meltwater.wrapidity" level="warn" additivity="false">
+            <AppenderRef ref="stdout"/>
+	    </Logger>
+    	<Root level="error">
+			<AppenderRef ref="stdout"/>
+		</Root>
+	</Loggers>
+</Configuration>

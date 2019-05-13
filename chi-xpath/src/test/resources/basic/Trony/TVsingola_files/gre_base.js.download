@@ -1,0 +1,1209 @@
+
+var maincontentTop = -1;
+
+
+
+
+
+
+	function resetExpressIFrameSource(){
+		if ($("#Product_Video").length > 0){
+			$("#Product_Video").attr('src','');
+		}
+	}
+
+
+	$(".kor-overlay-close").live('click',function() { resetExpressIFrameSource();});
+	$(".kor-modal").live('click',function() { resetExpressIFrameSource();});
+
+
+
+
+	/*style twitter iframe*/
+	// Customize twitter feed
+	var hideTwitterAttempts = 0;
+	function hideTwitterBoxElements() {
+	    setTimeout( function() {
+	        if ( $('[id*=twitter]').length ) {
+		        $('[id*=twitter]').each( function(){
+		            if ( $(this).width() == 220 ) {
+		                $(this).width( 198 ); //override min-width of 220px
+		            }
+		            var ibody = $(this).contents().find( 'body' );
+		            ibody.width( $(this).width() + 20 ); //remove scrollbar by adding width
+		            //smcc: hide from 2nd tweet and button "LoadMore"
+		            //rimosso height perchè taglia alcuni tweet, verificare se lasciando così rimane intatto il layout
+		            //$(ibody.find('.timeline .stream')).css('height','100px');
+
+		            var firstTweet = 0;
+		            $(ibody.find('.timeline .stream .h-feed li.tweet')).each(function(){
+		            	if(firstTweet > 0){
+		            		$(this).hide();
+		            	}
+		            	firstTweet++;
+		            });
+		            $(ibody.find('.timeline .stream .load-more')).hide();
+		            //EO smcc
+		            if ( ibody.find( '.timeline .stream .h-feed li.tweet' ).length ) {
+		            ibody.find( '.timeline' ).css( 'border', 0 );
+		            ibody.find( '.timeline .stream' ).css( 'overflow-x', 'hidden' );
+		            ibody.find( '.timeline .stream' ).css( 'overflow-y', 'scroll' );
+		            ibody.find( '.timeline-header').hide();
+		            ibody.find( '.timeline-footer').hide();
+		            }
+		            else {
+		                $(this).hide();
+		            }
+		        });
+	        }
+	        hideTwitterAttempts++;
+	        if ( hideTwitterAttempts < 3 ) {
+	            hideTwitterBoxElements();
+	        }
+	    }, 1500);
+	}
+	/*EO style twitter iframe */
+
+	//call hide for Twitter/Facebook
+	$(document).ready(function(){
+		hideTwitterBoxElements();
+	});
+
+	function submitForm(form, action){
+		var input = document.createElement("input");
+		input.setAttribute("type", "hidden");
+		input.setAttribute("name", action);
+		input.setAttribute("value", action);
+		form.appendChild(input);
+		form.submit();
+	}
+
+
+
+
+
+
+
+
+
+
+	/*test fix open cartafan link in a new page*/
+	$(document).ready(function(){
+		var fan = $("a[href*='cartafan']");
+		$(fan).attr('target','_blank');
+	});
+	/* eo test fix open cartafan link in a new page*/
+
+	/* inject form into institutional content */
+	$(document).ready(function(){
+		if ($("#substituteme").length > 0){
+			var newDiv=$('<form action="/online/web/WFS/Trony-B2C-Site/it_IT/-/EUR/ViewInstitutionalContent-SendMail" method="post"></form>');
+			var content = $("#substituteme").html();
+			$(newDiv).html($("#substituteme").html());
+			$("#substituteme").replaceWith(newDiv);
+		}
+	});
+	/* eo test, inject form into institutional content */
+
+	function EmptyField(field){
+		if ($.trim(field).length <= 0) {
+			return true;
+		}else{
+			return false;
+		}
+
+
+	}
+
+	/* inject form into Lavora Con Noi */
+	$(document).ready(function(){
+		if ($("#substitutemeWorkWithUs").length > 0){
+			//var workWithUs=$('<form id="workFormWithUs" action="/online/web/WFS/Trony-B2C-Site/it_IT/-/EUR/ViewInstitutionalContent-WorkWithUs" method="post" enctype="multipart/form-data"></form>');
+			//var wContet = $("#substitutemeWorkWithUs").html();
+			//$(workWithUs).html($("#substitutemeWorkWithUs").html());
+			//$("#substitutemeWorkWithUs").replaceWith(workWithUs);
+			//load stores
+			var Stores = $('#Store');
+			$(Stores).load('/online/web/WFS/Trony-B2C-Site/it_IT/-/EUR/ViewInstitutionalContent-GetStores');
+
+
+			$("#workFormWithUs").submit(function(event){
+				ErrorString = "";
+				//console.info("currriculum "+$("#FileCurriculum").val());
+				if (($("#FileCurriculum").val().length > 0) &&  (!($("#FileCurriculum").val().match("\.doc$") || $("#FileCurriculum").val().match("\.docx$") || $("#FileCurriculum").val().match("\.pdf$") ))) {ErrorString += "Il tipo di file da allegare non è supportato<br>"}
+				//console.info("SenderMail "+$("#SenderEmail").val());
+				if (EmptyField($("#SenderEmail").val())) {ErrorString += "Il campo Mail è obbligatorio <br>";}
+				//console.info("City "+$("#City").val());
+				if (EmptyField($("#City").val())) {ErrorString += "Il campo Città è obbligatorio <br>";}
+				//console.info("State "+$("#State").val());
+				if (EmptyField($("#State").val())) {ErrorString += "Il campo Provincia è obbligatorio <br>";}
+				//console.info("Phone "+$("#Phone").val());
+				if (EmptyField($("#Phone").val())) {ErrorString += "Il campo Telefono è obbligatorio <br>";}
+				//console.info("Name "+$("#FirstName").val());
+				if (EmptyField($("#FirstName").val())) {ErrorString += "Il campo Nome è obbligatorio <br>";}
+				//console.info("Last "+$("#LastName").val());
+				if (EmptyField($("#LastName").val())) {ErrorString += "Il campo Cognome è obbligatorio <br>";}
+				//console.info("StoreMail "+$("#Store").val());
+				if (!($("#id_PrivacyAccept").is(':checked'))) {ErrorString += "Per proseguire è necessaria l'autorizzazione al trattamento dei dati personali<br>";}
+				//console.info("id_PrivacyAccept "+$("#id_PrivacyAccept").is(':checked'));
+				if ((ErrorString).length > 0)
+					{
+						$("#workWithUsErrorBox").html(ErrorString);
+						return false;
+					}else{
+						$("#workWithUsErrorBox").html("");
+						return true;
+					}
+
+			});
+
+		}
+	});
+	/* eo inject form into Lavora Con Noi */
+
+
+
+
+
+
+
+
+
+	//Flicker resize management
+	function flicker_resize_management()
+		{
+			if($(".schedaprodotto_presentazione_table").length > 0){
+				$(".schedaprodotto_presentazione_table").click(function(){
+					setTimeout(function(){
+						$("#PTabContainer").css("height", $("#logDescContentTab").css("height"));
+						},500);
+
+				});
+
+			}
+		}
+
+	//fallback resize
+	$(document).ready(function(){
+		//Flicker resize management
+		flicker_resize_management();
+
+	});
+
+	function active_lazy(){
+			/* caricamento con fade in */
+			$('.lazy').Lazy({
+				effect: "fadeIn",
+				effectTime: 400,
+				threshold: 0
+				});
+			/* caricamento con fade in  */
+	}
+
+    //Document ready short mode for jquery
+	$(function() {active_lazy();});
+
+
+
+
+	//fix for Checkout Review CostSummary in Step4(OrderReview) and Step5(OrderReceipt)
+	$(document).ready(function(){
+		if( ($("#ws-review").length > 0 ) || $("#ws-receipt").length > 0){
+			var rows = $(".mx_checkout_table tr");
+		    var cols;
+		    rows.each(function() {
+		        cols = $(this).children('th, td');
+		        cols.eq(2).detach().insertBefore(cols.eq(1));
+		    });
+
+		    //remove unused classes on header
+		    $(".mx_checkout_table thead .mx_checkout_prezzo").removeClass('mx_checkout_prezzo');
+		    $(".mx_checkout_table thead .mx_checkout_tot").removeClass('mx_checkout_tot');
+
+		    //change displayed header Qt. in Quantità
+		    $(".mx_checkout_table thead .mx_checkout_qt").text('Quantità');
+
+		    //display the TotaleParziale as Totale
+		    $(".ws-subtotal .type").text('Totale');
+		    $(".ws-subtotal").show();
+
+		    //display Spese di spedizione
+		    var shipMethod = $("#ShippingCostsMainEntry .type small");
+		    $("#ShippingCostsMainEntry .type").html('Spese di spedizione' + '<small>' +$(shipMethod).text()+'</small>');
+
+		    /* product table */
+		    //remove pictures
+//		    $(".ws-product-photo").each(function(){
+//		    	$(this).hide();
+//	    	});
+		    //remove margin
+		    $(".ws-product-info").each(function(){
+		    	$(this).css('margin-left',0);
+		    });
+
+
+		}
+	});
+
+	//fix for Step1, Step2, Step3 for CostSummary
+	$(document).ready(function(){
+		if($("#ws-address").lenth > 0 || $("#ws-shipping").length > 0 || $("#ws-payment").length > 0){
+			//remove unused classes on header
+		    $(".mx_checkout_table thead .mx_checkout_prezzo").removeClass('mx_checkout_prezzo');
+		    $(".mx_checkout_table thead .mx_checkout_tot").removeClass('mx_checkout_tot');
+			//display the TotaleParziale as Totale
+		    $(".ws-subtotal .type").text('Totale');
+		    $(".ws-subtotal").show();
+
+		}
+	});
+
+	//fix cost summary in OrderDetails.isml
+	$(document).ready(function(){
+		if($("#ws-order-details").length > 0){
+			//display Spese di spedizione
+		    var shipMethod = $("#ShippingCostsMainEntry .type small");
+		    $("#ShippingCostsMainEntry .type").html('Spese di spedizione' + '<small>' +$(shipMethod).text()+'</small>');
+		}
+	});
+
+	/* show more filter entries for a single column in the filter list ShowMoreFilterEnt*/
+
+	$(document).ready(function(){
+		if($(".ShowMoreFilterEnt").length > 0){
+			$(".ShowMoreFilterEnt").click(function(){
+				$(this).parent().find('.hide_filter_ent').each(function(){
+					$(this).toggle();
+				});
+
+
+				if($(this).find('img').hasClass('flip-vertical')){
+					$(this).find("div").html('VEDI TUTTO <img src="/online/static/WFS/Trony-B2C-Site/-/-/it_IT/images/schedaprodotto/freccia_giu.png">');
+				}
+				else{
+					$(this).find("div").html('CHIUDI <img class="flip-vertical" src="/online/static/WFS/Trony-B2C-Site/-/-/it_IT/images/schedaprodotto/freccia_giu.png">');
+
+
+				}
+
+			});
+		}
+	});
+
+
+
+	/*
+	 * Abilitazione paginatore nella OrderList.isml
+	 * */
+	$(document).ready(function(){
+		if($("#ws-order-history").length > 0){
+			var text = $(".ish-pagination-total-value").text();
+			text = text.replace('Articoli','Ordini');
+			$(".ish-pagination-total-value").text(text);
+			$(".ish-pagination-sites").show();
+		}
+	});
+
+	/*
+	 * Landing Promo Nazionale
+	 * Cambio visualizzazione del VolantinoNazionale
+	 */
+	String.prototype.capitalize = function() {
+	    return this.charAt(0).toUpperCase() + this.slice(1);
+	}
+
+
+	$(document).ready(function(){
+		/*            NATIONAL PROMOTION SELECT                 */
+		if($("#NationalPromotionMainEntry").length > 0)
+			{
+
+			//nascondo i dt span
+			$("#NationalPromotionMainEntry .tab-national span").hide();
+			//creo il nuovo select mettendo dentro il contenuto dei "dt span"
+			//removed class ish-tabset-label kor-label kor-tabset-label ish-tabset-showcase kor-label-active
+			$("#NationalPromotionMainEntry .datalabel").prepend('<div id="DTSelectorMainEntry" class="ish-tabset-label kor-label kor-tabset-label ish-tabset-showcase tab-national" role=""><div class="national-promotion-select-label">SELEZIONA LA CATEGORIA:&nbsp;&nbsp;<select id="NationalPromotionSelectCategory"></select></div></div>');
+			//creo gli option da inserire nel select e marco l'ultima categoria come selected (ATTENZIONE gli option sono visualizzati in ordine inverso rispetto al backoffice)
+			var lastCounter=0;
+			$("#NationalPromotionMainEntry .tab-national span").each(function()
+				{
+				lastCounter++;
+				});
+			var optionCounter=0;
+			$("#NationalPromotionMainEntry .tab-national span").each(function(){
+				optionCounter++;
+				var text = $(this).text();
+				if (optionCounter==1)
+					{
+					$("#NationalPromotionSelectCategory").prepend('<option name="'+ text +'" value="'+ text +'" selected>'+ text +'</option>');
+					}
+				else
+					{
+					$("#NationalPromotionSelectCategory").prepend('<option name="'+ text +'" value="'+ text +'">'+ text +'</option>');
+					}
+			});
+			//registro l'evento change sul mio select
+			$("#NationalPromotionMainEntry").change(function(){
+
+				var SelectedCategory = $(this).find(':selected').text();
+				var SelectedCategoryLabel = SelectedCategory;
+				SelectedCategory=SelectedCategory.replace(/ /g,'');
+
+				//metto il testo
+				$("#DTSelectorMainEntry .national-promotion-category-label").html(SelectedCategoryLabel);
+
+				LoadNationalCategoryProducts('#'+SelectedCategory);
+			});
+
+
+			//nascondo tutti i kor-label-active
+			$("#NationalPromotionMainEntry .tab-national").each(function(){
+				$(this).removeClass('kor-label-active');
+			});
+			//nascondo tutti i dd
+			$("#NationalPromotionMainEntry .ish-tabset-panel").each(function(){
+				$(this).hide();
+			});
+			//visualizzo il selezionato
+			var firstCategory = $(this).find(':selected').text();
+			var firstCategoryLabel = firstCategory;
+			firstCategory=firstCategory.replace(/ /g,'');
+
+			$("#"+firstCategory).show();
+			//alert('da select'+firstCategory);
+
+
+			$("#DTSelectorMainEntry").prepend('<div class="national-promotion-category-label">'+firstCategoryLabel+'</div>');
+
+			//abilito locator per prodotti disponibili offline
+			$(".smcc_offline_availability").show();
+			}
+
+		/*            NATIONAL PROMOTION TAB                 */
+		if($("#NationalPromotionMainEntryTab").length > 0)
+			{
+			var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+			//$("#mainwrapper").css("height", "9000px");
+
+			var lastCounter=0;
+			$("#NationalPromotionMainEntryTab .tab-national span").each(function()
+					{
+					lastCounter++;
+					});
+			var optionCounter=0;
+			var total_lenght = 0;
+			//visualizzo il selezionato
+			var firstCategory = "";
+			$("#NationalPromotionMainEntryTab .tab-national span").each(function(){
+				optionCounter++;
+				//riempio il menu tab con le categorie caricate nello slot
+				$(".national_containertab .national_containertabs").append("<li style='display: block;'><div id='tab_"+$(this).text().replace(/ /g,'')+"' class='national_containertabs_tablabel' data-category='"+$(this).text()+"'>"+$(this).text()+"</div></li>");
+				if (optionCounter==1)
+					{
+					firstCategory = $(this).text().replace(/ /g,'');
+					//alert(firstCategory);
+					//visualizzo il selezionato
+					$("#tab_"+firstCategory).addClass('active');
+					$("#"+firstCategory).show();
+					}
+					total_lenght+=$(this).text().length;
+				});
+			$(".national_containertab").show();
+			national_tabslider();
+
+
+
+
+			$(".national_containertab .national_containertabs .national_containertabs_tablabel").click(function(){
+				$(".national_containertab .national_containertabs .active").removeClass('active');
+				var SelectedCategory = $(this).attr('data-category');
+				$(this).addClass('active');
+				var SelectedCategoryLabel = SelectedCategory;
+				SelectedCategory=SelectedCategory.replace(/ /g,'');
+
+				LoadNationalCategoryProducts('#'+SelectedCategory);
+				});
+
+			//visualizzo il selezionato
+
+			var firstCategoryLabel = firstCategory;
+			firstCategory=firstCategory.replace(/ /g,'');
+
+			//abilito locator per prodotti disponibili offline
+			$(".smcc_offline_availability").show();
+
+			}
+		});
+
+	function national_tabslider(){
+		if($("#NationalPromotionMainEntryTab").length > 0){
+		var window_width=$(window).width();
+		var tab_width=150;
+		if (window_width > 360) tab_width=180;
+		if (window_width > 767) tab_width=200;
+		if (window_width > 900) tab_width=210;
+		if (window_width > 1200) tab_width=240;
+
+		$('.national_containertab').flexslider({
+		        animation: "slide",
+		        animationLoop: false,
+		        slideshow: false,
+		        itemWidth: tab_width,
+		        itemMargin: 0,
+		        start: function(slider){
+		        	$('body').removeClass('loading');
+		        }
+			});
+		}
+	}
+
+
+
+
+
+	/**
+	 * LoadNationalCategoryProducts
+	 * get the products category for national promotions elements
+	 * */
+
+	function LoadNationalCategoryProducts(target){
+		var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+		var urlPipeline= $(target).attr('data-url');
+		var imageLoader= $(target).attr('data-img-loader');
+
+		//nascondiamo tutti gli attivi
+		if($("#NationalPromotionMainEntryTab").length > 0){
+			$("#NationalPromotionMainEntryTab .ish-tabset-panel").each(function(){
+				$(this).hide();
+			});
+		}
+		if($("#NationalPromotionMainEntry").length > 0){
+			$("#NationalPromotionMainEntry .ish-tabset-panel").each(function(){
+				$(this).hide();
+			});
+		}
+		//visualizzo il selezionato
+		$(target).show();
+		if ($(target +' div').html().trim()=='')
+			{
+			$(target+' div').html('<img src="'+imageLoader+'" style="position: absolute; margin: auto;top: 180px;left: 0;right: 0;bottom: 0;">');
+			//$("#mainwrapper").css("height", "9000px");
+			$.ajax({
+				  dataType: "html",
+				  url: urlPipeline,
+				  success: function(data){
+						if( $(target+' div').length>0 )
+							{
+							$(target+' div').html(data);
+							}
+						active_lazy();
+				  		}
+				});
+			}
+	}
+
+
+
+
+
+	//fix compara prodotti IE
+	$(document).ready(function(){
+		if($("#ws-product-compare").length > 0){
+			//DEPRECATO if($.browser.msie){
+			if (navigator.userAgent.toLowerCase().indexOf('msie') != -1){
+				//console.log($.browser.version);
+				$("td.ish-compareProducts-productImageCell").each(function(){
+					$(this).css('position','relative');
+					$(this).css('top','-250px');
+				});
+
+			}
+		}
+	});
+
+	//fix nascondi codice fiscale dalla FORM indirizzi di spedizione nel Checkout
+	//c'è lo stesso codice anche dentro a AddressDefault.isml per rimuovere i campi
+	//quando l'utente seleziona lo stato
+	$(document).ready(function(){
+		if($("#ws-address").length > 0){
+			if((window.location.search.indexOf('?NewShippingAddress') != -1) || (window.location.search.indexOf('?EditShippingAddress=true') != -1) ){
+				$("#pIVA_proj").remove();
+				$("#cf_proj").remove();
+			}
+		}
+	});
+
+	//fix
+	//checkout step1 modifica indirizzo di fatturazione
+	//discriminare tra Privato e PrivatoPIVA e mettere le validazioni kor necessarie
+	$(document).ready(function(){
+		if($("#ws-address").length > 0){
+			if((window.location.search.indexOf('?NewBillingAddress') != -1) || (window.location.search.indexOf('?EditBillingAddress=true') != -1) ){
+				//trovo la table visibile (o è Modifica o è Aggiungi)
+				var isBillingEditing = $("tr.kor-edit-billing-address").is(':visible');
+				if(isBillingEditing){
+					//metto a posto tutti i kor error message nel top
+					//console.log("kor error placeholders: " + $(".kor-field-error-message-placeholder.kor-field-error-right").length);
+					$(".kor-field-error-message-placeholder.kor-field-error-right").parent().css('margin','0px').css('float','none');
+					$(".kor-field-error-message-placeholder.kor-field-error-right").each(function(){
+						$(this).removeClass('kor-field-error-right');
+						$(this).addClass('kor-field-error-top');
+					});
+					//solo in locale
+					//console.log("kor-field-error " + $(".kor-field-error-message-placeholderkor-field-error-right").length);
+					$(".kor-field-error-message-placeholderkor-field-error-right").parent().css('margin','0px').css('float','none');
+
+					//discrimino tra privato o azienda controllando il valore
+					//della label dentro al div #lastname
+					var isPrivato=true;
+					if($("#lastname label").text().indexOf('Ragione Sociale') != -1){
+						isPrivato=false
+					}
+
+					//console.log("is privato?" + isPrivato);
+					if(isPrivato){
+						//lascio il validatore kor che c'è
+						//non metto nessun validatore sulla partita iva perchè il privato non ce l'ha
+						//nascondo la partita iva
+						$("tr.kor-edit-billing-address #pIVA_proj").hide();
+					}
+					else{
+						//metto il validatore codicefiscale_11_16 sul campo codice fiscale
+						$("tr.kor-edit-billing-address #CFInputField").attr('data-validate','required codicefiscale_11_16 codicefiscale_11_16_basic_match_data')
+						//metto il validatore partitaiva sul campo partita iva
+						$("tr.kor-edit-billing-address input[name='address_PartitaIVA']").attr('data-validate','required partitaiva');
+						$("tr.kor-edit-billing-address input[name='address_PartitaIVA']").attr('data-validate-error-message','Devi inserire la Partita IVA.');
+						//metto l'asterisco sulla label di partita iva per la user experience
+						$("tr.kor-edit-billing-address label[for='address_PartitaIVA']").html('Partita IVA<span class="ws-required">*</span>');
+					}
+				}
+				else{
+					//console.log("adding new billing address");
+					//l'utente è registrato e chiede l'aggiunta di un nuovo indirizzo di fatturazione
+					//bisogna replicare i controlli dentro AddressDefault.isml
+
+					//aggiungo i radiobutton per lo userType
+					$("tr.kor-add-new-billing-address div.ws-form").prepend('<div id="CheckoutAddNewBilling" class="checkout-addnewbilling-radiocontainer"><input class="checkout-addnewbilling-radio" type="radio" value="Privato" name="userType" checked="checked">Privato<input class="checkout-addnewbilling-radio" type="radio" value="PartitaIVA" name="userType">Privato con Partita IVA/Azienda</div>');
+					//predefinito è Privato, visualizzo i campi richiesti
+					$("tr.kor-add-new-billing-address div.ws-form #pIVA_proj").hide()
+					//abilito il listener sul cambio userType
+					$("#CheckoutAddNewBilling input[name='userType']").change(function(){
+						var isPrivato = $("#CheckoutAddNewBilling input[value='Privato']:checked").val();
+						if(isPrivato === 'Privato'){
+							CheckoutSwitchToPrivato("tr.kor-add-new-billing-address div.ws-form");
+						}
+						else{
+							CheckoutSwitchToPartitaIVA("tr.kor-add-new-billing-address div.ws-form");
+						}
+					});
+
+				}
+			}
+		}
+	});
+
+	function CheckoutSwitchToPartitaIVA(stringDOM){
+		//console.log("Checkout Switch to PartitaIVA");
+		//nascondere nome, togliere valore, togliere validatore
+		$(stringDOM + " #firstname").hide();
+		$(stringDOM + " #firstname input").val('');
+		$(stringDOM + " #firstname input").attr('data-validate','');
+		//modificare Cognome in ragione sociale, togliere valore
+		$(stringDOM + " #lastname label").html('Ragione Sociale<span class="ws-required">*</span>');
+		$(stringDOM + " #lastname input").val('');
+		$(stringDOM + " #lastname input").attr('data-validate-error-message','Devi inserire la Ragione Sociale');
+		//duplicare Cognome in Nome
+		$(stringDOM + " #lastname input").change(function(){
+			$(stringDOM + " #firstname input").val($(stringDOM + " #lastname input").val());
+			//console.log("firstname input value= " + $(stringDOM + " #firstname input").val());
+		});
+		//modificare il validatore sul codice fiscale
+		$(stringDOM + " #CFInputField").val('');
+		$(stringDOM + " #CFInputField").attr('data-validate','required codicefiscale_11_16 codicefiscale_11_16_basic_match_data');
+		//visualizzare la partita iva, mettere asterisco, mettere validatore
+		$(stringDOM + " #pIVA_proj").show();
+		$(stringDOM + " #pIVA_proj label").html('Partita IVA<span class="ws-required">*</span>');
+		$(stringDOM + " #pIVA_proj input").attr('data-validate','required partitaiva');
+		$(stringDOM + " #pIVA_proj input").attr('data-validate-error-message','Devi inserire la Partita IVA.');
+	}
+
+	function CheckoutSwitchToPrivato(stringDOM){
+		//console.log("Checkout Switch to Privato");
+		//visualizzare nome, togliere valore, aggiungere validatore
+		$(stringDOM + " #firstname").show();
+		$(stringDOM + " #firstname input").val('');
+		$(stringDOM + " #firstname input").attr('data-validate','required');
+		//modificare Ragione Sociale in Cognome*, togliere bind, togliere valore
+		$(stringDOM + " #lastname label").html('Cognome<span class="ws-required">*</span>');
+		$(stringDOM + " #lastname input").unbind('change');
+		$(stringDOM + " #lastname input").val('');
+		$(stringDOM + " #lastname input").attr('data-validate-error-message','Devi inserire il Cognome.');
+		//codice fiscale, cambiare validatore
+		$(stringDOM + " #CFInputField").val('');
+		$(stringDOM + " #CFInputField").attr('data-validate','required codicefiscale codicefiscale_basic_match_data');
+		//partita iva, nascondere campo, rimuovere valore, rimuovere validatore
+		$(stringDOM + " #pIVA_proj").hide();
+		$(stringDOM + " #pIVA_proj input").removeAttr('data-validate');
+		$(stringDOM + " #pIVA_proj input").removeAttr('data-validate-error-message');
+	}
+
+
+	//fix
+	//nasconde codice fiscale dalla visualizzazione dell'indirizzo di spezione nel Checkout
+	//se l'utente è "Privato con PIVA" deve nascondere entrambi
+	$(document).ready(function(){
+		if($("#ws-address").length > 0){
+			//per discriminare il tipo di utente controllo il primo field
+			var userType = $("td.ws-current-shipping-address div.rowbox div.columnBox:nth-child(1) label").text();
+			//console.log(userType);
+			if(userType === 'Ragione Sociale'){
+				$("td.ws-current-shipping-address div.rowbox div.columnBox:nth-child(2)").remove();
+				$("td.ws-current-shipping-address div.rowbox div.columnBox:nth-child(2)").remove();
+			}
+			else if(userType === 'Nome'){
+				$("td.ws-current-shipping-address div.rowbox div.columnBox:nth-child(3)").remove();
+			}
+			else{
+				//non rimuovere nessun campo in caso sia cambiato qualcosa durante lo sviluppo
+			}
+		}
+	});
+
+	//fix
+	//triangolino della preview del carrello che non è centrata in chrome/IE
+	$(document).ready(function(){
+		//fix se entro da ViewInstitutionalContent-Start
+		if($("#minicart-triangle").length > 0){
+			var pathname = window.location.pathname;
+			if(pathname.indexOf('ViewInstitutionalContent') != -1){
+				//firefox
+				$("#minicart-triangle img").css('top','17px');
+				//chrome
+				if(navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
+					$("#minicart-triangle img").css('top','19px');
+				}
+				//IE
+				//DEPRECATO if($.browser.msie){
+				if (navigator.userAgent.toLowerCase().indexOf('msie') != -1){
+					$("#minicart-triangle img").css('top','34px');
+				}
+			}
+			//fix per le altre pagine
+			else{
+				//firefox
+				$("#minicart-triangle img").css('top','12px');
+				//chrome
+				if(navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
+					$("#minicart-triangle img").css('top','15px');
+				}
+				//IE
+				//DEPRECATO if($.browser.msie){
+				if (navigator.userAgent.toLowerCase().indexOf('msie') != -1){
+					$("#minicart-triangle img").css('top','34px');
+				}
+			}
+		}
+	});
+
+	/*
+	 * MyArea->I tuoi indirizzi
+	 * fix
+	 */
+
+	$(document).ready(function(){
+		if($("#ws-saved-addresses").length > 0){
+			//TASK001 nascondere CF-PIVA sugli indirizzi di spedizione
+			var userType = $("td.smcc-shipping-address div[class^='smcc-address-displaybox'] div.columnBox:nth-child(1) label").text();
+			//console.log(userType);
+			if(userType.indexOf('Ragione Sociale') != -1){
+				//nascondere CF e PIVA
+				$("td.smcc-shipping-address div[class^='smcc-address-displaybox'] div.columnBox:nth-child(2)").hide();
+				$("td.smcc-shipping-address div[class^='smcc-address-displaybox'] div.columnBox:nth-child(3)").hide();
+			}
+			else if(userType.indexOf('Nome') != -1){
+				//nascondere CF
+				$("td.smcc-shipping-address div[class^='smcc-address-displaybox'] div.columnBox:nth-child(3)").hide();
+			}
+			else{
+				//do nothing
+			}
+			//EO TASK001
+
+			//TASK002
+			//modificare la prima visualizzazione della form inserimento nuovo indirizzo
+			//inserisco una copia di lastname in un div ad hoc ragionesociale
+			$("#smcc-myarea-addnewaddress").find("div[id='lastname']").after('<div id="ragionesociale"></div>');
+			$("#ragionesociale").append($("#lastname").html());
+			$("#ragionesociale label").text('Ragione Sociale*');
+			$("#ragionesociale input").attr('data-validate-error-message','Devi inserire la Ragione Sociale.');
+			//aggiungo il listener on change su Nome,Cognome,RagioneSociale per visualizzare i campi corretti
+			$("#firstname input").change(function(){
+				//console.log("MyAreaAddAddressPrivato");
+				MyAreaAddAddressPrivato();
+			});
+			$("#lastname input").change(function(){
+				//console.log("MyAreaAddAddressPrivato");
+				MyAreaAddAddressPrivato();
+			});
+			$("#ragionesociale input").change(function(){
+				//console.log("MyAreaAddAddressPartitaIVA");
+				MyAreaAddAddressPartitaIVA();
+			});
+
+			//EO TASK002
+
+			//TASK003
+			//correzione messaggi d'errore addnewaddress
+			$("#smcc-myarea-addnewaddress div.kor-field-error-message-placeholder.kor-field-error-right").removeClass('kor-field-error-right').addClass('kor-field-error')
+			//EO TASK003
+		}
+	});
+
+	function MyAreaAddAddressPrivato(){
+		//remove previous bind
+		$("#firstname input").unbind('change');
+		$("#lastname input").unbind('change');
+		$("#ragionesociale input").unbind('change');
+
+		//remove fake input
+		$("#ragionesociale").remove();
+
+		$("#lastname input").attr('data-validate-error-message','Devi inserire il Cognome.');
+
+		//add proper validator to CF
+		$("#CFInputField").attr('data-validate','required codicefiscale codicefiscale_basic_match_data');
+		//hide partita iva
+		$("#pIVA_proj").hide();
+		$("#pIVA_proj input").attr('data-validate','');
+	}
+
+	function MyAreaAddAddressPartitaIVA(){
+		//remove previous bind
+		$("#firstname input").unbind('change');
+		$("#lastname input").unbind('change');
+		$("#ragionesociale input").unbind('change');
+
+		//hide name
+		$("#firstname").hide();
+		$("#firstname input").attr('data-validate','');
+		//setup lastname as ragione sociale
+		$("#lastname input").val($("#ragionesociale input").val());
+		$("#lastname label").html('Ragione Sociale<span class="ws-required">*</span>');
+		$("#lastname input").attr('data-validate','required');
+		$("#lastname input").attr('data-validate-error-message','Devi inserire la Ragione Sociale.');
+		//add event on change to copy value in firstname
+		$("#lastname input").change(function(){
+			$("#firstname input").val($("#lastname input").val());
+			//console.log("firstname input value= " + $("#firstname input").val());
+		})
+
+		$("#ragionesociale").remove();
+
+		$("#CFInputField").attr('data-validate','required codicefiscale_11_16 codicefiscale_11_16_basic_match_data');
+		$("#pIVA_proj").show();
+		$("#pIVA_proj label").html('Partita IVA<span class="ws-required">*</span>');
+		$("#pIVA_proj input").attr('data-validate','required partitaiva');
+		$("#pIVA_proj input").attr('data-validate-error-message','Devi inserire la Partita IVA');
+	}
+
+	function MyAreaAddAddressReset(){
+
+	}
+
+	/*
+	 * EO MyArea->I tuoi indirizzi
+	 */
+
+	/*
+	 * Remove Kor Error left,right,top,bottom
+	 */
+	function RemoveKORErrorAllIcons(){
+		RemoveKORErrorLeftIcons();
+		RemoveKORErrorRightIcons();
+		RemoveKORErrorTopIcons();
+		RemoveKORErrorBottomIcons();
+	}
+
+	function RemoveKORErrorLeftIcons(){
+		$(".kor-field-error-left").each(function(){
+			$(this).removeClass("kor-field-error-left").addClass("kor-field-error");
+		});
+	}
+
+	function RemoveKORErrorRightIcons(){
+		$(".kor-field-error-right").each(function(){
+			$(this).removeClass("kor-field-error-right").addClass("kor-field-error");
+		});
+	}
+
+	function RemoveKORErrorTopIcons(){
+		$(".kor-field-error-top").each(function(){
+			$(this).removeClass("kor-field-error-top").addClass("kor-field-error");
+		});
+	}
+
+	function RemoveKORErrorBottomIcons(){
+		$(".kor-field-error-bottom").each(function(){
+			$(this).removeClass("kor-field-error-bottom").addClass("kor-field-error");
+		});
+	}
+
+	/*
+	*	Text on N lines
+	*/
+	function TextOnNLines(htmlElement,Lines){
+		setTimeout(function(){
+			var Height = $(htmlElement).height();/*$(htmlElement).css('height').substring(0, $(htmlElement).css('height').length - 2);*/
+			var LineHeight = parseInt($(htmlElement).css('line-height'), 10);
+			var fontSize;
+			var Text = $(htmlElement).text();
+			//console.log("Height: " + Height);
+			//console.log("LineHeight: " + LineHeight);
+			//console.log("Text: " + Text);
+
+			var currentLines = Math.floor(Height/LineHeight);
+			//console.log("Starting lines of text: " + currentLines);
+			if(currentLines > Lines){
+				while(currentLines > Lines){
+					$(htmlElement).text($(htmlElement).text().substring(0, $(htmlElement).text().lastIndexOf(' ')));
+					currentLines = Math.floor($(htmlElement).height() / parseInt($(htmlElement).css('line-height'), 10));
+					//console.log("current lines of text: " + currentLines);
+				}
+				//$(htmlElement).text($(htmlElement).text().substring(0, $(htmlElement).text().length - 3));
+				var currentText = $(htmlElement).text();
+				$(htmlElement).text(currentText+"...");
+				//last check before exiting
+				currentLines = Math.floor($(htmlElement).height() / parseInt($(htmlElement).css('line-height'), 10));
+				//console.log("after current lines of text: " + currentLines);
+				//console.log("after text: " + $(htmlElement).text());
+				if(currentLines > Lines){
+					$(htmlElement).text($(htmlElement).text().substring(0, $(htmlElement).text().lastIndexOf(' ')));
+					$(htmlElement).text(currentText+"...");
+					//console.log("very last text: " + $(htmlElement).text());
+				}
+			}
+		},500);
+	}
+
+	/*
+	* Cart, display Additional Services with good line-height
+	*/
+	$(document).ready(function(){
+		if($("#ws-cart").length > 0){
+			$(".additional-service .ws-product-info h2").each(function(){
+				var lH = $(this).css('line-height');
+				var H = $(this).css('height');
+				lH = lH.substring(0, lH.length - 2);
+				H = H.substring(0, H.length - 2);
+				var nL = H / lH;
+				if(nL > 1){
+					$(this).css('line-height','14px');
+				}
+			});
+		}
+
+	});
+
+	/**
+	 * TEST FB sdk
+	 * */
+	 window.fbAsyncInit = function() {
+		  FB.init({
+		    xfbml : true
+		  });
+
+		  FB.Event.subscribe('xfbml.render', function(response) {
+			  hideTwitterBoxElements();
+		  });
+		};
+
+		(function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/en_US/all.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+
+	window.twttr = (function (d,s,id) {
+		  var t, js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+		  js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+		  return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+		}(document, "script", "twitter-wjs"));
+
+	twttr.ready(function (twttr) {
+        //console.log("start resize twitter widget");
+		hideTwitterBoxElements();
+
+        //console.log("stop resize twitter widget");
+    });
+
+	/**
+	 * SMCCAsyncGet
+	 * updates a target element with data provided by a pipeline
+	 * */
+	function SMCCAsyncGet(pipeline,target){
+		//console.log("Calling ajax function with pipeline "+ pipeline +" target: " + target);
+		$.get(pipeline,function(data){
+			if( $(target).length>0 ){
+				$(target).html(data);
+			}
+		});
+	}
+
+
+
+
+	/**
+	*	MouseEnter on MiniCart Button and Accedi
+	*/
+	$(document).ready(function(){
+		/*minicart*/
+		$("#top-head .minicart-button-link").mouseenter(function(){
+		    $("a.kor-minicart-items").click();
+		});
+
+		/*accedi*/
+		$("#loyaltybar_login").mouseleave(function(){
+		    //$("#loyaltybar_login").toggle();
+		});
+
+		//$("#header_accedi").mouseenter(function(){
+		//    $("#loyaltybar_login").toggle();
+		//});
+	});
+
+	/**
+	 *  overlay vetrine
+	 *
+	 *  */
+
+	/* close all visible overlay */
+	function closeOverlayVetrine(){
+		$(".smcc_information_overlay_container").hide();
+	}
+
+	/* ajax call for retrieving Vetrina overlay, executes a callback when finished */
+	function AsyncCallOverlayVetrine(pipeline,productID,domainID,target,callback){
+		pipeline = pipeline + "?ProductID=" + productID + "&DomainID=" + domainID;
+		/*console.log("calling pipeline: " +pipeline);*/
+		$.get(pipeline,function(data){
+			if( $(target).length>0 ){
+				$(target).html(data);
+				callback();
+			}
+		});
+	}
+
+
+
+	/*enable the feature only in homepage, remember to set page body id otherwise the feature is disabled*/
+	/*to avoid multiple calls for the same object, this function calls the pipeline only once per product per pageload */
+	$(document).ready(function(){
+		if($("#trony_homepage").length > 0){
+			/* only div ID = prodotti_fan and div ID = vetrina */
+			$("#prodotti_fan .vetrina_terzariga_colonna_riga2").mouseenter(function(){
+				/*stores the reference of the div for further use*/
+				var initialRef = $(this);
+				closeOverlayVetrine();
+
+				var Pipeline = "/online/web/WFS/Trony-B2C-Site/it_IT/-/EUR/ViewVetrinaOverlay-Start";
+
+				var DomainID = $(this).parent().siblings(".smcc_information_overlay_placeholder").attr("data-productdomainid");
+				//console.log("DomainID = " + DomainID);
+
+				var ProductID = $(this).parent().siblings(".smcc_information_overlay_placeholder").attr("data-productid");
+				//console.log("ProductID = " + ProductID);
+
+				if ((typeof ProductID != 'undefined') && (typeof DomainID != 'undefined'))
+					{
+					var Target = $(this).parent().siblings(".smcc_information_overlay_placeholder");
+					//console.log($(Target));
+
+					/* call ajax pipeline and executes callback*/
+					AsyncCallOverlayVetrine(Pipeline, ProductID, DomainID, Target, function(){
+						//close again open vetrine
+						closeOverlayVetrine();
+						//rimuovo l'async
+						$(initialRef).unbind('mouseenter');
+						$(Target).find(".smcc_information_overlay_container").show();
+
+						$(initialRef).mouseenter(function(){
+							closeOverlayVetrine();
+							$(Target).find(".smcc_information_overlay_container").toggle();
+						});
+
+						$(Target).find(".smcc_information_overlay_container").mouseleave(function(){
+							$(Target).find(".smcc_information_overlay_container").toggle();
+						});
+					});
+					}
+			});
+			$("#vetrina .vetrina_terzariga_colonna_riga2").mouseenter(function(){
+				/*stores the reference of the div for further use*/
+				var initialRef = $(this);
+				closeOverlayVetrine();
+
+				var Pipeline = "/online/web/WFS/Trony-B2C-Site/it_IT/-/EUR/ViewVetrinaOverlay-Start";
+
+				var DomainID = $(this).parent().siblings(".smcc_information_overlay_placeholder").attr("data-productdomainid");
+				//console.log("DomainID = " + DomainID);
+
+				var ProductID = $(this).parent().siblings(".smcc_information_overlay_placeholder").attr("data-productid");
+				//console.log("ProductID = " + ProductID);
+				if ((typeof ProductID != 'undefined') && (typeof DomainID != 'undefined'))
+					{
+					var Target = $(this).parent().siblings(".smcc_information_overlay_placeholder");
+					//console.log($(Target));
+
+					/* call ajax pipeline and executes callback*/
+					AsyncCallOverlayVetrine(Pipeline, ProductID, DomainID, Target, function(){
+						//close again open vetrine
+						closeOverlayVetrine();
+						//rimuovo l'async
+						$(initialRef).unbind('mouseenter');
+						$(Target).find(".smcc_information_overlay_container").show();
+
+						$(initialRef).mouseenter(function(){
+							closeOverlayVetrine();
+							$(Target).find(".smcc_information_overlay_container").toggle();
+						});
+
+						$(Target).find(".smcc_information_overlay_container").mouseleave(function(){
+							$(Target).find(".smcc_information_overlay_container").toggle();
+						});
+					});
+					}
+			});
+		}
+
+	});
+
+	/**
+	*	Registration
+	*	Set Default Value for AddressForm_CountryCode to Italia
+	*
+	**/
+	$(document).ready(function(){
+		if($("body#ws-create-account").length > 0){
+			$("select#AddressForm_CountryCode").val('Italia').change();
+		}
+
+	});
+
+	var GSABaseUrl = "";
+	//check the GSA state and fall-back on solr in case of problems
+
+	$(document).ready(function(){
+		if($('#searchSolr').length > 0){
+
+			var serDisplay = '';
+
+			//restored from preference GSA_HostName in SMCCSection
+			GSABaseUrl = $('#GSA_HostName').val();
+			var source = new Array();
+			$.ajax({
+				url: GSABaseUrl + "/search",
+				dataType: "jsonp",
+				jsonpCallback: 'cback',
+				jsonp: false,
+				async: false,
+				data: {num: "1", site: "trony", client: "jsonp", proxystylesheet: "jsonp", callback: "cback", q: "casa"},
+				success: function( msg,index ) {
+		        	  var data = eval(msg);
+		        	  	if(data.result){
+		        	  		$.each(data.result, function (index,item) {
+			        	  		source.push(item.title);
+							});
+		        	  		}
+		        	  if (source[0].length > 0 ){
+		        		$('#searchSolr').hide();
+		        		$("#searchGSA").show();
+		        		}
+		          	}
+		         //
+				 //cache: true,
+				 //timeout: 1000,
+				})
+				setTimeout(function(){
+					//alert($("#searchGSA").is(':visible'));
+					if (!$("#searchGSA").is(':visible'))
+							{
+							$("#searchGSA").hide();
+							$('#searchSolr').show();
+							}
+				},10000);
+		}
+	});
+
+
+
+
+	/* Returns the root path prefix for full-refresh search requests. */
+    function GSA_getSearchRootPathPrefix() {
+      return GSABaseUrl  + '/search';
+    }
+
+    function togliBold(label){
+		label = label.replace('<b>','');
+		label = label.replace('</b>','');
+		return label;
+	}
+
+
+
+
+
+    /**
+     * Pay and Collect (Glauco)
+     *
+     * @param AJAXPacCall
+     * @param ProductRefID
+     */
+
+
+    function PaCSelection(AJAXPacCall,ProductRefID,BasketPage, ShippingPage){
+
+    	$('#warehouse-container').addClass('loading');
+        $.ajax({type: "GET",
+        		url:AJAXPacCall,
+        		dataType: "html",
+        		data: {ProductRefID : ProductRefID, PaC_Province: $( "#Provincia" ).val(),PacBasketPage: BasketPage,PacShippingPage: ShippingPage},
+        		success:function(result){
+        	 //alert(result);
+        	 $('#warehouse-container').removeClass('loading');
+    		 $("#warehouse-container").html(result);
+
+    		}});
+
+    }
+
+    function PaCListSelection(AJAXPacCall,ProductRefID,Sku){
+
+    	$('#RacPacModeSelection').addClass('loading');
+        $.ajax({type: "GET",
+        		url:AJAXPacCall,
+        		dataType: "html",
+        		data: {ProductRefID : ProductRefID, SKU: Sku},
+        		success:function(result){
+        	 //alert(result);
+        	 $('#RacPacModeSelection').removeClass('loading');
+    		 $("#RacPacModeSelection").html(result);
+
+    		}});
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+

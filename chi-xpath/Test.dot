@@ -1,0 +1,22 @@
+graph Test {
+graph [ratio=fill];
+node [label="\N", fontsize=20, shape=rect];
+0[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">0</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\Documents\GitHub\Chi-Xpath/src/test/resources/basic/Test/images/references.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">1</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\Documents\GitHub\Chi-Xpath/src/test/resources/basic/Test/images/test3.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+
+}

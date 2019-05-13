@@ -1,0 +1,3181 @@
+graph Steam {
+graph [ratio=fill];
+node [label="\N", fontsize=20, shape=rect];
+0[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">0</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">7</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">32</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+1[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">1</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">11</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">7</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+2[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">2</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">8</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+3[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">3</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">9</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+4[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">4</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">13</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">9</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+5[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">5</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">23</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">10</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+6[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">6</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">25</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">10</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+7[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">7</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">10</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+8[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">8</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">11</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">22</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+9[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">9</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">12</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">23</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">18</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+10[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">10</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">25</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">27</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+11[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">11</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">12</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">18</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+12[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">12</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">25</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">32</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+13[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">13</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">12</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">35</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">25</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+14[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">14</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">26</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+15[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">15</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">12</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">35</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+16[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">16</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">27</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+17[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">17</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">22</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">23</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">13</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+18[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">18</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">14</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">27</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+19[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">19</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">22</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">13</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+20[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">20</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">13</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">27</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+21[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">21</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">13</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">35</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+22[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">22</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">27</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">16</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+23[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">23</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">32</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+24[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">24</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">20</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+25[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">25</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">1</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+26[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">26</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">23</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+27[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">27</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">23</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">12</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+28[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">28</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">23</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">13</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+29[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">29</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">25</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+30[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">30</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">12</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">25</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+31[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">31</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+32[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">32</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">12</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+33[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">33</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">14</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+34[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">34</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">13</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+35[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">35</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">16</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+36[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">36</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">22</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">14</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+37[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">37</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">14</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">18</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+38[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">38</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">14</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">27</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">18</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+39[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">39</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">35</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">14</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+40[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">40</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">6</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+41[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">41</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">14</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">17</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+42[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">42</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">31</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+43[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">43</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">15</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+44[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">44</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">11</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+45[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">45</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">22</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">16</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+46[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">46</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">12</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">1</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+47[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">47</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">35</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">16</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+48[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">48</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">12</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">6</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+49[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">49</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">17</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+50[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">50</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">1</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">14</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+51[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">51</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">23</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">18</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+52[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">52</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">19</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+53[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">53</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">22</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">1</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+54[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">54</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">22</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">1</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">14</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+55[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">55</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">1</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">7</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+56[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">56</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">18</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+57[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">57</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">27</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">18</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+58[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">58</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">18</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">32</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+59[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">59</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">18</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">20</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+60[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">60</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">1</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">10</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+61[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">61</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">22</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">19</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+62[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">62</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">23</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">2</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+63[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">63</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">22</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">20</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+64[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">64</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">2</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+65[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">65</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">21</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+66[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">66</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">3</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+67[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">67</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">21</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">32</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+68[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">68</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">25</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">4</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+69[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">69</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">22</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">23</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+70[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">70</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">4</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+71[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">71</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">22</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">25</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+72[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">72</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">14</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">4</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+73[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">73</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">13</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">4</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+74[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">74</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">4</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">16</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+75[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">75</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">5</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+76[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">76</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">22</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+77[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">77</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">22</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">25</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">32</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+78[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">78</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">22</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">32</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+79[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">79</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">35</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">25</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+80[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">80</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">22</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">6</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+81[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">81</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">33</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">25</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+82[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">82</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">6</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">10</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+83[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">83</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">34</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">35</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+84[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">84</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">7</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">29</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+85[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">85</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">33</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">28</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">30</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+86[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">86</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">24</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Borderlands_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">13</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Supraland_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/Sekiro_azione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">7</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAvventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/BabyRedemption_avventura.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:/Users/Lukas/git/Chi-Xpath/src/test/resources/basic/Steam/images/SezioneAzione.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+
+44 -- 23
+44 -- 34
+44 -- 25
+44 -- 31
+45 -- 33
+45 -- 34
+45 -- 35
+45 -- 36
+45 -- 29
+45 -- 19
+45 -- 71
+45 -- 31
+45 -- 76
+46 -- 25
+46 -- 31
+46 -- 32
+47 -- 33
+47 -- 34
+47 -- 35
+47 -- 79
+47 -- 39
+47 -- 29
+47 -- 83
+47 -- 31
+47 -- 21
+48 -- 46
+48 -- 25
+48 -- 26
+48 -- 27
+48 -- 29
+48 -- 40
+48 -- 30
+48 -- 31
+48 -- 32
+49 -- 56
+49 -- 57
+49 -- 25
+49 -- 16
+49 -- 70
+49 -- 83
+49 -- 31
+49 -- 53
+49 -- 76
+50 -- 33
+50 -- 25
+50 -- 31
+51 -- 56
+51 -- 26
+51 -- 31
+52 -- 33
+52 -- 44
+52 -- 12
+52 -- 23
+52 -- 34
+52 -- 24
+52 -- 35
+52 -- 25
+52 -- 26
+52 -- 28
+52 -- 29
+52 -- 50
+52 -- 40
+52 -- 31
+53 -- 25
+53 -- 31
+53 -- 76
+10 -- 16
+10 -- 29
+10 -- 31
+54 -- 33
+54 -- 25
+54 -- 36
+54 -- 50
+54 -- 31
+54 -- 53
+54 -- 76
+55 -- 25
+55 -- 84
+55 -- 31
+55 -- 53
+55 -- 76
+11 -- 56
+11 -- 31
+11 -- 32
+12 -- 23
+12 -- 29
+12 -- 31
+56 -- 31
+13 -- 79
+13 -- 15
+13 -- 29
+13 -- 83
+13 -- 30
+13 -- 31
+13 -- 32
+57 -- 56
+57 -- 16
+57 -- 31
+14 -- 22
+14 -- 44
+14 -- 23
+14 -- 24
+14 -- 46
+14 -- 25
+14 -- 26
+14 -- 48
+14 -- 27
+14 -- 28
+14 -- 29
+14 -- 50
+14 -- 30
+14 -- 52
+14 -- 31
+14 -- 10
+14 -- 32
+14 -- 33
+14 -- 12
+14 -- 34
+14 -- 35
+14 -- 16
+14 -- 18
+14 -- 40
+14 -- 20
+14 -- 42
+58 -- 23
+58 -- 56
+58 -- 31
+59 -- 33
+59 -- 23
+59 -- 56
+59 -- 24
+59 -- 58
+59 -- 26
+59 -- 37
+59 -- 51
+59 -- 31
+15 -- 83
+15 -- 31
+15 -- 32
+16 -- 31
+17 -- 34
+17 -- 69
+17 -- 26
+17 -- 28
+17 -- 19
+17 -- 31
+17 -- 76
+18 -- 33
+18 -- 16
+18 -- 31
+19 -- 34
+19 -- 31
+19 -- 76
+0 -- 23
+0 -- 78
+0 -- 84
+0 -- 31
+0 -- 76
+1 -- 44
+1 -- 55
+1 -- 23
+1 -- 34
+1 -- 78
+1 -- 25
+1 -- 19
+1 -- 0
+1 -- 8
+1 -- 84
+1 -- 31
+1 -- 53
+1 -- 86
+1 -- 76
+2 -- 11
+2 -- 33
+2 -- 34
+2 -- 45
+2 -- 56
+2 -- 35
+2 -- 36
+2 -- 37
+2 -- 29
+2 -- 19
+2 -- 6
+2 -- 7
+2 -- 71
+2 -- 84
+2 -- 30
+2 -- 31
+2 -- 64
+2 -- 86
+2 -- 32
+2 -- 65
+2 -- 76
+3 -- 69
+3 -- 26
+3 -- 16
+3 -- 70
+3 -- 83
+3 -- 84
+3 -- 31
+3 -- 76
+4 -- 34
+4 -- 69
+4 -- 26
+4 -- 16
+4 -- 17
+4 -- 28
+4 -- 19
+4 -- 3
+4 -- 70
+4 -- 83
+4 -- 73
+4 -- 84
+4 -- 20
+4 -- 31
+4 -- 86
+4 -- 21
+4 -- 76
+5 -- 69
+5 -- 26
+5 -- 27
+5 -- 7
+5 -- 31
+5 -- 32
+5 -- 76
+6 -- 7
+6 -- 29
+6 -- 71
+6 -- 30
+6 -- 31
+6 -- 32
+6 -- 76
+7 -- 31
+7 -- 32
+7 -- 76
+8 -- 44
+8 -- 23
+8 -- 34
+8 -- 78
+8 -- 25
+8 -- 19
+8 -- 31
+8 -- 53
+8 -- 76
+9 -- 11
+9 -- 56
+9 -- 26
+9 -- 27
+9 -- 51
+9 -- 31
+9 -- 32
+60 -- 46
+60 -- 25
+60 -- 7
+60 -- 31
+60 -- 53
+60 -- 32
+60 -- 76
+61 -- 44
+61 -- 23
+61 -- 45
+61 -- 24
+61 -- 25
+61 -- 69
+61 -- 26
+61 -- 28
+61 -- 29
+61 -- 71
+61 -- 50
+61 -- 52
+61 -- 31
+61 -- 53
+61 -- 54
+61 -- 76
+61 -- 33
+61 -- 77
+61 -- 12
+61 -- 34
+61 -- 78
+61 -- 35
+61 -- 36
+61 -- 17
+61 -- 19
+61 -- 8
+61 -- 80
+61 -- 40
+61 -- 63
+62 -- 11
+62 -- 34
+62 -- 56
+62 -- 69
+62 -- 26
+62 -- 27
+62 -- 17
+62 -- 28
+62 -- 19
+62 -- 5
+62 -- 7
+62 -- 9
+62 -- 51
+62 -- 31
+62 -- 64
+62 -- 32
+62 -- 76
+63 -- 33
+63 -- 23
+63 -- 78
+63 -- 24
+63 -- 36
+63 -- 69
+63 -- 26
+63 -- 31
+63 -- 76
+64 -- 11
+64 -- 34
+64 -- 56
+64 -- 7
+64 -- 19
+64 -- 31
+64 -- 32
+64 -- 76
+20 -- 34
+20 -- 16
+20 -- 31
+65 -- 56
+65 -- 29
+65 -- 71
+65 -- 84
+65 -- 31
+65 -- 76
+21 -- 34
+21 -- 83
+21 -- 31
+66 -- 44
+66 -- 23
+66 -- 46
+66 -- 25
+66 -- 49
+66 -- 70
+66 -- 73
+66 -- 31
+66 -- 53
+66 -- 32
+66 -- 76
+66 -- 11
+66 -- 34
+66 -- 56
+66 -- 78
+66 -- 57
+66 -- 58
+66 -- 15
+66 -- 16
+66 -- 19
+66 -- 7
+66 -- 8
+66 -- 60
+66 -- 83
+66 -- 85
+66 -- 20
+66 -- 42
+66 -- 64
+66 -- 21
+22 -- 33
+22 -- 34
+22 -- 35
+22 -- 16
+22 -- 18
+22 -- 29
+22 -- 20
+22 -- 31
+22 -- 10
+67 -- 77
+67 -- 12
+67 -- 23
+67 -- 56
+67 -- 78
+67 -- 58
+67 -- 29
+67 -- 0
+67 -- 71
+67 -- 84
+67 -- 31
+67 -- 65
+67 -- 76
+23 -- 31
+68 -- 79
+68 -- 16
+68 -- 29
+68 -- 70
+68 -- 71
+68 -- 83
+68 -- 31
+68 -- 10
+68 -- 76
+24 -- 33
+24 -- 23
+24 -- 26
+24 -- 31
+69 -- 26
+69 -- 31
+69 -- 76
+25 -- 31
+26 -- 31
+27 -- 26
+27 -- 31
+27 -- 32
+28 -- 34
+28 -- 26
+28 -- 31
+29 -- 31
+70 -- 16
+70 -- 83
+70 -- 31
+70 -- 76
+71 -- 29
+71 -- 31
+71 -- 76
+72 -- 33
+72 -- 36
+72 -- 16
+72 -- 39
+72 -- 18
+72 -- 70
+72 -- 83
+72 -- 31
+72 -- 76
+73 -- 34
+73 -- 16
+73 -- 19
+73 -- 70
+73 -- 83
+73 -- 20
+73 -- 31
+73 -- 21
+73 -- 76
+74 -- 22
+74 -- 33
+74 -- 34
+74 -- 45
+74 -- 35
+74 -- 68
+74 -- 79
+74 -- 36
+74 -- 47
+74 -- 16
+74 -- 39
+74 -- 18
+74 -- 29
+74 -- 19
+74 -- 70
+74 -- 71
+74 -- 72
+74 -- 83
+74 -- 73
+74 -- 20
+74 -- 31
+74 -- 10
+74 -- 21
+74 -- 76
+30 -- 29
+30 -- 31
+30 -- 32
+75 -- 23
+75 -- 24
+75 -- 69
+75 -- 26
+75 -- 27
+75 -- 70
+75 -- 72
+75 -- 31
+75 -- 32
+75 -- 76
+75 -- 33
+75 -- 78
+75 -- 36
+75 -- 15
+75 -- 16
+75 -- 39
+75 -- 18
+75 -- 0
+75 -- 3
+75 -- 5
+75 -- 7
+75 -- 83
+75 -- 84
+75 -- 63
+75 -- 85
+32 -- 31
+76 -- 31
+77 -- 12
+77 -- 23
+77 -- 78
+77 -- 29
+77 -- 71
+77 -- 31
+77 -- 76
+33 -- 31
+78 -- 23
+78 -- 31
+78 -- 76
+34 -- 31
+35 -- 33
+35 -- 34
+35 -- 29
+35 -- 31
+79 -- 29
+79 -- 83
+79 -- 31
+36 -- 33
+36 -- 31
+36 -- 76
+37 -- 33
+37 -- 56
+37 -- 31
+38 -- 33
+38 -- 56
+38 -- 57
+38 -- 37
+38 -- 16
+38 -- 18
+38 -- 31
+39 -- 33
+39 -- 83
+39 -- 31
+80 -- 25
+80 -- 69
+80 -- 26
+80 -- 29
+80 -- 71
+80 -- 40
+80 -- 31
+80 -- 53
+80 -- 76
+81 -- 77
+81 -- 12
+81 -- 23
+81 -- 78
+81 -- 13
+81 -- 68
+81 -- 79
+81 -- 15
+81 -- 16
+81 -- 29
+81 -- 6
+81 -- 7
+81 -- 70
+81 -- 71
+81 -- 83
+81 -- 30
+81 -- 85
+81 -- 31
+81 -- 10
+81 -- 32
+81 -- 76
+82 -- 46
+82 -- 25
+82 -- 69
+82 -- 26
+82 -- 48
+82 -- 27
+82 -- 29
+82 -- 5
+82 -- 6
+82 -- 7
+82 -- 80
+82 -- 60
+82 -- 71
+82 -- 40
+82 -- 30
+82 -- 31
+82 -- 53
+82 -- 32
+82 -- 76
+83 -- 31
+40 -- 25
+40 -- 26
+40 -- 29
+40 -- 31
+84 -- 31
+84 -- 76
+85 -- 23
+85 -- 78
+85 -- 15
+85 -- 16
+85 -- 7
+85 -- 70
+85 -- 83
+85 -- 31
+85 -- 32
+85 -- 76
+41 -- 33
+41 -- 56
+41 -- 57
+41 -- 25
+41 -- 36
+41 -- 37
+41 -- 16
+41 -- 38
+41 -- 49
+41 -- 39
+41 -- 18
+41 -- 70
+41 -- 50
+41 -- 72
+41 -- 83
+41 -- 31
+41 -- 53
+41 -- 54
+41 -- 76
+42 -- 44
+42 -- 23
+42 -- 34
+42 -- 46
+42 -- 25
+42 -- 16
+42 -- 20
+42 -- 31
+42 -- 32
+86 -- 34
+86 -- 19
+86 -- 84
+86 -- 31
+86 -- 76
+43 -- 44
+43 -- 45
+43 -- 46
+43 -- 47
+43 -- 48
+43 -- 49
+43 -- 50
+43 -- 51
+43 -- 52
+43 -- 53
+43 -- 10
+43 -- 54
+43 -- 11
+43 -- 55
+43 -- 12
+43 -- 56
+43 -- 13
+43 -- 57
+43 -- 14
+43 -- 58
+43 -- 15
+43 -- 59
+43 -- 16
+43 -- 17
+43 -- 18
+43 -- 19
+43 -- 0
+43 -- 1
+43 -- 2
+43 -- 3
+43 -- 4
+43 -- 5
+43 -- 6
+43 -- 7
+43 -- 8
+43 -- 9
+43 -- 60
+43 -- 61
+43 -- 62
+43 -- 63
+43 -- 20
+43 -- 64
+43 -- 21
+43 -- 65
+43 -- 22
+43 -- 66
+43 -- 23
+43 -- 67
+43 -- 24
+43 -- 68
+43 -- 25
+43 -- 69
+43 -- 26
+43 -- 27
+43 -- 28
+43 -- 29
+43 -- 70
+43 -- 71
+43 -- 72
+43 -- 73
+43 -- 30
+43 -- 74
+43 -- 31
+43 -- 75
+43 -- 32
+43 -- 76
+43 -- 33
+43 -- 77
+43 -- 34
+43 -- 78
+43 -- 35
+43 -- 79
+43 -- 36
+43 -- 37
+43 -- 38
+43 -- 39
+43 -- 80
+43 -- 81
+43 -- 82
+43 -- 83
+43 -- 40
+43 -- 84
+43 -- 41
+43 -- 85
+43 -- 42
+43 -- 86
+}

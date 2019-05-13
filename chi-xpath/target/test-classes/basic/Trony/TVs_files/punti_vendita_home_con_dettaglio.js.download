@@ -1,0 +1,261 @@
+var isiPad = false;
+var isMobile = false;
+var map;
+var geocoder;
+var markerClusterer;
+var markers = [];
+var infoWindow;
+var filtro_sel;
+var html_da_filtro;
+var limite_ricerca_in_km = 20;
+var limite_ricerca_in_km_settato = 20;
+var zoom = 5;
+var size = 20;
+var init = false;
+var pv_visibili_ini = 21;
+var roma;
+var clusterStyle = [{
+        url: '/_layouts/images/Trony.Theme/markerCluster1.png',
+        height: 30,
+        width: 30,
+        textColor: '#FFFFFF'
+    },
+    {
+        url: '/_layouts/images/Trony.Theme/markerCluster2.png',
+        height: 38,
+        width: 38,
+        textColor: '#FFFFFF'
+    }];
+
+
+function checkAgent() {
+    if (/(iPad)/.test(navigator.userAgent)) {
+        isiPad = true;
+    }
+    if (/(iPhone|iPod|BlackBerry|Android)/.test(navigator.userAgent)) {
+        isMobile = true;
+    }
+}
+
+function initMappa(KmRicerca, DefaultFilterIndex) {
+	checkAgent();
+	if (!isiPad && !isMobile)
+		{
+            //createDropDown(DefaultFilterIndex);
+            initDropDown(DefaultFilterIndex);
+        }
+	else
+        {
+            settoValoreEIndexSelectDaIpad(DefaultFilterIndex);
+        }
+}
+
+
+function thisTouchStart(e) {
+    dragFlag = true;
+    startY = e.originalEvent.touches[0].pageY;
+    startX = e.originalEvent.touches[0].pageX;
+}
+
+function thisTouchEnd() {
+    dragFlag = false;
+}
+
+function thisTouchMove(e) {
+    if (!dragFlag) return;
+    endY = e.originalEvent.touches[0].pageY;
+    endX = e.originalEvent.touches[0].pageX;
+
+}
+
+//////////////////////////////////////////////////////////////////
+///////////////// CERCO NEGOZI PER INDIRIZZO /////////////////////
+
+function cliccoCercaPV(event) {
+    cercoPerIndirizzo(false);
+
+    if (event.preventDefault) {
+        event.preventDefault();
+    } else {
+        event.returnValue = false;
+    };
+}
+
+
+
+function doCheckInt(campo){
+	var vale = campo.value;
+	ritorno = doCheckSoloChar(vale, "0123456789");
+	if(ritorno==false){
+		alert("Il cap deve essere numerico");
+	}
+	return ritorno;
+}
+
+
+function doCheckSoloChar(txt, txtListaChar){
+	var ritorno = true;
+	for(var i=0;i<txt.length;i++){
+		if(txtListaChar.indexOf(txt.charAt(i))<0){
+			i = txt.length;
+			ritorno = false;
+		}
+	}
+	return ritorno;
+}
+
+
+function codeAddress(address) {
+    if (geocoder) {
+        geocoder.geocode({ 'address': address }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                var lat = results[0].geometry.location.lat();
+                var lng = results[0].geometry.location.lng();
+                var latLng = new google.maps.LatLng(lat, lng);
+                var centro = { X: parseFloat(lat), Y: parseFloat(lng) };
+                clearMarkers()
+                creoListaCoordinate(centro);
+            } else {
+                alert("L'indirizzo o il cap inserito non esiste!");
+            }
+        });
+    }
+}
+
+
+
+
+
+
+
+
+// Firefox 8 fix
+function outerHTML(elm) {
+    var ret = "<" + elm.tagName;
+    for (var i = 0; i < elm.attributes.length; i++) {
+        var attr = elm.attributes[i];
+        ret += " " + attr.name + "=\"" + attr.nodeValue.replace(/"/, "\"") + "\"";
+    }
+    ret += ">";
+    ret += elm.innerHTML + "</" + elm.tagName + ">";
+    return ret;
+}
+
+
+
+function initDropDown(index) {
+    $(".dropdown dt a").click(function () {
+        $(".dropdown dd div").toggle();
+    });
+    $(document).bind('click', function (e) {
+        var $clicked = $(e.target);
+        if (!$clicked.parents().hasClass("dropdown"))
+            $(".dropdown dd div").hide();
+    });
+
+    $(".dropdown dd div div a").click(function () {
+        var text = '<div class="arrow_select"></div>' + $(this).html();
+        $(".dropdown dt a").html(text);
+        $(".dropdown dd div").hide();
+
+        var source = $("#source_select");
+        source.val($(this).find("span.value").html())
+
+        // chiamo la funzione che mette i marker della provincia
+        //scelgoProvincia($(this).find("span.value").html());
+        filtro_sel = $(this).find("span.value").html();
+    });
+    //imposto il valore iniziale di filtro
+    filtro_sel = $($(".dropdown dd div div a")[index]).find("span.value").html();
+}
+
+function settoValoreSelectDaIpad(valore) {
+    filtro_sel = valore;
+}
+
+function settoValoreEIndexSelectDaIpad(index) {
+    var source = $("#source_select");
+    var selected = source.find("option[selected]");
+    var options = $("option", source);
+
+    //if (selected.text() == "") {
+    selected = source.children("option:eq(" + index + ")");
+    source.children("option:eq(" + index + ")").attr("selected", true);
+    //}
+
+    filtro_sel = selected.val();
+}
+
+
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+
+function nascondoBoxCerca(ritardo) {
+    if (!ritardo) {
+        var ritardo = 0;
+    }
+    $(".tool_mappa_home").delay(ritardo).animate({
+        top: '-500px'
+    }, 'slow', 'linear', function () {
+        vedoBoxChiuso()
+    });
+}
+
+function vedoBoxCerca() {
+    $(".tool_mappa_home").animate({
+        top: '0px'
+    }, 'slow', 'linear', function () {
+    });
+}
+
+function vedoBoxChiuso() {
+    $(".tool_mappa_home_chiuso").animate({
+        top: '0px'
+    }, 'slow', 'linear', function () {
+    });
+}
+
+function nascondoBoxChiuso() {
+    $(".tool_mappa_home_chiuso").animate({
+        top: '-80px'
+    }, 'fast', 'linear', function () {
+        vedoBoxCerca()
+    });
+}
+
+function filter_detail(select_value) {
+    $('.box_pv_dett_centrato .pt_pv').css("display", "inline-table");
+    if (select_value == 'TT') {
+        $('.box_pv_hide').css("display", "none");
+        $('.box_pv_btn').css("display", "block");
+        $('.NascondiVisualizzaPV').html('Visualizza i restanti ' + $('.box_pv_hide .pt_pv').length + ' punti vendita.');
+    }
+    else {
+        $('.box_pv_hide').css("display", "block");
+        $('.box_pv_btn').css("display", "none");
+    }
+
+    if (select_value == 'NA') {
+        $('.box_pv_dett_centrato .pt_pv').filter(function () {
+            return $(this).attr("NA") != "True";
+        }).css("display", "none");
+    }
+    if (select_value == 'NP') {
+        $('.box_pv_dett_centrato .pt_pv').filter(function () {
+            return $(this).attr("VA") != "True";
+        }).css("display", "none");
+    }
+}
+
+function NascondiVisualizzaPV() {
+    if ($('.box_pv_hide').css("display") != "none") {
+        $('.box_pv_hide').hide(1000);
+        $('.NascondiVisualizzaPV').html('Visualizza i restanti ' + $('.box_pv_hide .pt_pv').length + ' punti vendita.');
+    }
+    else {
+        $('.box_pv_hide').show("slow", function () {
+            doRefreshScrollDevice();
+        });
+        $('.NascondiVisualizzaPV').html('Nascondi i punti vendita.');
+    }
+}

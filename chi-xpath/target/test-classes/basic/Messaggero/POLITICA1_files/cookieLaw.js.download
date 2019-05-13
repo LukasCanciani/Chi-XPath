@@ -1,0 +1,239 @@
+/*
+ *
+ *
+ *
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ C'è una V2!
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+script ed utility per gestione Cookie Law
+VERSIONE BETA
+Ludovico Grossi - &copy; 2015 CEd Digital & Servizi
+
+Richede uno script lato server per settare o rimuovere il contenuto (CRIPTATO) del cookie
+
+Gestsce
+- banner in pagina, adattivo
+- funzioni cookie
+- write in pagina in modo asincrono [NON ANCORA, non ci servono]
+
+ISTRUZIONI
+
+1) aggiungere lo script 
+<script type="text/javascript" src="http://utils.cedsdigital.it/js/cookieLaw.js"></script>
+mi raccomando, DOPO jquery e prima di DFP, se c'è
+2) fix per adserver (DFP) per non usare i cookie
+3) fix analytics per anonimizzare i dati
+4) modificare gli script ESTERNI DI TRACCIAMENTO/PROFILAZIONE
+
+
+Script ESTERNI DI TRACCIAMENTO/PROFILAZIONE
+Adserver DFP:
+- uprima del primo "googletag.defineOutOfPageSlot" o "googletag.defineSlot" aggiungere
+googletag.pubads().setCookieOptions( cookieLaw.cookieAccepted() ? 0 : 1 );
+
+Per analytics
+- anonimizzare i dati aggiungendo
+ ga('set', 'anonymizeIp', true)
+oppure
+ _gaq.push (['_gat._anonymizeIp']);
+a seconda del tipo di codice js usano in pagina (basta vedere se si usa "ga(" o "_gaq.push"
+La direttiva va subito dopo il setAccount
+
+Per gli altri script javascript:
+- impostare il type a "text/plain"
+- aggiungere la classe "cookieLaw"
+
+Per gli iframe
+- modificare "src" in "data-src"
+- aggiungere classe "cookieLaw"
+
+
+*/
+
+
+var cookieLaw = {
+    'cookieName': 'cookieLaw',
+    'scriptUrl': '/index.php?sez=JSON&p=cookieLaw',
+    'host': '',// modificato nell'init
+    
+    'init': function() {
+        // already initialized?
+        if (window.cookieLawInitialized) return;
+        window.cookieLawInitialized = true;
+        
+        // su che host mi trovo? (il cookie lo tengo buono)
+        cookieLaw.host = document.location.hostname.match(/[a-z]+\.[a-z]+$/);
+        
+        if (cookieLaw.host == 'ilmessaggerocasa.it') {
+            // ilmessaggerocasa ha un framework diverso
+            cookieLaw.scriptUrl = '/engine/cookieLaw.php?';
+        }
+        
+        // sono su una pagina "safe", come la pagina della privacy?
+        if (document.location.href.match(/(cookieLaw|privacy|informativa_cookie)/)) return;
+        
+        // l'utente ha accettato i cookie?
+        // se si abilito tutto
+        // se no mostro banner
+        if (this.cookieAccepted()) {
+            this.enableAll();
+        } else {
+            this.showCookieBanner();
+            this.bindAcceptActions();
+        }
+    },
+    
+    'cookieAccepted': function () {
+        //if (cookieLaw._readCookie('debug') != '1') return true; // non ancora attivo!
+        
+        // true o false se l'utente ha già acceto o meno i cookie
+        // controllo in modo semplificato la validità del cookie
+        return this._isCookieValueCorrect(this._readCookie(this.cookieName));
+    },
+    
+    'acceptCookies': function() {
+        // l'utente ha accettato con una delle azioni previste
+        /*
+        - salvo la preferenza dell'utente
+        - faccio unbind degli eventi
+        - tolgo il banner
+        - abilito gli script
+        */
+        cookieLaw.saveUserAcceptance();
+        cookieLaw.unbindAcceptActions();
+        
+        // abilito le CookieOptions di DFP e ricarico le pubblicità
+        try {
+            googletag.pubads().setCookieOptions( 0 );
+            googletag.pubads().refresh();
+        } catch (e) {
+            console.log("Errore!", e);
+        }
+        
+        cookieLaw.hideCookieBanner();
+        cookieLaw.enableAll();
+        
+    },
+    
+    'acceptCookiesOnScroll': function() {
+        if ($(window).scrollTop() > 150) {
+            $(window).unbind('scroll', cookieLaw.acceptCookiesOnScroll);// meglio farlo anche subito
+            cookieLaw.acceptCookies();
+        }
+    },
+    
+    'saveUserAcceptance': function() {
+        // salva lato utente le info per verificare il cookie settato
+        // le info sono: data, ora, ip, url, referrer... ma il salvataggio è fatto lato server
+        // per poter criptare correttametne i dati.
+        $('<img src="//'+cookieLaw.host+cookieLaw.scriptUrl+'&action=accept&rand='+Math.floor(Math.random() * 10000)+'" width="0" height="1" />').appendTo('body');
+    },
+    
+    '_readCookie': function(cname) {
+        // restituisce il valore del cookie "name"
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1);
+            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+        }
+        return "";
+    },
+    
+    '_isCookieValueCorrect': function(string) {
+        // la stringa è criptata con chiavi disponibili solo lato server, qui faccio solo un controllo semplice
+        return (string != ''); 
+    },
+    
+    'showCookieBanner': function() {
+        $('<div id="cookieLawBanner" style="font-family: sans-serif; position:fixed; z-index:1000000; font-size: 14px; color: #fff; bottom:0; left:0; right:0; text-align:center; background: rgba(0,0,0,0.8); padding: 20px;">\
+            <a href="javascript:cookieLaw.acceptCookies();void(0);" class="close" style="position: absolute; font-size: 24px; top: 5px; right: 10px; color: #fff; text-decoration: none;">&times;</a>\
+            <div class="messaggio">\
+                Questo sito utilizza <b>cookie</b> tecnici e profilativi, sia propri che di terze parti, per migliorare le funzionalit&agrave; e per inviarti pubblicit&agrave; e contenuti in linea con le tue preferenze. \
+                Se vuoi saperne di più o negare il consenso a tutti o ad alcuni cookie <a href="//utils.cedsdigital.it/cookies/informativa.pdf" class="moreinfo" target="_blank" style="color: #00CCBD; display: inline-block;">clicca qui</a>.<br>\
+                <b>Chiudendo questo banner, scorrendo questa pagina o cliccando qualunque suo elemento acconsenti all&#39;uso dei cookie.</b>\
+            </div>\
+        </div>').appendTo('body');
+    },
+    
+    'hideCookieBanner': function() {
+        $('#cookieLawBanner').fadeOut(1000);
+    },
+    
+    'bindAcceptActions': function() {
+        // se l'utente clicca o scrolla, implicitamente accetta MA NON SUL LINK "INFORMATIVA"!!
+        
+        // precauzioni per lo scroll:
+        // visibile almeno 2 secondi
+        // almeno 150 pixel di scroll dall'alto
+        setTimeout(function() {
+            $(window).scroll(cookieLaw.acceptCookiesOnScroll);
+        }, 2000);
+        $('#cookieLawBanner').on('click scroll', function(e) {
+            // non faccio arrivare il click al body, altrimenti pensa sia una interazione con la pagina
+            e.stopPropagation();
+        });
+        $('body').click(cookieLaw.acceptCookies);
+    },
+    
+    'unbindAcceptActions': function() {
+        // tolgo gli eventi attaccati col bind
+        $(window).unbind('scroll', cookieLaw.acceptCookiesOnScroll);
+        $('body').unbind('click', cookieLaw.acceptCookies);
+    },
+    
+    'enableAll': function() {
+        // cerco tutti gli script e gli iframe
+        
+        // evito che si usi document.write, può solo dare problemi
+        document.write = function(str) {
+            try {console.log('document.write disabilitata da cookieLaw.js')} catch (e) {}
+        }
+        
+        $('script.cookieLaw[type="text/plain"]').each(function() {
+            // script text/plain: appendo lo script corretto e rimuovo
+            if ($(this).attr("src")) {
+                if ($(this).attr("id")) {
+                    $(this).after('<script type="text/javascript" id="' + $(this).attr("id") + '" src="' + $(this).attr("src") + '"><\/script>')
+                } else {
+                    $(this).after('<script type="text/javascript" src="' + $(this).attr("src") + '"><\/script>')
+                }
+            } else {
+                $(this).after('<script type="text/javascript">' + $(this).html() + "<\/script>")
+            }
+            $(this).remove();
+        });
+        $('iframe.cookieLaw[data-src]').each(function() {
+            $(this).attr("src", $(this).attr("data-src")).removeAttr('data-src');
+        });
+    }
+    
+};
+
+// inizializzo
+$(function() {
+    cookieLaw.init();
+});
+
