@@ -1,5 +1,0 @@
-pages: 36
-person.html
-printer.html
-nr_vfp: 0
-nr_cfp: 0

@@ -1,4 +1,0 @@
-pages: 7
-person3.html
-nr_vfp: 0
-nr_cfp: 0

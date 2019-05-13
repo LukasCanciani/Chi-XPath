@@ -1,6 +1,0 @@
-pages: 27
-drink7.html
-drink4.html
-drink1.html
-nr_vfp: 3
-nr_cfp: 0

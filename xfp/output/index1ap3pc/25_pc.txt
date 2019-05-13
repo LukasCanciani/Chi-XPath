@@ -1,6 +1,0 @@
-pages: 25
-printer3.html
-printer2.html
-printer1.html
-nr_vfp: 3
-nr_cfp: 0

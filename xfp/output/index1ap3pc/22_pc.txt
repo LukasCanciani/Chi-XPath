@@ -1,9 +1,0 @@
-pages: 22
-person3.html
-printer3.html
-person2.html
-printer2.html
-person1.html
-printer1.html
-nr_vfp: 6
-nr_cfp: 0

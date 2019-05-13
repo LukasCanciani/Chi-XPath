@@ -1,6 +1,0 @@
-pages: 33
-person3.html
-person1.html
-person2.html
-nr_vfp: 3
-nr_cfp: 0

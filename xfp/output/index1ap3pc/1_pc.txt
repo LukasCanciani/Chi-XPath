@@ -1,6 +1,0 @@
-pages: 1
-index1.html
-index2.html
-index3.html
-nr_vfp: 3
-nr_cfp: 1

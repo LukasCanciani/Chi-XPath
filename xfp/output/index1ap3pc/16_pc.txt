@@ -1,4 +1,0 @@
-pages: 16
-index2.html
-nr_vfp: 0
-nr_cfp: 0
