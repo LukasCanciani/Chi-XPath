@@ -1,0 +1,175 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>it.uniroma3.xfp</groupId>
+	<artifactId>xfp</artifactId>
+	<version>0.1-SNAPSHOT</version>
+
+	<developers>
+		<developer>
+			<id>crescenz</id>
+			<name>Valter Crescenzi</name>
+			<email>crescenz@dia.uniroma3.it</email>
+			<url>http://crescenzi.dia.uniroma3.it</url>
+			<organization>Database Group</organization>
+			<organizationUrl>http://www.dia.uniroma3.it/db</organizationUrl>
+		</developer>
+		<developer>
+			<id>martinkoehler</id>
+			<name>Martin Köhler</name>
+			<email>koehler.martin@gmail.com</email>
+			<url>http://personalpages.manchester.ac.uk/staff/martin.koehler/</url>
+			<organization>Information Management Group</organization>
+			<organizationUrl>http://www.cs.manchester.ac.uk/img/</organizationUrl>
+		</developer>	
+	</developers>
+
+	<packaging>jar</packaging>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.6.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>xfp.XPathFixedPoint</mainClass>
+						</manifest>
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id> <!-- this is used for inheritance merges -->
+						<phase>package</phase> <!-- bind to the packaging phase -->
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<repositories>
+
+		<repository>
+			<id>in-project</id>
+			<name>In-Project Repository</name>
+			<url>file://${project.basedir}/libs</url>
+		</repository>
+
+	</repositories>
+
+	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/commons-configuration/commons-configuration -->
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<version>1.6</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>xerces</groupId>
+		    <artifactId>xercesImpl</artifactId>
+    		<version>2.11.0</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>commons-io</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>2.5</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>3.6</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>commons-cli</groupId>
+		    <artifactId>commons-cli</artifactId>
+		    <version>1.4</version>
+		</dependency>
+
+		<!-- inter-project shared utils -->
+		<dependency>
+			<groupId>it.uniroma3</groupId>
+			<artifactId>utils</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+		<!-- hypertextual logging -->
+		<dependency>
+			<groupId>it.uniroma3</groupId>
+			<artifactId>hypertextual-logging</artifactId>
+			<version>0.3</version>
+		</dependency>
+
+		<!-- for generating relative XPath rules -->
+		<dependency>
+			<groupId>it.uniroma3.roadrunner</groupId>
+			<artifactId>lfeq</artifactId>
+			<version>1.3.3</version>
+		</dependency>
+
+		<!-- hypertextual logging -->
+		<dependency>
+			<groupId>it.uniroma3.roadrunner</groupId>
+			<artifactId>token</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+
+		<!-- CyberNeko HTML Parser -->
+		<dependency>
+			<groupId>net.sourceforge.nekohtml</groupId>
+			<artifactId>nekohtml</artifactId>
+			<version>1.9.22</version>
+		</dependency>
+
+		<!-- JUnit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.hamcrest</groupId>
+		    <artifactId>hamcrest-all</artifactId>
+		    <version>1.3</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.postgresql</groupId>
+		    <artifactId>postgresql</artifactId>
+		    <version>42.1.4</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.opencsv</groupId>
+		    <artifactId>opencsv</artifactId>
+		    <version>3.10</version>
+		</dependency>
+		
+	</dependencies>
+
+</project>
