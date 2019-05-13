@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<config>
-	<!-- Manual configuration of input website needed in XML file 
-	possible refactoring: third input parameter instead of XML file, configurable XML file?-->
-	<!--<site>singleton2pageclass</site>-->
-	<site>olfatheque</site>
-	<!-- <site>site2levels</site>-->
-</config>
