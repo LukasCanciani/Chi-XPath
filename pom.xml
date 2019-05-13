@@ -72,6 +72,13 @@
 			<version>1.16.18</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<!-- hypertextual logging -->
+		<dependency>
+			<groupId>it.uniroma3</groupId>
+			<artifactId>hypertextual-logging</artifactId>
+			<version>0.3</version>
+		</dependency>
 
 		<!-- to use fixtures from xpath-fragments, test dependencies are not transitive -->
 		<dependency>

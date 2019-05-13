@@ -28,6 +28,16 @@ import it.uniroma3.chixpath.model.Page;
 
 
 public class Partitioner {
+	static {
+        /* otherwise one of the old LFEQ comparators that implements
+         * a partial-but-not-total ordering would rise exceptions 
+         * when executed by new java versions. */
+        System.setProperty("java.util.Arrays.useLegacyMergeSort", "true");
+        // set java.util.logging.manager to inject hypertextual logger
+        System.setProperty("java.util.logging.manager", "it.uniroma3.hlog.HypertextualLogManager");     
+    }
+
+    static final protected it.uniroma3.hlog.HypertextualLogger log = it.uniroma3.hlog.HypertextualLogger.getLogger(); /* this *after* previous static block */
 	public static void main(String args[]) throws XPathExpressionException {
 		long startTime = System.currentTimeMillis();
 		final int MAX_PAGES = args.length;
@@ -99,6 +109,7 @@ public class Partitioner {
 		for(PageClass pageClass : pageClasses) {
 			System.out.println("Classe di pagine "+pageClass.getId()+" ha xPath caratteristico "+pageClass.getCharacteristicXPath().getRule());
 		}
+		PageClass.dfp(pageClasses);
 		long partitionStart = System.currentTimeMillis();
 		System.out.println("Genero le partizioni");
 		Lattice lattice = generatePartitions(pageClasses, MAX_PAGES);

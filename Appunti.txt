@@ -1,4 +1,4 @@
-TF - IDF -> -> Ignora la partizione tutte insieme!! Va bene? Se considero Documento(wikipedia) = Classe di Pagine
+﻿TF - IDF -> -> Ignora la partizione tutte insieme!! Va bene? Se considero Documento(wikipedia) = Classe di Pagine
 
 MDL ?? Poco chiaro
 
@@ -12,6 +12,23 @@ NONFUNZIONA!!!
 
 espressivita degli xpath -> più lungo più specifico! meglio. Più "/" singole più specifico il cammino. più "//" anche di più di uno ma meno specifico.
 
+XFP--------------
+Prima pagina -> "HOME" applico NFP -> quindi Navigable fixing point. Presi i risultati
+cerco se sono punti fissi ( elimino singleton, poco rilevanti)
+
+-trovati i punti fissi passo all'analisi DFP sulle pagine "linkate"
 
 
+-Cerco regole pf su ognuna delle pagine, poi li applico a tutti
 
+-- Classe non valida, perche?
+
+Non potrei applicare solo DPF su ogni pag di classi e fare media dei punti fissi?
+
+Es menuNap -> persone e stampanti stessa classe???
+
+in base a cosa valid / invalid?
+
+
+---------------------------------------
+Applicare dfp alle pagine di classi e poi fare media per ogni partizione ?? possibile??

@@ -1,0 +1,172 @@
+@charset "UTF-8";
+[cdp-html] .mdl-wrapper {
+  padding: 65px 0 65px;
+  /* Image */ }
+  [cdp-html] .mdl-wrapper .copy-wrapper {
+    line-height: 24px;
+    /* Disclaimer  */
+    /* Bullet List  */
+    /* Headings  */ }
+    [cdp-html] .mdl-wrapper .copy-wrapper > p, [cdp-html] .mdl-wrapper .copy-wrapper > h1, [cdp-html] .mdl-wrapper .copy-wrapper > h2, [cdp-html] .mdl-wrapper .copy-wrapper > h3, [cdp-html] .mdl-wrapper .copy-wrapper > h4, [cdp-html] .mdl-wrapper .copy-wrapper > h5, [cdp-html] .mdl-wrapper .copy-wrapper > h6 {
+      max-width: 594px;
+      margin: 0 auto; }
+    [cdp-html] .mdl-wrapper .copy-wrapper h6 {
+      font-family: 'AkkuratStd-Light', helvetica, arial, sans-serif;
+      font-size: 10px; }
+    [cdp-html] .mdl-wrapper .copy-wrapper p {
+      font-size: inherit;
+      color: inherit; }
+      [cdp-html] .mdl-wrapper .copy-wrapper p a {
+        color: #b49e67;
+        text-decoration: none; }
+      [cdp-html] .mdl-wrapper .copy-wrapper p b, [cdp-html] .mdl-wrapper .copy-wrapper p strong {
+        font-family: 'AkkuratStd-Regular', helvetica, arial, sans-serif; }
+      [cdp-html] .mdl-wrapper .copy-wrapper p i, [cdp-html] .mdl-wrapper .copy-wrapper p em {
+        cursor: initial; }
+    [cdp-html] .mdl-wrapper .copy-wrapper ul {
+      list-style-position: inside;
+      display: inline-block;
+      margin: 20px 0; }
+      [cdp-html] .mdl-wrapper .copy-wrapper ul li:before {
+        content: "•";
+        display: inline-block;
+        padding-right: 10px; }
+    [cdp-html] .mdl-wrapper .copy-wrapper h2, [cdp-html] .mdl-wrapper .copy-wrapper h3 {
+      font-family: 'SangBleuBPSans-Light', helvetica, arial, sans-serif;
+      font-size: 24px;
+      line-height: 42px; }
+    [cdp-html] .mdl-wrapper .copy-wrapper h2 {
+      color: #b49e67; }
+    [cdp-html] .mdl-wrapper .copy-wrapper h3 {
+      color: black; }
+    [cdp-html] .mdl-wrapper .copy-wrapper .primary-title-black, [cdp-html] .mdl-wrapper .copy-wrapper .primary-title-gold {
+      font-family: 'SangBleuBPSans-Light', helvetica, arial, sans-serif;
+      font-size: 60px;
+      line-height: 70px;
+      letter-spacing: 0.6px;
+      font-weight: normal;
+      margin-bottom: 60px;
+      max-width: 752px; }
+    [cdp-html] .mdl-wrapper .copy-wrapper p.primary-title-black {
+      color: black; }
+    [cdp-html] .mdl-wrapper .copy-wrapper p.primary-title-gold {
+      color: #b49e67; }
+    [cdp-html] .mdl-wrapper .copy-wrapper h2.headline {
+      font-family: 'SangBleuBPSans-Light', helvetica, arial, sans-serif;
+      font-size: 62px;
+      line-height: 76px;
+      letter-spacing: 10px; }
+      [cdp-html] .mdl-wrapper .copy-wrapper h2.headline.black {
+        color: black; }
+      [cdp-html] .mdl-wrapper .copy-wrapper h2.headline.gold {
+        color: #b49e67; }
+  [cdp-html] .mdl-wrapper .img-wrapper {
+    width: 752px;
+    height: auto;
+    margin: 0px auto;
+    margin-top: 60px;
+    position: relative; }
+    [cdp-html] .mdl-wrapper .img-wrapper img {
+      width: 100%;
+      height: auto; }
+    [cdp-html] .mdl-wrapper .img-wrapper p.caption {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: auto;
+      background: rgba(0, 0, 0, 0.4);
+      height: 20px;
+      padding: 0;
+      line-height: 19px;
+      padding-right: 10px;
+      padding-left: 10px;
+      max-width: 100%;
+      box-sizing: border-box; }
+      [cdp-html] .mdl-wrapper .img-wrapper p.caption span {
+        font-family: 'AkkuratStd-Light', helvetica, arial, sans-serif;
+        font-size: 10px;
+        color: white;
+        text-align: right;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        letter-spacing: 0.5px;
+        float: right;
+        display: inline-block;
+        padding-right: 5px;
+        padding-bottom: 5px;
+        max-width: 100%;
+        position: relative;
+        left: 5px; }
+
+[cdp-html] table {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  [cdp-html] table tbody tr:nth-child(even) {
+    background: #f2f2f2; }
+  [cdp-html] table tbody tr:nth-child(odd) {
+    background: #e5e5e5; }
+  [cdp-html] table tbody tr td {
+    padding: 10px;
+    font-family: AkkuratPro-Light, Arial;
+    font-size: 14px;
+    color: black;
+    line-height: 20px; }
+    [cdp-html] table tbody tr td a {
+      font-family: 'SangBleuBPSans-Light', helvetica, arial, sans-serif;
+      color: black;
+      font-size: 14px;
+      line-height: 20px; }
+    [cdp-html] table tbody tr td.head {
+      background: #f2f2f2; }
+
+[cdp-html] .mdl-wrapper .copy-wrapper [class^="cta-"],
+[cdp-html] .mdl-wrapper .copy-wrapper [class*="cta-"] {
+  color: #eaeaea;
+  text-align: center;
+  font-family: 'SangBleuBPSans-Light', helvetica, arial, sans-serif;
+  text-decoration: none;
+  line-height: 28px;
+  min-width: 125px;
+  padding: 6px 40px 10px 40px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: normal;
+  display: inline-block;
+  margin: 20px; }
+  [cdp-html] .mdl-wrapper .copy-wrapper [class^="cta-"]:after,
+  [cdp-html] .mdl-wrapper .copy-wrapper [class*="cta-"]:after {
+    content: "\00BB";
+    margin-left: 20px;
+    font-size: 28px;
+    line-height: 34px;
+    margin-top: -5px;
+    position: static; }
+
+[cdp-html] .mdl-wrapper .copy-wrapper .cta-1 {
+  background-color: #b49e67; }
+
+[cdp-html] .mdl-wrapper .copy-wrapper .cta-2 {
+  background-color: #7f0c23; }
+
+[cdp-html] .mdl-wrapper .copy-wrapper .cta-3 {
+  background-color: #0c213e; }
+
+[cdp-html] .mdl-wrapper .copy-wrapper [class^="cta-"].cta-4, [cdp-html] .mdl-wrapper .copy-wrapper [class*="cta-"].cta-4 {
+  background-color: transparent;
+  color: black;
+  font-size: 14px; }
+  [cdp-html] .mdl-wrapper .copy-wrapper [class^="cta-"].cta-4:after, [cdp-html] .mdl-wrapper .copy-wrapper [class*="cta-"].cta-4:after {
+    color: #b49e67;
+    font-size: 20px;
+    margin-left: 10px; }
+
+[cdp-html] .mdl-wrapper .copy-wrapper [class^="cta-"].cta-5, [cdp-html] .mdl-wrapper .copy-wrapper [class*="cta-"].cta-5 {
+  background-color: transparent;
+  color: black;
+  font-size: 16px; }
+  [cdp-html] .mdl-wrapper .copy-wrapper [class^="cta-"].cta-5:after, [cdp-html] .mdl-wrapper .copy-wrapper [class*="cta-"].cta-5:after {
+    color: #b49e67; }

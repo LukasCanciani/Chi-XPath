@@ -1,11 +1,21 @@
 package it.uniroma3.chixpath.model;
 
+
+import java.net.URI;
+import java.net.URL;
 import java.util.Comparator;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
 import javax.xml.xpath.XPathExpressionException;
+
+import xfp.ExperimentRunner;
+import xfp.model.Experiment;
+import xfp.model.Webpage;
+import xfp.util.XFPConfig;
 
 public class PageClass implements Comparable<PageClass> {
 	private Set<XPath> xpaths = new HashSet<>();
@@ -13,7 +23,7 @@ public class PageClass implements Comparable<PageClass> {
 	private Set<Page> pages= new HashSet<>();
 
 	private String id;
-	
+
 	private VectorRepository vr;
 
 	public VectorRepository getVr() {
@@ -30,6 +40,16 @@ public class PageClass implements Comparable<PageClass> {
 
 	private static int progId=0;
 
+	private int fp; //fixep points
+
+	public int getFp() {
+		return fp;
+	}
+
+	public void setFp(int fp) {
+		this.fp = fp;
+	}
+
 	public PageClass(Set<Page> pages, Set<XPath> xpaths){
 		this.id = (Integer.toString(progId++));
 		this.pages = pages;
@@ -40,7 +60,7 @@ public class PageClass implements Comparable<PageClass> {
 		return id;
 	}
 
-	
+
 
 	public Set<XPath> getxPaths() {
 		return xpaths;
@@ -52,7 +72,7 @@ public class PageClass implements Comparable<PageClass> {
 		return pages;
 	}
 
-	
+
 	public float tfIdf() {
 		float totaltf = 0;
 		for(Vector v : this.getVr().getVectors()) {
@@ -122,8 +142,8 @@ public class PageClass implements Comparable<PageClass> {
 		return containsId;
 	}
 
-	
-	
+
+
 	public boolean containsXpathsSet(Set<PageClass> classes) {
 		for(PageClass pageClass : classes) {
 			if(this.getxPaths().equals(pageClass.getxPaths())) return true;
@@ -181,7 +201,41 @@ public class PageClass implements Comparable<PageClass> {
 		}
 
 	}
-	
+
+	public static void dfp(Set<PageClass> pageClasses) {
+		
+		/*final Experiment experiment = Experiment.makeExperiment("dfp", "");
+        //XFPConfig.getInstance().setCurrentExperiment(experiment);
+		for (PageClass pClass : pageClasses) {
+			Set<Webpage> pages = new LinkedHashSet<>();
+			List<String> strings = new LinkedList<>();
+			for ( Page p : pClass.getPages()) {
+				Webpage wp = new Webpage(URI.create(p.getUrl()));
+				wp.setDocument(p.getDocument());
+				strings.add(p.getUrl());
+			}
+
+			final ExperimentRunner runner = new ExperimentRunner();
+			runner.run("a", "b",strings );
+			xfp.fixpoint.PageClass<String> data = xfp.algorithm.FPAlgorithm.dfp().computeFixedPoints(pages);
+			int constant = data.getConstant().size();
+			int variant = data.getVariant().size();
+			pClass.setFp(2*variant+constant);
+		}*/
+		String[] str = new String[4];
+		str[0]="-d";
+		str[1]="basiccases";
+		str[2]="-s";
+		str[3]="test";
+		try {
+			xfp.Main.main(str);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("Error");
+		}
+	}
+
+
 	public static void reorderClasses ( Set<PageClass> pageClasses) {
 		int i = 0;
 		for (PageClass pClass : pageClasses) {
