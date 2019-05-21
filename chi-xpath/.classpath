@@ -36,5 +36,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/xfp"/>
+	<classpathentry kind="lib" path="C:/Users/Lukas/git/Chi-Xpath/xfp/libs/hypertextual-logging-0.3.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

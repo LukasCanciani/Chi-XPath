@@ -109,7 +109,6 @@ public class Partitioner {
 		for(PageClass pageClass : pageClasses) {
 			System.out.println("Classe di pagine "+pageClass.getId()+" ha xPath caratteristico "+pageClass.getCharacteristicXPath().getRule());
 		}
-		PageClass.dfp(pageClasses);
 		long partitionStart = System.currentTimeMillis();
 		System.out.println("Genero le partizioni");
 		Lattice lattice = generatePartitions(pageClasses, MAX_PAGES);
@@ -128,6 +127,8 @@ public class Partitioner {
 		System.out.println("Lattice creation  : " + (partitionStart-partitionStop)/1000 + " seconds");
 
 	}
+	
+	
 
 
 	private static void generateGraph(String siteName, Set<Page> pages, Lattice lattice) {
@@ -165,7 +166,7 @@ public class Partitioner {
 				pw.println("<TR><TD BORDER=\"0\" COLSPAN=\"2\">"+pc.getId()+"</TD></TR>");
 				for(Page pag : pc.getPages()) {
 					pw.println("<TR><TD fixedsize=\"true\" width=\"100\" height=\"100\"><IMG SCALE=\"FALSE\" "
-							+ "SRC=\"C:\\Users\\Lukas\\Documents\\GitHub\\Chi-Xpath"+p2i.get(pag).split("[.]")[1]+".PNG\"/></TD></TR>");
+							+ "SRC=\"C:\\Users\\Lukas\\git\\Chi-Xpath\\chi-xpath"+p2i.get(pag).split("[.]")[1]+".PNG\"/></TD></TR>");
 				}
 				pw.println("</TABLE>");
 				pw.println("</TD>");

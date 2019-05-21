@@ -34,7 +34,7 @@ public class RulesRepository {
 	public void rulesGeneration() {
 		Map<Page,Set<String>> p2x = new HashMap<Page,Set<String>>();
 		//final RuleInference engine = new RuleInference(new ChiFragmentSpecification());
-		final RuleInference engine = new RuleInference(new ChiFragmentSpecification(HTML_STANDARD_CASEHANDLER,6));
+		final RuleInference engine = new RuleInference(new ChiFragmentSpecification(HTML_STANDARD_CASEHANDLER));
 		Set<String> diffXPaths = new HashSet<String>();
 		for(Page sample : this.pages) {
 			System.out.println("Generando xPaths sulla pagina"+sample.getUrl()+" con id: "+sample.getId());

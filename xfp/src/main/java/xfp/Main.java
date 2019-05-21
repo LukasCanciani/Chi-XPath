@@ -63,9 +63,7 @@ public class Main {
     }
 
     static public void main(String[] args) throws Exception {
-    	for(String s : args) {
-    		System.out.println("-"+s+"-");
-    	}
+    	
         final Main main = new Main();
         final ExperimentRunner runner = new ExperimentRunner();
         main.parseArgs(args);

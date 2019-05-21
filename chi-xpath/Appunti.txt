@@ -32,3 +32,8 @@ in base a cosa valid / invalid?
 
 ---------------------------------------
 Applicare dfp alle pagine di classi e poi fare media per ogni partizione ?? possibile??
+---------------------------------------
+identificata la pagina radice, applicare il main di xfp partendo da tutte le pagine della classe (modifica C:\Users\Lukas\git\Chi-Xpath\chi-xpath\dataset\test\autoscout\1ap3car file _id2name in cui è presente quella pagina, segnare tutte le "possibili" classi otttenute dall0algorimto
+se esistono settare a quella classe in chi-xp il numero di punti fissi.
+Da decidere come procede una volta ottenuti i punti fissi per tutte( almeno quelle che xfp trova) le classi.
+Probabilmente + punti fissi è meglio ( ma nello specifico + punti fissi variabili meglio ancora)

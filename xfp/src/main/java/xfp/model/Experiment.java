@@ -74,6 +74,7 @@ public class Experiment implements Serializable {
 		// e.g., /
 		final String dataset = this.getDataset().getName();
 		final String vertical = this.getDomain().getName();
+		System.out.println(getExperimentSpecificationFolder());
 		return new File(getExperimentSpecificationFolder(), dataset+"-"+vertical + ".xml") ;
 	}
 	

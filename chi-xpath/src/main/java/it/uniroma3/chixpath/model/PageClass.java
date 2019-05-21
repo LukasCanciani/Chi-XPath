@@ -202,7 +202,7 @@ public class PageClass implements Comparable<PageClass> {
 
 	}
 
-	public static void dfp(Set<PageClass> pageClasses) {
+	/*public static void dfp(Set<PageClass> pageClasses) {
 		
 		/*final Experiment experiment = Experiment.makeExperiment("dfp", "");
         //XFPConfig.getInstance().setCurrentExperiment(experiment);
@@ -221,7 +221,7 @@ public class PageClass implements Comparable<PageClass> {
 			int constant = data.getConstant().size();
 			int variant = data.getVariant().size();
 			pClass.setFp(2*variant+constant);
-		}*/
+		}
 		String[] str = new String[4];
 		str[0]="-d";
 		str[1]="basiccases";
@@ -233,7 +233,7 @@ public class PageClass implements Comparable<PageClass> {
 			// TODO Auto-generated catch block
 			System.out.println("Error");
 		}
-	}
+	}*/
 
 
 	public static void reorderClasses ( Set<PageClass> pageClasses) {
