@@ -12,13 +12,8 @@ node [label="\N", fontsize=20, shape=rect];
 </TD>
 <TD>
 <TABLE BORDER="0" CELLBORDER = "1">
-<TR><TD BORDER="0" COLSPAN="2">1</TD></TR>
+<TR><TD BORDER="0" COLSPAN="2">5</TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/POLITICA1.PNG"/></TD></TR>
-</TABLE>
-</TD>
-<TD>
-<TABLE BORDER="0" CELLBORDER = "1">
-<TR><TD BORDER="0" COLSPAN="2">6</TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/ECONOMIA1.PNG"/></TD></TR>
 </TABLE>
 </TD>
@@ -41,15 +36,15 @@ node [label="\N", fontsize=20, shape=rect];
 </TD>
 <TD>
 <TABLE BORDER="0" CELLBORDER = "1">
-<TR><TD BORDER="0" COLSPAN="2">1</TD></TR>
-<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/POLITICA1.PNG"/></TD></TR>
+<TR><TD BORDER="0" COLSPAN="2">6</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Istat.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/ECONOMIA1.PNG"/></TD></TR>
 </TABLE>
 </TD>
 <TD>
 <TABLE BORDER="0" CELLBORDER = "1">
-<TR><TD BORDER="0" COLSPAN="2">7</TD></TR>
-<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Istat.PNG"/></TD></TR>
-<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/ECONOMIA1.PNG"/></TD></TR>
+<TR><TD BORDER="0" COLSPAN="2">10</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/POLITICA1.PNG"/></TD></TR>
 </TABLE>
 </TD>
 </TR>
@@ -65,8 +60,7 @@ node [label="\N", fontsize=20, shape=rect];
 </TD>
 <TD>
 <TABLE BORDER="0" CELLBORDER = "1">
-<TR><TD BORDER="0" COLSPAN="2">5</TD></TR>
-<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/POLITICA1.PNG"/></TD></TR>
+<TR><TD BORDER="0" COLSPAN="2">7</TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/ECONOMIA1.PNG"/></TD></TR>
 </TABLE>
 </TD>
@@ -74,6 +68,12 @@ node [label="\N", fontsize=20, shape=rect];
 <TABLE BORDER="0" CELLBORDER = "1">
 <TR><TD BORDER="0" COLSPAN="2">9</TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Istat.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">10</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/POLITICA1.PNG"/></TD></TR>
 </TABLE>
 </TD>
 </TR>
@@ -84,30 +84,6 @@ node [label="\N", fontsize=20, shape=rect];
 <TD>
 <TABLE BORDER="0" CELLBORDER = "1">
 <TR><TD BORDER="0" COLSPAN="2">1</TD></TR>
-<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/POLITICA1.PNG"/></TD></TR>
-</TABLE>
-</TD>
-<TD>
-<TABLE BORDER="0" CELLBORDER = "1">
-<TR><TD BORDER="0" COLSPAN="2">2</TD></TR>
-<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Manovra.PNG"/></TD></TR>
-<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Istat.PNG"/></TD></TR>
-</TABLE>
-</TD>
-<TD>
-<TABLE BORDER="0" CELLBORDER = "1">
-<TR><TD BORDER="0" COLSPAN="2">6</TD></TR>
-<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/ECONOMIA1.PNG"/></TD></TR>
-</TABLE>
-</TD>
-</TR>
-</TABLE>> ];
-4[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
-<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">4</TD></TR>
-<TR>
-<TD>
-<TABLE BORDER="0" CELLBORDER = "1">
-<TR><TD BORDER="0" COLSPAN="2">2</TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Manovra.PNG"/></TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Istat.PNG"/></TD></TR>
 </TABLE>
@@ -121,15 +97,44 @@ node [label="\N", fontsize=20, shape=rect];
 </TD>
 </TR>
 </TABLE>> ];
+4[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">4</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">1</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Manovra.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Istat.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">7</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/ECONOMIA1.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">10</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/POLITICA1.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
 5[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
 <TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">5</TD></TR>
 <TR>
 <TD>
 <TABLE BORDER="0" CELLBORDER = "1">
-<TR><TD BORDER="0" COLSPAN="2">3</TD></TR>
+<TR><TD BORDER="0" COLSPAN="2">2</TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Manovra.PNG"/></TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/POLITICA1.PNG"/></TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Istat.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">7</TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/ECONOMIA1.PNG"/></TD></TR>
 </TABLE>
 </TD>
@@ -140,34 +145,10 @@ node [label="\N", fontsize=20, shape=rect];
 <TR>
 <TD>
 <TABLE BORDER="0" CELLBORDER = "1">
-<TR><TD BORDER="0" COLSPAN="2">4</TD></TR>
+<TR><TD BORDER="0" COLSPAN="2">3</TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Manovra.PNG"/></TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/POLITICA1.PNG"/></TD></TR>
-<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Istat.PNG"/></TD></TR>
-</TABLE>
-</TD>
-<TD>
-<TABLE BORDER="0" CELLBORDER = "1">
-<TR><TD BORDER="0" COLSPAN="2">6</TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/ECONOMIA1.PNG"/></TD></TR>
-</TABLE>
-</TD>
-</TR>
-</TABLE>> ];
-7[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
-<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">7</TD></TR>
-<TR>
-<TD>
-<TABLE BORDER="0" CELLBORDER = "1">
-<TR><TD BORDER="0" COLSPAN="2">6</TD></TR>
-<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/ECONOMIA1.PNG"/></TD></TR>
-</TABLE>
-</TD>
-<TD>
-<TABLE BORDER="0" CELLBORDER = "1">
-<TR><TD BORDER="0" COLSPAN="2">8</TD></TR>
-<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Manovra.PNG"/></TD></TR>
-<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/POLITICA1.PNG"/></TD></TR>
 </TABLE>
 </TD>
 <TD>
@@ -178,12 +159,26 @@ node [label="\N", fontsize=20, shape=rect];
 </TD>
 </TR>
 </TABLE>> ];
+7[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">7</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">4</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Manovra.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/POLITICA1.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Istat.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/ECONOMIA1.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
 8[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
 <TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">8</TD></TR>
 <TR>
 <TD>
 <TABLE BORDER="0" CELLBORDER = "1">
-<TR><TD BORDER="0" COLSPAN="2">7</TD></TR>
+<TR><TD BORDER="0" COLSPAN="2">6</TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Istat.PNG"/></TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/ECONOMIA1.PNG"/></TD></TR>
 </TABLE>
@@ -202,44 +197,49 @@ node [label="\N", fontsize=20, shape=rect];
 <TR>
 <TD>
 <TABLE BORDER="0" CELLBORDER = "1">
-<TR><TD BORDER="0" COLSPAN="2">9</TD></TR>
-<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Istat.PNG"/></TD></TR>
+<TR><TD BORDER="0" COLSPAN="2">7</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/ECONOMIA1.PNG"/></TD></TR>
 </TABLE>
 </TD>
 <TD>
 <TABLE BORDER="0" CELLBORDER = "1">
-<TR><TD BORDER="0" COLSPAN="2">10</TD></TR>
+<TR><TD BORDER="0" COLSPAN="2">8</TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Manovra.PNG"/></TD></TR>
 <TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/POLITICA1.PNG"/></TD></TR>
-<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/ECONOMIA1.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">9</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/src/test/resources/basic/Messaggero/images/Istat.PNG"/></TD></TR>
 </TABLE>
 </TD>
 </TR>
 </TABLE>> ];
 
-1 -- 0
-2 -- 0
+0 -- 2
+1 -- 2
 3 -- 0
-4 -- 0
+3 -- 2
+3 -- 4
 4 -- 2
-4 -- 3
-5 -- 0
-5 -- 1
 5 -- 2
-5 -- 3
 5 -- 4
-5 -- 6
-5 -- 7
-5 -- 8
 5 -- 9
 6 -- 0
-6 -- 3
-6 -- 7
+6 -- 2
+6 -- 9
 7 -- 0
-8 -- 0
+7 -- 1
+7 -- 2
+7 -- 3
+7 -- 4
+7 -- 5
+7 -- 6
+7 -- 8
+7 -- 9
 8 -- 1
-8 -- 7
-9 -- 0
+8 -- 2
+8 -- 9
 9 -- 2
-9 -- 7
 }

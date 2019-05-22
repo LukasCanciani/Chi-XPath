@@ -42,6 +42,7 @@ public class PartitionerXFP {
 	
 	public static void main(String args[]) throws XPathExpressionException {
 		long startTime = System.currentTimeMillis();
+		System.out.println("Starting Chi-XFP\n");
 		final int MAX_PAGES = args.length;
 
 		/* e.g., an example of a input args to this command line program:
@@ -61,11 +62,14 @@ public class PartitionerXFP {
 		System.setProperty("http.agent", "Chrome"); // some sites want you to cheat
 
 		final LinkedList<String> pageUrls = new LinkedList<>();
-
+		//final LinkedList<String> APUrls= new LinkedList<>();
 		/* parse and partition the cmd lines args into URLs */
 		for(int index=0; index<args.length; index++) {
 			if (isAnUrl(args[index])) {
 				pageUrls.add(args[index]);
+				/*if (args[index+1]== "AP") {
+					APUrls.add(args[index]);
+				}*/
 			}
 			else {
 				System.err.println("Cannot parse arg: "+args[index]);
@@ -77,7 +81,12 @@ public class PartitionerXFP {
 
 		System.out.println("Caricamento di " + pageUrls.size() + " pagine ");
 		final Set<Page> pages = createPages(pageUrls);
-
+		final Set<String> APIds = new HashSet<>();
+		/*for (Page p : pages) {
+			if (APUrls.contains(p.getUrl())) {
+				APIds.add(p.getId());
+			}
+		}*/
 		long rulesGenerationStart = System.currentTimeMillis();
 		final RulesRepository rulesRep = new RulesRepository(pages);
 		long rulesGenerationStop = System.currentTimeMillis();
@@ -111,6 +120,7 @@ public class PartitionerXFP {
 		for(PageClass pageClass : pageClasses) {
 			System.out.println("Classe di pagine "+pageClass.getId()+" ha xPath caratteristico "+pageClass.getCharacteristicXPath().getRule());
 		}
+
 		String[] arguments = new String[6];
 		arguments[0] = "-d";
 		arguments[1] = "autoscout";
@@ -121,15 +131,15 @@ public class PartitionerXFP {
 		try {
 			xfp.Main.main(arguments);
 		} catch (Exception e) {
-			System.out.println("errore");
+			System.out.println("DFP failure");
 		}
 		long partitionStart = System.currentTimeMillis();
 		System.out.println("Genero le partizioni");
-		Lattice lattice = generatePartitions(pageClasses, MAX_PAGES);
+		Lattice lattice = generatePartitions(pageClasses, MAX_PAGES, APIds);
 		long partitionStop = System.currentTimeMillis();
 		//per ogni partizione stampa il suo id, gli id delle classi di pagine al suo interno, e gl id delle pagine di ogni ClasseDiPagine
 		System.out.println("\n");
-		System.out.println("\n");
+		System.out.println("********Lattice********");
 
 		System.out.println(lattice);
 		String siteName = pageUrls.getFirst().split("/")[5];
@@ -141,6 +151,9 @@ public class PartitionerXFP {
 		System.out.println("Lattice creation  : " + (partitionStart-partitionStop)/1000 + " seconds");
 
 	}
+
+
+	
 
 
 	private static void generateGraph(String siteName, Set<Page> pages, Lattice lattice) {
@@ -285,6 +298,22 @@ public class PartitionerXFP {
 			Partition.reorderPartitions(partitions);
 			Lattice lattice = new Lattice(partitions);
 			return lattice;
+	}
+	
+	private static Lattice generatePartitions(Set<PageClass> pageClasses, int MAX_PAGES, Set<String> APIds) {
+		final Set<Partition> partitions = new HashSet<>();
+		Set<PageClass> toCheck = new HashSet<>();
+		toCheck.addAll(pageClasses);
+		for (PageClass pageClass : pageClasses) {
+			toCheck.remove(pageClass);
+			Set<PageClass> classes = new HashSet<>();
+			classes.add(pageClass);
+			partitions.addAll(allPossiblePartitions(classes,toCheck,pageClass.getPages().size(),MAX_PAGES));
+		}
+		Partition.reorderPartitions(partitions);
+		//Partition.executeXFP(partitions,APIds);
+		Lattice lattice = new Lattice(partitions);
+		return lattice;
 	}
 
 	private static Set<Partition> allPossiblePartitions(Set<PageClass> currentClasses,Set<PageClass> toCheck, int pageCount,int max){

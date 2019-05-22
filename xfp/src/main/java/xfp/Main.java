@@ -4,7 +4,10 @@ import static it.uniroma3.hlog.HypertextualLogger.getLogger;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.apache.commons.cli.*;
 
@@ -69,5 +72,12 @@ public class Main {
         main.parseArgs(args);
         main.run(runner);
     }
+
+	public static Map<Set<String>, int[]> chiMain(String[] arguments) {
+		Map<Set<String>, int[]> FixedPoints = new HashMap<>();
+		
+		
+		return FixedPoints;
+	}
 
 }
