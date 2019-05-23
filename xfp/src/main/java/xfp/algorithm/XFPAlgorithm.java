@@ -8,8 +8,10 @@ import static xfp.algorithm.FPAlgorithm.nfp;
 import java.io.File;
 import java.net.URI;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.Map;
 import java.util.NavigableSet;
 import java.util.Set;
 import java.util.TreeSet;
@@ -120,6 +122,74 @@ public class XFPAlgorithm {
 
         log.endPage();
     }
+    
+    public Map<Set<String>, int[]> xfpChi(Set<Webpage> sample) throws Exception {
+    	Map<Set<String>, int[]>  fp = new HashMap<>();
+    	if (!this.alreadyProcessed.add(sample)) {
+            log.trace("This sample has been already processed by XFP "+sample);
+            return fp;
+        }
+        log.trace();
+        log.trace("Input samples: " +sample);
+        log.newPage("Applying NFP");
+
+        //final Set<FixedPoint<URI>> navFixedPoint = nfp().computeFixedPoints(sample);
+        final PageClass<URI> navFixedPoint = nfp().computeFixedPoints(sample);
+        storeNavFixedPoints(navFixedPoint);
+        final Set<Lattice<URI>> lattices = Lattice.create(navFixedPoint.getVariant());
+        final NavigableSet<FixedPoint<URI>> lcs = // -> RequestCollection
+                lattices.stream()
+                    .map( l -> l.top() ) // start crawling the lattices from the top
+                    .collect(Collectors.toCollection(TreeSet::new)); 
+
+        if (lcs.isEmpty())
+            log.trace("None link collection left to crawl");
+
+        while (!lcs.isEmpty())	{ 
+            log.trace("<HR><BR/>");
+
+            log.trace("currently  "+lcs.size()+" link collection(s) are still available");
+            final FixedPoint<URI> lc = ( lcs.pollLast() ); /* <-- get and remove next lc */
+            log.trace(lc.getExtracted());
+            log.newPage("Applying DFP on this link collection");
+            log.trace("Link collection extracted by "+lc.getExtractionRule());
+
+            final Set<Webpage> pages = download(getLinks(lc.getExtracted()));
+
+            //final Set<FixedPoint<String>> data = dfp().computeFixedPoints(pages);
+            final PageClass<String> data = dfp().computeFixedPoints(pages);
+            Set<String> fpPages = new HashSet<>();
+            for(Webpage wp : data.getPages()) {
+            	fpPages.add(wp.getName());
+            }
+            int[] fps = new int[2];
+            fps[0] = data.getVariant().size();
+            fps[1] = data.getConstant().size();
+            fp.put(fpPages, fps);
+            storeDataFixedPoints(data);
+            evaluateDataFixedPoints(data);
+
+            if (isValidPageClass(data))	{
+                log.trace("That's a valid page class (current threshold="+DATA_THRESHOLD+" f.p.)! Go deeper.");
+                xfp(pages);
+                log.endPage();
+                log.trace("That was a <EM>valid</EM> page class.");
+                log.newPage(data.getVariant().size()+ " fixed data fixed points found.");
+                log.trace(data.getVariant());
+                log.endPage();
+            } else {
+                final Set<FixedPoint<URI>> lc_glb = lc.getLattice().getGLBs(lc); // refine lc
+                lcs.addAll(lc_glb);
+                log.endPage();
+                log.trace("That was an <EM>invalid</EM> page class");
+                log.page("replacing link collection with its g.l.b. (size: "+lc_glb.size()+").",lc_glb);
+            }
+            log.trace("<BR/>");
+        }
+
+        log.endPage();
+        return fp;
+	}
 
     private void storeNavFixedPoints(final PageClass<URI> navFixedPoint) throws Exception  {
         if (STORE_LINK_FP_ENABLED) OutputHandlerFactory.getNFPOutputHandler().storePageclass(navFixedPoint);
@@ -163,5 +233,7 @@ public class XFPAlgorithm {
         }
         return accumulator;
     }
+
+	
 
 }

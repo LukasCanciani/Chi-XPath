@@ -12,6 +12,8 @@ import static xfp.util.Constants.RULE_LOGGING_ENABLED;
 import java.io.File;
 import java.net.URL;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.apache.commons.configuration.ConfigurationException;
 
@@ -83,8 +85,60 @@ public class ExperimentRunner {
             throw new RuntimeException(e);
         }
     }
+    
+    public Map<Set<String>, int[]> runChi(String datasetName, String domainName, List<String> enabledSitesList) {
+    	Map<Set<String>, int[]> fp = null;
+    	try {
+            log.newPage("Loading experiment on "+datasetName+" "+domainName);
+            final Experiment experiment = Experiment.makeExperiment(datasetName, domainName);
+            XFPConfig.getInstance().setCurrentExperiment(experiment);
+            experiment.load(); // N.B. this loads all pages
+            log.endPage();
 
-    protected void configureLoggingLevels() {
+            if (XFPConfig.getBoolean(Constants.PARALLEL_STREAMS_ENABLED)) {
+                log.warn("Parallel streams enabled for XPath fragment and rules generation");
+            }
+            
+            // FOR each website - run a separate experiment 
+            for(Website site : experiment.getDomain().getSites()) {
+                if (!isEnabled(enabledSitesList, site)) {
+                    log.warn("Skipping "+site);
+                    continue;
+                }
+
+                configureLoggingLevels();              
+                fp=executeExperimentOnChi(experiment.getWebsiteFolder(site.getName()),site);
+            }
+            log.trace("\n");
+        } catch (Exception e) {
+            /* print & log stack-trace; before letting it go */
+            log.error(e.getMessage());
+            log.throwing(e);
+            log.trace("\n");
+            log.flushHandlers();
+            e.printStackTrace(System.err);
+            throw new RuntimeException(e);
+        }
+    	return fp;
+	}
+
+    private Map<Set<String>, int[]> executeExperimentOnChi(File websitedir, Website site) throws Exception {
+    	Map<Set<String>, int[]> fp = null;
+    	// trigger recursive executions of xfp algorithm beginning from the access page(s)
+        log.newPage("Running XFP on website: "+site);
+        final XFPAlgorithm algorithm = new XFPAlgorithm(site, websitedir);
+        
+        /* N.B. UP-FRONT FRAGMENT GENERATION IS NOT SUPPORTED 
+         *      WITH PAGECLASS-SPECIFIC TEMPLATE ANALYSIS     */
+        /* upfrontXPathFragmentGeneration(site); */
+        fp = algorithm.xfpChi(site.getAccessPages());
+        
+        log.trace("\n"); // flush hyper-logs
+        log.endPage();
+        return fp;
+	}
+
+	protected void configureLoggingLevels() {
         if (!XFPConfig.getBoolean(FRAGMENT_LOGGING_ENABLED)) {                
             setFragmentLoggingLevel(OFF);
         }              
@@ -123,5 +177,7 @@ public class ExperimentRunner {
     private boolean isEnabled(List<String> enabled, Website site) {
         return ( enabled.isEmpty() || enabled.contains(site.getName()) );
     }
+
+	
 
 }

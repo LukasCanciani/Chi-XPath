@@ -39,4 +39,5 @@ Da decidere come procede una volta ottenuti i punti fissi per tutte( almeno quel
 Probabilmente + punti fissi è meglio ( ma nello specifico + punti fissi variabili meglio ancora)
 !!! Attenzione errore nel file _id2name non fa terminare il programma ma non da errori!!!
 
-!!Provare se con le stesse pagine ma cambiando gli AP si ottengono risultati diversi. Se si ottengono.
+!!Provare se con le stesse pagine ma cambiando gli AP si ottengono risultati diversi. Se si ottengono. L'OUTPUT CAMBIA!!!!
+IL METODO PUO FUNZIONARE!!

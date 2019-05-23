@@ -1,5 +1,9 @@
 package it.uniroma3.chixpath.model;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -13,8 +17,17 @@ public class Partition implements Comparable<Partition> {
 	private float avgXPaths;
 	private float avgTfIdf;
 	private float avgDFP;
+	private Map<Set<String>,int[]> FixedPoints;
 
-	
+
+
+	public Map<Set<String>, int[]> getFixedPoints() {
+		return FixedPoints;
+	}
+
+	public void setFixedPoints(Map<Set<String>, int[]> fixedPoints) {
+		FixedPoints = fixedPoints;
+	}
 
 	public Partition(Set<PageClass> pc) {
 		this.pageClasses = pc;
@@ -181,7 +194,7 @@ public class Partition implements Comparable<Partition> {
 
 	private void setId(String id) {
 		this.id  = id;
-		
+
 	}
 	public float getAvgXPaths() {
 		return avgXPaths;
@@ -199,7 +212,7 @@ public class Partition implements Comparable<Partition> {
 		}
 		return str;
 	}
-	
+
 	private float avgDFP() {
 		int tot=0;
 		for(PageClass pc: this.getPageClasses()) {
@@ -207,4 +220,42 @@ public class Partition implements Comparable<Partition> {
 		}
 		return tot/this.getPageClasses().size();
 	}
+
+	public void executeXFP(String[] XFParguments) {
+		Map<Set<String>,int[]> FixedPoints = null;
+		try {
+			FixedPoints = xfp.Main.chiMain(XFParguments);
+		} catch (Exception e) {
+			System.out.println("DFP failure");
+		}
+		this.setFixedPoints(FixedPoints);
+		for(Set<String> ss : FixedPoints.keySet()) {
+			for(String s : ss) {
+				System.out.println(s+" ");
+			}
+			System.out.println(FixedPoints.get(ss)[0]+"Variable e "+FixedPoints.get(ss)[1] + " Constant/n");
+		}
+	}
+
+	/*public static void executeXFP(Set<Partition> partitions, Set<String> APIds) {
+		for(Partition p : partitions) {
+			Map<Set<String>,int[]> FixedPoints = null;
+			String[] arguments = new String[6];
+			arguments[0] = "-d";
+			arguments[1] = "autoscout";
+			arguments[2] = "-s";
+			arguments[3] = "test";
+			arguments[4] = "-w";
+			arguments[5] = "1ap3car";
+			try {
+				FixedPoints = xfp.Main.chiMain(arguments);
+			} catch (Exception e) {
+				System.out.println("DFP failure");
+			}
+			p.setFixedPoints(FixedPoints);
+		}
+	}*/
+	
+
+
 }
