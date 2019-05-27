@@ -1,9 +1,7 @@
 package it.uniroma3.chixpath.model;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.StringWriter;
+
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -15,9 +13,8 @@ public class Partition implements Comparable<Partition> {
 	private Set<PageClass>  pageClasses;
 	private String id;
 	private float avgXPaths;
-	private float avgTfIdf;
-	private float avgDFP;
 	private Map<Set<String>,int[]> FixedPoints;
+	private int totalFP;
 
 
 
@@ -33,17 +30,8 @@ public class Partition implements Comparable<Partition> {
 		this.pageClasses = pc;
 		this.id = (Integer.toString(progId++));
 		this.avgXPaths = averageXPaths();
-		this.avgTfIdf = averageTfIdf();
-		this.avgDFP=avgDFP();
 	}
 
-	private float averageTfIdf() {
-		float sum = 0;
-		for (PageClass pc : this.getPageClasses()) {
-			sum = sum+pc.tfIdf();
-		}
-		return ( sum/this.pageClasses.size());
-	}
 
 	public String getId() {
 		return id;
@@ -202,10 +190,9 @@ public class Partition implements Comparable<Partition> {
 
 	@Override
 	public String toString() {
-		String str = "La partizione "+this.getId()+" matcha con "+this.getAvgXPaths() +" xpaths in media e ha un TfIdf medio di "+ this.averageTfIdf() +  " ed e' divisa in:\n";
-		str.concat("TROVATI IN MEDIA: "+this.avgDFP+" PUNTI FISSI");
+		String str = "La partizione "+this.getId()+" matcha con "+this.getAvgXPaths() +" xpaths in media ed ha complessivamente " +this.getTotalFP()+"punti fissi ed e' divisa in:\n";
 		for(PageClass Pset : this.getPageClasses()) {
-			str=str.concat("Classe di pagine "+Pset.getId()+":\n");
+			str=str.concat("Classe di pagine "+Pset.getId()+": Punti fissi:"+Pset.getConstantFP()+"Costanti e "+Pset.getVariableFP()+" Variable\n");
 			for(Page page : Pset.getPages()) {
 				str=str.concat("id:"+page.getId()+"\n");
 			}
@@ -213,28 +200,47 @@ public class Partition implements Comparable<Partition> {
 		return str;
 	}
 
-	private float avgDFP() {
-		int tot=0;
-		for(PageClass pc: this.getPageClasses()) {
-			tot+=pc.getFp();
+	public void executeXFP(String[] XFParguments, Set<Page> AP, Set<Page> pages) {
+		Map<String,String> id2name = new HashMap<>();
+		for(PageClass pc : this.getPageClasses()) {
+			if(Collections.disjoint(pc.getPages(), AP)) {
+				for(Page p : pc.getPages()) {
+					String pageName = p.getUrl().split("/")[5];
+					String id = "id"+pageName;
+					id2name.put(id, pageName);
+				}
+			}else {
+				for(Page p : pc.getPages()) {
+					String pageName = p.getUrl().split("/")[5];
+					String id = "idAP"+pageName.split(".html")[0];
+					id2name.put(id, pageName);
+				}
+			}
 		}
-		return tot/this.getPageClasses().size();
-	}
 
-	public void executeXFP(String[] XFParguments) {
 		Map<Set<String>,int[]> FixedPoints = null;
 		try {
-			FixedPoints = xfp.Main.chiMain(XFParguments);
+			FixedPoints = xfp.Main.chiMain(XFParguments,id2name);
 		} catch (Exception e) {
 			System.out.println("DFP failure");
 		}
 		this.setFixedPoints(FixedPoints);
+		int tot = 0;
 		for(Set<String> ss : FixedPoints.keySet()) {
-			for(String s : ss) {
-				System.out.println(s+" ");
+			for(PageClass pc : this.getPageClasses()) {
+				if (pc.getPagesNames().containsAll(ss) && ss.containsAll(pc.getPagesNames())) {
+					pc.setFP(FixedPoints.get(ss)[0], FixedPoints.get(ss)[1]);
+					tot = tot +FixedPoints.get(ss)[0]+FixedPoints.get(ss)[1];
+				}
 			}
-			System.out.println(FixedPoints.get(ss)[0]+"Variable e "+FixedPoints.get(ss)[1] + " Constant/n");
 		}
+		this.totalFP = tot;
+		
+
+	}
+
+	public int getTotalFP() {
+		return totalFP;
 	}
 
 	/*public static void executeXFP(Set<Partition> partitions, Set<String> APIds) {
@@ -255,7 +261,7 @@ public class Partition implements Comparable<Partition> {
 			p.setFixedPoints(FixedPoints);
 		}
 	}*/
-	
+
 
 
 }

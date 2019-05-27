@@ -12,6 +12,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.configuration.Configuration;
 import org.apache.commons.configuration.ConfigurationException;
@@ -74,7 +75,6 @@ public class Experiment implements Serializable {
 		// e.g., /
 		final String dataset = this.getDataset().getName();
 		final String vertical = this.getDomain().getName();
-		System.out.println(getExperimentSpecificationFolder());
 		return new File(getExperimentSpecificationFolder(), dataset+"-"+vertical + ".xml") ;
 	}
 	
@@ -90,6 +90,16 @@ public class Experiment implements Serializable {
 		// Load input websites associated with this experiment
 		final DomainLoader loader = new DomainLoader(this);
 		loader.loadWebsites(this.getWebsiteList());
+	}
+	
+	public void loadChi(Map<String,String> id2names) throws ConfigurationException {	
+		final File file = resolveExperimentSpecificationFile();
+
+		this.configuration = new XMLConfiguration(file);
+		
+		// Load input websites associated with this experiment
+		final DomainLoader loader = new DomainLoader(this);
+		loader.loadWebsitesChi(this.getWebsiteList(),id2names);
 	}
 
 	private File resolveExperimentSpecificationFile() {

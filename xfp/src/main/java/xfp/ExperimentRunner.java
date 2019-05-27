@@ -86,13 +86,13 @@ public class ExperimentRunner {
         }
     }
     
-    public Map<Set<String>, int[]> runChi(String datasetName, String domainName, List<String> enabledSitesList) {
+    public Map<Set<String>, int[]> runChi(String datasetName, String domainName, List<String> enabledSitesList, Map<String, String> id2name) {
     	Map<Set<String>, int[]> fp = null;
     	try {
             log.newPage("Loading experiment on "+datasetName+" "+domainName);
             final Experiment experiment = Experiment.makeExperiment(datasetName, domainName);
             XFPConfig.getInstance().setCurrentExperiment(experiment);
-            experiment.load(); // N.B. this loads all pages
+            experiment.loadChi(id2name); // N.B. this loads all pages
             log.endPage();
 
             if (XFPConfig.getBoolean(Constants.PARALLEL_STREAMS_ENABLED)) {

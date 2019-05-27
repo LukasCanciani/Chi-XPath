@@ -1,4 +1,0 @@
-idAP0	0.html
-idAP1	1.html
-idAP2	2.html
-id1.html	3.html

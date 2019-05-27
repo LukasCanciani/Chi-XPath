@@ -73,22 +73,23 @@ public class Main {
 		main.run(runner);
 	}
 
-	public static Map<Set<String>, int[]> chiMain(String[] arguments) throws Exception {
+	public static Map<Set<String>, int[]> chiMain(String[] arguments, Map<String, String> id2name) throws Exception {
 		final Main main = new Main();
 		Map<Set<String>, int[]> FixedPoints = new HashMap<>();
 		final ExperimentRunner runner = new ExperimentRunner();
 		main.parseArgs(arguments);
-		FixedPoints = main.runChi(runner);
+		FixedPoints = main.runChi(runner,id2name);
+
 		return FixedPoints;
 	}
 
-	private Map<Set<String>, int[]> runChi(ExperimentRunner runner) {
-		System.out.println("Starting experiments"
+	private Map<Set<String>, int[]> runChi(ExperimentRunner runner, Map<String, String> id2name) {
+		/*System.out.println("Starting experiments"
 				+ " on "
 				+ " dataset "  + datasetName + ","
 				+ " domain "   + domainName + " and"
-				+ " websites " + websites);
-		return runner.runChi(this.datasetName, this.domainName, this.websites);
+				+ " websites " + websites);*/
+		return runner.runChi(this.datasetName, this.domainName, this.websites, id2name);
 		
 	}
 

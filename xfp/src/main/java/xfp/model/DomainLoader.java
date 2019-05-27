@@ -6,6 +6,7 @@ import it.uniroma3.hlog.HypertextualLogger;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class DomainLoader {
 
@@ -25,6 +26,29 @@ public class DomainLoader {
 		int pageCount = 0;
 		for (final String name : sitenames) {
 			final Website site = loader.loadWebsite(name);
+			websites.add(site);
+			pageCount += site.getWebpages().size();
+			domain.addSite(site);
+			log.trace();
+			if (site.getAccessPages().isEmpty())	{
+			    log.warn("No access page provided to "+site);
+			} else {
+			    log.trace("Access pages of "+site);
+			    log.trace(site.getAccessPages());
+			}
+		}
+        log.trace("Total number of pages loaded for "+domain+" domain: " + pageCount);
+		return domain;
+	}
+	
+	public Domain loadWebsitesChi(List<String> sitenames, Map<String,String> id2names) {
+		log.trace("loading websites:" + collection2csv(sitenames, "\n\t", "\n\t", "\n"));
+		final Domain domain = this.experiment.getDomain();
+		final ExperimentLoader loader = new ExperimentLoader(this.experiment);
+		final List<Website> websites = new ArrayList<>();
+		int pageCount = 0;
+		for (final String name : sitenames) {
+			final Website site = loader.loadWebsiteChi(name,id2names);
 			websites.add(site);
 			pageCount += site.getWebpages().size();
 			domain.addSite(site);

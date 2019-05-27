@@ -1,21 +1,12 @@
 package it.uniroma3.chixpath.model;
 
 
-import java.net.URI;
-import java.net.URL;
 import java.util.Comparator;
 import java.util.HashSet;
-import java.util.LinkedHashSet;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Set;
 
 import javax.xml.xpath.XPathExpressionException;
-
-import xfp.ExperimentRunner;
-import xfp.model.Experiment;
-import xfp.model.Webpage;
-import xfp.util.XFPConfig;
 
 public class PageClass implements Comparable<PageClass> {
 	private Set<XPath> xpaths = new HashSet<>();
@@ -23,8 +14,24 @@ public class PageClass implements Comparable<PageClass> {
 	private Set<Page> pages= new HashSet<>();
 
 	private String id;
+	private Set<String> pagesNames;
+
+	public Set<String> getPagesNames() {
+		return pagesNames;
+	}
 
 	private VectorRepository vr;
+	
+	private int constantFP;
+	public int getConstantFP() {
+		return constantFP;
+	}
+
+	public int getVariableFP() {
+		return variableFP;
+	}
+
+	private int variableFP;
 
 	public VectorRepository getVr() {
 		return vr;
@@ -40,20 +47,16 @@ public class PageClass implements Comparable<PageClass> {
 
 	private static int progId=0;
 
-	private int fp; //fixep points
-
-	public int getFp() {
-		return fp;
-	}
-
-	public void setFp(int fp) {
-		this.fp = fp;
-	}
-
 	public PageClass(Set<Page> pages, Set<XPath> xpaths){
 		this.id = (Integer.toString(progId++));
 		this.pages = pages;
 		this.xpaths = xpaths;
+		pagesNames = new HashSet<>();
+		for (Page p : pages) {
+			pagesNames.add(p.getUrl().split("/")[5]);
+		}
+		this.constantFP=0;
+		this.variableFP=0;
 	}
 
 	public String getId() {
@@ -247,6 +250,11 @@ public class PageClass implements Comparable<PageClass> {
 	private void setCharacteristicXPath(XPath bestXPath) {
 		// TODO Auto-generated method stub
 		this.characteristicXPath = bestXPath;
+	}
+	
+	public void setFP(int constant, int variable) {
+		this.constantFP= constant;
+		this.variableFP = variable;
 	}
 
 
