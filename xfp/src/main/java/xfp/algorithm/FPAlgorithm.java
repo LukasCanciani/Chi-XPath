@@ -146,5 +146,49 @@ public class FPAlgorithm<T> {
         log.endPage();
     }
 
+	public PageClass<T> computeFixedPointsData(Set<Webpage> sample, Set<String> uniqueXPaths) {
+		  if (this.cache.containsKey(sample)) {
+		        log.trace("Result cached:");
+		        final PageClass<T> result = this.cache.get(sample);
+		        log.trace(result.getVariant());
+		        log.trace(result.getConstant());
+		        return result;
+		    }
+		    
+			log.trace("There are "+sample.size()+" available sample(s)");
+			log.trace(sample);
+			log.trace("<BR/>");
+			
+			final Set<String> rules = uniqueXPaths;		
+			
+			if (!rules.isEmpty()) {
+			    log.trace("Extraction rules generated ("+rules.size()+"): ");
+			    log.trace(rules);
+
+	            final ParallelExtractor<T> extractor = new ParallelExtractor<>(this.ruleFactory);
+			    
+			    final List<ExtractedVector<T>> extracted = extractor.extract(sample, rules);
+			    
+			    final Set<ExtractedVector<T>> vectors = groupRulesByVector(extracted);
+	            
+	            log.trace(vectors.size()+" vector(s) extracted.");
+	            
+	            final FPGenerator<T> fpg = new FPGenerator<T>(fragment);
+			    fpg.generate(vectors);
+	            
+			    logFixedPoints(fpg);
+			    
+			    final PageClass<T> pc = new PageClass<>(sample, fpg.getVariant(), fpg.getConstant());
+			    this.cache.put(sample,pc);
+			    return pc;
+			    
+			} else {
+			    log.trace("No extraction rules generated in the fragment");
+			    log.trace(this.fragment);
+			    this.cache.put(sample, emptyPageClass(sample));
+	            return emptyPageClass(sample);
+			}
+	}
+
 
 }

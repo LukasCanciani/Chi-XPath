@@ -1,9 +1,10 @@
 package it.uniroma3.chixpath.model;
 
-
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Set;
 
 import javax.xml.xpath.XPathExpressionException;
@@ -21,7 +22,7 @@ public class PageClass implements Comparable<PageClass> {
 	}
 
 	private VectorRepository vr;
-	
+
 	private int constantFP;
 	public int getConstantFP() {
 		return constantFP;
@@ -158,6 +159,14 @@ public class PageClass implements Comparable<PageClass> {
 		return uniqueXPaths;
 	}
 
+	public Set<String> getUniqueXPathsAsString(){
+		Set<String> xpaths = new HashSet<>();
+		for ( XPath x : this.getUniqueXPaths()) {
+			xpaths.add(x.getRule());
+		}
+		return xpaths;
+	}
+
 	private  void setUniqueXPaths(Set<XPath> uniqueXPaths) {
 		this.uniqueXPaths = uniqueXPaths;
 	}
@@ -206,7 +215,7 @@ public class PageClass implements Comparable<PageClass> {
 	}
 
 	/*public static void dfp(Set<PageClass> pageClasses) {
-		
+
 		/*final Experiment experiment = Experiment.makeExperiment("dfp", "");
         //XFPConfig.getInstance().setCurrentExperiment(experiment);
 		for (PageClass pClass : pageClasses) {
@@ -251,11 +260,40 @@ public class PageClass implements Comparable<PageClass> {
 		// TODO Auto-generated method stub
 		this.characteristicXPath = bestXPath;
 	}
-	
+
 	public void setFP(int constant, int variable) {
 		this.constantFP= constant;
 		this.variableFP = variable;
 	}
 
+	public static void executeDFP(Set<PageClass> pageClasses, String[] XFParguments, Set<Page> pages) {
 
+		for(PageClass pc : pageClasses) {
+			Map<String,String> id2name = new HashMap<>();
+			System.out.println("Pagine: "+ pages.size());
+			for(Page p : pages) {
+				if(pc.getPages().contains(p)) {
+					String pageName = p.getUrl().split("/")[5];	
+					String id = "idAP"+pageName.split(".html")[0];
+					id2name.put(id, pageName);
+				}
+				else {
+					String pageName = p.getUrl().split("/")[5];
+					String id = "id"+pageName;
+					id2name.put(id, pageName);
+				}
+			}
+			for(String key : id2name.keySet()) {
+				System.out.println(key + " - "+id2name.get(key));
+			}
+			int FixedPoints[] = new int[2];
+			try {
+				System.out.println("Partizione: "+pc.getId()+" XPATH UNIVOCI: "+pc.getUniqueXPathsAsString().size());
+				FixedPoints = xfp.Main.DataMain(XFParguments,id2name,pc.getUniqueXPathsAsString());
+			} catch (Exception e) {
+				System.out.println("DFP failure");
+			}
+			pc.setFP(FixedPoints[1], FixedPoints[0]);
+		}
+	}
 }

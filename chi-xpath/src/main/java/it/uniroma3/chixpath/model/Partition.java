@@ -206,14 +206,18 @@ public class Partition implements Comparable<Partition> {
 			if(Collections.disjoint(pc.getPages(), AP)) {
 				for(Page p : pc.getPages()) {
 					String pageName = p.getUrl().split("/")[5];
+					
 					String id = "id"+pageName;
 					id2name.put(id, pageName);
+					
 				}
 			}else {
 				for(Page p : pc.getPages()) {
 					String pageName = p.getUrl().split("/")[5];
+					
 					String id = "idAP"+pageName.split(".html")[0];
 					id2name.put(id, pageName);
+					
 				}
 			}
 		}

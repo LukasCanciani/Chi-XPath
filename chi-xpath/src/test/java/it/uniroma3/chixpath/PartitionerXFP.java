@@ -131,13 +131,17 @@ public class PartitionerXFP {
 		}
 		long partitionStart = System.currentTimeMillis();
 		System.out.println("Genero le partizioni");
-		Lattice lattice = generatePartitions(pageClasses, MAX_PAGES);
-		long partitionStop = System.currentTimeMillis();
 
 		long XFPStart = System.currentTimeMillis();
 		System.out.println("InizioXFP");
-		executeXFP(lattice,XFParguments,AP,pages);
+		PageClass.executeDFP(pageClasses,XFParguments,pages);
 		long XFPStop = System.currentTimeMillis();
+		for(PageClass pc : pageClasses) {
+			System.out.println(pc.getId() + "Ha "+pc.getConstantFP()+" Punti fissi costanti e "+pc.getVariableFP()+" Variabili");
+		}
+		Lattice lattice = generatePartitions(pageClasses, MAX_PAGES);
+		long partitionStop = System.currentTimeMillis();
+
 		//per ogni partizione stampa il suo id, gli id delle classi di pagine al suo interno, e gl id delle pagine di ogni ClasseDiPagine
 		System.out.println("\n");
 		System.out.println("********Lattice********");

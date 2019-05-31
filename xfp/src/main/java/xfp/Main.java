@@ -93,4 +93,18 @@ public class Main {
 		
 	}
 
+	public static int[] DataMain(String[] arguments, Map<String, String> id2name, Set<String> uniqueXPaths) throws Exception {
+		final Main main = new Main();
+		int[] FixedPoints = new int[2];
+		final ExperimentRunner runner = new ExperimentRunner();
+		main.parseArgs(arguments);
+		FixedPoints = main.runData(runner,id2name,uniqueXPaths);
+
+		return FixedPoints;
+	}
+
+	private int[] runData(ExperimentRunner runner, Map<String, String> id2name, Set<String> uniqueXPaths) {
+		return runner.runData(this.datasetName, this.domainName, this.websites, id2name, uniqueXPaths);
+	}
+
 }
