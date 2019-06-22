@@ -19,6 +19,7 @@ import org.apache.commons.configuration.ConfigurationException;
 
 import it.uniroma3.hlog.HypertextualLogger;
 import xfp.algorithm.XFPAlgorithm;
+import xfp.fixpoint.FixedPoint;
 import xfp.model.Experiment;
 import xfp.model.Website;
 import xfp.util.Constants;
@@ -86,7 +87,7 @@ public class ExperimentRunner {
         }
     }
     
-    public Map<Set<String>, int[]> runChi(String datasetName, String domainName, List<String> enabledSitesList, Map<String, String> id2name) {
+    public Map<Set<String>, int[]> runNav(String datasetName, String domainName, List<String> enabledSitesList, Map<String, String> id2name) {
     	Map<Set<String>, int[]> fp = null;
     	try {
             log.newPage("Loading experiment on "+datasetName+" "+domainName);
@@ -107,7 +108,7 @@ public class ExperimentRunner {
                 }
 
                 configureLoggingLevels();              
-                fp=executeExperimentOnChi(experiment.getWebsiteFolder(site.getName()),site);
+                fp=executeExperimentNav(experiment.getWebsiteFolder(site.getName()),site);
             }
             log.trace("\n");
         } catch (Exception e) {
@@ -122,8 +123,8 @@ public class ExperimentRunner {
     	return fp;
 	}
     
-    public int[] runData(String datasetName, String domainName, List<String> enabledSitesList, Map<String, String> id2name, Set<String> uniqueXPaths) {
-    	int[] fp = null;
+    public Set<FixedPoint<String>> runData(String datasetName, String domainName, List<String> enabledSitesList, Map<String, String> id2name) {
+    	Set<FixedPoint<String>> fp= null;
     	try {
             log.newPage("Loading experiment on "+datasetName+" "+domainName);
             final Experiment experiment = Experiment.makeExperiment(datasetName, domainName);
@@ -143,7 +144,7 @@ public class ExperimentRunner {
                 }
 
                 configureLoggingLevels();              
-                fp=executeExperimentOnData(experiment.getWebsiteFolder(site.getName()),site,uniqueXPaths);
+                fp=executeExperimentOnData(experiment.getWebsiteFolder(site.getName()),site);
             }
             log.trace("\n");
         } catch (Exception e) {
@@ -158,8 +159,8 @@ public class ExperimentRunner {
     	return fp;
 	}
 
-    private int[] executeExperimentOnData(File websitedir, Website site, Set<String> uniqueXPaths) throws Exception {
-    	int[] fp = null;
+    private Set<FixedPoint<String>> executeExperimentOnData(File websitedir, Website site) throws Exception {
+    	Set<FixedPoint<String>> fp;
     	// trigger recursive executions of xfp algorithm beginning from the access page(s)
         log.newPage("Running XFP on website: "+site);
         final XFPAlgorithm algorithm = new XFPAlgorithm(site, websitedir);
@@ -167,14 +168,14 @@ public class ExperimentRunner {
         /* N.B. UP-FRONT FRAGMENT GENERATION IS NOT SUPPORTED 
          *      WITH PAGECLASS-SPECIFIC TEMPLATE ANALYSIS     */
         /* upfrontXPathFragmentGeneration(site); */
-        fp = algorithm.xfpData(site.getAccessPages(),uniqueXPaths);
+        fp = algorithm.xfpData(site.getAccessPages());
         
         log.trace("\n"); // flush hyper-logs
         log.endPage();
         return fp;
 	}
 
-	private Map<Set<String>, int[]> executeExperimentOnChi(File websitedir, Website site) throws Exception {
+	private Map<Set<String>, int[]> executeExperimentNav(File websitedir, Website site) throws Exception {
     	Map<Set<String>, int[]> fp = null;
     	// trigger recursive executions of xfp algorithm beginning from the access page(s)
         log.newPage("Running XFP on website: "+site);
@@ -183,7 +184,7 @@ public class ExperimentRunner {
         /* N.B. UP-FRONT FRAGMENT GENERATION IS NOT SUPPORTED 
          *      WITH PAGECLASS-SPECIFIC TEMPLATE ANALYSIS     */
         /* upfrontXPathFragmentGeneration(site); */
-        fp = algorithm.xfpChi(site.getAccessPages());
+        fp = algorithm.xfpNav(site.getAccessPages());
         
         log.trace("\n"); // flush hyper-logs
         log.endPage();

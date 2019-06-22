@@ -12,6 +12,7 @@ import java.util.Set;
 import org.apache.commons.cli.*;
 
 import it.uniroma3.hlog.HypertextualLogger;
+import xfp.fixpoint.FixedPoint;
 
 public class Main {
 
@@ -73,38 +74,40 @@ public class Main {
 		main.run(runner);
 	}
 
-	public static Map<Set<String>, int[]> chiMain(String[] arguments, Map<String, String> id2name) throws Exception {
+	public static Map<Set<String>, int[]> NavMain(String[] arguments, Map<String, String> id2name) throws Exception {
+		
 		final Main main = new Main();
 		Map<Set<String>, int[]> FixedPoints = new HashMap<>();
 		final ExperimentRunner runner = new ExperimentRunner();
+		System.out.println("DOPO");
 		main.parseArgs(arguments);
-		FixedPoints = main.runChi(runner,id2name);
+		FixedPoints = main.runNav(runner,id2name);
 
 		return FixedPoints;
 	}
 
-	private Map<Set<String>, int[]> runChi(ExperimentRunner runner, Map<String, String> id2name) {
+	private Map<Set<String>, int[]> runNav(ExperimentRunner runner, Map<String, String> id2name) {
 		/*System.out.println("Starting experiments"
 				+ " on "
 				+ " dataset "  + datasetName + ","
 				+ " domain "   + domainName + " and"
 				+ " websites " + websites);*/
-		return runner.runChi(this.datasetName, this.domainName, this.websites, id2name);
+		return runner.runNav(this.datasetName, this.domainName, this.websites, id2name);
 		
 	}
 
-	public static int[] DataMain(String[] arguments, Map<String, String> id2name, Set<String> uniqueXPaths) throws Exception {
+	public static Set<FixedPoint<String>> DataMain(String[] arguments, Map<String, String> id2name) throws Exception {
 		final Main main = new Main();
-		int[] FixedPoints = new int[2];
+		Set<FixedPoint<String>> FixedPoints;
 		final ExperimentRunner runner = new ExperimentRunner();
 		main.parseArgs(arguments);
-		FixedPoints = main.runData(runner,id2name,uniqueXPaths);
+		FixedPoints = main.runData(runner,id2name);
 
 		return FixedPoints;
 	}
 
-	private int[] runData(ExperimentRunner runner, Map<String, String> id2name, Set<String> uniqueXPaths) {
-		return runner.runData(this.datasetName, this.domainName, this.websites, id2name, uniqueXPaths);
+	private Set<FixedPoint<String>> runData(ExperimentRunner runner, Map<String, String> id2name) {
+		return runner.runData(this.datasetName, this.domainName, this.websites, id2name);
 	}
 
 }

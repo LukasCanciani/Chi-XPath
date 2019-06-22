@@ -126,8 +126,9 @@ public class FPGenerator<T> {
     }
 
     private boolean mayBeAsuitableFixedPoint(ExtractedVector<T> vector) {
-        return  this.fragment.coverMultiValued() || // check whether the fragment can cover this vector 
-                !vector.getValues().stream().filter(l -> ( l.size()>1) ).findAny().isPresent();
+       /* return  this.fragment.coverMultiValued() || // check whether the fragment can cover this vector 
+                !vector.getValues().stream().filter(l -> ( l.size()>1) ).findAny().isPresent();*/
+    	return true;
     }
 
     public Document getDocumentOf(final List<Value<T>> values) {

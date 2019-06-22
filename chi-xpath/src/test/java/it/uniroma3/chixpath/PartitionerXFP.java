@@ -120,56 +120,75 @@ public class PartitionerXFP {
 		long rulesControlStop = System.currentTimeMillis();
 
 
-		for(PageClass temp : pageClasses) {
-			System.out.println(temp);
-			System.out.print("\n");
-		}
 		//selezione dell'Xpath caratteristico per ogni classe di pagine
 		PageClass.selectCharacteristicXPath(pageClasses);
-		for(PageClass pageClass : pageClasses) {
-			System.out.println("Classe di pagine "+pageClass.getId()+" ha xPath caratteristico "+pageClass.getCharacteristicXPath().getRule());
-		}
-		long partitionStart = System.currentTimeMillis();
-		System.out.println("Genero le partizioni");
 
 		long XFPStart = System.currentTimeMillis();
-		System.out.println("InizioXFP");
+		System.out.println("InizioDFP");
 		PageClass.executeDFP(pageClasses,XFParguments,pages);
 		long XFPStop = System.currentTimeMillis();
-		for(PageClass pc : pageClasses) {
-			System.out.println(pc.getId() + "Ha "+pc.getConstantFP()+" Punti fissi costanti e "+pc.getVariableFP()+" Variabili");
-		}
+
+		long NFPStart = System.currentTimeMillis();
+		System.out.println("InizioNFP");
+		PageClass.executeNFP(pageClasses,XFParguments,pages);
+		long NFPStop = System.currentTimeMillis();
+
+		long partitionStart = System.currentTimeMillis();
+		System.out.println("Genero le partizioni");
 		Lattice lattice = generatePartitions(pageClasses, MAX_PAGES);
 		long partitionStop = System.currentTimeMillis();
 
-		//per ogni partizione stampa il suo id, gli id delle classi di pagine al suo interno, e gl id delle pagine di ogni ClasseDiPagine
-		System.out.println("\n");
-		System.out.println("********Lattice********");
 
-		System.out.println(lattice);
+
+		PrintResults(lattice,pageClasses);
+		
+
 		String siteName = pageUrls.getFirst().split("/")[3];
 		String samplesName = pageUrls.getFirst().split("/")[4];
 		generateGraph(siteName,samplesName,pages,lattice);
+
 		long endTime = System.currentTimeMillis();
 		System.out.println("It took " + (endTime - startTime)/1000 + " seconds");
 		System.out.println("Rules Generation : " + (rulesGenerationStop-rulesGenerationStart)/1000 + " seconds");
 		System.out.println("Rules Control  : " + (rulesControlStop-rulesControlStart)/1000 + " seconds");
 		System.out.println("Lattice creation  : " + (partitionStop-partitionStart)/1000 + " seconds");
 		System.out.println("XFP  : " + (XFPStop-XFPStart)/1000 + " seconds");
+		System.out.println("NFP  : " + (NFPStop-NFPStart)/1000 + " seconds");
 
 	}
 
 
 
-	private static void executeXFP(Lattice lattice, String[] XFParguments, Set<Page> AP, Set<Page> pages) {
-		for(Partition p: lattice.getPartitions()) {
-			/*for(PageClass pc : p.getPageClasses()) {
-				
-			}*/
-			p.executeXFP(XFParguments,AP,pages);
+	private static void PrintResults(Lattice lattice, Set<PageClass> pageClasses) {
+		//per ogni partizione stampa il suo id, gli id delle classi di pagine al suo interno, e gl id delle pagine di ogni ClasseDiPagine
+		System.out.println("\n");
+		System.out.println("********Lattice********");
+
+		System.out.println("***Page Classes***");
+		for(PageClass pc: pageClasses) {
+			System.out.println(pc);
+			System.out.println("1n");
+		}
+		
+		System.out.println("***Partizioni***");
+		for(Partition p : lattice.getPartitions()) {
+			System.out.println(p);
+			System.out.println("\n");
 		}
 
+		//System.out.println(lattice);
+
 	}
+
+
+
+	/*private static void executeXFP(Lattice lattice, String[] XFParguments, Set<Page> AP, Set<Page> pages) {
+		for(Partition p: lattice.getPartitions()) {
+			/*for(PageClass pc : p.getPageClasses()) {
+
+			}
+			p.executeXFP(XFParguments,AP,pages);
+		}*/
 
 	private static void generateGraph(String siteName, String samplesName, Set<Page> pages, Lattice lattice) {
 
@@ -178,7 +197,7 @@ public class PartitionerXFP {
 		for (Page p : pages) {
 			String name = p.getUrl().split("/")[5].split("[.]")[0] ;
 			String image = "./dataset/test/"+siteName+"/"+samplesName+"/images/"+
-			name;
+					name;
 			p2i.put(p, image);
 		}
 
@@ -231,8 +250,8 @@ public class PartitionerXFP {
 		}
 
 	}
-	
-	
+
+
 
 
 

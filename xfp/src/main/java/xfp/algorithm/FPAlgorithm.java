@@ -146,7 +146,7 @@ public class FPAlgorithm<T> {
         log.endPage();
     }
 
-	public PageClass<T> computeFixedPointsData(Set<Webpage> sample, Set<String> uniqueXPaths) {
+	public PageClass<T> computeFixedPointsData(Set<Webpage> sample) {
 		  if (this.cache.containsKey(sample)) {
 		        log.trace("Result cached:");
 		        final PageClass<T> result = this.cache.get(sample);
@@ -159,7 +159,9 @@ public class FPAlgorithm<T> {
 			log.trace(sample);
 			log.trace("<BR/>");
 			
-			final Set<String> rules = uniqueXPaths;		
+			final Set<String> rules = inferRules(sample);
+									//uniqueXPaths;	
+									//inferRules(sample);
 			
 			if (!rules.isEmpty()) {
 			    log.trace("Extraction rules generated ("+rules.size()+"): ");

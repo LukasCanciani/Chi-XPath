@@ -123,8 +123,10 @@ public class XFPAlgorithm {
 		log.endPage();
 	}
 
-	public Map<Set<String>, int[]> xfpChi(Set<Webpage> sample) throws Exception {
+	public Map<Set<String>, int[]> xfpNav(Set<Webpage> sample) throws Exception {
+
 		Map<Set<String>, int[]>  fp = new HashMap<>();
+
 		if (!this.alreadyProcessed.add(sample)) {
 			log.trace("This sample has been already processed by XFP "+sample);
 			return fp;
@@ -136,63 +138,26 @@ public class XFPAlgorithm {
 		//final Set<FixedPoint<URI>> navFixedPoint = nfp().computeFixedPoints(sample);
 		final PageClass<URI> navFixedPoint = nfp().computeFixedPoints(sample);
 		storeNavFixedPoints(navFixedPoint);
-		final Set<Lattice<URI>> lattices = Lattice.create(navFixedPoint.getVariant());
-		final NavigableSet<FixedPoint<URI>> lcs = // -> RequestCollection
-				lattices.stream()
-				.map( l -> l.top() ) // start crawling the lattices from the top
-				.collect(Collectors.toCollection(TreeSet::new)); 
+		
 
-		if (lcs.isEmpty())
-			log.trace("None link collection left to crawl");
-
-		while (!lcs.isEmpty())	{ 
-			log.trace("<HR><BR/>");
-
-			log.trace("currently  "+lcs.size()+" link collection(s) are still available");
-			final FixedPoint<URI> lc = ( lcs.pollLast() ); /* <-- get and remove next lc */
-			log.trace(lc.getExtracted());
-			log.newPage("Applying DFP on this link collection");
-			log.trace("Link collection extracted by "+lc.getExtractionRule());
-
-			final Set<Webpage> pages = download(getLinks(lc.getExtracted()));
-
-			//final Set<FixedPoint<String>> data = dfp().computeFixedPoints(pages);
-			final PageClass<String> data = dfp().computeFixedPoints(pages);
-			Set<String> fpPages = new HashSet<>();
-			for(Webpage wp : data.getPages()) {
-				fpPages.add(wp.getName());
-			}
-			int[] fps = new int[2];
-			fps[0] = data.getVariant().size();
-			fps[1] = data.getConstant().size();
-			fp.put(fpPages, fps);
-			storeDataFixedPoints(data);
-			evaluateDataFixedPoints(data);
-
-			if (isValidPageClass(data))	{
-				log.trace("That's a valid page class (current threshold="+DATA_THRESHOLD+" f.p.)! Go deeper.");
-				xfp(pages);
-				log.endPage();
-				log.trace("That was a <EM>valid</EM> page class.");
-				log.newPage(data.getVariant().size()+ " fixed data fixed points found.");
-				log.trace(data.getVariant());
-				log.endPage();
-			} else {
-				final Set<FixedPoint<URI>> lc_glb = lc.getLattice().getGLBs(lc); // refine lc
-				lcs.addAll(lc_glb);
-				log.endPage();
-				log.trace("That was an <EM>invalid</EM> page class");
-				log.page("replacing link collection with its g.l.b. (size: "+lc_glb.size()+").",lc_glb);
-			}
-			log.trace("<BR/>");
+		Set<String> fpPages = new HashSet<>();
+		for(Webpage wp : navFixedPoint.getPages()) {
+			fpPages.add(wp.getName());
 		}
+		int[] fps = new int[2];
+		fps[0] = navFixedPoint.getVariant().size();
+		fps[1] = navFixedPoint.getConstant().size();
+		fp.put(fpPages, fps);
+
+
 
 		log.endPage();
 		return fp;
 	}
 
-	public int[] xfpData(Set<Webpage> sample, Set<String> uniqueXPaths) throws Exception {
-		int[]  fp = new int[2];
+	public Set<FixedPoint<String>> xfpData(Set<Webpage> sample) throws Exception {
+		Set<FixedPoint<String>> fp = new HashSet<>();
+		//Set<String> rules = new HashSet<>();
 		if (!this.alreadyProcessed.add(sample)) {
 			log.trace("This sample has been already processed by XFP "+sample);
 			return fp;
@@ -202,13 +167,17 @@ public class XFPAlgorithm {
 		log.newPage("Applying DFP on this link collection");
 
 		//final Set<FixedPoint<String>> data = dfp().computeFixedPoints(pages);
-		final PageClass<String> data = dfp().computeFixedPointsData(sample,uniqueXPaths);
-		Set<String> fpPages = new HashSet<>();
-		for(Webpage wp : data.getPages()) {
-			fpPages.add(wp.getName());
+		final PageClass<String> data = dfp().computeFixedPointsData(sample);
+
+		fp.addAll(data.getVariant());
+		fp.addAll(data.getConstant());
+
+		/*for(FixedPoint<String> constant : data.getConstant()) {
+			rules.addAll(constant.getRules()); //Il problema è che cosi mi mette troppe xpath!!!! Anche se quasi non ho PF
 		}
-		fp[0] = data.getVariant().size();
-		fp[1] = data.getConstant().size();
+		for(FixedPoint<String> variant : data.getVariant()){
+			rules.addAll(variant.getRules());
+		}*/
 		storeDataFixedPoints(data);
 		evaluateDataFixedPoints(data);
 		log.endPage();

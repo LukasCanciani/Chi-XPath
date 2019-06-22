@@ -30,8 +30,17 @@ public class Partition implements Comparable<Partition> {
 		this.pageClasses = pc;
 		this.id = (Integer.toString(progId++));
 		this.avgXPaths = averageXPaths();
+		this.totalFP = CountTotalFP();
 	}
 
+
+	private int CountTotalFP() {
+		int total= 0;
+		for(PageClass p : this.pageClasses) {
+			total = total + p.getConstantFP() + p.getVariableFP();
+		}
+		return total;
+	}
 
 	public String getId() {
 		return id;
@@ -190,13 +199,11 @@ public class Partition implements Comparable<Partition> {
 
 	@Override
 	public String toString() {
-		String str = "La partizione "+this.getId()+" matcha con "+this.getAvgXPaths() +" xpaths in media ed ha complessivamente " +this.getTotalFP()+"punti fissi ed e' divisa in:\n";
+		String str = "Partition "+this.getId() +"\nPage Classes: ";
 		for(PageClass Pset : this.getPageClasses()) {
-			str=str.concat("Classe di pagine "+Pset.getId()+": Punti fissi:"+Pset.getConstantFP()+"Costanti e "+Pset.getVariableFP()+" Variable\n");
-			for(Page page : Pset.getPages()) {
-				str=str.concat("id:"+page.getId()+"\n");
-			}
+			str=str.concat(Pset.getId()+" ");
 		}
+		str=str.concat("Average XPaths: " + this.getAvgXPaths() + " Total NFP: " + this.getTotalFP() );
 		return str;
 	}
 
@@ -224,7 +231,7 @@ public class Partition implements Comparable<Partition> {
 
 		Map<Set<String>,int[]> FixedPoints = null;
 		try {
-			FixedPoints = xfp.Main.chiMain(XFParguments,id2name);
+			FixedPoints = xfp.Main.NavMain(XFParguments,id2name);
 		} catch (Exception e) {
 			System.out.println("DFP failure");
 		}

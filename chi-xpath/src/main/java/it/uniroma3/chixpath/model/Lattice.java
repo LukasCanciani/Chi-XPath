@@ -7,7 +7,6 @@ import java.util.Set;
 
 public class Lattice {
 	
-
 	private Set<Partition> partitions;
 	private Map<Partition,Set<Partition>> isRefinementOf;
 	private Map<Partition,Set<Partition>> isRefinedBy;
@@ -56,7 +55,7 @@ public class Lattice {
 		
 	}
 	
-	@Override
+	/*@Override
 	public String toString() {
 		String out = "Il reticolo è composto da: \n";
 		for (Partition p : this.partitions) {
@@ -73,7 +72,7 @@ public class Lattice {
 			out = out.concat("\n");
 		}
 		return out;
-	}
+	}*/
 
 	public Set<Partition> getPartitions() {
 		return partitions;

@@ -1,5 +1,5 @@
 pages: 8
 0.html
 2.html
-nr_vfp: 1
-nr_cfp: 0
+nr_vfp: 9
+nr_cfp: 17

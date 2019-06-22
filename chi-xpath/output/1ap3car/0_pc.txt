@@ -2,5 +2,5 @@ pages: 0
 1.html
 2.html
 3.html
-nr_vfp: 1
-nr_cfp: 0
+nr_vfp: 32
+nr_cfp: 14

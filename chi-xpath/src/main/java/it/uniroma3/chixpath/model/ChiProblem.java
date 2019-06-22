@@ -82,17 +82,6 @@ public class ChiProblem {
                 this.getOtherPages();
     }
 
-	public Collection<TemplateSample> getTemplateSamples() {
-		return templateSamples;
-	}
-
-	public Collection<Page> getOtherPages() {
-		return otherPages;
-	}
-
-	public String getSiteUrl() {
-		return siteUrl;
-	}
 
 	public void setSiteUrl(String siteUrl) {
 		this.siteUrl = siteUrl;

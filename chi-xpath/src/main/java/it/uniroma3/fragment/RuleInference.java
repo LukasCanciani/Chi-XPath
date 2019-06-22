@@ -14,6 +14,8 @@ import org.w3c.dom.Node;
 
 import it.uniroma3.fragment.cache.RulesCache;
 import lombok.Getter;
+import xfp.generation.XPathFragmentCache;
+import xfp.model.Webpage;
 
 /**
  * This class is in charge of generating a set of extraction rules

@@ -75,5 +75,9 @@ public class FixedPoint<T> implements Comparable<FixedPoint<T>> {
             cmp = this.getExtractionRule().getXPath().compareTo(that.getExtractionRule().getXPath());
         return (int)cmp;
     }
+
+	public Set<String> getRules() {
+		return this.rules;
+	}
 	
 }

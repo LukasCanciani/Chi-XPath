@@ -1,4 +1,4 @@
 pages: 3
 3.html
-nr_vfp: 1
-nr_cfp: 0
+nr_vfp: 9
+nr_cfp: 3

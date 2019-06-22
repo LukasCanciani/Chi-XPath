@@ -14,6 +14,8 @@ public class VectorRepository {
 	private Set<Vector> vectors = new HashSet<>();
 	private PageClass pageClass;
 	private String id;
+	
+
 	private int pagNum;
 	
 	private int totalNodes[];
@@ -127,7 +129,9 @@ public class VectorRepository {
 		return xpaths;
 	}
 
-
+	public String getId() {
+		return id;
+	}
 
 	public Set<Vector> getVectors() {
 		return vectors;
