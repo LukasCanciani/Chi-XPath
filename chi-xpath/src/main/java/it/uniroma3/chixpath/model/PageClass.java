@@ -356,7 +356,6 @@ public class PageClass implements Comparable<PageClass> {
 		//se do una sistemata alla stampa in console potrei usare direttamente quella da portare al proff, senza mettermi sempre a riscrivere tutto!!
 
 		for(PageClass pc : pageClasses) {
-			System.out.println("Prima");
 			Map<String,String> id2name = new HashMap<>();
 			//System.out.println("Pagine: "+ pages.size());
 			for(Page p : pages) {
@@ -375,7 +374,6 @@ public class PageClass implements Comparable<PageClass> {
 			try {
 				NFP = xfp.Main.NavMain(XFParguments, id2name);
 			} catch (Exception e) {
-				System.out.println("NFP failure");
 			}
 			for(Set<String> pcID : NFP.keySet()) {
 				PageClass pageClass = PageClass.getPageClassFromIDs(pageClasses,pcID);
@@ -391,17 +389,15 @@ public class PageClass implements Comparable<PageClass> {
 		if(this.NFP == null) {
 			this.NFP = new HashMap<>();
 		}
-		if(pageClass == null) {
-			System.out.println("Una nulla");
-		}
-		else {
+		if(pageClass != null) 
+		{
 			this.NFP.put(pageClass, nfp);
 		}
 
 	}
 
 	private static PageClass getPageClassFromIDs(Set<PageClass> pageClasses, Set<String> pcID) {
-		
+
 		for(PageClass pc : pageClasses) {
 			if(pc.getPages().size() == pcID.size()) {
 				Boolean equals = true;

@@ -32,12 +32,4 @@ in base a cosa valid / invalid?
 
 ---------------------------------------
 !!Risolvere Java Out Of Memory, isolare il metodo che sovraccarica la ram!!!
----------------------------------------
-identificata la pagina radice, applicare il main di xfp partendo da tutte le pagine della classe (modifica C:\Users\Lukas\git\Chi-Xpath\chi-xpath\dataset\test\autoscout\1ap3car file _id2name in cui è presente quella pagina, segnare tutte le "possibili" classi otttenute dall0algorimto
-se esistono settare a quella classe in chi-xp il numero di punti fissi.
-Da decidere come procede una volta ottenuti i punti fissi per tutte( almeno quelle che xfp trova) le classi.
-Probabilmente + punti fissi è meglio ( ma nello specifico + punti fissi variabili meglio ancora)
-!!! Attenzione errore nel file _id2name non fa terminare il programma ma non da errori!!!
-
-!!Provare se con le stesse pagine ma cambiando gli AP si ottengono risultati diversi. Se si ottengono. L'OUTPUT CAMBIA!!!!
-IL METODO PUO FUNZIONARE!!
+----------------------------------

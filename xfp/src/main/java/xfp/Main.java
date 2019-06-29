@@ -79,7 +79,6 @@ public class Main {
 		final Main main = new Main();
 		Map<Set<String>, int[]> FixedPoints = new HashMap<>();
 		final ExperimentRunner runner = new ExperimentRunner();
-		System.out.println("DOPO");
 		main.parseArgs(arguments);
 		FixedPoints = main.runNav(runner,id2name);
 

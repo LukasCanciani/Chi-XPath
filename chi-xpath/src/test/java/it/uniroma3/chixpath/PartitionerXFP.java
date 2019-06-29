@@ -152,7 +152,7 @@ public class PartitionerXFP {
 		System.out.println("Rules Generation : " + (rulesGenerationStop-rulesGenerationStart)/1000 + " seconds");
 		System.out.println("Rules Control  : " + (rulesControlStop-rulesControlStart)/1000 + " seconds");
 		System.out.println("Lattice creation  : " + (partitionStop-partitionStart)/1000 + " seconds");
-		System.out.println("XFP  : " + (XFPStop-XFPStart)/1000 + " seconds");
+		System.out.println("DFP  : " + (XFPStop-XFPStart)/1000 + " seconds");
 		System.out.println("NFP  : " + (NFPStop-NFPStart)/1000 + " seconds");
 
 	}
@@ -167,7 +167,6 @@ public class PartitionerXFP {
 		System.out.println("***Page Classes***");
 		for(PageClass pc: pageClasses) {
 			System.out.println(pc);
-			System.out.println("1n");
 		}
 		
 		System.out.println("***Partizioni***");

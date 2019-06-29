@@ -11,6 +11,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.NavigableSet;
 import java.util.Set;
@@ -138,20 +139,53 @@ public class XFPAlgorithm {
 		//final Set<FixedPoint<URI>> navFixedPoint = nfp().computeFixedPoints(sample);
 		final PageClass<URI> navFixedPoint = nfp().computeFixedPoints(sample);
 		storeNavFixedPoints(navFixedPoint);
+
+		fp = pageToFP(navFixedPoint);
 		
-
-		Set<String> fpPages = new HashSet<>();
-		for(Webpage wp : navFixedPoint.getPages()) {
-			fpPages.add(wp.getName());
-		}
-		int[] fps = new int[2];
-		fps[0] = navFixedPoint.getVariant().size();
-		fps[1] = navFixedPoint.getConstant().size();
-		fp.put(fpPages, fps);
-
-
-
 		log.endPage();
+		return fp;
+	}
+
+	private Map<Set<String>, int[]> pageToFP(PageClass<URI> navFixedPoint) {
+		Map<Set<String>, int[]>  fp = new HashMap<>();
+		for (FixedPoint<URI> fp2 : navFixedPoint.getConstant()){
+			Set<String> pages= new HashSet<>();
+			for(List<Value<URI>> list : fp2.getExtracted().getValues()) { 
+				for(Value<URI> v : list) {
+					pages.add(v.toString());
+				}
+			}
+			if(!fp.containsKey(pages)) {
+				int[] point = new int[2];
+				point[0] = 0;
+				point[1] = 1;
+				fp.put(pages, point);
+			}
+			else {
+				int [] point = fp.get(pages);
+				point[1] += 1;
+				fp.put(pages, point);
+			}
+		}
+		for (FixedPoint<URI> fp2 : navFixedPoint.getVariant()){
+			Set<String> pages= new HashSet<>();
+			for(List<Value<URI>> list : fp2.getExtracted().getValues()) { 
+				for(Value<URI> v : list) {
+					pages.add(v.toString());
+				}
+			}
+			if(!fp.containsKey(pages)) {
+				int[] point = new int[2];
+				point[0] = 1;
+				point[1] = 0;
+				fp.put(pages, point);
+			}
+			else {
+				int [] point = fp.get(pages);
+				point[0] += 1;
+				fp.put(pages, point);
+			}
+		}
 		return fp;
 	}
 
