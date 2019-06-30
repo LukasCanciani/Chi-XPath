@@ -126,12 +126,17 @@ public class PageClass implements Comparable<PageClass> {
 	public String toString() {
 		String out = "PageClass "+this.getId()+ " Pages: \n";
 		for(Page page : this.getPages()) {
-			out=out.concat("  ID:"+page.getId()+" ");
+			out=out.concat("ID:"+page.getId()+" ");
 		}	
 		out=out.concat("\nXPaths: "+this.getUniqueXPaths().size()+"\nDFP: Constant:"+this.getConstantFP() + " Variable: "+this.getVariableFP());
-		out=out.concat("NFP: ");
-		for(PageClass pc : this.getNFP().keySet()) {
-			out=out.concat("\nTo Pageclass: "+pc.getId() );//+ " NFP: Constant:"+this.getNFP().get(pc)[1] + " Variable: "+this.getNFP().get(pc)[0]);
+		out=out.concat("\nNFP: ");
+		if(this.getNFP().keySet().isEmpty()) {
+			 out = out.concat(" N/A");
+		}
+		else {
+			for(PageClass pc : this.getNFP().keySet()) {
+				out=out.concat("\nTo Pageclass: "+pc.getId() +  " NFP: Constant:"+this.getNFP().get(pc)[1] + " Variable: "+this.getNFP().get(pc)[0]);
+			}
 		}
 		out=out.concat("\n");
 		return out;

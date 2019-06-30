@@ -1,0 +1,212 @@
+/* Classi Generali*/
+.no-outline {
+	outline: none;
+}
+
+.no-border {
+	border: 0;
+}
+/* banner skin */
+body.backgroundAdv #btop {
+	height: 80px;
+}
+
+@media (min-width:768px) {
+	body.backgroundAdv #btop {
+		min-height: 80px;
+	}
+	
+	body.backgroundAdv #wrapper {
+		/*max-width: 760px;*/
+	}
+	body.backgroundAdv {
+		background-size: 1538px!important;
+	}
+}
+
+body.backgroundAdv {
+	background-repeat: no-repeat;
+	background-position: -465px top
+}
+
+body.backgroundAdv #wrapper {
+	margin: 0 auto
+}
+
+@media (min-width:1024px) {
+	body.backgroundAdv {
+		background-size: 2062px!important
+	}
+	body.backgroundAdv #wrapper {
+		/*max-width: 1024px*/
+	}
+	body.backgroundAdv #btop {
+		height: 107px
+	}
+}
+
+@media (min-width:1440px) {
+	body.backgroundAdv {
+		background-size: 2545px!important
+	}
+	body.backgroundAdv #wrapper {
+		/*max-width: 1260px;*/
+	}
+	body.backgroundAdv #btop {
+		height: 133px
+	}
+}
+
+body.backgroundAdv #bleft,
+body.backgroundAdv #bright {
+	position: absolute;
+	top: 0;
+	bottom: 0
+}
+
+body.backgroundAdv #bleft {
+	left: 0
+}
+
+body.backgroundAdv #bright {
+	right: 0
+}
+
+@media (min-width:1008px) {
+	body.backgroundAdv {
+		background-position: center top!important;
+		background-attachment: fixed
+	}
+}
+
+.backgroundAdv {
+    background-color: #0F0F0F!important;
+    background-attachment: scroll!important;
+}
+
+.backgroundAdv #wrapper {
+  /*  background: #0F0F0F; */
+    padding: 0!important;
+}
+
+body.backgroundAdv .loader-container {
+	max-width: 100%;
+	top: 0;
+	left: 0;
+}
+
+/*  video  */
+
+figure iframe {
+  width: 100%;
+  height: 560px;
+}
+
+/*  video external  */
+
+.videoFullscreen .video-js, .videoFullscreenIframe iframe {
+  position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;
+}
+.videoFixTmp  .video-js{
+  width: 100%; height: 550px; margin-top: 20px;
+}
+@media (max-width: 1024px) {
+  .videoFixTmp .video-js {
+    height: 430px;
+  }
+}
+
+@media (max-width: 768px) {
+  .videoFixTmp .video-js{
+     height: 300px;
+  }
+}
+@media (max-width: 480px) {
+  .videoFixTmp .video-js{
+     height: 240px;
+  }
+}
+@media (max-width: 375px) {
+  .videoFixTmp .video-js{
+     height: 190px;
+  }
+}
+
+/* Player Brightcove */
+
+/* nascondo titolo/sottotilo player */
+.vjs-dock-text {
+	display:none;
+}
+
+.loader-container{
+    width: 100%;
+    margin: 0 auto;
+    top: 0px;
+    background-color: #000000cf;
+    min-height: 100%;
+    display: table;
+    z-index: 100;
+    
+    position: fixed;
+}
+.loader-container .loader{
+    top: 26em;
+    position:relative;
+    margin:0 auto;
+   
+}
+@media (max-width: 480px) {
+  .loader-container .loader{
+    top: 18em;
+}
+}
+@media (max-width: 768px){
+  .loader-container .loader{
+    top: 21em;
+}
+}
+
+/* Dropup Social*/
+
+.dropup-menu--bubble.dropup-menu-right::before {
+    left: auto;
+    right: 18px;
+    top: 77px;
+    transform: rotate(180deg);
+}
+
+.dropup-menu--bubble.dropup-menu-right {
+    margin-left: 0;
+    margin-right: -10px;
+    margin-top: -120px;
+}
+
+.dropup-menu-right {
+    right: 0;
+    left: auto;
+}
+
+.dropup-menu--bubble {
+    border: none;
+    margin-top: 8px;
+    margin-left: -20px;
+}
+
+.dropup-menu--bubble::before {
+    content: '';
+    display: block;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #FFFFFF;
+    position: absolute;
+    top: -7px;
+    left: 18px;
+}
+
+/* Fix per menu su safari */
+@media (min-width: 768px){
+.backgroundAdv.is-sidemenu-in #pg-wrapper {
+  overflow: initial;
+}
+}

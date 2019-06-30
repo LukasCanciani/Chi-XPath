@@ -1,7 +1,6 @@
 package it.uniroma3.chixpath.model;
 
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -14,9 +13,17 @@ public class Partition implements Comparable<Partition> {
 	private String id;
 	private float avgXPaths;
 	private Map<Set<String>,int[]> FixedPoints;
-	private int totalFP;
+	private int[] totalDFP;
+	private int[] innerNFP;
+	
+
+	//private int totalFP;
 
 
+
+	public int[] getInnerNFP() {
+		return innerNFP;
+	}
 
 	public Map<Set<String>, int[]> getFixedPoints() {
 		return FixedPoints;
@@ -30,14 +37,30 @@ public class Partition implements Comparable<Partition> {
 		this.pageClasses = pc;
 		this.id = (Integer.toString(progId++));
 		this.avgXPaths = averageXPaths();
-		this.totalFP = CountTotalFP();
+		this.totalDFP = countTotalDFP();
+		this.innerNFP = countInnerNFP();
 	}
 
 
-	private int CountTotalFP() {
-		int total= 0;
+	private int[] countInnerNFP() {
+		int[] total = new int[2];
+		for (PageClass p: this.pageClasses) {
+			for(PageClass p2 : p.getNFP().keySet()) {
+				if (this.pageClasses.contains(p2)) {
+					int[] current = p.getNFP().get(p2);
+					total[0] += current[0];
+					total[1] += current[1];
+				}
+			}
+		}
+		return total;
+	}
+
+	private int[] countTotalDFP() {
+		int[] total= new int[2];
 		for(PageClass p : this.pageClasses) {
-			total = total + p.getConstantFP() + p.getVariableFP();
+			total[0] = total[0] + p.getVariableFP();
+			total[1] = total[1] + p.getConstantFP();
 		}
 		return total;
 	}
@@ -203,11 +226,14 @@ public class Partition implements Comparable<Partition> {
 		for(PageClass Pset : this.getPageClasses()) {
 			str=str.concat(Pset.getId()+" ");
 		}
-		str=str.concat("Average XPaths: " + this.getAvgXPaths() + " Total NFP: " + this.getTotalFP() );
+		str=str.concat("Average XPaths: " + this.getAvgXPaths() + " DFP:  Constant: " + this.getTotalDFP()[1]+ " Variable: " + this.getTotalDFP()[0] 
+				+ "(total: " + (this.getTotalDFP()[0]+this.getTotalDFP()[1])+ " )"
+						+ " NFP: Constant: " + this.getInnerNFP()[1]+ " Variable: " + this.getInnerNFP()[0] 
+							+ "(total: " + (this.getInnerNFP()[0]+this.getInnerNFP()[1])+ " )");
 		return str;
 	}
 
-	public void executeXFP(String[] XFParguments, Set<Page> AP, Set<Page> pages) {
+	/*public void executeXFP(String[] XFParguments, Set<Page> AP, Set<Page> pages) {
 		Map<String,String> id2name = new HashMap<>();
 		for(PageClass pc : this.getPageClasses()) {
 			if(Collections.disjoint(pc.getPages(), AP)) {
@@ -252,7 +278,7 @@ public class Partition implements Comparable<Partition> {
 
 	public int getTotalFP() {
 		return totalFP;
-	}
+	}*/
 
 	/*public static void executeXFP(Set<Partition> partitions, Set<String> APIds) {
 		for(Partition p : partitions) {
@@ -273,6 +299,8 @@ public class Partition implements Comparable<Partition> {
 		}
 	}*/
 
-
+	public int[] getTotalDFP() {
+		return totalDFP;
+	}
 
 }
