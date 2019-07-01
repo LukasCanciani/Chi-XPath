@@ -25,6 +25,8 @@ public class PageClass implements Comparable<PageClass> {
 	private VectorRepository vr;
 	private int variableFP;
 	private int constantFP;
+	private int variableOptional;
+	private int constantOptional;
 	private Map<PageClass,int[]> NFP;
 
 
@@ -91,20 +93,7 @@ public class PageClass implements Comparable<PageClass> {
 	}
 
 
-	public float tfIdf() {
-		float totaltf = 0;
-		for(Vector v : this.getVr().getVectors()) {
-			float tf = 0;
-			for(Page p : this.getPages()) {
-				tf = tf + ((float) v.getExtractedNodes()[Integer.parseInt(p.getId())].getLength() )/ (float)this.getVr().getTotalNodes()[Integer.parseInt(p.getId())];
-			}
-			tf = tf/this.getPages().size();
-			totaltf =totaltf+ tf;
-		}
-		totaltf= totaltf/this.getVr().getVectors().size();
-		float totalIdf = (float) (Math.log(this.getVr().getPagNum()/this.getPages().size())/Math.log(10));
-		return totaltf * totalIdf;
-	}
+
 
 	@Override
 	public int compareTo(PageClass that) {
@@ -129,13 +118,15 @@ public class PageClass implements Comparable<PageClass> {
 			out=out.concat("ID:"+page.getId()+" ");
 		}	
 		out=out.concat("\nXPaths: "+this.getUniqueXPaths().size()+"\nDFP: Constant:"+this.getConstantFP() + " Variable: "+this.getVariableFP());
+		out=out.concat("\nOptionalDFP: Constant:"+this.getConstantOptional() + " Variable: "+this.getVariableOptional());
 		out=out.concat("\nNFP: ");
 		if(this.getNFP().keySet().isEmpty()) {
-			 out = out.concat(" N/A");
+			out = out.concat(" N/A");
 		}
 		else {
 			for(PageClass pc : this.getNFP().keySet()) {
-				out=out.concat("\nTo Pageclass: "+pc.getId() +  " NFP: Constant:"+this.getNFP().get(pc)[1] + " Variable: "+this.getNFP().get(pc)[0]);
+				out=out.concat("\nTo Pageclass: "+pc.getId() +  " NFP: Constant: "+this.getNFP().get(pc)[1] + " Variable: "+this.getNFP().get(pc)[0]) +
+						"(OptionalConstant: "+this.getNFP().get(pc)[3] +" OptionalVariable: "+this.getNFP().get(pc)[3] +")";
 			}
 		}
 		out=out.concat("\n");
@@ -290,8 +281,13 @@ public class PageClass implements Comparable<PageClass> {
 		this.constantFP= constant;
 		this.variableFP = variable;
 	}
+	public void setOptionalFP(int constant, int variable) {
+		this.constantOptional = constant;
+		this.variableOptional = variable;
+	}
 
 	public static void executeDFP(Set<PageClass> pageClasses, String[] XFParguments, Set<Page> pages) {
+		Set<FixedPoint<String>> siteDFP = PageClass.executeSiteDFP(pageClasses, XFParguments, pages);
 		Map<FixedPoint<String>, PageClass> FP2PC = new HashMap<>();
 		for(PageClass pc : pageClasses) {
 			Map<String,String> id2name = new HashMap<>();
@@ -315,21 +311,68 @@ public class PageClass implements Comparable<PageClass> {
 				System.out.println("DFP failure");
 			}
 			for(FixedPoint<String> fp : FixedPoints) {
-				FP2PC = addFixedPoints(FP2PC, fp, pc);
+				if(!siteDFP.contains(fp)) {
+					FP2PC = addFixedPoints(FP2PC, fp, pc);
+				}
 			}
 		}
 		//removeDuplicates(FP2PC);		
 		addToPageClass(FP2PC);
 	}
 
+	public static Set<FixedPoint<String>> executeSiteDFP(Set<PageClass> pageClasses, String[] XFParguments, Set<Page> pages){
+		Set<FixedPoint<String>> FixedPoints = null;
+		for (PageClass pc : pageClasses) {
+			if (pc.getPages().size()==pages.size()) {
+				Map<String,String> id2name = new HashMap<>();
+				//System.out.println("Pagine: "+ pages.size());
+				for(Page p : pages) {
+					if(pc.getPages().contains(p)) {
+						String pageName = p.getUrl().split("/")[5];	
+						String id = "idAP"+pageName.split(".html")[0];
+						id2name.put(id, pageName);
+					}
+					else {
+						String pageName = p.getUrl().split("/")[5];
+						String id = "id"+pageName;
+						id2name.put(id, pageName);
+					}
+				}
+
+				try {
+					FixedPoints = xfp.Main.DataMain(XFParguments,id2name);
+				} catch (Exception e) {
+					System.out.println("DFP failure");
+				}
+			}
+		}
+		Set<FixedPoint<String>> results = new HashSet<>();
+		for(FixedPoint<String> fp : FixedPoints) {
+			if(fp.isConstant()) {
+				results.add(fp);
+			}
+		}
+		return results;
+	}
+
 	private static void addToPageClass(Map<FixedPoint<String>, PageClass> fP2PC) {
 		for (FixedPoint<String> fp : fP2PC.keySet()) {
 			PageClass pc = fP2PC.get(fp);
-			if (fp.isConstant()) {
-				pc.setFP(pc.getConstantFP()+1, pc.getVariableFP());
+			if(fp.isOptional()) {
+				if (fp.isConstant()) {
+					pc.setOptionalFP(pc.getConstantOptional()+1, pc.getVariableOptional());
+				}
+				else if (fp.isVariant()) {
+					pc.setOptionalFP(pc.getConstantOptional(), pc.getVariableOptional()+1);
+				}
 			}
-			else if (fp.isVariant()) {
-				pc.setFP(pc.getConstantFP(), pc.getVariableFP()+1);
+			else {
+				if (fp.isConstant()) {
+					pc.setFP(pc.getConstantFP()+1, pc.getVariableFP());
+				}
+				else if (fp.isVariant()) {
+					pc.setFP(pc.getConstantFP(), pc.getVariableFP()+1);
+				}
 			}
 		}
 
@@ -337,8 +380,8 @@ public class PageClass implements Comparable<PageClass> {
 
 	private static Map<FixedPoint<String>, PageClass> addFixedPoints(Map<FixedPoint<String>, PageClass> FP2PC,
 			FixedPoint<String> fp, PageClass pc) {
-		if (FP2PC.containsKey(fp)) {
-			System.out.println("Trovate due uguali");
+		if (FP2PC.containsKey(fp) ) {
+			System.out.println("TROVATI DUE UGUALI");
 			PageClass other = FP2PC.get(fp);
 			boolean contained = true;
 			for (Page page : other.getPages()) {
@@ -354,6 +397,8 @@ public class PageClass implements Comparable<PageClass> {
 		}
 		return FP2PC;
 	}
+
+
 
 	public static void executeNFP(Set<PageClass> pageClasses, String[] XFParguments, Set<Page> pages) {
 		// TODO Auto-generated method stub
@@ -417,6 +462,14 @@ public class PageClass implements Comparable<PageClass> {
 			}
 		}
 		return null;
+	}
+
+	public int getVariableOptional() {
+		return variableOptional;
+	}
+
+	public int getConstantOptional() {
+		return constantOptional;
 	}
 
 	/*private static Map<PageClass, Set<FixedPoint<String>>> removeDuplicates(Map<PageClass, Set<FixedPoint<String>>> PC2FP) {

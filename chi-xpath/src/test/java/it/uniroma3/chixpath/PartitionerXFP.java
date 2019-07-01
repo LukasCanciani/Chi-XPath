@@ -115,14 +115,13 @@ public class PartitionerXFP {
 			System.out.print("\n");
 		}
 		System.out.println("");*/
+		System.out.println("InizioUnique");
 		long rulesControlStart = System.currentTimeMillis();
 		PageClass.createUniqueXPaths(pageClasses, MAX_PAGES);
 		long rulesControlStop = System.currentTimeMillis();
-
-
+		System.out.println("InizioCharacteristic");
 		//selezione dell'Xpath caratteristico per ogni classe di pagine
 		PageClass.selectCharacteristicXPath(pageClasses);
-
 		long XFPStart = System.currentTimeMillis();
 		System.out.println("InizioDFP");
 		PageClass.executeDFP(pageClasses,XFParguments,pages);

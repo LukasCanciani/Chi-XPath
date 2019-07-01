@@ -141,7 +141,7 @@ public class XFPAlgorithm {
 		storeNavFixedPoints(navFixedPoint);
 
 		fp = pageToFP(navFixedPoint);
-		
+
 		log.endPage();
 		return fp;
 	}
@@ -156,16 +156,36 @@ public class XFPAlgorithm {
 				}
 			}
 			if(!fp.containsKey(pages)) {
-				int[] point = new int[2];
-				point[0] = 0;
-				point[1] = 1;
-				fp.put(pages, point);
+				if(!fp2.isOptional()) {
+					int[] point = new int[4];
+					point[0] = 0;
+					point[1] = 1;
+					point[2] = 0;
+					point[3] = 0;
+					fp.put(pages, point);
+				}
+				else {
+					int[] point = new int[4];
+					point[0] = 0;
+					point[1] = 0;
+					point[2] = 0;
+					point[3] = 1;
+					fp.put(pages, point);
+				}
 			}
 			else {
-				int [] point = fp.get(pages);
-				point[1] += 1;
-				fp.put(pages, point);
+				if(!fp2.isOptional()) {
+					int [] point = fp.get(pages);
+					point[1] += 1;
+					fp.put(pages, point);
+				}
+				else {
+					int [] point = fp.get(pages);
+					point[3] += 1;
+					fp.put(pages, point);
+				}
 			}
+
 		}
 		for (FixedPoint<URI> fp2 : navFixedPoint.getVariant()){
 			Set<String> pages= new HashSet<>();
@@ -175,15 +195,34 @@ public class XFPAlgorithm {
 				}
 			}
 			if(!fp.containsKey(pages)) {
-				int[] point = new int[2];
-				point[0] = 1;
-				point[1] = 0;
-				fp.put(pages, point);
+				if(!fp2.isOptional()) {
+					int[] point = new int[4];
+					point[0] = 1;
+					point[1] = 0;
+					point[2] = 0;
+					point[3] = 0;
+					fp.put(pages, point);
+				}
+				else {
+					int[] point = new int[4];
+					point[0] = 0;
+					point[1] = 0;
+					point[2] = 1;
+					point[3] = 0;
+					fp.put(pages, point);
+				}
 			}
 			else {
-				int [] point = fp.get(pages);
-				point[0] += 1;
-				fp.put(pages, point);
+				if(!fp2.isOptional()) {
+					int [] point = fp.get(pages);
+					point[0] += 1;
+					fp.put(pages, point);
+				}
+				else {
+					int [] point = fp.get(pages);
+					point[2] += 1;
+					fp.put(pages, point);
+				}
 			}
 		}
 		return fp;

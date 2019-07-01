@@ -14,6 +14,7 @@ public class Partition implements Comparable<Partition> {
 	private float avgXPaths;
 	private Map<Set<String>,int[]> FixedPoints;
 	private int[] totalDFP;
+	private int[] totalOptionalDFP;
 	private int[] innerNFP;
 	
 
@@ -38,18 +39,21 @@ public class Partition implements Comparable<Partition> {
 		this.id = (Integer.toString(progId++));
 		this.avgXPaths = averageXPaths();
 		this.totalDFP = countTotalDFP();
+		this.totalOptionalDFP = countTotalOptionalDFP();
 		this.innerNFP = countInnerNFP();
 	}
 
 
 	private int[] countInnerNFP() {
-		int[] total = new int[2];
+		int[] total = new int[4];
 		for (PageClass p: this.pageClasses) {
 			for(PageClass p2 : p.getNFP().keySet()) {
 				if (this.pageClasses.contains(p2)) {
 					int[] current = p.getNFP().get(p2);
 					total[0] += current[0];
 					total[1] += current[1];
+					total[2] += current[2];
+					total[3] += current[3];
 				}
 			}
 		}
@@ -61,6 +65,15 @@ public class Partition implements Comparable<Partition> {
 		for(PageClass p : this.pageClasses) {
 			total[0] = total[0] + p.getVariableFP();
 			total[1] = total[1] + p.getConstantFP();
+		}
+		return total;
+	}
+	
+	private int[] countTotalOptionalDFP() {
+		int[] total= new int[2];
+		for(PageClass p : this.pageClasses) {
+			total[0] = total[0] + p.getVariableOptional();
+			total[1] = total[1] + p.getConstantOptional();
 		}
 		return total;
 	}
@@ -226,10 +239,14 @@ public class Partition implements Comparable<Partition> {
 		for(PageClass Pset : this.getPageClasses()) {
 			str=str.concat(Pset.getId()+" ");
 		}
-		str=str.concat("Average XPaths: " + this.getAvgXPaths() + " DFP:  Constant: " + this.getTotalDFP()[1]+ " Variable: " + this.getTotalDFP()[0] 
+		str=str.concat("Average XPaths: " + this.getAvgXPaths() + " \nDFP:  Constant: " + this.getTotalDFP()[1]+ " Variable: " + this.getTotalDFP()[0] 
 				+ "(total: " + (this.getTotalDFP()[0]+this.getTotalDFP()[1])+ " )"
-						+ " NFP: Constant: " + this.getInnerNFP()[1]+ " Variable: " + this.getInnerNFP()[0] 
-							+ "(total: " + (this.getInnerNFP()[0]+this.getInnerNFP()[1])+ " )");
+						+ " OptionalDFP:  OptConstant: " + this.getTotalOptionalDFP()[1]+ " OptVariable: " + this.getTotalOptionalDFP()[0] 
+								+ "(OptTotal: " + (this.getTotalOptionalDFP()[0]+this.getTotalOptionalDFP()[1])+ " )"
+						+ " \nNFP: Constant: " + this.getInnerNFP()[1]+ " Variable: " + this.getInnerNFP()[0] 
+							+ "(total: " + (this.getInnerNFP()[0]+this.getInnerNFP()[1])+ " )")
+				+ " OptionalNFP: OptionalConstant: " + this.getInnerNFP()[3]+ " OptionalVariable: " + this.getInnerNFP()[2] 
+						+ "(OptionalTotal: " + (this.getInnerNFP()[3]+this.getInnerNFP()[2])+ " )";
 		return str;
 	}
 
@@ -301,6 +318,10 @@ public class Partition implements Comparable<Partition> {
 
 	public int[] getTotalDFP() {
 		return totalDFP;
+	}
+
+	public int[] getTotalOptionalDFP() {
+		return totalOptionalDFP;
 	}
 
 }

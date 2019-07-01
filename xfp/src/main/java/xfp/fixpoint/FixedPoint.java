@@ -1,10 +1,12 @@
 package xfp.fixpoint;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
 import xfp.extraction.ExtractionRule;
 import xfp.model.ExtractedVector;
+import xfp.model.Value;
 
 public class FixedPoint<T> implements Comparable<FixedPoint<T>> {
 
@@ -60,6 +62,11 @@ public class FixedPoint<T> implements Comparable<FixedPoint<T>> {
 	    /* only the extracted vector matters, no rule */
 	    @SuppressWarnings("unchecked")
         final FixedPoint<T> that = (FixedPoint<T>)o;
+	    for(String rule: that.getRules()) {
+	    	if( this.getRules().contains(rule)) {
+	    		return true;
+	    	}
+	    }
 	    return Objects.equals(this.getExtracted(), that.getExtracted());
 	}
 	
@@ -78,6 +85,16 @@ public class FixedPoint<T> implements Comparable<FixedPoint<T>> {
 
 	public Set<String> getRules() {
 		return this.rules;
+	}
+
+
+	public boolean isOptional() {
+		for(List<Value<T>> list : this.getExtracted().getValues()) {
+			if(list.isEmpty()) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 }

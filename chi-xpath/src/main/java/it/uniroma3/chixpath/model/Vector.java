@@ -22,13 +22,15 @@ public class Vector implements Comparable<Vector>  {
 	public NodeList[] extractNodes() throws XPathExpressionException {
 		final NodeList[] extractedNodes = new NodeList[pagNum]; 
 		for(Page p : this.pageClass.getPages()) {
-			NodeList node = evaluateXPath(p.getDocument(), this.xpath.getRule());
+			NodeList node;
+			
+			node = evaluateXPath(p.getDocument(), this.xpath.getRule());
+			
 			
 			//System.out.println("estratti "+node.getLength()+" nodi dalla pagina "+p.getId());
 			//inserisco i valori estratti dalla regola nelle posizioni dell'array corrispondenti all'id pagina, che è una stringa e va convertito in int
 			extractedNodes[Integer.parseInt(p.getId())]= node;
-			for(int i=0; i<extractedNodes.length;i++) {
-			}
+			
 		}
 		return extractedNodes;
 	}
