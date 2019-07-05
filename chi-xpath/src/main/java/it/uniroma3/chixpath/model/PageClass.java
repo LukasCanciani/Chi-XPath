@@ -126,7 +126,7 @@ public class PageClass implements Comparable<PageClass> {
 		else {
 			for(PageClass pc : this.getNFP().keySet()) {
 				out=out.concat("\nTo Pageclass: "+pc.getId() +  " NFP: Constant: "+this.getNFP().get(pc)[1] + " Variable: "+this.getNFP().get(pc)[0]) +
-						"(OptionalConstant: "+this.getNFP().get(pc)[3] +" OptionalVariable: "+this.getNFP().get(pc)[3] +")";
+						" (OptionalConstant: "+this.getNFP().get(pc)[3] +" OptionalVariable: "+this.getNFP().get(pc)[3] +")";
 			}
 		}
 		out=out.concat("\n");

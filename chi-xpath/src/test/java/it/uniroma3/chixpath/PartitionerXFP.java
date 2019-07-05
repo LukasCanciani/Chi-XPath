@@ -10,10 +10,12 @@ import java.io.StringWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -140,20 +142,68 @@ public class PartitionerXFP {
 
 
 		PrintResults(lattice,pageClasses);
-		
+
 
 		String siteName = pageUrls.getFirst().split("/")[3];
 		String samplesName = pageUrls.getFirst().split("/")[4];
 		generateGraph(siteName,samplesName,pages,lattice);
 
 		long endTime = System.currentTimeMillis();
+
+		long bestStart = System.currentTimeMillis();
+		System.out.println("Calcolo soluzione ottima");
+		List<Partition> best = findBestSolution(lattice);
+		long bestStop = System.currentTimeMillis();
+
+		System.out.println("************SOLUTION************\n");
+		if (best.size()==1) {
+			System.out.println("SOLUZIONE UNIVOCA");
+		}
+		else {
+			System.out.println("SOLUZIONE NON UNIVOCA");
+		}
+		for(Partition p : best) {
+			System.out.println(p);
+		}
+
+		System.out.println("********************************\n");
+
 		System.out.println("It took " + (endTime - startTime)/1000 + " seconds");
 		System.out.println("Rules Generation : " + (rulesGenerationStop-rulesGenerationStart)/1000 + " seconds");
 		System.out.println("Rules Control  : " + (rulesControlStop-rulesControlStart)/1000 + " seconds");
 		System.out.println("Lattice creation  : " + (partitionStop-partitionStart)/1000 + " seconds");
 		System.out.println("DFP  : " + (XFPStop-XFPStart)/1000 + " seconds");
 		System.out.println("NFP  : " + (NFPStop-NFPStart)/1000 + " seconds");
+		System.out.println("Best find  : " + (bestStop-bestStart)/1000 + " seconds");
 
+	}
+
+
+
+	private static List<Partition> findBestSolution(Lattice lattice)  {
+		List<Partition> bestNFP = null;
+		int maxNFP = 0;
+		float maxRank = 0;
+		for(Partition p : lattice.getPartitions()) {
+			int NFP = p.getInnerNFP()[0] + p.getInnerNFP()[1];
+			if (NFP > maxNFP) {
+				bestNFP = new ArrayList<>();
+				bestNFP.add(p);
+				maxNFP = NFP;
+				maxRank = p.getRank();
+			}
+			else if(NFP == maxNFP) {
+				if(p.getRank()==maxRank) {
+					bestNFP.add(p);
+				}
+				else if(p.getRank()>maxRank) {
+					bestNFP = new ArrayList<>();
+					bestNFP.add(p);
+					maxRank=p.getRank();
+				}
+			}
+		}
+		return bestNFP;
 	}
 
 
@@ -167,7 +217,7 @@ public class PartitionerXFP {
 		for(PageClass pc: pageClasses) {
 			System.out.println(pc);
 		}
-		
+
 		System.out.println("***Partizioni***");
 		for(Partition p : lattice.getPartitions()) {
 			System.out.println(p);

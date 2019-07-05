@@ -16,11 +16,14 @@ public class Partition implements Comparable<Partition> {
 	private int[] totalDFP;
 	private int[] totalOptionalDFP;
 	private int[] innerNFP;
+	private int[] innerOptionalNFP;
+	private float rank;
 	
 
-	//private int totalFP;
-
-
+	//CouldBeChanged
+	private float ranking() {
+		return (float) (this.totalDFP[0]*2 + this.totalDFP[1])/this.pageClasses.size();
+	}
 
 	public int[] getInnerNFP() {
 		return innerNFP;
@@ -40,7 +43,19 @@ public class Partition implements Comparable<Partition> {
 		this.avgXPaths = averageXPaths();
 		this.totalDFP = countTotalDFP();
 		this.totalOptionalDFP = countTotalOptionalDFP();
-		this.innerNFP = countInnerNFP();
+		int[] NFP = countInnerNFP();
+		//this.innerNFP = countInnerNFP();
+		int[] inNFP = new int[2];
+		inNFP[0] = NFP[0];
+		inNFP[1] = NFP[1];
+		this.innerNFP = inNFP;
+		int[] inOpNFP = new int[2];
+		inOpNFP[0] = NFP[2];
+		inOpNFP[1] = NFP[3];
+		this.innerOptionalNFP = inOpNFP;
+		this.rank=ranking();
+		
+		
 	}
 
 
@@ -239,14 +254,14 @@ public class Partition implements Comparable<Partition> {
 		for(PageClass Pset : this.getPageClasses()) {
 			str=str.concat(Pset.getId()+" ");
 		}
-		str=str.concat("Average XPaths: " + this.getAvgXPaths() + " \nDFP:  Constant: " + this.getTotalDFP()[1]+ " Variable: " + this.getTotalDFP()[0] 
+		str=str.concat("Average XPaths: " + this.getAvgXPaths() +" Ranking: "+ this.getRank() +" \nDFP:  Constant: " + this.getTotalDFP()[1]+ " Variable: " + this.getTotalDFP()[0] 
 				+ "(total: " + (this.getTotalDFP()[0]+this.getTotalDFP()[1])+ " )"
 						+ " OptionalDFP:  OptConstant: " + this.getTotalOptionalDFP()[1]+ " OptVariable: " + this.getTotalOptionalDFP()[0] 
 								+ "(OptTotal: " + (this.getTotalOptionalDFP()[0]+this.getTotalOptionalDFP()[1])+ " )"
 						+ " \nNFP: Constant: " + this.getInnerNFP()[1]+ " Variable: " + this.getInnerNFP()[0] 
 							+ "(total: " + (this.getInnerNFP()[0]+this.getInnerNFP()[1])+ " )")
-				+ " OptionalNFP: OptionalConstant: " + this.getInnerNFP()[3]+ " OptionalVariable: " + this.getInnerNFP()[2] 
-						+ "(OptionalTotal: " + (this.getInnerNFP()[3]+this.getInnerNFP()[2])+ " )";
+				+ "\nOptionalNFP: OptionalConstant: " + this.getInnerOptionalNFP()[1]+ " OptionalVariable: " + this.getInnerOptionalNFP()[0] 
+						+ "(OptionalTotal: " + (this.getInnerOptionalNFP()[1]+this.getInnerOptionalNFP()[0])+ " )";
 		return str;
 	}
 
@@ -322,6 +337,18 @@ public class Partition implements Comparable<Partition> {
 
 	public int[] getTotalOptionalDFP() {
 		return totalOptionalDFP;
+	}
+
+	public int[] getInnerOptionalNFP() {
+		return innerOptionalNFP;
+	}
+
+	public float getRank() {
+		return rank;
+	}
+
+	public void setRank(int rank) {
+		this.rank = rank;
 	}
 
 }
