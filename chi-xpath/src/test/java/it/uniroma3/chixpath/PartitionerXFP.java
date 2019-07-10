@@ -1,5 +1,6 @@
 package it.uniroma3.chixpath;
 
+import static it.uniroma3.fragment.step.CaseHandler.HTML_STANDARD_CASEHANDLER;
 import static it.uniroma3.fragment.test.Fixtures.createPage;
 import java.io.BufferedReader;
 import java.io.FileWriter;
@@ -24,7 +25,9 @@ import javax.xml.xpath.XPathExpressionException;
 import it.uniroma3.chixpath.model.PageClass;
 import it.uniroma3.chixpath.model.RulesRepository;
 import it.uniroma3.chixpath.model.XPath;
+import xfp.fixpoint.FixedPoint;
 import it.uniroma3.chixpath.model.Partition;
+import it.uniroma3.chixpath.fragment.ChiFragmentSpecification;
 import it.uniroma3.chixpath.model.Lattice;
 import it.uniroma3.chixpath.model.Page;
 
@@ -98,8 +101,9 @@ public class PartitionerXFP {
 				AP.add(p);
 			}
 		}
+		ChiFragmentSpecification spec = new ChiFragmentSpecification(HTML_STANDARD_CASEHANDLER,3);
 		long rulesGenerationStart = System.currentTimeMillis();
-		final RulesRepository rulesRep = new RulesRepository(pages);
+		final RulesRepository rulesRep = new RulesRepository(pages,spec);
 		long rulesGenerationStop = System.currentTimeMillis();
 
 
@@ -124,10 +128,7 @@ public class PartitionerXFP {
 		System.out.println("InizioCharacteristic");
 		//selezione dell'Xpath caratteristico per ogni classe di pagine
 		PageClass.selectCharacteristicXPath(pageClasses);
-		long XFPStart = System.currentTimeMillis();
-		System.out.println("InizioDFP");
-		PageClass.executeDFP(pageClasses,XFParguments,pages);
-		long XFPStop = System.currentTimeMillis();
+		Set<FixedPoint<String>> siteDFP = PageClass.executeSiteDFP(pageClasses, XFParguments, pages);
 
 		long NFPStart = System.currentTimeMillis();
 		System.out.println("InizioNFP");
@@ -143,7 +144,7 @@ public class PartitionerXFP {
 
 		PrintResults(lattice,pageClasses);
 
-
+		
 		String siteName = pageUrls.getFirst().split("/")[3];
 		String samplesName = pageUrls.getFirst().split("/")[4];
 		generateGraph(siteName,samplesName,pages,lattice);
@@ -151,8 +152,8 @@ public class PartitionerXFP {
 		long endTime = System.currentTimeMillis();
 
 		long bestStart = System.currentTimeMillis();
-		System.out.println("Calcolo soluzione ottima");
-		List<Partition> best = findBestSolution(lattice);
+		System.out.println("Calcolo soluzione ottima e DFP");
+		List<Partition> best = findBestSolution(lattice,XFParguments,pages,siteDFP);
 		long bestStop = System.currentTimeMillis();
 
 		System.out.println("************SOLUTION************\n");
@@ -172,16 +173,15 @@ public class PartitionerXFP {
 		System.out.println("Rules Generation : " + (rulesGenerationStop-rulesGenerationStart)/1000 + " seconds");
 		System.out.println("Rules Control  : " + (rulesControlStop-rulesControlStart)/1000 + " seconds");
 		System.out.println("Lattice creation  : " + (partitionStop-partitionStart)/1000 + " seconds");
-		System.out.println("DFP  : " + (XFPStop-XFPStart)/1000 + " seconds");
 		System.out.println("NFP  : " + (NFPStop-NFPStart)/1000 + " seconds");
-		System.out.println("Best find  : " + (bestStop-bestStart)/1000 + " seconds");
+		System.out.println("Best find and DFP : " + (bestStop-bestStart)/1000 + " seconds");
 
 	}
 
 
 
-	private static List<Partition> findBestSolution(Lattice lattice)  {
-		List<Partition> bestNFP = null;
+	private static List<Partition> findBestSolution(Lattice lattice, String[] XFParguments, Set<Page> pages, Set<FixedPoint<String>> siteDFP)  {
+		List<Partition> bestNFP = new ArrayList<>();
 		int maxNFP = 0;
 		float maxRank = 0;
 		for(Partition p : lattice.getPartitions()) {
@@ -193,17 +193,25 @@ public class PartitionerXFP {
 				maxRank = p.getRank();
 			}
 			else if(NFP == maxNFP) {
-				if(p.getRank()==maxRank) {
 					bestNFP.add(p);
-				}
-				else if(p.getRank()>maxRank) {
-					bestNFP = new ArrayList<>();
-					bestNFP.add(p);
-					maxRank=p.getRank();
-				}
 			}
 		}
-		return bestNFP;
+		Set<PageClass> classes = new HashSet<>();
+		for(Partition p : bestNFP) {
+			classes.addAll(p.getPageClasses());
+		}
+		PageClass.executeDFP(classes,XFParguments,pages,siteDFP);
+		List<Partition> solution = new ArrayList<>();
+		for(Partition p: bestNFP) {
+			if (p.getRank() > maxRank) {
+				solution = new ArrayList<>();
+				solution.add(p);
+				maxRank = p.getRank();
+			}else if(p.getRank() == maxRank) {
+				solution.add(p);
+			}
+		}
+		return solution;
 	}
 
 

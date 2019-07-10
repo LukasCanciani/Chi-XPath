@@ -25,13 +25,12 @@ public class RulesRepository {
 		
 	}
 	
-	private Set<Page> pages;
-	
-	private Set<XPath> xpaths;
-	
-	
-	
-	public void rulesGeneration() {
+	public RulesRepository(Set<Page> pages, ChiFragmentSpecification spec) {
+		this.pages = pages;
+		rulesGeneration(spec);
+	}
+
+	private void rulesGeneration(ChiFragmentSpecification spec) {
 		Map<Page,Set<String>> p2x = new HashMap<Page,Set<String>>();
 		//final RuleInference engine = new RuleInference(new ChiFragmentSpecification());
 		final RuleInference engine = new RuleInference(new ChiFragmentSpecification(HTML_STANDARD_CASEHANDLER));
@@ -61,6 +60,16 @@ public class RulesRepository {
 		}
 		this.xpaths = xpaths;
 		
+	}
+
+	private Set<Page> pages;
+	
+	private Set<XPath> xpaths;
+	
+	
+	
+	public void rulesGeneration() {
+		rulesGeneration(new ChiFragmentSpecification(HTML_STANDARD_CASEHANDLER));
 	}
 	
 	

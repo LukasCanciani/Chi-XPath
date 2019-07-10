@@ -22,6 +22,8 @@ public class Partition implements Comparable<Partition> {
 
 	//CouldBeChanged
 	private float ranking() {
+		this.totalDFP = countTotalDFP();
+		this.totalOptionalDFP = countTotalOptionalDFP();
 		return (float) (this.totalDFP[0]*2 + this.totalDFP[1])/this.pageClasses.size();
 	}
 
@@ -41,8 +43,7 @@ public class Partition implements Comparable<Partition> {
 		this.pageClasses = pc;
 		this.id = (Integer.toString(progId++));
 		this.avgXPaths = averageXPaths();
-		this.totalDFP = countTotalDFP();
-		this.totalOptionalDFP = countTotalOptionalDFP();
+		
 		int[] NFP = countInnerNFP();
 		//this.innerNFP = countInnerNFP();
 		int[] inNFP = new int[2];
@@ -53,7 +54,7 @@ public class Partition implements Comparable<Partition> {
 		inOpNFP[0] = NFP[2];
 		inOpNFP[1] = NFP[3];
 		this.innerOptionalNFP = inOpNFP;
-		this.rank=ranking();
+		this.rank=0;
 		
 		
 	}
@@ -254,14 +255,17 @@ public class Partition implements Comparable<Partition> {
 		for(PageClass Pset : this.getPageClasses()) {
 			str=str.concat(Pset.getId()+" ");
 		}
-		str=str.concat("Average XPaths: " + this.getAvgXPaths() +" Ranking: "+ this.getRank() +" \nDFP:  Constant: " + this.getTotalDFP()[1]+ " Variable: " + this.getTotalDFP()[0] 
-				+ "(total: " + (this.getTotalDFP()[0]+this.getTotalDFP()[1])+ " )"
-						+ " OptionalDFP:  OptConstant: " + this.getTotalOptionalDFP()[1]+ " OptVariable: " + this.getTotalOptionalDFP()[0] 
-								+ "(OptTotal: " + (this.getTotalOptionalDFP()[0]+this.getTotalOptionalDFP()[1])+ " )"
+		str=str.concat("Average XPaths: " + this.getAvgXPaths() 
 						+ " \nNFP: Constant: " + this.getInnerNFP()[1]+ " Variable: " + this.getInnerNFP()[0] 
 							+ "(total: " + (this.getInnerNFP()[0]+this.getInnerNFP()[1])+ " )")
 				+ "\nOptionalNFP: OptionalConstant: " + this.getInnerOptionalNFP()[1]+ " OptionalVariable: " + this.getInnerOptionalNFP()[0] 
 						+ "(OptionalTotal: " + (this.getInnerOptionalNFP()[1]+this.getInnerOptionalNFP()[0])+ " )";
+		if(this.getRank() != 0 ) {
+			str=str.concat(" Ranking: "+ this.getRank() +" \nDFP:  Constant: " + this.getTotalDFP()[1]+ " Variable: " + this.getTotalDFP()[0] 
+					+ "(total: " + (this.getTotalDFP()[0]+this.getTotalDFP()[1])+ " )"
+							+ " OptionalDFP:  OptConstant: " + this.getTotalOptionalDFP()[1]+ " OptVariable: " + this.getTotalOptionalDFP()[0] 
+									+ "(OptTotal: " + (this.getTotalOptionalDFP()[0]+this.getTotalOptionalDFP()[1])+ " )");
+		}
 		return str;
 	}
 
@@ -344,7 +348,10 @@ public class Partition implements Comparable<Partition> {
 	}
 
 	public float getRank() {
-		return rank;
+		if(this.rank==0) 
+			this.rank = ranking();
+			
+		return this.rank;
 	}
 
 	public void setRank(int rank) {

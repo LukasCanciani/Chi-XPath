@@ -117,8 +117,8 @@ public class PageClass implements Comparable<PageClass> {
 		for(Page page : this.getPages()) {
 			out=out.concat("ID:"+page.getId()+" ");
 		}	
-		out=out.concat("\nXPaths: "+this.getUniqueXPaths().size()+"\nDFP: Constant:"+this.getConstantFP() + " Variable: "+this.getVariableFP());
-		out=out.concat("\nOptionalDFP: Constant:"+this.getConstantOptional() + " Variable: "+this.getVariableOptional());
+		out=out.concat("\nXPaths: "+this.getUniqueXPaths().size());//+"\nDFP: Constant:"+this.getConstantFP() + " Variable: "+this.getVariableFP());
+		//out=out.concat("\nOptionalDFP: Constant:"+this.getConstantOptional() + " Variable: "+this.getVariableOptional());
 		out=out.concat("\nNFP: ");
 		if(this.getNFP().keySet().isEmpty()) {
 			out = out.concat(" N/A");
@@ -286,8 +286,8 @@ public class PageClass implements Comparable<PageClass> {
 		this.variableOptional = variable;
 	}
 
-	public static void executeDFP(Set<PageClass> pageClasses, String[] XFParguments, Set<Page> pages) {
-		Set<FixedPoint<String>> siteDFP = PageClass.executeSiteDFP(pageClasses, XFParguments, pages);
+	public static void executeDFP(Set<PageClass> pageClasses, String[] XFParguments, Set<Page> pages, Set<FixedPoint<String>> siteDFP) {
+		
 		Map<FixedPoint<String>, PageClass> FP2PC = new HashMap<>();
 		for(PageClass pc : pageClasses) {
 			Map<String,String> id2name = new HashMap<>();
