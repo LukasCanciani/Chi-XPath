@@ -33,3 +33,18 @@ in base a cosa valid / invalid?
 ---------------------------------------
 !!Risolvere Java Out Of Memory, isolare il metodo che sovraccarica la ram!!!
 ----------------------------------
+
+
+
+
+
+
+
+
+------------11 / 07
+
+Non è necessario quando uso un metodo di XFP caricare tutte le pagine, ma per ora viene fatto!!! spreco di risorse, vedere se riesco a risolverlo
+
+Cambiando il range la soluzione varia di sensibilità!! ottima cosa!!!
+
+Perche anche se le regole sono generate dallo stesso identico metodo devo generarle nuovamente altrimenti non trova DFP????

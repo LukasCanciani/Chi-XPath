@@ -256,6 +256,62 @@ public class XFPAlgorithm {
 		log.endPage();
 		return fp;
 	}
+	
+	public Set<FixedPoint<String>> xfpData(Set<Webpage> sample, Set<String> xpaths, int range) throws Exception {
+		Set<FixedPoint<String>> fp = new HashSet<>();
+		//Set<String> rules = new HashSet<>();
+		if (!this.alreadyProcessed.add(sample)) {
+			log.trace("This sample has been already processed by XFP "+sample);
+			return fp;
+		}
+		log.trace();
+		log.trace("Input samples: " +sample);
+		log.newPage("Applying DFP on this link collection");
+
+		//final Set<FixedPoint<String>> data = dfp().computeFixedPoints(pages);
+		final PageClass<String> data = dfp().computeFixedPointsData(sample,xpaths,range);
+
+		fp.addAll(data.getVariant());
+		fp.addAll(data.getConstant());
+
+		/*for(FixedPoint<String> constant : data.getConstant()) {
+			rules.addAll(constant.getRules()); //Il problema è che cosi mi mette troppe xpath!!!! Anche se quasi non ho PF
+		}
+		for(FixedPoint<String> variant : data.getVariant()){
+			rules.addAll(variant.getRules());
+		}*/
+		storeDataFixedPoints(data);
+		evaluateDataFixedPoints(data);
+		log.endPage();
+		return fp;
+	}
+	
+	public Set<String> xfpRules(Set<Webpage> sample, int range) {
+		Set<String> rules = new HashSet<>();
+		//Set<String> rules = new HashSet<>();
+		if (!this.alreadyProcessed.add(sample)) {
+			log.trace("This sample has been already processed by XFP "+sample);
+			return rules;
+		}
+		log.trace();
+		log.trace("Input samples: " +sample);
+		log.newPage("Generating rules on this link collection");
+
+		//final Set<FixedPoint<String>> data = dfp().computeFixedPoints(pages);
+		
+		rules = dfp().inferRules(sample , range);
+
+
+		/*for(FixedPoint<String> constant : data.getConstant()) {
+			rules.addAll(constant.getRules()); //Il problema è che cosi mi mette troppe xpath!!!! Anche se quasi non ho PF
+		}
+		for(FixedPoint<String> variant : data.getVariant()){
+			rules.addAll(variant.getRules());
+		}*/
+		log.endPage();
+		return rules;
+	}
+
 
 	private void storeNavFixedPoints(final PageClass<URI> navFixedPoint) throws Exception  {
 		if (STORE_LINK_FP_ENABLED) OutputHandlerFactory.getNFPOutputHandler().storePageclass(navFixedPoint);
@@ -300,6 +356,9 @@ public class XFPAlgorithm {
 		return accumulator;
 	}
 
+	
+
+	
 
 
 

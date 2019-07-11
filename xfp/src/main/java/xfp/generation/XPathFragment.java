@@ -36,6 +36,7 @@ public abstract class XPathFragment implements XPathFragmentFactory {
     static final private String __TO_NODE_2_STEPS_USER_DATA_KEY = "__TO_NODE_2_STEPS_MAP_";
 
     private Set<XPathStepFactory> factories;
+    private int range;
 
     /* these caches save the XPath steps generated from/to a given document node */
     private Map<Node,Set<XPathStep>> fromNode2steps;
@@ -52,12 +53,18 @@ public abstract class XPathFragment implements XPathFragmentFactory {
         this.factories = factories;
         this.fromNode2steps = null;
         this.toNode2steps   = null;
+        this.range = MAX_PIVOT_DISTANCE;
         this.cache = new XPathFragmentCache<>(this);
     }
 
     public int getRange() {
-        return MAX_PIVOT_DISTANCE;
+        return this.range;
     }
+    
+    public void setRange(int range) {
+		this.range = range;
+		
+	}
 
     public Set<XPathStepFactory> getStepFactories() {
         return Collections.unmodifiableSet(this.factories);
@@ -217,5 +224,7 @@ public abstract class XPathFragment implements XPathFragmentFactory {
     public String toString() {
         return this.getClass().getSimpleName()+" "+this.getStepFactories()+"[range="+this.getRange()+"]";
     }
+
+	
 
 }

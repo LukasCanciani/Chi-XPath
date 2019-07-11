@@ -110,9 +110,23 @@ public class FPAlgorithm<T> {
         return rulesGroupedByVector.keySet();
     }
 
-	private Set<String> inferRules(Set<Webpage> samples) {
+	public Set<String> inferRules(Set<Webpage> samples) {
 		log.newPage("Fixed point rules generation.");
 		log.trace(this.fragment);
+
+		final RuleInference ruleInference = new RuleInference(this.fragment);
+		final Set<String> rules = ruleInference.inferRules(samples);
+
+		log.trace("Generated rules: ");
+		log.trace(rules);
+		log.endPage();
+		return rules;
+	}
+	
+	public Set<String> inferRules(Set<Webpage> samples, int range) {
+		log.newPage("Fixed point rules generation.");
+		log.trace(this.fragment);
+		this.fragment.setRange(range);
 
 		final RuleInference ruleInference = new RuleInference(this.fragment);
 		final Set<String> rules = ruleInference.inferRules(samples);
@@ -190,6 +204,52 @@ public class FPAlgorithm<T> {
 			    this.cache.put(sample, emptyPageClass(sample));
 	            return emptyPageClass(sample);
 			}
+	}
+
+	public PageClass<T> computeFixedPointsData(Set<Webpage> sample, Set<String> xpaths, int range) {
+		if (this.cache.containsKey(sample)) {
+	        log.trace("Result cached:");
+	        final PageClass<T> result = this.cache.get(sample);
+	        log.trace(result.getVariant());
+	        log.trace(result.getConstant());
+	        return result;
+	    }
+	    
+		log.trace("There are "+sample.size()+" available sample(s)");
+		log.trace(sample);
+		log.trace("<BR/>");
+		
+		final Set<String> rules = inferRules(sample,range);
+								//uniqueXPaths;	
+								//inferRules(sample);
+		
+		if (!rules.isEmpty()) {
+		    log.trace("Extraction rules generated ("+rules.size()+"): ");
+		    log.trace(rules);
+
+            final ParallelExtractor<T> extractor = new ParallelExtractor<>(this.ruleFactory);
+		    
+		    final List<ExtractedVector<T>> extracted = extractor.extract(sample, rules);
+		    
+		    final Set<ExtractedVector<T>> vectors = groupRulesByVector(extracted);
+            
+            log.trace(vectors.size()+" vector(s) extracted.");
+            
+            final FPGenerator<T> fpg = new FPGenerator<T>(fragment);
+		    fpg.generate(vectors);
+            
+		    logFixedPoints(fpg);
+		    
+		    final PageClass<T> pc = new PageClass<>(sample, fpg.getVariant(), fpg.getConstant());
+		    this.cache.put(sample,pc);
+		    return pc;
+		    
+		} else {
+		    log.trace("No extraction rules generated in the fragment");
+		    log.trace(this.fragment);
+		    this.cache.put(sample, emptyPageClass(sample));
+            return emptyPageClass(sample);
+		}
 	}
 
 

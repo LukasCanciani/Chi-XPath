@@ -101,9 +101,11 @@ public class PartitionerXFP {
 				AP.add(p);
 			}
 		}
-		ChiFragmentSpecification spec = new ChiFragmentSpecification(HTML_STANDARD_CASEHANDLER,3);
+		//ChiFragmentSpecification spec = new ChiFragmentSpecification(HTML_STANDARD_CASEHANDLER,3);
+		int range = 6;
 		long rulesGenerationStart = System.currentTimeMillis();
-		final RulesRepository rulesRep = new RulesRepository(pages,spec);
+		//final RulesRepository rulesRep = new RulesRepository(pages,spec);
+		final RulesRepository rulesRep = new RulesRepository(pages, XFParguments,range);
 		long rulesGenerationStop = System.currentTimeMillis();
 
 
@@ -153,12 +155,14 @@ public class PartitionerXFP {
 
 		long bestStart = System.currentTimeMillis();
 		System.out.println("Calcolo soluzione ottima e DFP");
-		List<Partition> best = findBestSolution(lattice,XFParguments,pages,siteDFP);
+		List<Partition> best = findBestSolution(lattice,XFParguments,pages,siteDFP,range);
 		long bestStop = System.currentTimeMillis();
 
 		System.out.println("************SOLUTION************\n");
 		if (best.size()==1) {
 			System.out.println("SOLUZIONE UNIVOCA");
+		}else if(best.size() == 0) {
+			System.out.println("SOLUZIONE NON TROVATA");
 		}
 		else {
 			System.out.println("SOLUZIONE NON UNIVOCA");
@@ -180,7 +184,7 @@ public class PartitionerXFP {
 
 
 
-	private static List<Partition> findBestSolution(Lattice lattice, String[] XFParguments, Set<Page> pages, Set<FixedPoint<String>> siteDFP)  {
+	private static List<Partition> findBestSolution(Lattice lattice, String[] XFParguments, Set<Page> pages, Set<FixedPoint<String>> siteDFP, int range)  {
 		List<Partition> bestNFP = new ArrayList<>();
 		int maxNFP = 0;
 		float maxRank = 0;
@@ -200,7 +204,7 @@ public class PartitionerXFP {
 		for(Partition p : bestNFP) {
 			classes.addAll(p.getPageClasses());
 		}
-		PageClass.executeDFP(classes,XFParguments,pages,siteDFP);
+		PageClass.executeDFP(classes,XFParguments,pages,siteDFP,range);
 		List<Partition> solution = new ArrayList<>();
 		for(Partition p: bestNFP) {
 			if (p.getRank() > maxRank) {

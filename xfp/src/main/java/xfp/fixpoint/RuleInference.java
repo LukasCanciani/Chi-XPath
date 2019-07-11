@@ -64,7 +64,7 @@ public class RuleInference {
     }
     
     public void setInferenceSample(Set<Webpage> sample) {
-        /* create a fragment+sample specific cache */
+        // create a fragment+sample specific cache 
         this.cache = new XPathFragmentCache<>(this.fragment,sample);                
     }
     
@@ -141,7 +141,7 @@ public class RuleInference {
     }
 
     public long countNewRules(final Set<String> knownRules, final Set<String> newRules) {
-        /* log generated rules details found vs ( new and old ) */
+        // log generated rules details found vs ( new and old ) 
         final long num_rules = newRules.size();
         log.trace(() -> "generated "+num_rules+" rule(s) from this node");
         // count rules already known
@@ -187,7 +187,7 @@ public class RuleInference {
             log.trace("Set of rules generated:");
             log.trace(()->rules);
         }
-        /* cache result */
+        // cache result 
         this.cache.set(target, GENERATED_RULES_USER_DATA_KEY, Collections.unmodifiableSet(rules));
         return rules;
     }

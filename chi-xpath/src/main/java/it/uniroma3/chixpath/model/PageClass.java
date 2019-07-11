@@ -286,7 +286,7 @@ public class PageClass implements Comparable<PageClass> {
 		this.variableOptional = variable;
 	}
 
-	public static void executeDFP(Set<PageClass> pageClasses, String[] XFParguments, Set<Page> pages, Set<FixedPoint<String>> siteDFP) {
+	public static void executeDFP(Set<PageClass> pageClasses, String[] XFParguments, Set<Page> pages, Set<FixedPoint<String>> siteDFP, int range) {
 		
 		Map<FixedPoint<String>, PageClass> FP2PC = new HashMap<>();
 		for(PageClass pc : pageClasses) {
@@ -306,7 +306,7 @@ public class PageClass implements Comparable<PageClass> {
 			}
 			Set<FixedPoint<String>> FixedPoints = null;
 			try {
-				FixedPoints = xfp.Main.DataMain(XFParguments,id2name);
+				FixedPoints = xfp.Main.DataMain(XFParguments,id2name,pc.getUniqueXPathsAsString(),range);
 			} catch (Exception e) {
 				System.out.println("DFP failure");
 			}
@@ -321,7 +321,7 @@ public class PageClass implements Comparable<PageClass> {
 	}
 
 	public static Set<FixedPoint<String>> executeSiteDFP(Set<PageClass> pageClasses, String[] XFParguments, Set<Page> pages){
-		Set<FixedPoint<String>> FixedPoints = null;
+		Set<FixedPoint<String>> FixedPoints = new HashSet<>();
 		for (PageClass pc : pageClasses) {
 			if (pc.getPages().size()==pages.size()) {
 				Map<String,String> id2name = new HashMap<>();

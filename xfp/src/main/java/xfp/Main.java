@@ -104,9 +104,41 @@ public class Main {
 
 		return FixedPoints;
 	}
+	public static Set<FixedPoint<String>> DataMain(String[] arguments, Map<String, String> id2name,
+			Set<String> xpaths, int range) throws Exception {
+		final Main main = new Main();
+		Set<FixedPoint<String>> FixedPoints;
+		final ExperimentRunner runner = new ExperimentRunner();
+		main.parseArgs(arguments);
+		FixedPoints = main.runData(runner,id2name,xpaths,range);
+
+		return FixedPoints;
+	}
+
+	private Set<FixedPoint<String>> runData(ExperimentRunner runner, Map<String, String> id2name, Set<String> xpaths, int range) {
+		return runner.runData(this.datasetName, this.domainName, this.websites, id2name,xpaths,range);
+	}
 
 	private Set<FixedPoint<String>> runData(ExperimentRunner runner, Map<String, String> id2name) {
 		return runner.runData(this.datasetName, this.domainName, this.websites, id2name);
 	}
 
+
+	public static Set<String> inferRules(String[] arguments, Map<String, String> id2name, int range) throws Exception {
+		final Main main = new Main();
+		Set<String> FixedPoints;
+		final ExperimentRunner runner = new ExperimentRunner();
+		main.parseArgs(arguments);
+		FixedPoints = main.runRules(runner,id2name,range);
+
+		return FixedPoints;
+	}
+
+	private Set<String> runRules(ExperimentRunner runner, Map<String, String> id2name, int range) {
+		return runner.runRules(this.datasetName, this.domainName, this.websites, id2name,range);
+	}
+
+	
+
+	
 }

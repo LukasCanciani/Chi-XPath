@@ -54,7 +54,7 @@ public interface XPathFragmentFactory {
 
         @Override
         public boolean isSuitableTarget(Node node) {
-            return DocumentUtil.isTextOfLength(node, 1, MAX_VALUE_LENGTH) && isPCDATAwithVariantContent(node);
+            return DocumentUtil.isTextOfLength(node, 1, MAX_VALUE_LENGTH);// && isPCDATAwithVariantContent(node);
         }
 
         @Override
