@@ -1,11 +1,11 @@
 package xfp.template;
 
-import static it.uniroma3.hlog.HypertextualLogger.getLogger;
+//import static it.uniroma3.hlog.HypertextualLogger.getLogger;
 import it.uniroma3.ecgm.ECGM;
 import it.uniroma3.ecgm.LFEQ;
 import it.uniroma3.ecgm.lfeqrepository.LFEQRepository;
-import it.uniroma3.hlog.HypertextualLogger;
-import it.uniroma3.preferences.Constant;
+//import it.uniroma3.hlog.HypertextualLogger;
+//import it.uniroma3.preferences.Constant;
 import it.uniroma3.token.Sample;
 import it.uniroma3.token.Samples;
 import it.uniroma3.token.dom.DOMToken;
@@ -13,7 +13,7 @@ import it.uniroma3.token.dom.node.DOMNode;
 import it.uniroma3.token.dom.node.DOMNodeFactory;
 import xfp.model.Webpage;
 import xfp.util.XFPConfig;
-import it.uniroma3.ecgm.Constants;
+//import it.uniroma3.ecgm.Constants;
 import static it.uniroma3.ecgm.Constants.defaultConfiguration;
 
 import java.util.*;
@@ -23,7 +23,7 @@ import org.apache.commons.configuration.Configuration;
 
 public class ECGMFacade  {
 
-	static final private HypertextualLogger log = getLogger();
+//	static final private HypertextualLogger log = getLogger();
 
 	final private Configuration prefs;
 
@@ -73,8 +73,8 @@ public class ECGMFacade  {
 	}
 
 	private LFEQRepository createBinaryLFEQRepository() {
-		logPrefs(this.prefs);
-		log.newPage("ECGM analysis");
+//		logPrefs(this.prefs);
+//		log.newPage("ECGM analysis");
 
 		final LFEQRepository repository = new LFEQRepository(Collections.<LFEQ>emptySet());
 
@@ -88,11 +88,11 @@ public class ECGMFacade  {
 			if (lfeq.isBinary()) {
 				repository.addLFEQ(lfeq);
 			} else {
-				log.trace("Discarding non-binary LFEQ:",lfeq);
+//				log.trace("Discarding non-binary LFEQ:",lfeq);
 			}
 		}
 
-		log.endPage();
+//		log.endPage();
 		return repository;
 	}
 
@@ -123,20 +123,20 @@ public class ECGMFacade  {
 		return flat;
 	}
 
-	private void logPrefs(Configuration config) {
-		log.newPage("ECGM configuration");
+/*	private void logPrefs(Configuration config) {
+//		log.newPage("ECGM configuration");
 		logPrefs("ECGM Analysis preferences", config, Constants.values());
 		logPrefs("Tokenization preferences", config, it.uniroma3.token.Constants.values());
-		log.endPage();
-	}
+//		log.endPage();
+	}*/
 
-	private void logPrefs(String msg, Configuration config, Constant[] keys) {
-		log.trace("<br/><i>"+msg+"</i>:");
+/*	private void logPrefs(String msg, Configuration config, Constant[] keys) {
+//		log.trace("<br/><i>"+msg+"</i>:");
 		for(Constant constant : keys) {
 			final String   key   = constant.key();
 			final String[] values = config.getStringArray(key);
-			log.trace(key+"="+Arrays.toString(values));		
+//			log.trace(key+"="+Arrays.toString(values));		
 		}
-	}
+	}*/
 
 }

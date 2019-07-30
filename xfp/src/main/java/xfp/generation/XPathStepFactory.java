@@ -18,13 +18,13 @@ import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import it.uniroma3.hlog.HypertextualLogger;
+//import it.uniroma3.hlog.HypertextualLogger;
 import it.uniroma3.util.MarkUpUtils;
 import xfp.XFPException;
 
 public abstract class XPathStepFactory {
 
-    static final private HypertextualLogger log = HypertextualLogger.getLogger();
+   // static final private HypertextualLogger log = HypertextualLogger.getLogger();
 
     static final private XPathFactory XPATHFACTORY = XPathFactory.newInstance();
 
@@ -97,7 +97,7 @@ public abstract class XPathStepFactory {
         Objects.requireNonNull(from, "Cannot generate steps from a null node");
 
         if (!isTextOrElement(from)) {
-            log.warn("Cannot generate steps from nodes which are neither texts or elements: "+from);
+//            log.warn("Cannot generate steps from nodes which are neither texts or elements: "+from);
             return emptyList();
         }
 
@@ -130,21 +130,22 @@ public abstract class XPathStepFactory {
         this.makeStepExpressions(from).forEach( exp -> {
             final NodeList evaluation = eval(from, exp);
             if (evaluation==null) {
-                log.trace(exp, from, "<EM>XPath evaluation without results</EM>");
+//                log.trace(exp, from, "<EM>XPath evaluation without results</EM>");
             } else {
                 for(int index=0; index<evaluation.getLength(); index++) {
                     final Node to = evaluation.item(index);
                     final XPathStep step = new XPathStep(exp, from, to);
                     step.setGeneratedBy(this);
                     result.add(step);                    
-                    log.trace(step, from, to, xpath(from), xpath(to));
+ //                   log.trace(step, from, to, xpath(from), xpath(to));
                 }
             }
         });
         return result;
     }
 
-    private String xpath(Node n) {
+    @SuppressWarnings("unused")
+	private String xpath(Node n) {
         return "TODO"; //TODO if we want to log precise info about the occurrence
     }
 
@@ -180,8 +181,8 @@ public abstract class XPathStepFactory {
         try {
             final XPathExpression xpath = compileXPath(xpathExp);
             result = (NodeList) xpath.evaluate(context, NODESET);
-            if (result==null)
-                log.warn("Erroneous XPath step expression \'"+xpathExp+"\' is not locating any node");
+//            if (result==null)
+  //              log.warn("Erroneous XPath step expression \'"+xpathExp+"\' is not locating any node");
         }
         catch (RuntimeException re) {
             System.err.println("XPath:   "+xpathExp);
@@ -189,7 +190,7 @@ public abstract class XPathStepFactory {
             throw new IllegalStateException(re);
         } catch (XPathExpressionException e) {
             System.err.println("XPath:   "+xpathExp);
-            log.warn("Malformed XPath expression "+xpathExp);
+ //           log.warn("Malformed XPath expression "+xpathExp);
             throw new RuntimeException(e);
         }
         return result;

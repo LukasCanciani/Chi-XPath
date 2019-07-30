@@ -9,7 +9,7 @@
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="it.uniroma3.chixpath.PartitionerXFP"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="file:./dataset/test/msc/1ap3ship/0.html&#13;&#10;file:./dataset/test/msc/1ap3ship/1.html&#13;&#10;file:./dataset/test/msc/1ap3ship/2.html&#13;&#10;file:./dataset/test/msc/1ap3ship/3.html"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="file:./dataset/test/msc/1ap3ship/0.html&#13;&#10;file:./dataset/test/msc/1ap3ship/1.html&#13;&#10;file:./dataset/test/msc/1ap3ship/2.html&#13;&#10;file:./dataset/test/msc/1ap3ship/3.html&#13;&#10;file:./dataset/test/msc/1ap3ship/4.html&#13;&#10;file:./dataset/test/msc/1ap3ship/5.html&#13;&#10;file:./dataset/test/msc/1ap3ship/6.html&#13;&#10;file:./dataset/test/msc/1ap3ship/7.html&#13;&#10;file:./dataset/test/msc/1ap3ship/8.html&#13;&#10;file:./dataset/test/msc/1ap3ship/9.html&#13;&#10;file:./dataset/test/msc/1ap3ship/10.html&#13;&#10;file:./dataset/test/msc/1ap3ship/11.html&#13;&#10;file:./dataset/test/msc/1ap3ship/12.html&#13;&#10;file:./dataset/test/msc/1ap3ship/13.html&#13;&#10;file:./dataset/test/msc/1ap3ship/14.html&#13;&#10;file:./dataset/test/msc/1ap3ship/15.html"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="chi-xpath"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
 </launchConfiguration>

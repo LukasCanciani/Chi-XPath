@@ -1,7 +1,6 @@
 package it.uniroma3.fragment.step;
 
 
-import static it.uniroma3.fragment.test.DOMUtils.*;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
@@ -15,6 +14,7 @@ import it.uniroma3.fragment.step.LeftElement;
 import it.uniroma3.fragment.step.RightElement;
 import it.uniroma3.fragment.step.Up;
 
+import static it.uniroma3.fragment.test.DOMUtils.*;
 import static it.uniroma3.fragment.test.XPathFragmentSpecifications.ALL_FRAGMENT;
 
 /**

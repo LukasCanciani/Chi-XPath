@@ -48,13 +48,13 @@ public interface XPathFragmentFactory {
         public boolean isSuitablePivot(Node node) {
             // N.B. an element with an id attribute always plays as a pivot
             return  ( (isElement(node) && 
-            		(isNodeWithIdAttribute(node) || TemplateUtil.isTemplateNode(node))// || isNodeWithClassAttribute(node))
-                    || TemplateUtil.isTemplateNode(node) && DocumentUtil.isTextOfLength(node,  MIN_PIVOT_LENGTH, MAX_PIVOT_LENGTH)) ) ;
+            		(isNodeWithIdAttribute(node)/* || TemplateUtil.isTemplateNode(node)*/)// || isNodeWithClassAttribute(node))
+                    || /*TemplateUtil.isTemplateNode(node) &&*/ DocumentUtil.isTextOfLength(node,  MIN_PIVOT_LENGTH, MAX_PIVOT_LENGTH)) ) ;
         }
 
         @Override
         public boolean isSuitableTarget(Node node) {
-            return DocumentUtil.isTextOfLength(node, 1, MAX_VALUE_LENGTH);// && isPCDATAwithVariantContent(node);
+            return DocumentUtil.isTextOfLength(node, 1, MAX_VALUE_LENGTH); //&& isPCDATAwithVariantContent(node);
         }
 
         @Override

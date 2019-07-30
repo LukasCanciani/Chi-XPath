@@ -1,8 +1,8 @@
 package it.uniroma3.chixpath;
 
 import static it.uniroma3.chixpath.ChiFinder.*;
-import static it.uniroma3.fragment.test.Fixtures.*;
 import static it.uniroma3.fragment.step.CaseHandler.*;
+import static it.uniroma3.fragment.test.Fixtures.*;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 

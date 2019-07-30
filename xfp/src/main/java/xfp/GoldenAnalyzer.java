@@ -1,6 +1,6 @@
 package xfp;
 
-import static it.uniroma3.hlog.HypertextualLogger.getLogger;
+//import static it.uniroma3.hlog.HypertextualLogger.getLogger;
 //import static xfp.template.TemplateUtil.*;
 
 import java.io.File;
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 import org.w3c.dom.Node;
 
-import it.uniroma3.hlog.HypertextualLogger;
+//import it.uniroma3.hlog.HypertextualLogger;
 import xfp.algorithm.FPAlgorithm;
 import xfp.fixpoint.FixedPoint;
 import xfp.fixpoint.PageClass;
@@ -34,7 +34,7 @@ import xfp.util.XFPConfig;
 
 public class GoldenAnalyzer extends Main {
 	
-    static final private HypertextualLogger log = getLogger();
+ //   static final private HypertextualLogger log = getLogger();
 
     public void analyze(Website site) {
         final Optional<Webpage> withoutPageclass = site.getWebpages().stream()
@@ -51,11 +51,12 @@ public class GoldenAnalyzer extends Main {
             /* use custom XPath fragment for this analysis */
             final FPAlgorithm<String> fpa = new FPAlgorithm<String>(new GoldenAnalyzerXPathFragment());
             final PageClass<String> pageclass = fpa.computeFixedPoints(sample);
-            Set<FixedPoint<String>> data;
+            @SuppressWarnings("unused")
+			Set<FixedPoint<String>> data;
             data = pageclass.getVariant();
-            log.page(data.size()+ " variant data fixed points found.", data);
+     //       log.page(data.size()+ " variant data fixed points found.", data);
             data = pageclass.getConstant();
-            log.page(data.size()+ " costant data fixed points found.",data);
+    //        log.page(data.size()+ " costant data fixed points found.",data);
 			storeDataFixedPoints(pageclass);
         });
     }
@@ -77,26 +78,26 @@ public class GoldenAnalyzer extends Main {
     }
     
     private void logGoldenPageClasses(Map<String, List<Webpage>> class2pages) {
-        log.newPage("Golden page classes");
-        log.trace("Golden page classes:");
+    //    log.newPage("Golden page classes");
+    //    log.trace("Golden page classes:");
         class2pages.keySet().forEach( pc -> {
-            log.trace("<B>"+pc+"</B>");
+ /*           log.trace("<B>"+pc+"</B>");
             log.trace(class2pages.get(pc));                
-            log.trace("<HR/>");
+            log.trace("<HR/>");	*/
         });
-        log.endPage();
+    //    log.endPage();
     }
 
     static private class AnalyzerRunner extends ExperimentRunner {
         @Override
         public void executeExperimentOn(File websitedir, Website site) {
-            log.newPage("Running GoldenAnalyzer on website: "+site);
+     //       log.newPage("Running GoldenAnalyzer on website: "+site);
             final GoldenAnalyzer analyzer = new GoldenAnalyzer();
             upfrontXPathFragmentGeneration(site);
             analyzer.analyze(site);
             
-            log.trace("\n"); // flush hyper-logs
-            log.endPage();
+   /*         log.trace("\n"); // flush hyper-logs
+            log.endPage();	*/
         }
 
     }

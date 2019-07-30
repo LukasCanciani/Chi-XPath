@@ -1,7 +1,8 @@
 package it.uniroma3.chixpath;
 
-import static it.uniroma3.fragment.step.CaseHandler.HTML_STANDARD_CASEHANDLER;
+
 import static it.uniroma3.fragment.test.Fixtures.createPage;
+
 import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -13,6 +14,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -27,7 +29,6 @@ import it.uniroma3.chixpath.model.RulesRepository;
 import it.uniroma3.chixpath.model.XPath;
 import xfp.fixpoint.FixedPoint;
 import it.uniroma3.chixpath.model.Partition;
-import it.uniroma3.chixpath.fragment.ChiFragmentSpecification;
 import it.uniroma3.chixpath.model.Lattice;
 import it.uniroma3.chixpath.model.Page;
 
@@ -43,7 +44,12 @@ public class PartitionerXFP {
 	}
 
 	static final protected it.uniroma3.hlog.HypertextualLogger log = it.uniroma3.hlog.HypertextualLogger.getLogger(); /* this *after* previous static block */
+
 	public static void main(String args[]) throws XPathExpressionException {
+		execution(args);
+	}
+
+	public static List<Partition> execution(String args[]) throws XPathExpressionException {
 		long startTime = System.currentTimeMillis();
 		System.out.println("Starting Chi-XFP\n");
 		//final int MAX_PAGES = args.length;
@@ -123,11 +129,11 @@ public class PartitionerXFP {
 			System.out.print("\n");
 		}
 		System.out.println("");*/
-		System.out.println("InizioUnique");
+		/*System.out.println("InizioUnique");
 		long rulesControlStart = System.currentTimeMillis();
-		PageClass.createUniqueXPaths(pageClasses, MAX_PAGES);
+		//PageClass.createUniqueXPaths(pageClasses, MAX_PAGES);										//Rimozione di regole che generano gli stessi vettori, per ora trascurata
 		long rulesControlStop = System.currentTimeMillis();
-		System.out.println("InizioCharacteristic");
+		System.out.println("InizioCharacteristic");*/
 		//selezione dell'Xpath caratteristico per ogni classe di pagine
 		PageClass.selectCharacteristicXPath(pageClasses);
 		Set<FixedPoint<String>> siteDFP = PageClass.executeSiteDFP(pageClasses, XFParguments, pages);
@@ -142,14 +148,17 @@ public class PartitionerXFP {
 		Lattice lattice = generatePartitions(pageClasses, MAX_PAGES);
 		long partitionStop = System.currentTimeMillis();
 
-
+		for(PageClass pc : pageClasses) {
+			if (pc.rules.isEmpty())
+				System.out.println("vuota");
+		}
 
 		PrintResults(lattice,pageClasses);
 
-		
-		String siteName = pageUrls.getFirst().split("/")[3];
+
+		/*String siteName = pageUrls.getFirst().split("/")[3];
 		String samplesName = pageUrls.getFirst().split("/")[4];
-		generateGraph(siteName,samplesName,pages,lattice);
+		generateGraph(siteName,samplesName,pages,lattice);*/
 
 		long endTime = System.currentTimeMillis();
 
@@ -175,10 +184,11 @@ public class PartitionerXFP {
 
 		System.out.println("It took " + (endTime - startTime)/1000 + " seconds");
 		System.out.println("Rules Generation : " + (rulesGenerationStop-rulesGenerationStart)/1000 + " seconds");
-		System.out.println("Rules Control  : " + (rulesControlStop-rulesControlStart)/1000 + " seconds");
+		//System.out.println("Rules Control  : " + (rulesControlStop-rulesControlStart)/1000 + " seconds");
 		System.out.println("Lattice creation  : " + (partitionStop-partitionStart)/1000 + " seconds");
 		System.out.println("NFP  : " + (NFPStop-NFPStart)/1000 + " seconds");
 		System.out.println("Best find and DFP : " + (bestStop-bestStart)/1000 + " seconds");
+		return best;
 
 	}
 
@@ -197,7 +207,7 @@ public class PartitionerXFP {
 				maxRank = p.getRank();
 			}
 			else if(NFP == maxNFP) {
-					bestNFP.add(p);
+				bestNFP.add(p);
 			}
 		}
 		Set<PageClass> classes = new HashSet<>();
@@ -250,6 +260,7 @@ public class PartitionerXFP {
 			p.executeXFP(XFParguments,AP,pages);
 		}*/
 
+	@SuppressWarnings("unused")
 	private static void generateGraph(String siteName, String samplesName, Set<Page> pages, Lattice lattice) {
 
 
@@ -383,15 +394,17 @@ public class PartitionerXFP {
 	 */
 
 
-	private static Lattice generatePartitions(Set<PageClass> pageClasses, int MAX_PAGES) {
+	/*private static Lattice generatePartitions(Set<PageClass> pageClasses, int MAX_PAGES) {
 		final Set<Partition> partitions = new HashSet<>();
 		Set<PageClass> toCheck = new HashSet<>();
 		toCheck.addAll(pageClasses);
 		for (PageClass pageClass : pageClasses) {
 			toCheck.remove(pageClass);
-			Set<PageClass> classes = new HashSet<>();
-			classes.add(pageClass);
-			partitions.addAll(allPossiblePartitions(classes,toCheck,pageClass.getPages().size(),MAX_PAGES));
+			if(pageClass.getTotalNFP() != 0) {
+				Set<PageClass> classes = new HashSet<>();
+				classes.add(pageClass);
+				partitions.addAll(allPossiblePartitions(classes,toCheck,pageClass.getPages().size(),MAX_PAGES));
+			}
 		}
 		Partition.reorderPartitions(partitions);
 		Lattice lattice = new Lattice(partitions);
@@ -418,8 +431,116 @@ public class PartitionerXFP {
 			}
 		}
 		return partitions;
+	}*/
+
+	private static Lattice generatePartitions(Set<PageClass> pageClasses, int MAX_PAGES) {
+		final Set<Partition> partitions = new HashSet<>();
+
+
+		for (PageClass pageClass : pageClasses) {
+			Set<PageClass> classes = new HashSet<>();
+			classes.add(pageClass);
+			if(pageClass.getNFP() != null) {
+				for(PageClass pc2 : pageClass.getNFP().keySet()) {
+					partitions.addAll(allPossibleNFP(pageClasses,classes, pc2, pageClass.getPages().size(), MAX_PAGES));
+				}
+			}
+		}
+		Partition.reorderPartitions(partitions);
+		Lattice lattice = new Lattice(partitions);
+		return lattice;
 	}
 
+	private static Collection<? extends Partition> allPossibleNFP(Set<PageClass> pageClasses, Set<PageClass> currentClasses,
+			PageClass pc2, int pageCount, int max) {
+		final Set<Partition> partitions = new HashSet<>();
+		if (pageCount == max) {
+			final Partition partition = new Partition(currentClasses);
+			partitions.add(partition);
+		}else if ((pageCount + pc2.getPages().size()) < max && (!pc2.hasSamePagesAs(currentClasses))) {
+			currentClasses.add(pc2);
+			if (pc2.getNFP() != null && !pc2.getNFP().isEmpty()) {
+				for (PageClass pageClass : pc2.getNFP().keySet()) {
+					int newSize = pageCount + pageClass.getPages().size();
+					if (newSize <= max) {
+						partitions.addAll(allPossibleNFP(pageClasses, currentClasses, pageClass, newSize,max));
+					}
+				}
+			} else {
+					Set<PageClass> toCheck = new HashSet<>();
+					toCheck.addAll(pageClasses);
+					toCheck.removeAll(currentClasses);
+					partitions.addAll(allPossiblePartitions(currentClasses, toCheck, (pageCount + pc2.getPages().size()), max));
+			}
+		}else if ((pageCount + pc2.getPages().size() == max) && (!pc2.hasSamePagesAs(currentClasses)))  {
+			currentClasses.add(pc2);
+			final Partition partition = new Partition(currentClasses);
+			partitions.add(partition);
+		}
+		return partitions;
+	}
+
+	private static Set<Partition> allPossiblePartitions(Set<PageClass> currentClasses,Set<PageClass> toCheck, int pageCount,int max){
+		final Set<Partition> partitions = new HashSet<>();
+		if (pageCount == max) {
+			final Partition partition = new Partition(currentClasses);
+			partitions.add(partition);
+		}
+		else if(!toCheck.isEmpty()) {
+			Set<PageClass> newToCheck = new  HashSet<>();
+			newToCheck.addAll(toCheck);
+			for (PageClass PClass : toCheck) {
+				if ((pageCount+PClass.getPages().size()<=max)&&(!PClass.hasSamePagesAs(currentClasses))){
+					Set<PageClass> newClasses = new HashSet<>();
+					newClasses.addAll(currentClasses);
+					newClasses.add(PClass);
+					newToCheck.remove(PClass);
+					partitions.addAll(allPossiblePartitions(newClasses,newToCheck,(pageCount+PClass.getPages().size()),max));
+				}
+			}
+		}
+		return partitions;
+	}
+
+	/*private static Lattice generatePartitionsTRY(Set<PageClass> pageClasses, int MAX_PAGES) {
+		final Set<Partition> partitions = new HashSet<>();
+		Set<PageClass> toCheck = new HashSet<>();
+		toCheck.addAll(pageClasses);
+		for (PageClass pc : pageClasses) {
+			toCheck.remove(pc);
+			Set<PageClass> current = new HashSet<>();
+			current.add(pc);
+			int pageCount = pc.getPages().size();
+			partitions.addAll(allPossiblePartitionsTry(current,toCheck,pageCount,MAX_PAGES));
+		}
+
+		Lattice lattice = new Lattice(partitions);
+		return lattice;
+	}
+
+	private static Set<Partition> allPossiblePartitionsTry(Set<PageClass> current,
+			Set<PageClass> toCheck, int pageCount, int max) {
+		Set<Partition> partitions = new HashSet<>();
+		if (pageCount == max) {
+			Partition p = new Partition(current);
+			partitions.add(p);
+			return partitions;
+		}
+		else if(!toCheck.isEmpty()) {
+			Set<PageClass> newToCheck = new HashSet<>();
+			newToCheck.addAll(toCheck);
+			for (PageClass pc : toCheck) {
+				newToCheck.remove(pc);
+				if((pageCount + pc.getPages().size()) <= max) {
+					Set<PageClass> newCurrent = new HashSet<>();
+					newCurrent.addAll(current);
+					newCurrent.add(pc);
+					partitions.addAll(allPossiblePartitionsTry(newCurrent, newToCheck, (pageCount+pc.getPages().size()), max));
+				}
+			}
+		}
+		return partitions;
+	}*/
 
 	/*private static Lattice generatePartitionsOld(Set<PageClass> pageClasses, int MAX_PAGES) {
 		//generazione partizioni
@@ -493,7 +614,7 @@ public class PartitionerXFP {
 				}
 			}
 			final PageClass pageClasses = new PageClass(pages,XPaths);
-			if(!pageClasses.containsXpathsSet(pClasses)) {
+			if(!pageClasses.containsXpathsSet(pClasses) /*&& pageClasses.getPages().size() != 1 /*&& pageClasses.getPages().size() != 2*/) {
 				pClasses.add(pageClasses);
 			}
 		}

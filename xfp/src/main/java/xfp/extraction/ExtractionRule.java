@@ -15,7 +15,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 
-import it.uniroma3.hlog.HypertextualLogger;
+//import it.uniroma3.hlog.HypertextualLogger;
 import xfp.fixpoint.RuleFactory;
 import xfp.model.ExtractedVector;
 import xfp.model.Value;
@@ -34,7 +34,7 @@ import xfp.model.Website;
  */
 public class ExtractionRule<T> {
 	
-	static final private HypertextualLogger log = HypertextualLogger.getLogger();
+//	static final private HypertextualLogger log = HypertextualLogger.getLogger();
 
 	static final private XPathFactory XPATHFACTORY = XPathFactory.newInstance();
 	
@@ -115,7 +115,7 @@ public class ExtractionRule<T> {
 			try {
 				return evaluate(document);
 			} catch (XPathExpressionException e) {
-				log.warn(e.getMessage()+" during "+ this + " application");
+//				log.warn(e.getMessage()+" during "+ this + " application");
 				throw new ExtractionException(e);
 			}		
 		}

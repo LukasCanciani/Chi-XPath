@@ -17,7 +17,7 @@ import org.apache.commons.configuration.ConfigurationException;
 
 import com.opencsv.CSVReader;
 
-import it.uniroma3.hlog.HypertextualLogger;
+//import it.uniroma3.hlog.HypertextualLogger;
 import xfp.ExperimentRunner;
 import xfp.fixpoint.FixedPoint;
 import xfp.model.Experiment;
@@ -29,7 +29,7 @@ import xfp.util.XFPConfig;
 
 public class Evaluation {
 	
-	static final private HypertextualLogger log = HypertextualLogger.getLogger();
+//	static final private HypertextualLogger log = HypertextualLogger.getLogger();
 	
 	private Map<String, List<String[]>> golden_fixpoints;
 	private Map<Set<String>,String> pcPagesToName = new HashMap<>();
@@ -93,7 +93,7 @@ public class Evaluation {
 		try {
 			tmp_golden = site.getWebpages().stream().collect(Collectors.groupingBy(Webpage::getGoldenPageClass, Collectors.toSet()));
 		} catch (Exception e)	{
-			log.error("Couldn't collect golden page class from webpages in site. Evaluation will not be executed.");
+//			log.error("Couldn't collect golden page class from webpages in site. Evaluation will not be executed.");
 		}
 		
 		if (tmp_golden == null)	return null;
@@ -120,7 +120,7 @@ public class Evaluation {
 				//System.out.println(pages+" "+pc_name);
 				pcPagesToName.put(pages,pc_name);
 			} catch(Exception e)	{
-				log.error("Couldn't find expected golden fixed point file for page class: "+pc_name+"("+websitedir+File.separatorChar+"gfp_"+pc_name+".csv)");
+//				log.error("Couldn't find expected golden fixed point file for page class: "+pc_name+"("+websitedir+File.separatorChar+"gfp_"+pc_name+".csv)");
 				return null;
 			}
 		}
@@ -172,7 +172,7 @@ public class Evaluation {
 			float precision = (TP/(TP+FP));
 			float recall = (TP/(TP+FN));
 			float f1 = 2*((precision*recall)/(precision+recall));
-			log.info("Page class ("+pc_name+"): P/R/F1: "+precision+" "+recall+" "+f1);
+//			log.info("Page class ("+pc_name+"): P/R/F1: "+precision+" "+recall+" "+f1);
 			System.out.println("Page class ("+pc_name+") with "+variant.size()+" fixpoints: P/R/F1: "+precision+" "+recall+" "+f1+" ("+page_names+")");
 		} /*else {
 			log.info("Page class (empty): P/R/F1: 0 0 0");

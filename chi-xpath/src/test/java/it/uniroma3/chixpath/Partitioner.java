@@ -1,6 +1,7 @@
 package it.uniroma3.chixpath;
 
 import static it.uniroma3.fragment.test.Fixtures.createPage;
+
 import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.IOException;

@@ -1,6 +1,6 @@
 package xfp.util;
 
-import static org.apache.commons.lang.StringEscapeUtils.escapeJava;
+//import static org.apache.commons.lang.StringEscapeUtils.escapeJava;
 import static org.w3c.dom.Node.*;
 
 import java.io.FileInputStream;
@@ -13,14 +13,14 @@ import org.w3c.dom.Text;
 
 import it.uniroma3.dom.visitor.DOMVisitor;
 import it.uniroma3.dom.visitor.DOMVisitor.SkippingStrategy;
-import it.uniroma3.hlog.HypertextualLogger;
+//import it.uniroma3.hlog.HypertextualLogger;
 import it.uniroma3.token.dom.node.DOMNodeFactory;
 import it.uniroma3.token.loader.DOMLoader;
 import it.uniroma3.token.loader.Skipper;
 
 public class DocumentUtil {
 
-    static final private HypertextualLogger log = HypertextualLogger.getLogger();
+ //   static final private HypertextualLogger log = HypertextualLogger.getLogger();
 
     static final public String ANCHOR_ELEMENT  = "A";
     static final public String ID_ATTRIBUTE    = "id";
@@ -93,8 +93,8 @@ public class DocumentUtil {
                            !isText(text.getPreviousSibling()) 
                         && !isText(text.getNextSibling())
                         && isAllWhitespaces(value);
-                if (result)
-                    log.trace(() -> "Skipping PCDATA: "+escapeJava(value));
+             /*   if (result)
+                    log.trace(() -> "Skipping PCDATA: "+escapeJava(value));*/
                 return result;
             }
             @Override

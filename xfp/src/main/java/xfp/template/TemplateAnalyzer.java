@@ -1,13 +1,13 @@
 package xfp.template;
 
-import static xfp.hlog.XFPStyles.header;
+//import static xfp.hlog.XFPStyles.header;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import it.uniroma3.hlog.HypertextualLogger;
-import it.uniroma3.hlog.Level;
+//import it.uniroma3.hlog.HypertextualLogger;
+//import it.uniroma3.hlog.Level;
 import it.uniroma3.token.dom.DOMToken;
 import it.uniroma3.token.dom.node.DOMNode;
 import xfp.model.Webpage;
@@ -26,7 +26,7 @@ import xfp.model.Webpage;
  */
 public class TemplateAnalyzer {
     
-    static final private HypertextualLogger log = HypertextualLogger.getLogger();
+//    static final private HypertextualLogger log = HypertextualLogger.getLogger();
 	
 	static private final ECGMFacade facade = new ECGMFacade();
 	
@@ -34,7 +34,7 @@ public class TemplateAnalyzer {
 	}
 
 	public void findTemplateTokens(Collection<Webpage> input) {
-	    log.newPage("Template analysis");
+//	    log.newPage("Template analysis");
         
         final List<Webpage> samples = new ArrayList<>(input);
 		
@@ -45,8 +45,8 @@ public class TemplateAnalyzer {
 		/* mark template/invariant nodes vs value/variant nodes */
 		final TemplateMarker marker = new TemplateMarker(this);
 		marker.markTokens(samples);
-		log.endPage();
-        logTemplateTokens(this.getTemplateTokens());
+//		log.endPage();
+//        logTemplateTokens(this.getTemplateTokens());
 	}
 
 	public List<DOMToken> getIntensionalTemplateTokens() {
@@ -66,7 +66,7 @@ public class TemplateAnalyzer {
 	}
 
     // TODO refactor with NodeListRenderer
-    private void logTemplateTokens(List<DOMToken> templateTokens) {
+/*    private void logTemplateTokens(List<DOMToken> templateTokens) {
         if (!log.isLoggable(Level.TRACE)) return;
         
         log.newPage("Found "+templateTokens.size()+" template tokens ");
@@ -81,6 +81,6 @@ public class TemplateAnalyzer {
         );
         log.endTable();
         log.endPage();
-    }
+    }*/
 
 }

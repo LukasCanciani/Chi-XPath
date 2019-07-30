@@ -13,7 +13,7 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import it.uniroma3.hlog.HypertextualLogger;
+//import it.uniroma3.hlog.HypertextualLogger;
 import xfp.fixpoint.FixedPoint;
 import xfp.fixpoint.PageClass;
 import xfp.model.Webpage;
@@ -21,7 +21,7 @@ import xfp.util.Constants;
 import xfp.util.XFPConfig;
 
 public class PageClassToDatabaseOutputHandler<T> implements OutputHandler<T> {
-	static final private HypertextualLogger log = HypertextualLogger.getLogger();
+//	static final private HypertextualLogger log = HypertextualLogger.getLogger();
 	
 	Properties properties; 
 
@@ -55,7 +55,7 @@ public class PageClassToDatabaseOutputHandler<T> implements OutputHandler<T> {
 	@Override
 	public void storePageclass(PageClass<T> pc) throws Exception {
         if (pc_ids_written.get(type).contains(pc.getId()))	{
-            log.trace("Page class "+pc.getId()+" already stored ("+type+").");
+ //           log.trace("Page class "+pc.getId()+" already stored ("+type+").");
             return;
         }
         
@@ -68,7 +68,7 @@ public class PageClassToDatabaseOutputHandler<T> implements OutputHandler<T> {
         this.writeFixedPoints(pc.getId(), pages, allFP);        
         
         this.closeConnection();
-        log.trace("Page class "+pc.getId()+" stored (pages "+pages.size()+") for type ("+type+"): "+allFP.size());
+//        log.trace("Page class "+pc.getId()+" stored (pages "+pages.size()+") for type ("+type+"): "+allFP.size());
         pc_ids_written.get(type).add(pc.getId());	
 	}
 	

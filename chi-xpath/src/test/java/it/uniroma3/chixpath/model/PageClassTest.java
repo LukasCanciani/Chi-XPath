@@ -203,6 +203,33 @@ public class PageClassTest {
 		
 	}
 	
+	@Test
+	public void getPageClassFromIDs()  throws XPathExpressionException {
+		final Set<XPath> xPaths1 = new HashSet<>();
+        xPaths1.add(new XPath("/HTML",null));
+        xPaths1.add(new XPath("a",null));
+        page1.addXPath(new XPath("/HTML",null));
+        page1.addXPath(new XPath("a",null));
+        
+        final Set<XPath> xPaths2 = new HashSet<>();
+        xPaths2.add(new XPath("H2",null));
+        Set<Page> set = new HashSet<>();
+		set.add(page1);
+		PageClass pageClass1 = new PageClass(set,xPaths1);
+        Set<Page> set2 = new HashSet<>();
+		set2.add(page2);
+		PageClass pageClass2 = new PageClass(set2,xPaths2);
+		Set<PageClass> classes = new HashSet<>();
+		classes.add(pageClass1);
+		classes.add(pageClass2);
+		Set<String> href = new HashSet<>();
+		href.add("0.html");
+		href.add("2.html");
+		PageClass p = PageClass.getPageClassFromIDs(classes, href);
+		assertEquals(pageClass1, p);
+		
+	}
+	
 	
 	static private String loadPageContent(String anURL) {
         final StringWriter out = new StringWriter();

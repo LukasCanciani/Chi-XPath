@@ -1,7 +1,5 @@
 package it.uniroma3.fragment.test;
 
-import static it.uniroma3.fragment.test.CyberNekoParser.parseHTML;
-
 import static javax.xml.xpath.XPathConstants.NODESET;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -23,6 +21,8 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import it.uniroma3.fragment.dom.DOMDumper;
+
+import static it.uniroma3.fragment.test.CyberNekoParser.parseHTML;
 import static it.uniroma3.fragment.test.FixtureUtils.makeTmpFileWithContent;
 
 /**

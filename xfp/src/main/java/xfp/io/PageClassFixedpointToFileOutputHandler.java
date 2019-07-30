@@ -12,14 +12,14 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import it.uniroma3.hlog.HypertextualLogger;
+//import it.uniroma3.hlog.HypertextualLogger;
 import xfp.fixpoint.FixedPoint;
 import xfp.fixpoint.PageClass;
 import xfp.model.Webpage;
 
 public class PageClassFixedpointToFileOutputHandler<T> implements OutputHandler<T> {
 
-    static final private HypertextualLogger log = HypertextualLogger.getLogger();
+ //   static final private HypertextualLogger log = HypertextualLogger.getLogger();
 
     static public String PC_FILE_SUFFIX = "_pc";
 
@@ -83,7 +83,7 @@ public class PageClassFixedpointToFileOutputHandler<T> implements OutputHandler<
 		DIR_NAME = ((Webpage)pc.getPages().toArray()[0]).getWebsite().getName();
 		this.createOutputDirectory();
         if (pc_ids_written.get(type).contains(pc.getId()))	{
-            log.trace("Page class "+pc.getId()+" already stored ("+type+").");
+ //           log.trace("Page class "+pc.getId()+" already stored ("+type+").");
             return;
         }
         final Set<Webpage> pages = pc.getPages();
@@ -98,7 +98,7 @@ public class PageClassFixedpointToFileOutputHandler<T> implements OutputHandler<
         if (conFP.size()>0)
             writeFixedPoints(pc.getId(), pages, conFP, false);
 
-        log.trace("Page class "+pc.getId()+" stored (pages "+pages.size()+") for type ("+type+"): "+varFP.size()+", "+conFP.size());
+  //      log.trace("Page class "+pc.getId()+" stored (pages "+pages.size()+") for type ("+type+"): "+varFP.size()+", "+conFP.size());
         pc_ids_written.get(type).add(pc.getId());
     }
 

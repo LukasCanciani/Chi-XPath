@@ -6,14 +6,14 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import it.uniroma3.hlog.HypertextualLogger;
+//import it.uniroma3.hlog.HypertextualLogger;
 import xfp.generation.XPathFragment;
 import xfp.model.ExtractedVector;
 import xfp.model.Value;
 
 public class FPGenerator<T> {
 
-    static final private HypertextualLogger log = HypertextualLogger.getLogger();
+ //   static final private HypertextualLogger log = HypertextualLogger.getLogger();
 
     private Set<FixedPoint<T>> variants;
 
@@ -35,30 +35,30 @@ public class FPGenerator<T> {
     }
 
     public void generate(Set<ExtractedVector<T>> vectors) {
-        log.newPage("Looking for fixed points ("+vectors.size()+" to evaluate)");
+//        log.newPage("Looking for fixed points ("+vectors.size()+" to evaluate)");
 
         vectors.stream().forEach(vector -> {
-            log.trace("<HR/>");
+/*            log.trace("<HR/>");
             log.trace("Evaluating extracted vector");
             log.trace(() -> vector);
-            
+ */           
             if (!this.mayBeAsuitableFixedPoint(vector)) {
-                log.trace("this vector cannot be a fixed point of fragment "+this.fragment);
+ //               log.trace("this vector cannot be a fixed point of fragment "+this.fragment);
                 return;
             }
             
             if (vector.isSingleton()) {
-                log.trace("this vector is a singleton excluded from the evaluation");
+//                log.trace("this vector is a singleton excluded from the evaluation");
                 return;
             }
             
             if (vector.isConstant()) {
-                log.trace("it is a constant vector");
+ //               log.trace("it is a constant vector");
             }
-                        
+ /*                       
             log.newPage("Evaluating as fixed point");
             log.trace(() -> vector);
-
+*/
             boolean fixedSoFar = true;
 
             /* all the rules always generated so far are in this local variable */
@@ -72,57 +72,58 @@ public class FPGenerator<T> {
                 if (values.isEmpty())
                     continue;
 
-                log.trace(() -> "generating rules from extracted values: " + values);
+ //               log.trace(() -> "generating rules from extracted values: " + values);
                 
                 final Set<String> generated = new HashSet<>();
                 for (List<Value<T>> extractedFromPage : vector) {
                     for (Value<T> value : extractedFromPage) {
                     final Node target = value.getNode();
                         if (!this.fragment.isSuitableTarget(target)) {
-                            log.warn(target+" is not a suitable target for this fragment");
+ /*                           log.warn(target+" is not a suitable target for this fragment");
                             log.trace("skipping this extracted value");
-                        } else {
+ */                       } else {
                             final RuleInference inference = new RuleInference(fragment);
                             inference.setInferenceSample(vector.getPages());
                             final Set<String> generatedFromTarget = inference.generateRules(target);
                             generated.addAll(generatedFromTarget);
+                            
                         }
                     }
                 }
 
-                log.trace("Rules generated from extracted nodes:");
-                log.trace(() -> generated);
+ //               log.trace("Rules generated from extracted nodes:");
+//                log.trace(() -> generated);
                 intersection.retainAll(generated);
                 if (intersection.isEmpty()) {
-                    log.trace("That's not a fixed point.");
+/*                    log.trace("That's not a fixed point.");
                     log.trace("The set of generated rules does not contain any of the generating rules");
                     log.trace(() -> vector.getGeneratingRules());
-                    fixedSoFar = false;
+*/                    fixedSoFar = false;
                 } else {
-                    log.trace("Generating rule(s) there: still looks like a fixed point...");
+ /*                   log.trace("Generating rule(s) there: still looks like a fixed point...");
                     log.trace(() -> intersection);
-                }
+ */               }
             }
-            log.endPage();
+ //           log.endPage();
             
             final FixedPoint<T> fp = new FixedPoint<>(vector,intersection);
 
             if (fixedSoFar) {
-                log.trace("Found a fixed point.");
+//                log.trace("Found a fixed point.");
                 if (vector.isConstant()) {
-                    log.trace("It is a <EM>constant</EM> fixed point.");
+//                    log.trace("It is a <EM>constant</EM> fixed point.");
                     this.constants.add(fp);
                 }
                 else {
-                    log.trace("It is a <EM>variable</EM> fixed point.");
+ //                   log.trace("It is a <EM>variable</EM> fixed point.");
                     this.variants.add(fp); // fixed-points                    
                 }                    
             } else {
                 this.excluded.add(fp);
-                log.trace("Not a fixed point.");
+//                log.trace("Not a fixed point.");
             }
         });
-        log.endPage();
+ //       log.endPage();
     }
 
     private boolean mayBeAsuitableFixedPoint(ExtractedVector<T> vector) {

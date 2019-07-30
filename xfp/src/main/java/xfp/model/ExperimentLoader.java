@@ -22,7 +22,7 @@ import xfp.util.XFPConfig;
 
 public class ExperimentLoader {
 
-	static final private HypertextualLogger log = getLogger();
+	//static final private HypertextualLogger log = getLogger();
 
 	final private Experiment experiment;
 
@@ -36,7 +36,7 @@ public class ExperimentLoader {
 		final String regexp = XFPConfig.getString(ID_FILTER);
 		if (regexp!=null && !regexp.trim().isEmpty()) {
 			this.idRegexp = Pattern.compile(regexp);
-			log.trace("selecting only pages whose id matches with: "+this.idRegexp);
+	//		log.trace("selecting only pages whose id matches with: "+this.idRegexp);
 		} else this.idRegexp=null;
 	}
 
@@ -50,12 +50,12 @@ public class ExperimentLoader {
 
 		try (final Reader reader = new FileReader(pagesIndex)) {
 			final Website website = new Website(sitename);
-			log.newPage();
-			log.trace("loading website " + sitename);
+		/*	log.newPage();
+			log.trace("loading website " + sitename);	*/
 			int filtered = this.loadPages(reader, website, siteFolder);
-			log.endPage("loading website " + sitename 
+		/*	log.endPage("loading website " + sitename 
 					+ " ("+website.getWebpages().size()+" pages loaded,"
-					+ filtered+" filtered out)");
+					+ filtered+" filtered out)");	*/
 			return website;
 		}
 		catch (final IOException e) {
@@ -70,19 +70,19 @@ public class ExperimentLoader {
 
 		// e.g., dataset/swde/nbaplayer/nbaplayer-espn/_id2name.txt
 		final Website website = new Website(sitename);
-		log.newPage();
-		log.trace("loading website " + sitename);
+	/*	log.newPage();
+		log.trace("loading website " + sitename);	*/
 		int filtered = this.loadPagesChi(website, siteFolder, id2names);
-		log.endPage("loading website " + sitename 
+	/*	log.endPage("loading website " + sitename 
 				+ " ("+website.getWebpages().size()+" pages loaded,"
-				+ filtered+" filtered out)");
+				+ filtered+" filtered out)");	*/
 		return website;
 	}
 
 	private int loadPages(Reader id2UrlReader, Website website, File siteFolder) {
-		log.trace("loading from folder "+linkTo(siteFolder).withAnchor(website.getName()));
+	/*	log.trace("loading from folder "+linkTo(siteFolder).withAnchor(website.getName()));
 		log.newTable();
-		log.trace(header("Id"),header("file"),header("loading"));
+		log.trace(header("Id"),header("file"),header("loading"));	*/
 		int counter = 0;
 		int filtered = 0;
 		final AtomicInteger loading = new AtomicInteger(0);
@@ -98,13 +98,13 @@ public class ExperimentLoader {
 					final File file = new File(siteFolder, filename);
 					if (idMatchesFilterPattern(id)) {
 						final Webpage page = new Webpage(file.toURI());
-						log.newPage();
+		//				log.newPage();
 						loading.incrementAndGet();
 						ForkJoinPool.commonPool().submit( () -> { 
 							page.loadDocument();
 							loading.decrementAndGet();
 						} );
-						final Logpage logpage = log.endPage();
+			//			final Logpage logpage = log.endPage();
 						if (website.addPage(page)) {
 							/* is there a golden pageclass specified for this page? */
 							if (split.length>2) {
@@ -114,43 +114,43 @@ public class ExperimentLoader {
 
 							if (isAccessPageId(id)) {
 								website.addAccessPage(page);
-								logLoadedPage(file, page, "access page", logpage);
+							//	logLoadedPage(file, page, "access page", logpage);
 							} else {
-								logLoadedPage(file, page, "non-access page", logpage);
+							//	logLoadedPage(file, page, "non-access page", logpage);
 							}
-						} else  logLoadedPage(file, page, "duplicate! page", logpage);
+						}// else  logLoadedPage(file, page, "duplicate! page", logpage);
 					} else {
-						log.trace(id,"discarded");
+	//					log.trace(id,"discarded");
 						filtered++;						
 					}
 				} else {
-					log.warn("@skipping malformed line " + line);
+	//				log.warn("@skipping malformed line " + line);
 				}
 				if (++counter == maxNumberOfPages) break;
 			}
 		}		
-		log.trace(counter  + " pages loaded");
+	/*	log.trace(counter  + " pages loaded");
 		log.trace(filtered + " pages discarded");
-		log.endTable();
+		log.endTable();	*/
 		/* wait that all pages loaded */
 		int sec = 0;
 		while (loading.get()>0) {            
 			try {
 				Thread.sleep(1000);
-				log.trace("Waiting page loading to complete ("+sec+" secs)");
+	//			log.trace("Waiting page loading to complete ("+sec+" secs)");
 				sec++;
 			} catch (InterruptedException e) {
 				throw new XFPException(e);
 			}
 		}
-		log.trace("Page loading now completed.");
+	//	log.trace("Page loading now completed.");
 		return filtered;
 	}
 
 	private int loadPagesChi(Website website, File siteFolder, Map<String,String> id2names) {
-		log.trace("loading from folder "+linkTo(siteFolder).withAnchor(website.getName()));
+/*		log.trace("loading from folder "+linkTo(siteFolder).withAnchor(website.getName()));
 		log.newTable();
-		log.trace(header("Id"),header("file"),header("loading"));
+		log.trace(header("Id"),header("file"),header("loading"));	*/
 		int counter = 0;
 		int filtered = 0;
 		final AtomicInteger loading = new AtomicInteger(0);
@@ -161,49 +161,49 @@ public class ExperimentLoader {
 			final File file = new File(siteFolder, filename);
 			if (idMatchesFilterPattern(id)) {
 				final Webpage page = new Webpage(file.toURI());
-				log.newPage();
+	//			log.newPage();
 				loading.incrementAndGet();
 				ForkJoinPool.commonPool().submit( () -> { 
 					page.loadDocument();
 					loading.decrementAndGet();
 				} );
-				final Logpage logpage = log.endPage();
+	//			final Logpage logpage = log.endPage();
 				if (website.addPage(page)) {
 
 					if (isAccessPageId(id)) {
 						website.addAccessPage(page);
-						logLoadedPage(file, page, "access page", logpage);
+	//					logLoadedPage(file, page, "access page", logpage);
 					} else {
-						logLoadedPage(file, page, "non-access page", logpage);
+	//					logLoadedPage(file, page, "non-access page", logpage);
 					}
-				} else  logLoadedPage(file, page, "duplicate! page", logpage);
+				} //else  logLoadedPage(file, page, "duplicate! page", logpage);
 			} else {
-				log.trace(id,"discarded");
+	//			log.trace(id,"discarded");
 				filtered++;						
 			}
 			if (++counter == maxNumberOfPages) break;
 		}
 
-		log.trace(counter  + " pages loaded");
+	/*	log.trace(counter  + " pages loaded");
 		log.trace(filtered + " pages discarded");
-		log.endTable();
+		log.endTable();	*/
 		/* wait that all pages loaded */
 		int sec = 0;
 		while (loading.get()>0) {            
 			try {
 				Thread.sleep(1000);
-				log.trace("Waiting page loading to complete ("+sec+" secs)");
+	//			log.trace("Waiting page loading to complete ("+sec+" secs)");
 				sec++;
 			} catch (InterruptedException e) {
 				throw new XFPException(e);
 			}
 		}
-		log.trace("Page loading now completed.");
+	//	log.trace("Page loading now completed.");
 		return filtered;
 	}
 
 	private void logLoadedPage(final File file, final Webpage page, String pageType, Logpage logpage) {
-		log.trace(linkTo(file).withAnchor(page.getName()), pageType, linkTo(logpage).withAnchor("whitespaces"));
+	//	log.trace(linkTo(file).withAnchor(page.getName()), pageType, linkTo(logpage).withAnchor("whitespaces"));
 	}
 
 	private boolean idMatchesFilterPattern(String id) {

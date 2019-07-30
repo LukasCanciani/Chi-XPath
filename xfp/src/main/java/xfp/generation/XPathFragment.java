@@ -1,6 +1,6 @@
 package xfp.generation;
 
-import static xfp.hlog.XFPStyles.header;
+//import static xfp.hlog.XFPStyles.header;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -13,7 +13,7 @@ import org.w3c.dom.Text;
 import it.uniroma3.dom.visitor.DOMVisitor;
 import it.uniroma3.dom.visitor.DOMVisitorListener;
 import it.uniroma3.dom.visitor.DOMVisitorListenerAdapter;
-import it.uniroma3.hlog.HypertextualLogger;
+//import it.uniroma3.hlog.HypertextualLogger;
 import xfp.fixpoint.RuleFactory;
 import xfp.model.Webpage;
 import xfp.template.TemplateAnalyzer;
@@ -30,7 +30,7 @@ import xfp.template.TemplateAnalyzer;
  */
 public abstract class XPathFragment implements XPathFragmentFactory {
 
-    static final private HypertextualLogger log = HypertextualLogger.getLogger();
+ //   static final private HypertextualLogger log = HypertextualLogger.getLogger();
 
     static final private String FROM_NODE_2_STEPS_USER_DATA_KEY = "FROM_NODE_2_STEPS_MAP_";
     static final private String __TO_NODE_2_STEPS_USER_DATA_KEY = "__TO_NODE_2_STEPS_MAP_";
@@ -130,13 +130,13 @@ public abstract class XPathFragment implements XPathFragmentFactory {
             };
             final DOMVisitor visitor = new DOMVisitor(listener);
             listener.setDOMVisitor(visitor);
-            log.trace("Generating all XPath steps of fragment "+this);
+/*            log.trace("Generating all XPath steps of fragment "+this);
             log.newTable();
             log.trace(header("Step"),header("From"),header("To"),header("from-XPath"),header("to-XPath"));
-            visitor.visit(document.getDocumentElement());
-            log.endTable();
+*/            visitor.visit(document.getDocumentElement());
+//            log.endTable();
         } else { // The XPath fragment has been already built on this document
-            log.trace("Fragment already built; recovering caches.");
+//            log.trace("Fragment already built; recovering caches.");
             this.fromNode2steps = getCache(document, FROM_NODE_2_STEPS_USER_DATA_KEY);
             this.toNode2steps   = getCache(document, __TO_NODE_2_STEPS_USER_DATA_KEY);            
         }

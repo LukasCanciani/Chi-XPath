@@ -28,7 +28,7 @@ public class Experiment implements Serializable {
 	
 	static final private long serialVersionUID = -7618991188797384863L;
 
-	static final private HypertextualLogger log = HypertextualLogger.getLogger();
+//	static final private HypertextualLogger log = HypertextualLogger.getLogger();
 	
 	/* dataset: swde vs weir   */
 	/* domain:  book, auto ... */	
@@ -109,7 +109,7 @@ public class Experiment implements Serializable {
 		if (!file.exists()) {
 			throw new RuntimeException("Experiment specification file not found: " + file.getAbsolutePath());
 		}
-		log.info("specification file resolved as: " + linkTo(file));
+	//	log.info("specification file resolved as: " + linkTo(file));
 		return file;
 	}
 	

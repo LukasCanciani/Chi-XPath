@@ -1,6 +1,6 @@
 package xfp.algorithm;
 
-import static it.uniroma3.hlog.HypertextualLogger.getLogger;
+//import static it.uniroma3.hlog.HypertextualLogger.getLogger;
 import static java.util.stream.Collectors.toCollection;
 import static xfp.algorithm.FPAlgorithm.dfp;
 import static xfp.algorithm.FPAlgorithm.nfp;
@@ -18,7 +18,7 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
-import it.uniroma3.hlog.HypertextualLogger;
+//import it.uniroma3.hlog.HypertextualLogger;
 import xfp.eval.Evaluation;
 import xfp.fixpoint.FixedPoint;
 import xfp.fixpoint.Lattice;
@@ -33,7 +33,7 @@ import xfp.util.XFPConfig;
 
 public class XFPAlgorithm {
 
-	static final private HypertextualLogger log = getLogger();
+//	static final private HypertextualLogger log = getLogger();
 
 	static final private int DATA_THRESHOLD = 3;
 
@@ -68,13 +68,13 @@ public class XFPAlgorithm {
 	 * */
 	public void xfp(Set<Webpage> sample) throws Exception	{
 		if (!this.alreadyProcessed.add(sample)) {
-			log.trace("This sample has been already processed by XFP "+sample);
+//			log.trace("This sample has been already processed by XFP "+sample);
 			return;
 		}
-		log.trace();
+/*		log.trace();
 		log.trace("Input samples: " +sample);
 		log.newPage("Applying NFP");
-
+*/
 		//final Set<FixedPoint<URI>> navFixedPoint = nfp().computeFixedPoints(sample);
 		final PageClass<URI> navFixedPoint = nfp().computeFixedPoints(sample);
 		storeNavFixedPoints(navFixedPoint);
@@ -85,17 +85,17 @@ public class XFPAlgorithm {
 				.collect(Collectors.toCollection(TreeSet::new)); 
 
 		if (lcs.isEmpty())
-			log.trace("None link collection left to crawl");
+//			log.trace("None link collection left to crawl");
 
 		while (!lcs.isEmpty())	{ 
-			log.trace("<HR><BR/>");
+//			log.trace("<HR><BR/>");
 
-			log.trace("currently  "+lcs.size()+" link collection(s) are still available");
+//			log.trace("currently  "+lcs.size()+" link collection(s) are still available");
 			final FixedPoint<URI> lc = ( lcs.pollLast() ); /* <-- get and remove next lc */
-			log.trace(lc.getExtracted());
+/*			log.trace(lc.getExtracted());
 			log.newPage("Applying DFP on this link collection");
 			log.trace("Link collection extracted by "+lc.getExtractionRule());
-
+*/
 			final Set<Webpage> pages = download(getLinks(lc.getExtracted()));
 
 			//final Set<FixedPoint<String>> data = dfp().computeFixedPoints(pages);
@@ -104,24 +104,24 @@ public class XFPAlgorithm {
 			evaluateDataFixedPoints(data);
 
 			if (isValidPageClass(data))	{
-				log.trace("That's a valid page class (current threshold="+DATA_THRESHOLD+" f.p.)! Go deeper.");
+//				log.trace("That's a valid page class (current threshold="+DATA_THRESHOLD+" f.p.)! Go deeper.");
 				xfp(pages);
-				log.endPage();
+/*				log.endPage();
 				log.trace("That was a <EM>valid</EM> page class.");
 				log.newPage(data.getVariant().size()+ " fixed data fixed points found.");
 				log.trace(data.getVariant());
 				log.endPage();
-			} else {
+*/			} else {
 				final Set<FixedPoint<URI>> lc_glb = lc.getLattice().getGLBs(lc); // refine lc
 				lcs.addAll(lc_glb);
-				log.endPage();
+/*				log.endPage();
 				log.trace("That was an <EM>invalid</EM> page class");
 				log.page("replacing link collection with its g.l.b. (size: "+lc_glb.size()+").",lc_glb);
-			}
-			log.trace("<BR/>");
+*/			}
+//			log.trace("<BR/>");
 		}
 
-		log.endPage();
+//		log.endPage();
 	}
 
 	public Map<Set<String>, int[]> xfpNav(Set<Webpage> sample) throws Exception {
@@ -129,20 +129,20 @@ public class XFPAlgorithm {
 		Map<Set<String>, int[]>  fp = new HashMap<>();
 
 		if (!this.alreadyProcessed.add(sample)) {
-			log.trace("This sample has been already processed by XFP "+sample);
+//			log.trace("This sample has been already processed by XFP "+sample);
 			return fp;
 		}
-		log.trace();
+/*		log.trace();
 		log.trace("Input samples: " +sample);
 		log.newPage("Applying NFP");
-
+*/
 		//final Set<FixedPoint<URI>> navFixedPoint = nfp().computeFixedPoints(sample);
 		final PageClass<URI> navFixedPoint = nfp().computeFixedPoints(sample);
 		storeNavFixedPoints(navFixedPoint);
 
 		fp = pageToFP(navFixedPoint);
 
-		log.endPage();
+//		log.endPage();
 		return fp;
 	}
 
@@ -232,13 +232,13 @@ public class XFPAlgorithm {
 		Set<FixedPoint<String>> fp = new HashSet<>();
 		//Set<String> rules = new HashSet<>();
 		if (!this.alreadyProcessed.add(sample)) {
-			log.trace("This sample has been already processed by XFP "+sample);
+//			log.trace("This sample has been already processed by XFP "+sample);
 			return fp;
 		}
-		log.trace();
+/*		log.trace();
 		log.trace("Input samples: " +sample);
 		log.newPage("Applying DFP on this link collection");
-
+*/
 		//final Set<FixedPoint<String>> data = dfp().computeFixedPoints(pages);
 		final PageClass<String> data = dfp().computeFixedPointsData(sample);
 
@@ -253,7 +253,7 @@ public class XFPAlgorithm {
 		}*/
 		storeDataFixedPoints(data);
 		evaluateDataFixedPoints(data);
-		log.endPage();
+//		log.endPage();
 		return fp;
 	}
 	
@@ -261,13 +261,13 @@ public class XFPAlgorithm {
 		Set<FixedPoint<String>> fp = new HashSet<>();
 		//Set<String> rules = new HashSet<>();
 		if (!this.alreadyProcessed.add(sample)) {
-			log.trace("This sample has been already processed by XFP "+sample);
+//			log.trace("This sample has been already processed by XFP "+sample);
 			return fp;
 		}
-		log.trace();
+/*		log.trace();
 		log.trace("Input samples: " +sample);
 		log.newPage("Applying DFP on this link collection");
-
+*/
 		//final Set<FixedPoint<String>> data = dfp().computeFixedPoints(pages);
 		final PageClass<String> data = dfp().computeFixedPointsData(sample,xpaths,range);
 
@@ -282,7 +282,7 @@ public class XFPAlgorithm {
 		}*/
 		storeDataFixedPoints(data);
 		evaluateDataFixedPoints(data);
-		log.endPage();
+//		log.endPage();
 		return fp;
 	}
 	
@@ -290,13 +290,13 @@ public class XFPAlgorithm {
 		Set<String> rules = new HashSet<>();
 		//Set<String> rules = new HashSet<>();
 		if (!this.alreadyProcessed.add(sample)) {
-			log.trace("This sample has been already processed by XFP "+sample);
+//			log.trace("This sample has been already processed by XFP "+sample);
 			return rules;
 		}
-		log.trace();
+/*		log.trace();
 		log.trace("Input samples: " +sample);
 		log.newPage("Generating rules on this link collection");
-
+*/
 		//final Set<FixedPoint<String>> data = dfp().computeFixedPoints(pages);
 		
 		rules = dfp().inferRules(sample , range);
@@ -308,7 +308,7 @@ public class XFPAlgorithm {
 		for(FixedPoint<String> variant : data.getVariant()){
 			rules.addAll(variant.getRules());
 		}*/
-		log.endPage();
+//		log.endPage();
 		return rules;
 	}
 
@@ -342,8 +342,9 @@ public class XFPAlgorithm {
 
 		for (Value<URI> link : requests)	{
 			final Webpage downloaded = this.site.getPage(Webpage.getLocalName(link.getValue()));
-			if (downloaded==null)
-				log.warn("Cannot download target page by URI: "+link);
+			if (downloaded==null) {
+//				log.warn("Cannot download target page by URI: "+link);
+			}
 			else {
 				accumulator.add(downloaded);
 				RedundancySeeker.instance.link(link.getPage(),downloaded);
@@ -351,7 +352,7 @@ public class XFPAlgorithm {
 		}
 
 		if (accumulator.size()!=requests.size()) {
-			log.trace("Downloaded "+(requests.size()-accumulator.size())+" fewer pages than requested links (duplicates)");
+//			log.trace("Downloaded "+(requests.size()-accumulator.size())+" fewer pages than requested links (duplicates)");
 		}
 		return accumulator;
 	}

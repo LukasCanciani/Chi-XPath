@@ -48,3 +48,4 @@ Non è necessario quando uso un metodo di XFP caricare tutte le pagine, ma per o
 Cambiando il range la soluzione varia di sensibilità!! ottima cosa!!!
 
 Perche anche se le regole sono generate dallo stesso identico metodo devo generarle nuovamente altrimenti non trova DFP????
+Continua a non trovarle!!

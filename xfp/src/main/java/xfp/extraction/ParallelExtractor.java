@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.*;
 
-import it.uniroma3.hlog.HypertextualLogger;
+//import it.uniroma3.hlog.HypertextualLogger;
 import xfp.fixpoint.RuleFactory;
 import xfp.model.ExtractedVector;
 import xfp.model.Webpage;
@@ -21,7 +21,7 @@ public class ParallelExtractor<T> {
 
 	static final private int SEQUENTIAL_THRESHOLD = 125;
 
-	static final private HypertextualLogger log = HypertextualLogger.getLogger();
+//	static final private HypertextualLogger log = HypertextualLogger.getLogger();
 
 	static final private int NCPU = Runtime.getRuntime().availableProcessors();
 
@@ -43,7 +43,7 @@ public class ParallelExtractor<T> {
 
 	public List<ExtractedVector<T>> extract(Collection<Webpage> webpages, Collection<String> rules) {
 		try {
-			log.newPage("Extraction over "+webpages.size()+" pages");
+//			log.newPage("Extraction over "+webpages.size()+" pages");
 			this.website = webpages.iterator().next().getWebsite();
 			this.webpages = webpages;
 			List<ExtractedVector<T>> extracted = null;
@@ -53,12 +53,12 @@ public class ParallelExtractor<T> {
 				extracted = new ApplyRulesTask(rules).call();
 			else {
 				/* parallel extraction */
-				log.trace("Available processors: " + NCPU);
+//				log.trace("Available processors: " + NCPU);
 				extracted = new ArrayList<>();
 
 				/* slice the xpaths in NCPU chunks */
 				final int total = rules.size();
-				log.trace("applying " + total+" extraction xpaths over "+webpages.size()+" pages");
+//				log.trace("applying " + total+" extraction xpaths over "+webpages.size()+" pages");
 
 				final Iterator<String> it = rules.iterator();
 				int taskCounter=0;
@@ -67,26 +67,27 @@ public class ParallelExtractor<T> {
 					taskCounter++;
 				}
 
+				@SuppressWarnings("unused")
 				int counter = 0;
 				// n.b. initial \n should flush log msgs..
-				log.trace("\nStarting parallel extraction ...");
+//				log.trace("\nStarting parallel extraction ...");
 				while (taskCounter-- > 0) {
 					final Future<List<ExtractedVector<T>>> f = ecs.take();
 					extracted.addAll(f.get());
 					counter += f.get().size();
-					log.trace("\napplied extraction xpaths (" + counter + "/" + total + ")");
+//					log.trace("\napplied extraction xpaths (" + counter + "/" + total + ")");
 				}
-				log.trace("\n...parallel extraction finished.");
+//				log.trace("\n...parallel extraction finished.");
 			}
-			log.trace("Extracted values:");
+/*			log.trace("Extracted values:");
 			log.trace(extracted);
 			log.endPage();
-			return extracted;
+*/			return extracted;
 		}
 		catch (InterruptedException | ExecutionException e) {
-			log.error("extraction failed");
+//			log.error("extraction failed");
 			e.printStackTrace();
-			log.trace(e);
+//			log.trace(e);
 			throw new IllegalStateException(e);
 		}
 	}

@@ -20,6 +20,7 @@ public class PageClass implements Comparable<PageClass> {
 
 	private String id;
 	private Set<String> pagesNames;
+	private Set<String> pagesID;
 
 
 	private VectorRepository vr;
@@ -29,10 +30,13 @@ public class PageClass implements Comparable<PageClass> {
 	private int constantOptional;
 	private Map<PageClass,int[]> NFP;
 
+	public Set<String> rules;
 
 	public Map<PageClass, int[]> getNFP() {
 		return NFP;
 	}
+	
+	
 
 	public Set<String> getPagesNames() {
 		return pagesNames;
@@ -68,9 +72,16 @@ public class PageClass implements Comparable<PageClass> {
 		this.pages = pages;
 		this.xpaths = xpaths;
 		pagesNames = new HashSet<>();
-		for (Page p : pages) {
-			pagesNames.add(p.getUrl().split("/")[5]);
+		this.rules = new HashSet<>();
+		this.pagesID = new HashSet<>();
+		if (pages!=null) {
+			for (Page p : pages) {
+				pagesNames.add(p.getUrl().split("/")[5]);
+				rules.addAll(p.dataRules);
+				pagesID.add(p.getId());
+			}
 		}
+		this.uniqueXPaths = xpaths;
 		this.constantFP=0;
 		this.variableFP=0;
 		this.NFP = new HashMap<>();
@@ -108,7 +119,18 @@ public class PageClass implements Comparable<PageClass> {
 	@Override
 	public boolean equals(Object o) {
 		final PageClass that = (PageClass)o;
-		return this.getxPaths().equals(that.getxPaths());
+		if(that != null) {
+			if (this.getPages().size() == that.getPages().size()){
+				for(Page p : this.getPages()) {
+					if(!that.getPages().contains(p)) 
+						return false;
+				}
+				return true;
+			}else {
+				return false;
+			}
+		}else
+			return false;
 	}
 
 
@@ -126,7 +148,7 @@ public class PageClass implements Comparable<PageClass> {
 		else {
 			for(PageClass pc : this.getNFP().keySet()) {
 				out=out.concat("\nTo Pageclass: "+pc.getId() +  " NFP: Constant: "+this.getNFP().get(pc)[1] + " Variable: "+this.getNFP().get(pc)[0]) +
-						" (OptionalConstant: "+this.getNFP().get(pc)[3] +" OptionalVariable: "+this.getNFP().get(pc)[3] +")";
+						" (OptionalConstant: "+this.getNFP().get(pc)[3] +" OptionalVariable: "+this.getNFP().get(pc)[2] +")";
 			}
 		}
 		out=out.concat("\n");
@@ -192,9 +214,10 @@ public class PageClass implements Comparable<PageClass> {
 	}
 
 	public static void createUniqueXPaths(Set<PageClass> pageClasses,int max_p) throws XPathExpressionException {
-		for(PageClass classe : pageClasses) {
-			final Set<XPath> senzaEquivalenti = classe.deleteEquivalentXpaths(max_p);
-			classe.setUniqueXPaths(senzaEquivalenti);
+		for(PageClass pClass : pageClasses) {
+			final Set<XPath> senzaEquivalenti = pClass.deleteEquivalentXpaths(max_p);
+			pClass.setUniqueXPaths(senzaEquivalenti);		
+
 		}
 		System.out.println("");
 	}
@@ -207,7 +230,8 @@ public class PageClass implements Comparable<PageClass> {
 			container.addUnique(rule);
 			//index++;
 		}
-		this.vr = container;
+		//Se non riserve, evito memoria!!
+		//this.vr = container;
 		return container.getXPaths();
 	}
 	public static void selectCharacteristicXPath(Set<PageClass> pageClasses) {
@@ -287,7 +311,7 @@ public class PageClass implements Comparable<PageClass> {
 	}
 
 	public static void executeDFP(Set<PageClass> pageClasses, String[] XFParguments, Set<Page> pages, Set<FixedPoint<String>> siteDFP, int range) {
-		
+
 		Map<FixedPoint<String>, PageClass> FP2PC = new HashMap<>();
 		for(PageClass pc : pageClasses) {
 			Map<String,String> id2name = new HashMap<>();
@@ -299,14 +323,14 @@ public class PageClass implements Comparable<PageClass> {
 					id2name.put(id, pageName);
 				}
 				else {
-					String pageName = p.getUrl().split("/")[5];
+					/*String pageName = p.getUrl().split("/")[5];
 					String id = "id"+pageName;
-					id2name.put(id, pageName);
+					id2name.put(id, pageName);*/
 				}
 			}
 			Set<FixedPoint<String>> FixedPoints = null;
 			try {
-				FixedPoints = xfp.Main.DataMain(XFParguments,id2name,pc.getUniqueXPathsAsString(),range);
+				FixedPoints = xfp.Main.DataMain(XFParguments,id2name,pc.rules,range);
 			} catch (Exception e) {
 				System.out.println("DFP failure");
 			}
@@ -415,9 +439,9 @@ public class PageClass implements Comparable<PageClass> {
 					id2name.put(id, pageName);
 				}
 				else {
-					String pageName = p.getUrl().split("/")[5];
+					/*String pageName = p.getUrl().split("/")[5];
 					String id = "id"+pageName;
-					id2name.put(id, pageName);
+					id2name.put(id, pageName);*/
 				}
 			}
 			Map<Set<String>, int[]> NFP = new HashMap<>();
@@ -427,7 +451,11 @@ public class PageClass implements Comparable<PageClass> {
 			}
 			for(Set<String> pcID : NFP.keySet()) {
 				PageClass pageClass = PageClass.getPageClassFromIDs(pageClasses,pcID);
-				pc.addNFP(pageClass,NFP.get(pcID));
+				if(pageClass != null) {
+					if(!pc.equals(pageClass)) {
+						pc.addNFP(pageClass,NFP.get(pcID));
+					}
+				}
 			}
 
 
@@ -442,12 +470,22 @@ public class PageClass implements Comparable<PageClass> {
 		if(pageClass != null) 
 		{
 			this.NFP.put(pageClass, nfp);
+			
 		}
 
 	}
 
-	private static PageClass getPageClassFromIDs(Set<PageClass> pageClasses, Set<String> pcID) {
-
+	public static PageClass getPageClassFromIDs(Set<PageClass> pageClasses, Set<String> pcIDPre) {
+		Set<String> pcID = new HashSet<>();
+		Set<String> allPagesID = new HashSet<>();
+		for (PageClass pc: pageClasses) {
+			allPagesID.addAll(pc.getPagesId());
+		}
+		for(String s : pcIDPre) {
+			if (!(s.isEmpty() || s==null) && allPagesID.contains(s.split(".html")[0])){
+				pcID.add(s);
+			}
+		}
 		for(PageClass pc : pageClasses) {
 			if(pc.getPages().size() == pcID.size()) {
 				Boolean equals = true;
@@ -464,12 +502,20 @@ public class PageClass implements Comparable<PageClass> {
 		return null;
 	}
 
+	private Set<String> getPagesId() {
+		return this.pagesID;
+	}
+
 	public int getVariableOptional() {
 		return variableOptional;
 	}
 
 	public int getConstantOptional() {
 		return constantOptional;
+	}
+
+	public Set<String> getRules() {
+		return rules;
 	}
 
 	/*private static Map<PageClass, Set<FixedPoint<String>>> removeDuplicates(Map<PageClass, Set<FixedPoint<String>>> PC2FP) {

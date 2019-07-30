@@ -34,8 +34,9 @@ public class VectorRepository {
 	private boolean containsXPaths(XPath rule) {
 		boolean found = false;
 		for (XPath rule2 : this.getXPaths()) {
-			if (rule2.getRule().compareTo(rule.getRule())==0) {
+			if (rule2.getRule().equals(rule.getRule())) {
 				found = true;
+				return found;
 			}
 		}
 		return found;
@@ -69,24 +70,6 @@ public class VectorRepository {
 			catch (Exception e) {
 				vector = null;
 			}
-			/*//**Ricerca di xpath specifici**
-			if (rule.getRule().toLowerCase().contains("@class")) {
-				System.out.println("RULE TROVATA -> "+rule.getRule());
-				for (NodeList nl : vector.getExtractedNodes()) {
-					if (nl != null) {
-						for(int i = 0 ; i<nl.getLength(); i++) {
-							Node n = nl.item(i);
-							System.out.println(n.getTextContent());
-
-
-						}
-
-					}
-				}
-
-			}
-			//System.out.println("Regola - "+rule);
-			//*******************************/
 			if(vector!=null) {
 				if(!this.containsVector(vector)) {
 					boolean equals = true;

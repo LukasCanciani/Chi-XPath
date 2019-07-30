@@ -1,0 +1,641 @@
+/* ~~~~~~ Glyphicons ~~~~~~~ */
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("../lib/bootstrap/fonts/glyphicons-halflings-regular.eot");
+  src: url("../lib/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../lib/bootstrap/fonts/glyphicons-halflings-regular.woff") format("woff"), url("../lib/bootstrap/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../lib/bootstrap/fonts/glyphicons-halflings-regular.svg#@{icon-font-svg-id}") format("svg"); }
+/* ~~~~~~ Generics ~~~~~~~ */
+body {
+  color: #38343b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background-color: #222222; }
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold; }
+
+h2 {
+  margin: 0; }
+
+h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold; }
+
+h4 {
+  font-size: 14px;
+  margin: 5px 0; }
+
+h6 {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 10px 0 7px 0; }
+
+p {
+  margin: 0;
+  color: #000000; }
+
+a {
+  color: #000000; }
+  a:hover {
+    text-decoration: none;
+    color: #222222; }
+
+.green {
+  color: forestgreen; }
+
+.red {
+  color: red; }
+
+.utility-menu a:hover {
+  color: #fff; }
+
+.main-menu a:hover {
+  color: #ffffff !important;
+  text-decoration: underline !important; }
+
+.nav-menu .selected > a:hover {
+  color: #be2507 !important; }
+
+.nav-menu #preferite, .nav-menu #confronta {
+  cursor: pointer; }
+
+.nav-active a {
+  color: #d12908; }
+
+.section.head {
+  margin-bottom: 10px; }
+
+.info {
+  border-top: 1px solid #000000; }
+
+.btn-primary, .btn-primary:focus {
+  color: #fff;
+  background-color: #d12908;
+  border-color: #d12908; }
+  .btn-primary:hover, .btn-primary:focus:hover {
+    background-color: #a01f06; }
+
+.favourites_remove_all,
+.tocompare_remove_all,
+.is_favourite,
+.is_to_compare {
+  color: #d12908; }
+
+.circle {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #38343b;
+  border-radius: 30px;
+  margin-top: 5px; }
+  .circle .glyphicon-play {
+    position: absolute;
+    font-size: 7px;
+    top: 11px;
+    left: 11px; }
+
+.glyphicon-play {
+  font-size: 5px;
+  top: -2px;
+  margin-right: 5px; }
+
+.badge {
+  padding: 5px;
+  min-width: 20px; }
+
+.title {
+  float: left;
+  width: auto;
+  padding: 10px 35px 10px 15px;
+  background-color: #d12908;
+  font-weight: bold; }
+  .title p {
+    margin-bottom: 0;
+    color: #ffffff; }
+  .title h1 {
+    color: #ffffff; }
+
+.counter {
+  background-color: #222222;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 20px;
+  width: 10px; }
+
+.hit-counter {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0 15px; }
+
+#browse {
+  background: url("http://www.ansa.it/canale_motori/img/dot_gray_3x3.png"); }
+  #browse .section {
+    padding-top: 0px; }
+
+.brand-letter {
+  font-size: 100px;
+  text-align: center;
+  color: #6B6B6B;
+  border-top: 1px solid #6B6B6B;
+  line-height: 50px;
+  margin-top: 10px; }
+  .brand-letter p {
+    font-size: 15px; }
+
+.brand-row {
+  background-color: #E4e4e4;
+  padding: 5px;
+  margin: 5px 0; }
+
+.orange {
+  color: #d12908; }
+
+.model-row {
+  padding: 10px 0; }
+
+.special-container {
+  padding-bottom: 0; }
+
+.brand-container {
+  background-color: #ffffff;
+  padding-top: 10px; }
+
+.brand-container:before,
+.brand-container:after {
+  display: table;
+  content: " "; }
+
+.brand-container:after {
+  clear: both; }
+
+.brand-item {
+  position: relative;
+  float: left;
+  padding: 20px;
+  border: 1px solid #E4e4e4;
+  margin: 0 10px 10px 0;
+  width: 143px;
+  height: 143px; }
+  .brand-item img {
+    position: absolute;
+    width: 50px;
+    bottom: 10px;
+    left: 10px; }
+
+.add-all {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #ffffff;
+  float: left;
+  margin-top: -33px; }
+  .add-all:last-child {
+    border-left: 1px solid #E4e4e4; }
+
+.border, .model-row, .details-row, .version-list-head, .version-row {
+  background-image: linear-gradient(to right, #E4e4e4 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 5px 1px;
+  background-repeat: repeat-x; }
+
+.details-row {
+  background-image: linear-gradient(to right, #E4e4e4 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 5px 1px;
+  background-repeat: repeat-x;
+  padding: 3px 0; }
+  .details-row:first-child {
+    margin-top: 15px; }
+  .details-row:last-child {
+    background-image: none; }
+
+#container-sheets {
+  margin: 0 40px; }
+  #container-sheets .details-row {
+    color: #5a5a5a; }
+
+.prize {
+  font-size: 18px;
+  font-weight: bold; }
+
+.description {
+  margin: 20px 0; }
+
+.section-head {
+  border-top: 2px solid #d12908;
+  padding: 10px 0;
+  margin-top: 25px; }
+  .section-head h4 {
+    color: #d12908;
+    font-weight: bold; }
+
+.gallery img {
+  width: 100%;
+  margin-bottom: 20px; }
+
+.number-enfasi {
+  color: #d12908; }
+
+.nav-tabs {
+  text-align: right; }
+
+.nav-tabs > li > a {
+  display: block;
+  font-size: 12px;
+  line-height: 5px;
+  font-weight: bold;
+  background: #d12908;
+  color: #ffffff;
+  padding: 20px 13px; }
+
+#tab-header {
+  margin-left: 10px; }
+  #tab-header .tab-share {
+    background-color: transparent !important; }
+    #tab-header .tab-share .bt-share {
+      position: absolute;
+      bottom: 10px;
+      left: 5px;
+      width: 29px;
+      height: 29px;
+      background: url(http://ansa.it/canale_motori/img/bt_share_gray_29x29.png) no-repeat;
+      border: none; }
+  #tab-header .tab {
+    width: 180px;
+    position: relative;
+    text-align: center;
+    background-color: #6B6B6B;
+    float: left;
+    margin-right: 10px;
+    padding: 5px 15px 10px 15px;
+    min-height: 57px; }
+    #tab-header .tab a, #tab-header .tab p {
+      color: #ffffff; }
+    #tab-header .tab h1 {
+      color: #ffffff; }
+  #tab-header .tab.active {
+    background-color: #d12908;
+    padding: 10px 15px 10px 15px;
+    min-height: 62px; }
+
+.video-content {
+  position: relative;
+  overflow: hidden; }
+  .video-content .glyphicon-play {
+    position: absolute;
+    top: 3px;
+    left: 15px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    text-shadow: 0 0 5px white;
+    border: 5px solid white;
+    border-radius: 20px;
+    padding: 3px 3px 6px 7px; }
+
+#carmodel-detail .photo-original, #car-detail .photo-original {
+  width: 100%; }
+
+#variant-models .item {
+  padding: 10px 0;
+  margin-top: 5px;
+  background-color: #E4e4e4; }
+
+#tocompare .fixed {
+  position: fixed;
+  background-color: #ffffff;
+  width: 621px;
+  top: 0;
+  z-index: 9999; }
+#tocompare .fixed-head {
+  position: fixed;
+  background-color: #ffffff;
+  top: 45px;
+  z-index: 9999;
+  width: 621px;
+  border-bottom: 5px solid #f4f4f4; }
+#tocompare .version-row {
+  position: relative; }
+#tocompare .version-row-compared {
+  font-weight: bold;
+  width: 100%;
+  background-color: #fee0da;
+  border-right: 2px solid #d12908; }
+#tocompare .glyphicon-align-justify {
+  display: none;
+  position: absolute;
+  left: 35%;
+  top: 30%;
+  font-size: 15px;
+  color: #979797; }
+#tocompare #sortable .version-row {
+  width: 621px; }
+
+.bt-share-carmodel {
+  bottom: 0; }
+
+#embed {
+  background-color: #ffffff; }
+  #embed #hits h3 {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 10px 0 7px 0; }
+  #embed #right-side .wrapper {
+    margin: 10px 20px;
+    padding: 15px 0 5px 0; }
+  #embed .share {
+    display: block;
+    float: left; }
+  #embed .info .bt-share {
+    position: absolute;
+    top: 10px;
+    width: 16px;
+    height: 15px;
+    display: block;
+    float: left;
+    background: url("http://ansa.it/sito/img/sprite.png") no-repeat 0 0;
+    text-indent: 150%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0; }
+
+#hits_list figure {
+  width: auto;
+  height: 275px;
+  padding: 10px;
+  margin-bottom: 25px;
+  position: relative; }
+  #hits_list figure img {
+    width: 100%; }
+  #hits_list figure .wrapper {
+    position: relative; }
+  #hits_list figure .bt-share {
+    position: absolute;
+    bottom: -15px;
+    left: 20px;
+    width: 29px;
+    height: 29px;
+    background: url("../img/ico-share-white-29x29.png") no-repeat;
+    border: none; }
+#hits_list figcaption {
+  padding: 15px 10px; }
+  #hits_list figcaption h3 {
+    margin-bottom: 10px; }
+  #hits_list figcaption p {
+    font-size: 10px;
+    color: #5a5a5a; }
+  #hits_list figcaption .link {
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    left: 20px; }
+    #hits_list figcaption .link a {
+      font-weight: normal;
+      color: #d12908; }
+
+#hits-detail h3, #hits-detail p {
+  margin-left: 15px; }
+#hits-detail .model-row > .grid-row > div:not(:last-child) {
+  margin-top: 20px; }
+
+#hits_list-header {
+  position: relative;
+  padding: 35px;
+  text-align: center; }
+  #hits_list-header .star {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: -45px;
+    left: 0px; }
+  #hits_list-header h1 {
+    font-size: 34px;
+    font-weight: 300; }
+  #hits_list-header .glyphicon-star {
+    font-size: 35px;
+    background-color: white;
+    color: #d12908;
+    padding: 15px;
+    border-radius: 40px; }
+
+#left-side .section .image {
+  position: relative;
+  margin-bottom: 10px; }
+#left-side .section .content {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  padding: 10px 40px 10px 15px;
+  float: left;
+  width: auto;
+  background-color: #ffffff; }
+
+#right-side .head {
+  background-color: #38343b;
+  color: #ffffff;
+  padding: 5px; }
+  #right-side .head h1 {
+    font-size: 12px;
+    text-transform: uppercase; }
+  #right-side .head a {
+    color: #ffffff;
+    font-size: 9px; }
+#right-side .content {
+  margin: 10px 0; }
+#right-side .item {
+  position: relative; }
+#right-side .link-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 18px; }
+#right-side #links .content h1 {
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: normal; }
+#right-side #links .content .item {
+  margin: 15px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #E4e4e4; }
+#right-side #hits .item {
+  background-color: #E4e4e4; }
+#right-side #hits .description {
+  margin: 5px 0; }
+#right-side .description {
+  padding: 5px;
+  position: relative; }
+  #right-side .description .arrow {
+    position: absolute;
+    top: 45%;
+    left: -13px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #E4e4e4 transparent transparent; }
+
+#prezziauto .bt-share {
+  position: absolute;
+  bottom: -15px;
+  left: 20px;
+  width: 29px;
+  height: 29px;
+  background: url("../img/share.png") no-repeat;
+  border: none; }
+
+#version-results-list {
+  margin-top: -40px; }
+  #version-results-list .brand-row {
+    margin-top: 40px; }
+
+.version-list-head > * {
+  margin: 8px 0;
+  font-size: 12px;
+  color: #222222;
+  text-align: center; }
+
+.version-list-head {
+  padding: 30px 0 0; }
+  .version-list-head .version {
+    text-align: left; }
+
+.version-row {
+  padding: 10px 0;
+  font-size: 13px;
+  color: gray;
+  text-align: center; }
+  .version-row:hover {
+    background-color: #E4e4e4; }
+  .version-row .cell-version {
+    font-weight: 600;
+    text-align: left; }
+  .version-row span {
+    font-weight: normal; }
+
+.grid-row .glyphicon-chevron-down.order,
+.grid-row .glyphicon-chevron-up.order {
+  font-size: 8px;
+  color: grey;
+  position: absolute;
+  top: 32px;
+  left: 45%;
+  display: none; }
+.grid-row div {
+  cursor: pointer; }
+
+.glyphicon-align-left,
+.glyphicon-heart {
+  font-size: 17px; }
+
+@media screen and (max-width: 992px) {
+  #hits_list figure {
+    height: 250px; } }
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 15px; }
+
+  h3 {
+    font-size: 12px; }
+
+  #car-detail .add-all {
+    margin-top: -30px; }
+    #car-detail .add-all .glyphicon {
+      line-height: 11px; }
+
+  #hits_list figure {
+    height: auto;
+    margin-bottom: 5px; }
+
+  #hits_list figcaption .link {
+    text-align: left;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: 10px; }
+
+  #confronta-pg, #preferite-pg {
+    position: relative; }
+    #confronta-pg span, #preferite-pg span {
+      position: absolute;
+      top: 8px;
+      left: 100px; }
+
+  .prize {
+    font-size: 12px; }
+
+  #tocompare .fixed {
+    width: auto; }
+  #tocompare .nav-tabs li a {
+    padding: 20px 5px; }
+
+  .nav-tabs li a {
+    padding: 20px 12px; }
+
+  #tocompare .fixed-head {
+    width: 290px; }
+
+  .hit-counter {
+    font-size: 16px; }
+
+  .brand-item {
+    margin: 0;
+    width: 145px;
+    height: 135px; }
+
+  .brand-letter {
+    font-size: 60px;
+    line-height: 40px;
+    padding-bottom: 20px; }
+
+  .glyphicon-align-left, .glyphicon-heart {
+    font-size: 10px; }
+
+  .version-row {
+    font-size: 8px;
+    color: #000000; }
+    .version-row .grid-row > .cell-version {
+      font-size: 12px; }
+
+  .version-list-head .grid-row div {
+    font-size: 11px;
+    -ms-transform: rotate(-90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-90deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-90deg); }
+  .version-list-head .grid-row div.cell-version, .version-list-head .grid-row div.cell-icons-1 {
+    font-size: 9px;
+    -ms-transform: rotate(0deg) !important;
+    /* IE 9 */
+    -webkit-transform: rotate(0deg) !important;
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg) !important; }
+
+  .version-list-head .grid-row div {
+    line-height: 9px; }
+  .version-list-head .grid-row div.version, .version-list-head .grid-row div.icons-1 {
+    font-size: 10px;
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg); }
+  .version-list-head .tooltip, .version-list-head .glyphicon-chevron-down {
+    display: none !important; }
+
+  #tab-header .tab {
+    width: auto; }
+    #tab-header .tab h1 {
+      font-size: 13px; }
+    #tab-header .tab p {
+      font-size: 10px; }
+
+  #container-sheets {
+    margin: 0 15px; }
+
+  .video-content .glyphicon-play {
+    top: 3px;
+    left: 15px;
+    font-size: 8px; } }
+
+/*# sourceMappingURL=style.css.map */

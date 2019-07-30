@@ -1,21 +1,21 @@
 package xfp.generation;
 
 
-import static it.uniroma3.hlog.HypertextualLogger.getLogger;
+//import static it.uniroma3.hlog.HypertextualLogger.getLogger;
 import static xfp.generation.Path.EMPTY_PATH;
 
-import java.util.Collection;
-import java.util.Iterator;
+//import java.util.Collection;
+//import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import java.util.stream.IntStream;
+//import java.util.stream.IntStream;
 
 import org.w3c.dom.Node;
 
-import it.uniroma3.hlog.HypertextualLogger;
+//import it.uniroma3.hlog.HypertextualLogger;
 import it.uniroma3.util.Indenter;
 
-import static it.uniroma3.hlog.Level.TRACE;
+//import static it.uniroma3.hlog.Level.TRACE;
 
 /**
  * A simple algorithm to explore all paths leading to a <EM>target</EM> 
@@ -31,7 +31,7 @@ import static it.uniroma3.hlog.Level.TRACE;
  */
 public class BackwardTreeExplorer {
 
-    static final private HypertextualLogger log = getLogger();
+  //  static final private HypertextualLogger log = getLogger();
 
     final private Set<Path> paths; // set of paths accumulated so far
 
@@ -42,7 +42,8 @@ public class BackwardTreeExplorer {
 
     private Indenter ind;
 
-    private int pathCounter; // how many path have been evaluated so far?
+    @SuppressWarnings("unused")
+	private int pathCounter; // how many path have been evaluated so far?
     
     public BackwardTreeExplorer(XPathFragment fragment) {
         this.range  = fragment.getRange();
@@ -61,11 +62,11 @@ public class BackwardTreeExplorer {
         if (!this.fragment.isSuitableTarget(target))
             throw new IllegalArgumentException("An unsuitable target node has been provided: "+target);
         this.paths.clear(); /* accumulate new paths */
-        if (log.isLoggable(TRACE)) log.trace("Looking for pivots at max distance "+this.range+" from target node:");
+/*        if (log.isLoggable(TRACE)) log.trace("Looking for pivots at max distance "+this.range+" from target node:");
         if (log.isLoggable(TRACE)) log.trace(target);
         if (log.isLoggable(TRACE)) log.trace("<BR/>");
-        this.explore(target, EMPTY_PATH, this.range);
-        if (log.isLoggable(TRACE)) log.trace(ind+"<EM>Overall</EM>, evaluated "+ this.pathCounter + " paths");
+ */       this.explore(target, EMPTY_PATH, this.range);
+//        if (log.isLoggable(TRACE)) log.trace(ind+"<EM>Overall</EM>, evaluated "+ this.pathCounter + " paths");
         return this.paths;
     }
 
@@ -73,49 +74,51 @@ public class BackwardTreeExplorer {
             Node current,   // current node, exploring away from the start node
             Path path,      // path that leads here
             int distance) { // #steps still available
-        if (log.isLoggable(TRACE)) log.trace(ind+"current path="+path);
+  //      if (log.isLoggable(TRACE)) log.trace(ind+"current path="+path);
 
-        if (this.fragment.isSuitablePivot(current)) {
-            if (log.isLoggable(TRACE)) log.trace(ind+"Found a suitable pivot, "+current);
-            if (log.isLoggable(TRACE)) log.trace(ind+"<EM>Saving this path</EM>", path.getXPathExpression());
+       if (this.fragment.isSuitablePivot(current)) {
+       // if(true) {
+//            if (log.isLoggable(TRACE)) log.trace(ind+"Found a suitable pivot, "+current);
+ //           if (log.isLoggable(TRACE)) log.trace(ind+"<EM>Saving this path</EM>", path.getXPathExpression());
             this.paths.add(path);
             return;
         }
 
         /* steps still available? */
         if (distance > 0) {
-            if (log.isLoggable(TRACE)) log.trace(ind+"Expanding path... (current distance="+distance+")");
+ //           if (log.isLoggable(TRACE)) log.trace(ind+"Expanding path... (current distance="+distance+")");
 
             /* move one step farther away to reach other pivots */			
             final Set<XPathStep> available = fragment.availableTo(current);
-            logSteps(available);
+ //           logSteps(available);
             for (XPathStep step : available) {
                 ind.inc();
-                if (log.isLoggable(TRACE)) log.trace("<BR/>");
-                if (log.isLoggable(TRACE)) log.trace(ind+"\nTry adding "+step);
+  //              if (log.isLoggable(TRACE)) log.trace("<BR/>");
+    //            if (log.isLoggable(TRACE)) log.trace(ind+"\nTry adding "+step);
                 /* move backward looking for a suitable pivot */
                 final Node from = step.getFrom();
 
                 /* check it is not chasing its own footsteps */
                 // e.g., for excluding a LeftElement step when we just moved to Right
                 if (path.hasKnot()) {
-                    if (log.isLoggable(TRACE)) log.trace(ind+"<EM>Path cycle - giving up adding: "+path+"+"+step+"</EM>");
+      //              if (log.isLoggable(TRACE)) log.trace(ind+"<EM>Path cycle - giving up adding: "+path+"+"+step+"</EM>");
                 } else 
                 /* wherever we're going, there's a shorter path to start from */
                 if (this.fragment.isSuitableTarget(from)) {
-                    if (log.isLoggable(TRACE)) log.trace(ind+"Met another suitable target\n"+from);
-                    if (log.isLoggable(TRACE)) log.trace(ind+"<EM>Giving up this as shorter paths are preferred</EM>");
+//                    if (log.isLoggable(TRACE)) log.trace(ind+"Met another suitable target\n"+from);
+//                    if (log.isLoggable(TRACE)) log.trace(ind+"<EM>Giving up this as shorter paths are preferred</EM>");
                 } else
                     this.explore(from, path.addFirst(step), distance - deltaDistance(from,current));
-                if ( (this.pathCounter++ % 10 == 0) && log.isLoggable(TRACE)) 
-                    log.trace(ind+"Evaluated "+ this.pathCounter + " paths");
+              
+//                if ( (this.pathCounter++ % 10 == 0) && log.isLoggable(TRACE)) 
+//                    log.trace(ind+"Evaluated "+ this.pathCounter + " paths");
                 ind.dec();
             }
         }
     }
 
-    final private void logSteps(final Collection<XPathStep> available) {
-        if (!log.isLoggable(TRACE)) return;
+/*    final private void logSteps(final Collection<XPathStep> available) {
+//        if (!log.isLoggable(TRACE)) return;
         final int size = available.size();
         if (size>0) {
             log.trace(ind+"Available steps ("+size+"):");
@@ -126,7 +129,7 @@ public class BackwardTreeExplorer {
         } else {
             log.trace(ind+"<EM>No other steps are available</EM>");
         }
-    }
+    }*/
 
     private int deltaDistance(Node from, Node to) {
         /* Up or Down? it counts 1 for not-only sons */

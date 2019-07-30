@@ -16,6 +16,11 @@ import it.uniroma3.fragment.RuleInference;
 import static it.uniroma3.fragment.step.CaseHandler.*;
 
 public class RulesRepository {
+
+
+	private Set<Page> pages;
+
+	private Set<XPath> xpaths;
 	public RulesRepository(Set<Page> pages ,String[] XFParguments) {
 
 
@@ -36,6 +41,14 @@ public class RulesRepository {
 		this.pages = pages;
 		rulesGeneration(new ChiFragmentSpecification());
 	}
+	
+	public RulesRepository(Set<Page> pages, int range) {
+		this.pages = pages;
+		ChiFragmentSpecification spec = new ChiFragmentSpecification();
+		spec.setRange(range/2);
+		rulesGeneration(spec);
+	}
+
 
 	private void rulesGeneration(ChiFragmentSpecification spec) {
 		Map<Page,Set<String>> p2x = new HashMap<Page,Set<String>>();
@@ -44,7 +57,9 @@ public class RulesRepository {
 		Set<String> diffXPaths = new HashSet<String>();
 		for(Page sample : this.pages) {
 			System.out.println("Generando xPaths sulla pagina"+sample.getUrl()+" con id: "+sample.getId());
+
 			final Set<String> rules = engine.inferRules(sample.getDocument()); 
+			
 			for (String str : rules) {
 				if(!diffXPaths.contains(str))
 					diffXPaths.add(str);
@@ -90,9 +105,9 @@ public class RulesRepository {
 					id2name.put(id, pageName);
 				}
 				else {
-					String pageName = p.getUrl().split("/")[5];
+					/*String pageName = p.getUrl().split("/")[5];
 					String id = "id"+pageName;
-					id2name.put(id, pageName);
+					id2name.put(id, pageName);*/
 				}
 			}
 			Set<String> rules = null;
@@ -102,6 +117,8 @@ public class RulesRepository {
 				System.out.println("Rule generation failure");
 				rules = new HashSet<>();
 			} 
+			sample.setDataRules(rules);
+			
 			for (String str : rules) {
 				if(!diffXPaths.contains(str))
 					diffXPaths.add(str);
@@ -125,10 +142,6 @@ public class RulesRepository {
 		this.xpaths = xpaths;
 
 	}
-
-	private Set<Page> pages;
-
-	private Set<XPath> xpaths;
 
 
 

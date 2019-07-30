@@ -1,6 +1,6 @@
 package xfp;
 
-import static it.uniroma3.hlog.HypertextualLogger.getLogger;
+//import static it.uniroma3.hlog.HypertextualLogger.getLogger;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,7 +11,7 @@ import java.util.Set;
 
 import org.apache.commons.cli.*;
 
-import it.uniroma3.hlog.HypertextualLogger;
+//import it.uniroma3.hlog.HypertextualLogger;
 import xfp.fixpoint.FixedPoint;
 
 public class Main {
@@ -25,7 +25,7 @@ public class Main {
 		System.setProperty("java.util.logging.manager", "it.uniroma3.hlog.HypertextualLogManager");     
 	}
 
-	static final protected HypertextualLogger log = getLogger(); /* this *after* previous static block */
+//	static final protected HypertextualLogger log = getLogger(); /* this *after* previous static block */
 
 	protected String datasetName;
 	protected String domainName;
