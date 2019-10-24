@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<site>index1ap3pc</site>
+	<site>list1ap</site>
+	<site>listNap</site>
+	<site>list1apPagination</site>
+	<site>menu+list</site>
+	<site>menuNap</site>
+	<site>menusingleton</site>
+	<site>pagination1ap</site>
+	<site>paginationNap</site>
+	<site>selfrefNap</site>
+</config>

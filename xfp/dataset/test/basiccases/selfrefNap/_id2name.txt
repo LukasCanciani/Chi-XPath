@@ -1,0 +1,3 @@
+idAP1	index1.html
+idAP2	index2.html
+idAP3	index3.html

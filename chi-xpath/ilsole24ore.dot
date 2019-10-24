@@ -1,0 +1,268 @@
+graph ilsole24ore {
+graph [ratio=fill];
+node [label="\N", fontsize=20, shape=rect];
+0[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">0</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/3.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/1.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">12</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/2.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">7</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/0.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+1[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">1</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">0</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/3.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/1.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">3</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/2.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/0.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+2[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">2</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">1</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/3.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">12</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/2.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">7</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/0.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">10</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/1.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+3[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">3</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">1</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/3.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">12</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/2.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">9</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/1.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/0.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+4[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">4</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">1</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/3.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">3</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/2.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/0.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">10</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/1.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+5[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">5</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">1</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/3.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">8</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/1.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/2.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/0.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+6[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">6</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">2</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/3.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/2.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/0.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">10</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/1.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+7[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">7</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">12</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/2.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">4</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/3.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/1.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/0.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+8[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">8</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">5</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/3.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/1.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/2.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/0.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+9[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">9</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">12</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/2.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">6</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/3.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/0.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">10</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/1.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+10[label=<<TABLE ALIGN="LEFT" CELLBORDER= "1" BORDER="0">
+<TR><TD BORDER="0" ALIGN = "CENTER" COLSPAN="2">10</TD></TR>
+<TR>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">11</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/3.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/1.PNG"/></TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/2.PNG"/></TD></TR>
+</TABLE>
+</TD>
+<TD>
+<TABLE BORDER="0" CELLBORDER = "1">
+<TR><TD BORDER="0" COLSPAN="2">7</TD></TR>
+<TR><TD fixedsize="true" width="100" height="100"><IMG SCALE="FALSE" SRC="C:\Users\Lukas\git\Chi-Xpath\chi-xpath/dataset/test/ilsole24ore/1ap1submen2art/images/0.PNG"/></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>> ];
+
+0 -- 2
+1 -- 0
+1 -- 2
+1 -- 4
+3 -- 2
+4 -- 2
+5 -- 2
+5 -- 3
+5 -- 4
+6 -- 2
+6 -- 4
+6 -- 9
+7 -- 0
+7 -- 2
+7 -- 3
+7 -- 9
+8 -- 0
+8 -- 1
+8 -- 2
+8 -- 3
+8 -- 4
+8 -- 5
+8 -- 6
+8 -- 7
+8 -- 9
+8 -- 10
+9 -- 2
+10 -- 0
+10 -- 2
+}

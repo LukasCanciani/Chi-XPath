@@ -1,0 +1,10 @@
+bin
+target
+.classpath
+.project
+.settings/
+log
+libs/it
+libs/org
+output/*
+tmp/

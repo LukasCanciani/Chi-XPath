@@ -1,0 +1,18 @@
+/*  
+** Copyright @	4w MarketPlace
+** support: daniele.rescigno AT 4wmarketplace DOT com
+*/
+html, body{margin:0px;padding:0px;}
+#mirago{width:300px;height:250px;display:block;font-family:arial, helvetica, sans-serif;font-size:75%;overflow:hidden;}
+#mirago a:link,#mirago a:visited,#mirago a:hover,#mirago a:active{text-decoration:none;color:#000;}
+#mirago #h{display:block;font-size:x-small;height:12px;border-bottom:solid 1px #cecece;margin-left:2px;margin-right:10px;margin-bottom:4px; padding-bottom:3px;}
+#mirago #h a{float:right;}
+#mirago .a{width:296px;height:70px;display:inline-block;text-decoration:none;overflow:hidden;margin:4px 2px;}
+#mirago .a:hover{border:solid 1px #E4E4E4;background-color:#F4F4F4;margin:2px 0px;padding:1px;}
+#mirago .a .i{width:70px;height:70px;}
+#mirago .a .i img{border:none;width:70px;height:70px;}
+#mirago .a .i,#mirago .a .x{float:left;}
+#mirago .a .x{width:220px;height:70px;overflow:hidden;margin-left:5px;}
+#mirago .a .t{height:15px;overflow:hidden;font-weight:700;}
+#mirago .a .d{height:42px;overflow:hidden;font-size:95%;}
+#mirago .a .u{height:14px;overflow:hidden;color:green;font-size:smaller;}

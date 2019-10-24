@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+	<head> 
+		<meta charset="utf-8">
+		<title> - Olfathèque</title>
+		<!-- Metas -->
+   		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<meta name="keywords" content="olfatheque, cinquième, sens, cinquième sens, perfuse, training, olfactive, search" /> 
+		<meta name="description" content="The Olfatheque, motor search specialized in perfumes." /> 
+		<!-- Icons -->
+		<link rel="shortcut icon" type="image/x-icon" href="template/img/favicon_olfatheque.ico" /> 
+		<link rel="icon" type="image/x-icon" href="template/img/favicon_olfatheque.ico" />
+		<!-- Mains styles -->
+		<link rel="stylesheet" type="text/css" href="template/css/jquery-ui-1.8.5.custom.css" /> 
+		<link rel="stylesheet" type="text/css" href="template/css/bootstrap.min.css" /> 
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" /> 
+		<link rel="stylesheet" type="text/css" href="template/css/icones_type.css" /> 
+		<link rel="stylesheet" type="text/css" href="template/css/advanced_search.css" /> 
+		<link rel="stylesheet" type="text/css" href="template/css/fileuploader.css" /> 
+		<link rel="stylesheet" type="text/css" href="template/css/inscription.css" />
+		<link rel="stylesheet" type="text/css" href="template/css/imgareaselect-animated.css" /> 
+	 	<link rel="stylesheet" type="text/css" href="template/css/perso_tinymce.css" /> 
+	 	<link rel="stylesheet" type="text/css" href="template/css/nouislider.min.css" /> 
+	 	<link rel="stylesheet" type="text/css" href="template/css/nouislider.pips.css" /> 
+	 	<link rel="stylesheet" type="text/css" href="template/css/nouislider.tooltips.css" /> 
+	 	<link rel="stylesheet" type="text/css" href="template/css/datepicker/datepicker.css" /> 
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700' type='text/css'>
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600,700'  type='text/css'>
+		<link rel="stylesheet" type="text/css" href="template/normalize.css" />
+
+
+		<!-- Custom styles -->
+		<link rel="stylesheet" type="text/css" href="template/global.css" />
+		<link rel="stylesheet" type="text/css" href="template/css/template.css" />
+		<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set._.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");$.src="//v2.zopim.com/?40bi6ysYBuyO1GNRpqfPh6dOizPoVzGA";z.t=+new Date;$.type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+</script>
+
+	
+<!-- Google Analytics -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-12142688-2']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+		<!-- Librairies -->
+		<script type="text/javascript" src="template/javascript/jquery-1.12.3.min.js"></script>
+		<script type="text/javascript" src="template/javascript/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+		<script type="text/javascript" src="template/javascript/jquery-ui-1.8.5.custom.min.js"></script>
+		<script type="text/javascript" src="locale/fr_FR/jquery.ui.datepicker-fr.js"></script>
+		<script type="text/javascript" src="template/javascript/jquery.maphilight.min.js"></script>
+		<script type="text/javascript" src="template/javascript/parsley.min.js"></script>
+		<script type="text/javascript" src="template/javascript/nouislider.min.js"></script>
+
+		
+		<script type="text/javascript" src="template/javascript/datepicker/eye.js"></script>
+		<script type="text/javascript" src="template/javascript/datepicker/utils.js"></script>
+		<script type="text/javascript" src="template/javascript/datepicker/datepicker.js"></script>
+
+		<!-- Custom js -->
+		<script type="text/javascript" src="template/javascript/header.js"></script>
+		<script type="text/javascript" src="template/javascript/functions.js"></script>
+		<script type="text/javascript" src="template/javascript/template.js"></script>
+
+		
+		<!-- Socials -->
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		<script type="text/javascript">
+		  (function() {
+		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		    po.src = 'https://apis.google.com/js/platform.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+				<script type="text/javascript">
+			var gettext_afficher		= "Show";
+			var gettext_cacher			= "Hidden";
+			
+			document.onkeydown=function(evt){
+        	var keyCode = evt ? (evt.which ? evt.which : evt.keyCode) : event.keyCode;
+				if(keyCode == 13)
+				{
+					//your function call here
+					document.search.submit();
+				}
+    		}
+		</script>	
+				
+		
+		
+	</head>
+
+	<body id="page" class="header-fixed-top">
+		<div class="container">
+			
+			<!-- Sidebars -->
+			<!-- SIDEBAR-MENU et SIDEBAR-USER-->
+<script type="text/javascript">
+	var trad =
+	[
+		"This mail address already exists",
+		'Passwords not matched',
+		'Bad phone number format',
+		'Bad postal code format',
+		'Bad birthday date format',
+		'Confirm your password'
+	]
+
+</script>
+<div id="sidebar-menu">
+	<div id="sidebar-menu-content">
+		<div class="hidden-tablet logo-sidebar"><a href="index.php"><img src="template/img/olfatheque-icon.png" alt="logo olfatheque"></a></div>
+		<ul>
+				<li><a href="/">Search</a></li>
+				<li><a href="/recherche-avancee.php">Advanced search</a></li>
+				<li><a href="/recherche.php?d=parfum&term=tout">Perfumes</a></li>
+				<li><a href="/recherche.php?d=matiere&term=tout">Raw materials</a></li>
+				<li><a href="/recherche.php?d=parfumeur&term=tout">Perfumers</a></li>
+				<li><a href="/recherche.php?d=famille-facette&term=tout">Families / Facets</a></li>			
+				<li><a href="/recherche.php?page=lister_marque&term=tout">Brands</a></li>
+				<li><a href="/recherche.php?d=histoire&term=tout">Perfume's  history</a></li>
+				<li><a href="/creer-parfum">Submit a perfume</a></li>
+				<li><a href="/recherche.php?d=glossaire&term=tout">Glossary</a></li>
+				<li><hr></li>
+				<li><a href="http://www.cinquiemesens.com?lang=en" target="_blank">Cinquième Sens</a></li>
+				<li><a href="http://www.cinquiemesens.com/training" target="_blank">Training and Workshops</a></li>
+				<li><hr></li>
+				<li><a href="/contact">Contact</a></li>
+				<li><a href="/faq">Help</a></li>
+				<li><a href="fiche-article-41-Mentions-legales.html">Legale notice</a></li>
+		</ul>
+	</div>		
+	<div class="hidden-phone">
+		<div class="user-bar">
+<a href="#" data-connect="offline" id="sidebar-user-toggle-mobile" class=""></a>
+
+	
+	<div id="bloc-langue-content"><div id="lang-drop" class="dropdown">
+			<button class="lang-selector" type="button" data-toggle="dropdown">en</button><ul class="dropdown-menu"><li><a class="lang-selected" href="index.php?lang=fr" alt="Français">fr</a></li><li><a class="lang-selected" href="index.php?lang=en" alt="Anglais">en</a></li><li><a class="lang-selected" href="index.php?lang=it" alt="Italien">it</a></li></ul></div> </div>	<div class="bloc-social">
+		<ul>
+			<li>
+				<a href="#"><i class="fa fa-google-plus"></i></a>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-facebook"></i></a>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+			</li>
+		</ul>
+	</div>
+</div>	</div>
+</div>
+<div id="sidebar-user">
+	<div id="sidebar-user-content">
+			</div>
+</div>
+<div id="mobile-mask"></div>
+			<!-- Global -->
+			<div class="main-content">
+				<div class="content">
+					<!-- Header -->
+					<div id="header">
+
+						<!--TOP NAV BUTTONS -->
+
+<a href="#" data-toggle=".container" id="sidebar-menu-toggle">
+	<span class="bar"></span>
+	<span class="bar"></span>
+	<span class="bar"></span>
+</a>
+<div id="bloc-user">
+	
+	<div id="bloc-langue-content"><div id="lang-drop" class="dropdown">
+			<button class="lang-selector" type="button" data-toggle="dropdown">en</button><ul class="dropdown-menu"><li><a class="lang-selected" href="index.php?lang=fr" alt="Français">fr</a></li><li><a class="lang-selected" href="index.php?lang=en" alt="Anglais">en</a></li><li><a class="lang-selected" href="index.php?lang=it" alt="Italien">it</a></li></ul></div> </div>	<a href="#" data-toggle=".container" data-connect="offline" id="sidebar-user-toggle" class=""></a>
+
+</div>
+						<div id="logo-olfatheque">
+							<a href="index.html" ><img width="200" style="border: 0;" alt="Logo de l'Olfathèque" src="template/olfatheque-red.png"/></a>
+						</div>
+
+						<div>
+							<form id="global-search-form" action="recherche.php" method="get" name="search">
+								<input type="hidden" name="d" value="tout" />
+								
+								<input id="global-search" class="search-input" placeholder="Search over 5841 perfumes..." type="text" name="term" value=""  />
+								<button class="search-submit" type="submit"> </button>
+							</form>
+						</div>
+
+						<div id="global-autocomplete"></div>
+						
+					</div>
+					
+					<!-- Content -->
+					<div>
+						<style type="text/css">
+	
+	h1, h2{
+		margin: 5px;
+		text-align: center;
+	}
+	h3{
+		text-align: left;
+		margin: 15px 15px 15px -5px;
+	}
+	
+	.edit{
+		position: absolute;
+
+		display: block;
+		top: 15px;
+		right: 50px;
+		width: 20px;
+		height: 20px;
+	}
+	.delete{
+		position: absolute;
+		display: block;
+		top: 15px;
+		right: 15px;
+		width: 20px;
+		height: 20px;
+	}
+</style>
+<script type="text/javascript">
+	$(function(){
+		$(".edit").button({
+            icons: {
+                primary: "ui-icon-gear"
+            },
+            text: false
+        });
+		$(".delete").button({
+            icons: {
+                primary: "ui-icon-trash"
+            },
+            text: false
+        });
+
+		var req;
+		var canGet = true;
+		var f = {
+			showMoreP : function(obj, dest, ajax)
+			{
+				if(canGet == true){
+					canGet = false;
+
+					if (typeof  ($(obj).attr("clean")) != 'undefined' && ($(obj).attr("clean")) == 'true' )
+					{
+						canGet = true;
+						var max = parseInt($(dest+" > ul > li").length);
+						$(dest+" > ul > li").slice(-(max - 3)).remove();
+						$(obj).text('Show more perfumes');
+						$(obj).removeAttr("clean");
+						var inst = $(obj).attr("perfume-inst", 3);
+						return false;
+					}
+					var id = $(obj).attr("data-perfume");
+					var inst = $(obj).attr("perfume-inst");
+
+					if(typeof req != 'undefined' && req != null){
+						req.abort();
+					}
+
+					req = $.ajax
+					({
+						type: "POST",
+						url: "index.php",
+						data: 	{"showMore": ajax, "id" : id, "inst" : inst},
+						success : function(response)
+						{
+							canGet = true;
+							if (response != -1) {
+								response = JSON.parse(response);
+								var max = parseInt($(obj).attr("perfume-max"));
+								inst = parseInt(inst);
+								inst = inst + 6
+								if (inst >= max)
+								{
+									inst = max;
+									add = parseInt(response.length);
+									$(obj).text('Show less perfumes');
+									$(obj).attr("clean", "true");
+								}
+								$(obj).attr("perfume-inst", inst);
+								for(var i = 0; i < response.length; i++) {
+									$(dest + " > ul").append("<li>" + response[i]['img'] + "<div class='col-xs-8 list-product-content'><h3>" + response[i]['url'] + "</h3><h4>" + response[i]['entreprise'] + "</h4><ul class='tags'><li class='famille'><img class='round-f' src='" + (((response[i]['famille']) != ""  && (response[i]['famille-na']) != "default" ) ? 'uploads/famille_facette/famille-' + (response[i]['id-fa']) + '-P.jpg' : 'uploads/default/famille-facette.jpg') + "' alt='Family' title='" + response[i]['famille'] + "' ><i class='famille-letter-plus'>" + response[i]['acro'] +"</i></li><li class='type type-edt'>" + response[i]['type'] + "</li><li class='genre genre-homme'>" + response[i]['cible'] + "</li></ul><div class='clearfix'></div><hr><p><b>KEYWORDS</b></p><ul class='keywords'>" + response[i]['tags'] + "</ul></div></li>")
+								}
+								Olfatheque.setTotalClicks();
+
+							}
+							canGet = true;
+						}
+					});
+
+
+				}
+			},
+			showMoreMatiere : function(obj, dest, ajax) {
+				if (canGet == true) {
+					canGet = false;
+					if (typeof  ($(obj).attr("clean")) != 'undefined' && ($(obj).attr("clean")) == 'true') {
+						canGet = true;
+						var max = parseInt($(dest + " > ul > li").length);
+						$(dest + " > ul > li").slice(-(max - 4)).remove();
+						$(obj).text('Show more materials');
+						$(obj).removeAttr("clean");
+						var inst = $(obj).attr("matiere-inst", 4);
+						return false;
+					}
+					var id = $(obj).attr("data-matiere");
+					var inst = $(obj).attr("matiere-inst");
+
+					if(typeof req != 'undefined' && req != null){
+						req.abort();
+					}
+
+					var req = $.ajax
+					({
+						type: "POST",
+						url: "index.php",
+						data: {"showMore": ajax, "id": id, "inst": inst},
+						success: function (response) {
+							//console.log(response);
+							if (response != -1) {
+								response = JSON.parse(response);
+								var max = parseInt($(obj).attr("matiere-max"));
+								inst = parseInt(inst);
+								inst = inst + 8
+								if (inst >= max) {
+									inst = max;
+									add = parseInt(response.length);
+									$(obj).text('Show less materials');
+									$(obj).attr("clean", "true");
+								}
+
+								$(obj).attr("matiere-inst", inst);
+								for (var i = 0; i < response.length; i++) {
+									$(dest + " > ul").append("<li class='total-link'>" + response[i]['img'] + "<div class='col-xs-12 list-product-content'><h3>" + response[i]['url'] + "</h3><h4><a href=\"fiche-matiere-" + response[i]['id'] + "-" + response[i]['nom'] + ".html\">" + response[i]['latin'] + "</a></h4></div></li>")
+								}
+							}
+							canGet = true;
+						}
+					});
+				}
+			}
+		};
+
+		$("#showMorePerfume").click(function(e)
+		{
+			e.preventDefault();
+			f.showMoreP("#showMorePerfume", ".ficheMatierePerfume", "ficheMatierePerfume");
+		})
+
+		$("#showMoreMatiere").click(function(e)
+		{
+			e.preventDefault();
+			f.showMoreMatiere("#showMoreMatiere", ".ficheMatiereMatiere", "ficheMatiereMatiere");
+		})
+
+
+	});
+</script>
+<div id="cadre_result_ext" class="fiche_matiere"><div id="cadre_result" class="row"><div class="wrap-full-img"><div id="cadre_gauche" class="col-md-5 image-personne" style="background-image:url('uploads/matiere/matiere_404.jpg')"><div class="fiche-title-mobile"><h1></h1><h2>Artemisia Absinthium</h2><div id="share-box-mobile">
+			<input type="checkbox" class="checkbox-mobile" id="share-mobile">
+			<label for="share-mobile" class="labelz"><img src="template/img/icon-share.png" alt="Partager la fiche parfum"></label>
+			<div class="social">
+				<ul>
+					<li class="entypo-twitter"><a href="https://twitter.com/intent/tweet?text=+-+Olfath%C3%A8que&amp;url=http://olfatheque.com/fiche-matiere-404--Raw-Material-.html&amp;via=CinquiemeSens" target="_blank"></a></li>
+					<li class="entypo-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http://olfatheque.com/fiche-matiere-404--Raw-Material-.html" target="_blank"></a></li>
+					<li class="entypo-gplus"><a href="https://plus.google.com/share?url=http://olfatheque.com/fiche-matiere-404--Raw-Material-.html" target="_blank"></a></li>
+				</ul>
+			</div>
+		</div></div></div><div id="cadre_droit" class="col-md-7"><div class="fiche-title"><h1></h1><h2>Artemisia Absinthium</h2><div id="share-box">
+			<input type="checkbox" class="checkbox" id="share">
+			<label for="share" class="labelz"><img src="template/img/icon-share.png" alt="Partager la fiche parfum"></label>
+			<div class="social">
+				<ul>
+					<li class="entypo-twitter"><a href="https://twitter.com/intent/tweet?text=+-+Olfath%C3%A8que&amp;url=http://olfatheque.com/fiche-matiere-404--Raw-Material-.html&amp;via=CinquiemeSens" ></a></li>
+					<li class="entypo-facebook"><a onclick='javascript:window.open(this.href,"", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;' href="https://www.facebook.com/sharer/sharer.php?u=http://olfatheque.com/fiche-matiere-404--Raw-Material-.html" ></a></li>
+					<li class="entypo-gplus"><a onclick='javascript:window.open(this.href,"", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600");return false;' href="https://plus.google.com/share?url=http://olfatheque.com/fiche-matiere-404--Raw-Material-.html" ></a></li>
+				</ul>
+			</div>
+		</div>
+</div>	<div class="tab-parfum">
+							<!-- Nav tabs --><!-- Tab panes -->
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane fade in active" id="recap">
+									<h3>ID card</h3> <p><span>Type </span> Natural</p><p><span>Obtaining  </span> Distillation</p><p><span>Origin</span> Plant</p><p><span>Used part </span> Plant</p><p><span>Family / Facet </span> <a href="fiche-famille-facette-3-Aromatic.html">Aromatic</a></p><p><span>Number of perfumes </span><a href="recherche-avancee.php?matiere="> 7</a></p></div></div></div></div></div><div class="clearfix"></div><h3 class="parfums-associe">Associated materials<a href="recherche-avancee.php?matiere=">Refine search</a></h3><div class='row ficheMatiereMatiere list-product'><ul><li class='total-link'><div class="col-xs-12 list-product-img"><a href="fiche-matiere-12-Angelica.html"><img width="100%" height="auto" src="uploads/matiere/matiere_12.jpg" alt="Angelica" /></a></div><div class='col-xs-12 list-product-content'><h3><a href="fiche-matiere-12-Angelica.html">Angelica</a></h3><h4><a href="fiche-matiere-12-Angelica.html">Angelica Archangelica</a></h4></div></li><li class='total-link'><div class="col-xs-12 list-product-img"><a href="fiche-matiere-13-Anise.html"><img width="100%" height="auto" src="uploads/matiere/matiere_13.jpg" alt="Anise" /></a></div><div class='col-xs-12 list-product-content'><h3><a href="fiche-matiere-13-Anise.html">Anise</a></h3><h4><a href="fiche-matiere-13-Anise.html">Pimpinella Anisum</a></h4></div></li><li class='total-link'><div class="col-xs-12 list-product-img"><a href="fiche-matiere-14-Armoise.html"><img width="100%" height="auto" src="uploads/matiere/matiere_14.jpg" alt="Armoise" /></a></div><div class='col-xs-12 list-product-content'><h3><a href="fiche-matiere-14-Armoise.html">Armoise</a></h3><h4><a href="fiche-matiere-14-Armoise.html">Artemisia Vulgaris</a></h4></div></li><li class='total-link'><div class="col-xs-12 list-product-img"><a href="fiche-matiere-17-Badiane.html"><img width="100%" height="auto" src="uploads/matiere/matiere_17.jpg" alt="Badiane" /></a></div><div class='col-xs-12 list-product-content'><h3><a href="fiche-matiere-17-Badiane.html">Badiane</a></h3><h4><a href="fiche-matiere-17-Badiane.html">Illicum Verum</a></h4></div></li></ul></div><i><a class='more-product' id='showMoreMatiere' data-matiere='404' matiere-max='26' matiere-inst='4'>Show more materials</a></i><h3 class="parfums-associe red">Perfume using the following raw material<a href="recherche-avancee.php?matiere=">Refine search</a></h3><div class='row ficheMatierePerfume list-product'><ul><li><div class="col-xs-4 list-product-img"><img width="100%" height="auto" src="uploads/parfum/parfum_269.jpg" alt="Perfume picture" /></div><div class='col-xs-8 list-product-content'><h3><a href='fiche-parfum-269-Fou-d'Absinthe.html'>Fou d'Absinthe</a></h3><h4>by<a href='fiche-entreprise-213-L'Artisan-Parfumeur.html'> L'Artisan Parfumeur</a></h4><ul class='tags'><li class="famille"><img class="round-f" title="Fougere" src="uploads/famille_facette/famille-9-P.jpg" alt="family icon"><i class='famille-letter-plus'>F</i></li>
+								<li class="type type-edt"><img title="Pefume water" src="template/img/type_parfum/en/icon-type-parfum.png"></li>
+								<li class="genre genre-homme"><img title="Parfum Masculin" src="template/img/icon-genre-masculin.png"></li></ul><div class='clearfix'></div><hr><p><b>KEYWORDS</b></p><ul class="keywords"><li class='mobile-center'><a href='#'>None</a></li></ul></div></li><li><div class="col-xs-4 list-product-img"><img width="100%" height="auto" src="uploads/parfum/parfum_411.jpg" alt="Perfume picture" /></div><div class='col-xs-8 list-product-content'><h3><a href='fiche-parfum-411-A-taste-of-heaven-Absinthe-Verte.html'>A taste of heaven - Absinthe Verte</a></h3><h4>by<a href='fiche-entreprise-545-By-Kilian.html'> By Kilian</a></h4><ul class='tags'><li class="famille"><img class="round-f" title="Aromatic" src="uploads/famille_facette/famille-3-P.jpg" alt="family icon"><i class='famille-letter-plus'>A</i></li>
+								<li class="type type-edt"><img title="Aucun" src="uploads/default/famille-facette.jpg"></li>
+								<li class="genre genre-homme"><img title="Parfum Masculin" src="template/img/icon-genre-masculin.png"></li></ul><div class='clearfix'></div><hr><p><b>KEYWORDS</b></p><ul class="keywords"><li class='mobile-center'><a href='#'>None</a></li></ul></div></li><li><div class="col-xs-4 list-product-img"><img width="100%" height="auto" src="uploads/parfum/parfum_4857.jpg" alt="Perfume picture" /></div><div class='col-xs-8 list-product-content'><h3><a href='fiche-parfum-4857-Wood-And-Absinth.html'>Wood And Absinth</a></h3><h4>by<a href='fiche-entreprise-1358-Mark-Buxton-Perfumes.html'> Mark Buxton Perfumes</a></h4><ul class='tags'><li class="famille"><img class="round-f" title="Woody" src="uploads/famille_facette/famille-4-P.jpg" alt="family icon"><i class='famille-letter-plus'>W</i></li>
+								<li class="type type-edt"><img title="Pefume water" src="template/img/type_parfum/en/icon-type-parfum.png"></li>
+								<li class="genre genre-homme"><img title="Parfum Mixte" src="template/img/icon-genre-mixte.png"></li></ul><div class='clearfix'></div><hr><p><b>KEYWORDS</b></p><ul class="keywords"><li class='mobile-center'><a href='#'>None</a></li></ul></div></li></ul></div><i><a class='more-product' id='showMorePerfume' data-perfume='404' perfume-max='7' perfume-inst='3'>Show more perfumes</a></i><div style="display: inline-block; float: left; clear: left; margin-left: -4px;"><div class="addthis_toolbox" style="width:190px; margin-top: 15px;">
+		<div class="two_column">
+			<div class="column1">
+				<a class="addthis_button_facebook" title="Share on Facebook">Facebook</a>
+				<a class="addthis_button_email" title="Share on e-mail">Mail</a>
+				<a class="addthis_button_favorites" title="Add to bookmark">Bookmark</a>
+			</div>
+			<div class="column2">
+				<a class="addthis_button_twitter" title="Share on twitter">Twitter</a>
+				<a class="addthis_button_googlebuzz" title="Share on Google Buzz">Buzz</a>
+				<a class="addthis_button_linkedin" title="Share on LinkedIn">LinkedIn</a>
+			</div>
+			<div class="clear"></div>
+			<div class="more">
+				<a class="addthis_button_expanded" title="See more services">And more…</a>
+			</div>
+		</div>
+	</div></div></div></div>					</div>
+
+					<!-- Footer -->
+						<div id="footer">
+					
+		<div class="footer-bloc bloc-logo">
+			<a href="/"><img src="../template/olfatheque.png" alt="Logo olfatheque" width="90%" height="auto"></a>
+		</div>
+		
+		<div class="footer-bloc bloc-menu">
+			<ul>
+				<li><a href="/">Search</a></li>
+				<li><a href="/recherche-avancee.php">Advanced search</a></li>
+				<li><a href="/recherche.php?d=parfum&term=tout">Perfumes</a></li>
+				<li><a href="/recherche.php?d=matiere&term=tout">Raw materials</a></li>
+				<li><a href="/recherche.php?d=parfumeur&term=tout">Perfumers</a></li>
+				<li><a href="/recherche.php?d=famille-facette&term=tout">Families / Facets</a></li>
+				<li><a href="/recherche.php?d=histoire&term=tout">Perfume's  history</a></li>
+				<li><a href="/creer-parfum">Submit a perfume</a></li>
+				<li><a href="/recherche.php?d=glossaire&term=tout">Glossary</a></li>
+			</ul>
+		</div>
+		
+		<div class="footer-bloc bloc-submenu">
+			<ul>
+				<li><a target="_blank" href="http://www.cinquiemesens.com?lang=en">Cinquième sens</a></li>
+				<li><a target="_blank" href="http://www.cinquiemesens.com/training">Training and Workshops</a></li>
+			</ul>
+			<ul>
+				<li><a href="/contact">Contact</a></li>
+				<li><a href="/faq">Help</a></li>
+				<li><a href="fiche-article-41-Mentions-legales.html">Legale notice</a></li>
+			</ul>
+		</div>
+		
+		<div class="footer-bloc bloc-social">
+			<ul>
+				<li><a target="_blank" href="https://plus.google.com/+CinquièmeSensParis"><i class="fa fa-google-plus"></i></a></li>
+				<li><a target="_blank" href="https://www.facebook.com/pages/Cinquieme-Sens/162125793828258"><i class="fa fa-facebook"></i></a></li>
+				<li><a target="_blank" href="https://www.linkedin.com/groups/3776338/profile"><i class="fa fa-linkedin"></i></a></li>
+			</ul>
+		</div>
+	
+		<div class="footer-bloc bloc-contact">
+			<h4>awaken your emotions</h4>
+			<hr>
+			<p><a href="tel:0147537916">01 47 53 79 16</a></p>
+			<p>
+	Our training centers				<span>PARIS : 18, rue de Monttessuy&nbsp;75007</span>
+				<span>GRASSE : 4 Traverse Dupont&nbsp;06130</span>
+				
+			</p>
+		</div>
+			
+		<script type="text/javascript">
+			//<![CDATA[
+			$(function(){
+				$.ajax({
+					url: "contact_form.htm",
+					success: function(html){
+						$("body").append(html);
+
+						$( "#dialog" ).dialog({
+							autoOpen: false,
+							show: "blind",
+							modal: true,
+							hide: "blind",
+							width: "auto",
+							buttons: {
+								"Send": function() {
+									$.ajax({
+										  url: "ajax/mail.php",
+										  type: "POST",
+										  data: $("#contact_form").serialize() + "&page=" + encodeURIComponent(location.href),
+										  async:false
+									   }
+									);
+									$( this ).dialog( "close" );
+								},
+								"Cancel ": function() {
+									$( this ).dialog( "close" );
+								}
+							},
+						});
+
+						$("#contact_link").attr("href","#").click( function(){
+							$( "#dialog" ).dialog( "open" );
+							return false;
+						});
+
+					}
+				});
+			});
+			//]]>
+		</script>
+	</div>				</div>
+			</div>
+		</div>
+	</body> 
+</html>

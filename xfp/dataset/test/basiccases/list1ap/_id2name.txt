@@ -1,0 +1,4 @@
+idAP	ap.html	home
+id1	person1.html	person
+id2	person2.html	person
+id3	person3.html	person

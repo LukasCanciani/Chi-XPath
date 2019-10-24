@@ -1,0 +1,7 @@
+idAP	ap.html
+id1	person1.html
+id2	person2.html
+id3	person3.html
+id4	printer1.html
+id5	printer2.html
+id6	printer3.html

@@ -1,0 +1,5 @@
+#Install libraries in local maven repository prior to first compilation
+mvn deploy:deploy-file -DgroupId=it.uniroma3 -DartifactId=utils -Dversion=1.1.1 -Durl=file:./libs/ -DrepositoryId=in-project -DupdateReleaseInfo=true -Dfile=libs/utils-1.1.1.jar
+mvn deploy:deploy-file -DgroupId=it.uniroma3 -DartifactId=hypertextual-logging -Dversion=0.3 -Durl=file:./libs/ -DrepositoryId=in-project -DupdateReleaseInfo=true -Dfile=libs/hypertextual-logging-0.3.jar
+mvn deploy:deploy-file -DgroupId=it.uniroma3.roadrunner -DartifactId=lfeq -Dversion=1.3.3 -Durl=file:./libs/ -DrepositoryId=in-project -DupdateReleaseInfo=true -Dfile=libs/lfeq-1.1.jar
+mvn deploy:deploy-file -DgroupId=it.uniroma3.roadrunner -DartifactId=token -Dversion=1.6.1 -Durl=file:./libs/ -DrepositoryId=in-project -DupdateReleaseInfo=true -Dfile=libs/token-1.6.1.jar

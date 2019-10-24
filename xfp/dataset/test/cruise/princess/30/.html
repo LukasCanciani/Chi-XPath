@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+  <head>
+    <base href="https://static.matterport.com/showcase/2.20.5-0-ge7987f8/index.html"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="origin-trial" data-feature="WebVR" data-expires="2017-07-18" content="AgvASat/W0VOCGMpbUDGWJyrJGcuHgiOUCMFEm7WqPAi75KsXocMaCy5ApYKXyn0g5TDcFUhW2dIZ46faMf4DgIAAABgeyJvcmlnaW4iOiJodHRwczovL21hdHRlcnBvcnQuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWUiIsImV4cGlyeSI6MTUwMDMzNjAwMCwiaXNTdWJkb21haW4iOnRydWV9"/>
+    <meta http-equiv="origin-trial" data-feature="WebVR (For Chrome M59+)" data-expires="2017-08-16" content="ArOXPubHSNFnh1QRrIUc5vzkNbH8vBukkAteMRThunUbIw3S8XrgE4rtQAF5uYxEuo87+psUcwk1KIR3dxUPVgwAAABjeyJvcmlnaW4iOiJodHRwczovL21hdHRlcnBvcnQuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWUjEuMSIsImV4cGlyeSI6MTUwMjkyMzQwMiwiaXNTdWJkb21haW4iOnRydWV9"/>
+    <title>
+Oceanview - Matterport 3D Showcase    </title>
+    <meta name="description" content="Matterport 3D Showcase"/>
+    <meta property="og:title" content="Explore Oceanview in 3D"/>
+    <meta property="og:description" content="Matterport 3D Showcase"/>
+    <meta property="og:type" content="video"/>
+    <meta property="og:url" content="https://my.matterport.com/show/?m=JfDZU4mDaSc"/>
+    <meta property="og:site_name" content="Matterport"/>
+    <meta property="og:image" content="https://my.matterport.com/api/v1/player/models/JfDZU4mDaSc/thumb"/>
+    <meta property="og:image:secure_url" content="https://my.matterport.com/api/v1/player/models/JfDZU4mDaSc/thumb"/>
+    <meta property="og:image:type" content="image/jpg"/>
+    <meta property="og:image:width" content="1920"/>
+    <meta property="og:image:height" content="1080"/>
+    <meta name="twitter:card" content="photo"/>
+    <meta name="twitter:site" content="@matterport"/>
+    <meta name="twitter:title" content="Explore Oceanview in 3D"/>
+    <meta name="twitter:description" content="Matterport 3D Showcase"/>
+    <meta name="twitter:image" content="https://my.matterport.com/api/v1/player/models/JfDZU4mDaSc/thumb"/>
+    <meta name="twitter:image:width" content="1920"/>
+    <meta name="twitter:image:height" content="1080"/>
+    <meta name="twitter:url" content="https://my.matterport.com/show/?m=JfDZU4mDaSc"/>
+    <link rel="alternate" href="30/%3Fm%3DJfDZU4mDaSc.css" type="application/json+oembed" title="Oceanview"/>
+    <link rel="preconnect" href="30/static.matterport.com.css" class="keep"/>
+    <link rel="icon" href="30/favicon.png.css" type="image/png" sizes="32x32" class="keep"/>
+    <link rel="apple-touch-icon-precomposed" href="30/apple-touch-icon-114.png.css" sizes="114x114" class="keep"/>
+    <link rel="apple-touch-icon-precomposed" href="30/apple-touch-icon-144.png.css" sizes="144x144" class="keep"/>
+    <link rel="stylesheet" href="30/main.css"/>
+  </head>
+  <body>
+    <div id="gui-thumb" style="display: none;">
+    </div>
+    <div id="player" style="display: none;">
+    </div>
+    <div id="gui-parent">
+      <div id="memory-info" style="display:none; position:fixed; right:10px; top:10px; background-color:#eeeeee; color:#222222; padding:3px 10px 3px 10px; font-size:100%;">
+GPU memory used:        <span id="memory-gpu">
+        </span>
+      </div>
+      <div id="gui-loading" class="message-outer darkGlass" style="display: none;">
+        <h2 class="model-title"/>
+        <div class="message-inner">
+          <div id="circleLoader">
+            <div id="loader-cont" title="{[{ LOADING }]}">
+              <svg id="svg" width="100" height="100" viewport="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <circle id="barBg" r="47" cx="50" cy="50" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"/>
+                <circle id="bar" r="47" cx="50" cy="50" transform="rotate(-90 50 50)" fill="transparent" stroke-dasharray="295.30" stroke-dashoffset="295.30" style="stroke-dashoffset : 295.30"/>
+              </svg>
+            </div>
+          </div>
+          <div id="loaderCoBrand">
+            <div class="vert-align">
+              <p>
+{[{ PRESENTED_BY_CAPS }]}              </p>
+              <h2 id="loaderCoBrandName"/>
+            </div>
+          </div>
+          <div class="bottom-logo">
+            <div class="img">
+            </div>
+          </div>
+          <div class="specialPower">
+            <span class="powered-by">
+{[{ POWERED_BY }]}            </span>
+             <div class="img">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="gui" style="display: none;">
+        <div class="pinTop left">
+          <div id="model-title">
+            <div class="title-row">
+              <div id="title-toggle" class="darkGlass">
+                <a>
+                  <i class="icon icon-dpad-left">
+                  </i>
+                </a>
+              </div>
+              <div id="title-container-wrapper" rel="tooltip" data-placement="bottom" data-html="true">
+                <div class="title-container darkGlass meta-toggle">
+                  <div class="co-brand">
+{[{ PRESENTED_BY }]}                    <span class="title" id="cobrandTitle">
+                    </span>
+                  </div>
+                  <a id="more-hint">
+{[{ MORE }]}                     <i class="icon icon-dpad-down">
+                    </i>
+                  </a>
+                  <a id="less-hint">
+{[{ LESS }]}                     <i class="icon icon-dpad-up">
+                    </i>
+                  </a>
+                  <div id="gui-name" class="titleText">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="meta-info-wrapper">
+            <div id="meta-info" class="darkGlass">
+              <div id="meta-description">
+              </div>
+              <div class="contact-info">
+                <i class="icon icon-user pull-left">
+                </i>
+                 <div id="contact-data">
+                </div>
+              </div>
+              <div class="address">
+                <i class="icon icon-pin">
+                </i>
+                <span id="addressTxt">
+                </span>
+              </div>
+              <div id="mattertag-toggles" class="menu-toggles hidden">
+                <span>
+{[{ MATTERTAG_CONTENT }]}                </span>
+                <div id="mattertag-inputs" class="menu-radios">
+                  <div id="show-tag" class="menu-radio-show">
+                    <input id="radio-tag-show" type="radio" name="mattertags" value="show"/>
+                    <label for="radio-tag-show">
+{[{ SHOW }]}                    </label>
+                  </div>
+                  <div id="hide-tag" class="menu-radio-hide">
+                    <input id="radio-tag-hide" type="radio" name="mattertags" value="hide"/>
+                    <label for="radio-tag-hide">
+{[{ HIDE }]}                    </label>
+                  </div>
+                </div>
+              </div>
+              <div id="labels-toggles" class="menu-toggles hidden">
+                <span>
+Labels                </span>
+                <div id="labels-inputs" class="menu-radios">
+                  <div id="show-label" class="menu-radio-show">
+                    <input id="radio-labels-show" type="radio" name="labels" value="show"/>
+                    <label for="radio-labels-show">
+Show                    </label>
+                  </div>
+                  <div id="hide-label" class="menu-radio-hide">
+                    <input id="radio-labels-hide" type="radio" name="labels" value="hide"/>
+                    <label for="radio-labels-hide">
+Hide                    </label>
+                  </div>
+                </div>
+              </div>
+              <div id="share-origin" class="hidden">
+                <hr/>
+                <div>
+                  <i class="icon icon-ext-link">
+                  </i>
+                  <div id="share-link-wrapper">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pinBottom-container">
+          <div class="pinBottom center">
+            <div id="view-controllers">
+              <div id="gui-modes-dollhouse" class="darkGlass">
+                <span class="mode">
+{[{ DOLLHOUSE }]}                </span>
+              </div>
+              <div id="gui-modes-floorplan" class="darkGlass">
+                <span class="mode">
+{[{ FLOOR_PLAN }]}                </span>
+              </div>
+            </div>
+          </div>
+          <div class="pinBottom zoomPanel">
+            <div id="gui-zoomin" class="buttonZoom buttonZoomIn buttonZoomEnabled" data-placement="top">
+              <div class="buttonZoomContent">
+                <a>
+                  <i rel="tooltip" title="{[{ ZOOM_IN }]}" class="icon icon-plus">
+                  </i>
+                </a>
+              </div>
+            </div>
+            <div id="gui-zoomout" class="buttonZoom buttonZoomOut buttonZoomEnabled" data-placement="top">
+              <div class="buttonZoomContent">
+                <a>
+                  <i rel="tooltip" title="{[{ ZOOM_OUT }]}" class="icon icon-minus">
+                  </i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="pinBottom left">
+            <div class="viewContainer">
+              <div id="pullTab" class="ui-icon darkGlass">
+                <a>
+                  <i rel="tooltip" title="{[{ OPEN_HIGHLIGHTS }]}" class="icon icon-dpad-up">
+                  </i>
+                </a>
+              </div>
+              <div id="previous" class="previous desktop-only ui-icon">
+                <a>
+                  <i rel="tooltip" title="{[{ PREVIOUS }]}" class="icon icon-dpad-left">
+                  </i>
+                </a>
+              </div>
+              <div id="play" class="ui-icon">
+                <a>
+                  <i rel="tooltip" title="{[{ PLAY }]}" class="icon icon-play">
+                  </i>
+                </a>
+              </div>
+              <div id="pause" class="ui-icon" style="display: none;">
+                <a>
+                  <i rel="tooltip" title="{[{ PAUSE }]}" class="icon icon-pause">
+                  </i>
+                </a>
+              </div>
+              <div id="next" class="next desktop-only ui-icon wide">
+                <a>
+                  <i rel="tooltip" title="{[{ NEXT }]}" class="icon icon-dpad-right">
+                  </i>
+                </a>
+              </div>
+              <div id="gui-modes-inside" class="ui-icon">
+                <a>
+                  <i rel="tooltip" title="{[{ EXPLORE_3D_SPACE }]}" class="icon icon-inside">
+                  </i>
+                </a>
+              </div>
+              <div id="gui-modes-outside" class="ui-icon">
+                <a>
+                  <i rel="tooltip" title="{[{ VIEW_DOLLHOUSE }]}" class="icon icon-dollhouse">
+                  </i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="pinBottom right hideTarget">
+            <div class="rightViewContainer">
+              <div class="gui-floor">
+                <div class="gui-floor-title">
+                </div>
+                <span class="gui-floor-number">
+                </span>
+                <i class="icon icon-dpad-up">
+                </i>
+                <div class="container">
+                </div>
+              </div>
+              <div id="vr" class="ui-icon wide hidden">
+                <a>
+                  <i rel="tooltip" title="{[{ VIEW_IN_VR }]}" class="icon icon-webvr">
+                  </i>
+                </a>
+              </div>
+              <div id="sharing" class="ui-icon wide hidden">
+                <a>
+                  <i rel="tooltip" title="{[{ SOCIAL_SHARING }]}" class="icon icon-share">
+                  </i>
+                </a>
+              </div>
+              <div id="gui-fullscreen" class="ui-icon wide" data-placement="top">
+                <a>
+                  <i rel="tooltip" title="{[{ VIEW_FULLSCREEN }]}" class="icon icon-fullscreen">
+                  </i>
+                </a>
+              </div>
+              <div id="gui-fullscreen-exit" class="ui-icon wide" data-placement="top" style="display: none;">
+                <a>
+                  <i rel="tooltip" title="{[{ EXIT_FULLSCREEN }]}" class="icon icon-fullscreen-exit">
+                  </i>
+                </a>
+              </div>
+              <div class="pull-right terms terms2">
+                <a>
+{[{ TERMS }]}                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="drawer-container">
+          <div id="drawer" class="fullWidth">
+            <div class="frame-container darkGlass">
+              <div id="scrollFrame" class="frame">
+                <ul id="thumb-container" class="slidee">
+                </ul>
+              </div>
+              <div class="scrollbar" id="scroller">
+                <div class="handle">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="playHead">
+            <div id="status">
+              <span class="curIdx">
+1              </span>
+of              <span class="totalSteps">
+              </span>
+            </div>
+            <div id="progressBar">
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="standard">
+            <div class="footer-help">
+              <a class="hasHover">
+{[{ HELP }]}              </a>
+            </div>
+            <div>
+|            </div>
+            <div class="footer-terms">
+              <a class="hasHover">
+{[{ MATTERPORT_TERMS }]}              </a>
+            </div>
+            <img src="30/Matterport-glyph.svg"/>
+          </div>
+          <div class="close">
+            <a class="hasHover">
+{[{ CLOSE }]}            </a>
+          </div>
+        </div>
+      </div>
+      <div class="webvr-popup" style="display:none">
+        <div class="messaging">
+          <div class="page p1">
+            <div class="title">
+{[{ WEBVR_FOR_DAYDREAM }]}            </div>
+            <img class="image device-headset-side"/>
+            <div class="enter-button">
+{[{ WEBVR_ENTER_WEBVR }]}            </div>
+            <span class="hrule">
+            </span>
+            <div class="alt-help">
+              <span class="open-with-app">
+{[{ VR_APP_OPEN }]}              </span>
+            </div>
+          </div>
+          <div class="page p2 hidden">
+            <div class="title">
+{[{ VR_WHAT_YOU_NEED }]}            </div>
+            <ul class="tabs">
+              <li class="tabbutton" id="tabcardboard">
+{[{ VR_GOOGLE_CARDBOARD }]}              </li>
+              <li class="tabbutton" id="tabdaydream">
+{[{ VR_GOOGLE_DAYDREAM }]}              </li>
+              <li class="tabbutton" id="tabnative">
+{[{ VR_APP }]}              </li>
+            </ul>
+            <div class="tab-content webvr">
+              <img class="image device-headset"/>
+              <span class="detail headset">
+                <u>
+{[{ VR_GOOGLE_CARDBOARD }]}                </u>
+              </span>
+              <img class="image device-phone"/>
+              <span class="detail phone">
+                <p>
+                  <b>
+                    <u>
+{[{ VR_COMPATIBLE_ANDROID }]}                    </u>
+                  </b>
+                </p>
+                <p>
+{[{ VR_ANDROID_DETAIL }]}                </p>
+              </span>
+              <div class="detail daydream-label">
+{[{ VR_NEED_DAYDREAM }]}              </div>
+            </div>
+            <div class="tab-content native hidden">
+              <div class="badge-label">
+{[{ VR_APP_FOR_ANDROID }]}              </div>
+              <span>
+                <img class="image badge-cardboard"/>
+                <img class="image badge-oculus"/>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="close">
+          <a>
+            <i class="icon icon-close">
+            </i>
+          </a>
+        </div>
+        <div class="footer">
+          <div class="help">
+            <a>
+{[{ HELP }]}            </a>
+          </div>
+          <div>
+|          </div>
+          <div class="terms">
+            <a>
+{[{ MATTERPORT_TERMS }]}            </a>
+          </div>
+          <img src="30/Matterport-glyph_1.svg"/>
+        </div>
+      </div>
+      <div id="gui-spinner" style="display: none;">
+        <div class="gui-spinner-icon">
+        </div>
+      </div>
+      <div id="gui-message" class="message-outer darkGlass" style="display: none;">
+        <h2 class="model-title"/>
+        <div class="message-inner">
+          <div class="message-content">
+            <a id="button-play">
+              <i class="icon icon-play">
+              </i>
+            </a>
+            <div class="explore">
+{[{ EXPLORE_3D_SPACE }]}            </div>
+          </div>
+        </div>
+        <div class="bottom-logo">
+          <div class="img onlyLogo">
+          </div>
+        </div>
+      </div>
+      <div id="share-modal">
+        <div class="title">
+{[{ SOCIAL_SHARING }]}        </div>
+        <div id="share-outer">
+          <div class="share-to">
+{[{ SHARE_TO }]}          </div>
+          <div class="share-images">
+            <a id="facebook-share">
+              <div class="share-button">
+                <span class="faceBookLink">
+                  <i class="icon icon-facebook">
+                  </i>
+                </span>
+              </div>
+            </a>
+            <a id="twitter-share">
+              <div class="share-button">
+                <span class="twitterLink">
+                  <i class="icon icon-twitter">
+                  </i>
+                </span>
+              </div>
+            </a>
+            <a id="mail-share">
+              <div class="share-button">
+                <span class="mailLink">
+                  <i class="icon icon-email">
+                  </i>
+                </span>
+              </div>
+            </a>
+          </div>
+          <div class="direct-link">
+{[{ SHARE_LINK }]}          </div>
+          <div id="share-url">
+            <span id="share-url-text">
+            </span>
+          </div>
+          <div id="copy-success" class="hidden">
+            <span id="copy-success-text">
+{[{ SHARE_COPIED }]}            </span>
+          </div>
+        </div>
+        <div id="share-close" class="close">
+          <i class="icon icon-close">
+          </i>
+        </div>
+      </div>
+      <div id="terms-modal" class="fadeOut">
+        <div id="terms-text">
+        </div>
+        <div class="close">
+          <a>
+            <i class="icon icon-close">
+            </i>
+          </a>
+        </div>
+      </div>
+      <div class="gui-error message-outer" style="display: none;">
+        <div class="message-inner">
+          <div class="message-content">
+            <div class="error-problem-text">
+            </div>
+            <div class="error-solution-text">
+            </div>
+            <div class="error-explanation">
+            </div>
+            <div class="error-actions">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="help-dialog" class="nav-help-dialog">
+        <div class="nav-help-elements">
+          <div class="help-tabs">
+            <div class="navigation-tab">
+              <span>
+{[{ HELP_NAVIGATION_TAB }]}              </span>
+            </div>
+            <div class="more-help-tab">
+              <span>
+{[{ HELP_MORE_HELP_TAB }]}              </span>
+            </div>
+          </div>
+        </div>
+        <div id="navigation-help-wrapper">
+          <div id="navigation-help" class="help outer">
+            <div class="interactions left">
+              <h2 class="top-info"/>
+              <img class="big-image"/>
+              <hr/>
+              <div class="bottom-info">
+              </div>
+              <img class="keyboard"/>
+            </div>
+            <div class="interactions middle">
+              <h2 class="top-info"/>
+              <img class="big-image"/>
+              <hr/>
+              <div class="bottom-info">
+              </div>
+              <img class="keyboard"/>
+            </div>
+            <div class="interactions right">
+              <h2 class="top-info"/>
+              <img class="big-image"/>
+              <hr/>
+              <div class="bottom-info">
+              </div>
+              <img class="keyboard"/>
+            </div>
+          </div>
+        </div>
+        <div id="more-help-wrapper">
+          <div id="more-help">
+            <div class="ui-instructions more-help-hlr">
+              <h2 class="top-info"/>
+              <img class="big-image"/>
+              <div class="bottom-info">
+              </div>
+            </div>
+            <div class="ui-instructions more-help-tour">
+              <h2 class="top-info"/>
+              <img class="big-image"/>
+              <div class="bottom-info">
+              </div>
+            </div>
+            <div class="ui-instructions more-help-dollhouse">
+              <h2 class="top-info"/>
+              <img class="big-image"/>
+              <div class="bottom-info">
+              </div>
+            </div>
+            <div class="ui-instructions more-help-inside">
+              <h2 class="top-info"/>
+              <img class="big-image"/>
+              <div class="bottom-info">
+              </div>
+            </div>
+            <div class="ui-instructions more-help-360">
+              <h2 class="top-info"/>
+              <img class="big-image"/>
+              <div class="bottom-info">
+              </div>
+            </div>
+            <div class="ui-instructions more-help-floors">
+              <h2 class="top-info"/>
+              <img class="big-image"/>
+              <div class="bottom-info">
+              </div>
+            </div>
+            <div class="ui-instructions more-help-mattertag">
+              <h2 class="top-info"/>
+              <img class="big-image"/>
+              <div class="bottom-info">
+              </div>
+            </div>
+            <div class="ui-instructions more-help-vr">
+              <h2 class="top-info"/>
+              <img class="big-image"/>
+              <div class="bottom-info">
+              </div>
+            </div>
+            <div class="ui-instructions more-help-fullscreen">
+              <h2 class="top-info"/>
+              <img class="big-image"/>
+              <div class="bottom-info">
+              </div>
+            </div>
+            <div class="ui-instructions more-help-zoom">
+              <h2 class="top-info"/>
+              <img class="big-image"/>
+              <div class="bottom-info">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="close">
+          <a>
+            <i class="icon icon-close">
+            </i>
+          </a>
+        </div>
+      </div>
+      <div id="vr-modal" class="vr-popup">
+        <div class="title">
+{[{ VR_VIEW_SPACE }]}        </div>
+        <div class="outer">
+          <div class="inner">
+            <h3 class="vr-popup-title">
+              <span class="show-supported p1">
+                <p class="center">
+{[{ VR_SHOW_SUPPORTED }]}                </p>
+              </span>
+              <span class="show-unsupported p1">
+{[{ VR_SHOW_UNSUPPORTED }]}              </span>
+              <span class="show-ios p1">
+{[{ VR_SHOW_IOS_1 }]}                <br/>
+                <br/>
+              </span>
+              <span class="show-ios p2">
+{[{ VR_WHAT_YOU_NEED }]}              </span>
+            </h3>
+            <div class="vr-images">
+              <div class="img-container cardboard first">
+                <img class="vr-sm-image first"/>
+                <div class="vr-img-caption first">
+                  <span class="show-supported show-desktop show-ios p1">
+                    <b class="cardboard">
+{[{ VR_GOOGLE_CARDBOARD }]}                    </b>
+                    <b class="gearvr hidden">
+{[{ VR_SAMSUNG_GEAR_VR }]}                    </b>
+                  </span>
+                  <span class="show-supported show-unsupported show-desktop p2">
+{[{ VR_NEED_CARDBOARD }]}                  </span>
+                  <span class="show-supported show-unsupported show-desktop p3">
+{[{ VR_NEED_SAMSUNG }]}                  </span>
+                  <span class="show-ios p2">
+                    <b>
+{[{ VR_GOOGLE_CARDBOARD }]}                    </b>
+                    <br/>
+                    <br/>
+                  </span>
+                </div>
+              </div>
+              <div class="front-close">
+                <span class="front-close-x">
+?                </span>
+              </div>
+              <div class="img-container gearvr second">
+                <img class="vr-sm-image second"/>
+                <div class="vr-img-caption second">
+                  <span class="show-supported show-desktop p1">
+                    <b>
+{[{ VR_SAMSUNG_GEAR_VR }]}                    </b>
+                  </span>
+                  <span class="show-supported p2">
+                    <p>
+                      <b>
+{[{ VR_COMPATIBLE_ANDROID }]}                      </b>
+                    </p>
+                    <p>
+{[{ VR_ANDROID_DETAIL }]}                    </p>
+                  </span>
+                  <span class="show-desktop p2">
+                    <p>
+                      <b>
+{[{ VR_COMPATIBLE_IPHONES_1 }]}                      </b>
+                    </p>
+                    <p>
+{[{ VR_COMPATIBLE_IPHONES_2 }]}                    </p>
+                  </span>
+                  <span class="show-ios p2">
+                    <p>
+                      <b b="" id="vr-compatible-iphones-3">
+{[{ VR_COMPATIBLE_IPHONES_3 }]}                      </b>
+                    </p>
+                    <p id="vr-compatible-iphones-2b">
+{[{ VR_COMPATIBLE_IPHONES_2 }]}                    </p>
+                  </span>
+                  <span class="show-unsupported p1 p2">
+                    <p>
+                      <b>
+{[{ VR_COMPATIBLE_ANDROID }]}                      </b>
+                    </p>
+                    <p>
+{[{ VR_ANDROID_DETAIL }]}                    </p>
+                  </span>
+                  <span class="show-supported show-unsupported show-desktop p3">
+                    <p>
+                      <b>
+{[{ VR_COMPATIBLE_SAMSUNG }]}                      </b>
+                    </p>
+                    <p>
+{[{ VR_SAMSUNG_DETAIL }]}                    </p>
+                  </span>
+                </div>
+              </div>
+              <div class="img-container third">
+                <img class="vr-sm-image third"/>
+                <div class="vr-img-caption third">
+                  <span class="show-supported show-unsupported show-ios p2">
+                    <p>
+                      <b>
+{[{ VR_APP_FOR_CARDBOARD }]}                      </b>
+                    </p>
+                    <p>
+                      <a class="cardboardLink">
+{[{ VR_DOWNLOAD_HERE }]}                      </a>
+                    </p>
+                  </span>
+                  <span class="show-desktop p2">
+                    <p>
+                      <b>
+{[{ VR_ANDROID_DVICES }]}                      </b>
+                    </p>
+                    <p>
+{[{ VR_ANDROID_DETAIL }]}                    </p>
+                  </span>
+                  <span class="show-supported show-unsupported p3">
+                    <p>
+                      <b>
+{[{ VR_APP_FOR_SAMSUNG }]}                      </b>
+                    </p>
+                    <p>
+                      <a class="gearLink">
+{[{ VR_DOWNLOAD_HERE }]}                      </a>
+                    </p>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="vr-popup-body">
+              <span class="show-supported p1">
+                <p>
+                  <i>
+{[{ VR_REQUIRE_HEADSET }]}                  </i>
+                </p>
+                <br/>
+                <p>
+                  <i>
+{[{ VR_REDIRECT_TO_STORE }]}                  </i>
+                </p>
+                <br/>
+                <p class="improper-embed hidden">
+                  <i>
+{[{ VR_IMPROPER_EMBED }]}                  </i>
+                </p>
+              </span>
+              <span class="show-ios p1">
+                <p>
+                  <i id="show-ios-2">
+{[{ VR_SHOW_IOS_2 }]}                  </i>
+                </p>
+              </span>
+              <span class="show-desktop p1">
+                <p>
+                </p>
+                <h3>
+{[{ VR_OPEN_ANDROID_LINK }]}                </h3>
+                <p>
+                  <br/>
+                </p>
+                <p class="logo-button">
+                  <span class="modelLink">
+                  </span>
+                </p>
+                <br/>
+                <br/>
+                <p>
+                </p>
+                <h3>
+{[{ VR_ANDROID_OPTIONS }]}                </h3>
+                <p>
+                </p>
+              </span>
+            </div>
+          </div>
+          <div class="vr-buttons">
+            <div class="next-button">
+            </div>
+            <div class="prev-button">
+{[{ VR_PREVIOUS_CAPS }]}            </div>
+            <div class="vr-arrows prev-container">
+              <img class="prev-arrow" src="30/arrow.png"/>
+            </div>
+            <div class="vr-arrows next-container">
+              <img class="next-arrow" src="30/arrow_1.png"/>
+            </div>
+          </div>
+          <div class="vr-page">
+          </div>
+          <div class="close">
+            <a>
+              <i class="icon icon-close">
+              </i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="quick-blackout" class="quick">
+      </div>
+      <div id="quick-logo" class="quick-brand">
+        <img src="30/powered-by-matterport.svg"/>
+      </div>
+      <div id="hover-top" class="hover-row">
+      </div>
+      <div id="hover-bottom" class="hover-row">
+      </div>
+      <div id="call-to-action">
+        <div id="pause-overlay">
+          <div id="pause-icon">
+            <a>
+              <i class="icon icon-pause">
+              </i>
+            </a>
+          </div>
+        </div>
+        <div id="interaction-modal">
+          <div id="interaction-modal-inner">
+            <div class="tour-title">
+              <span class="desktop-title">
+{[{ DESKTOP_SHORT_CTA }]}              </span>
+              <span class="mobile-title">
+{[{ MOBILE_SHORT_CTA }]}              </span>
+            </div>
+            <div class="interaction left">
+              <h2 class="top-info"/>
+              <img class="big-image"/>
+              <hr/>
+              <img class="keyboard"/>
+            </div>
+            <div class="interaction middle">
+              <h2 class="top-info"/>
+              <img class="big-image"/>
+              <hr/>
+              <img class="keyboard"/>
+            </div>
+            <div class="interaction right">
+              <h2 class="top-info"/>
+              <img class="big-image"/>
+              <hr/>
+              <img class="keyboard"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tag-billboards">
+      </div>
+<!--[if lte IE 9]>
+ <div class="gui-error message-outer darkGlass">
+ <div class='message-inner'>
+ <div class='message-content' style='font-family: Helvetica Neue, sans-serif;'>
+ <div class="error-problem-text">Browser not supported.</div>
+ <div class="error-solution-text">Install a new browser to explore in 3D.</div>
+ <div class="error-actions">For Matterport 3D Showcase support,
+ <a class="link" target="_blank" href="https://matterportsupport.zendesk.com/hc/en-us/articles/208220058-Showcase-System-Requirements">see our troubleshooting guide</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ <![endif]-->    </div>
+  </body>
+</html>

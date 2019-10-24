@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+<!--<![endif]-->  <head>
+    <title>
+Search    </title>
+    <link rel="stylesheet" href="0/combine.css" type="text/css"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
+    <link rel="stylesheet" href="0/css.css" type="text/css"/>
+<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="/css/ie8.css" >
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col fl-fourWide lg-fourWide md-sixWide sm-twelveWide logo">
+              <a title="Penny &amp; Sinclair" originalhref="/">
+                <img alt="Penny &amp; Sinclair" title="Penny &amp; Sinclair" src="0/logo.png"/>
+              </a>
+            </div>
+            <div class="col fl-eightWide lg-eightWide md-sixWide sm-twelveWide text-right">
+              <div class="socialMediaHeader">
+                <a target="_blank" title="Twitter" originalhref="https://twitter.com/PennySinclairOx">
+                  <i class="fa fa-twitter">
+                  </i>
+                </a>
+                <a target="_blank" title="Facebook" originalhref="https://www.facebook.com/pennyandsinclair ">
+                  <i class="fa fa-facebook">
+                  </i>
+                </a>
+                <a target="_blank" originalhref="https://www.instagram.com/pennyandsinclair ">
+                  <i class="fa fa-instagram">
+                  </i>
+                </a>
+              </div>
+              <div id="menuBtn">
+                <i class="fa fa-bars">
+                </i>
+              </div>
+              <div data-bind="with: cipUserActions" id="cipControls" class="cipPanel">
+                <a originalhref="/cookie-policy">
+Cookie Policy                </a>
+                <a data-bind="click: open" class="regBtn" originalhref="http://cip.pennyandsinclair.co.uk/Property/Register">
+Register                </a>
+                <a data-bind="click: open" originalhref="http://cip.pennyandsinclair.co.uk/Signin">
+Log In                </a>
+                <input type="hidden" value="http://cip.pennyandsinclair.co.uk/Property/Search/Save" data-bind="initValue: urls.saveCriteria"/>
+                <input type="hidden" value="false" data-bind="initValue: isLoggedIn"/>
+                <input type="hidden" value="http://cip.pennyandsinclair.co.uk/Property" data-bind="initValue: urls.matchedProperties"/>
+                <input type="hidden" value="http://cip.pennyandsinclair.co.uk/Property/Requirements" data-bind="initValue: urls.matchCriteria"/>
+                <input type="hidden" value="http://cip.pennyandsinclair.co.uk/Signin" data-bind="initValue: urls.signIn"/>
+                <input type="hidden" value="http://cip.pennyandsinclair.co.uk/Property/Register" data-bind="initValue: urls.register"/>
+              </div>
+              <nav>
+                <div>
+                  <ul>
+                    <li>
+                      <a target="_self" originalhref="/">
+Home                      </a>
+                    </li>
+                    <li>
+                      <a target="_self">
+About                      </a>
+                      <div class="submenu">
+                        <ul>
+                          <li>
+                            <a target="_self" originalhref="/about-us">
+About Us                            </a>
+                          </li>
+                          <li>
+                            <a target="_self" originalhref="/meet-the-team">
+Meet The Team                            </a>
+                          </li>
+                          <li>
+                            <a target="_self" originalhref="/news">
+News                            </a>
+                          </li>
+                          <li>
+                            <a target="_self" originalhref="/reviews">
+Reviews                            </a>
+                          </li>
+                          <li>
+                            <a target="_self" originalhref="/in-the-community">
+In the Community                            </a>
+                          </li>
+                          <li>
+                            <a target="_self" originalhref="/town-or-village">
+Town or Village                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a target="_self">
+Offices                      </a>
+                      <div class="submenu">
+                        <ul>
+                          <li>
+                            <a target="_self" originalhref="/summertown">
+Summertown                            </a>
+                          </li>
+                          <li>
+                            <a target="_self" originalhref="/oxford">
+Oxford                            </a>
+                          </li>
+                          <li>
+                            <a target="_self" originalhref="/burford">
+Burford                            </a>
+                          </li>
+                          <li>
+                            <a target="_self" originalhref="/henley-on-thames">
+Henley-On-Thames                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a target="_self">
+Sales                      </a>
+                      <div class="submenu">
+                        <ul>
+                          <li>
+                            <a target="_self" originalhref="/search?category=1&amp;listingtype=5&amp;statusids=1,3,4,16&amp;obc=Price&amp;obd=Descending">
+Properties for Sale                            </a>
+                          </li>
+                          <li>
+                            <a target="_self" originalhref="/selling">
+Selling                            </a>
+                          </li>
+                          <li>
+                            <a target="_self" originalhref="/buying">
+Buying                            </a>
+                          </li>
+                          <li>
+                            <a target="_self" originalhref="/Form/valuation">
+Valuation                            </a>
+                          </li>
+                          <li>
+                            <a target="_blank" originalhref="http://media102.estateweb.com/contentdocument.ewdgx?A403400538475ED1E0ACAD853B3FEA7BBB3F53CF2831BC584FFFFFFA508CB196893AA9E283FE47A6BD85768BB9561E95">
+Sales Brochure                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a target="_self">
+Lettings                      </a>
+                      <div class="submenu">
+                        <ul>
+                          <li>
+                            <a target="_self" originalhref="/search?category=1&amp;listingtype=6&amp;statusids=1,2,6,7,8&amp;obc=Price&amp;obd=Descending&amp;officeids=4,5,6,7">
+Properties to Let                            </a>
+                          </li>
+                          <li>
+                            <a target="_self" originalhref="/landlords">
+Landlords                            </a>
+                          </li>
+                          <li>
+                            <a target="_self" originalhref="/tenants">
+Tenants                            </a>
+                          </li>
+                          <li>
+                            <a href="1.html" target="_self">
+Property Management                            </a>
+                          </li>
+                          <li>
+                            <a target="_self" originalhref="http://media102.estateweb.com/contentdocument.ewdgx?ED15C8035A15716592F26577EBFF8DE5E257DE08C05859CDA4508EC194F94A67249983DBC729F9B565CA4B7B3C99DF7E">
+Lettings Brochure                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a target="_self">
+Short Lets                      </a>
+                      <div class="submenu">
+                        <ul>
+                          <li>
+                            <a target="_self" originalhref="http://www.pennyandsinclair.co.uk/search?officeids=8&amp;obc=Price&amp;obd=Descending">
+Short Let Properties                            </a>
+                          </li>
+                          <li>
+                            <a target="_self" originalhref="/owners">
+Owners                            </a>
+                          </li>
+                          <li>
+                            <a target="_self" originalhref="/guests">
+Guests                            </a>
+                          </li>
+                          <li>
+                            <a target="_self" originalhref="http://media102.estateweb.com/contentdocument.ewdgx?897BEADCBD27AFE40859B0F9E838C40AD87B6E373B8EDEED919B324C2F1C462118B017004B886FDBA674229AF1517A70">
+Short Let Brochure                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a target="_self" originalhref="/contact-us">
+Contact Us                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              <div style="display:none;">
+                <div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <article>
+<!-- <h1>Search Results</h1>-->        <div class="searchGrayrow">
+          <div class="container">
+            <div class="row" data-bind="visible: propertysearchresults.mode() == 'list'">
+              <div class="col fl-fiveWide lg-fourWide md-twelveWide sm-twelveWide">
+                <div class="displayingProperties">
+Displaying 1 to 9 of 209 properties                </div>
+                <div class="pagination">
+                  <div data-role="pager" data-total="209" data-hasnext="True" data-hasprevious="False" data-pagenumber="1" data-itemcount="9" data-itemsperpage="9" data-prev-text="&lt;" data-next-text=">" data-pages-display="3">
+                  </div>
+                </div>
+              </div>
+              <div class="col fl-sevenWide lg-eightWide md-twelveWide sm-gone text-right">
+                <div class="propertyPerpage">
+Properties per page                </div>
+                <div class="searchSelect">
+                  <select data-bind="value: filterbar.queryParameters.perPage, jPlugin: { name : 'selectBoxIt', options : { autoWidth : false, showEffect: 'slideDown', hideEffect: 'slideUp' } }">
+                    <option selected="selected">
+9                    </option>
+                    <option>
+12                    </option>
+                    <option>
+15                    </option>
+                    <option>
+18                    </option>
+                    <option>
+21                    </option>
+                  </select>
+                </div>
+                <div class="PriceAsedec">
+Order:                  <label>
+Price Ascending                    <input type="radio" value="Price|Ascending" data-bind="checked: filterbar.queryParameters.orderBy"/>
+                    <i>
+                    </i>
+                  </label>
+                  <label>
+Price Descending                    <input type="radio" value="Price|Descending" data-bind="initializeValue: filterbar.queryParameters.orderBy, checked: filterbar.queryParameters.orderBy"/>
+                    <i>
+                    </i>
+                  </label>
+                </div>
+              </div>
+              <div class="col fl-gone lg-gone md-gone sm-twelveWide" id="subMenu">
+                <ul class="PriceAsedec">
+                  <li>
+                    <label>
+order price ascending                      <input type="radio" value="Price|Ascending" data-bind="checked: filterbar.queryParameters.orderBy"/>
+                      <i>
+                      </i>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+order price descending                      <input type="radio" value="Price|Descending" data-bind="initializeValue: filterbar.queryParameters.orderBy, checked: filterbar.queryParameters.orderBy"/>
+                      <i>
+                      </i>
+                    </label>
+                  </li>
+                  <li class="searchBlackrow">
+                    <a data-bind="click: function(){ propertysearchresults.mode('list') }, css: { activeTab : propertysearchresults.mode() == 'list', notActive : propertysearchresults.mode() != 'list'}" id="listView">
+                      <i class="i-brochure">
+                      </i>
+List View                    </a>
+                    <a data-bind="click: function(){ propertysearchresults.mode('map'); propertysearchresults.display('search-results-map' ) }, css: { activeTab : propertysearchresults.mode() == 'map', notActive : propertysearchresults.mode() != 'map'}" id="mapView">
+                      <i class="i-location">
+                      </i>
+Map View                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="searchBlackrow sm-gone">
+          <div class="container text-right">
+            <a data-bind="click: function(){ propertysearchresults.mode('list') }, css: { activeTab : propertysearchresults.mode() == 'list', notActive : propertysearchresults.mode() != 'list'}" id="listView">
+              <i class="i-brochure">
+              </i>
+List View            </a>
+            <a data-bind="click: function(){ propertysearchresults.mode('map'); propertysearchresults.display('search-results-map' ) }, css: { activeTab : propertysearchresults.mode() == 'map', notActive : propertysearchresults.mode() != 'map'}" id="mapView">
+              <i class="i-location">
+              </i>
+Map View            </a>
+            <a onclick="javascript:searchPanelClick(this);" class="newSearch" originalhref="javascript:;">
+              <i class="fa fa-search">
+              </i>
+New Search            </a>
+<!--<div class="col fl-gone lg-gone md-oneWide sm-twoWide"> <i id="subMenuButton" class="fa fa-ellipsis-h"></i> </div>-->          </div>
+        </div>
+        <div class="searchPanelPopup row" style="display:none;">
+          <div class="container">
+            <div data-bind="template: 'newSearchPanel'">
+            </div>
+          </div>
+        </div>
+        <div class="ko-unbound" id="mapContainer" data-bind="visible: propertysearchresults.mode() == 'map', css : { 'ko-unbound' : false }">
+          <div class="container">
+            <div data-bind="visible: map.status() != 'noresults', foreach: map.options.markerImages" class="mapKeys">
+              <div class="mapKey">
+                <img data-bind="attr: {src: icon}"/>
+                <span data-bind="text: text">
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="row mapbackBtn fl-gone lg-gone">
+            <a data-bind="click: function(){ propertysearchresults.mode('list') }, css: { activeTab : propertysearchresults.mode() == 'list', notActive : propertysearchresults.mode() != 'list'}" originalhref="#">
+<            </a>
+          </div>
+          <div id="search-results-map" data-bind="visible: propertysearchresults.status() == 'complete', visibilityChanged: map.resizeMap">
+          </div>
+          <div class="loadingMap" data-bind="visible: propertysearchresults.status() == 'idle'">
+            <b>
+              <i>
+Please Wait...              </i>
+            </b>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row searchListing" data-bind="visible: propertysearchresults.mode() == 'list'">
+            <div class="col fl-fourWide lg-fourWide md-sixWide sm-twelveWide">
+              <figure>
+                <div class="status">
+Under Offer                </div>
+                <div href="2.html">
+                  <img alt="Northmoor Road, Oxford, OX2" data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=1.jpg&amp;r=101073005913&amp;l=5&amp;h=533&amp;w=800&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0"/>
+                </div>
+                <div href="2.html" class="fdLink">
+                  <span class="button">
+Details                  </span>
+                </div>
+              </figure>
+<!--<figure>
+        <a href="/property/residential/for-sale/oxford/northmoor-road/101073005913"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=2.jpg&amp;r=101073005913&amp;l=5&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="Northmoor Road, Oxford, OX2" /></a>
+        <a href="/property/residential/for-sale/oxford/northmoor-road/101073005913"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=3.jpg&amp;r=101073005913&amp;l=5&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="Northmoor Road, Oxford, OX2" /></a>
+    </figure>-->              <h2 class="searchProName">
+                <div href="2.html">
+Northmoor Road, Oxford, OX2                </div>
+              </h2>
+              <h3>
+                <div data-bind="with: $root.modal">
+Guide price £3,250,000 (Under Offer)                </div>
+              </h3>
+              <div class="featuredDescriptions">
+A detached five/six bedroom house built in 1928 to a design by A C Martin of brick construction und...              </div>
+<!--<div class="row">
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bedrooms 6 </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Reception rooms 5 </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bathrooms 3 </div>
+	</div>-->              <br/>
+              <div class="roomsIcon">
+6                <i class="icon-bed">
+                </i>
+3                <i class="icon-bath">
+                </i>
+              </div>
+              <div>
+                <div class="featuredProLinks">
+                  <a data-bind="click: function(vm, s){ $root.modal.open(vm, s); $root.propertysearchresults.display('101073005913mappanel', '?references=101073005913');}" originalhref="#101073005913mapcontainer">
+                    <i class="i-location" title="Map">
+                    </i>
+                  </a>
+                  <div id="101073005913mapcontainer" style="display:none;">
+                    <div id="101073005913mappanel" class="listingMap" style="width:800px; height:600px;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col fl-fourWide lg-fourWide md-sixWide sm-twelveWide">
+              <figure>
+                <div href="3.html">
+                  <img alt="Woodstock Road, Oxford, OX2" data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=1.jpg&amp;r=101073008141&amp;l=5&amp;h=533&amp;w=800&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0"/>
+                </div>
+                <div href="3.html" class="fdLink">
+                  <span class="button">
+Details                  </span>
+                </div>
+              </figure>
+<!--<figure>
+        <a href="/property/residential/for-sale/oxford/woodstock-road/101073008141"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=2.jpg&amp;r=101073008141&amp;l=5&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="Woodstock Road, Oxford, OX2" /></a>
+        <a href="/property/residential/for-sale/oxford/woodstock-road/101073008141"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=3.jpg&amp;r=101073008141&amp;l=5&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="Woodstock Road, Oxford, OX2" /></a>
+    </figure>-->              <h2 class="searchProName">
+                <a href="3.html">
+Woodstock Road, Oxford, OX2                </a>
+              </h2>
+              <h3>
+                <div data-bind="with: $root.modal">
+Guide price £3,250,000                </div>
+              </h3>
+              <div class="featuredDescriptions">
+A handsome bay fronted Edwardian semi-detached house sitting on a corner plot, beautifully presente...              </div>
+<!--<div class="row">
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bedrooms 6 </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Reception rooms 5 </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bathrooms 4 </div>
+	</div>-->              <br/>
+              <div class="roomsIcon">
+6                <i class="icon-bed">
+                </i>
+4                <i class="icon-bath">
+                </i>
+              </div>
+              <div>
+                <div class="featuredProLinks">
+                  <a data-bind="click: function(vm, s){ $root.modal.open(vm, s); $root.propertysearchresults.display('101073008141mappanel', '?references=101073008141');}" originalhref="#101073008141mapcontainer">
+                    <i class="i-location" title="Map">
+                    </i>
+                  </a>
+                  <div id="101073008141mapcontainer" style="display:none;">
+                    <div id="101073008141mappanel" class="listingMap" style="width:800px; height:600px;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col fl-fourWide lg-fourWide md-sixWide sm-twelveWide">
+              <figure>
+                <div href="4.html">
+                  <img alt="Henley-on-Thames, RG9" data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=1.jpg&amp;r=101073007149&amp;l=6&amp;h=533&amp;w=800&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0"/>
+                </div>
+                <div href="4.html" class="fdLink">
+                  <span class="button">
+Details                  </span>
+                </div>
+              </figure>
+<!--<figure>
+        <a href="/property/residential/for-sale/henley-on-thames/skirmett/101073007149"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=2.jpg&amp;r=101073007149&amp;l=6&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="Henley-on-Thames, RG9" /></a>
+        <a href="/property/residential/for-sale/henley-on-thames/skirmett/101073007149"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=3.jpg&amp;r=101073007149&amp;l=6&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="Henley-on-Thames, RG9" /></a>
+    </figure>-->              <h2 class="searchProName">
+                <a href="4.html">
+Henley-on-Thames, RG9                </a>
+              </h2>
+              <h3>
+                <div data-bind="with: $root.modal">
+OIEO £3,000,000 Freehold                </div>
+              </h3>
+              <div class="featuredDescriptions">
+Please View Our Aerial Video... A delightful 16th country home that has been extended and improved...              </div>
+<!--<div class="row">
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bedrooms 5 </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Reception rooms 4 </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bathrooms 3 </div>
+	</div>-->              <br/>
+              <div class="roomsIcon">
+5                <i class="icon-bed">
+                </i>
+3                <i class="icon-bath">
+                </i>
+              </div>
+              <div>
+                <div class="featuredProLinks">
+                  <a data-bind="click: function(vm, s){ $root.modal.open(vm, s); $root.propertysearchresults.display('101073007149mappanel', '?references=101073007149');}" originalhref="#101073007149mapcontainer">
+                    <i class="i-location" title="Map">
+                    </i>
+                  </a>
+                  <div id="101073007149mapcontainer" style="display:none;">
+                    <div id="101073007149mappanel" class="listingMap" style="width:800px; height:600px;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col fl-fourWide lg-fourWide md-sixWide sm-twelveWide">
+              <figure>
+                <div href="5.html">
+                  <img alt="Woodstock Road, Oxford, OX2" data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=1.jpg&amp;r=101073004625&amp;l=5&amp;h=533&amp;w=800&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0"/>
+                </div>
+                <div href="5.html" class="fdLink">
+                  <span class="button">
+Details                  </span>
+                </div>
+              </figure>
+<!--<figure>
+        <a href="/property/residential/for-sale/oxford/woodstock-road/101073004625"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=2.jpg&amp;r=101073004625&amp;l=5&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="Woodstock Road, Oxford, OX2" /></a>
+        <a href="/property/residential/for-sale/oxford/woodstock-road/101073004625"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=3.jpg&amp;r=101073004625&amp;l=5&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="Woodstock Road, Oxford, OX2" /></a>
+    </figure>-->              <h2 class="searchProName">
+                <a href="5.html">
+Woodstock Road, Oxford, OX2                </a>
+              </h2>
+              <h3>
+                <div data-bind="with: $root.modal">
+Guide price £2,450,000                </div>
+              </h3>
+              <div class="featuredDescriptions">
+This Edwardian house has been extended and completely refurbished, beautifully blending period char...              </div>
+<!--<div class="row">
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bedrooms 5 </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Reception rooms 3 </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bathrooms 4 </div>
+	</div>-->              <br/>
+              <div class="roomsIcon">
+5                <i class="icon-bed">
+                </i>
+4                <i class="icon-bath">
+                </i>
+              </div>
+              <div>
+                <div class="featuredProLinks">
+                  <a data-bind="click: function(vm, s){ $root.modal.open(vm, s); $root.propertysearchresults.display('101073004625mappanel', '?references=101073004625');}" originalhref="#101073004625mapcontainer">
+                    <i class="i-location" title="Map">
+                    </i>
+                  </a>
+                  <div id="101073004625mapcontainer" style="display:none;">
+                    <div id="101073004625mappanel" class="listingMap" style="width:800px; height:600px;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col fl-fourWide lg-fourWide md-sixWide sm-twelveWide">
+              <figure>
+                <a href="6.html">
+                  <img alt="Iffley Road, Oxford, OX4" data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=1.jpg&amp;r=101073004453&amp;l=4&amp;h=533&amp;w=800&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0"/>
+                </a>
+                <a href="6.html" class="fdLink">
+                  <span class="button">
+Details                  </span>
+                </a>
+              </figure>
+<!--<figure>
+        <a href="/property/residential/for-sale/oxford/iffley-road/101073004453"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=2.jpg&amp;r=101073004453&amp;l=4&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="Iffley Road, Oxford, OX4" /></a>
+        <a href="/property/residential/for-sale/oxford/iffley-road/101073004453"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=3.jpg&amp;r=101073004453&amp;l=4&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="Iffley Road, Oxford, OX4" /></a>
+    </figure>-->              <h2 class="searchProName">
+                <a href="6.html">
+Iffley Road, Oxford, OX4                </a>
+              </h2>
+              <h3>
+                <div data-bind="with: $root.modal">
+Guide price £1,900,000 Freehold                </div>
+              </h3>
+              <div class="featuredDescriptions">
+A substantial Victorian detached house arranged over four floors with accommodation extending to c....              </div>
+<!--<div class="row">
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bedrooms 10 </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Reception rooms 3 </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bathrooms 9 </div>
+	</div>-->              <br/>
+              <div class="roomsIcon">
+10                <i class="icon-bed">
+                </i>
+9                <i class="icon-bath">
+                </i>
+              </div>
+              <div>
+                <div class="featuredProLinks">
+                  <a data-bind="click: function(vm, s){ $root.modal.open(vm, s); $root.propertysearchresults.display('101073004453mappanel', '?references=101073004453');}" originalhref="#101073004453mapcontainer">
+                    <i class="i-location" title="Map">
+                    </i>
+                  </a>
+                  <div id="101073004453mapcontainer" style="display:none;">
+                    <div id="101073004453mappanel" class="listingMap" style="width:800px; height:600px;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col fl-fourWide lg-fourWide md-sixWide sm-twelveWide">
+              <figure>
+                <a href="7.html">
+                  <img alt="Bainton Road, Oxford, OX2" data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=1.jpg&amp;r=101073007989&amp;l=5&amp;h=533&amp;w=800&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0"/>
+                </a>
+                <a href="7.html" class="fdLink">
+                  <span class="button">
+Details                  </span>
+                </a>
+              </figure>
+<!--<figure>
+        <a href="/property/residential/for-sale/oxford/bainton-road/101073007989"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=2.jpg&amp;r=101073007989&amp;l=5&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="Bainton Road, Oxford, OX2" /></a>
+        <a href="/property/residential/for-sale/oxford/bainton-road/101073007989"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=3.jpg&amp;r=101073007989&amp;l=5&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="Bainton Road, Oxford, OX2" /></a>
+    </figure>-->              <h2 class="searchProName">
+                <a href="7.html">
+Bainton Road, Oxford, OX2                </a>
+              </h2>
+              <h3>
+                <div data-bind="with: $root.modal">
+Guide price £1,750,000                </div>
+              </h3>
+              <div class="featuredDescriptions">
+This deceptively spacious family home enjoys unspoilt views over St John's playing fields, ample of...              </div>
+<!--<div class="row">
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bedrooms 6 </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Reception rooms 3 </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bathrooms 2 </div>
+	</div>-->              <br/>
+              <div class="roomsIcon">
+6                <i class="icon-bed">
+                </i>
+2                <i class="icon-bath">
+                </i>
+              </div>
+              <div>
+                <div class="featuredProLinks">
+                  <a data-bind="click: function(vm, s){ $root.modal.open(vm, s); $root.propertysearchresults.display('101073007989mappanel', '?references=101073007989');}" originalhref="#101073007989mapcontainer">
+                    <i class="i-location" title="Map">
+                    </i>
+                  </a>
+                  <div id="101073007989mapcontainer" style="display:none;">
+                    <div id="101073007989mappanel" class="listingMap" style="width:800px; height:600px;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col fl-fourWide lg-fourWide md-sixWide sm-twelveWide">
+              <figure>
+                <div class="status">
+Sold Subject To Contract                </div>
+                <a href="8.html">
+                  <img alt="James Street, Oxford, OX4" data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=1.jpg&amp;r=101073007909&amp;l=4&amp;h=533&amp;w=800&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0"/>
+                </a>
+                <a href="8.html" class="fdLink">
+                  <span class="button">
+Details                  </span>
+                </a>
+              </figure>
+<!--<figure>
+        <a href="/property/residential/for-sale/oxford/james-street/101073007909"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=2.jpg&amp;r=101073007909&amp;l=4&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="James Street, Oxford, OX4" /></a>
+        <a href="/property/residential/for-sale/oxford/james-street/101073007909"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=3.jpg&amp;r=101073007909&amp;l=4&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="James Street, Oxford, OX4" /></a>
+    </figure>-->              <h2 class="searchProName">
+                <a href="8.html">
+James Street, Oxford, OX4                </a>
+              </h2>
+              <h3>
+                <div data-bind="with: $root.modal">
+Guide price £1,750,000 Freehold (Sold Subject To Contract)                </div>
+              </h3>
+              <div class="featuredDescriptions">
+A substantial Victorian property arranged over four floors and extending to c. 3273 sq ft. The prop...              </div>
+<!--<div class="row">
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bedrooms 12 </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Reception rooms - </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bathrooms 4 </div>
+	</div>-->              <br/>
+              <div class="roomsIcon">
+12                <i class="icon-bed">
+                </i>
+4                <i class="icon-bath">
+                </i>
+              </div>
+              <div>
+                <div class="featuredProLinks">
+                  <a data-bind="click: function(vm, s){ $root.modal.open(vm, s); $root.propertysearchresults.display('101073007909mappanel', '?references=101073007909');}" originalhref="#101073007909mapcontainer">
+                    <i class="i-location" title="Map">
+                    </i>
+                  </a>
+                  <div id="101073007909mapcontainer" style="display:none;">
+                    <div id="101073007909mappanel" class="listingMap" style="width:800px; height:600px;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col fl-fourWide lg-fourWide md-sixWide sm-twelveWide">
+              <figure>
+                <a href="9.html">
+                  <img alt="Park Lane, Cane End, RG4" data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=1.jpg&amp;r=101073007252&amp;l=6&amp;h=533&amp;w=800&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0"/>
+                </a>
+                <a href="9.html" class="fdLink">
+                  <span class="button">
+Details                  </span>
+                </a>
+              </figure>
+<!--<figure>
+        <a href="/property/residential/for-sale/reading/cane-end/park-lane/101073007252"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=2.jpg&amp;r=101073007252&amp;l=6&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="Park Lane, Cane End, RG4" /></a>
+        <a href="/property/residential/for-sale/reading/cane-end/park-lane/101073007252"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=3.jpg&amp;r=101073007252&amp;l=6&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="Park Lane, Cane End, RG4" /></a>
+    </figure>-->              <h2 class="searchProName">
+                <a href="9.html">
+Park Lane, Cane End, RG4                </a>
+              </h2>
+              <h3>
+                <div data-bind="with: $root.modal">
+Guide price £1,750,000 Freehold                </div>
+              </h3>
+              <div class="featuredDescriptions">
+An impressive family home, set off a quiet country lane in this pretty Hamlet, yet only 5 miles/15...              </div>
+<!--<div class="row">
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bedrooms 5 </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Reception rooms 3 </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bathrooms 3 </div>
+	</div>-->              <br/>
+              <div class="roomsIcon">
+5                <i class="icon-bed">
+                </i>
+3                <i class="icon-bath">
+                </i>
+              </div>
+              <div>
+                <div class="featuredProLinks">
+                  <a data-bind="click: function(vm, s){ $root.modal.open(vm, s); $root.propertysearchresults.display('101073007252mappanel', '?references=101073007252');}" originalhref="#101073007252mapcontainer">
+                    <i class="i-location" title="Map">
+                    </i>
+                  </a>
+                  <div id="101073007252mapcontainer" style="display:none;">
+                    <div id="101073007252mappanel" class="listingMap" style="width:800px; height:600px;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col fl-fourWide lg-fourWide md-sixWide sm-twelveWide">
+              <figure>
+                <a href="10.html">
+                  <img alt="Kidlington, OX5" data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=1.jpg&amp;r=101073008002&amp;l=4&amp;h=533&amp;w=800&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0"/>
+                </a>
+                <a href="10.html" class="fdLink">
+                  <span class="button">
+Details                  </span>
+                </a>
+              </figure>
+<!--<figure>
+        <a href="/property/residential/for-sale/kidlington/oddington/101073008002"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=2.jpg&amp;r=101073008002&amp;l=4&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="Kidlington, OX5" /></a>
+        <a href="/property/residential/for-sale/kidlington/oddington/101073008002"><img data-src="http://media102.estateweb.com/PhotoServ/Default.aspx?a=8192&amp;i=3.jpg&amp;r=101073008002&amp;l=4&amp;h=131&amp;w=198&amp;st=&amp;rt=0.07&amp;ds=1&amp;lt=5&amp;t=0&amp;resinfo=&amp;ct=0" alt="Kidlington, OX5" /></a>
+    </figure>-->              <h2 class="searchProName">
+                <a href="10.html">
+Kidlington, OX5                </a>
+              </h2>
+              <h3>
+                <div data-bind="with: $root.modal">
+Guide price £1,650,000                </div>
+              </h3>
+              <div class="featuredDescriptions">
+Stunning barn conversion with heated pool in rural location yet within 6 miles of Oxford and 2 mile...              </div>
+<!--<div class="row">
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bedrooms 5 </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Reception rooms 2 </div>
+		<div class="col lg-fourWide md-fourWide sm-fourWide text-centre"> Bathrooms 3 </div>
+	</div>-->              <br/>
+              <div class="roomsIcon">
+5                <i class="icon-bed">
+                </i>
+3                <i class="icon-bath">
+                </i>
+              </div>
+              <div>
+                <div class="featuredProLinks">
+                  <a data-bind="click: function(vm, s){ $root.modal.open(vm, s); $root.propertysearchresults.display('101073008002mappanel', '?references=101073008002');}" originalhref="#101073008002mapcontainer">
+                    <i class="i-location" title="Map">
+                    </i>
+                  </a>
+                  <div id="101073008002mapcontainer" style="display:none;">
+                    <div id="101073008002mappanel" class="listingMap" style="width:800px; height:600px;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="searchBlackrowFooter text-right" data-bind="visible: propertysearchresults.mode() == 'list'">
+          <div class="container">
+            <div class="pagination">
+              <div data-role="pager" data-total="209" data-hasnext="True" data-hasprevious="False" data-pagenumber="1" data-itemcount="9" data-itemsperpage="9" data-prev-text="&lt;" data-next-text=">" data-pages-display="3">
+              </div>
+            </div>
+          </div>
+        </div>
+<!--<div>
+<h2>Your Saved Properties</h2><br/>
+<div class="noResults">
+    <div class="row">
+        <div class="col fl-twelveWide lg-twelveWide md-twelveWide sm-twelveWide text-centre">        
+            <span class="headingFour">You do not currently have any saved properties</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col fl-twelveWide lg-twelveWide md-twelveWide sm-twelveWide text-centre">
+            To save a property, click the "Save Property" button on a property listing.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col fl-twelveWide lg-twelveWide md-twelveWide sm-twelveWide text-centre">
+            <a class="button fl-threeWide lg-threeWide md-threeWide sm-twelveWide" href="/">Return to home page</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+</div>-->      </article>
+      <div id="valuation" data-bind="with: form.create" style="display:none" data-ga-trackingid="UA-85978858-1">
+        <form data-bind="submit: send" novalidate="novalidate">
+          <div id="modalForm" class="sky-form modernForm">
+            <header>
+Request a Valuation            </header>
+            <div data-bind="visible: isStatus('ready')">
+              <fieldset>
+                <div class="row">
+                  <div class="col col-6">
+                    <label class="input">
+                      <i class="icon-append icon-user">
+                      </i>
+                      <input type="text" placeholder="Name *" data-div="About You" data-field-name="Name" data-bind="jPlugin: { name : 'placeholder' }" required=""/>
+                    </label>
+                  </div>
+                  <div class="col col-6">
+                    <label class="input">
+                      <i class="icon-append icon-envelope-alt">
+                      </i>
+                      <input type="text" placeholder="Email address *" data-div="Your Contact Details" data-field-name="Email address" data-bind="jPlugin: { name : 'placeholder' }" data-rule-email="" required=""/>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col-6">
+                    <label class="input">
+                      <i class="icon-append icon-phone">
+                      </i>
+                      <input type="text" placeholder="Contact number" data-div="Your Contact Details" data-field-name="Contact number" data-bind="jPlugin: { name : 'placeholder' }"/>
+                    </label>
+                  </div>
+                  <div class="col col-6">
+                    <label class="input">
+                      <input type="text" placeholder="Postcode *" data-div="Property to be valued" data-field-name="Postcode" data-bind="jPlugin: { name : 'placeholder' }" required=""/>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col-12">
+                    <label class="label">
+Which branch do you wish to contact about your valuation?                    </label>
+                    <label class="radio">
+                      <input type="radio" placeholder="Office" name="offices" data-section="Your Contact Details" data-field-name="Office" value="OXFORD CITY" required=""/>
+                      <i>
+                      </i>
+                      <span>
+OXFORD CITY                      </span>
+                    </label>
+                    <label class="radio">
+                      <input type="radio" placeholder="Office" name="offices" data-section="Your Contact Details" data-field-name="Office" value="SUMMERTOWN" required=""/>
+                      <i>
+                      </i>
+                      <span>
+SUMMERTOWN                      </span>
+                    </label>
+                    <label class="radio">
+                      <input type="radio" placeholder="Office" name="offices" data-section="Your Contact Details" data-field-name="Office" value="HENLEY-ON-THAMES" required=""/>
+                      <i>
+                      </i>
+                      <span>
+HENLEY-ON-THAMES                      </span>
+                    </label>
+                    <label class="radio">
+                      <input type="radio" placeholder="Office" name="offices" data-section="Your Contact Details" data-field-name="Office" value="BURFORD" required=""/>
+                      <i>
+                      </i>
+                      <span>
+BURFORD                      </span>
+                    </label>
+                    <label class="radio">
+                      <input type="radio" placeholder="Office" name="offices" data-section="Your Contact Details" data-field-name="Office" value="SHORT LETS" required=""/>
+                      <i>
+                      </i>
+                      <span>
+SHORT LETS                      </span>
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <footer>
+                <button class="button">
+Submit                </button>
+              </footer>
+            </div>
+            <div data-bind="visible: isStatus('sent')">
+              <div class="sentSpacing">
+Thank you for your valuation request. We will be in contact with you shortly.              </div>
+            </div>
+            <div data-bind="visible: isStatus('failed')">
+              <div class="sentSpacing">
+There was an error while sending your message.              </div>
+            </div>
+            <div data-bind="visible: isStatus('sending')">
+              <div class="sentSpacing">
+                <b>
+Please wait...                </b>
+              </div>
+            </div>
+          </div>
+          <input type="hidden" data-field-name="__settings" value="3D814A95273821EB315E165A1B2EB9ECAC27590DA17AB408DFA09B58E81E7B2969093DD566EEC73B1810CA6AEB7585419D8117DAB5678575A3F7A894973F78B26CB773D7F5D279F5BBBDAC1EF781A6D8723530AEF495A0550BE27A74E5EB76B5C8E1D5D8BF39C6570831842517765E06692490D0EAB4E051F87F52E6F3066D9474B23CA903410A34C6A452D23B512AA15928DD00572FDB4B88743ECCACB7B8BBF0AFF4C58A2AB1F9EDA5604391B5E57E7FFF2E62C725AFEFB1A79913357D879D3C63D4A298656204BA63E7D5053F1F35DE544B37660FEDBCD6E096C22F58BB8D2986AD4E558F3F8D9BEDE462E44F83F8288EEA843C1828D0A8CFD6AC43A08F15A53A907D93AAE4FE61696131E44438FF9CF05564DE41775440C1B6300524B00682085697AB74BB1AF1146E76FC6C9DF2051C5741BA84082572E7F6714EE11CD5D6161B476D84EAE154CE2C799FCA36535ECBE9B7F88A24D727778ABE37C41FAF059F95330CACA0D7EEE1381D9384C2AE"/>
+        </form>
+      </div>
+      <footer>
+        <div class="container text-centre">
+          <div class="affiliatelogos">
+            <i class="tweb-arla-aff" title="arla">
+            </i>
+            <i class="tweb-tpo-aff" title="tpo">
+            </i>
+            <i class="tweb-tds-aff" title="tds">
+            </i>
+            <i class="tweb-naea-aff" title="naea">
+            </i>
+            <i class="tweb-guild2017-aff" title="guild2017">
+            </i>
+            <i class="tweb-rightmove-aff" title="rightmove">
+            </i>
+            <i class="tweb-zoopla-aff" title="zoopla">
+            </i>
+            <i class="tweb-primelocation2-aff" title="primelocation2">
+            </i>
+          </div>
+          <div class="copyright">
+Property Website Design by            <a target="_blank" rel="nofollow" originalhref="http://www.technicweb.com">
+TECHNICWEB            </a>
+© / all content © Penny & Sinclair 2017            <a target="_blank" originalhref="/sitemap">
+[+Sitemap]            </a>
+            <a originalhref="/privacy-policy">
+Privacy policy            </a>
+|            <a originalhref="/terms">
+Terms & conditions            </a>
+            <br/>
+            <br/>
+            <div>
+Reg no: 06855863 Registered address: 256 Banbury Road, Summertown, Oxford OX2 7DE            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

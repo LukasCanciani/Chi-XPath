@@ -1,0 +1,1346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html lang="it">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --><!-- These are just examples, must be changed in the CMS -->    <link rel="icon" href="0/favicon.ico.css"/>
+<!-- DNS and resources Prefetching for Google resources -->    <link rel="dns-prefetch" href="0/fonts.googleapis.com.css"/>
+    <link rel="preconnect" crossorigin="" href="0/fonts.googleapis.com_1.css"/>
+    <link rel="stylesheet" href="0/css.css" media="all"/>
+    <link rel="stylesheet" href="0/css_1.css"/>
+<!-- Preload directives for static assets (css & js) -->    <link rel="stylesheet" href="0/app.min.css"/>
+    <title>
+Flotta MSC Crociere | MSC Crociere    </title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="Esplora la flotta MSC Crociere e scopri i dettagli sulle nostre navi ecologiche, sui piani nave, sulle cabine e sull'intrattenimento a bordo. Visita MSC per ulteriori informazioni."/>
+    <link rel="canonical" href="0/navi-da-crociera.css"/>
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content="https://www.msccrociere.it:443/it-IT/Our Cruises/Ships"/>
+<!-- Pagination for SEO --><!-- IE11 polyfill for responsive images support --><!-- Web Font Loading Strategy -->    <style>
+    </style>
+  </head>
+  <body id="outerContainer" class="">
+<!-- Google Tag Manager -->    <noscript>
+      <iframe width="0" style="display:none;visibility:hidden" src="0/ns.html" height="0">
+      </iframe>
+    </noscript>
+<!-- End Google Tag Manager -->    <header id="msc-header" class="header " v-bind:class="{'visible-mobile-menu' : showMobileMenu}">
+      <div class="header__container">
+        <a class="header__logo" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="header" data-tracking-action="login_header" data-tracking-label="Our Cruises" data-tracking-value="0" data-tracking-noninteraction="0" originalhref="/">
+          <img alt="MSC Crociere" title="MSC Crociere" src="0/i_msc_crociere_neg.svg" disablewebedit="False"/>
+        </a>
+        <nav class="header__menu">
+          <ul v-on:mouseleave="handleMenuLeave()">
+            <li class="menu__item header__search" v-bind:class="{ 'active' : menuIndex === 100 }">
+              <a class="menu__link" v-on:mouseover="handleMenuHover(100, $event)" v-on:touchstart="showSubMenu(100)" originalhref="#">
+                <div class="row">
+                  <div class="columns small-12 align-middle">
+                    <svg class="search-icon editorial-search__icon">
+                      <use xlink:href="/assets/img/sprite.svg#search-icon"/>
+                    </svg>
+                    <div class="hide-for-large">
+                      <div class="hide-for-large">
+                        <form action="/ricerca" method="get">
+                          <input id="editorial-search__input" type="text" class="editorial-search__input" name="query" placeholder="Cerca"/>
+                        </form>
+                      </div>
+                      <div>
+                        <form action="/ricerca" method="get" class="input-group show-for-large">
+                          <input type="text" class="input-group-field" name="query" placeholder="Cerca"/>
+                          <div class="input-group-button">
+                            <input type="submit" value="Cerca" class="button"/>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <ul v-show="true" class="sub-menu show-for-large">
+                <li class="sub-menu__item-search">
+                  <div class="row editorial-search align-middle text-center">
+                    <div class="columns small-9 small-offset-2">
+                      <div class="hide-for-large">
+                        <form action="/ricerca" method="get">
+                          <input id="editorial-search__input" type="text" class="editorial-search__input" name="query" placeholder="Cerca"/>
+                        </form>
+                      </div>
+                      <div>
+                        <form action="/ricerca" method="get" class="input-group show-for-large">
+                          <input type="text" class="input-group-field" name="query" placeholder="Cerca"/>
+                          <div class="input-group-button">
+                            <input type="submit" value="Cerca" class="button"/>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item" v-bind:class="{ 'active' : menuIndex === 0 }">
+              <a v-on:click="showSubMenu(0)" v-on:mouseover="handleMenuHover(0, $event)" originalhref="#">
+Offerte                <svg width="18" height="10" class="arrow-down-icon">
+                  <use xlink:href="/assets/img/sprite.svg#arrow-down-icon"/>
+                </svg>
+              </a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item ">
+                  <a data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="" data-tracking-action="" data-tracking-label="Deals" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/offerte-crociera">
+                    <picture>
+                      <img alt="" title="" src="0/all_deals.svg"/>
+                    </picture>
+Tutte le offerte                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="deals" data-tracking-action="click" data-tracking-label="Crociere Last Minute" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/offerte-crociera/crociere-last-minute">
+                    <picture>
+                      <img alt="" title="" src="0/last_minute.svg"/>
+                    </picture>
+Crociere Last Minute                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="deals" data-tracking-action="click" data-tracking-label="GrandEstate Plus Estate 2019" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/offerte-crociera/grandestate-plus">
+                    <picture>
+                      <img alt="" title="" src="0/wave-all_inclusive_promo_icona.svg"/>
+                    </picture>
+GrandestatePlus                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="deals" data-tracking-action="click" data-tracking-label="Promo Tre Giorni Free Winter" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/offerte-crociera/promo-tre-giorni-free-winter">
+                    <picture>
+                      <img alt="" title="" src="0/cruise_from.svg"/>
+                    </picture>
+Offerta Crociere Inverno                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="deals" data-tracking-action="click" data-tracking-label="Crociere di Natale e Capodanno" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/offerte-crociera/crociere-di-natale-e-capodanno">
+                    <picture>
+                      <img alt="" title="" src="0/christmas_and_ny_iconabianca.s.svg"/>
+                    </picture>
+Crociere di Natale e Capodanno                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/offerte-crociera/porti-di-partenza">
+                    <picture>
+                      <img alt="" title="" src="0/cruise_from_1.svg"/>
+                    </picture>
+Porti di partenza                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item" v-bind:class="{ 'active' : menuIndex === 1 }">
+              <a v-on:click="showSubMenu(1)" v-on:mouseover="handleMenuHover(1, $event)" originalhref="#">
+Crociere                <svg width="18" height="10" class="arrow-down-icon">
+                  <use xlink:href="/assets/img/sprite.svg#arrow-down-icon"/>
+                </svg>
+              </a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item ">
+                  <a originalhref="/crociere/destinazioni">
+                    <picture>
+                      <img alt="" title="" src="0/destinations.svg"/>
+                    </picture>
+Destinazioni                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/crociere/navi-da-crociera">
+                    <picture>
+                      <img alt="" title="" src="0/ships.svg"/>
+                    </picture>
+Navi                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/crociere/escursioni">
+                    <picture>
+                      <img alt="" title="" src="0/excursion.svg"/>
+                    </picture>
+Escursioni                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/crociere/msc-esperienze-e-cabine">
+                    <picture>
+                      <img alt="" title="" src="0/msc_experiences.svg"/>
+                    </picture>
+MSC Esperienze e cabine                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/crociere/msc-yacht-club">
+                    <picture>
+                      <img alt="" title="" src="0/msc_yacht_club.svg"/>
+                    </picture>
+MSC Yacht Club                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/crociere/incentive-e-charters">
+                    <picture>
+                      <img alt="" title="" src="0/cruise_from_2.svg"/>
+                    </picture>
+Incentive & Charter                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item" v-bind:class="{ 'active' : menuIndex === 2 }">
+              <a v-on:click="showSubMenu(2)" v-on:mouseover="handleMenuHover(2, $event)" originalhref="#">
+A bordo                <svg width="18" height="10" class="arrow-down-icon">
+                  <use xlink:href="/assets/img/sprite.svg#arrow-down-icon"/>
+                </svg>
+              </a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item ">
+                  <a originalhref="/a-bordo/ristorazione">
+                    <picture>
+                      <img alt="" title="" src="0/dining.svg"/>
+                    </picture>
+Ristorazione e Bevande                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/a-bordo/intrattenimento-crociera">
+                    <picture>
+                      <img alt="" title="" src="0/entertainment.svg"/>
+                    </picture>
+Intrattenimento                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/a-bordo/crociere-famiglie-bambini">
+                    <picture>
+                      <img alt="" title="" src="0/kids.svg"/>
+                    </picture>
+Bambini                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/a-bordo/spa-benessere">
+                    <picture>
+                      <img alt="" title="" src="0/spa_beauty.svg"/>
+                    </picture>
+SPA, Benessere e Fitness                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/a-bordo/internet-app">
+                    <picture>
+                      <img alt="" title="" src="0/wifi_and_apps.svg"/>
+                    </picture>
+Internet e App                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item" v-bind:class="{ 'active' : menuIndex === 3 }">
+              <a v-on:click="showSubMenu(3)" v-on:mouseover="handleMenuHover(3, $event)" originalhref="#">
+La mia prenotazione                <svg width="18" height="10" class="arrow-down-icon">
+                  <use xlink:href="/assets/img/sprite.svg#arrow-down-icon"/>
+                </svg>
+              </a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item ">
+                  <a data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="Login Page" data-tracking-action="" data-tracking-label="" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/la-mia-prenotazione/gestisci-prenotazione">
+                    <picture>
+                      <img alt="" title="" src="0/ships_1.svg"/>
+                    </picture>
+La mia crociera                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/la-mia-prenotazione/prima-di-partire">
+                    <picture>
+                      <img alt="" title="" src="0/before_you_go.svg"/>
+                    </picture>
+Prima di partire                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/la-mia-prenotazione/web-check-in">
+                    <picture>
+                      <img alt="" title="" src="0/web_checkin.svg"/>
+                    </picture>
+Web Check-in                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/la-mia-prenotazione/msc-voyagers-club">
+                    <picture>
+                      <img alt="" title="" src="0/voyagers_club.svg"/>
+                    </picture>
+MSC Voyagers Club                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__line" v-bind:style="menuLineStyle" v-bind:class="{'visible' : menuLineVisible}"/>
+          </ul>
+        </nav>
+        <div class="header__login">
+          <div class="header__login--link">
+            <a class="header__user" content="noindex" rel="nofollow" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="login" data-tracking-action="login_header" data-tracking-label="account" data-tracking-value="0" data-tracking-noninteraction="0" originalhref="/la-mia-prenotazione/gestisci-prenotazione">
+              <svg viewbox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+                  <path d="M24 21.445a6.624 6.624 0 0 0 6.615-6.616A6.624 6.624 0 0 0 24 8.212a6.623 6.623 0 0 0-6.615 6.617A6.623 6.623 0 0 0 24 21.445zm6.801 1.34c-2.082 0-6.106.022-9.297.037-2.117.007-3.866.015-4.412.015h-.009c-1.375-.022-2.713.525-3.76 1.554-1.27 1.244-2.029 3.109-2.029 4.996v6.262c0 .606.497 1.11 1.11 1.11h23.192c.613 0 1.11-.504 1.11-1.11v-6.662c0-3.005-2.07-6.202-5.905-6.202z" fill="#FFF"/>
+                  <circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="24"/>
+                </g>
+              </svg>
+            </a>
+            <a class="hidden" rel="nofollow" content="noindex" id="login_link" originalhref="/la-mia-prenotazione/gestisci-prenotazione">
+Accedi            </a>
+            <a class="hidden" rel="nofollow" content="noindex" id="login_user_link" originalhref="/la-mia-prenotazione/gestisci-prenotazione">
+Ciao, {0}            </a>
+          </div>
+          <div class="header__info-container">
+            <a class="header__contact" v-on:click="toggleContactUsForm($event)" originalhref="tel:848 242490">
+              <span class="header__phone">
+848 242490              </span>
+              <svg width="17" height="17" viewbox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.003 3.019c-.014.2.005.816.524 2.165l.016.048c.692 2.488 5.706 7.972 8.516 9.317 2.101 1.005 3.322 1.198 3.558 1.135.27-.107 1.06-1.053 1.397-1.456.163-.196.31-.374.426-.503.098-.11.095-.174.094-.196-.007-.107-.106-.236-.168-.295l-2.823-1.915a1.269 1.269 0 0 0-.75-.003l-2.011 1.093-.282-.2C6.426 10.042 4.53 7.08 4.45 6.956l-.166-.263.137-.28c.029-.056.706-1.435 1.035-1.993.084-.144-.049-.584-.22-.864-.52-.806-1.482-2.207-1.817-2.491-.15-.13-.34-.03-.413.018-.837.725-1.805 1.645-2.003 1.937z" fill="#FFF" stroke="#FFF" fill-rule="evenodd"/>
+              </svg>
+            </a>
+            <p class="header__info">
+TUTTI I GIORNI              <br/>
+8 - 22            </p>
+            <a v-on:click="toggleContactUsForm($event)" class="header__info call_me_back_cta" originalhref="#">
+Ti contattiamo            </a>
+            <div v-show="contactUsFormVisible" v-cloak="">
+              <div class="contact-us-form-wrapper">
+                <div class="contact-us-form-internal">
+                  <div class="mobile-top-header show-for-small-only">
+                    <svg v-on:click="toggleContactUsForm($event)">
+                      <use xlink:href="/images/sprite.svg#arrow-left"/>
+                    </svg>
+                  </div>
+                  <div class="contact-us-form-header show-for-small-only">
+                    <a originalhref="tel:848 242490">
+                      <span>
+848 242490                      </span>
+                    </a>
+                    <svg>
+                      <use xlink:href="/images/sprite.svg#phone-icon-orange"/>
+                    </svg>
+                  </div>
+                  <div class="contact-us-form-header show-for-medium">
+                    <span>
+Ti richiamiamo noi!                    </span>
+                    <svg class="as-edit-icon" v-on:click="toggleContactUsForm($event)" width="32" height="32">
+                      <use xlink:href="/images/sprite.svg#cancel-icon"/>
+                    </svg>
+                  </div>
+                  <div class="contact-us-form-body">
+                    <div class="contact-us-form">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button v-on:click="toggleMenu()" class="header__hamburger">
+          <svg v-show="!showMobileMenu">
+            <use xlink:href="/assets/img/sprite.svg#hamburger-icon"/>
+          </svg>
+          <svg v-show="showMobileMenu">
+            <use xlink:href="/assets/img/sprite.svg#close-icon"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main id="main" role="main" data-currentpage="" class="">
+      <section class="section--full-width breadcrumb hidden-on-mobile">
+        <nav class="breadcrumb__container">
+          <ul class="breadcrumb__list" vocab="http://schema.org/" typeof="BreadcrumbList">
+            <li class="" property="&quot;itemListElement&quot;" typeof="&quot;ListItem&quot;">
+              <a property="item" typeof="WebPage" id="/" originalhref="/">
+                <span property="name">
+Home                </span>
+              </a>
+              <meta property="position" content="1"/>
+            </li>
+            <li class="">
+              <a style="pointer-events: none;" rel="nofollow" content="noindex">
+                <span>
+Crociere                </span>
+              </a>
+            </li>
+            <li class="active" property="&quot;itemListElement&quot;" typeof="&quot;ListItem&quot;">
+              <a property="item" typeof="WebPage" id="/crociere/navi-da-crociera" originalhref="/crociere/navi-da-crociera">
+                <span property="name">
+Navi                </span>
+              </a>
+              <meta property="position" content="2"/>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section class="cruice-search">
+      </section>
+      <section class="" id="">
+        <h1 class="page-title">
+LA NOSTRA FLOTTA        </h1>
+        <span class="editorial-text withTick-orange">
+          <p>
+Scopri la            <strong>
+flotta MSC Crociere            </strong>
+e le caratteristiche uniche di ogni nave da crociera MSC. Ogni nostra nave possiede il massimo dell?innovazione, dell?esperienza a bordo e delle performance. Scopri il piacere della navigazione nel massimo comfort verso le più belle destinazioni nel mondo!          </p>
+        </span>
+        <div class="tile-container">
+          <a href="1.html" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/armonia_minuature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=8CBF24AE1273AC7B0069C74C51D2E0E80698C33B" media="(max-width: 40em)" alt="MSC Armonia" title="MSC Armonia"/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/armonia_minuature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=19E19D510CDDB59EED5E42B38A45E8A097CE2496" media="(max-width: 60em)" alt="MSC Armonia" title="MSC Armonia"/>
+              <img alt="MSC Armonia" title="MSC Armonia" src="0/armonia_minuature.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Armonia              </div>
+            </header>
+          </a>
+          <a href="2.html" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/bellissima_miniature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=F3B5AC5EECB9D836A45654279E001F0399231A4B" media="(max-width: 40em)" alt="MSC Bellissima " title="MSC Bellissima "/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/bellissima_miniature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=A7727ADF0342BD35617C5B3E4663EAA9D3589A82" media="(max-width: 60em)" alt="MSC Bellissima " title="MSC Bellissima "/>
+              <img alt="MSC Bellissima " title="MSC Bellissima " src="0/bellissima_miniature.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Bellissima              </div>
+            </header>
+            <ul class="tile--ship__services">
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-for-me.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=127AAD11B2D1D5D2F48D4CBC12B77266B2DF435B" media="(max-width: 40em)" alt="MSC for Me" title="MSC for Me"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-for-me.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=E31204AD72E84D8DC96887EF2F060E6A8C084A21" media="(max-width: 60em)" alt="MSC for Me" title="MSC for Me"/>
+                  <img alt="MSC for Me" title="MSC for Me" src="0/ship-features-msc-for-me.png"/>
+                </picture>
+              </li>
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=15553760669E8F0D68242826C5A1A5A5E52008E3" media="(max-width: 40em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=5451D7629209DE07C855A3A57860F2C4509B57F5" media="(max-width: 60em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <img alt="MSC Yacht Club" title="MSC Yacht Club" src="0/ship-features-msc-yacht-club.p.png"/>
+                </picture>
+              </li>
+            </ul>
+          </a>
+          <a href="3.html" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/di_miniature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=9071E4D133B015310DE2D2F9F428908966ECF051" media="(max-width: 40em)" alt="MSC Divina" title="MSC Divina"/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/di_miniature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=8F43563AF8E22ACD975D0310842F1C8A7FFB9847" media="(max-width: 60em)" alt="MSC Divina" title="MSC Divina"/>
+              <img alt="MSC Divina" title="MSC Divina" src="0/di_miniature.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Divina              </div>
+            </header>
+            <ul class="tile--ship__services">
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=15553760669E8F0D68242826C5A1A5A5E52008E3" media="(max-width: 40em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=5451D7629209DE07C855A3A57860F2C4509B57F5" media="(max-width: 60em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <img alt="MSC Yacht Club" title="MSC Yacht Club" src="0/ship-features-msc-yacht-club.p_1.png"/>
+                </picture>
+              </li>
+            </ul>
+          </a>
+          <a href="4.html" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/fa_miniature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=B4A22ECDB8E23A0C297B9F77D8A5773D7F749085" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/fa_miniature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=177AC140303B06B3A541DA28068E58927A2AF855" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="0/fa_miniature.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Fantasia              </div>
+            </header>
+            <ul class="tile--ship__services">
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=15553760669E8F0D68242826C5A1A5A5E52008E3" media="(max-width: 40em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=5451D7629209DE07C855A3A57860F2C4509B57F5" media="(max-width: 60em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <img alt="MSC Yacht Club" title="MSC Yacht Club" src="0/ship-features-msc-yacht-club.p_2.png"/>
+                </picture>
+              </li>
+            </ul>
+          </a>
+          <a href="5.html" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/gr_miniature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=42838D61280EA6A176046E707A59DF821950C87B" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/gr_miniature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=58B2A393F6ECB5DC767AD72AD19F9E6F087D127D" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="0/gr_miniature.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Grandiosa              </div>
+            </header>
+            <ul class="tile--ship__services">
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-for-me.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=127AAD11B2D1D5D2F48D4CBC12B77266B2DF435B" media="(max-width: 40em)" alt="MSC for Me" title="MSC for Me"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-for-me.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=E31204AD72E84D8DC96887EF2F060E6A8C084A21" media="(max-width: 60em)" alt="MSC for Me" title="MSC for Me"/>
+                  <img alt="MSC for Me" title="MSC for Me" src="0/ship-features-msc-for-me_1.png"/>
+                </picture>
+              </li>
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=15553760669E8F0D68242826C5A1A5A5E52008E3" media="(max-width: 40em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=5451D7629209DE07C855A3A57860F2C4509B57F5" media="(max-width: 60em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <img alt="MSC Yacht Club" title="MSC Yacht Club" src="0/ship-features-msc-yacht-club.p_3.png"/>
+                </picture>
+              </li>
+            </ul>
+          </a>
+          <a href="6.html" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/li_miniature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=A5FEDC2327D83D4FC02A0B8D6022A3833080A60F" media="(max-width: 40em)" alt="MSC Lirica" title="MSC Lirica"/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/li_miniature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=4C5ABC78523239407F98A5F491CAC9E6AFFAE361" media="(max-width: 60em)" alt="MSC Lirica" title="MSC Lirica"/>
+              <img alt="MSC Lirica" title="MSC Lirica" src="0/li_miniature.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Lirica              </div>
+            </header>
+          </a>
+          <a href="7.html" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/ma_miniature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=1641D3287EA23ECC0E840D32CA66EE0F9B091118" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/ma_miniature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=7965BA2B3A160A9ED08A10E0FB8F9AF14DCBA51D" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="0/ma_miniature.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Magnifica              </div>
+            </header>
+          </a>
+          <a href="8.html" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/mr__miniature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=5B7FCEFA9D7ABEBFD08806C48A67E864F89004E8" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/mr__miniature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=1E44BA8F9D09E4C328D9C626FC68050E5D2D1EEC" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="0/mr__miniature.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Meraviglia              </div>
+            </header>
+            <ul class="tile--ship__services">
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-for-me.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=127AAD11B2D1D5D2F48D4CBC12B77266B2DF435B" media="(max-width: 40em)" alt="MSC for Me" title="MSC for Me"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-for-me.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=E31204AD72E84D8DC96887EF2F060E6A8C084A21" media="(max-width: 60em)" alt="MSC for Me" title="MSC for Me"/>
+                  <img alt="MSC for Me" title="MSC for Me" src="0/ship-features-msc-for-me_2.png"/>
+                </picture>
+              </li>
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=15553760669E8F0D68242826C5A1A5A5E52008E3" media="(max-width: 40em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=5451D7629209DE07C855A3A57860F2C4509B57F5" media="(max-width: 60em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <img alt="MSC Yacht Club" title="MSC Yacht Club" src="0/ship-features-msc-yacht-club.p_4.png"/>
+                </picture>
+              </li>
+            </ul>
+          </a>
+          <a href="9.html" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/mu_miniature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=E57B065271F71C8F309EBA11DC0AD45B3FEF5AA5" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/mu_miniature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=48A1E59C037DD25974041FB83DF2A63DA13125E9" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="0/mu_miniature.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Musica              </div>
+            </header>
+          </a>
+          <a href="10.html" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/ox_miniature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=206FD40F24A3D9CD49050F17EF2A3E15168FDD2F" media="(max-width: 40em)" alt="MSC Opera" title="MSC Opera"/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/ox_miniature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=35A6AE2FCFCA00C2D9390E132803EB36A6F6C822" media="(max-width: 60em)" alt="MSC Opera" title="MSC Opera"/>
+              <img alt="MSC Opera" title="MSC Opera" src="0/ox_miniature.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Opera              </div>
+            </header>
+          </a>
+          <a href="11.html" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/or_miniature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=2CF0492E7DE790B24ED92D688013857C98941908" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/or_miniature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=CB701248A643EF60849C2852103C558DA41F95FD" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="0/or_miniature.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Orchestra              </div>
+            </header>
+          </a>
+          <a href="12.html" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/po_miniature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=D3D71D07FA2002FBF849B48C7031D65FE6B3AA41" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/po_miniature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=D2152D58ECFA444A752A5131F12C5E86FBE330BC" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="0/po_miniature.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Poesia              </div>
+            </header>
+          </a>
+          <a href="13.html" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/pr_miniature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=7B0BE5EC59B0FA421AC924E555FCDC6638987847" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/pr_miniature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=42D9FFA7AF880314B4252F44C28871897979E6FF" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="0/pr_miniature.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Preziosa              </div>
+            </header>
+            <ul class="tile--ship__services">
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=15553760669E8F0D68242826C5A1A5A5E52008E3" media="(max-width: 40em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=5451D7629209DE07C855A3A57860F2C4509B57F5" media="(max-width: 60em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <img alt="MSC Yacht Club" title="MSC Yacht Club" src="0/ship-features-msc-yacht-club.p_5.png"/>
+                </picture>
+              </li>
+            </ul>
+          </a>
+          <a href="14.html" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/sh_miniature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=6EE588F655265DC25A3925453342E49493F7D4A1" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/sh_miniature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=A9217143A40B1ED82F6415A1A9EDB2F80C8DC96C" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="0/sh_miniature.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Seashore              </div>
+            </header>
+            <ul class="tile--ship__services">
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-for-me.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=127AAD11B2D1D5D2F48D4CBC12B77266B2DF435B" media="(max-width: 40em)" alt="MSC for Me" title="MSC for Me"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-for-me.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=E31204AD72E84D8DC96887EF2F060E6A8C084A21" media="(max-width: 60em)" alt="MSC for Me" title="MSC for Me"/>
+                  <img alt="MSC for Me" title="MSC for Me" src="0/ship-features-msc-for-me_3.png"/>
+                </picture>
+              </li>
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=15553760669E8F0D68242826C5A1A5A5E52008E3" media="(max-width: 40em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=5451D7629209DE07C855A3A57860F2C4509B57F5" media="(max-width: 60em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <img alt="MSC Yacht Club" title="MSC Yacht Club" src="0/ship-features-msc-yacht-club.p_6.png"/>
+                </picture>
+              </li>
+            </ul>
+          </a>
+          <a href="15.html" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/se_miniature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=E76239808BD3AF1B519AF21F3681972EF07E6203" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/se_miniature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=921498C4FD50A4411E1A26F3C2C7B32683905807" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="0/se_miniature.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Seaside              </div>
+            </header>
+            <ul class="tile--ship__services">
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-for-me.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=127AAD11B2D1D5D2F48D4CBC12B77266B2DF435B" media="(max-width: 40em)" alt="MSC for Me" title="MSC for Me"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-for-me.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=E31204AD72E84D8DC96887EF2F060E6A8C084A21" media="(max-width: 60em)" alt="MSC for Me" title="MSC for Me"/>
+                  <img alt="MSC for Me" title="MSC for Me" src="0/ship-features-msc-for-me_4.png"/>
+                </picture>
+              </li>
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=15553760669E8F0D68242826C5A1A5A5E52008E3" media="(max-width: 40em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=5451D7629209DE07C855A3A57860F2C4509B57F5" media="(max-width: 60em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <img alt="MSC Yacht Club" title="MSC Yacht Club" src="0/ship-features-msc-yacht-club.p_7.png"/>
+                </picture>
+              </li>
+            </ul>
+          </a>
+          <a href="" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/sv_miniature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=DA009A5CBA523C857133D0911E3308043988EBC3" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/sv_miniature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=AAE645DC6E67E176D527142EDB0C477EBCD58869" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="0/sv_miniature.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Seaview              </div>
+            </header>
+            <ul class="tile--ship__services">
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-for-me.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=127AAD11B2D1D5D2F48D4CBC12B77266B2DF435B" media="(max-width: 40em)" alt="MSC for Me" title="MSC for Me"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-for-me.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=E31204AD72E84D8DC96887EF2F060E6A8C084A21" media="(max-width: 60em)" alt="MSC for Me" title="MSC for Me"/>
+                  <img alt="MSC for Me" title="MSC for Me" src="0/ship-features-msc-for-me_5.png"/>
+                </picture>
+              </li>
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=15553760669E8F0D68242826C5A1A5A5E52008E3" media="(max-width: 40em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=5451D7629209DE07C855A3A57860F2C4509B57F5" media="(max-width: 60em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <img alt="MSC Yacht Club" title="MSC Yacht Club" src="0/ship-features-msc-yacht-club.p_8.png"/>
+                </picture>
+              </li>
+            </ul>
+          </a>
+          <a href="" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/sx_miniature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=46CCFA99C1A4CD8149DC36D05E4CA367EC8BD07A" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/sx_miniature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=B1A21E806A152E0C1EC37D8D6BCE447D3F2A13DE" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="0/sx_miniature.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Sinfonia              </div>
+            </header>
+          </a>
+          <a href="" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/splendida_miniature_ok.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=4E02D20D2DEFCC3753BFDF63DD678C88A5A3E40F" media="(max-width: 40em)" alt="MSC Splendida" title="MSC Splendida"/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/splendida_miniature_ok.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=8FA0C462259FC1F57DAD525ABC0CCA8DB9C299AD" media="(max-width: 60em)" alt="MSC Splendida" title="MSC Splendida"/>
+              <img alt="MSC Splendida" title="MSC Splendida" src="0/splendida_miniature_ok.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Splendida              </div>
+            </header>
+            <ul class="tile--ship__services">
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=15553760669E8F0D68242826C5A1A5A5E52008E3" media="(max-width: 40em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=5451D7629209DE07C855A3A57860F2C4509B57F5" media="(max-width: 60em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <img alt="MSC Yacht Club" title="MSC Yacht Club" src="0/ship-features-msc-yacht-club.p_9.png"/>
+                </picture>
+              </li>
+            </ul>
+          </a>
+          <a href="" class="tile tile--ship">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet-page/gr_miniature.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=mobile&amp;hash=42838D61280EA6A176046E707A59DF821950C87B" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet-page/gr_miniature.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=230&amp;mw=450&amp;thn=0&amp;mediamode=desktop&amp;hash=58B2A393F6ECB5DC767AD72AD19F9E6F087D127D" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="0/gr_miniature_1.png"/>
+            </picture>
+            <header>
+              <div class="tile__title">
+MSC Virtuosa              </div>
+            </header>
+            <ul class="tile--ship__services">
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-for-me.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=127AAD11B2D1D5D2F48D4CBC12B77266B2DF435B" media="(max-width: 40em)" alt="MSC for Me" title="MSC for Me"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-for-me.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=E31204AD72E84D8DC96887EF2F060E6A8C084A21" media="(max-width: 60em)" alt="MSC for Me" title="MSC for Me"/>
+                  <img alt="MSC for Me" title="MSC for Me" src="0/ship-features-msc-for-me_6.png"/>
+                </picture>
+              </li>
+              <li>
+                <picture class="tile--expandable__image">
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=15553760669E8F0D68242826C5A1A5A5E52008E3" media="(max-width: 40em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <source srcset="/-/media/global-contents/features/ship-features/ship-features-msc-yacht-club.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=5451D7629209DE07C855A3A57860F2C4509B57F5" media="(max-width: 60em)" alt="MSC Yacht Club" title="MSC Yacht Club"/>
+                  <img alt="MSC Yacht Club" title="MSC Yacht Club" src="0/ship-features-msc-yacht-club.p_10.png"/>
+                </picture>
+              </li>
+            </ul>
+          </a>
+        </div>
+      </section>
+      <section class="section--full-width ">
+        <h2 class="section-title">
+Cabine e Suite        </h2>
+        <span>
+Dalle spaziose suite ai gruppi di cabine comunicanti, amerai l'arredamento di design e godrai di un comfort superiore        </span>
+        <div class="banner--standard" style="background-image: url('/-/media/global-contents/icons/editorial-icons/accommodation/accommodation_banner.jpg?h=340&amp;w=1920&amp;hash=4D7D426E1DFFB406490642B97864CBA6D8A0213E')">
+          <div>
+            <section class="banner--standard__container">
+              <h4>
+              </h4>
+              <h5>
+              </h5>
+              <div class="banner__button-container ">
+                <a class="button button__banner" originalhref="/crociere/cabine-e-suite">
+Scopri le cabine                </a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section class="section--full-width ">
+        <h2 class="section-title">
+MSC FOR ME        </h2>
+        <div class="editorial-image-text editorial-image-text--left">
+          <div class="editorial__item">
+            <div class="editorial__item__description">
+              <div class="editorial__item__title">
+                <picture>
+                  <img src="0/msc_for_me_app_icon.png" enclosingtag="picture" alt="" width="110" title="" height="110"/>
+                </picture>
+                <h2>
+                </h2>
+              </div>
+              <h3>
+                <p>
+La tecnologia MSC al servizio dell?arte dell?ospitalità                </p>
+              </h3>
+              <div class="editorial-text--readmore">
+                <p>
+                </p>
+                <p>
+MSC for Me è stato creato per assecondare le necessità dei nostri passeggeri di oggi e di domani, migliorando ogni particolare della magnifica esperienza targata MSC. Attraverso tecnologie di ultima generazione MSC for Me unisce i nostri passeggeri, il nostro equipaggio e le navi della nostra flotta. L?esperienza che vivrai a bordo è letteralmente nelle tue mani. Disponibile per gli ospiti che viaggiano su MSC Meraviglia, MSC Seaside, MSC Seaview e MSC Bellissima.                </p>
+                <p>
+                </p>
+              </div>
+              <a class="button button--cta" originalhref="/a-bordo/internet-app/msc-for-me">
+Scopri di più              </a>
+            </div>
+            <div class="editorial__item__image">
+              <div class="editorial__item__image__tile">
+                <h2>
+                </h2>
+                <div class="editorial__item__image__plus">
+                  <svg>
+                    <use xlink:href="/assets/img/sprite.svg#plus"/>
+                  </svg>
+                </div>
+              </div>
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet-page/msc_for_me_image_fleet.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=53E6B1099BDFAA34C527A2B776FDAD75BAB769BD" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet-page/msc_for_me_image_fleet.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=CFD004AFD24C48B6653FFBDCA4DD2BA35FE04A4E" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="0/msc_for_me_image_fleet.jpg"/>
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--full-width ">
+        <h2 class="section-title">
+ECO SHIPS        </h2>
+        <div class="editorial-image-text editorial-image-text--right">
+          <div class="editorial__item">
+            <div class="editorial__item__description">
+              <div class="editorial__item__title">
+                <picture>
+                  <img src="0/eco_ship_logo.jpg" enclosingtag="picture" alt="" width="110" title="" height="110"/>
+                </picture>
+                <h2>
+                </h2>
+              </div>
+              <h3>
+                <span style="background-color: #ffffff; color: #000033;">
+                </span>
+                <p style="margin: 0px 0px 3px; padding: 0px; list-style-type: disc;">
+Una                  <strong>
+azienda eco-friendly                  </strong>
+, con sistemi innovativi per il risparmio energetico e il riciclo dell'acqua installati su tutte le nostre navi                </p>
+              </h3>
+              <div class="editorial-text--readmore">
+                <p>
+                </p>
+                <p>
+Abbiamo infinito rispetto per gli oceani del mondo e proprio per questo, mentre aumenta il numero dei nostri ospiti a bordo, aumenta anche la nostra attenzione a ridurre il nostro impatto sull'ambiente. Attraverso l'utilizzo di moderne tecnologie e materiali eco-sostenibili, stiamo abbassando l'impatto delle navi sull'ambiente. Dall'utilizzo del miglior combustibile nei porti, alla tecnologia che migliora l'efficienza, ai nostri sistemi di riciclaggio avanzati a bordo; crediamo fortemente che la leadership nei mari porti a una maggiore responsabilità verso l'ambiente.                </p>
+                <p>
+                  <button class="button button--readmore closed" data-readmore="Scopri di più" data-readless="Vedi meno">
+                  </button>
+                </p>
+Inoltre, stiamo costantemente lavorando per ridurre il nostro impatto sia a bordo che a terra, ottimizzando gli itinerari di crociera per aiutare a                 <strong style="color: #000033; margin: 0px; padding: 0px;">
+ridurre il consumo di combustile.                 </strong>
+                <br/>
+                <br/>
+La strada più efficace da intraprendere per ridurre consumo di combustibile è quella di viaggiare abbassando la resistenza dell'acqua. MSC Crociere utilizza una vernice antivegetativa anti-infiltrazione TBT sugli scafi di tutte le sue navi per ridurre notevolmente il trascinamento di vegetazione.                <br/>
+                <br/>
+Il nostro sistema di pianificazione e monitoraggio di viaggi e itinerari ci permette di implementare l'analisi del tragitto e di monitorare ciascuna delle nostre navi con un tasso di aggiornamento di un secondo e un'accuratezza inferiore a cinque metri. Monitorando i dati tecnici come il consumo di carburante, stiamo                 <strong style="color: #000033; margin: 0px; padding: 0px;">
+riducendo efficacemente le emissioni di CO2.                </strong>
+                <br/>
+                <br/>
+Ogni nave MSC è progettata e costruita utilizzando le migliori tecnologie disponibili e l'intera flotta presenta tecnologie all'avanguardia e attrezzature per la                 <strong style="color: #000033; margin: 0px; padding: 0px;">
+protezione dell'ambiente marino                </strong>
+                <span style="color: #000033;">
+ e dell'aria.                  <br/>
+                  <br/>
+Tutte le navi dispongono di un                   <strong style="color: #000033; margin: 0px; padding: 0px;">
+responsabile ambientale                  </strong>
+                  <span style="color: #000033;">
+ che cura con attenzione tutti gli aspetti ambientali a bordo. Tutte le attività di riciclaggio e gestione dei rifiuti sono attentamente monitorate e i membri dell'equipaggio che si occupano delle procedure di riciclaggio, nonché la movimentazione, la raccolta, l'ordinamento e la gestione dei rifiuti, ricevono formazione per operare secondo le nostre procedure.                   </span>
+                  <br/>
+                  <br/>
+MSC Crociere è stata lungimirante nel modo in cui ha approcciato la costruzione delle proprie navi, preparandole già a norme e regolamenti futuri. I nostri motori sono già certificati per i futuri standard di emissione di NOX e sono conformi all'ultimo requisito IMO-MARPOL Annex VI. Inoltre, alcune delle nostre navi sono dotate di sistemi di pulizia dei gas di scarico per ridurre le emissioni di SOx rilasciate dal motore principale.                   <br/>
+                  <br/>
+Il nostro                  <strong>
+sistema di gestione dell'acqua di zavorra ottimizzato                  </strong>
+è anche conforme alle più recenti linee guida IMO volte a minimizzare l'impatto ambientale.                  <br/>
+                </span>
+                <p>
+                </p>
+              </div>
+            </div>
+            <div class="editorial__item__image">
+              <div class="editorial__item__image__tile">
+                <h2>
+                </h2>
+                <div class="editorial__item__image__plus">
+                  <svg>
+                    <use xlink:href="/assets/img/sprite.svg#plus"/>
+                  </svg>
+                </div>
+              </div>
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet-page/eco_ship_fleet_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=B23AD861FEB26BE207C7442DBAF1F7D47AD317E6" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet-page/eco_ship_fleet.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=93755D0FDC297684177A4D49E960C3F295CC0B86" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="0/eco_ship_fleet.jpg"/>
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="" id="">
+        <h2 class="section-title">
+RICONOSCIMENTI        </h2>
+        <span class="editorial-text withTick-orange">
+        </span>
+        <ul class="icon-list">
+          <li>
+            <div class="icon-list__icon">
+              <img alt="OHSAS 18001" width="450" title="OHSAS 18001" src="0/awards_ohsas18001.jpg" height="318"/>
+            </div>
+            <div class="icon-list__title">
+OHSAS 18001            </div>
+            <div class="icon-list__description">
+Gestione della sicurezza            </div>
+          </li>
+          <li>
+            <div class="icon-list__icon">
+              <img alt="ISO 9001-2008" width="150" title="ISO 9001-2008" src="0/iso-9001-2008.jpg" height="106"/>
+            </div>
+            <div class="icon-list__title">
+ISO 9001:2008            </div>
+            <div class="icon-list__description">
+Gestione della qualità            </div>
+          </li>
+          <li>
+            <div class="icon-list__icon">
+              <img alt="ISO 50001" width="450" title="ISO 50001" src="0/awards_iso50001.jpg" height="318"/>
+            </div>
+            <div class="icon-list__title">
+ISO 50001            </div>
+            <div class="icon-list__description">
+Prestazioni energetiche            </div>
+          </li>
+          <li>
+            <div class="icon-list__icon">
+              <img alt="" width="450" title="" src="0/awards_iso22000.jpg" height="318"/>
+            </div>
+            <div class="icon-list__title">
+ISO 22000            </div>
+            <div class="icon-list__description">
+Gestione della sicurezza alimentare            </div>
+          </li>
+          <li>
+            <div class="icon-list__icon">
+              <img alt="ISO 14001" width="450" title="ISO 14001" src="0/awards7_iso14001.jpg" height="318"/>
+            </div>
+            <div class="icon-list__title">
+ISO 14001            </div>
+            <div class="icon-list__description">
+Gestione ambientale            </div>
+          </li>
+          <li>
+            <div class="icon-list__icon">
+              <img alt="7 Golden Pearls" width="150" title="7 Golden Pearls" src="0/7-golden-pearls.jpg" height="106"/>
+            </div>
+            <div class="icon-list__title">
+7 Golden Pearls            </div>
+            <div class="icon-list__description">
+La miglior nave per il rispetto dell'ambiente            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer" id="msc-footer">
+      <div class="footer__container">
+        <div class="footer__form">
+          <form action="" id="newsletterWidget">
+            <label for="your-email">
+Iscriviti alla Newsletter            </label>
+            <div>
+              <input type="email" name="" id="your-email" required="" placeholder="Inserisci il tuo indirizzo email"/>
+              <button type="submit" class="button " data-url="/forms/newsletter-registrazione" id="emailbutton" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="newsletter" data-tracking-action="subscribe" data-tracking-label="Homepage" data-tracking-value="0" data-tracking-noninteraction="">
+Invia              </button>
+            </div>
+          </form>
+          <form class="footer-url">
+            <label for="country-selection">
+CAMBIA PAESE            </label>
+            <div>
+              <select name="country-selection" id="country-selection" class="country-selection empty">
+                <option value="https://www.msccruceros.com.ar/es-ar/Homepage.aspx">
+Argentina | Español                </option>
+                <option value="https://www.msccruises.com.au/en-au/Homepage.aspx">
+Australia | English                </option>
+                <option value="https://www.msckreuzfahrten.at/de-at/Homepage.aspx">
+Austria | Deutsch                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Singapore">
+Bangladesh | English                </option>
+                <option value="https://www.msccruceros.cl/es-cl/Homepage.aspx">
+Bolivia | Español                </option>
+                <option value="https://www.msccruzeiros.com.br/pt-br/Homepage.aspx">
+Brazil | Português                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Bulgaria">
+Bulgaria | English                </option>
+                <option value="https://www.msccruisesusa.com/en-us/Homepage.aspx?select=Canada">
+Canada | English                </option>
+                <option value="https://www.msccruceros.cl/es-cl/Homepage.aspx">
+Chile | Español                </option>
+                <option value="https://www.msccruises.com.cn/">
+China | ??                </option>
+                <option value="https://www.msccruceros.cl/es-cl/Homepage.aspx">
+Colombia | Español                </option>
+                <option value="https://www.msckrstarenja.com/hr-hr/Homepage.aspx">
+Croatia | Hrvatski                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Cyprus">
+Cyprus | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Czech">
+Czech Republic | English                </option>
+                <option value="https://www.msccruises.dk/da-dk/Homepage.aspx">
+Denmark | Dansk                </option>
+                <option value="https://www.msccruisesusa.com/en-us/Homepage.aspx?select=Dominican">
+Dominican Republic | English                </option>
+                <option value="https://www.msccruises.com/en-gl/homepage.aspx">
+Egypt | English                </option>
+                <option value="https://www.msccruises.fi">
+Finland | English                </option>
+                <option value="https://www.msccruises.be/nl-be/Homepage.aspx">
+Belgium | Vlaams                </option>
+                <option value="https://www.msccroisieres.fr/fr-fr/Homepage.aspx">
+France | Français                </option>
+                <option value="https://www.msccroisieres.be/fr-be/Homepage.aspx">
+Belgium | Français                </option>
+                <option value="https://www.msccroisieres.ch/fr-ch/Homepage.aspx">
+Switzerland | Français                </option>
+                <option value="https://www.msckrstarenja.com/hr-hr/Homepage.aspx">
+FYR of Macedonia | Hrvatski                </option>
+                <option value="https://www.msccruises.co.uk">
+United Kingdom | English                </option>
+                <option value="https://www.msckreuzfahrten.ch/de-ch/Homepage.aspx">
+Switzerland | Detusch                </option>
+                <option value="https://www.msc-kreuzfahrten.de/de-de/Homepage.aspx">
+Germany | Deutsch                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Greece">
+Greece | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Hungary">
+Hungary | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=India">
+India | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Indonesia">
+Indonesia | English                </option>
+                <option value="https://www.msccruises.ie/en-ie/Homepage.aspx">
+Ireland | English                </option>
+                <option value="https://www.msccruises.co.il/he-il/Homepage.aspx">
+Israel | English                </option>
+                <option value="https://www.msccrociere.it/" selected="">
+Italy | Italiano                </option>
+                <option value="https://www.msccruises.jp/jp-jp/Homepage.aspx">
+Japan | ???                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Jordan">
+Jordan | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Latvia">
+Latvia | English                </option>
+                <option value="https://www.msccruises.com.lb/lb_en/Homepage.aspx">
+Lebanon | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Lithuania">
+Lithuania | English                </option>
+                <option value="https://www.msccroisieres.be/fr-be/Homepage.aspx">
+Luxembourg | Français                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Malaysia">
+Malaysia | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Malta">
+Malta | English                </option>
+                <option value="https://www.msccruceros.com.mx/es-mx/Homepage.aspx">
+Mexico | Español                </option>
+                <option value="https://www.msckrstarenja.com/hr-hr/Homepage.aspx">
+Montenegro | Hrvatski                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Morocco">
+Morocco | English                </option>
+                <option value="https://www.msccruises.nl/nl-nl/Homepage.aspx">
+Netherlands | Nederlands                </option>
+                <option value="https://www.msccruises.co.nz/en-nz/Homepage.aspx">
+New Zealand | English                </option>
+                <option value="https://www.msccruises.no/nb-no/Homepage.aspx">
+Norway | Norsk                </option>
+                <option value="https://www.msccruceros.cl/es-cl/Homepage.aspx">
+Panama | Español                </option>
+                <option value="https://www.msccruceros.cl/es-cl/Homepage.aspx">
+Paraguay | Español                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Philippines">
+Philippines | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Poland">
+Poland | English                </option>
+                <option value="https://www.msccruzeiros.pt/pt-pt/Homepage.aspx">
+Portugal | Português                </option>
+                <option value="https://www.msccruisesusa.com/en-us/Homepage.aspx?select=PuertoRico">
+Puerto Rico | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Korea">
+Republic of Korea | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Romania">
+Romania | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Russian-Federation">
+Russian Federation | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=SaudiArabia">
+Saudi Arabia | English                </option>
+                <option value="https://www.msckrstarenja.com/hr-hr/Homepage.aspx">
+Serbia | Hrvatski                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Singapore">
+Singapore | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Slovakia">
+Slovakia | English                </option>
+                <option value="https://www.msckrstarenja.com/hr-hr/Homepage.aspx">
+Slovenia | Hrvatski                </option>
+                <option value="https://www.msccruises.co.za/en-za/Homepage.aspx">
+South Africa | English                </option>
+                <option value="https://www.msccruceros.es/es-es/Homepage.aspx">
+Spain | Español                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=SriLanka">
+Sri Lanka | English                </option>
+                <option value="https://www.msccruises.se/sv-se/Homepage.aspx">
+Sweden | Svenska                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Thailand">
+Thailand | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Tunisia">
+Tunisia | English                </option>
+                <option value="https://www.msccruises.com.tr/">
+Turkey | Türkiye                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Ukraina">
+Ukraine | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Emirates">
+United Arab Emirates | English                </option>
+                <option value="https://www.msccruceros.cl/es-cl/Homepage.aspx">
+Uruguay | Español                </option>
+                <option value="https://www.msccruisesusa.com">
+USA | English                </option>
+                <option value="https://www.msccruceros.cl/es-cl/Homepage.aspx">
+Venezuela | Español                </option>
+              </select>
+              <button class="button" onclick="javascript: window.location.href = document.getElementById('country-selection').value;">
+Modifica              </button>
+            </div>
+          </form>
+        </div>
+        <nav class="footer__accordion">
+          <div>
+            <span class="footer-heading footer__title" v-on:click="showFooterSubMenu(0)" v-bind:class="{'visible' : menuFooterIndex === 0 }">
+INFORMAZIONI AZIENDALI            </span>
+            <ul>
+              <li>
+                <a target="_blank|Custom" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="CORPORATE INFO" data-tracking-action="INFORMAZIONI AZIENDALI" data-tracking-label="About us" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/mondo-msc-crociere">
+Il mondo MSC                </a>
+              </li>
+              <li>
+                <a target="_blank" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="CORPORATE INFO" data-tracking-action="INFORMAZIONI AZIENDALI" data-tracking-label="Media Room" data-tracking-value="0" data-tracking-noninteraction="" originalhref="http://www.mscpressarea.com/it_IT">
+Media room                </a>
+              </li>
+              <li>
+                <a target="_blank" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="CORPORATE INFO" data-tracking-action="INFORMAZIONI AZIENDALI" data-tracking-label="MSC Book" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://www.mscbook.com/shop/WelcomePage?catalogId=10001&amp;langId=-4&amp;storeId=10251">
+MSC Book                </a>
+              </li>
+              <li>
+                <a target="_blank" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="CORPORATE INFO" data-tracking-action="INFORMAZIONI AZIENDALI" data-tracking-label="Careers" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://www.careers.msccruises.com/#/">
+Lavora con noi                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="" data-tracking-action="" data-tracking-label="Incentive and Charters" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/crociere/incentive-e-charters">
+Incentive & Charters                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="CORPORATE INFO" data-tracking-action="INFORMAZIONI AZIENDALI" data-tracking-label="Privacy" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/privacy">
+Privacy                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="CORPORATE INFO" data-tracking-action="INFORMAZIONI AZIENDALI" data-tracking-label="Terms of use" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/termini-e-condizioni-di-uso">
+Condizioni d'uso                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <span class="footer-heading footer__title" v-on:click="showFooterSubMenu(1)" v-bind:class="{'visible' : menuFooterIndex === 1 }">
+INFORMAZIONI DI VIAGGIO            </span>
+            <ul>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="TRAVEL INFO" data-tracking-action="INFORMAZIONI DI VIAGGIO" data-tracking-label="Before you go" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/la-mia-prenotazione/prima-di-partire">
+Prima di partire                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="TRAVEL INFO" data-tracking-action="INFORMAZIONI DI VIAGGIO" data-tracking-label="FAQ" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/domande-frequenti">
+FAQ                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="TRAVEL INFO" data-tracking-action="INFORMAZIONI DI VIAGGIO" data-tracking-label="Our Fares" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/offerte-crociera/tariffe-crociera">
+Le nostre tariffe                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="" data-tracking-action="" data-tracking-label="Assicurazione" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/la-mia-prenotazione/assicurazione">
+Assicurazione                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="TRAVEL INFO" data-tracking-action="INFORMAZIONI DI VIAGGIO" data-tracking-label="Terms and conditions" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/termini-condizioni">
+Termini e Condizioni                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="TRAVEL INFO" data-tracking-action="INFORMAZIONI DI VIAGGIO" data-tracking-label="Passengers bill of rights" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/diritti-del-passeggero">
+Carta dei diritti dei passeggeri                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="TRAVEL INFO" data-tracking-action="INFORMAZIONI DI VIAGGIO" data-tracking-label="Special Needs" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/la-mia-prenotazione/esigenze-speciali">
+Esigenze Speciali                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="TRAVEL INFO" data-tracking-action="INFORMAZIONI DI VIAGGIO" data-tracking-label="Conditions of Carriage" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/condizioni-generali-di-trasporto">
+Condizioni di trasporto                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <span class="footer-heading footer__title" v-on:click="showFooterSubMenu(2)" v-bind:class="{'visible' : menuFooterIndex === 2 }">
+NEWS & CONTATTI            </span>
+            <ul>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="NEWS &amp; CONTACTS" data-tracking-action="NEWS &amp; CONTATTI" data-tracking-label="News" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/news">
+News                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="NEWS &amp; CONTACTS" data-tracking-action="NEWS &amp; CONTATTI" data-tracking-label="Contact us" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/forms/contatti">
+Contatti                </a>
+              </li>
+              <li>
+                <a target="_blank" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="NEWS &amp; CONTACTS" data-tracking-action="NEWS &amp; CONTATTI" data-tracking-label="Comment form" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://reporting.qualtrics.com/msccruises/new_index.php?Language=IT">
+Comment form                </a>
+              </li>
+              <li>
+                <a target="_blank" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="NEWS &amp; CONTACTS" data-tracking-action="NEWS &amp; CONTATTI" data-tracking-label="Post cruise photos" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://www.mymscphotos.com/Claim?PK=17f0869f-6bbd-443b-9455-c54c68473d55">
+MSC Photo                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="NEWS &amp; CONTACTS" data-tracking-action="NEWS &amp; CONTATTI" data-tracking-label="Online Brochures" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/cataloghi-online">
+Cataloghi Online                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="footer__social">
+          <span class="footer-heading">
+SEGUICI SU          </span>
+          <ul>
+            <li>
+              <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="FOLLOW US ON" data-tracking-action="SEGUICI SU" data-tracking-label="Twitter" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://twitter.com/msc_crociere">
+                <img item="Sitecore.Data.Items.Item" src="0/twitter.svg" level="0" isactive="False" alt="twitter" title="twitter" picture="Sitecore.Data.Fields.ImageField" url="https://twitter.com/msc_crociere" useajax="False" linkpicture="/-/media/global-b2c-contents/footer/socialbadges/twitter.svg" ispagereacheble="False" showchildren="True" enabledmaintenancemode="False" pageurl="https://twitter.com/msc_crociere"/>
+              </a>
+            </li>
+            <li>
+              <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="FOLLOW US ON" data-tracking-action="SEGUICI SU" data-tracking-label="Facebook" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://www.facebook.com/MSC.Crociere.Italia">
+                <img item="Sitecore.Data.Items.Item" src="0/facebook.svg" level="0" isactive="False" alt="facebook" title="facebook" picture="Sitecore.Data.Fields.ImageField" url="https://www.facebook.com/MSC.Crociere.Italia" useajax="False" linkpicture="/-/media/global-b2c-contents/footer/socialbadges/facebook.svg" ispagereacheble="False" showchildren="True" enabledmaintenancemode="False" pageurl="https://www.facebook.com/MSC.Crociere.Italia"/>
+              </a>
+            </li>
+            <li>
+              <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="FOLLOW US ON" data-tracking-action="SEGUICI SU" data-tracking-label="Linkedin" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://it.linkedin.com/company/msc-cruises">
+                <img item="Sitecore.Data.Items.Item" src="0/linkedin.svg" level="0" isactive="False" alt="linkedin" title="linkedin" picture="Sitecore.Data.Fields.ImageField" url="https://it.linkedin.com/company/msc-cruises" useajax="False" linkpicture="/-/media/global-b2c-contents/footer/socialbadges/linkedin.svg" ispagereacheble="False" showchildren="True" enabledmaintenancemode="False" pageurl="https://it.linkedin.com/company/msc-cruises"/>
+              </a>
+            </li>
+            <li>
+              <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="FOLLOW US ON" data-tracking-action="SEGUICI SU" data-tracking-label="YouTube" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://www.youtube.com/channel/UCkTh5zIJQsz8UjfK4rQZGXw">
+                <img item="Sitecore.Data.Items.Item" src="0/youtube.svg" level="0" isactive="False" alt="youtube" title="youtube" picture="Sitecore.Data.Fields.ImageField" url="https://www.youtube.com/channel/UCkTh5zIJQsz8UjfK4rQZGXw" useajax="False" linkpicture="/-/media/global-b2c-contents/footer/socialbadges/youtube.svg" ispagereacheble="False" showchildren="True" enabledmaintenancemode="False" pageurl="https://www.youtube.com/channel/UCkTh5zIJQsz8UjfK4rQZGXw"/>
+              </a>
+            </li>
+            <li>
+              <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="FOLLOW US ON" data-tracking-action="SEGUICI SU" data-tracking-label="Instagram" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://www.instagram.com/msccruisesofficial/">
+                <img item="Sitecore.Data.Items.Item" src="0/instagram.svg" level="0" isactive="False" alt="instagram" title="instagram" picture="Sitecore.Data.Fields.ImageField" url="https://www.instagram.com/msccruisesofficial/" useajax="False" linkpicture="/-/media/global-b2c-contents/footer/socialbadges/instagram.svg" ispagereacheble="False" showchildren="True" enabledmaintenancemode="False" pageurl="https://www.instagram.com/msccruisesofficial/"/>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__credits">
+          <p>
+© 2019 MSC Cruises S.A. Tutti i diritti riservati          </p>
+        </div>
+      </div>
+    </footer>
+    <section class="cookie-bar hidden" aria-live="off" aria-hidden="true">
+      <p>
+Utilizziamo i cookie per rendere sempre migliore la tua esperienza d'uso sul nostro sito. Continuando a navigare sul sito, accetti l'utilizzo dei cookie.        <a originalhref="/privacy">
+Scopri di più        </a>
+      </p>
+      <div class="cookie-bar__actions">
+        <img src="0/NLwCRR4i4.webp" data-feo-orig-src="/assets/img/closebox.png"/>
+      </div>
+    </section>
+    <section class="browser-compatibility">
+      <div class="browser-compatibility-modal">
+        <div class="title">
+          <h3>
+Grazie per aver visitato MSC Crociere          </h3>
+        </div>
+        <div class="description">
+          <p>
+Sai che il tuo browser non è aggiornato? Il tuo browser non è compatibile con il nostro nuovo sito e potrebbe non essere sicuro.            <br/>
+Per una migliore esperienza e per continuare la tua prenotazione con MSC, aggiorna il tuo browser scaricando l'ultima versione sotto.          </p>
+          <p>
+Grazie per aver visitato il nostro sito e ti aspettiamo presto a bordo!            <br/>
+            <br/>
+            <strong>
+MSC Crociere            </strong>
+          </p>
+        </div>
+        <div class="browser-container">
+          <a originalhref="https://www.mozilla.org/en-US/firefox/new/">
+            <img src="0/lbCGpxG0I.webp" alt="" width="48" title="" data-feo-orig-src="/-/media/global-contents/icons/browser-icons/icon_firefox.png?h=48&amp;la=it-IT&amp;w=48&amp;hash=8E68F8B5F5E7759C25702612CB06D12324347920" height="48"/>
+            <p>
+Firefox            </p>
+          </a>
+          <a originalhref="https://support.apple.com/downloads/safari">
+            <img src="0/whjRsMZoY.webp" alt="" width="48" title="" data-feo-orig-src="/-/media/global-contents/icons/browser-icons/icon_safari.png?h=48&amp;la=it-IT&amp;w=48&amp;hash=3512E103498A5A1A789AD8DEDC0C537DF97E4877" height="48"/>
+            <p>
+Safari            </p>
+          </a>
+          <a originalhref="https://www.google.com/chrome/">
+            <img src="0/CiwzDickk.webp" alt="" width="48" title="" data-feo-orig-src="/-/media/global-contents/icons/browser-icons/icon_chrome.png?h=48&amp;la=it-IT&amp;w=48&amp;hash=8F6C9DE988A7DE8558333E2C3C452FDE113DA12F" height="48"/>
+            <p>
+Chrome            </p>
+          </a>
+          <a originalhref="https://www.microsoft.com/en-us/windows/microsoft-edge">
+            <img src="0/Nhj90iYJc.webp" alt="" width="48" title="" data-feo-orig-src="/-/media/global-contents/icons/browser-icons/icon_edge.png?h=48&amp;la=it-IT&amp;w=48&amp;hash=D2237814E57F2FDD818702F8A9C6E87FE5B398EA" height="48"/>
+            <p>
+Edge            </p>
+          </a>
+          <a originalhref="">
+            <img src="0/KAghiVld0.webp" alt="" width="48" title="" data-feo-orig-src="/-/media/global-contents/icons/browser-icons/icon_ie.png?h=48&amp;la=it-IT&amp;w=48&amp;hash=854A9B8ADD57167E7D2B3E4A0775846EA9B9B0EC" height="48"/>
+            <p>
+IE            </p>
+          </a>
+          <a originalhref="https://www.opera.com/it/download">
+            <img src="0/IqqZKGsD8.webp" alt="" width="48" title="" data-feo-orig-src="/-/media/global-contents/icons/browser-icons/icon_opera.png?h=48&amp;la=it-IT&amp;w=48&amp;hash=0F258D672AC24069C6AD1C79F817B9C9CD67E211" height="48"/>
+            <p>
+Opera            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <button>
+Continua e aggiorna più tardi          </button>
+          <div class="clear">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="tablet-portrait" class="hidden">
+      <div class="modal-mask">
+        <div class="modal-wrapper">
+          <div class="modal-container">
+            <div class="modal-header">
+              <p class="h2">
+Ruotare il dispositivo              </p>
+            </div>
+            <div class="modal-body">
+              <div class="modal-body-image">
+                <img alt="" title="" src="0/tablet-rotation.svg"/>
+              </div>
+              <div class="modal-body-message">
+Modalità verticale supportata              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="page--tracking" data-tracking-app="false" data-tracking="true" data-tracking-type="visit" data-tracking-event="data_available" data-tracking-category="Our Cruises" data-tracking-action="" data-tracking-label="" data-tracking-value="0" data-tracking-noninteraction="" data-tracking-page-country="IT" data-tracking-page-environment="prod" data-tracking-page-language="it" data-tracking-page-category="Our Cruises" data-tracking-page-subcategory="Ships" data-tracking-page-subcategory-2="" data-tracking-page-previouspagecategory="header">
+    </div>
+<!-- Here goes the scripts -->    <noscript>
+      <img src="0/pixel_3c10739.html" style="visibility: hidden; position: absolute; left: -999px; top: -999px;"/>
+    </noscript>
+  </body>
+</html>

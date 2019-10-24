@@ -1,0 +1,2924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html lang="it">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --><!-- These are just examples, must be changed in the CMS -->    <link rel="icon" href="3/favicon.ico.css"/>
+<!-- DNS and resources Prefetching for Google resources -->    <link rel="dns-prefetch" href="3/fonts.googleapis.com.css"/>
+    <link rel="preconnect" crossorigin="" href="3/fonts.googleapis.com_1.css"/>
+    <link rel="stylesheet" href="3/css.css" media="all"/>
+    <link rel="stylesheet" href="3/css_1.css"/>
+<!-- Preload directives for static assets (css & js) -->    <link rel="stylesheet" href="3/app.min.css"/>
+    <title>
+Nave da crociera MSC Divina | MSC Crociere    </title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="Inspired by Sophia Loren, MSC Divina brings you the glamour of the golden age of cruise lines in a new ecological way. Explore cabins and deck plan. Ispirata a Sophia Loren, MSC Divina ti porta il glamour dell'epoca d'oro delle crociere in una nuova veste ecologica. Esplora le cabine e il piano nave.
+
+"/>
+    <link rel="canonical" href="3/msc-divina.css"/>
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content="https://www.msccrociere.it:443/it-IT/Our Cruises/Ships/MSC Divina"/>
+<!-- Pagination for SEO --><!-- IE11 polyfill for responsive images support --><!-- Web Font Loading Strategy -->    <style>
+    </style>
+  </head>
+  <body id="outerContainer" class="">
+<!-- Google Tag Manager -->    <noscript>
+      <iframe width="0" style="display:none;visibility:hidden" src="3/ns.html" height="0">
+      </iframe>
+    </noscript>
+<!-- End Google Tag Manager -->    <header id="msc-header" class="header " v-bind:class="{'visible-mobile-menu' : showMobileMenu}">
+      <div class="header__container">
+        <a class="header__logo" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="header" data-tracking-action="login_header" data-tracking-label="Our Cruises" data-tracking-value="0" data-tracking-noninteraction="0" originalhref="/">
+          <img alt="MSC Crociere" title="MSC Crociere" src="3/i_msc_crociere_neg.svg" disablewebedit="False"/>
+        </a>
+        <nav class="header__menu">
+          <ul v-on:mouseleave="handleMenuLeave()">
+            <li class="menu__item header__search" v-bind:class="{ 'active' : menuIndex === 100 }">
+              <a class="menu__link" v-on:mouseover="handleMenuHover(100, $event)" v-on:touchstart="showSubMenu(100)" originalhref="#">
+                <div class="row">
+                  <div class="columns small-12 align-middle">
+                    <svg class="search-icon editorial-search__icon">
+                      <use xlink:href="/assets/img/sprite.svg#search-icon"/>
+                    </svg>
+                    <div class="hide-for-large">
+                      <div class="hide-for-large">
+                        <form action="/ricerca" method="get">
+                          <input id="editorial-search__input" type="text" class="editorial-search__input" name="query" placeholder="Cerca"/>
+                        </form>
+                      </div>
+                      <div>
+                        <form action="/ricerca" method="get" class="input-group show-for-large">
+                          <input type="text" class="input-group-field" name="query" placeholder="Cerca"/>
+                          <div class="input-group-button">
+                            <input type="submit" value="Cerca" class="button"/>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <ul v-show="true" class="sub-menu show-for-large">
+                <li class="sub-menu__item-search">
+                  <div class="row editorial-search align-middle text-center">
+                    <div class="columns small-9 small-offset-2">
+                      <div class="hide-for-large">
+                        <form action="/ricerca" method="get">
+                          <input id="editorial-search__input" type="text" class="editorial-search__input" name="query" placeholder="Cerca"/>
+                        </form>
+                      </div>
+                      <div>
+                        <form action="/ricerca" method="get" class="input-group show-for-large">
+                          <input type="text" class="input-group-field" name="query" placeholder="Cerca"/>
+                          <div class="input-group-button">
+                            <input type="submit" value="Cerca" class="button"/>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item" v-bind:class="{ 'active' : menuIndex === 0 }">
+              <a v-on:click="showSubMenu(0)" v-on:mouseover="handleMenuHover(0, $event)" originalhref="#">
+Offerte                <svg width="18" height="10" class="arrow-down-icon">
+                  <use xlink:href="/assets/img/sprite.svg#arrow-down-icon"/>
+                </svg>
+              </a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item ">
+                  <a data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="" data-tracking-action="" data-tracking-label="Deals" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/offerte-crociera">
+                    <picture>
+                      <img alt="" title="" src="3/all_deals.svg"/>
+                    </picture>
+Tutte le offerte                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="deals" data-tracking-action="click" data-tracking-label="Crociere Last Minute" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/offerte-crociera/crociere-last-minute">
+                    <picture>
+                      <img alt="" title="" src="3/last_minute.svg"/>
+                    </picture>
+Crociere Last Minute                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="deals" data-tracking-action="click" data-tracking-label="GrandEstate Plus Estate 2019" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/offerte-crociera/grandestate-plus">
+                    <picture>
+                      <img alt="" title="" src="3/wave-all_inclusive_promo_icona.svg"/>
+                    </picture>
+GrandestatePlus                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="deals" data-tracking-action="click" data-tracking-label="Promo Tre Giorni Free Winter" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/offerte-crociera/promo-tre-giorni-free-winter">
+                    <picture>
+                      <img alt="" title="" src="3/cruise_from.svg"/>
+                    </picture>
+Tre giorni di quota crociera gratis                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item" v-bind:class="{ 'active' : menuIndex === 1 }">
+              <a v-on:click="showSubMenu(1)" v-on:mouseover="handleMenuHover(1, $event)" originalhref="#">
+Crociere                <svg width="18" height="10" class="arrow-down-icon">
+                  <use xlink:href="/assets/img/sprite.svg#arrow-down-icon"/>
+                </svg>
+              </a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item ">
+                  <a originalhref="/crociere/destinazioni">
+                    <picture>
+                      <img alt="" title="" src="3/destinations.svg"/>
+                    </picture>
+Destinazioni                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/crociere/navi-da-crociera">
+                    <picture>
+                      <img alt="" title="" src="3/ships.svg"/>
+                    </picture>
+Navi                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/crociere/escursioni">
+                    <picture>
+                      <img alt="" title="" src="3/excursion.svg"/>
+                    </picture>
+Escursioni                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/crociere/msc-esperienze-e-cabine">
+                    <picture>
+                      <img alt="" title="" src="3/msc_experiences.svg"/>
+                    </picture>
+MSC Esperienze e cabine                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/crociere/msc-yacht-club">
+                    <picture>
+                      <img alt="" title="" src="3/msc_yacht_club.svg"/>
+                    </picture>
+MSC Yacht Club                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/crociere/incentive-e-charters">
+                    <picture>
+                      <img alt="" title="" src="3/cruise_from_1.svg"/>
+                    </picture>
+Incentive & Charter                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item" v-bind:class="{ 'active' : menuIndex === 2 }">
+              <a v-on:click="showSubMenu(2)" v-on:mouseover="handleMenuHover(2, $event)" originalhref="#">
+A bordo                <svg width="18" height="10" class="arrow-down-icon">
+                  <use xlink:href="/assets/img/sprite.svg#arrow-down-icon"/>
+                </svg>
+              </a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item ">
+                  <a originalhref="/a-bordo/ristorazione">
+                    <picture>
+                      <img alt="" title="" src="3/dining.svg"/>
+                    </picture>
+Ristorazione e Bevande                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/a-bordo/intrattenimento-crociera">
+                    <picture>
+                      <img alt="" title="" src="3/entertainment.svg"/>
+                    </picture>
+Intrattenimento                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/a-bordo/crociere-famiglie-bambini">
+                    <picture>
+                      <img alt="" title="" src="3/kids.svg"/>
+                    </picture>
+Bambini                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/a-bordo/spa-benessere">
+                    <picture>
+                      <img alt="" title="" src="3/spa_beauty.svg"/>
+                    </picture>
+SPA, Benessere e Fitness                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/a-bordo/internet-app">
+                    <picture>
+                      <img alt="" title="" src="3/wifi_and_apps.svg"/>
+                    </picture>
+Internet e App                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item" v-bind:class="{ 'active' : menuIndex === 3 }">
+              <a v-on:click="showSubMenu(3)" v-on:mouseover="handleMenuHover(3, $event)" originalhref="#">
+La mia prenotazione                <svg width="18" height="10" class="arrow-down-icon">
+                  <use xlink:href="/assets/img/sprite.svg#arrow-down-icon"/>
+                </svg>
+              </a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item ">
+                  <a data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="Login Page" data-tracking-action="" data-tracking-label="" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/la-mia-prenotazione/gestisci-prenotazione">
+                    <picture>
+                      <img alt="" title="" src="3/ships_1.svg"/>
+                    </picture>
+La mia crociera                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/la-mia-prenotazione/prima-di-partire">
+                    <picture>
+                      <img alt="" title="" src="3/before_you_go.svg"/>
+                    </picture>
+Prima di partire                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/la-mia-prenotazione/web-check-in">
+                    <picture>
+                      <img alt="" title="" src="3/web_checkin.svg"/>
+                    </picture>
+Web Check-in                  </a>
+                </li>
+                <li class="sub-menu__item ">
+                  <a originalhref="/la-mia-prenotazione/msc-voyagers-club">
+                    <picture>
+                      <img alt="" title="" src="3/voyagers_club.svg"/>
+                    </picture>
+MSC Voyagers Club                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__line" v-bind:style="menuLineStyle" v-bind:class="{'visible' : menuLineVisible}"/>
+          </ul>
+        </nav>
+        <div class="header__login">
+          <div class="header__login--link">
+            <a class="header__user" content="noindex" rel="nofollow" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="login" data-tracking-action="login_header" data-tracking-label="account" data-tracking-value="0" data-tracking-noninteraction="0" originalhref="/la-mia-prenotazione/gestisci-prenotazione">
+              <svg viewbox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+                  <path d="M24 21.445a6.624 6.624 0 0 0 6.615-6.616A6.624 6.624 0 0 0 24 8.212a6.623 6.623 0 0 0-6.615 6.617A6.623 6.623 0 0 0 24 21.445zm6.801 1.34c-2.082 0-6.106.022-9.297.037-2.117.007-3.866.015-4.412.015h-.009c-1.375-.022-2.713.525-3.76 1.554-1.27 1.244-2.029 3.109-2.029 4.996v6.262c0 .606.497 1.11 1.11 1.11h23.192c.613 0 1.11-.504 1.11-1.11v-6.662c0-3.005-2.07-6.202-5.905-6.202z" fill="#FFF"/>
+                  <circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="24"/>
+                </g>
+              </svg>
+            </a>
+            <a class="hidden" rel="nofollow" content="noindex" id="login_link" originalhref="/la-mia-prenotazione/gestisci-prenotazione">
+Accedi            </a>
+            <a class="hidden" rel="nofollow" content="noindex" id="login_user_link" originalhref="/la-mia-prenotazione/gestisci-prenotazione">
+Ciao, {0}            </a>
+          </div>
+          <div class="header__info-container">
+            <a class="header__contact" v-on:click="toggleContactUsForm($event)" originalhref="tel:848 242490">
+              <span class="header__phone">
+848 242490              </span>
+              <svg width="17" height="17" viewbox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.003 3.019c-.014.2.005.816.524 2.165l.016.048c.692 2.488 5.706 7.972 8.516 9.317 2.101 1.005 3.322 1.198 3.558 1.135.27-.107 1.06-1.053 1.397-1.456.163-.196.31-.374.426-.503.098-.11.095-.174.094-.196-.007-.107-.106-.236-.168-.295l-2.823-1.915a1.269 1.269 0 0 0-.75-.003l-2.011 1.093-.282-.2C6.426 10.042 4.53 7.08 4.45 6.956l-.166-.263.137-.28c.029-.056.706-1.435 1.035-1.993.084-.144-.049-.584-.22-.864-.52-.806-1.482-2.207-1.817-2.491-.15-.13-.34-.03-.413.018-.837.725-1.805 1.645-2.003 1.937z" fill="#FFF" stroke="#FFF" fill-rule="evenodd"/>
+              </svg>
+            </a>
+            <p class="header__info">
+TUTTI I GIORNI              <br/>
+8 - 22            </p>
+            <a v-on:click="toggleContactUsForm($event)" class="header__info call_me_back_cta" originalhref="#">
+Ti contattiamo            </a>
+            <div v-show="contactUsFormVisible" v-cloak="">
+              <div class="contact-us-form-wrapper">
+                <div class="contact-us-form-internal">
+                  <div class="mobile-top-header show-for-small-only">
+                    <svg v-on:click="toggleContactUsForm($event)">
+                      <use xlink:href="/images/sprite.svg#arrow-left"/>
+                    </svg>
+                  </div>
+                  <div class="contact-us-form-header show-for-small-only">
+                    <a originalhref="tel:848 242490">
+                      <span>
+848 242490                      </span>
+                    </a>
+                    <svg>
+                      <use xlink:href="/images/sprite.svg#phone-icon-orange"/>
+                    </svg>
+                  </div>
+                  <div class="contact-us-form-header show-for-medium">
+                    <span>
+Ti richiamiamo noi!                    </span>
+                    <svg class="as-edit-icon" v-on:click="toggleContactUsForm($event)" width="32" height="32">
+                      <use xlink:href="/images/sprite.svg#cancel-icon"/>
+                    </svg>
+                  </div>
+                  <div class="contact-us-form-body">
+                    <div class="contact-us-form">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button v-on:click="toggleMenu()" class="header__hamburger">
+          <svg v-show="!showMobileMenu">
+            <use xlink:href="/assets/img/sprite.svg#hamburger-icon"/>
+          </svg>
+          <svg v-show="showMobileMenu">
+            <use xlink:href="/assets/img/sprite.svg#close-icon"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main id="main" role="main" data-currentpage="ship-detail" class="">
+      <section class="section--full-width breadcrumb hidden-on-mobile">
+        <nav class="breadcrumb__container">
+          <ul class="breadcrumb__list" vocab="http://schema.org/" typeof="BreadcrumbList">
+            <li class="" property="&quot;itemListElement&quot;" typeof="&quot;ListItem&quot;">
+              <a property="item" typeof="WebPage" id="/" originalhref="/">
+                <span property="name">
+Home                </span>
+              </a>
+              <meta property="position" content="1"/>
+            </li>
+            <li class="">
+              <a style="pointer-events: none;" rel="nofollow" content="noindex">
+                <span>
+Crociere                </span>
+              </a>
+            </li>
+            <li class="" property="&quot;itemListElement&quot;" typeof="&quot;ListItem&quot;">
+              <a property="item" typeof="WebPage" id="/crociere/navi-da-crociera" originalhref="/crociere/navi-da-crociera">
+                <span property="name">
+Navi                </span>
+              </a>
+              <meta property="position" content="2"/>
+            </li>
+            <li class="active" property="&quot;itemListElement&quot;" typeof="&quot;ListItem&quot;">
+              <a href="3.html" property="item" typeof="WebPage" id="/crociere/navi-da-crociera/msc-divina">
+                <span property="name">
+MSC Divina                </span>
+              </a>
+              <meta property="position" content="3"/>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section class="cruice-search">
+      </section>
+      <section class="section--full-width hidden-on-mobile">
+        <div class="hero-video--wrp" id="hero-video--wrp">
+          <div class="video-background">
+            <section id="video-container" onclick="this.nextElementSibling.style.display = 'block'">
+              <h2/>
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/fleet_silhouette_ship_divina_13.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=312&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=EDE85B84861C89215E52FEB4995AC6D1B7D93992" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/fleet_silhouette_ship_divina_13.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=465&amp;mw=1920&amp;thn=0&amp;mediamode=desktop&amp;hash=337B5831D261112A39A4110A4DB0725D6FA50747" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/fleet_silhouette_ship_divina_1.jpg"/>
+              </picture>
+              <img alt="" title="" src="3/video-play-light.svg" class="hero-video--wrp__play-icon"/>
+            </section>
+            <div class="video-foreground" style="display:none">
+              <iframe allow="autoplay; fullscreen" frameborder="0" id="video" src="3/.html">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="" id="">
+        <h1 class="page-title">
+MSC DIVINA        </h1>
+        <span class="editorial-text withTick-orange">
+Ispirata a Sophia Loren, MSC Divina possiede tutta l'eleganza e il glamour dell'epoca d'oro delle crociere in una nuova veste moderna ed ecologica. A bordo, potrai trovare ogni comfort moderno, una serie di strutture per lo sport e lo svago, e intrattenimento di prima classe, compresi i club per bambini e adolescenti per garantire la felicità di tutti.        </span>
+      </section>
+      <section class="" id="">
+        <h2 class="section-title">
+Itinerari        </h2>
+        <span class="editorial-text withTick-orange">
+         </span>
+        <div class="tile-container tile-container--carousel tile-container--centered">
+          <a class="tile" style="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="MSC Divina" data-tracking-action="click" data-tracking-label="Mediterranean Ribbon" data-tracking-value="0" data-tracking-noninteraction="" originalhref="34.html">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/itinerary/itinerary_mediterranean_01.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=310&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=41F50916297549D7F3AE6B9C8FBC837C8205F35E" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/itinerary/itinerary_mediterranean_01.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=360&amp;mw=1447&amp;thn=0&amp;mediamode=desktop&amp;hash=35FC17A8A77CC29540557E86AAAD6531DA3A507E" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="3/itinerary_mediterranean_01.jpg"/>
+            </picture>
+            <div class="msc-ribbon">
+2019            </div>
+            <header>
+              <div class="tile__overtitle">
+              </div>
+              <div class="tile__title">
+Mediterraneo              </div>
+            </header>
+          </a>
+          <a class="tile" style="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="MSC Divina" data-tracking-action="click" data-tracking-label="CAR" data-tracking-value="0" data-tracking-noninteraction="" originalhref="34.html">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/itinerary/itinerary_caribbean_01_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=310&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=E62A50AAE76A0C0E2A5BA6790A37E2346D30D6E7" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/itinerary/itinerary_caribbean_01.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=360&amp;mw=1447&amp;thn=0&amp;mediamode=desktop&amp;hash=D3D424F11978A4EA4EADAFBD656F6F4C1F40B5A9" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="3/itinerary_caribbean_01.jpg"/>
+            </picture>
+            <div class="msc-ribbon">
+2019 / 2020            </div>
+            <header>
+              <div class="tile__overtitle">
+              </div>
+              <div class="tile__title">
+                <p>
+Caraibi e Antille                </p>
+              </div>
+            </header>
+          </a>
+        </div>
+        <div class="button-container">
+          <a data-tracking-type="interaction" data-tracking="true" data-tracking-event="eventGA" data-tracking-category="ships" data-tracking-action="click" data-tracking-value="0" class="button" data-tracking-label="Itineraries" originalhref="34.html">
+Prenota la tua crociera con MSC Divina          </a>
+        </div>
+      </section>
+      <section class="section--full-width ">
+        <h2 class="section-title">
+caratteristiche principali        </h2>
+        <div id="34449637-244D-4B5E-B28B-8D83DBEDE26C" class="editorial-image-text editorial-image-text--left">
+          <div class="editorial__item">
+            <div class="editorial__item__description editorial-text--readmore">
+              <h2>
+Intrattenimento e tempo libero              </h2>
+              <div>
+                <p>
+                  <span style="letter-spacing: -0.45px; color: #000033;">
+MSC Divina vanta una piazza in vera pietra, il                    <strong>
+Casinò Veneziano                    </strong>
+e il                    <strong>
+Teatro Pantheon                    </strong>
+in stile Broadway. Dalle eleganti scalinate in cristallo                    <strong>
+Swarovski                    </strong>
+fino alla                    <strong>
+piscina Infinity                    </strong>
+che si estende verso il mare, troverai ovunque delle strutture per lo svago eleganti e lussuose.                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="editorial__item__image">
+              <div class="editorial__item__image__tile">
+                <h2>
+Intrattenimento e tempo libero                </h2>
+                <div class="editorial__item__image__plus">
+                  <svg>
+                    <use xlink:href="/assets/img/sprite.svg#plus"/>
+                  </svg>
+                </div>
+              </div>
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/public-area/di_public_area_swarovski_staircases_01_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=290&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=A81AC78BEC07DC056006E9F6130ED1529717EE39" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/public-area/di_public_area_swarovski_staircases_01.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=723&amp;thn=0&amp;mediamode=desktop&amp;hash=50DAA016F6524BB198CB4EAD2EB23CDB5AFC58AE" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/di_public_area_swarovski_stair.jpg"/>
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div id="DDFEA2D1-F49A-41BB-AE16-E8F674D48A55" class="editorial-image-text editorial-image-text--right">
+          <div class="editorial__item">
+            <div class="editorial__item__description editorial-text--readmore">
+              <h2>
+Spa e relax                <br/>
+              </h2>
+              <div>
+                <p>
+Un'infinità di trattamenti di benessere ti attendono nell'atmosfera rilassata della MSC Aurea Spa. Puoi anche rilassarti e coccolarti all'aria aperta sul ponte solarium Top 18 con le sue splendide viste sul mare, il servizio spa dedicato e un menù da bar.                </p>
+              </div>
+            </div>
+            <div class="editorial__item__image">
+              <div class="editorial__item__image__tile">
+                <h2>
+Spa e relax                  <br/>
+                </h2>
+                <div class="editorial__item__image__plus">
+                  <svg>
+                    <use xlink:href="/assets/img/sprite.svg#plus"/>
+                  </svg>
+                </div>
+              </div>
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/public-area/di_public_area_aurea_spa_03_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=290&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=5A99B7DF376C74CFCF6E1AA7555CA76A495AAF70" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/public-area/di_public_area_aurea_spa_03.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=723&amp;thn=0&amp;mediamode=desktop&amp;hash=443C56F1F9154E1DBFAD1255136D5AD0E901FFFC" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/di_public_area_aurea_spa_03.jp.jpg"/>
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div id="6E96EE41-F064-4A28-82AF-F3FCA32C49AC" class="editorial-image-text editorial-image-text--left">
+          <div class="editorial__item">
+            <div class="editorial__item__description editorial-text--readmore">
+              <h2>
+MSC Yacht Club              </h2>
+              <div>
+                <p>
+                </p>
+                <p>
+Scopri l'esclusivo                  <a originalhref="/crociere/msc-yacht-club">
+MSC Yacht Club                  </a>
+, una "nave all'interno della nave", con il suo servizio maggiordomo disponibile 24 ore su 24. La Royal Suite Sophia Loren sul ponte 16 è stata progettata con l'aiuto dell'attrice stessa e include persino una riproduzione della sua toeletta.                </p>
+                <p>
+                </p>
+              </div>
+            </div>
+            <div class="editorial__item__image">
+              <div class="editorial__item__image__tile">
+                <h2>
+MSC Yacht Club                </h2>
+                <div class="editorial__item__image__plus">
+                  <svg>
+                    <use xlink:href="/assets/img/sprite.svg#plus"/>
+                  </svg>
+                </div>
+              </div>
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/public-area/di_yacht-club_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=290&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=9F9FB3A9026105F7BBBA8206420B8265E6744F57" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/public-area/di_yacht-club.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=723&amp;thn=0&amp;mediamode=desktop&amp;hash=3DD39DEB2ECB276DEFD8789811E58A511A6A08FD" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/di_yacht-club.jpg"/>
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--full-width ">
+        <div class="virtual-tour--box-desktop" style="background-image: url('/-/media/global-contents/ships/fleet/ship_banner.jpg?h=340&amp;w=1920&amp;hash=6A2A7783AA25339FF3552F2DE274656BE564E13A')">
+          <div>
+            <div class="virtual-tour--box-desktop__container">
+              <div class="virtual-tour--box-desktop__item">
+                <a title="" target="_blank" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="MSC Divina" data-tracking-action="click" data-tracking-label="360 Tour" data-tracking-value="0" data-tracking-noninteraction="" originalhref="http://virtual-tours.msccruises.com/MSC-Divina/it-it/index.html">
+                  <figure>
+                    <img width="" alt="" src="3/360_vr_icon.png" height=""/>
+                    <figcaption>
+Scopri MSC Divina con il Virtual Tour 360°                     </figcaption>
+                  </figure>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="" id="">
+        <h2 class="section-title">
+CABINE E SUITE        </h2>
+        <span class="editorial-text withTick-orange">
+La nave offre sistemazioni adatte a qualsiasi necessità, dalle cabine interne con vista mare e le cabine con balcone, fino alle suite spaziose e le cabine comunicanti per famiglie.        </span>
+      </section>
+      <section>
+        <div class="tile-container tile-container--see-more tile-container--see-more--six" v-bind:class="{'show-all': showAll}">
+          <div class="tile--with-detail__detailed--mobile">
+          </div>
+          <div class="tile-container--carousel tile-container--pagination-helper">
+            <div class="tile tile--with-detail">
+              <div class="tile--with-detail--block">
+                <picture>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_royal_suite_01_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=1BF53F09FCEFC520C32634BDACA8423BF02177D3" media="(max-width: 40em)" alt="MSC Divina, Royal Suite | MSC Cruises" title="MSC Divina, Royal Suite | MSC Cruises"/>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_royal_suite_01.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=9506A7E94924C8D1305E6D6B78D9A4BC51802099" media="(max-width: 60em)" alt="MSC Divina, Royal Suite | MSC Cruises" title="MSC Divina, Royal Suite | MSC Cruises"/>
+                  <img alt="MSC Divina, Royal Suite | MSC Cruises" title="MSC Divina, Royal Suite | MSC Cruises" src="3/di_royal_suite_01.jpg"/>
+                </picture>
+                <header>
+                  <div class="tile__title">
+MSC Yacht Club Royal Suite                  </div>
+                  <div class="tile__see-details">
+                    <button class="button">
+Vedi dettagli                    </button>
+                    <picture class="info-circle">
+                      <img alt="" src="3/info-circle-white.svg"/>
+                    </picture>
+                  </div>
+                </header>
+                <div class="tile__see-details">
+                  <button class="button">
+Vedi dettagli                  </button>
+                </div>
+              </div>
+              <div class="tile--with-detail__detailed">
+                <div class="close-tile-detail">
+                  <svg>
+                    <use xlink:href="/assets/img/sprite.svg#arrow-right-icon"/>
+                  </svg>
+                </div>
+                <div class="tile--with-detail__detailed--group">
+                  <div class="tile-detail__title">
+                    <span>
+MSC Yacht Club Royal Suite                      <a target="_blank" class="tile-detail__360" originalhref="http://virtual-tours.msccruises.com/MSC-Divina/en-gb/index.html?sc=scene_yc_royal_suite_soggiorno">
+Tour Virtuale 360°                      </a>
+                    </span>
+                    <div class="tile-detail__title--right">
+                      <svg>
+                        <use xlink:href="/assets/img/sprite.svg#close-icon"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="owl-carousel owl-theme">
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_royal_suite_01_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=FB975F7BB95B3AC91CF72CA5E16EF8FB8F602561" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_royal_suite_01.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=99FF86E8FD4517DFBEB761EEE38EB8BBCCB1A52B" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_royal_suite_01_1.jpg"/>
+                    </picture>
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_royal_suite_01_2d_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=1BE43751AD6EDCE0C5797FB076502F58C487B407" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_royal_suite_01_2d.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=F405AA16E09B254100FE52C37AC850BD6F021192" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_royal_suite_01_2d.jpg"/>
+                    </picture>
+                  </div>
+                  <div class="tile-detail__text">
+                    <ul>
+                      <li>
+Balcone con tavolo da pranzo                      </li>
+                      <li>
+Zona giorno e e sala da pranzo separate                      </li>
+                      <li>
+Comodo letto matrimoniale o letti singoli (su richiesta)                      </li>
+                      <li>
+Armadi walk-in                      </li>
+                      <li>
+Bagno con vasca e doccia, zona toilette con asciugacapelli                      </li>
+                      <li>
+TV interattiva, telefono, cassaforte, minibar                      </li>
+                      <li>
+Superficie ca. 52 mq                      </li>
+                    </ul>
+                    <br/>
+Scopri un mondo di privilegi con MSC Yacht Club                    <br/>
+                     <br/>
+                    <em>
+                      <span style="font-size: 12px;">
+Dimensioni, disposizione e arredamento possono variare rispetto a quelli indicati (nella stessa categoria di cabina)                        <br/>
+Le immagini sono solo rappresentative.                        <br/>
+                      </span>
+                    </em>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tile tile--with-detail">
+              <div class="tile--with-detail--block">
+                <picture>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_executive_family_suite_02_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=8D73758927173FEBC80A3DC116EC9B1AF5DA0248" media="(max-width: 40em)" alt="MSC Divina, Yacht Club Executive Family Suite | MSC Cruises" title="MSC Divina, Yacht Club Executive Family Suite | MSC Cruises"/>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_executive_family_suite_02.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=C98A42CB5C3FBAB2AC84C218E917F9840D4843FE" media="(max-width: 60em)" alt="MSC Divina, Yacht Club Executive Family Suite | MSC Cruises" title="MSC Divina, Yacht Club Executive Family Suite | MSC Cruises"/>
+                  <img alt="MSC Divina, Yacht Club Executive Family Suite | MSC Cruises" title="MSC Divina, Yacht Club Executive Family Suite | MSC Cruises" src="3/di_executive_family_suite_02.j.jpg"/>
+                </picture>
+                <header>
+                  <div class="tile__title">
+MSC Yacht Club Executive & Family Suite                  </div>
+                  <div class="tile__see-details">
+                    <button class="button">
+Vedi dettagli                    </button>
+                    <picture class="info-circle">
+                      <img alt="" src="3/info-circle-white_1.svg"/>
+                    </picture>
+                  </div>
+                </header>
+                <div class="tile__see-details">
+                  <button class="button">
+Vedi dettagli                  </button>
+                </div>
+              </div>
+              <div class="tile--with-detail__detailed">
+                <div class="close-tile-detail">
+                  <svg>
+                    <use xlink:href="/assets/img/sprite.svg#arrow-right-icon"/>
+                  </svg>
+                </div>
+                <div class="tile--with-detail__detailed--group">
+                  <div class="tile-detail__title">
+                    <span>
+MSC Yacht Club Executive & Family Suite                      <a target="_blank" class="tile-detail__360" originalhref="http://virtual-tours.msccruises.com/MSC-Divina/en-gb/index.html?sc=scene_yc_executive_family_suite_soggiorno">
+Virtual Tour 360°                      </a>
+                    </span>
+                    <div class="tile-detail__title--right">
+                      <svg>
+                        <use xlink:href="/assets/img/sprite.svg#close-icon"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="owl-carousel owl-theme">
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_executive_family_suite_02_mobile_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=B5DD89EEB5B4270326FB07BB7EA2288A58E4243B" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_executive_family_suite_02.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=F6AFD1E4ABE586524C46518139DEE6344261477A" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_executive_family_suite_02.j_1.jpg"/>
+                    </picture>
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_executive_family_suite_02_2d_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=63E2832D5B9F397A47BBC06EB01DEBBF18C19321" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_executive_family_suite_02_2d.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=05B30257A188B995CB7D453604A140E60143D8B4" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_executive_family_suite_02_2.jpg"/>
+                    </picture>
+                  </div>
+                  <div class="tile-detail__text">
+                    <ul>
+                      <li>
+Vetrata panoramica non apribile                      </li>
+                      <li>
+Salotto con divano                      </li>
+                      <li>
+Comodo letto matrimoniale o letti singoli (su richiesta)                      </li>
+                      <li>
+Ampio guardaroba                      </li>
+                      <li>
+Bagno con doccia o vasca, zona toilette con asciugacapelli                      </li>
+                      <li>
+TV interattiva, telefono, cassaforte, minibar                      </li>
+                      <li>
+Superficie ca. da 40 a 51 mq                      </li>
+                    </ul>
+                    <br/>
+Scopri un mondo di privilegi con MSC Yacht Club                    <br/>
+                     <br/>
+                    <em>
+                      <span style="font-size: 12px;">
+Dimensioni, disposizione e arredamento possono variare rispetto a quelli indicati (nella stessa categoria di cabina)                        <br/>
+Le immagini sono solo rappresentative.                        <br/>
+                      </span>
+                    </em>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tile tile--with-detail">
+              <div class="tile--with-detail--block">
+                <picture>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_deluxe_suite_03_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=996A7FACF8F724CD7EE29566EE512027002FF8FC" media="(max-width: 40em)" alt="MSC Divina, Yacht Club Deluxe Suite |MSC Cruises" title="MSC Divina, Yacht Club Deluxe Suite |MSC Cruises"/>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_deluxe_suite_03.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=392200C91A6DCA4E89718F788CB14F7D501599D5" media="(max-width: 60em)" alt="MSC Divina, Yacht Club Deluxe Suite |MSC Cruises" title="MSC Divina, Yacht Club Deluxe Suite |MSC Cruises"/>
+                  <img alt="MSC Divina, Yacht Club Deluxe Suite |MSC Cruises" title="MSC Divina, Yacht Club Deluxe Suite |MSC Cruises" src="3/di_deluxe_suite_03.jpg"/>
+                </picture>
+                <header>
+                  <div class="tile__title">
+MSC Yacht Club Deluxe Suite                  </div>
+                  <div class="tile__see-details">
+                    <button class="button">
+Vedi dettagli                    </button>
+                    <picture class="info-circle">
+                      <img alt="" src="3/info-circle-white_2.svg"/>
+                    </picture>
+                  </div>
+                </header>
+                <div class="tile__see-details">
+                  <button class="button">
+Vedi dettagli                  </button>
+                </div>
+              </div>
+              <div class="tile--with-detail__detailed">
+                <div class="close-tile-detail">
+                  <svg>
+                    <use xlink:href="/assets/img/sprite.svg#arrow-right-icon"/>
+                  </svg>
+                </div>
+                <div class="tile--with-detail__detailed--group">
+                  <div class="tile-detail__title">
+                    <span>
+MSC Yacht Club Deluxe Suite                      <a target="_blank" class="tile-detail__360" originalhref="http://virtual-tours.msccruises.com/MSC-Divina/en-gb/index.html?sc=scene_yc_standard">
+Virtual Tour 360°                      </a>
+                    </span>
+                    <div class="tile-detail__title--right">
+                      <svg>
+                        <use xlink:href="/assets/img/sprite.svg#close-icon"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="owl-carousel owl-theme">
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_deluxe_suite_03_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=5DB75113D913F11BF617A86913DA63DE531420A4" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_deluxe_suite_03.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=A72EF12C4498718B36B457011228A9E570CF48B6" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_deluxe_suite_03_1.jpg"/>
+                    </picture>
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_deluxe_suite_03_2d_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=E39F2E561959ADB13FDC10F3315FAF0227B65327" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_deluxe_suite_03_2d.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=641B299CC72F49C24874FB99B23D1B819FFFE4BA" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_deluxe_suite_03_2d.jpg"/>
+                    </picture>
+                  </div>
+                  <div class="tile-detail__text">
+                    <ul>
+                      <li>
+Balcone                      </li>
+                      <li>
+Salotto con divano                      </li>
+                      <li>
+Comodo letto matrimoniale o letti singoli (su richiesta)                      </li>
+                      <li>
+Ampio guardaroba                      </li>
+                      <li>
+Bagno con doccia o vasca, zona toilette con asciugacapelli                      </li>
+                      <li>
+TV interattiva, telefono, cassaforte, minibar                      </li>
+                      <li>
+Superficie ca. da 28 a 32 mq*                      </li>
+                    </ul>
+                    <p>
+                     </p>
+                    <p>
+Scopri un mondo di privilegi con MSC Yacht Club                    </p>
+                    <p>
+                       <br/>
+                      <em>
+                        <span style="font-size: 13px;">
+*Questa gamma di dimensioni comprende sia cabine standard che cabine per ospiti con disabilità o mobilità ridotta, che sono più grandi.                          <br/>
+Dimensioni, disposizione e arredamento possono variare rispetto a quelli indicati (nella stessa categoria di cabina)                          <br/>
+Le immagini sono solo rappresentative.                          <br/>
+                        </span>
+                      </em>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tile tile--with-detail">
+              <div class="tile--with-detail--block">
+                <picture>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_suite_with_balcony_11_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=1F5231F7DE81105115802604097288607C60FAED" media="(max-width: 40em)" alt="MSC Divina, Suite with Balcony | MSC Cruises" title="MSC Divina, Suite with Balcony | MSC Cruises"/>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_suite_with_balcony_11.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=665511325F2EF2D560185372A70DCACFA53567E2" media="(max-width: 60em)" alt="MSC Divina, Suite with Balcony | MSC Cruises" title="MSC Divina, Suite with Balcony | MSC Cruises"/>
+                  <img alt="MSC Divina, Suite with Balcony | MSC Cruises" title="MSC Divina, Suite with Balcony | MSC Cruises" src="3/di_suite_with_balcony_11.jpg"/>
+                </picture>
+                <header>
+                  <div class="tile__title">
+Suite                  </div>
+                  <div class="tile__see-details">
+                    <button class="button">
+Vedi dettagli                    </button>
+                    <picture class="info-circle">
+                      <img alt="" src="3/info-circle-white_3.svg"/>
+                    </picture>
+                  </div>
+                </header>
+                <div class="tile__see-details">
+                  <button class="button">
+Vedi dettagli                  </button>
+                </div>
+              </div>
+              <div class="tile--with-detail__detailed">
+                <div class="close-tile-detail">
+                  <svg>
+                    <use xlink:href="/assets/img/sprite.svg#arrow-right-icon"/>
+                  </svg>
+                </div>
+                <div class="tile--with-detail__detailed--group">
+                  <div class="tile-detail__title">
+                    <span>
+Suite                      <a target="_blank" class="tile-detail__360" originalhref="http://virtual-tours.msccruises.com/MSC-Divina/en-gb/index.html?sc=scene_aurea_suite">
+Virtual Tour 360°                      </a>
+                    </span>
+                    <div class="tile-detail__title--right">
+                      <svg>
+                        <use xlink:href="/assets/img/sprite.svg#close-icon"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="owl-carousel owl-theme">
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_suite_with_balcony_11_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=E7232CBBE81C3E0B079458E6DFC71E3DC9CD4FA4" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_suite_with_balcony_11.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=0EF0E6B8EA350587C1F65F5F20C0FE566E22CBC9" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_suite_with_balcony_11_1.jpg"/>
+                    </picture>
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_suite_with_balcony_11_2d_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=C3455F44C2004F472E661E0FAF2ED5A3DBF1DCF5" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_suite_with_balcony_11_2d.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=212895B5A77A66270AAB9EB3E6B38B300E8D4BC1" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_suite_with_balcony_11_2d.jp.jpg"/>
+                    </picture>
+                  </div>
+                  <div class="tile-detail__text">
+                    <ul>
+                      <li>
+Balcone ad angolo                      </li>
+                      <li>
+Salotto con divano                      </li>
+                      <li>
+Ampio guardaroba                      </li>
+                      <li>
+Comodo letto matrimoniale o letti singoli (su richiesta)                      </li>
+                      <li>
+TV interattiva, telefono, cassaforte, minibar                      </li>
+                      <li>
+Bagno con vasca, zona toilette con asciugacapelli                      </li>
+                      <li>
+Superficie ca. da 32 a 41 mq                      </li>
+                    </ul>
+                    <br/>
+Scegli l'esperienza e i vantaggi esclusivi che più preferisci!                    <br/>
+Esperienze disponibili: Aurea                     <br/>
+                    <br/>
+                    <em>
+                      <span style="font-size: 12px;">
+Dimensioni, disposizione e arredamento possono variare rispetto a quelli indicati (nella stessa categoria di cabina)                        <br/>
+Le immagini sono solo rappresentative.                        <br/>
+                      </span>
+                    </em>
+                    <p>
+                     </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tile tile--with-detail">
+              <div class="tile--with-detail--block">
+                <picture>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_sealed_window_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=AC0CCD4F5F6F3AAD2609F4FB9579089DFAD8CB5A" media="(max-width: 40em)" alt="" title=""/>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_sealed_window.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=D93641A6597705CEDBD40CEA295F3CDC7A1A25ED" media="(max-width: 60em)" alt="" title=""/>
+                  <img alt="" title="" src="3/di_sealed_window.jpg"/>
+                </picture>
+                <header>
+                  <div class="tile__title">
+Suite con vetrata panoramica non apribile                  </div>
+                  <div class="tile__see-details">
+                    <button class="button">
+Vedi dettagli                    </button>
+                    <picture class="info-circle">
+                      <img alt="" src="3/info-circle-white_4.svg"/>
+                    </picture>
+                  </div>
+                </header>
+                <div class="tile__see-details">
+                  <button class="button">
+Vedi dettagli                  </button>
+                </div>
+              </div>
+              <div class="tile--with-detail__detailed">
+                <div class="close-tile-detail">
+                  <svg>
+                    <use xlink:href="/assets/img/sprite.svg#arrow-right-icon"/>
+                  </svg>
+                </div>
+                <div class="tile--with-detail__detailed--group">
+                  <div class="tile-detail__title">
+                    <span>
+Suite con vetrata panoramica non apribile                    </span>
+                    <div class="tile-detail__title--right">
+                      <svg>
+                        <use xlink:href="/assets/img/sprite.svg#close-icon"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="owl-carousel owl-theme">
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_sealed_window_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=358F1DB156B65460994679EAE1DE6B4BFC077F10" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_sealed_window.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=63A3A0E0206A8F35E5E88F2FEA61C12C24476ECC" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_sealed_window_1.jpg"/>
+                    </picture>
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_suite-panoramic-window_2d.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=F59CB2B5BE93AC2727B9DF36BE6EC8ACC812F607" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_suite-panoramic-window_2d.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=AA3FADD502B8C64B423B196D04E3212DFB49E84C" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_suite-panoramic-window_2d.j.jpg"/>
+                    </picture>
+                  </div>
+                  <div class="tile-detail__text">
+                    <ul>
+                      <li>
+Vetrata panoramica non apribile                      </li>
+                      <li>
+Salotto con divano                      </li>
+                      <li>
+Ampio guardaroba                      </li>
+                      <li>
+Comodo letto matrimoniale o letti singoli (su richiesta)                      </li>
+                      <li>
+TV interattiva, telefono, cassaforte, minibar                      </li>
+                      <li>
+Bagno con vasca, zona toilette con asciugacapelli                      </li>
+                      <li>
+Superficie ca. da 21 a 25 mq                      </li>
+                    </ul>
+                    <br/>
+Scegli l'esperienza e i vantaggi esclusivi che più preferisci!                    <br/>
+Esperienze disponibili: Aurea                      <br/>
+                    <br/>
+                    <em>
+                      <span style="font-size: 12px;">
+Dimensioni, disposizione e arredamento possono variare rispetto a quelli indicati (nella stessa categoria di cabina)                        <br/>
+Le immagini sono solo rappresentative.                        <br/>
+                      </span>
+                    </em>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tile tile--with-detail">
+              <div class="tile--with-detail--block">
+                <picture>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_balcony_06_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=9A3304E3F64FF5E4F75D35A80F0A1C23B69FC174" media="(max-width: 40em)" alt="MSC Divina, Balcony | MSC Cruises" title="MSC Divina, Balcony | MSC Cruises"/>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_balcony_06.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=F16CC5995FD1FEB34573B5956D3C454E6C11B514" media="(max-width: 60em)" alt="MSC Divina, Balcony | MSC Cruises" title="MSC Divina, Balcony | MSC Cruises"/>
+                  <img alt="MSC Divina, Balcony | MSC Cruises" title="MSC Divina, Balcony | MSC Cruises" src="3/di_balcony_06.jpg"/>
+                </picture>
+                <header>
+                  <div class="tile__title">
+Cabina con balcone                  </div>
+                  <div class="tile__see-details">
+                    <button class="button">
+Vedi dettagli                    </button>
+                    <picture class="info-circle">
+                      <img alt="" src="3/info-circle-white_5.svg"/>
+                    </picture>
+                  </div>
+                </header>
+                <div class="tile__see-details">
+                  <button class="button">
+Vedi dettagli                  </button>
+                </div>
+              </div>
+              <div class="tile--with-detail__detailed">
+                <div class="close-tile-detail">
+                  <svg>
+                    <use xlink:href="/assets/img/sprite.svg#arrow-right-icon"/>
+                  </svg>
+                </div>
+                <div class="tile--with-detail__detailed--group">
+                  <div class="tile-detail__title">
+                    <span>
+Cabina con balcone                      <a target="_blank" class="tile-detail__360" originalhref="http://virtual-tours.msccruises.com/MSC-Divina/en-gb/index.html?sc=scene_balcony">
+Virtual Tour 360°                      </a>
+                    </span>
+                    <div class="tile-detail__title--right">
+                      <svg>
+                        <use xlink:href="/assets/img/sprite.svg#close-icon"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="owl-carousel owl-theme">
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_balcony_06_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=27C405D7BD8A8325E421E89331E9A202C60A4263" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_balcony_06.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=0DA4C58E1909F15BA4D188EE63DD4256E2E529EE" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_balcony_06_1.jpg"/>
+                    </picture>
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_balcony_06_2d_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=703B2AB97CA56D215B80F8945545A33732EEF56C" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_balcony_06_2d.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=B493B56EBF5718EA0D03733F1742EE9824FE5574" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_balcony_06_2d.jpg"/>
+                    </picture>
+                  </div>
+                  <div class="tile-detail__text">
+                    <ul>
+                      <li>
+Balcone                      </li>
+                      <li>
+Salotto con divano                      </li>
+                      <li>
+Comodo letto matrimoniale o letti singoli (su richiesta)                      </li>
+                      <li>
+TV interattiva, telefono, cassaforte, minibar                      </li>
+                      <li>
+Bagno con doccia o vasca, zona toilette con asciugacapelli                      </li>
+                      <li>
+Superficie ca. da 14 a 19 mq*                      </li>
+                    </ul>
+                    <p>
+                     </p>
+                    <p>
+Le cabine numero 8134, 8136, 8137, 8138, 8139, 8140, 8141, 8143 hanno vista parzialmente ostruita.                    </p>
+                    <p>
+                     </p>
+                    <p>
+Scegli l'esperienza e i vantaggi esclusivi che più preferisci!                      <br/>
+Esperienze disponibili: Bella, Fantastica, e Aurea                        <br/>
+                      <br/>
+                      <em>
+                        <span style="font-size: 12px;">
+* Questa gamma di dimensioni comprende sia cabine standard che cabine per ospiti con disabilità o mobilità ridotta, che sono più grandi.                          <br/>
+Dimensioni, disposizione e arredamento possono variare rispetto a quelli indicati (nella stessa categoria di cabina)                          <br/>
+Le immagini sono solo rappresentative.                        </span>
+                      </em>
+                    </p>
+                    <p>
+                     </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tile tile--with-detail">
+              <div class="tile--with-detail--block">
+                <picture>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_superfamily_07_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=FFADF92025CF0686954DCC09BE88FC71F3F03B74" media="(max-width: 40em)" alt="MSC Divina, Superfamily | MSC Cruises" title="MSC Divina, Superfamily | MSC Cruises"/>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_superfamily_07.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=168DB87A47B93AC3030370EFB2ED1AA71282B91E" media="(max-width: 60em)" alt="MSC Divina, Superfamily | MSC Cruises" title="MSC Divina, Superfamily | MSC Cruises"/>
+                  <img alt="MSC Divina, Superfamily | MSC Cruises" title="MSC Divina, Superfamily | MSC Cruises" src="3/di_superfamily_07.jpg"/>
+                </picture>
+                <header>
+                  <div class="tile__title">
+Cabina Superfamily                  </div>
+                  <div class="tile__see-details">
+                    <button class="button">
+Vedi dettagli                    </button>
+                    <picture class="info-circle">
+                      <img alt="" src="3/info-circle-white_6.svg"/>
+                    </picture>
+                  </div>
+                </header>
+                <div class="tile__see-details">
+                  <button class="button">
+Vedi dettagli                  </button>
+                </div>
+              </div>
+              <div class="tile--with-detail__detailed">
+                <div class="close-tile-detail">
+                  <svg>
+                    <use xlink:href="/assets/img/sprite.svg#arrow-right-icon"/>
+                  </svg>
+                </div>
+                <div class="tile--with-detail__detailed--group">
+                  <div class="tile-detail__title">
+                    <span>
+Cabina Superfamily                      <a target="_blank" class="tile-detail__360" originalhref="http://virtual-tours.msccruises.com/MSC-Divina/en-gb/index.html?sc=scene_superfamily">
+Virtual Tour 360°                      </a>
+                    </span>
+                    <div class="tile-detail__title--right">
+                      <svg>
+                        <use xlink:href="/assets/img/sprite.svg#close-icon"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="owl-carousel owl-theme">
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_superfamily_07_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=F6D8F01A2E59969DAEA933DB54F1542B7C6ED6C1" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_superfamily_07.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=49C8E86D49C745294A88BD134FFC0ADEF84B9218" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_superfamily_07_1.jpg"/>
+                    </picture>
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_superfamily_07_2d_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=E6B4A4DE96F3B80B63883FBEA1557A362D44C979" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_superfamily_07_2d.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=575B8AAE0510514B71AD43328ED157E7443AE5EE" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_superfamily_07_2d.jpg"/>
+                    </picture>
+                  </div>
+                  <div class="tile-detail__text">
+                    <ul>
+                      <li>
+Combinazione di 2 cabine con balconi comunicanti                      </li>
+                      <li>
+Possono comodamente ospitare fino a 6 persone                      </li>
+                    </ul>
+                    <br/>
+Scegli l'esperienza e i vantaggi esclusivi che più preferisci!                    <br/>
+Esperienze disponibili: Fantastica                      <br/>
+                    <br/>
+                    <em>
+                      <span style="font-size: 12px;">
+Dimensioni, disposizione e arredamento possono variare rispetto a quelli indicati (nella stessa categoria di cabina)                        <br/>
+Le immagini sono solo rappresentative.                        <br/>
+                      </span>
+                    </em>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tile tile--with-detail">
+              <div class="tile--with-detail--block">
+                <picture>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_ocean_view_08_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=F5238D56D4F7C67136C97E37D66CD75EC3987058" media="(max-width: 40em)" alt="MSC Divina, Ocean View | MSC Cruises" title="MSC Divina, Ocean View | MSC Cruises"/>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_ocean_view_08.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=A60ECB89132C1DBA56F058B47E4251726AC19FCD" media="(max-width: 60em)" alt="MSC Divina, Ocean View | MSC Cruises" title="MSC Divina, Ocean View | MSC Cruises"/>
+                  <img alt="MSC Divina, Ocean View | MSC Cruises" title="MSC Divina, Ocean View | MSC Cruises" src="3/di_ocean_view_08.jpg"/>
+                </picture>
+                <header>
+                  <div class="tile__title">
+Cabina vista mare                  </div>
+                  <div class="tile__see-details">
+                    <button class="button">
+Vedi dettagli                    </button>
+                    <picture class="info-circle">
+                      <img alt="" src="3/info-circle-white_7.svg"/>
+                    </picture>
+                  </div>
+                </header>
+                <div class="tile__see-details">
+                  <button class="button">
+Vedi dettagli                  </button>
+                </div>
+              </div>
+              <div class="tile--with-detail__detailed">
+                <div class="close-tile-detail">
+                  <svg>
+                    <use xlink:href="/assets/img/sprite.svg#arrow-right-icon"/>
+                  </svg>
+                </div>
+                <div class="tile--with-detail__detailed--group">
+                  <div class="tile-detail__title">
+                    <span>
+Cabina vista mare                      <a target="_blank" class="tile-detail__360" originalhref="http://virtual-tours.msccruises.com/MSC-Divina/en-gb/index.html?sc=scene_ocean_view">
+Virtual Tour 360°                      </a>
+                    </span>
+                    <div class="tile-detail__title--right">
+                      <svg>
+                        <use xlink:href="/assets/img/sprite.svg#close-icon"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="owl-carousel owl-theme">
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_ocean_view_08_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=49235FCF34C8115932F275341896BD290A58DE3C" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_ocean_view_08.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=9277055DD5D33494CF8393BF3B57D841D3DA3A03" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_ocean_view_08_1.jpg"/>
+                    </picture>
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_ocean_view_08_2d_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=E17846F2EFAE18B3E10232981ABA76B412BD34AA" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_ocean_view_08_2d.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=E669502A0C19AC9B41FCF904C8813F2DA9D89547" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_ocean_view_08_2d.jpg"/>
+                    </picture>
+                  </div>
+                  <div class="tile-detail__text">
+                    <ul>
+                      <li>
+Finestra con vista mare                      </li>
+                      <li>
+Comodo letto matrimoniale o letti singoli (su richiesta)                      </li>
+                      <li>
+Rilassante poltrona                      </li>
+                      <li>
+TV interattiva, telefono, cassaforte, minibar                      </li>
+                      <li>
+Bagno con doccia, zona toilette con asciugacapelli                      </li>
+                      <li>
+Superficie ca. da 12 a 20 mq*                      </li>
+                    </ul>
+                    <br/>
+Scegli l'esperienza e i vantaggi esclusivi che più preferisci!                    <br/>
+Esperienze disponibili: Bella e Fantastica                    <br/>
+                    <br/>
+                    <em>
+                      <span style="font-size: 12px;">
+* Questa gamma di dimensioni comprende sia cabine standard che cabine per ospiti con disabilità o mobilità ridotta, che sono più grandi.                        <br/>
+Dimensioni, disposizione e arredamento possono variare rispetto a quelli indicati (nella stessa categoria di cabina)                        <br/>
+Le immagini sono solo rappresentative.                        <br/>
+                      </span>
+                    </em>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tile tile--with-detail">
+              <div class="tile--with-detail--block">
+                <picture>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_interior_09_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=E62287E3374002EFF013092B61F58D4535EEB1BD" media="(max-width: 40em)" alt="MSC Divina, Interior | MSC Cruises" title="MSC Divina, Interior | MSC Cruises"/>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di_interior_09.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=B4AF8F9287F3B927774690E5A3248482389369BB" media="(max-width: 60em)" alt="MSC Divina, Interior | MSC Cruises" title="MSC Divina, Interior | MSC Cruises"/>
+                  <img alt="MSC Divina, Interior | MSC Cruises" title="MSC Divina, Interior | MSC Cruises" src="3/di_interior_09.jpg"/>
+                </picture>
+                <header>
+                  <div class="tile__title">
+Cabina interna                  </div>
+                  <div class="tile__see-details">
+                    <button class="button">
+Vedi dettagli                    </button>
+                    <picture class="info-circle">
+                      <img alt="" src="3/info-circle-white_8.svg"/>
+                    </picture>
+                  </div>
+                </header>
+                <div class="tile__see-details">
+                  <button class="button">
+Vedi dettagli                  </button>
+                </div>
+              </div>
+              <div class="tile--with-detail__detailed">
+                <div class="close-tile-detail">
+                  <svg>
+                    <use xlink:href="/assets/img/sprite.svg#arrow-right-icon"/>
+                  </svg>
+                </div>
+                <div class="tile--with-detail__detailed--group">
+                  <div class="tile-detail__title">
+                    <span>
+Cabina interna                      <a target="_blank" class="tile-detail__360" originalhref="http://virtual-tours.msccruises.com/MSC-Divina/en-gb/index.html?sc=scene_inside">
+Virtual Tour 360°                      </a>
+                    </span>
+                    <div class="tile-detail__title--right">
+                      <svg>
+                        <use xlink:href="/assets/img/sprite.svg#close-icon"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="owl-carousel owl-theme">
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_interior_09_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=633FEB59A63114FE9730C6E2F346E53FFDA17A9A" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di_interior_09.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=A808B0C55B3EA532D41EBDBF78DED6D28823A0A3" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_interior_09_1.jpg"/>
+                    </picture>
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_interior_09_2d_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=D1FFC6AC83873A951C29B43C93786049C2402A06" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/2d/di_interior_09_2d.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=46808466545F5D9BAE00A1AD224F1DE68CACAF17" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di_interior_09_2d.jpg"/>
+                    </picture>
+                  </div>
+                  <div class="tile-detail__text">
+                    <ul>
+                      <li>
+Comodo letto matrimoniale o letti singoli (su richiesta)                      </li>
+                      <li>
+Rilassante poltrona                      </li>
+                      <li>
+TV interattiva, telefono, cassaforte, minibar                      </li>
+                      <li>
+Bagno con doccia, zona toilette con asciugacapelli                      </li>
+                      <li>
+Superficie ca. da 13 a 16 mq*                      </li>
+                    </ul>
+                    <br/>
+Scegli l'esperienza e i vantaggi esclusivi che più preferisci!                    <br/>
+Esperienze disponibili: Bella e Fantastica                    <br/>
+                    <br/>
+                    <em>
+                      <span style="font-size: 12px;">
+* Questa gamma di dimensioni comprende sia cabine standard che cabine per ospiti con disabilità o mobilità ridotta, che sono più grandi.                        <br/>
+Dimensioni, disposizione e arredamento possono variare rispetto a quelli indicati (nella stessa categoria di cabina)                        <br/>
+Le immagini sono solo rappresentative.                      </span>
+                    </em>
+                    <p>
+                     </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tile tile--with-detail">
+              <div class="tile--with-detail--block">
+                <picture>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di-ada-suite_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=343BFDE13AF2544A4CE0D615F784CAD11010F4D8" media="(max-width: 40em)" alt="MSC Divina, ADA Suite | MSC Cruises" title="MSC Divina, ADA Suite | MSC Cruises"/>
+                  <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/tile-image/di-ada-suite.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=695320FBE3E8D8719C4A73FEE62381D79B8A6625" media="(max-width: 60em)" alt="MSC Divina, ADA Suite | MSC Cruises" title="MSC Divina, ADA Suite | MSC Cruises"/>
+                  <img alt="MSC Divina, ADA Suite | MSC Cruises" title="MSC Divina, ADA Suite | MSC Cruises" src="3/di-ada-suite.jpg"/>
+                </picture>
+                <header>
+                  <div class="tile__title">
+Yacht Club Disabled Access Suite                  </div>
+                  <div class="tile__see-details">
+                    <button class="button">
+Vedi dettagli                    </button>
+                    <picture class="info-circle">
+                      <img alt="" src="3/info-circle-white_9.svg"/>
+                    </picture>
+                  </div>
+                </header>
+                <div class="tile__see-details">
+                  <button class="button">
+Vedi dettagli                  </button>
+                </div>
+              </div>
+              <div class="tile--with-detail__detailed">
+                <div class="close-tile-detail">
+                  <svg>
+                    <use xlink:href="/assets/img/sprite.svg#arrow-right-icon"/>
+                  </svg>
+                </div>
+                <div class="tile--with-detail__detailed--group">
+                  <div class="tile-detail__title">
+                    <span>
+Yacht Club Disabled Access Suite                    </span>
+                    <div class="tile-detail__title--right">
+                      <svg>
+                        <use xlink:href="/assets/img/sprite.svg#close-icon"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="owl-carousel owl-theme">
+                    <picture>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di-ada-suite_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mw=400&amp;thn=0&amp;mediamode=mobile&amp;hash=F1E0F76BD2568ECE14246468E2E0F15689F2DC84" media="(max-width: 40em)" alt="" title=""/>
+                      <source srcset="/-/media/global-contents/ships/fleet/divina/cabins/expandible/di-ada-suite.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=466&amp;mw=650&amp;thn=0&amp;mediamode=desktop&amp;hash=8D81104C9BBF0C21358C4A95B924DB56593EC322" media="(max-width: 60em)" alt="" title=""/>
+                      <img alt="" title="" src="3/di-ada-suite_1.jpg"/>
+                    </picture>
+                  </div>
+                  <div class="tile-detail__text">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button-container text-center hidden-on-mobile">
+            <button v-on:click="showAllTile" type="button" class="button button--cta">
+Vedi tutte le cabine            </button>
+          </div>
+        </div>
+      </section>
+      <section class="" id="">
+        <h2 class="section-title">
+INTRATTENIMENTO        </h2>
+        <span class="editorial-text withTick-orange">
+MSC Divina offre numerose attività di intrattenimento sia per il giorno, sia per la sera. Oltre al lussuoso teatro, all'elegante casinò e alla raffinata galleria d'arte, vi sono strutture altamente tecnologiche come il cyber-café, una sala videogiochi e un simulatore di Formula 1 di dimensioni reali.        </span>
+        <div class="tile-container">
+          <a class="tile tile" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="MSC Divina" data-tracking-action="click" data-tracking-label="Casino Veneziano" data-tracking-value="0" data-tracking-noninteraction="" originalhref="javascript:;">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet/divina/entertainment/di_entertainment_theatre_pantheon_01.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;thn=0&amp;mediamode=mobile&amp;hash=13B61A7AFC14924FD0F7DA9DADBEF6B9CAECE06D" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet/divina/entertainment/di_entertainment_theatre_pantheon_01.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;thn=0&amp;mediamode=desktop&amp;hash=13B61A7AFC14924FD0F7DA9DADBEF6B9CAECE06D" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="3/di_entertainment_theatre_panth.jpg"/>
+            </picture>
+            <header>
+              <div class="tile__overtitle">
+              </div>
+              <div class="tile__title">
+Teatro Pantheon              </div>
+            </header>
+          </a>
+          <a class="tile tile" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="MSC Divina" data-tracking-action="click" data-tracking-label="f1 Simulator" data-tracking-value="0" data-tracking-noninteraction="" originalhref="javascript:;">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet/divina/entertainment/di_entertainment_casino_veneziano_02.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;thn=0&amp;mediamode=mobile&amp;hash=8A27622F78426E9CC139EB4EA002E53CFC4BEB17" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet/divina/entertainment/di_entertainment_casino_veneziano_02.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;thn=0&amp;mediamode=desktop&amp;hash=8A27622F78426E9CC139EB4EA002E53CFC4BEB17" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="3/di_entertainment_casino_venezi.jpg"/>
+            </picture>
+            <header>
+              <div class="tile__overtitle">
+              </div>
+              <div class="tile__title">
+                <p>
+Casinò Veneziano                </p>
+              </div>
+            </header>
+          </a>
+          <a class="tile tile" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="MSC Divina" data-tracking-action="click" data-tracking-label="Theatre Pantheon" data-tracking-value="0" data-tracking-noninteraction="" originalhref="javascript:;">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet/divina/entertainment/di_entertainment_f1_simulator_03.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;thn=0&amp;mediamode=mobile&amp;hash=4CF45D722E7163059BD64D9667C89A18EA8D4B98" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet/divina/entertainment/di_entertainment_f1_simulator_03.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;thn=0&amp;mediamode=desktop&amp;hash=4CF45D722E7163059BD64D9667C89A18EA8D4B98" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="3/di_entertainment_f1_simulator_.jpg"/>
+            </picture>
+            <header>
+              <div class="tile__overtitle">
+              </div>
+              <div class="tile__title">
+Simulatore F1               </div>
+            </header>
+          </a>
+          <a class="tile tile" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="MSC Divina" data-tracking-action="click" data-tracking-label="Virtual World" data-tracking-value="0" data-tracking-noninteraction="" originalhref="javascript:;">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet/divina/entertainment/di_entertainment_cybercafe_04.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;thn=0&amp;mediamode=mobile&amp;hash=5EC8B1712C856D4DAD52E6F4FA1AED9CA9F3E6DD" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet/divina/entertainment/di_entertainment_cybercafe_04.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;thn=0&amp;mediamode=desktop&amp;hash=5EC8B1712C856D4DAD52E6F4FA1AED9CA9F3E6DD" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="3/di_entertainment_cybercafe_04..jpg"/>
+            </picture>
+            <header>
+              <div class="tile__overtitle">
+              </div>
+              <div class="tile__title">
+Cyber Café              </div>
+            </header>
+          </a>
+          <a class="tile tile" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="MSC Divina" data-tracking-action="click" data-tracking-label="Galleria DArte" data-tracking-value="0" data-tracking-noninteraction="" originalhref="javascript:;">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet/divina/entertainment/di_entertainment_virtual_world_05.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;thn=0&amp;mediamode=mobile&amp;hash=F49108E5F5C3643E24E6539430B973135AF2508E" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet/divina/entertainment/di_entertainment_virtual_world_05.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;thn=0&amp;mediamode=desktop&amp;hash=F49108E5F5C3643E24E6539430B973135AF2508E" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="3/di_entertainment_virtual_world.jpg"/>
+            </picture>
+            <header>
+              <div class="tile__overtitle">
+              </div>
+              <div class="tile__title">
+Virtual World              </div>
+            </header>
+          </a>
+          <a class="tile tile" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="MSC Divina" data-tracking-action="click" data-tracking-label="Cibercafe" data-tracking-value="0" data-tracking-noninteraction="" originalhref="javascript:;">
+            <picture>
+              <source srcset="/-/media/global-contents/ships/fleet/divina/entertainment/di_entertainment_galleria_arte_06.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;thn=0&amp;mediamode=mobile&amp;hash=43DCD16CC663D98C4CBD59F741994B04A042C289" media="(max-width: 40em)" alt="" title=""/>
+              <source srcset="/-/media/global-contents/ships/fleet/divina/entertainment/di_entertainment_galleria_arte_06.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;thn=0&amp;mediamode=desktop&amp;hash=43DCD16CC663D98C4CBD59F741994B04A042C289" media="(max-width: 60em)" alt="" title=""/>
+              <img alt="" title="" src="3/di_entertainment_galleria_arte.jpg"/>
+            </picture>
+            <header>
+              <div class="tile__overtitle">
+              </div>
+              <div class="tile__title">
+Galleria D'Arte              </div>
+            </header>
+          </a>
+        </div>
+      </section>
+      <section class="section--full-width ">
+        <h2 class="section-title">
+RISTORANTI E BUFFET        </h2>
+        <span>
+Una varietà di diversi locali per la ristorazione serba qualcosa di speciale per tutti i gusti, come la cucina fusion del Galaxy Restaurant.          <br/>
+Gli ospiti MSC Yatch Club potranno usufruire dell'esclusivo ristorante panoramico Villa Rossa.          <br/>
+        </span>
+      </section>
+      <section class="section--full-width ">
+        <div class="editorial-image-text editorial-image-text--dark-blue">
+          <h2 class="hidden-on-desktop">
+          </h2>
+          <div class="owl-carousel owl-theme">
+            <div class="editorial__item">
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/di_restaurant_and_bar_villa_rossa_02_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=3D7DFD6D6BFE866D5E76EB1F2B7AC576C7E06401" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/di_restaurant_and_bar_villa_rossa_02.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=77C20494F29F607297621461FAE687DEB089A5F4" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/di_restaurant_and_bar_villa_ro.jpg"/>
+              </picture>
+              <div class="editorial__item__description">
+                <h3>
+Villa Rossa                </h3>
+                <div class="editorial-text--readmore">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="editorial__item">
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/butcherscut-speciality-restaurants_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=8A7E2F595A372FC2D45E797F06AE197DCA5CB550" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/butcherscut-speciality-restaurants.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=7AF80A8ECAA6A7C5C1412DF377E1202C8A3E205B" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/butcherscut-speciality-restaur.jpg"/>
+              </picture>
+              <div class="editorial__item__description">
+                <h3>
+Butcher's Cut                </h3>
+                <div class="editorial-text--readmore">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="editorial__item">
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/di_restaurant_and_bar_cantina_di_bacco_04_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=A4387ECAA29B58D1BA5203B861E324E6D511A73C" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/5-la-cantina-di-bacco.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=18BD3AE55B52D68BBDF69DAB9372709DADC97B4B" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/5-la-cantina-di-bacco.jpg"/>
+              </picture>
+              <div class="editorial__item__description">
+                <h3>
+                  <span style="letter-spacing: -0.45px;">
+La Cantina di Bacco                  </span>
+                </h3>
+                <div class="editorial-text--readmore">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="editorial__item">
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/di_restaurant_and_bar_black_crab_06_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=DE62DC7F7D584726E359A1FE4828560526B19DC0" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/7-black-crab-restaurant.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=AC9034CE0F07E1BE21FB584C4B3C67F11499D29C" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/7-black-crab-restaurant.jpg"/>
+              </picture>
+              <div class="editorial__item__description">
+                <h3>
+The Black Crab                </h3>
+                <div class="editorial-text--readmore">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="editorial__item">
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/di_restaurant_and_bar_calumet_buffet_07_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=BFFE82AA2F75E1BF99C5FC7AAF6873B64E831F3D" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/8-calumet-buffet.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=4856CCFDEFBE3C2A7A87163A1FC9601B50F86F07" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/8-calumet-buffet.jpg"/>
+              </picture>
+              <div class="editorial__item__description">
+                <h3>
+                  <span style="letter-spacing: -0.45px;">
+Calumet Buffet                  </span>
+                </h3>
+                <div class="editorial-text--readmore">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="editorial__item">
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/di_restaurant_and_bar_galaxy_restaurant_08_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=83D5739ABA8D794401482D3AF90143AD048C0C95" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/9-galaxy-restaurant.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=143093F80BB4DE6EBB31543C7D4427CFC99B1572" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/9-galaxy-restaurant.jpg"/>
+              </picture>
+              <div class="editorial__item__description">
+                <h3>
+                  <span style="letter-spacing: -0.45px;">
+Galaxy Restaurant                  </span>
+                </h3>
+                <div class="editorial-text--readmore">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--full-width ">
+        <h2 class="section-title">
+BAR E LOUNGE        </h2>
+        <span>
+Scopri la vasta gamma di bar e lounge a bordo, che offrono rinfreschi e relax nell'atmosfera perfetta per qualsiasi occasione. Inoltre, gli ospiti MSC Yacht Club potranno godersi la riservatezza dei locali raffinati Top Sail Lounge e The One Bar.        </span>
+        <div class="editorial-image-text editorial-image-text--dark-blue">
+          <h2 class="hidden-on-desktop">
+          </h2>
+          <div class="owl-carousel owl-theme">
+            <div class="editorial__item">
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/blackwhite_lounge_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=C0102ADF6EAC5F3A5744B5DEE584201E11BA4B7C" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/black-white-lounge.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=DCAA17D62B78BD9E307A86A19794B659A668A0FB" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/black-white-lounge.jpg"/>
+              </picture>
+              <div class="editorial__item__description">
+                <h3>
+Black and white lounge                  <br/>
+                </h3>
+                <div class="editorial-text--readmore">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="editorial__item">
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/di_restaurant_and_bar_silver_lounge_12_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=C12139CC576AA1F9962FE28977E5F6B480DD9957" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/02-silver-lounge.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=618CA1F5CDFD086E5B75833086C39D720D9A8E29" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/02-silver-lounge.jpg"/>
+              </picture>
+              <div class="editorial__item__description">
+                <h3>
+Silver Lounge Bar                  <br/>
+                </h3>
+                <div class="editorial-text--readmore">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="editorial__item">
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/di_restaurant_and_bar_divina_bar_13_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=CAB2889F99DEED357C2CFB896CD27D43530A42A1" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/03-msc-divina-bar.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=1FF6A9B04272A71290830FBFFAAC7B6F40613523" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/03-msc-divina-bar.jpg"/>
+              </picture>
+              <div class="editorial__item__description">
+                <h3>
+MSC Divina Bar                  <br/>
+                </h3>
+                <div class="editorial-text--readmore">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="editorial__item">
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/di_restaurant_and_bar_caffe_italia_14_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=95497B4A4E6095627C50F1C2801D7D91FEDF6063" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/04-caff-italia.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=2387BD61A713D9A0D256AD382A3E76ED953A3A65" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/04-caff-italia.jpg"/>
+              </picture>
+              <div class="editorial__item__description">
+                <h3>
+Caffé Italia                  <br/>
+                </h3>
+                <div class="editorial-text--readmore">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="editorial__item">
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/di_restaurant_and_bar_sports_bar_bowling_15_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=387D340B2012413E4BBE4533BD9BB4C7B42A0207" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/di_restaurant_and_bar_sports_bar_bowling_15.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=C7B07ED6F7C945AB591AE8C87094FAC9EE5E5999" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/di_restaurant_and_bar_sports_b.jpg"/>
+              </picture>
+              <div class="editorial__item__description">
+                <h3>
+                  <span style="letter-spacing: -0.45px;">
+Sports Bar Bowling                  </span>
+                </h3>
+                <div class="editorial-text--readmore">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="editorial__item">
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/di_restaurant_and_bar_golden_jazz_16_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=3112A4678638B88462C9CE7497D6A3E033F48784" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/06-golden-jazz-bar.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=966E95CFD3BE5839CBD019A0EF5B05031016C271" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/06-golden-jazz-bar.jpg"/>
+              </picture>
+              <div class="editorial__item__description">
+                <h3>
+Golden Jazz Bar                  <br/>
+                </h3>
+                <div class="editorial-text--readmore">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="editorial__item">
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/di_restaurant_and_bar_cigar_lounge_17_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=71CEABE543288A84DA0467A12A4A62005D9A753F" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/07-the-cigar-lounge.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=2895DA099911C60D1C6C7F6AC15B665FDA086563" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/07-the-cigar-lounge.jpg"/>
+              </picture>
+              <div class="editorial__item__description">
+                <h3>
+The Cigar Lounge                  <br/>
+                </h3>
+                <div class="editorial-text--readmore">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="editorial__item">
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/di_restaurant_and_bar_sirene_bar_18_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=91B764CF5F0DFCDBF6AEA647F124CEF36F68AFC4" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/08-le-sirene-bar.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=08AA10727F6073A92BADF5914E53BE4AD552C515" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/08-le-sirene-bar.jpg"/>
+              </picture>
+              <div class="editorial__item__description">
+                <h3>
+Le Sirene Bar                  <br/>
+                </h3>
+                <div class="editorial-text--readmore">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="editorial__item">
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/di_restaurant_and_bar_one_bar_09_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=7261AAB2A7D3C8241D66B8D2C75A1464C8C2A78B" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/09-the-one-bar.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=4224E27FA5D54C948BB6FCCA2AE0C797DC9785A9" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/09-the-one-bar.jpg"/>
+              </picture>
+              <div class="editorial__item__description">
+                <h3>
+The One Bar                </h3>
+                <div class="editorial-text--readmore">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="editorial__item">
+              <picture>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/di_restaurant_and_bar_top_sail_lounge_10_mobile.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=237&amp;mw=320&amp;thn=0&amp;mediamode=mobile&amp;hash=C0345E8358344AB15F59899194C9BE0994FCFCC0" media="(max-width: 40em)" alt="" title=""/>
+                <source srcset="/-/media/global-contents/ships/fleet/divina/restaurants-and-bars/10-top-sail-lounge.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=600&amp;mw=960&amp;thn=0&amp;mediamode=desktop&amp;hash=945E3EAD23222591F4761B1EE4986D43BC25AC3F" media="(max-width: 60em)" alt="" title=""/>
+                <img alt="" title="" src="3/10-top-sail-lounge.jpg"/>
+              </picture>
+              <div class="editorial__item__description">
+                <h3>
+Top Sail lounge                  <br/>
+                </h3>
+                <div class="editorial-text--readmore">
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ship-deckplan__section" id="">
+        <h2 class="section-title">
+PIANO NAVE        </h2>
+        <span class="editorial-text withTick-orange">
+Usa il piano nave per selezionare la tua cabina ideale. Il piano nave ti consente di individuare le posizioni, mentre i colori distinguono la categroia della cabina.        </span>
+        <div class="ship-deckplan--wrp" id="ship-deckplan--wrp" v-on:mouseup="OnMouseUp($event)">
+          <div class="ship-deckplan--wrp--cicle">
+            <ul style="">
+              <li v-on:click="choseYear(0)" v-bind:class="{ 'active' : activeYear === 0}">
+2019              </li>
+              <li v-on:click="choseYear(1)" v-bind:class="{ 'active' : activeYear === 1}">
+A partire dall'estate 2020              </li>
+            </ul>
+            <div class="ship-deckplan--wrp--cicle__detail" v-bind:class="{ 'active' : activeYear === 0 }">
+              <ul class="ship-deckplan--wrp__numbers-list carousel-deckplan">
+                <li v-bind:class="{ 'active' : activeIndex === 0 }" v-on:click="choseNumber(5, 0)">
+                  <span>
+5.                  </span>
+Saturno                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 1 }" v-on:click="choseNumber(6, 1)">
+                  <span>
+6.                  </span>
+Zeus                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 2 }" v-on:click="choseNumber(7, 2)">
+                  <span>
+7.                  </span>
+Apollo                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 3 }" v-on:click="choseNumber(8, 3)">
+                  <span>
+8.                  </span>
+Artemide                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 4 }" v-on:click="choseNumber(9, 4)">
+                  <span>
+9.                  </span>
+Minerva                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 5 }" v-on:click="choseNumber(10, 5)">
+                  <span>
+10.                  </span>
+Giunone                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 6 }" v-on:click="choseNumber(11, 6)">
+                  <span>
+11.                  </span>
+Iride                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 7 }" v-on:click="choseNumber(12, 7)">
+                  <span>
+12.                  </span>
+Aurora                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 8 }" v-on:click="choseNumber(13, 8)">
+                  <span>
+13.                  </span>
+Cupido                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 9 }" v-on:click="choseNumber(14, 9)">
+                  <span>
+14.                  </span>
+Afrodite                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 10 }" v-on:click="choseNumber(15, 10)">
+                  <span>
+15.                  </span>
+Mercurio                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 11 }" v-on:click="choseNumber(16, 11)">
+                  <span>
+16.                  </span>
+Urano                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 12 }" v-on:click="choseNumber(18, 12)">
+                  <span>
+18.                  </span>
+Elios                </li>
+              </ul>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 0 }">
+                <img alt="" width="2232" title="" src="3/di_05_saturno.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 0 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_05_saturno_1.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 1 }">
+                <img alt="" width="2232" title="" src="3/di_06_zeus.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 1 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_06_zeus_1.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 2 }">
+                <img alt="" width="2232" title="" src="3/di_07_apollo.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 2 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_07_apollo_1.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 3 }">
+                <img alt="" width="2232" title="" src="3/di_08_artemide_19s.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 3 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_08_artemide_19s_1.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 4 }">
+                <img alt="" width="2232" title="" src="3/di_09_minerva.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 4 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_09_minerva_1.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 5 }">
+                <img alt="" width="2232" title="" src="3/di_10_giunone.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 5 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_10_giunone_1.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 6 }">
+                <img alt="" width="2232" title="" src="3/di_11_iride.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 6 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_11_iride_1.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 7 }">
+                <img alt="" width="2232" title="" src="3/di_12_aurora_19s.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 7 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_12_aurora_19s_1.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 8 }">
+                <img alt="" width="2232" title="" src="3/di_13_cupido_19s.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 8 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_13_cupido_19s_1.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 9 }">
+                <img alt="" width="2232" title="" src="3/di_14_afrodite.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 9 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_14_afrodite_1.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 10 }">
+                <img alt="" width="2232" title="" src="3/di_15_mercurio.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 10 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_15_mercurio_1.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 11 }">
+                <img alt="" width="2232" title="" src="3/di_16_urano.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 11 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_16_urano_1.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 12 }">
+                <img alt="" width="2232" title="" src="3/di_18_elios.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 12 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_18_elios_1.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <div class="ship-deckplan--wrp--categories">
+                <h3>
+Categorie                </h3>
+                <div class="categories--column">
+                  <div class="categories--column__item">
+                    <div class=" categories--column__item-title">
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/bella.png?bc=transparent&amp;as=0&amp;dmc=0&amp;thn=0&amp;mediamode=mobile&amp;hash=E6E25EE3C9E5440D9D1145D539222E6CF61A3109" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/bella.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=40&amp;mw=51&amp;thn=0&amp;mediamode=desktop&amp;hash=98D3DCD8D8589E423A270AE534D23B0D18149C0A" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/bella.png"/>
+                      </picture>
+Esperienza                      <br/>
+Bella                    </div>
+                    <ul>
+                      <li>
+                        <span style="background-color: #b9d8ec">
+                        </span>
+Cabina interna                      </li>
+                      <li>
+                        <span style="background-color: #00a7e4">
+                        </span>
+Cabina vista mare                      </li>
+                      <li>
+                        <span style="background-color: #004889">
+                        </span>
+Cabina con balcone                      </li>
+                    </ul>
+                  </div>
+                  <div class="categories--column__item">
+                    <div class=" categories--column__item-title">
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/fantastica.png?bc=transparent&amp;as=0&amp;dmc=0&amp;thn=0&amp;mediamode=mobile&amp;hash=FFBFDE2EFCA2CC5D55E95FBB81FA84023F0A372C" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/fantastica.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=40&amp;mw=51&amp;thn=0&amp;mediamode=desktop&amp;hash=DD70A134176BC37A3A29D1806E5149992265E00D" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/fantastica.png"/>
+                      </picture>
+Esperienza                      <br/>
+Fantastica                    </div>
+                    <ul>
+                      <li>
+                        <span style="background-color: #bce08f">
+                        </span>
+Cabina interna                      </li>
+                      <li>
+                        <span style="background-color: #27ce00">
+                        </span>
+Cabina vista mare                      </li>
+                      <li>
+                        <span style="background-color: #009a2c">
+                        </span>
+Cabina con balcone                      </li>
+                      <li>
+                        <span style="background-color: #006610">
+                        </span>
+Cabine per famiglie*                      </li>
+                    </ul>
+                  </div>
+                  <div class="categories--column__item">
+                    <div class=" categories--column__item-title">
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/aurea.png?bc=transparent&amp;as=0&amp;dmc=0&amp;thn=0&amp;mediamode=mobile&amp;hash=F77D7533EEA8611B13F203DE5AEF3148FAFC4040" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/aurea.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=40&amp;mw=51&amp;thn=0&amp;mediamode=desktop&amp;hash=F2F06EBA113DFD34DEC776199F23282CDBF8F473" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/aurea.png"/>
+                      </picture>
+Esperienza                      <br/>
+Aurea                      <br/>
+                    </div>
+                    <ul>
+                      <li>
+                        <span style="background-color: #e47d00">
+                        </span>
+Suite                      </li>
+                      <li>
+                        <span style="background-color: #FDB94A">
+                        </span>
+Suite con vetrata panoramica non apribile                        <br/>
+                      </li>
+                      <li>
+                        <span style="background-color: #ffd180">
+                        </span>
+Cabina con balcone                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="ship-deckplan--wrp--key">
+                  <h3>
+Legenda                  </h3>
+                  <ul>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/sofa-bed.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=5590241744ECF360D8110E1A7B8FCB16E9656A70" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/sofa-bed.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=37C87C1BD268EA342680924DFBCD490B1F6281B8" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/sofa-bed.png"/>
+                      </picture>
+                      <span>
+Divano letto                      </span>
+                    </li>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/double-sofa-bed.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=A02566EAF7E77BC57AE65AA76B1B8D78DC8B11C1" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/double-sofa-bed.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=B5C68B6A4822246292F5A60ED527DDBF5E5274E4" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/double-sofa-bed.png"/>
+                      </picture>
+                      <span>
+Divano letto matrimoniale                      </span>
+                    </li>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/3rd-and-4th-beds-are-bunks.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=FE3AC1F157D30016DA58B035BD2CB21579C7A9FA" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/3rd-and-4th-beds-are-bunks.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=0BBB02836AAD352047EA569C8F04653034297BB9" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/3rd-and-4th-beds-are-bunks.png"/>
+                      </picture>
+                      <span>
+Il 3 ° e 4 °letto sono a castello                        <br/>
+                      </span>
+                    </li>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/3rd-bed-is-a-bunk-bed.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=1FD577E16E693063F2BF53210517C2DFF26BACA9" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/3rd-bed-is-a-bunk-bed.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=616614AF1FACFC5F7044ABF2CE915A18AB87D0CF" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/3rd-bed-is-a-bunk-bed.png"/>
+                      </picture>
+                      <span>
+Il 3 ° letto è a castello                        <br/>
+                      </span>
+                    </li>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/restricted_view.jpg?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=A6CA09C0DE1C18FFC4CEEC14D3AEB8B2A9BE5D87" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/restricted_view.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=A1BDCF38DF960445EEDCC5626F6D00E9F30DF6F0" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/restricted_view.jpg"/>
+                      </picture>
+                      <span>
+Cabina con vista parzialmente ostruita                      </span>
+                    </li>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/juliet_balcony.jpg?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=ED81B0D81013C0B83A50C7EF1107357CE9FC8C0E" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/juliet_balcony.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=777B37319E698E921FA14F9A0442AA86B8A5E335" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/juliet_balcony.jpg"/>
+                      </picture>
+                      <span>
+Balcone alla francese (non calpestabile)                      </span>
+                    </li>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/cabin-for-people-with-disabilities.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=848BADF973FF0BD9F727A8566C9B8C9985DB1D70" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/cabin-for-people-with-disabilities.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=D575C1E6CE183B722F5C2B0C0D72888C8325E9C0" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/cabin-for-people-with-disabili.png"/>
+                      </picture>
+                      <span>
+Cabina per ospiti con disabilità o con mobilità ridotta                      </span>
+                    </li>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/connecting-cabins.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=B7E8A8EF1E6981B1D92AA0CBCA4A58D48700F14C" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/connecting-cabins.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=988862229AFDC9D65B90A344BA2BDA9549568FFF" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/connecting-cabins.png"/>
+                      </picture>
+                      <span>
+Cabine comunicanti                      </span>
+                    </li>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/cabin-with-panoramic-sealed-window.jpg?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=6E99CA3891CD86F8D1825DA29A2888ADCFF65E25" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/cabin-with-panoramic-sealed-window.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=262ABAF71BF4C8AABD95DE0FDD4591AE3A398D5E" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/cabin-with-panoramic-sealed-wi.jpg"/>
+                      </picture>
+                      <span>
+Cabina con vetrata panoramica non apribile                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="ship-deckplan--wrp--messages">
+                  <p>
+                  </p>
+                  <p>
+                    <img alt="Balcony with metal balustrade" style="color: #999999; height: 24px; width: 46px;" title="Balcony with metal balustrade" src="3/metal-balustrade_legend.jpg"/>
+                    <span>
+ Balcone con balaustra in acciaio                     </span>
+                    <img alt="Balcony with half-glass-half-metal balustrade" style="color: #999999; height: 24px; width: 46px;" title="Balcony with half-glass-half-metal balustrade" src="3/half-glass-half-metal-balustra.jpg"/>
+                     <span>
+Balcone con balaustra in acciaio o vetro                    </span>
+                  </p>
+                  <p>
+* La nave offre molte cabine familiari che sono composte dalla combinazione di 2 cabine comnunicanti                    <br/>
+? Tutte le cabine hanno un letto matrimoniale convertibile in due letti singoli                    <br/>
+? il 3 ° e 4 ° letto sono disponibili in tutte le categorie                    <br/>
+° Vetrata panoramica non apribile                  </p>
+                  <p>
+                   </p>
+                  <p>
+                    <em>
+Dati e descrizioni sono soggetti a variazioni e vanno pertanto verificate all'atto della prenotazione                    </em>
+                  </p>
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="ship-deckplan--wrp--cicle__detail" v-bind:class="{ 'active' : activeYear === 1 }">
+              <ul class="ship-deckplan--wrp__numbers-list carousel-deckplan">
+                <li v-bind:class="{ 'active' : activeIndex === 0 }" v-on:click="choseNumber(5, 0)">
+                  <span>
+5.                  </span>
+Saturno                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 1 }" v-on:click="choseNumber(6, 1)">
+                  <span>
+6.                  </span>
+Zeus                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 2 }" v-on:click="choseNumber(7, 2)">
+                  <span>
+7.                  </span>
+Apollo                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 3 }" v-on:click="choseNumber(8, 3)">
+                  <span>
+8.                  </span>
+Artemide                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 4 }" v-on:click="choseNumber(9, 4)">
+                  <span>
+9.                  </span>
+Minerva                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 5 }" v-on:click="choseNumber(10, 5)">
+                  <span>
+10.                  </span>
+Giunone                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 6 }" v-on:click="choseNumber(11, 6)">
+                  <span>
+11.                  </span>
+Iride                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 7 }" v-on:click="choseNumber(12, 7)">
+                  <span>
+12.                  </span>
+Aurora                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 8 }" v-on:click="choseNumber(13, 8)">
+                  <span>
+13.                  </span>
+Cupido                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 9 }" v-on:click="choseNumber(14, 9)">
+                  <span>
+14.                  </span>
+Afrodite                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 10 }" v-on:click="choseNumber(15, 10)">
+                  <span>
+15.                  </span>
+Mercurio                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 11 }" v-on:click="choseNumber(16, 11)">
+                  <span>
+16.                  </span>
+Urano                </li>
+                <li v-bind:class="{ 'active' : activeIndex === 12 }" v-on:click="choseNumber(18, 12)">
+                  <span>
+18.                  </span>
+Elios                </li>
+              </ul>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 0 }">
+                <img alt="" width="2232" title="" src="3/di_05_saturno_2.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 0 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_05_saturno_3.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 1 }">
+                <img alt="" width="2232" title="" src="3/di_06_zeus_2.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 1 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_06_zeus_3.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 2 }">
+                <img alt="" width="2232" title="" src="3/di_07_apollo_2.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 2 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_07_apollo_3.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 3 }">
+                <img alt="" width="2232" title="" src="3/di_08_artemide_19s_2.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 3 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_08_artemide_19s_3.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 4 }">
+                <img alt="" width="2232" title="" src="3/di_09_minerva_2.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 4 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_09_minerva_3.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 5 }">
+                <img alt="" width="2232" title="" src="3/di_10_giunone_2.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 5 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_10_giunone_3.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 6 }">
+                <img alt="" width="2232" title="" src="3/di_11_iride_2.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 6 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_11_iride_3.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 7 }">
+                <img alt="" width="2232" title="" src="3/di_12_aurora_19s_2.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 7 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_12_aurora_19s_3.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 8 }">
+                <img alt="" width="2232" title="" src="3/di_13_cupido_19s_2.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 8 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_13_cupido_19s_3.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 9 }">
+                <img alt="" width="2232" title="" src="3/di_14_afrodite_2.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 9 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_14_afrodite_3.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 10 }">
+                <img alt="" width="2232" title="" src="3/di_15_mercurio_2.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 10 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_15_mercurio_3.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 11 }">
+                <img alt="" width="2232" title="" src="3/di_16_urano_2.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 11 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_16_urano_3.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <picture class="ship-deckplan--wrp__small" v-bind:class="{ 'active' : activeIndex === 12 }">
+                <img alt="" width="2232" title="" src="3/di_18_elios_2.jpg" height="440"/>
+                <div class="lens" v-bind:style="{ left: leftPos }" v-on:mousedown="OnMouseDown($event)">
+                </div>
+              </picture>
+              <picture class="ship-deckplan--wrp__big ship-deckplan--wrp__big--show-L" v-bind:class="{ 'active' : activeIndex === 12 }">
+                <img v-bind:style="{ transform: transPos }" src="3/di_18_elios_3.jpg" alt="" width="2232" title="" height="440"/>
+              </picture>
+              <div class="ship-deckplan--wrp--categories">
+                <h3>
+Categorie                </h3>
+                <div class="categories--column">
+                  <div class="categories--column__item">
+                    <div class=" categories--column__item-title">
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/bella.png?bc=transparent&amp;as=0&amp;dmc=0&amp;thn=0&amp;mediamode=mobile&amp;hash=E6E25EE3C9E5440D9D1145D539222E6CF61A3109" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/bella.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=40&amp;mw=51&amp;thn=0&amp;mediamode=desktop&amp;hash=98D3DCD8D8589E423A270AE534D23B0D18149C0A" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/bella_1.png"/>
+                      </picture>
+Esperienza                      <br/>
+Bella                    </div>
+                    <ul>
+                      <li>
+                        <span style="background-color: #b9d8ec">
+                        </span>
+Cabina interna                      </li>
+                      <li>
+                        <span style="background-color: #00a7e4">
+                        </span>
+Cabina vista mare                      </li>
+                      <li>
+                        <span style="background-color: #004889">
+                        </span>
+Cabina con balcone                      </li>
+                    </ul>
+                  </div>
+                  <div class="categories--column__item">
+                    <div class=" categories--column__item-title">
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/fantastica.png?bc=transparent&amp;as=0&amp;dmc=0&amp;thn=0&amp;mediamode=mobile&amp;hash=FFBFDE2EFCA2CC5D55E95FBB81FA84023F0A372C" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/fantastica.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=40&amp;mw=51&amp;thn=0&amp;mediamode=desktop&amp;hash=DD70A134176BC37A3A29D1806E5149992265E00D" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/fantastica_1.png"/>
+                      </picture>
+Esperienza                      <br/>
+Fantastica                    </div>
+                    <ul>
+                      <li>
+                        <span style="background-color: #bce08f">
+                        </span>
+Cabina interna                      </li>
+                      <li>
+                        <span style="background-color: #27ce00">
+                        </span>
+Cabina vista mare                      </li>
+                      <li>
+                        <span style="background-color: #009a2c">
+                        </span>
+Cabina con balcone                      </li>
+                      <li>
+                        <span style="background-color: #006610">
+                        </span>
+Cabine per famiglie*                      </li>
+                    </ul>
+                  </div>
+                  <div class="categories--column__item">
+                    <div class=" categories--column__item-title">
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/aurea.png?bc=transparent&amp;as=0&amp;dmc=0&amp;thn=0&amp;mediamode=mobile&amp;hash=F77D7533EEA8611B13F203DE5AEF3148FAFC4040" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/aurea.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=40&amp;mw=51&amp;thn=0&amp;mediamode=desktop&amp;hash=F2F06EBA113DFD34DEC776199F23282CDBF8F473" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/aurea_1.png"/>
+                      </picture>
+Esperienza                      <br/>
+Aurea                      <br/>
+                    </div>
+                    <ul>
+                      <li>
+                        <span style="background-color: #e47d00">
+                        </span>
+Suite                      </li>
+                      <li>
+                        <span style="background-color: #FDB94A">
+                        </span>
+Suite con vetrata panoramica non apribile                        <br/>
+                      </li>
+                      <li>
+                        <span style="background-color: #ffd180">
+                        </span>
+Cabina con balcone                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="ship-deckplan--wrp--key">
+                  <h3>
+Legenda                  </h3>
+                  <ul>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/sofa-bed.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=5590241744ECF360D8110E1A7B8FCB16E9656A70" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/sofa-bed.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=37C87C1BD268EA342680924DFBCD490B1F6281B8" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/sofa-bed_1.png"/>
+                      </picture>
+                      <span>
+Divano letto                      </span>
+                    </li>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/double-sofa-bed.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=A02566EAF7E77BC57AE65AA76B1B8D78DC8B11C1" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/double-sofa-bed.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=B5C68B6A4822246292F5A60ED527DDBF5E5274E4" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/double-sofa-bed_1.png"/>
+                      </picture>
+                      <span>
+Divano letto matrimoniale                      </span>
+                    </li>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/3rd-and-4th-beds-are-bunks.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=FE3AC1F157D30016DA58B035BD2CB21579C7A9FA" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/3rd-and-4th-beds-are-bunks.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=0BBB02836AAD352047EA569C8F04653034297BB9" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/3rd-and-4th-beds-are-bunks_1.png"/>
+                      </picture>
+                      <span>
+Il 3 ° e 4 °letto sono a castello                        <br/>
+                      </span>
+                    </li>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/3rd-bed-is-a-bunk-bed.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=1FD577E16E693063F2BF53210517C2DFF26BACA9" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/3rd-bed-is-a-bunk-bed.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=616614AF1FACFC5F7044ABF2CE915A18AB87D0CF" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/3rd-bed-is-a-bunk-bed_1.png"/>
+                      </picture>
+                      <span>
+Il 3 ° letto è a castello                        <br/>
+                      </span>
+                    </li>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/restricted_view.jpg?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=A6CA09C0DE1C18FFC4CEEC14D3AEB8B2A9BE5D87" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/restricted_view.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=A1BDCF38DF960445EEDCC5626F6D00E9F30DF6F0" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/restricted_view_1.jpg"/>
+                      </picture>
+                      <span>
+Cabina con vista parzialmente ostruita                      </span>
+                    </li>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/juliet_balcony.jpg?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=ED81B0D81013C0B83A50C7EF1107357CE9FC8C0E" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/juliet_balcony.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=777B37319E698E921FA14F9A0442AA86B8A5E335" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/juliet_balcony_1.jpg"/>
+                      </picture>
+                      <span>
+Balcone alla francese (non calpestabile)                      </span>
+                    </li>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/cabin-for-people-with-disabilities.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=848BADF973FF0BD9F727A8566C9B8C9985DB1D70" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/cabin-for-people-with-disabilities.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=D575C1E6CE183B722F5C2B0C0D72888C8325E9C0" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/cabin-for-people-with-disabili_1.png"/>
+                      </picture>
+                      <span>
+Cabina per ospiti con disabilità o con mobilità ridotta                      </span>
+                    </li>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/connecting-cabins.png?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=B7E8A8EF1E6981B1D92AA0CBCA4A58D48700F14C" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/connecting-cabins.png?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=988862229AFDC9D65B90A344BA2BDA9549568FFF" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/connecting-cabins_1.png"/>
+                      </picture>
+                      <span>
+Cabine comunicanti                      </span>
+                    </li>
+                    <li>
+                      <picture>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/cabin-with-panoramic-sealed-window.jpg?bc=transparent&amp;as=0&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=mobile&amp;hash=6E99CA3891CD86F8D1825DA29A2888ADCFF65E25" media="(max-width: 40em)" alt="" title=""/>
+                        <source srcset="/-/media/global-contents/ships/fleet/deckplans_icons/cabin-with-panoramic-sealed-window.jpg?bc=transparent&amp;as=1&amp;dmc=0&amp;mh=42&amp;mw=42&amp;thn=0&amp;mediamode=desktop&amp;hash=262ABAF71BF4C8AABD95DE0FDD4591AE3A398D5E" media="(max-width: 60em)" alt="" title=""/>
+                        <img alt="" title="" src="3/cabin-with-panoramic-sealed-wi_1.jpg"/>
+                      </picture>
+                      <span>
+Cabina con vetrata panoramica non apribile                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="ship-deckplan--wrp--messages">
+                  <p>
+                  </p>
+                  <p>
+                    <img alt="Balcony with metal balustrade" style="color: #999999; height: 24px; width: 46px;" title="Balcony with metal balustrade" src="3/metal-balustrade_legend_1.jpg"/>
+                    <span>
+ Balcone con balaustra in acciaio                     </span>
+                    <img alt="Balcony with half-glass-half-metal balustrade" style="color: #999999; height: 24px; width: 46px;" title="Balcony with half-glass-half-metal balustrade" src="3/half-glass-half-metal-balustra_1.jpg"/>
+                     <span>
+Balcone con balaustra in acciaio o vetro                    </span>
+                  </p>
+                  <p>
+* La nave offre molte cabine familiari che sono composte dalla combinazione di 2 cabine comnunicanti                    <br/>
+? Tutte le cabine hanno un letto matrimoniale convertibile in due letti singoli                    <br/>
+? il 3 ° e 4 ° letto sono disponibili in tutte le categorie                    <br/>
+° Vetrata panoramica non apribile                  </p>
+                  <p>
+                   </p>
+                  <p>
+                    <em>
+Dati e descrizioni sono soggetti a variazioni e vanno pertanto verificate all'atto della prenotazione                    </em>
+                  </p>
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="" id="">
+        <h2 class="section-title">
+caratteristiche della nave        </h2>
+        <span class="editorial-text withTick-orange">
+        </span>
+        <div class="ship-specification">
+          <h3 class="hidden-on-mobile"/>
+          <ul class="ship-specification__list">
+            <li>
+              <strong class="">
+Stazza lorda:              </strong>
+              <span>
+139,072 tonnellate              </span>
+            </li>
+            <li>
+              <strong class="">
+Numero di passeggeri:              </strong>
+              <span>
+4,345              </span>
+            </li>
+            <li>
+              <strong class="">
+Membri dell'equipaggio:              </strong>
+              <span>
+1,388              </span>
+            </li>
+            <li>
+              <strong class="">
+Numero di cabine:              </strong>
+              <span>
+1.751, di cui 45 per ospiti con disabilità o mobilità ridotta              </span>
+            </li>
+            <li>
+              <strong class="">
+Ponti:              </strong>
+              <span>
+18 di cui 14 per gli ospiti              </span>
+            </li>
+            <li>
+              <strong class="">
+Velocità massima:              </strong>
+              <span>
+23.75 nodi              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="msc-footer">
+      <div class="footer__container">
+        <div class="footer__form">
+          <form action="" id="newsletterWidget">
+            <label for="your-email">
+Iscriviti alla Newsletter            </label>
+            <div>
+              <input type="email" name="" id="your-email" required="" placeholder="Inserisci il tuo indirizzo email"/>
+              <button type="submit" class="button " data-url="/forms/newsletter-registrazione" id="emailbutton" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="newsletter" data-tracking-action="subscribe" data-tracking-label="Homepage" data-tracking-value="0" data-tracking-noninteraction="">
+Invia              </button>
+            </div>
+          </form>
+          <form class="footer-url">
+            <label for="country-selection">
+CAMBIA PAESE            </label>
+            <div>
+              <select name="country-selection" id="country-selection" class="country-selection empty">
+                <option value="https://www.msccruceros.com.ar/es-ar/Homepage.aspx">
+Argentina | Español                </option>
+                <option value="https://www.msccruises.com.au/en-au/Homepage.aspx">
+Australia | English                </option>
+                <option value="https://www.msckreuzfahrten.at/de-at/Homepage.aspx">
+Austria | Deutsch                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Singapore">
+Bangladesh | English                </option>
+                <option value="https://www.msccruceros.cl/es-cl/Homepage.aspx">
+Bolivia | Español                </option>
+                <option value="https://www.msccruzeiros.com.br/pt-br/Homepage.aspx">
+Brazil | Português                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Bulgaria">
+Bulgaria | English                </option>
+                <option value="https://www.msccruisesusa.com/en-us/Homepage.aspx?select=Canada">
+Canada | English                </option>
+                <option value="https://www.msccruceros.cl/es-cl/Homepage.aspx">
+Chile | Español                </option>
+                <option value="https://www.msccruises.com.cn/">
+China | ??                </option>
+                <option value="https://www.msccruceros.cl/es-cl/Homepage.aspx">
+Colombia | Español                </option>
+                <option value="https://www.msckrstarenja.com/hr-hr/Homepage.aspx">
+Croatia | Hrvatski                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Cyprus">
+Cyprus | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Czech">
+Czech Republic | English                </option>
+                <option value="https://www.msccruises.dk/da-dk/Homepage.aspx">
+Denmark | Dansk                </option>
+                <option value="https://www.msccruisesusa.com/en-us/Homepage.aspx?select=Dominican">
+Dominican Republic | English                </option>
+                <option value="https://www.msccruises.com/en-gl/homepage.aspx">
+Egypt | English                </option>
+                <option value="https://www.msccruises.fi">
+Finland | English                </option>
+                <option value="https://www.msccruises.be/nl-be/Homepage.aspx">
+Belgium | Vlaams                </option>
+                <option value="https://www.msccroisieres.fr/fr-fr/Homepage.aspx">
+France | Français                </option>
+                <option value="https://www.msccroisieres.be/fr-be/Homepage.aspx">
+Belgium | Français                </option>
+                <option value="https://www.msccroisieres.ch/fr-ch/Homepage.aspx">
+Switzerland | Français                </option>
+                <option value="https://www.msckrstarenja.com/hr-hr/Homepage.aspx">
+FYR of Macedonia | Hrvatski                </option>
+                <option value="https://www.msccruises.co.uk">
+United Kingdom | English                </option>
+                <option value="https://www.msckreuzfahrten.ch/de-ch/Homepage.aspx">
+Switzerland | Detusch                </option>
+                <option value="https://www.msc-kreuzfahrten.de/de-de/Homepage.aspx">
+Germany | Deutsch                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Greece">
+Greece | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Hungary">
+Hungary | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=India">
+India | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Indonesia">
+Indonesia | English                </option>
+                <option value="https://www.msccruises.ie/en-ie/Homepage.aspx">
+Ireland | English                </option>
+                <option value="https://www.msccruises.co.il/he-il/Homepage.aspx">
+Israel | English                </option>
+                <option value="https://www.msccrociere.it/" selected="">
+Italy | Italiano                </option>
+                <option value="https://www.msccruises.jp/jp-jp/Homepage.aspx">
+Japan | ???                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Jordan">
+Jordan | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Latvia">
+Latvia | English                </option>
+                <option value="https://www.msccruises.com.lb/lb_en/Homepage.aspx">
+Lebanon | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Lithuania">
+Lithuania | English                </option>
+                <option value="https://www.msccroisieres.be/fr-be/Homepage.aspx">
+Luxembourg | Français                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Malaysia">
+Malaysia | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Malta">
+Malta | English                </option>
+                <option value="https://www.msccruceros.com.mx/es-mx/Homepage.aspx">
+Mexico | Español                </option>
+                <option value="https://www.msckrstarenja.com/hr-hr/Homepage.aspx">
+Montenegro | Hrvatski                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Morocco">
+Morocco | English                </option>
+                <option value="https://www.msccruises.nl/nl-nl/Homepage.aspx">
+Netherlands | Nederlands                </option>
+                <option value="https://www.msccruises.co.nz/en-nz/Homepage.aspx">
+New Zealand | English                </option>
+                <option value="https://www.msccruises.no/nb-no/Homepage.aspx">
+Norway | Norsk                </option>
+                <option value="https://www.msccruceros.cl/es-cl/Homepage.aspx">
+Panama | Español                </option>
+                <option value="https://www.msccruceros.cl/es-cl/Homepage.aspx">
+Paraguay | Español                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Philippines">
+Philippines | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Poland">
+Poland | English                </option>
+                <option value="https://www.msccruzeiros.pt/pt-pt/Homepage.aspx">
+Portugal | Português                </option>
+                <option value="https://www.msccruisesusa.com/en-us/Homepage.aspx?select=PuertoRico">
+Puerto Rico | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Korea">
+Republic of Korea | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Romania">
+Romania | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Russian-Federation">
+Russian Federation | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=SaudiArabia">
+Saudi Arabia | English                </option>
+                <option value="https://www.msckrstarenja.com/hr-hr/Homepage.aspx">
+Serbia | Hrvatski                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Singapore">
+Singapore | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Slovakia">
+Slovakia | English                </option>
+                <option value="https://www.msckrstarenja.com/hr-hr/Homepage.aspx">
+Slovenia | Hrvatski                </option>
+                <option value="https://www.msccruises.co.za/en-za/Homepage.aspx">
+South Africa | English                </option>
+                <option value="https://www.msccruceros.es/es-es/Homepage.aspx">
+Spain | Español                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=SriLanka">
+Sri Lanka | English                </option>
+                <option value="https://www.msccruises.se/sv-se/Homepage.aspx">
+Sweden | Svenska                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Thailand">
+Thailand | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Tunisia">
+Tunisia | English                </option>
+                <option value="https://www.msccruises.com.tr/">
+Turkey | Türkiye                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Ukraina">
+Ukraine | English                </option>
+                <option value="https://www.msccruises.com/en-gl/Homepage.aspx?select=Emirates">
+United Arab Emirates | English                </option>
+                <option value="https://www.msccruceros.cl/es-cl/Homepage.aspx">
+Uruguay | Español                </option>
+                <option value="https://www.msccruisesusa.com">
+USA | English                </option>
+                <option value="https://www.msccruceros.cl/es-cl/Homepage.aspx">
+Venezuela | Español                </option>
+              </select>
+              <button class="button" onclick="javascript: window.location.href = document.getElementById('country-selection').value;">
+Modifica              </button>
+            </div>
+          </form>
+        </div>
+        <nav class="footer__accordion">
+          <div>
+            <span class="footer-heading footer__title" v-on:click="showFooterSubMenu(0)" v-bind:class="{'visible' : menuFooterIndex === 0 }">
+INFORMAZIONI AZIENDALI            </span>
+            <ul>
+              <li>
+                <a target="_blank|Custom" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="CORPORATE INFO" data-tracking-action="INFORMAZIONI AZIENDALI" data-tracking-label="About us" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/mondo-msc-crociere">
+Il mondo MSC                </a>
+              </li>
+              <li>
+                <a target="_blank" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="CORPORATE INFO" data-tracking-action="INFORMAZIONI AZIENDALI" data-tracking-label="Media Room" data-tracking-value="0" data-tracking-noninteraction="" originalhref="http://www.mscpressarea.com/it_IT">
+Media room                </a>
+              </li>
+              <li>
+                <a target="_blank" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="CORPORATE INFO" data-tracking-action="INFORMAZIONI AZIENDALI" data-tracking-label="MSC Book" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://www.mscbook.com/shop/WelcomePage?catalogId=10001&amp;langId=-4&amp;storeId=10251">
+MSC Book                </a>
+              </li>
+              <li>
+                <a target="_blank" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="CORPORATE INFO" data-tracking-action="INFORMAZIONI AZIENDALI" data-tracking-label="Careers" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://www.careers.msccruises.com/#/">
+Lavora con noi                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="" data-tracking-action="" data-tracking-label="Incentive and Charters" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/crociere/incentive-e-charters">
+Incentive & Charters                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="CORPORATE INFO" data-tracking-action="INFORMAZIONI AZIENDALI" data-tracking-label="Privacy" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/privacy">
+Privacy                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="CORPORATE INFO" data-tracking-action="INFORMAZIONI AZIENDALI" data-tracking-label="Terms of use" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/termini-e-condizioni-di-uso">
+Condizioni d'uso                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <span class="footer-heading footer__title" v-on:click="showFooterSubMenu(1)" v-bind:class="{'visible' : menuFooterIndex === 1 }">
+INFORMAZIONI DI VIAGGIO            </span>
+            <ul>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="TRAVEL INFO" data-tracking-action="INFORMAZIONI DI VIAGGIO" data-tracking-label="Before you go" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/la-mia-prenotazione/prima-di-partire">
+Prima di partire                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="TRAVEL INFO" data-tracking-action="INFORMAZIONI DI VIAGGIO" data-tracking-label="FAQ" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/domande-frequenti">
+FAQ                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="TRAVEL INFO" data-tracking-action="INFORMAZIONI DI VIAGGIO" data-tracking-label="Our Fares" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/offerte-crociera/tariffe-crociera">
+Le nostre tariffe                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="" data-tracking-action="" data-tracking-label="Assicurazione" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/la-mia-prenotazione/assicurazione">
+Assicurazione                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="TRAVEL INFO" data-tracking-action="INFORMAZIONI DI VIAGGIO" data-tracking-label="Terms and conditions" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/termini-condizioni">
+Termini e Condizioni                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="TRAVEL INFO" data-tracking-action="INFORMAZIONI DI VIAGGIO" data-tracking-label="Passengers bill of rights" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/diritti-del-passeggero">
+Carta dei diritti dei passeggeri                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="TRAVEL INFO" data-tracking-action="INFORMAZIONI DI VIAGGIO" data-tracking-label="Special Needs" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/la-mia-prenotazione/esigenze-speciali">
+Esigenze Speciali                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="TRAVEL INFO" data-tracking-action="INFORMAZIONI DI VIAGGIO" data-tracking-label="Conditions of Carriage" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/condizioni-generali-di-trasporto">
+Condizioni di trasporto                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <span class="footer-heading footer__title" v-on:click="showFooterSubMenu(2)" v-bind:class="{'visible' : menuFooterIndex === 2 }">
+NEWS & CONTATTI            </span>
+            <ul>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="NEWS &amp; CONTACTS" data-tracking-action="NEWS &amp; CONTATTI" data-tracking-label="News" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/news">
+News                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="NEWS &amp; CONTACTS" data-tracking-action="NEWS &amp; CONTATTI" data-tracking-label="Contact us" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/forms/contatti">
+Contatti                </a>
+              </li>
+              <li>
+                <a target="_blank" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="NEWS &amp; CONTACTS" data-tracking-action="NEWS &amp; CONTATTI" data-tracking-label="Comment form" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://reporting.qualtrics.com/msccruises/new_index.php?Language=IT">
+Comment form                </a>
+              </li>
+              <li>
+                <a target="_blank" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="NEWS &amp; CONTACTS" data-tracking-action="NEWS &amp; CONTATTI" data-tracking-label="Post cruise photos" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://www.mymscphotos.com/Claim?PK=17f0869f-6bbd-443b-9455-c54c68473d55">
+MSC Photo                </a>
+              </li>
+              <li>
+                <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="NEWS &amp; CONTACTS" data-tracking-action="NEWS &amp; CONTATTI" data-tracking-label="Online Brochures" data-tracking-value="0" data-tracking-noninteraction="" originalhref="/cataloghi-online">
+Cataloghi Online                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="footer__social">
+          <span class="footer-heading">
+SEGUICI SU          </span>
+          <ul>
+            <li>
+              <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="FOLLOW US ON" data-tracking-action="SEGUICI SU" data-tracking-label="Twitter" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://twitter.com/msc_crociere">
+                <img item="Sitecore.Data.Items.Item" src="3/twitter.svg" level="0" isactive="False" alt="twitter" title="twitter" picture="Sitecore.Data.Fields.ImageField" url="https://twitter.com/msc_crociere" useajax="False" linkpicture="/-/media/global-b2c-contents/footer/socialbadges/twitter.svg" ispagereacheble="False" showchildren="True" enabledmaintenancemode="False" pageurl="https://twitter.com/msc_crociere"/>
+              </a>
+            </li>
+            <li>
+              <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="FOLLOW US ON" data-tracking-action="SEGUICI SU" data-tracking-label="Facebook" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://www.facebook.com/MSC.Crociere.Italia">
+                <img item="Sitecore.Data.Items.Item" src="3/facebook.svg" level="0" isactive="False" alt="facebook" title="facebook" picture="Sitecore.Data.Fields.ImageField" url="https://www.facebook.com/MSC.Crociere.Italia" useajax="False" linkpicture="/-/media/global-b2c-contents/footer/socialbadges/facebook.svg" ispagereacheble="False" showchildren="True" enabledmaintenancemode="False" pageurl="https://www.facebook.com/MSC.Crociere.Italia"/>
+              </a>
+            </li>
+            <li>
+              <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="FOLLOW US ON" data-tracking-action="SEGUICI SU" data-tracking-label="Linkedin" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://it.linkedin.com/company/msc-cruises">
+                <img item="Sitecore.Data.Items.Item" src="3/linkedin.svg" level="0" isactive="False" alt="linkedin" title="linkedin" picture="Sitecore.Data.Fields.ImageField" url="https://it.linkedin.com/company/msc-cruises" useajax="False" linkpicture="/-/media/global-b2c-contents/footer/socialbadges/linkedin.svg" ispagereacheble="False" showchildren="True" enabledmaintenancemode="False" pageurl="https://it.linkedin.com/company/msc-cruises"/>
+              </a>
+            </li>
+            <li>
+              <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="FOLLOW US ON" data-tracking-action="SEGUICI SU" data-tracking-label="YouTube" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://www.youtube.com/channel/UCkTh5zIJQsz8UjfK4rQZGXw">
+                <img item="Sitecore.Data.Items.Item" src="3/youtube.svg" level="0" isactive="False" alt="youtube" title="youtube" picture="Sitecore.Data.Fields.ImageField" url="https://www.youtube.com/channel/UCkTh5zIJQsz8UjfK4rQZGXw" useajax="False" linkpicture="/-/media/global-b2c-contents/footer/socialbadges/youtube.svg" ispagereacheble="False" showchildren="True" enabledmaintenancemode="False" pageurl="https://www.youtube.com/channel/UCkTh5zIJQsz8UjfK4rQZGXw"/>
+              </a>
+            </li>
+            <li>
+              <a target="" data-tracking="true" data-tracking-type="interaction" data-tracking-event="eventGA" data-tracking-category="FOLLOW US ON" data-tracking-action="SEGUICI SU" data-tracking-label="Instagram" data-tracking-value="0" data-tracking-noninteraction="" originalhref="https://www.instagram.com/msccruisesofficial/">
+                <img item="Sitecore.Data.Items.Item" src="3/instagram.svg" level="0" isactive="False" alt="instagram" title="instagram" picture="Sitecore.Data.Fields.ImageField" url="https://www.instagram.com/msccruisesofficial/" useajax="False" linkpicture="/-/media/global-b2c-contents/footer/socialbadges/instagram.svg" ispagereacheble="False" showchildren="True" enabledmaintenancemode="False" pageurl="https://www.instagram.com/msccruisesofficial/"/>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__credits">
+          <p>
+© 2019 MSC Cruises S.A. Tutti i diritti riservati          </p>
+        </div>
+      </div>
+    </footer>
+    <section class="cookie-bar hidden" aria-live="off" aria-hidden="true">
+      <p>
+Utilizziamo i cookie per rendere sempre migliore la tua esperienza d'uso sul nostro sito. Continuando a navigare sul sito, accetti l'utilizzo dei cookie.        <a originalhref="/privacy">
+Scopri di più        </a>
+      </p>
+      <div class="cookie-bar__actions">
+        <img src="3/NLwCRR4i4.webp" data-feo-orig-src="/assets/img/closebox.png"/>
+      </div>
+    </section>
+    <section class="browser-compatibility">
+      <div class="browser-compatibility-modal">
+        <div class="title">
+          <h3>
+Grazie per aver visitato MSC Crociere          </h3>
+        </div>
+        <div class="description">
+          <p>
+Sai che il tuo browser non è aggiornato? Il tuo browser non è compatibile con il nostro nuovo sito e potrebbe non essere sicuro.            <br/>
+Per una migliore esperienza e per continuare la tua prenotazione con MSC, aggiorna il tuo browser scaricando l'ultima versione sotto.          </p>
+          <p>
+Grazie per aver visitato il nostro sito e ti aspettiamo presto a bordo!            <br/>
+            <br/>
+            <strong>
+MSC Crociere            </strong>
+          </p>
+        </div>
+        <div class="browser-container">
+          <a originalhref="https://www.mozilla.org/en-US/firefox/new/">
+            <img src="3/lbCGpxG0I.webp" alt="" width="48" title="" data-feo-orig-src="/-/media/global-contents/icons/browser-icons/icon_firefox.png?h=48&amp;la=it-IT&amp;w=48&amp;hash=8E68F8B5F5E7759C25702612CB06D12324347920" height="48"/>
+            <p>
+Firefox            </p>
+          </a>
+          <a originalhref="https://support.apple.com/downloads/safari">
+            <img src="3/whjRsMZoY.webp" alt="" width="48" title="" data-feo-orig-src="/-/media/global-contents/icons/browser-icons/icon_safari.png?h=48&amp;la=it-IT&amp;w=48&amp;hash=3512E103498A5A1A789AD8DEDC0C537DF97E4877" height="48"/>
+            <p>
+Safari            </p>
+          </a>
+          <a originalhref="https://www.google.com/chrome/">
+            <img src="3/CiwzDickk.webp" alt="" width="48" title="" data-feo-orig-src="/-/media/global-contents/icons/browser-icons/icon_chrome.png?h=48&amp;la=it-IT&amp;w=48&amp;hash=8F6C9DE988A7DE8558333E2C3C452FDE113DA12F" height="48"/>
+            <p>
+Chrome            </p>
+          </a>
+          <a originalhref="https://www.microsoft.com/en-us/windows/microsoft-edge">
+            <img src="3/Nhj90iYJc.webp" alt="" width="48" title="" data-feo-orig-src="/-/media/global-contents/icons/browser-icons/icon_edge.png?h=48&amp;la=it-IT&amp;w=48&amp;hash=D2237814E57F2FDD818702F8A9C6E87FE5B398EA" height="48"/>
+            <p>
+Edge            </p>
+          </a>
+          <a originalhref="">
+            <img src="3/KAghiVld0.webp" alt="" width="48" title="" data-feo-orig-src="/-/media/global-contents/icons/browser-icons/icon_ie.png?h=48&amp;la=it-IT&amp;w=48&amp;hash=854A9B8ADD57167E7D2B3E4A0775846EA9B9B0EC" height="48"/>
+            <p>
+IE            </p>
+          </a>
+          <a originalhref="https://www.opera.com/it/download">
+            <img src="3/IqqZKGsD8.webp" alt="" width="48" title="" data-feo-orig-src="/-/media/global-contents/icons/browser-icons/icon_opera.png?h=48&amp;la=it-IT&amp;w=48&amp;hash=0F258D672AC24069C6AD1C79F817B9C9CD67E211" height="48"/>
+            <p>
+Opera            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <button>
+Continua e aggiorna più tardi          </button>
+          <div class="clear">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="tablet-portrait" class="hidden">
+      <div class="modal-mask">
+        <div class="modal-wrapper">
+          <div class="modal-container">
+            <div class="modal-header">
+              <p class="h2">
+Ruotare il dispositivo              </p>
+            </div>
+            <div class="modal-body">
+              <div class="modal-body-image">
+                <img alt="" title="" src="3/tablet-rotation.svg"/>
+              </div>
+              <div class="modal-body-message">
+Modalità verticale supportata              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="page--tracking" data-tracking-app="false" data-tracking="true" data-tracking-type="visit" data-tracking-event="data_available" data-tracking-category="Our Cruises" data-tracking-action="" data-tracking-label="" data-tracking-value="0" data-tracking-noninteraction="" data-tracking-page-country="IT" data-tracking-page-environment="prod" data-tracking-page-language="it" data-tracking-page-category="Our Cruises" data-tracking-page-subcategory="Ship" data-tracking-page-subcategory-2="ship-detail" data-tracking-page-previouspagecategory="Our Cruises">
+    </div>
+<!-- Here goes the scripts -->  </body>
+</html>
