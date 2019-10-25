@@ -1,0 +1,66 @@
+@charset "utf-8";
+#lanci {
+	margin-top: 20px;
+	width: 100%;
+	/*display: table;*/
+}
+#lanci_carta_fan {
+	border: 1px solid #dfdfdf;
+	padding-right:5px;
+	/*width: 475px;*/
+	/*display: table-cell;*/
+}
+#lanci_vicino_a_te {
+	border: 1px solid #dfdfdf;
+	padding-left:5px;
+	/*width: 475px;*/
+	/*display: table-cell;*/
+}
+#lanci_spaziatore {
+	/*width: 10px;*/
+	/*display: table-cell;*/
+}
+
+.box_lanci_home{
+height:auto;min-height: 125px; margin-top:10px;margin-bottom:10px;
+}
+
+.box_lanci_home_right {
+	padding-left:1.5%;
+}
+
+.box_lanci_home_left {
+	padding-right:1.5%;
+}
+
+ .box_lanci_home .launches_subtitle{
+      width: 44%;
+      }
+
+@media (max-width:767px){
+
+		.box_lanci_home{
+	      padding-left: 0px;
+	      padding-right: 0px;
+	      }
+	      .box_lanci_home .launches_subtitle{
+	      width: 30%;
+	      }
+
+		.box_lanci_home_right {
+			padding-left:0px;
+		}
+
+		.box_lanci_home_left {
+			padding-right:0px;
+		}
+
+
+    }
+
+@media (min-width:768px){
+ 	.box_lanci_home_container{
+ 	padding-right:0px;
+ 	padding-left:0px;
+ 	}
+ }
