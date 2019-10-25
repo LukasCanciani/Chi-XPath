@@ -1,0 +1,65 @@
+
+$(function(){
+
+    $(document).on('click', '.wrapper-share-social .more_share .msg-condividi', function () {
+        $(this).siblings("ul.share-social").addClass("visible");
+    });
+
+    $(document).on('click', '.wrapper-share-social .share-social-close', function () {
+        $(this).offsetParent().removeClass("visible");
+    });
+
+    $(document).on('click', '.wrapper-share-social .first-info .msg-facebook', function() {
+        //facebook
+        var  url = $(this).parents('.first-info').data('url');
+        var  titolo = $(this).parents('.first-info').data('title');
+        window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(url) + '&t=' + encodeURIComponent(titolo), 'sharer', 'toolbar=0,status=0,width=626,height=436');
+        return false;
+    });
+
+    $(document).on('click', '.wrapper-share-social .first-info .msg-twitter', function() {
+        //twitter
+        var  url = $(this).parents('.first-info').data('url');
+        var  titolo = $(this).parents('.first-info').data('title')
+        var maxLength = 140;
+        if (titolo.length > maxLength) {
+            titolo = titolo.substr(0, (140 - 3)) + '...';
+        }
+        window.open('http://twitter.com/intent/tweet?text=' + encodeURIComponent(titolo + ' ' + url + " @ilmessaggeroit"), 'sharer',"toolbar=0,status=0,width=626,height=436");
+        return false;
+    });
+
+    $(document).on('click', '.wrapper-share-social .share_fb', function() {
+        //facebook
+        var  url = $(this).parents('.actions').data('url');
+        var  titolo = $(this).parents('.actions').data('title');
+
+        window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(url) + '&t=' + encodeURIComponent(titolo), 'sharer', 'toolbar=0,status=0,width=626,height=436');
+        return false;
+
+    });
+
+    $(document).on('click', '.wrapper-share-social .share_tw', function() {
+        //twitter
+        var  url = $(this).parents('.actions').data('url');
+        var titolo = $(this).parents('.actions').data('title');
+        var maxLength = 140;
+        if (titolo.length > maxLength) {
+            titolo = titolo.substr(0, (140 - 3)) + '...';
+        }
+        window.open('http://twitter.com/intent/tweet?text=' + encodeURIComponent(titolo + ' ' + url + " @ilmessaggeroit"), 'sharer',"toolbar=0,status=0,width=626,height=436");
+        return false;
+    });
+
+    $(document).on('click', '.wrapper-share-social .share_gp', function() {
+        var  url = $(this).parents('.actions').data('url');
+        window.open('https://plus.google.com/share?url=' + encodeURIComponent(url),'sharer',"toolbar=0,status=0,width=626,height=436");
+    });
+
+    $(document).on('click', '.wrapper-share-social.share_mail', function() {
+        var  url = $(this).parents('.actions').data('url');
+        var  titolo = $(this).parents('.actions').data('title');
+        window.location.href = 'mailto:?subject=Dal messaggero.it&body=message'+encodeURIComponent(titolo + ' ' + url);
+    })
+
+});
