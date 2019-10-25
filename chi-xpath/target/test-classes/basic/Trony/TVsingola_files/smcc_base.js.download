@@ -1,0 +1,27 @@
+//Registration, displays PartitaIVA or CodiceFiscale on user choice
+$(document).ready(function() {
+	if($("#partitaiva").length > 0){
+	if ($("#partitaiva"))
+		{
+		//default checked is privato
+		$('#partitaiva').hide();
+	    $('input[type=radio]').live('change', function() {
+		    	var isPrivato = $("input[value='Privato']:checked").val();
+		    	if(isPrivato){
+			    	$("#codicefiscale").show();
+					$("#partitaiva").hide();
+		    	}
+		    	else{
+		    		$("#codicefiscale").hide();
+		    		$("#partitaiva").show();
+		    	}
+	    	});
+		}
+	}
+});
+
+
+
+
+
+
