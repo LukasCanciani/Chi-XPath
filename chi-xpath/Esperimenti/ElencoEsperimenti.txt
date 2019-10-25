@@ -1,0 +1,87 @@
+1 Il Friuli 1
+2 Il mattino di Foggia 1
+3 Valdelsa 1 
+4 Il giornale di Rieti 1
+5 ecoDiTrapani -> home , sezioni , articoli	--Pronto 0,96 e qualcosa
+6 altaRimini -> home, sez, articoli (Pagina 18 "difettosa")
+7 casertaWeb -> home, sez, articoli 1
+8 AltoAdige -> home, sez , art 1
+9 gds -> articoli, home, sezioni, foto 0.8285714
+10 unioneSarda -> home, sez, art 1
+11 basilicataNotizie -> home , sez, articoli 1
+12 quotidianopiemontese -> home, se<, art 0.655
+13 marchenotizie -> home, sez, art -> 0.599
+14 liguria notizie -> home, sez, art -> 0.836
+15 giornaleDiSondrio -> home, sezioni, articoli   1
+16 castelliNotizie -> home, sez, notizie  //mancavano pagine 0.5844
+17 corriereDell'Umbria -> home, sez, articoli, fotogallery, video //F1 -> ~0,45 
+18 lecronachelucane -> 1
+19 Campania notizie -> art, home, sez  -> 1
+20 molisenotizie -> home sez art -> 1 
+21 Quotidiano di gela -> home,sez,articoli		1
+22 viveremarche -> home, sez, art   1
+23 playstore -> home+sezioni, app    1
+24krone.at -> home,sez,art 1
+25 jb -> home, lsita , articolo 1
+26 ekathimerini -> home sez art 1
+27 findus -> home, sezione, ricetta, lista prodotti, prodotto 1
+28 aranzulla -> home sez art 1 ma piu di un ora
+29 bofrost -> home, sezSezSez, sezSez,sez, prodotto 1
+30 timesofindia -> home, sez , recipes 0.659
+31 elitesurgelati -> hoem sez prod 06140 //problemi i link sono i originalhref e non in href!!! forse sfalzato!!
+32 https://www.piumeshoponline.com/ -> home sez prod 1
+33 eataly ->> home sez prod 1
+34 spesaonline24 -> home sez prod 0.6549
+35 turismo.it -> home sez art 0.62222
+36 libraccio -> home ,cat, libro 1
+37 unlibro -> home sez libro 0.88179 //TROPPO SCAGLIONATO
+38 libreriauniversitaria -> home sez libro 1
+39 mobileShop -> home sez prod 0.978
+40theMovieDB -> home sez articolo 1 //ma forse troppo scaglionato!!
+41 cortilia -> home, sez, prodotti 1 //ma forse troppo scaglionato!!
+42 recenasioniLibri ! 0.57062143
+43 ilgiramondo -> home + sez, sez video, articolo, video , sezBloggers, blogger 0.5393936
+44 paniereBio -> home sez prod 1
+45 cinecittaShop -> home sez prodotto 1
+46 workShopItaly -> home sezsez sez prod 1
+47 pskMegaStore -> home sezsez sez prod 40p 0,74...
+48 ecoFarma -> home sez prod //troppo tempo 0,75...
+49 wmePoint -> home, sez, prod 40p 1
+50 utensileriaOnline -> home sezsez sez prod 33p 1
+ 
+
+
+// ecoDiBergamo -> home, sez, notizie 0.777 non va piu
+daEseguire
+fruttaweb -> home sez art
+direttaSicilia -> home, sez, art
+laSpesaCasa -> home, sez, prod
+
+
+mancaOttimo
+
+in creazione
+
+
+
+mondopesca-> home sez prod //troppo pochi
+
+daSistemare**************************************************************************
+deichmann -> home , sezdisez , sez e prodotto //troppo tempo
+selex- > home sez prod male male
+
+DvdStore -> home sez articolo //troppo tempo
+******************************DA RIVEDERE!!!!*********************************************
+siViaggia -> home , sezione, articolo //troppo tempo
+ibs.it -> home sez libr// ttroppo tempo
+tigota -> home, liste, prodotti	 //troppoTempo		
+amway -> home, listaDiListe, lista, prdotto //troppotempo oltre 4 ore!!!
+tampa bay -> home, sez art //troppo tempo!!!			
+La sicilia -> hme, sezioni, articoli // troppotempo
+giornaleTrentino -> home sez art ??
+primopianomolise -> home, sez, art   //tropppo tempo
+ticinonline -> home, sez ,art //tutti insieme
+
+******************************************************************************************
+
+

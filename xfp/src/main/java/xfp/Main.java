@@ -126,12 +126,12 @@ public class Main {
 
 	public static Set<String> inferRules(String[] arguments, Map<String, String> id2name, int range) throws Exception {
 		final Main main = new Main();
-		Set<String> FixedPoints;
+		Set<String> rules;
 		final ExperimentRunner runner = new ExperimentRunner();
 		main.parseArgs(arguments);
-		FixedPoints = main.runRules(runner,id2name,range);
+		rules = main.runRules(runner,id2name,range);
 
-		return FixedPoints;
+		return rules;
 	}
 
 	private Set<String> runRules(ExperimentRunner runner, Map<String, String> id2name, int range) {

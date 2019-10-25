@@ -26,7 +26,6 @@ import it.uniroma3.chixpath.model.TemplateSample;
 import it.uniroma3.fragment.RuleInference;
 import it.uniroma3.fragment.XPathFragmentSpecification;
 /**
- * 
  * Given an instance of the {@link ChiProblem}, this class
  * implements an algorithm to find out am exact solution of the problem,
  * as an instance of {@link ChiSolution}

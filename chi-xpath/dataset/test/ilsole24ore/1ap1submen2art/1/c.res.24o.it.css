@@ -1,5 +1,0 @@
-<!--#include virtual="/includes2015/section_html_head.shtml" -->
-	<!--#config errmsg="" -->
-	<!--#set var="sezione" value="homepage" -->
-	<!--#set var="rssfile" value="primapagina.xml" -->
-<!--#include virtual="/includes2015/templates/homepage_body.shtml" -->

@@ -69,12 +69,9 @@ public class Page {
 
 	public void setDataRules(Set<String> dataRules) {
 		this.dataRules = dataRules;
-		System.out.println("settata");
 	}
 
-	public Set<XPath> getXpaths() {
-		return xpaths;
-	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		Page that = (Page) obj;

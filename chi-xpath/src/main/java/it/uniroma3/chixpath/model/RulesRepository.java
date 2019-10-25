@@ -59,7 +59,6 @@ public class RulesRepository {
 			System.out.println("Generando xPaths sulla pagina"+sample.getUrl()+" con id: "+sample.getId());
 
 			final Set<String> rules = engine.inferRules(sample.getDocument()); 
-			
 			for (String str : rules) {
 				if(!diffXPaths.contains(str))
 					diffXPaths.add(str);
@@ -79,6 +78,11 @@ public class RulesRepository {
 			for (Page page : pages) {
 				page.addXPath(xpath);
 			}
+			
+		}
+		System.out.println("******************************");
+		for(Page p : pages) {
+			System.out.println(p.getId() + " ) -> Regole : "+ p.getXPaths().size());
 		}
 		this.xpaths = xpaths;
 
@@ -156,6 +160,10 @@ public class RulesRepository {
 
 	public Set<XPath> getXPaths() {
 		return xpaths;
+	}
+
+	public Set<Page> getPages() {
+		return this.pages;
 	}
 
 }

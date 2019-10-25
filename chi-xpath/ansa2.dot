@@ -1,5 +1,0 @@
-graph ansa2 {
-graph [ratio=fill];
-node [label="\N", fontsize=20, shape=rect];
-
-}

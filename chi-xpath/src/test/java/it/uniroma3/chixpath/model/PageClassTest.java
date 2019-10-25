@@ -225,8 +225,8 @@ public class PageClassTest {
 		Set<String> href = new HashSet<>();
 		href.add("0.html");
 		href.add("2.html");
-		PageClass p = PageClass.getPageClassFromIDs(classes, href);
-		assertEquals(pageClass1, p);
+		Set<PageClass> p = PageClass.getPageClassFromIDs(classes, href);
+		assertTrue(p.contains(pageClass1));
 		
 	}
 	

@@ -1,0 +1,4 @@
+pages: 80
+24.html
+nr_vfp: 1
+nr_cfp: 2

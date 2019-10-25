@@ -1,0 +1,351 @@
+/*   
+Theme Name: Eco di Trapani
+Version: 3.0
+Theme URI: http://www.gabfirethemes.com/
+Description: Designed by <a href="http://www.gabfirethemes.com">Gabfire Themes</a> | <a href="http://www.gabfirethemes.com/category/themes/"> See All Themes</a> 
+Author: Gabfire Themes
+MD5: bc30960d51c837a73c7630d5ada196bd
+Author URI: http://www.gabfirethemes.com
+Tags: Newspaper, Magazine, News
+*/
+
+/*
+	This file contains main CSS structure of theme. Do not change anything below
+	unless it is necessary or you are aware of what you are doing
+	
+	To customize theme rename custom.dist.css to custom.css, copy css code
+	from this file into custom.css and edit it.
+*/
+
+/* Reset */
+html {margin:0;padding:0;border:0;}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+article, aside, dialog, figure, footer, header, hgroup, nav, section {display:block;}
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;float:none !important;}
+table, th, td {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:'';}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+:focus {outline:0;}
+ol, ul {list-style:none;}
+li {line-height:120%;}
+dt { font-weight: bold; text-decoration: underline; } dd { margin: 0; padding: 0 0 0.5em 0; }
+
+/*	----------------------------------------------
+:: GENERIC
+/*----- ={ Headings } -----*/
+h1 a, h2 a ,h3 a, h4 a, h5 a, h6 a { text-decoration: none; }
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover  {text-decoration: none;}
+
+h1, h2, h3, h4, h5, h6 {margin:0;line-height:1;}
+h1 { font-size:30px; }
+h2 { font-size:23px; }
+h3 { font-size:20px; }
+h4 { font-size:16px; }
+h5 { font-size:14px; }
+h6 { font-size:12px; }
+
+/*----- [[ Theme Table ]] -----*/
+.theme-table {width: 100%;margin-bottom:20px}
+	.theme-table caption {	color: #222;font-size: 14px;font-weight: bold;padding-bottom: 4px;text-align: left;}
+	.theme-table thead {font-size: 12px;}
+	.theme-table thead th {text-align:center;background:#ddd;border: 1px solid #fff;padding: 3px 0 2px;}
+	.theme-table tbody {color: #888;}
+	.theme-table tbody td {background: #f5f5f5;border: 1px solid #fff;padding: 3px 0 2px;text-align: center;}
+	.theme-table tbody .pad {background: none;}
+	
+/*----- [[ Postmeta ]] -----*/
+.postmeta {font-style:italic !important;font-size:11px !important;;margin:5px 0 0 !important;clear:both;display:block; position: absolute;bottom: 2px;right: 10px;}
+.postmeta a {text-decoration:none !important}
+.postmeta a:hover {text-decoration:underline !important}
+.postmeta span {display:inline;padding-left:7px;margin-left:5px;background: url(framework/images/circ3.png) no-repeat left center}
+.postmeta span.meta_date {display:inline;padding-left:0;background:none}
+	
+/* Widget class name */
+.widgetmapname {display:block;padding:5px 10px;background:#333;color:#fff;text-transform:uppercase;margin:10px 0;text-align:center;font-weight:bold;}
+
+/* -------------------------------------------------------------- 
+	THEME WIDGETS
+-------------------------------------------------------------- */
+/*----- [[ Global Widgets ]] -----*/
+.widget {margin:0 0 25px;}
+	.widget .widget {width:auto !important;margin:0 !important}
+	.widgettitle {margin:0;padding:0 0 10px;font: bold 14px Arial,Helvetica,sans-serif;color:#555;}
+	.widget p{margin-bottom:10px;}
+	.widget ul {clear:both;padding-left:5px;list-style-position:inside;list-style-type:disc;}
+	.widget ul li {border-bottom:1px dotted #ddd;padding-bottom:8px;margin-bottom:7px;}
+	.widget ul ul {padding:0 0 0 15px;border-top:none}
+	.widget select {border:1px solid #ddd;}
+	.widget form, .widget fieldset {margin:0;}
+	.widget img {display:block;}
+	.widgetname {display:block;padding:10px;background:#333;color:#fff;text-transform:uppercase;margin:10px 0;text-align:center;font-weight:bold;}	
+
+/*----- [[ Responsive Menu ]] -----
+ *    TinyNav + SelectBox
+ * ------------------------------------------------------------- */
+.tinynav { 
+    display: none 
+}
+
+.sb-holder {
+	background-color: #3d3d3d;
+    display: none;
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+	z-index:10;
+}
+
+.sb-holder:focus .sb-selector {}
+
+.sb-selector {
+    display: block;
+    height: 30px;
+    left: 0;
+    line-height: 30px;
+    outline: none;
+    overflow: hidden;
+    position: absolute;
+    text-indent: 10px;
+    top: 0;
+    width: 100%;
+}
+
+.sb-selector:link,
+.sb-selector:visited,
+.sb-selector:hover {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    outline: none;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 #000;
+}
+
+.sb-toggle {
+    background: url(framework/images/tinyjs/select-icons.png) 0 6px no-repeat;
+    display: block;
+    height: 30px;
+    outline: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+}
+
+.sb-toggle-open {
+    background: url(framework/images/tinyjs/select-icons.png) 0 -45px no-repeat;
+}
+
+.sb-holder-disabled {
+    background-color: #3c3c3c;
+    border: 1px solid #515151;
+}
+
+.sb-holder-disabled .sb-holder {}
+
+.sb-holder-disabled .sb-toggle {}
+
+.sb-options {
+    background-color: #fff;
+    list-style: none;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    z-index: 1;
+    overflow-y: auto;
+}
+
+.sb-options li {
+    padding: 0;
+}
+
+.sb-options a {
+    border-bottom: 1px solid #e5e5e5;
+    display: block;
+    font-size: 11px;
+    outline: none;
+    padding: 4px;
+    text-indent: 4px;
+}
+
+.sb-options a:link,
+.sb-options a:visited {
+    color: #444;
+    text-decoration: none;
+}
+
+.sb-options a:hover,
+.sb-options a:focus,
+.sb-options a.sb-focus {
+    background-color: #f5f5f5;
+    color: #444;
+}
+
+.sb-options li.last a {
+    border-bottom: none;
+}
+
+.sb-options .sb-disabled {
+    border-bottom: dotted 1px #515151;
+    color: #999;
+    display: block;
+    padding: 7px 0 7px 3px;
+}
+
+.sb-options .sb-group {
+    border-bottom: dotted 1px #515151;
+    color: #ebb52d;
+    display: block;
+    font-weight: 700;
+    padding: 7px 0 7px 3px;
+}
+
+.sb-options .sb-sub {
+    padding-left: 17px;
+}
+
+.dropdown a  	{ display:block; z-index:100;}
+.dropdown li li.current_page_item,
+.dropdown li li.current-cat { background:none; }
+.dropdown li  {width: auto;list-style:none; }
+.dropdown li a.sf-with-ul 	{ padding-right:20px;}
+.dropdown li ul li a 	{ }
+.dropdown a, .dropdown  li.current-cat-parent a, .dropdown li.current-cat a, .dropdown li.current_page_item, .dropdown li.current_page_parent, .dropdown li.current-menu-ancestor, .dropdown li.current-menu-item, .dropdown li.sfHover { }
+/* =Drop-down menus  */
+.dropdown li ul  { position: absolute; left: -999em; z-index:99999; }
+.dropdown li:hover,.dropdown li.hover  { position:static; }
+.dropdown li:hover ul ul, .dropdown li.sfhover ul ul,.dropdown li:hover ul ul ul ul, .dropdown li.sfhover ul ul ul ul,.dropdown li:hover ul ul ul ul ul, .dropdown li.sfhover ul ul u ull ul { left:-999em; }
+.dropdown li:hover ul, .dropdown li.sfhover ul,.dropdown li li:hover ul, .dropdown li li.sfhover ul,.dropdown li li li:hover ul, .dropdown li li li.sfhover ul,.dropdown li li li li:hover ul, .dropdown li li li li.sfhover ul,.dropdown li li li li li:hover ul, .dropdown li li li li li.sfhover ul  { left:auto; }
+	
+/*----- [[ universal image classes ]] -----*/
+	.alignleft,#content img.alignleft {display: inline;float: left;margin-right: 10px;margin-top: 4px;}
+	.alignright,#content img.alignright {display: inline;float: right;margin-left: 10px;margin-top: 4px;}
+	.aligncenter,#content img.aligncenter {clear: both;display: block;margin-left: auto;margin-right: auto;margin-bottom:7px;}
+	img.alignleft,#content img.alignright,#content img.aligncenter {margin-bottom: 8px;}
+	.wp-caption {background: #f1f1f1;text-align: center;overflow:hidden;}
+	.wp-caption p.wp-caption-text {font:13px/18px georgia, sans-serif;color: #777;margin:7px 0 0;}
+	.wp-smiley {margin: 0;}
+
+/*----- [[ Gallery ]] -----*/
+.post .gallery {padding-bottom:15px;display:block;}
+
+/* --------------------------------------------------------------
+   FORMS
+   * default styling for forms
+   * Extra classes to enhance forms
+   Usage:
+   * For text fields, use class .title or .text
+   * For inline forms, use .inline (even when using columns)
+-------------------------------------------------------------- */
+/* 
+	A special hack is included for IE8 since it does not apply padding 
+	correctly on fieldsets
+ */ 
+label {font-weight:bold;cursor:pointer;}
+fieldset {padding:0 14px 14px 14px;margin:0 0 15px 0;border:1px solid #aaa;}
+legend {font-weight:bold;font-size:1.2em;margin-top:-2px;margin-bottom:10px;}
+fieldset, #IE8#HACK {padding-top:14px;}
+legend, #IE8#HACK {margin-top:0;margin-bottom:0;}
+
+/* Input Fields */
+input.span-1, textarea.span-1,input.span-2, textarea.span-2,input.span-3, textarea.span-3 {border-left-width:1px;border-right-width:1px;padding-left:5px;padding-right:5px;}
+input.span-1, textarea.span-1 {width:218px;}
+input.span-2, textarea.span-2 {width:258px;}
+input.span-3, textarea.span-3 {width:458px;}
+
+/* 
+  Attribute selectors are used to differentiate the different types 
+  of input elements, but to support old browsers, you will have to 
+  add classes for each one. ".title" simply creates a large text  
+  field, this is purely for looks.
+ */
+input[type=text], input[type=password], input.text, input.title, textarea {background-color:#fff;border:1px solid #bbb;}
+input[type=text]:focus, input[type=password]:focus, input.text:focus, input.title:focus, textarea:focus {border-color:#666;}
+select {background-color:#fff;border-width:1px;border-style:solid;}
+input[type=text], input[type=password], input.text, input.title, textarea, select {margin:0.5em 0;}
+input.text, input.title {padding:5px;}
+input.title {font-size:15px;}
+textarea {padding:5px;height:200px;}
+form.inline {line-height:3;}
+form.inline p {margin-bottom:0;}
+
+/*----- [[ Success, info, notice and error/alert boxes and other mis classes ]] -----*/
+.error, .alert, 
+.notice, .success, 
+.info 		{ padding:0.8em !important;margin-bottom:1em;border:2px solid #ddd; }
+.error, 
+.alert 		{ background:#fbe3e4;color:#8a1f11;border-color:#fbc2c4; }
+.notice 		{ background:#fff6bf;color:#514721;border-color:#ffd324; }
+.success	{ background:#e6efc2;color:#264409;border-color:#c6d880; }
+.info 		{ background:#d5edf8;color:#205791;border-color:#92cae4; }
+.error a, 
+.alert a 	{ color:#8a1f11;text-decoration:underline; }
+.notice a	{ color:#514721;text-decoration:underline; }
+.success a	{ color:#264409;text-decoration:underline; }
+.info a 		{ color:#205791;text-decoration:underline; }
+
+/* Border right with more whitespace */
+.border_right_13 { padding-right: 6px; margin-right: 6px;border-right: 1px solid #ddd;}
+.border_right_15 { padding-right: 7px; margin-right: 7px;border-right: 1px solid #ddd;}
+.border_right_20 { padding-right: 10px; margin-right: 9px;border-right: 1px solid #ddd;}
+.border_right_30 { padding-right: 15px; margin-right: 14px;border-right: 1px solid #ddd;}
+.border_right_40 { padding-right: 20px; margin-right: 19px;border-right: 1px solid #ddd;}
+/* Border left with more whitespace */
+.border_left_15 { padding-left: 7px; margin-left: 7px;border-left: 1px solid #ddd;}
+.border_left_20 { padding-left: 10px; margin-left: 9px;border-left: 1px solid #ddd;}
+.border_left_30 { padding-left: 15px; margin-left: 14px;border-left: 1px solid #ddd;}
+.border_left_40 { padding-left: 20px; margin-left: 19px;border-left: 1px solid #ddd;}
+/* Border bottom with more whitespace */
+.border_bottom_15 {padding-bottom:7px;margin-bottom:7px;border-bottom:1px solid #ddd;}
+.border_bottom_20 {padding-bottom:10px;margin-bottom:9px;border-bottom:1px solid #ddd;}
+.border_bottom_30 {padding-bottom:15px;margin-bottom:14px;border-bottom:1px solid #ddd;}
+.border_bottom_40 {padding-bottom:20px;margin-bottom:19px;border-bottom:1px solid #ddd;}
+
+/* Use a .box to create a padded box inside a column.  */
+.box {padding:15px;margin-bottom:15px;background:#e5eCf9;}
+
+/* Misc Classes */
+.small_h	{ font-size: 18px; }
+.small_text	{ font-size: 11px; }
+.hide		{ display: none; }
+
+.quiet		{ color: #666; }
+.loud		{ color: #000; }
+.highlight  	{ background:#ff0; }
+.added		{ background:#060; color: #fff; }
+.removed    	{ background:#900; color: #fff; }
+.text-right	{ display:block;text-align:right;}
+
+.first		{ margin-left:0; padding-left:0; }
+.last	 	{ margin-right:0 !important; border:0 !important}
+.top	  	{ margin-top:0; padding-top:0; }
+.lastpost	 {border-bottom:none!important;padding-bottom:0 !important;margin-bottom:0!important;}
+
+.left  		{ float: left !important; }
+p .left		{ margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+.right 		{ float: right !important; }
+p .right 	{ margin: 1.5em 0 1.5em 1.5em; padding: 0; }
+
+.thumb 		{ padding:2px;border:1px solid #ddd;margin-bottom:5px;display:block;height:1%;overflow:hidden; }
+
+.clear {clear:both;height:1px;display:block;}
+
+/* Numbered-pagination */
+.numbered-pagination { float: left; clear: both; margin-bottom: 20px; background-color: #f0f0f0; padding: 10px 7px 8px 6px;border-radius: 8px}
+.numbered-pagination span{ margin: 0 5px; background-color: #e6e6e6; padding: 4px 7px;border-radius: 8px }
+.numbered-pagination span.current{ background-color: #fff;;border-radius: 8px}
+.numbered-pagination a, .attachment-nav a{ margin: 0 5px; padding: 4px 7px;}
+.numbered-pagination a.inactive{text-decoration:none;border-radius: 8px; }
+.numbered-pagination a.pagi-next{ }
+.numbered-pagination a.pagi-last{ }
+.numbered-pagination a:hover.inactive,
+.numbered-pagination a:hover.pagi-next,
+.numbered-pagination a:hover.pagi-first,
+.numbered-pagination a:hover.pagi-prev,
+.numbered-pagination a:hover.pagi-last { background-color: #fff;text-decoration:none;border-radius: 8px }
