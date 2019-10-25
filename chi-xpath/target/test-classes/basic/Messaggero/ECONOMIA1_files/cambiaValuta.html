@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0064)https://finanza.economia.ilmessaggero.it/tools/cambiaValuta.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	Il messaggero Cambia Valute - by Teleborsa
+</title><meta http-equiv="content-script-type" content="text/javascript"><meta http-equiv="content-style-type" content="text/css"><link href="./reset.css" rel="Stylesheet">    
+    <script type="text/javascript" src="./jquery.min.js.download"></script>
+<link rel="stylesheet" type="text/css" href="./tools.min(1).css"></head>
+<body>
+    <form name="aspnetForm" method="post" action="https://finanza.economia.ilmessaggero.it/tools/cambiaValuta.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTExNDk5OTk1NTBkZJ2WhyIM1PzWNl01JrFLonEp/ta8">
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CC7DCF31">
+</div>
+    <div id="toolsContent">
+        
+    
+   
+    <div style="text-align: left;">
+    <script type="text/javascript" language="javascript">
+var ToolServiceBaseUrl = "/tools/Data/ToolService.aspx";
+// var ToolServiceBaseUrl = "/tools/Data/ToolService.aspx";
+
+
+$(document).ready(function(){
+    $("#cambiavaluta-errors-summary").hide();
+	$("#cambiavaluta-result-1").hide();
+	$("#cambiavaluta-result-2").hide();
+    var date = new Date();
+    var dateDay = String(date.getDate());
+    var dateMonth = String(date.getMonth()+1);
+    var dateYear = date.getFullYear();
+    $("#cambiavaluta-day").val((dateDay.length==1) ? "0"+dateDay : dateDay);
+    $("#cambiavaluta-month").val((dateMonth.length==1) ? "0"+dateMonth : dateMonth);
+    $("#cambiavaluta-year").val(date.getFullYear());
+    
+	$("#cambiavaluta-submit").click(function(){
+		$(".errors").remove();
+		var hasError = false;
+		var valFrom = $("#cambiavaluta-from").val();
+		if(valFrom == '') { 
+	        $("#cambiavaluta-from").after('<span class="errors">&nbsp;&laquo;</span>');
+		    hasError = true; 
+	        }
+		var valDay = $("#cambiavaluta-day").val();
+		var valMonth = $("#cambiavaluta-month").val();
+		var valYear = $("#cambiavaluta-year").val();
+		if(valDay=='' || valMonth=='' || valYear=='') { 
+	        $("#cambiavaluta-year").after('<span class="errors">&nbsp;&laquo;</span>');
+		    hasError = true; 
+            }
+        var valFromCurrency = $("#cambiavaluta-from-ddl").val();
+        var valToCurrency = $("#cambiavaluta-to-ddl").val();
+		if (hasError) { 
+    		$("#cambiavaluta-result-1").hide();
+    		$("#cambiavaluta-result-2").hide();
+            $("#cambiavaluta-errors-summary").show();
+		    $("#cambiavaluta-errors-summary").html('E\' necessario compilare i campi selezionati'); 
+		    } 
+        else {
+            $.getJSON(ToolServiceBaseUrl+"?mode=cambiavaluta&from="+valFrom+"&fromCurrency="+valFromCurrency+"&toCurrency="+valToCurrency+"&day="+valDay+"&month="+valMonth+"&year="+valYear+"&jsoncallback=?",
+                    function(data) {
+                        if (data.errors!='') { 
+                    		$("#cambiavaluta-result-1").hide();
+                    		$("#cambiavaluta-result-2").hide();
+                            $("#cambiavaluta-errors-summary").show();
+                            $("#cambiavaluta-errors-summary").html(data.errors); 
+                            }
+                        else {
+                            $("#cambiavaluta-errors-summary").hide();
+                    		$("#cambiavaluta-result-1").show();
+                    		$("#cambiavaluta-result-2").show();
+                            $("#cambiavaluta-result-1").html(data.resultString);
+                            $("#cambiavaluta-result-2").html(data.resultDate);
+                        }
+                    });
+            }
+		refreshPage();
+	});
+	
+//	$("#cambiavaluta-reset").click(function(){
+//		$(".errors").remove();
+//		$("#cambiavaluta-errors-summary").hide();
+//		$("#cambiavaluta-result-1").hide();
+//		$("#cambiavaluta-result-2").hide();
+//	    });
+});
+</script>
+
+<div class="leaf">
+<div class="cambiavaluta">
+    <!--<div class="frame-top">
+        <h2 class="bianco19">CAMBIA VALUTA</h2>
+    </div>-->
+    <div class="frame-panel">
+        <table class="leaf-table">
+            <tbody><tr>
+                
+                <td class="leaf-form">
+                    <table class="form" border="0">
+                        <tbody><tr>
+                            <th style="vertical-align:top;width: 120px;" class="nero12">Converti:</th>
+                            <td>
+                                <input type="text" id="cambiavaluta-from" name="cambiavaluta-from" maxlength="100" style="width: 141px;" class="textbox">
+                                <div style="margin-top: 2px;">
+                                    <select id="cambiavaluta-from-ddl" name="cambiavaluta-from-ddl" class="ddl">
+                                        <optgroup label="Valute principali">
+                                            <option selected="selected" value="Euro">Euro</option>
+                                            <option value="Dollaro USA">Dollaro USA</option>
+                                            <option value="Lira sterlina">Sterlina inglese</option>
+                                            <option value="Franco svizzero">Franco svizzero</option>
+                                            <option value="Yen">Yen giapponese</option>
+                                        </optgroup>
+                                        <optgroup label="Altre valute">
+                                            <option value="Baht tailandese">Baht tailandese</option>
+                                            <option value="Brasilian Real">Brasilian Real</option>
+                                            <option value="Corona ceca">Corona ceca</option>
+                                            <option value="Corona danese">Corona danese</option>
+                                            <option value="Corona estone">Corona estone</option>
+                                            <option value="Corona norvegese">Corona norvegese</option>
+                                            <option value="Corona svedese">Corona svedese</option>
+                                            <option value="Dollaro australiano">Dollaro australiano</option>
+                                            <option value="Dollaro canadese">Dollaro canadese</option>
+                                            <option value="Dollaro di Hong Kong">Dollaro di Hong Kong</option>
+                                            <option value="Dollaro di Singapore">Dollaro di Singapore</option>
+                                            <option value="Dollaro neozelandese">Dollaro neozelandese</option>
+                                            <option value="Fiorino ungherese">Fiorino ungherese</option>
+                                            <option value="Kuna croata">Kuna croata</option>
+                                            <option value="Lat lettone">Lat lettone</option>
+                                            <option value="Lev bulgaro">Lev bulgaro</option>
+                                            <option value="Litas lituano">Litas lituano</option>
+                                            <option value="Mexican peso">Mexican peso</option>
+                                            <option value="Nuova lira turca">Nuova lira turca</option>
+                                            <option value="Nuovo leu romeno">Nuovo leu romeno</option>
+                                            <option value="Peso filippino">Peso filippino</option>
+                                            <option value="Rand sudafricano">Rand sudafricano</option>
+                                            <option value="Ringgit malese">Ringgit malese</option>
+                                            <option value="Rublo russo">Rublo russo</option>
+                                            <option value="Rupia Indiana">Rupia Indiana</option>
+                                            <option value="Rupia indonesiana">Rupia indonesiana</option>
+                                            <option value="Won sudcoreano">Won sudcoreano</option>
+                                            <option value="Yuan cinese">Yuan cinese</option>
+                                            <option value="Zloty polacco">Zloty polacco</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="text-align: right;padding-top:10px; padding-right: 5px;">in:</th>
+                            <td style="padding-top: 10px;">
+                                <select id="cambiavaluta-to-ddl" name="cambiavaluta-to-ddl" class="ddl">
+                                        <optgroup label="Valute principali">
+                                            <option selected="selected" value="Euro">Euro</option>
+                                            <option value="Dollaro USA">Dollaro USA</option>
+                                            <option value="Lira sterlina">Sterlina inglese</option>
+                                            <option value="Franco svizzero">Franco svizzero</option>
+                                            <option value="Yen">Yen giapponese</option>
+                                        </optgroup>
+                                        <optgroup label="Altre valute">
+                                            <option value="Baht tailandese">Baht tailandese</option>
+                                            <option value="Brasilian Real">Brasilian Real</option>
+                                            <option value="Corona ceca">Corona ceca</option>
+                                            <option value="Corona danese">Corona danese</option>
+                                            <option value="Corona estone">Corona estone</option>
+                                            <option value="Corona norvegese">Corona norvegese</option>
+                                            <option value="Corona svedese">Corona svedese</option>
+                                            <option value="Dollaro australiano">Dollaro australiano</option>
+                                            <option value="Dollaro canadese">Dollaro canadese</option>
+                                            <option value="Dollaro di Hong Kong">Dollaro di Hong Kong</option>
+                                            <option value="Dollaro di Singapore">Dollaro di Singapore</option>
+                                            <option value="Dollaro neozelandese">Dollaro neozelandese</option>
+                                            <option value="Fiorino ungherese">Fiorino ungherese</option>
+                                            <option value="Kuna croata">Kuna croata</option>
+                                            <option value="Lat lettone">Lat lettone</option>
+                                            <option value="Lev bulgaro">Lev bulgaro</option>
+                                            <option value="Litas lituano">Litas lituano</option>
+                                            <option value="Mexican peso">Mexican peso</option>
+                                            <option value="Nuova lira turca">Nuova lira turca</option>
+                                            <option value="Nuovo leu romeno">Nuovo leu romeno</option>
+                                            <option value="Peso filippino">Peso filippino</option>
+                                            <option value="Rand sudafricano">Rand sudafricano</option>
+                                            <option value="Ringgit malese">Ringgit malese</option>
+                                            <option value="Rublo russo">Rublo russo</option>
+                                            <option value="Rupia Indiana">Rupia Indiana</option>
+                                            <option value="Rupia indonesiana">Rupia indonesiana</option>
+                                            <option value="Won sudcoreano">Won sudcoreano</option>
+                                            <option value="Yuan cinese">Yuan cinese</option>
+                                            <option value="Zloty polacco">Zloty polacco</option>
+                                        </optgroup>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="nero12">Data: <span style="font-weight: normal;">(gg/mm/aaaa)</span></th>
+                            <td>
+                                <input type="text" id="cambiavaluta-day" name="cambiavaluta-day" maxlength="2" style="width: 27px;" class="textbox">
+                                /
+                                <input type="text" id="cambiavaluta-month" name="cambiavaluta-month" maxlength="2" style="width: 27px;" class="textbox">
+                                /
+                                <input type="text" id="cambiavaluta-year" name="cambiavaluta-year" maxlength="4" style="width: 44px;" class="textbox">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div id="cambiavaluta-result-panel" class="result-panel">
+                                    <div id="cambiavaluta-errors-summary" class="errors-summary" style="display: none;">&nbsp;</div>
+                                    <div class="result-1" id="cambiavaluta-result-1" name="cambiavaluta-result-1" style="display: none;">&nbsp;</div>
+                                    <div class="result-2" id="cambiavaluta-result-2" name="cambiavaluta-result-2" style="display: none;">&nbsp;</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td>
+                            <div class="clear"></div>
+                                <div class="commands" style="text-align:right;">
+                                    <input type="button" id="cambiavaluta-submit" class="button-76" value="CONVERTI">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                    <div class="info">
+                    Convertitore di valute in linea con l'euro, il dollaro e le principali monete mondiali.
+                    <div>Il cambio viene effettuato in base alle chiusure delle valute della Banca Centrale Europea e dell'Ufficio Italiano Cambi - Servizio a cura di Teleborsa</div>
+                    </div>                
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+    <div class="frame-bottom">     
+    </div>
+</div>
+</div> 
+    </div>
+
+        <div class="clear"></div>
+        
+        <div class="clear">
+        </div>
+        
+    </div>
+    </form>
+
+
+</body></html>
