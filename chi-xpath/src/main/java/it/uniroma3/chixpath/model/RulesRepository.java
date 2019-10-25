@@ -49,7 +49,7 @@ public class RulesRepository {
 		rulesGeneration(spec);
 	}
 
-
+	//Estrae le regole XPath
 	private void rulesGeneration(ChiFragmentSpecification spec) {
 		Map<Page,Set<String>> p2x = new HashMap<Page,Set<String>>();
 		//final RuleInference engine = new RuleInference(new ChiFragmentSpecification());

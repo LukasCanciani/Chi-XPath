@@ -53,6 +53,7 @@ public class VectorRepository {
 		return found;
 	}
 
+	//Stampa i tag
 	public static void printTags(Node nodes){
 		if(nodes.hasChildNodes()  || nodes.getNodeType()!=3){
 			System.out.println(nodes.getNodeName()+" : "+nodes.getTextContent());
@@ -61,6 +62,7 @@ public class VectorRepository {
 		}
 	}
 
+	//Aggiunge la regola XPath se non è gia presente sia in termini di stringa sia di vettore estratto
 	void addUnique(XPath rule) throws XPathExpressionException {
 		if (!this.containsXPaths(rule)) {
 			Vector vector;

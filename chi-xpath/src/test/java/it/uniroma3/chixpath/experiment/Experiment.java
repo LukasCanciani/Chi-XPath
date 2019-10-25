@@ -28,16 +28,19 @@ public class Experiment {
 		/* dataset - domain - website */
 		//long startTime = System.currentTimeMillis();
 
+		//Espressività del frammento XPath e "k" punteggi restituiti
 		int range = 6;
 		int nBest = 3;
 
 		long startTime = System.currentTimeMillis();
 		System.out.println("Starting simulation");
+		//Salva i path per i file e l'ottimo
 		String expDir = "./dataset/" + args[0] + "/" + args[1] + "/" + args[2] ;
 		String fileDir = expDir.concat( "/_local.txt");
 		String goldenDir = expDir.concat("/_golden.txt");
 		List<String> pages = load(fileDir,expDir);
 
+		//esegue l'algoritmo
 		List<Partition> solution = PartitionerXFP.execution(pages.toArray(new String[pages.size()]),range, nBest);
 		long startGolden= System.currentTimeMillis();
 		FileWriter fw   = null;
@@ -51,6 +54,7 @@ public class Experiment {
 		} catch (IOException e) {
 			System.out.println("IO error");
 		}
+		//Effettua il confronto con il golden
 		for (Partition p : solution) {
 			float precision = compareToGolden(goldenDir, p, bw);
 			System.out.println("Partizione: "+p.getId() + " Fmedio: " +precision);
@@ -88,6 +92,8 @@ public class Experiment {
 
 
 	}
+	
+	//Effettua il confornto tra una partizione in output ed una "golden" in termini di precision&recall restituitendo una f1score
 	private static float compareToGolden(String goldenDir, Partition p, BufferedWriter bw) {
 
 		Set<Set<String>> golden = loadGolden(goldenDir);
@@ -190,154 +196,7 @@ public class Experiment {
 
 	}
 
-	/*private static float OLDcompareToGolden(String goldenDir, Partition p, BufferedWriter bw) {
-
-		Set<Set<String>> golden = loadGolden(goldenDir);
-		Map<Set<String>,Set<String>> golden2Classes = mapGolden(golden,p.getPageClasses(),bw);
-		float totalF = 0;
-		float totalP = 0;
-		float totalR = 0;
-		Map<Set<String>,float[]> pAndR = new HashMap<>();
-		int i = 0;
-		for (Set<String> group : golden) {
-
-			float[] pRF = new float[3];
-			int samePages = 0;
-			//Precision
-			System.out.println("\n**********************"+i+"**********************\n");
-			if(golden2Classes.containsKey(group)) {
-				for(String id : group) {
-					if (golden2Classes.get(group).contains(id)) {
-						samePages ++;
-					}
-				}
-
-
-				pRF[0] = (float) samePages / golden2Classes.get(group).size();
-				System.out.println("Precisione : Pagine uguali: " + samePages + "Dimensione : " + golden2Classes.get(group).size());
-
-				pRF[1] =(float) samePages / group.size();
-
-				System.out.println("Recall : Pagine uguali: " + samePages + "Dimensione : " + group.size());
-			}
-			else {
-				pRF[0] = 0;
-				pRF[1] = 0;
-			}
-			if(pRF[0] != 0 || pRF[1] != 0) {
-				pRF[2] = 2*pRF[0] * pRF[1]/(pRF[0] + pRF[1]);
-			}else {
-				pRF[2] = 0;
-			}
-			totalF = totalF + pRF[2];
-			totalP = totalP + pRF[0];
-			totalR = totalR + pRF[1];
-			pAndR.put(group, pRF);
-			System.out.println( "TOTAL:  Precision: " + pRF[0] + "  Recal: " + pRF[1] + "  F1: " + pRF[2]);
-			i++;
-		}
-		System.out.println("Average: Precision: " + totalP/golden.size() + "   Recall: "+ totalR/golden.size());
-		if(bw != null) {
-			try {
-				bw.write("Average: Precision: " + totalP/golden.size() + "   Recall: "+ totalR/golden.size()+ "\n" );
-				bw.write("Average F1: " + totalF / golden.size()+ "\n" );
-			} catch (IOException e) {
-				System.out.println("IO error");
-			}
-
-		}
-
-
-		return totalF / golden.size();
-
-	}*/
-
-
-	/*private static Map<Set<String>,Set<String>> mapGolden(Set<Set<String>> golden , Set<PageClass> pageClasses, BufferedWriter bw){
-		Map<Set<String>,Set<String>> golden2IDs = new HashMap<>();
-		Map<Set<String>,Set<PageClass>> golden2Classes = new HashMap<>();
-		for(Set<String> l : golden) {
-			Set<PageClass> toRemove = new HashSet<>();
-			for (PageClass pc : pageClasses) {
-				if (belongsTo(l,pc)) {
-					toRemove.add(pc);
-					if(!golden2IDs.containsKey(l)) {
-						Set<String> ids = new HashSet<>();
-						Set<PageClass> classes = new HashSet<>();
-						classes.add(pc);
-						for(Page page : pc.getPages()) {
-							ids.add( page.getUrl().split("/")[page.getUrl().split("/").length-1].split(".html")[0]);
-						}
-						golden2Classes.put(l,classes);
-						golden2IDs.put(l, ids);
-					}else {
-						Set<String> ids = golden2IDs.get(l);
-						Set<PageClass> classes = golden2Classes.get(l);
-						classes.add(pc);
-						for(Page page : pc.getPages()) {
-							ids.add( page.getUrl().split("/")[page.getUrl().split("/").length-1].split(".html")[0]);
-						}
-						golden2Classes.put(l, classes);
-						golden2IDs.put(l, ids);
-					}
-				}
-			}
-			pageClasses.removeAll(toRemove);
-		}
-		int i = 0;
-		for (Set<String> goldenS : golden2Classes.keySet()) {
-			String print = i + ") " + goldenS.toString() + " -> ";
-			i ++;
-			for (PageClass p : golden2Classes.get(goldenS)) {
-				print = print.concat(" - ");
-
-				for (Page page : p.getPages()) {
-					String name = page.getUrl().split("/")[page.getUrl().split("/").length-1].split(".html")[0];
-					print=print.concat(name + " ");
-				}
-			}
-			System.out.println(print);
-			print = new String();
-		}
-		try {
-			for (Set<String> g : golden) {
-				bw.write(g + " -> ");
-				if (!golden2Classes.containsKey(g)) {
-					bw.write("[]\n");
-				}else {
-					bw.write(" [");
-					for (PageClass p : golden2Classes.get(g)) {
-						bw.write(" - ");
-						for (Page page : p.getPages()) {
-							String name = page.getUrl().split("/")[page.getUrl().split("/").length-1].split(".html")[0];
-							bw.write(name + " ");
-						}
-					}
-					bw.write("]\n");
-				}
-			}
-		} catch (IOException e) {
-			System.out.println("IO error");
-		}
-		return golden2IDs;
-
-	}
-
-
-
-
-	private static boolean belongsTo(Set<String> l, PageClass pc) {
-		int samePages = 0;
-		for (String URL : pc.getPagesURL()) {
-			String name = URL.split("/")[URL.split("/").length-1].split(".html")[0];
-
-			if (l.contains(name)) {
-				samePages++;
-			}
-		}
-		return (samePages > (pc.getPagesURL().size()/2)/* || (samePages == (pc.getPagesID().size()/2))*//*);
-	}*/
-
+	
 	private static Set<Set<String>> loadGolden(String goldenDir) {
 		Set<Set<String>> golden = new HashSet<>();
 		Reader fr   = null;

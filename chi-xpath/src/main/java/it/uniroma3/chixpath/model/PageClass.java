@@ -31,6 +31,14 @@ public class PageClass implements Comparable<PageClass> {
 	private int constantFP;
 	private int variableOptional;
 	private int constantOptional;
+	/*Punti fissi navigazionali: Per ogni set di pagine di classi è memorizzato il numero di punti fissi
+	che consente la navigazione giungendo a quella classe. L'int[] è un array di 4 elementi cosi ordinati: 
+	0 	Variabili - Non Opzionali
+	1 	Costanti - Non Opzionali
+	2	Variabili - Opzionali
+	3	Costanti - Opzionali
+	*/
+	
 	private Map<Set<PageClass>,int[]> NFP;
 
 	public Set<String> rules;
@@ -170,6 +178,7 @@ public class PageClass implements Comparable<PageClass> {
 		return out;
 	}
 
+	//Verifica se due classi hanno pagine in comune
 	public boolean hasSamePagesAs(Set<PageClass> toAdd) {
 		boolean containsId=false;
 		final Set<String> idsToCheck = new HashSet<>();
@@ -228,6 +237,7 @@ public class PageClass implements Comparable<PageClass> {
 		return characteristicXPath;
 	}
 
+	//Elimina duplicati nelle regole XPAth
 	public static void createUniqueXPaths(Set<PageClass> pageClasses,int max_p) throws XPathExpressionException {
 		for(PageClass pClass : pageClasses) {
 			final Set<XPath> senzaEquivalenti = pClass.deleteEquivalentXpaths(max_p);
@@ -237,6 +247,7 @@ public class PageClass implements Comparable<PageClass> {
 		System.out.println("");
 	}
 
+	//Crea una vectorRepository con il fine di eliminare regole ridondanti
 	public Set<XPath> deleteEquivalentXpaths(int max_P) throws XPathExpressionException{
 		VectorRepository container = new VectorRepository(this,max_P,this.getId());
 		//int index=1;
@@ -249,6 +260,8 @@ public class PageClass implements Comparable<PageClass> {
 		//this.vr = container;
 		return container.getXPaths();
 	}
+	
+	//Seleziona la regola più corta per ogni classe, detta regola Caratteristica
 	public static void selectCharacteristicXPath(Set<PageClass> pageClasses) {
 		for(PageClass pageClass : pageClasses) {
 			final Set<XPath> rules = pageClass.getUniqueXPaths();
@@ -269,40 +282,8 @@ public class PageClass implements Comparable<PageClass> {
 
 	}
 
-	/*public static void dfp(Set<PageClass> pageClasses) {
-
-		/*final Experiment experiment = Experiment.makeExperiment("dfp", "");
-        //XFPConfig.getInstance().setCurrentExperiment(experiment);
-		for (PageClass pClass : pageClasses) {
-			Set<Webpage> pages = new LinkedHashSet<>();
-			List<String> strings = new LinkedList<>();
-			for ( Page p : pClass.getPages()) {
-				Webpage wp = new Webpage(URI.create(p.getUrl()));
-				wp.setDocument(p.getDocument());
-				strings.add(p.getUrl());
-			}
-
-			final ExperimentRunner runner = new ExperimentRunner();
-			runner.run("a", "b",strings );
-			xfp.fixpoint.PageClass<String> data = xfp.algorithm.FPAlgorithm.dfp().computeFixedPoints(pages);
-			int constant = data.getConstant().size();
-			int variant = data.getVariant().size();
-			pClass.setFp(2*variant+constant);
-		}
-		String[] str = new String[4];
-		str[0]="-d";
-		str[1]="basiccases";
-		str[2]="-s";
-		str[3]="test";
-		try {
-			xfp.Main.main(str);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			System.out.println("Error");
-		}
-	}*/
-
-
+	
+	//Riodarina gli ID
 	public static void reorderClasses ( Set<PageClass> pageClasses) {
 		int i = 0;
 		for (PageClass pClass : pageClasses) {
@@ -313,15 +294,6 @@ public class PageClass implements Comparable<PageClass> {
 
 
 
-	/*public static Set<PageClass> removeNFP(Set<PageClass> pClasses) {
-		Set<PageClass> toKeep = new HashSet<>();
-		for (PageClass pc : pClasses) {
-			if(pc.getPages().size() != 1) {
-			toKeep.add(pc);
-			}
-		}
-		return toKeep;
-	}	*/
 
 	private void setCharacteristicXPath(XPath bestXPath) {
 		// TODO Auto-generated method stub
@@ -337,6 +309,8 @@ public class PageClass implements Comparable<PageClass> {
 		this.variableOptional = variable;
 	}
 
+	
+	//Funzione ausiliaria
 	public static void executeDFP(Set<PageClass> pageClasses, String[] XFParguments, Set<Page> pages, Set<FixedPoint<String>> siteDFP, int range) {
 
 		Map<FixedPoint<String>, PageClass> FP2PC = new HashMap<>();
@@ -357,7 +331,12 @@ public class PageClass implements Comparable<PageClass> {
 		//removeDuplicates(FP2PC);		
 		addToPageClass(FP2PC);
 	}
-
+	/*Esegue la ricerca di punti fissi di Dati. Prende in input:
+	- Le classi su cui esegurila
+	- Gli argomenti XFP con cui eseguire, prevalentemente localizzando i file html
+	- L'insieme di tutte le pagine
+	- i punti fissi di sito, da eliminare da eventuali risultati
+	- Il livello di espressività del frammento XPath, denominato range*/
 	public static Set<FixedPoint<String>> DFP(String[] XFParguments, PageClass pageClass, Set<Page> pages, int range) throws Exception{
 		Map<String,String> id2name = new HashMap<>();
 		//System.out.println("Pagine: "+ pages.size());
@@ -371,6 +350,7 @@ public class PageClass implements Comparable<PageClass> {
 		return xfp.Main.DataMain(XFParguments,id2name,pageClass.rules,range);
 	}
 
+	//Esegue la ricerca di punti fissi di sito
 	public static Set<FixedPoint<String>> executeSiteDFP(Set<PageClass> pageClasses, String[] XFParguments, Set<Page> pages){
 		Set<FixedPoint<String>> FixedPoints = new HashSet<>();
 		for (PageClass pc : pageClasses) {
@@ -405,7 +385,7 @@ public class PageClass implements Comparable<PageClass> {
 		}
 		return results;
 	}
-
+	//Aggiunge i punti fissi alle classi
 	private static void addToPageClass(Map<FixedPoint<String>, PageClass> fP2PC) {
 		for (FixedPoint<String> fp : fP2PC.keySet()) {
 			PageClass pc = fP2PC.get(fp);
@@ -432,7 +412,6 @@ public class PageClass implements Comparable<PageClass> {
 	private static Map<FixedPoint<String>, PageClass> addFixedPoints(Map<FixedPoint<String>, PageClass> FP2PC,
 			FixedPoint<String> fp, PageClass pc) {
 		if (FP2PC.containsKey(fp) ) {
-			System.out.println("TROVATI DUE UGUALI");
 			PageClass other = FP2PC.get(fp);
 			boolean contained = true;
 			for (Page page : other.getPages()) {
@@ -450,12 +429,10 @@ public class PageClass implements Comparable<PageClass> {
 	}
 
 
-
+	//Esegue la ricerca dei punti fissi navigazioni
 	public static void executeNFP(Set<PageClass> pageClasses, String[] XFParguments, Set<Page> pages) {
 		// TODO Auto-generated method stub
-		// x ogni clasdipag vedo quale sono le possibili classidipag raggiungibili. me lo segno nella CdP stessa, magari una bella lista e vedo come comportarmi
-		//se do una sistemata alla stampa in console potrei usare direttamente quella da portare al proff, senza mettermi sempre a riscrivere tutto!!
-
+		
 		for(PageClass pc : pageClasses) {
 			Map<Set<String>, int[]> NFP = null;
 
@@ -521,6 +498,7 @@ public class PageClass implements Comparable<PageClass> {
 
 	}
 
+	//Dato un insieme di ID restituisce la classe contente le pagine con quell'id, se esistente
 	public static Set<PageClass> getPageClassFromIDs(Set<PageClass> pageClasses, Set<String> pcID) {
 		Set<PageClass> result = new HashSet<>();
 
@@ -562,6 +540,7 @@ public class PageClass implements Comparable<PageClass> {
 		return rules;
 	}
 
+	//Genera le classi singleton mancanti
 	public static Set<PageClass> addMissingSingleton(Set<PageClass> pClasses, Set<Page> allPages) {
 		for(Page p : allPages) {
 			boolean found = false;
@@ -585,20 +564,5 @@ public class PageClass implements Comparable<PageClass> {
 
 
 
-	/*private static Map<PageClass, Set<FixedPoint<String>>> removeDuplicates(Map<PageClass, Set<FixedPoint<String>>> PC2FP) {
-		for(PageClass pc : PC2FP.keySet()) {
-			for (FixedPoint fp : PC2FP.get(pc) ) {
-				System.out.println(fp);
-			}
-		}
-		return null;
-	}
-
-	private Set<String> getXPathsAsString() {
-		Set<String> xpaths = new HashSet<>();
-		for ( XPath x : this.getxPaths()) {
-			xpaths.add(x.getRule());
-		}
-		return xpaths;
-	}*/
+	
 }

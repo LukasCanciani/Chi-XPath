@@ -8,6 +8,7 @@ import java.util.Set;
 public class Lattice {
 	
 	private Set<Partition> partitions;
+	
 	private Map<Partition,Set<Partition>> isRefinementOf;
 	private Map<Partition,Set<Partition>> isRefinedBy;
 	
@@ -19,6 +20,7 @@ public class Lattice {
 		
 	}
 	
+	//Genere raffinamenti
 	private void GenerateRefinements() {
 		for(Partition p1 : this.partitions) {
 			for(Partition p2 : this.partitions) {
@@ -30,7 +32,7 @@ public class Lattice {
 	}
 	
 	
-	
+	//Aggiunge un raffinamento, in entrambe le "direzioni" nelle mappe
 	private void addRefinement(Partition finer, Partition coarser) {
 		if (this.isRefinementOf.containsKey(finer)) {
 			Set<Partition> refined = this.isRefinementOf.get(finer);

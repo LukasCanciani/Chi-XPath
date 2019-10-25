@@ -20,7 +20,7 @@ public class Partition implements Comparable<Partition> {
 	private float rank;
 
 
-	//CouldBeChanged
+	//Calcola il punteggio per la partizione
 	private float ranking() {
 		this.totalDFP = countTotalDFP();
 		this.totalOptionalDFP = countTotalOptionalDFP();
@@ -116,6 +116,7 @@ public class Partition implements Comparable<Partition> {
 		return (sum/this.pageClasses.size());
 	}
 
+	//Verifica se due partizioni contengono le stesse classi
 	public boolean samePartition(Partition partition) {
 		boolean stesse= false;
 		int index=0;
@@ -237,7 +238,8 @@ public class Partition implements Comparable<Partition> {
 		return isRefinement;
 
 	}
-
+	
+	//Riordina gli id delle partizioni
 	public static void reorderPartitions ( Set<Partition> partitions) {
 		int i = 0;
 		for (Partition partition : partitions) {
@@ -274,72 +276,7 @@ public class Partition implements Comparable<Partition> {
 		return str;
 	}
 
-	/*public void executeXFP(String[] XFParguments, Set<Page> AP, Set<Page> pages) {
-		Map<String,String> id2name = new HashMap<>();
-		for(PageClass pc : this.getPageClasses()) {
-			if(Collections.disjoint(pc.getPages(), AP)) {
-				for(Page p : pc.getPages()) {
-					String pageName = p.getUrl().split("/")[5];
-
-					String id = "id"+pageName;
-					id2name.put(id, pageName);
-
-				}
-			}else {
-				for(Page p : pc.getPages()) {
-					String pageName = p.getUrl().split("/")[5];
-
-					String id = "idAP"+pageName.split(".html")[0];
-					id2name.put(id, pageName);
-
-				}
-			}
-		}
-
-		Map<Set<String>,int[]> FixedPoints = null;
-		try {
-			FixedPoints = xfp.Main.NavMain(XFParguments,id2name);
-		} catch (Exception e) {
-			System.out.println("DFP failure");
-		}
-		this.setFixedPoints(FixedPoints);
-		int tot = 0;
-		for(Set<String> ss : FixedPoints.keySet()) {
-			for(PageClass pc : this.getPageClasses()) {
-				if (pc.getPagesNames().containsAll(ss) && ss.containsAll(pc.getPagesNames())) {
-					pc.setFP(FixedPoints.get(ss)[0], FixedPoints.get(ss)[1]);
-					tot = tot +FixedPoints.get(ss)[0]+FixedPoints.get(ss)[1];
-				}
-			}
-		}
-		this.totalFP = tot;
-
-
-	}
-
-	public int getTotalFP() {
-		return totalFP;
-	}*/
-
-	/*public static void executeXFP(Set<Partition> partitions, Set<String> APIds) {
-		for(Partition p : partitions) {
-			Map<Set<String>,int[]> FixedPoints = null;
-			String[] arguments = new String[6];
-			arguments[0] = "-d";
-			arguments[1] = "autoscout";
-			arguments[2] = "-s";
-			arguments[3] = "test";
-			arguments[4] = "-w";
-			arguments[5] = "1ap3car";
-			try {
-				FixedPoints = xfp.Main.chiMain(arguments);
-			} catch (Exception e) {
-				System.out.println("DFP failure");
-			}
-			p.setFixedPoints(FixedPoints);
-		}
-	}*/
-
+	
 	public int[] getTotalDFP() {
 		return totalDFP;
 	}
