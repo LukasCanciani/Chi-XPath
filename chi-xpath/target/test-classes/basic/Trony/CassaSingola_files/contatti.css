@@ -1,0 +1,144 @@
+@charset "utf-8";
+.contatti_titolo {
+	font-family: "FuturaMdBTBold";
+	font-size: 25px;
+	text-shadow: 0 0 1px rgba(31,41,87,0.2);
+	color: #1f2957;
+	padding-bottom: 15px;
+	border-bottom: solid 1px #d2d2d2;
+	margin-bottom: 25px;
+}
+.contatti_boxes {
+
+	margin-top: 0px;
+
+}
+.contatti_boxes .contatti_box {
+	margin-top:20px;
+	border: solid 1px #e0e0e0;
+	/*width: 228px;*/
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	min-height: 150px;
+}
+.contatti_boxes .contatti_box .contatti_box_immagine {
+	float: left;
+	padding: 30px 10px 0 10px;
+	/*height: 116px;*/
+}
+.contatti_boxes .contatti_box .contatti_box_testo {
+	/*background-image: url(../Immagini/servizi_banner_sfondo.png);*/
+	height: 140px;
+
+}
+.contatti_boxes .contatti_box_spaziatore {
+	width: 13px;
+}
+.contatti_boxes .contatti_box .contatti_box_testo .contatti_box_testo_1 {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-family: "FuturaStd-Book";
+	font-size: 17px;
+	text-shadow: 0 0 1px rgba(31,41,87,0.2);
+	color: #1f2754;
+	white-space: pre-wrap;
+}
+.contatti_boxes .contatti_box .contatti_box_testo .contatti_box_testo_3 {
+	color: #1f2754;
+    font-family: "FuturaMdBTBold";
+    font-size: 14px;
+
+}
+
+.contatti_boxes .contatti_box .contatti_box_testo .contatti_box_testo_2 a.linktoservice{
+
+	font-family: "FuturaStd_Bold";
+	font-size: 28px;
+	font-weight: bold;
+	display:inline-block;
+	padding-top:10px;
+}
+
+@media (min-width: 768px) {
+	.contatti_boxes {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.contatti_boxes .contatti_box .contatti_box_testo .contatti_box_testo_2 a.linktoservice{
+	font-size: 13px;
+	}
+
+	.contatti_boxes .contatti_box .contatti_box_testo .contatti_box_testo_1 {
+	font-size: 11px;
+	}
+
+
+}
+
+@media (min-width: 992px) {
+
+	.contatti_boxes .contatti_box .contatti_box_testo .contatti_box_testo_2 a.linktoservice{
+	font-size: 20px;
+	}
+
+	.contatti_boxes .contatti_box .contatti_box_testo .contatti_box_testo_1 {
+	font-size: 14px;
+	}
+
+
+}
+
+
+@media (min-width: 1200px) {
+
+	.contatti_boxes .contatti_box .contatti_box_testo .contatti_box_testo_2 a.linktoservice{
+	font-size: 28px;
+	}
+
+	.contatti_boxes .contatti_box .contatti_box_testo .contatti_box_testo_1 {
+	font-size: 17px;
+	}
+
+}
+
+@media (max-width: 992px) {
+
+	.contatti_boxes .contatti_box .contatti_box_testo .contatti_box_testo_3 {
+	font-size: 12px;
+	}
+
+	}
+
+@media (max-width: 450px) {
+
+	.contatti_boxes .contatti_box .contatti_box_testo .contatti_box_testo_2 a.linktoservice{
+	font-size: 22px;
+	}
+
+	.contatti_boxes .contatti_box .contatti_box_testo .contatti_box_testo_1 {
+	font-size: 13px;
+	}
+
+	.contatti_boxes .contatti_box .contatti_box_testo .contatti_box_testo_3 {
+	font-size: 12px;
+	}
+
+@media (max-width: 360px) {
+
+	.contatti_boxes .contatti_box .contatti_box_testo .contatti_box_testo_2 a.linktoservice{
+	font-size: 18px;
+	}
+
+	.contatti_boxes .contatti_box .contatti_box_testo .contatti_box_testo_1 {
+	font-size: 11px;
+	}
+
+	.contatti_boxes .contatti_box .contatti_box_testo .contatti_box_testo_3 {
+	font-size: 11px;
+	}
+
+}
